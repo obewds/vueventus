@@ -4,6 +4,14 @@ A repository for the VueVentus Vue.js component library
 
 <br>
 
+## NPM Links
+
+* [@obewds (Private)](https://www.npmjs.com/settings/obewds/packages)
+* [@oberocks (Public)](https://www.npmjs.com/~oberocks)
+* [org/obewds (Public)](https://www.npmjs.com/org/obewds)
+
+<br>
+
 
 ## Package Starter Kit Template
 
@@ -29,6 +37,7 @@ A repository for the VueVentus Vue.js component library
 
 <br>
 
+
 ## List of Tailwind Default Classes Packages
 
 1. [tw-bg-palette-console](https://github.com/obewds/tw-bg-palette-console)
@@ -38,7 +47,7 @@ A repository for the VueVentus Vue.js component library
 1. [tw-border-palette-default](https://github.com/obewds/tw-border-palette-default)
 1. [tw-text-palette-default](https://github.com/obewds/tw-text-palette-default)
 
-
+<br>
 
 
 
