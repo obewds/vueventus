@@ -13,14 +13,14 @@ A repository for the VueVentus Vue.js component library
 <br>
 
 
-## Package Starter Kit Template
+## Package Starter Kit Template (GitHub)
 
 1. [vite-vue-ts-compo-pkg-starter](https://github.com/obewds/vite-vue-ts-compo-pkg-starter)
 
 <br>
 
 
-## List of Utility Packages
+## List of Utility Packages (GitHub)
 
 1. [vue-component-helpers](https://github.com/obewds/vue-component-helpers)
 1. [vue-validators](https://github.com/obewds/vue-validators)
@@ -28,7 +28,7 @@ A repository for the VueVentus Vue.js component library
 <br>
 
 
-## List of Component Packages
+## List of Component Packages (GitHub)
 
 1. [vue-el](https://github.com/obewds/vue-el)
 1. [vue-tw-block](https://github.com/obewds/vue-tw-block)
@@ -38,7 +38,7 @@ A repository for the VueVentus Vue.js component library
 <br>
 
 
-## List of Tailwind Default Classes Packages
+## List of Tailwind Default Classes Packages (GitHub)
 
 1. [tw-bg-palette-console](https://github.com/obewds/tw-bg-palette-console)
 1. [tw-bg-palette-default](https://github.com/obewds/tw-bg-palette-default)
