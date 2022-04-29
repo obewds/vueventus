@@ -22,6 +22,7 @@ A repository for the VueVentus Vue.js component library
 
 ## List of Utility Packages (GitHub)
 
+1. [obewds-tw-config](https://github.com/obewds/obewds-tw-config)
 1. [vue-component-helpers](https://github.com/obewds/vue-component-helpers)
 1. [vue-validators](https://github.com/obewds/vue-validators)
 
