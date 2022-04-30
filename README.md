@@ -38,7 +38,7 @@ A repository for the VueVentus Vue.js component library
 <br>
 
 
-## Tailwind Default Classes Packages (GitHub + NPM)
+## Tailwind Defaults Packages (GitHub + NPM)
 
 1. [obewds-tw-config](https://github.com/obewds/obewds-tw-config)
 1. [tw-bg-palette-console](https://github.com/obewds/tw-bg-palette-console)
