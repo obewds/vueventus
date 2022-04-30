@@ -20,16 +20,15 @@ A repository for the VueVentus Vue.js component library
 <br>
 
 
-## List of Utility Packages (GitHub)
+## List of Utility Packages (GitHub + NPM)
 
-1. [obewds-tw-config](https://github.com/obewds/obewds-tw-config)
 1. [vue-component-helpers](https://github.com/obewds/vue-component-helpers)
 1. [vue-validators](https://github.com/obewds/vue-validators)
 
 <br>
 
 
-## List of Component Packages (GitHub)
+## Component Packages (GitHub + NPM)
 
 1. [vue-el](https://github.com/obewds/vue-el)
 1. [vue-tw-block](https://github.com/obewds/vue-tw-block)
@@ -39,8 +38,9 @@ A repository for the VueVentus Vue.js component library
 <br>
 
 
-## List of Tailwind Default Classes Packages (GitHub)
+## Tailwind Default Classes Packages (GitHub + NPM)
 
+1. [obewds-tw-config](https://github.com/obewds/obewds-tw-config)
 1. [tw-bg-palette-console](https://github.com/obewds/tw-bg-palette-console)
 1. [tw-bg-palette-default](https://github.com/obewds/tw-bg-palette-default)
 1. [tw-bg-palette-monochromatic](https://github.com/obewds/tw-bg-palette-monochromatic)
