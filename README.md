@@ -21,7 +21,7 @@ A repository for the VueVentus project, a design system component library for Vu
 
 ## List of Utility Packages (GitHub + NPM)
 
-> From non-dependency packages to dependent packages - so update these in order when bumping versions!
+> From non-dependent packages to dependent packages - so update these in order when bumping versions!
 
 1. [vue-validators](https://github.com/obewds/vue-validators)
 1. [vue-component-helpers](https://github.com/obewds/vue-component-helpers)
@@ -31,15 +31,19 @@ A repository for the VueVentus project, a design system component library for Vu
 
 ## Component Packages (GitHub + NPM)
 
+> From non-dependent packages to dependent packages - so update these in order when bumping versions!
+
 1. [vue-el](https://github.com/obewds/vue-el)
-1. [vue-tw-block](https://github.com/obewds/vue-tw-block)
 1. [vue-tw-el](https://github.com/obewds/vue-tw-el)
+1. [vue-tw-block](https://github.com/obewds/vue-tw-block)
 1. [vue-tw-inline](https://github.com/obewds/vue-tw-inline)
 
 <br>
 
 
 ## Tailwind Defaults Packages (GitHub + NPM)
+
+> From non-dependent packages to dependent packages - so update these in order when bumping versions!
 
 1. [obewds-tw-config](https://github.com/obewds/obewds-tw-config)
 1. [tw-bg-palette-console](https://github.com/obewds/tw-bg-palette-console)
