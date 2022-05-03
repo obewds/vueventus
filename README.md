@@ -1,12 +1,11 @@
 # VueVentus
 
-A repository for the VueVentus Vue.js component library
+A repository for the VueVentus project, a design system component library for Vue.js
 
 <br>
 
 ## NPM Links
 
-* [@obewds (Private)](https://www.npmjs.com/settings/obewds/packages)
 * [@oberocks (Public)](https://www.npmjs.com/~oberocks)
 * [org/obewds (Public)](https://www.npmjs.com/org/obewds)
 
