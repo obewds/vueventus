@@ -22,8 +22,10 @@ A repository for the VueVentus Vue.js component library
 
 ## List of Utility Packages (GitHub + NPM)
 
-1. [vue-component-helpers](https://github.com/obewds/vue-component-helpers)
+> From non-dependency packages to dependent packages - so update these in order when bumping versions!
+
 1. [vue-validators](https://github.com/obewds/vue-validators)
+1. [vue-component-helpers](https://github.com/obewds/vue-component-helpers)
 
 <br>
 
