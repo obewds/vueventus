@@ -1,6 +1,6 @@
 # VueVentus
 
-A repository for the VueVentus project, a design system component library for Vue.js
+A repository for the VueVentus project, a modular design system component library for Vue.js
 
 <br>
 
