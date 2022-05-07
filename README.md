@@ -59,6 +59,12 @@ A repository for the VueVentus project, a modular design system component librar
 1. [tw-border-palette-default](https://github.com/obewds/tw-border-palette-default)
 1. [tw-text-palette-default](https://github.com/obewds/tw-text-palette-default)
 
+- tw-anchor-palette-default
+- tw-button-palette-solid
+- tw-button-palette-outline
+- tw-heading-sizes
+
+
 <br>
 
 
