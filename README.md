@@ -28,8 +28,9 @@ A repository for the VueVentus project, a modular design system component librar
 
 Add to helpers:
 
-- extractValidPalettes ( function('bg') returns ['...','...'] -> Object.keys(tw.bg.palettes).map( (key) => key ) )
-- extractValidPaletteColors - https://github.com/oberocks/vilt-guide-test-app/blob/first-full-install-try/resources/js/Obe/Helpers/extractValidColorPropNames.js
+- injectObewdsTwConfig: const tw = Object.keys( inject( 'tw', {} ) ).length > 0 ? inject<typeof ObewdsTwConfig>('tw') : ObewdsTwConfig
+- extractValidPalettes: function('bg') returns ['...','...'] -> Object.keys(tw.bg.palettes).map( (key) => key )
+- extractValidPaletteColors: https://github.com/oberocks/vilt-guide-test-app/blob/first-full-install-try/resources/js/Obe/Helpers/extractValidColorPropNames.js
 
 <br>
 
