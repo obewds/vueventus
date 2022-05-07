@@ -38,6 +38,12 @@ A repository for the VueVentus project, a modular design system component librar
 1. [vue-tw-block](https://github.com/obewds/vue-tw-block)
 1. [vue-tw-inline](https://github.com/obewds/vue-tw-inline)
 
+- vue-tw-anchor
+- vue-tw-button
+- vue-tw-heading
+- vue-tw-hr
+
+
 <br>
 
 
