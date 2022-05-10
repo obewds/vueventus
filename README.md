@@ -57,13 +57,13 @@ Add to helpers:
 
 > From non-dependent packages to dependent packages - so update these in order when bumping versions!
 
-1. [obewds-tw-config](https://github.com/obewds/obewds-tw-config)
 1. [tw-bg-palette-console](https://github.com/obewds/tw-bg-palette-console)
 1. [tw-bg-palette-default](https://github.com/obewds/tw-bg-palette-default)
 1. [tw-bg-palette-monochromatic](https://github.com/obewds/tw-bg-palette-monochromatic)
 1. [tw-bg-palette-pastel](https://github.com/obewds/tw-bg-palette-pastel)
 1. [tw-border-palette-default](https://github.com/obewds/tw-border-palette-default)
 1. [tw-text-palette-default](https://github.com/obewds/tw-text-palette-default)
+1. [obewds-tw-config](https://github.com/obewds/obewds-tw-config)
 
 - tw-anchor-palette-default
 - tw-button-palette-solid
