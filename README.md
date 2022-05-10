@@ -19,40 +19,6 @@ A repository for the VueVentus project, a modular design system component librar
 <br>
 
 
-## List of Utility Packages (GitHub + NPM)
-
-> From non-dependent packages to dependent packages - so update these in order when bumping versions!
-
-1. [vue-validators](https://github.com/obewds/vue-validators)
-1. [vue-component-helpers](https://github.com/obewds/vue-component-helpers)
-
-Add to helpers:
-
-- injectTw: const tw = Object.keys( inject( 'tw', {} ) ).length > 0 ? inject<typeof ObewdsTwConfig>('tw') : ObewdsTwConfig
-- extractValidPalettes: function('bg') returns ['...','...'] -> Object.keys(tw.bg.palettes).map( (key) => key )
-- extractValidPaletteColors: https://github.com/oberocks/vilt-guide-test-app/blob/first-full-install-try/resources/js/Obe/Helpers/extractValidColorPropNames.js
-
-<br>
-
-
-## Component Packages (GitHub + NPM)
-
-> From non-dependent packages to dependent packages - so update these in order when bumping versions!
-
-1. [vue-el](https://github.com/obewds/vue-el)
-1. [vue-tw-el](https://github.com/obewds/vue-tw-el)
-1. [vue-tw-block](https://github.com/obewds/vue-tw-block)
-1. [vue-tw-inline](https://github.com/obewds/vue-tw-inline)
-
-- vue-tw-anchor
-- vue-tw-button
-- vue-tw-heading
-- vue-tw-hr
-
-
-<br>
-
-
 ## Tailwind Defaults Packages (GitHub + NPM)
 
 > From non-dependent packages to dependent packages - so update these in order when bumping versions!
@@ -69,6 +35,44 @@ Add to helpers:
 - tw-button-palette-solid
 - tw-button-palette-outline
 - tw-heading-sizes
+
+
+<br>
+
+
+
+
+
+## List of Utility Packages (GitHub + NPM)
+
+> From non-dependent packages to dependent packages - so update these in order when bumping versions!
+
+1. [vue-validators](https://github.com/obewds/vue-validators)
+1. [vue-component-helpers](https://github.com/obewds/vue-component-helpers)
+
+Add to helpers:
+
+- extractValidPaletteColors: https://github.com/oberocks/vilt-guide-test-app/blob/first-full-install-try/resources/js/Obe/Helpers/extractValidColorPropNames.js
+
+<br>
+
+
+
+
+
+## Component Packages (GitHub + NPM)
+
+> From non-dependent packages to dependent packages - so update these in order when bumping versions!
+
+1. [vue-el](https://github.com/obewds/vue-el)
+1. [vue-tw-el](https://github.com/obewds/vue-tw-el)
+1. [vue-tw-block](https://github.com/obewds/vue-tw-block)
+1. [vue-tw-inline](https://github.com/obewds/vue-tw-inline)
+
+- vue-tw-anchor
+- vue-tw-button
+- vue-tw-heading
+- vue-tw-hr
 
 
 <br>
