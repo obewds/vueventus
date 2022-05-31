@@ -12,6 +12,7 @@ Review all the [Configuration Components](/configuration-components) or drill do
 
 ### Palettes
 
+* [AnchorDefault](/configuration-components#anchordefault-palette)
 * [BorderDefault](/configuration-components#borderdefault-palette)
 * [ButtonOutline](/configuration-components#buttonoutline-palette)
 * [ButtonSolid](/configuration-components#buttonsolid-palette)
