@@ -1,0 +1,17 @@
+name: Add Pull Requests to OBEWDS Vue project
+
+on:
+  pull_request:
+    types:
+      - opened
+      # - labeled
+
+jobs:
+  add-to-project:
+    name: Add issue to project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@main
+        with:
+          project-url: https://github.com/orgs/obewds/projects/1
+          github-token: ${{ secrets.ADD_TO_PROJECT_ACCESS_TOKEN }}
