@@ -1,4 +1,5 @@
 // configs/palettes
+export { default as AnchorDefault } from './configs/palettes/AnchorDefault.js'
 export { default as BorderDefault } from './configs/palettes/BorderDefault.js'
 export { default as ButtonOutline } from './configs/palettes/ButtonOutline.js'
 export { default as ButtonSolid } from './configs/palettes/ButtonSolid.js'
