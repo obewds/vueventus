@@ -9,7 +9,10 @@
 
 <template>
 
-    <img class="mx-auto" alt="Vue logo" src="./assets/logo.png" />
+    <span class="mx-auto flex items-center justify-center gap-6">
+        <img alt="Vue logo" src="./assets/logo.png"/>
+        <img alt="OBE:WDS logo" src="./assets/OBE-MARK-200x200.png"/>
+    </span>
 
     <HelloWorld msg="Hello Vue 3 + Vite" />
 
