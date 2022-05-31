@@ -24,7 +24,7 @@ export default defineConfig({
             entry: resolve(__dirname, 'src/index.js'),
             name: 'VueVentus',
             formats: ['es','cjs','umd','iife'],
-            fileName: (format) => `vue-ventus.${format}.js`,
+            fileName: (format) => `vueventus.${format}.js`,
         },
         rollupOptions: {
             // make sure to externalize deps that shouldn't be bundled into your library

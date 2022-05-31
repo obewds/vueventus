@@ -1,83 +1,36 @@
 # VueVentus
 
-A repository for the VueVentus project, a modular design system component library for Vue.js
+The @obewds/vueventus modular design system component library for Vue.js and Tailwind CSS
+
+![GitHub package.json version](https://img.shields.io/github/package-json/v/obewds/vueventus?label=Github&logo=github&style=for-the-badge) &nbsp; ![npm](https://img.shields.io/npm/v/@obewds/vueventus?color=%23cc3534&logo=npm&style=for-the-badge)
+
+![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) &nbsp; ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) &nbsp; ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) &nbsp; ![Dependabot](https://img.shields.io/badge/dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)
 
 <br>
 
-## NPM Links
+---
+## Documentation
 
-* [@oberocks (Public)](https://www.npmjs.com/~oberocks)
-* [org/obewds (Public)](https://www.npmjs.com/org/obewds)
+Check out the [official docs](https://obewds.github.io/vueventus/) for this component for more details!
 
-<br>
-
-
-## Package Starter Kit Template (GitHub)
-
-1. [vite-vue-ts-compo-pkg-starter](https://github.com/obewds/vite-vue-ts-compo-pkg-starter)
-
-<br>
-
-
-## Tailwind Defaults Packages (GitHub + NPM)
-
-> From non-dependent packages to dependent packages - so update these in order when bumping versions!
-
-1. [tw-bg-palette-console](https://github.com/obewds/tw-bg-palette-console)
-1. [tw-bg-palette-default](https://github.com/obewds/tw-bg-palette-default)
-1. [tw-bg-palette-monochromatic](https://github.com/obewds/tw-bg-palette-monochromatic)
-1. [tw-bg-palette-pastel](https://github.com/obewds/tw-bg-palette-pastel)
-1. [tw-border-palette-default](https://github.com/obewds/tw-border-palette-default)
-1. [tw-text-palette-default](https://github.com/obewds/tw-text-palette-default)
-1. [obewds-tw-config](https://github.com/obewds/obewds-tw-config)
-
-- tw-anchor-palette-default
-- tw-button-palette-solid
-- tw-button-palette-outline
-- tw-heading-sizes
-
+Or check out the [CHANGELOG](https://github.com/obewds/vueventus/blob/main/CHANGELOG.md) for the code base!
 
 <br>
 
 
+---
+## Installation
 
-
-
-## List of Utility Packages (GitHub + NPM)
-
-> From non-dependent packages to dependent packages - so update these in order when bumping versions!
-
-1. [vue-validators](https://github.com/obewds/vue-validators)
-1. [vue-component-helpers](https://github.com/obewds/vue-component-helpers)
-
-Add to helpers:
-
-- extractValidPaletteColors: https://github.com/oberocks/vilt-guide-test-app/blob/first-full-install-try/resources/js/Obe/Helpers/extractValidColorPropNames.js
+```bash
+npm install @obewds/vueventus --save-dev
+```
 
 <br>
 
 
+---
+## Uninstall
 
-
-
-## Component Packages (GitHub + NPM)
-
-> From non-dependent packages to dependent packages - so update these in order when bumping versions!
-
-1. [vue-el](https://github.com/obewds/vue-el)
-1. [vue-tw-el](https://github.com/obewds/vue-tw-el)
-1. [vue-tw-block](https://github.com/obewds/vue-tw-block)
-1. [vue-tw-inline](https://github.com/obewds/vue-tw-inline)
-
-- vue-tw-anchor
-- vue-tw-button
-- vue-tw-heading
-- vue-tw-hr
-
-
-<br>
-
-
-
-
-
+```bash
+npm uninstall @obewds/vueventus
+```
