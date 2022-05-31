@@ -1,3 +1,9 @@
-// export { default as ViteVueTsCompoPkgStarter } from './components/ViteVueTsCompoPkgStarter.vue'
-// export { default as extractValidPalettes } from './helpers/extract-valid-palettes'
-// export { default as getBgPaletteColor } from './helpers/get-bg-palette-color'
+// configs/palettes
+export { default as BorderDefault } from './configs/palettes/BorderDefault.js'
+export { default as ButtonOutline } from './configs/palettes/ButtonOutline.js'
+export { default as ButtonSolid } from './configs/palettes/ButtonSolid.js'
+export { default as GroundConsole } from './configs/palettes/GroundConsole.js'
+export { default as GroundDefault } from './configs/palettes/GroundDefault.js'
+export { default as GroundMonochromatic } from './configs/palettes/GroundMonochromatic.js'
+export { default as GroundPastel } from './configs/palettes/GroundPastel.js'
+export { default as TextDefault } from './configs/palettes/TextDefault.js'

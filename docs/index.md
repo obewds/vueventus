@@ -7,18 +7,11 @@ tagline: A modular design system component library built for Vue.js and Tailwind
 actionText: Get Started
 actionLink: /getting-started
 features:
-  - title: Simplicity First
-    details: Minimal setup with markdown-centered project structure helps you focus on writing.
-  - title: Vue-Powered
-    details: Enjoy the dev experience of Vue, use Vue components in markdown, and develop custom themes with Vue.
+  - title: Prototype Fast
+    details: VueVentus components come pre-configured with Tailwind CSS classes and Vue.js component props for logical groups of visual/aesthetic classes.
+  - title: Customize All
+    details: Each VueVentus component can be customized from a single root config file, giving a bird's eye view of the visual design aspects of your app.
   - title: Performant
-    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-actions:
-  - text: Style Guide
-    link: /style-guide.html
-    type: secondary
-  - text: Installation
-    link: /installation.html
-    type: primary
+    details: You are in complete control of your atomic class management, and are able to prune your payloads down to DRY goodness on macro and micro levels.
 footer: MIT Licensed | Copyright © 2022-present Matt McT LLC
 ---

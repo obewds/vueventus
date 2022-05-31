@@ -1,6 +1,7 @@
 <script setup>
 
     import { ref } from 'vue'
+    import { BorderDefault } from '../index'
 
     defineProps({
         msg: String
@@ -21,7 +22,9 @@
 
     <button class="text-white rounded-md px-2 py-0.5 my-3" type="button" @click="count++">count is: {{ count }}</button>
 
-    <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
+    <p class="pb-10">Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
+
+    <div>{{ BorderDefault }}</div>
 
 </template>
 
