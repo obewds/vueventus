@@ -1,7 +1,7 @@
 {
   "name": "@obewds/vueventus",
-  "description": "A repository for the VueVentus project, a modular design system component library for Vue.js.",
-  "version": "0.0.6",
+  "description": "A modular design system component library built for Vue.js and Tailwind CSS.",
+  "version": "0.0.7",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
   "license": "MIT",
@@ -31,7 +31,8 @@
     "docs:serve": "vitepress serve docs",
     "changelog": "auto-changelog --package --unreleased --backfill-limit 20",
     "tag": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
-    "bump": "npm run tag && npm run changelog"
+    "bump": "npm run tag && npm run changelog",
+    "gen": "npm run build && npm run docs:build"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
