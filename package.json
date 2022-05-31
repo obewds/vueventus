@@ -1,0 +1,73 @@
+{
+  "name": "vueventus",
+  "description": "A repository for the VueVentus project, a modular design system component library for Vue.js.",
+  "version": "0.0.5",
+  "author": "@oberocks",
+  "homepage": "https://obewds.github.io/vueventus/",
+  "license": "MIT",
+  "main": "./dist/vueventus.umd.js",
+  "module": "./dist/vueventus.es.js",
+  "browser": "./dist/vueventus.iife.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vueventus.es.js",
+      "require": "./dist/vueventus.umd.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src/components",
+    "tests"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest --dom",
+    "coverage": "vitest run --dom --coverage",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "changelog": "auto-changelog --package --unreleased --backfill-limit 20",
+    "tag": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
+    "bump": "npm run tag && npm run changelog"
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "tailwindcss": "^3.0.24",
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vue/test-utils": "^2.0.0",
+    "auto-changelog": "^2.4.0",
+    "autoprefixer": "^10.4.7",
+    "c8": "^7.11.3",
+    "happy-dom": "^4.1.0",
+    "postcss": "^8.4.14",
+    "vite": "^2.9.9",
+    "vitepress": "^0.22.4",
+    "vitest": "^0.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obewds/vueventus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/obewds/vueventus/issues"
+  },
+  "keywords": [
+    "vue",
+    "vueventus",
+    "vite",
+    "tailwindcss",
+    "obewds",
+    "rollup",
+    "vitepress",
+    "postcss"
+  ]
+}
