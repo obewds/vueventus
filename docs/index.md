@@ -1,3 +1,24 @@
-# VueVentus
-
-A modular design system component library built for Vue.js and Tailwind CSS.
+---
+home: true
+heroImage: /images/vue-ventus-mark-and-favicon.png
+heroAlt: VueVentus logo mark fan shape with blue and green blades
+heroText: VueVentus
+tagline: A modular design system component library built for Vue.js and Tailwind CSS
+actionText: Get Started
+actionLink: /getting-started
+features:
+  - title: Simplicity First
+    details: Minimal setup with markdown-centered project structure helps you focus on writing.
+  - title: Vue-Powered
+    details: Enjoy the dev experience of Vue, use Vue components in markdown, and develop custom themes with Vue.
+  - title: Performant
+    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
+actions:
+  - text: Style Guide
+    link: /style-guide.html
+    type: secondary
+  - text: Installation
+    link: /installation.html
+    type: primary
+footer: MIT Licensed | Copyright © 2022-present Matt McT LLC
+---

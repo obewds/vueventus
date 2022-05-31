@@ -1,7 +1,7 @@
 {
   "name": "@obewds/vueventus",
   "description": "A modular design system component library built for Vue.js and Tailwind CSS.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
   "license": "MIT",
@@ -32,7 +32,7 @@
     "changelog": "auto-changelog --package --unreleased --backfill-limit 20",
     "tag": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
     "bump": "npm run tag && npm run changelog",
-    "gen": "npm run build && npm run docs:build"
+    "gen": "npx rimraf dist && npx rimraf docs/.vitepress/dist && npm run build && npm run docs:build"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
@@ -50,6 +50,7 @@
     "c8": "^7.11.3",
     "happy-dom": "^4.1.0",
     "postcss": "^8.4.14",
+    "rimraf": "^3.0.2",
     "vite": "^2.9.9",
     "vitepress": "^0.22.4",
     "vitest": "^0.13.0"
