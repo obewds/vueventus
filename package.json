@@ -1,7 +1,7 @@
 {
   "name": "vueventus",
   "description": "A repository for the VueVentus project, a modular design system component library for Vue.js.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
   "license": "MIT",
