@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a,a as l}from"./app.2c28a372.js";const _='{"title":"Palette Config Modules","description":"","frontmatter":{},"headers":[],"relativePath":"configs/palettes/index.md"}',o={},s=l("",3),n=[s];function i(r,u,c,f,d,h){return a(),t("div",null,n)}var v=e(o,[["render",i]]);export{_ as __pageData,v as default};
