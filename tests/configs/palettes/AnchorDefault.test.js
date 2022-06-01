@@ -1,4 +1,4 @@
-// ./tests/AnchorDefault.test.js
+// ./tests/configs/palettes/AnchorDefault.test.js
 
 import { AnchorDefault } from '../../../src/index'
 

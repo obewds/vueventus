@@ -1,4 +1,4 @@
-// ./tests/GroundConsole.test.js
+// ./tests/configs/palettes/GroundConsole.test.js
 
 import { GroundConsole } from '../../../src/index'
 

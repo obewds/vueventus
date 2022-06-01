@@ -1,4 +1,4 @@
-// ./tests/BorderDefault.test.js
+// ./tests/configs/palettes/BorderDefault.test.js
 
 import { BorderDefault } from '../../../src/index'
 
