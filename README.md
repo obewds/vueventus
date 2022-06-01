@@ -1,6 +1,6 @@
 # VueVentus
 
-The @obewds/vueventus modular design system component library for Vue.js and Tailwind CSS
+A modular design system component library for Vue.js and Tailwind CSS
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/obewds/vueventus?label=Github&logo=github&style=for-the-badge) &nbsp; ![npm](https://img.shields.io/npm/v/@obewds/vueventus?color=%23cc3534&logo=npm&style=for-the-badge)
 
@@ -11,9 +11,9 @@ The @obewds/vueventus modular design system component library for Vue.js and Tai
 ---
 ## Documentation
 
-Check out the [official docs](https://obewds.github.io/vueventus/) for this component for more details!
+Check out the [official docs](https://obewds.github.io/vueventus/) for more info
 
-Or check out the [CHANGELOG](https://github.com/obewds/vueventus/blob/main/CHANGELOG.md) for the code base!
+Or check out the [CHANGELOG](https://github.com/obewds/vueventus/blob/main/CHANGELOG.md)
 
 <br>
 
