@@ -1,6 +1,6 @@
-# Configuration Components
+# Palette Config Modules
 
-Configuration components provide config level Tailwind CSS classes to VueVentus components that serve as prototypal default settings to give components visual styling out of the box.
+Palette Config Modules are subset of config modules specifically meant for visual color state classes covering various aspects of visually orientated element characteristics available in CSS, expressed through Tailwind CSS classes.
 
 <br>
 
@@ -26,7 +26,7 @@ const anchorSecondary = AnchorDefault.secondary
 const anchorSuccess = AnchorDefault.success
 ```
 
-### Classes
+### Module
 
 <<< @/../src/configs/palettes/AnchorDefault.js
 
@@ -54,7 +54,7 @@ const borderSecondary = BorderDefault.secondary
 const borderSuccess = BorderDefault.success
 ```
 
-### Classes
+### Module
 
 <<< @/../src/configs/palettes/BorderDefault.js
 
@@ -82,7 +82,7 @@ const buttonSecondary = ButtonOutline.secondary
 const buttonSuccess = ButtonOutline.success
 ```
 
-### Classes
+### Module
 
 <<< @/../src/configs/palettes/ButtonOutline.js
 
@@ -110,7 +110,7 @@ const buttonSecondary = ButtonSolid.secondary
 const buttonSuccess = ButtonSolid.success
 ```
 
-### Classes
+### Module
 
 <<< @/../src/configs/palettes/ButtonSolid.js
 
@@ -138,7 +138,7 @@ const bgSecondary = GroundConsole.secondary
 const bgSuccess = GroundConsole.success
 ```
 
-### Classes
+### Module
 
 <<< @/../src/configs/palettes/GroundConsole.js
 
@@ -166,7 +166,7 @@ const bgSecondary = GroundDefault.secondary
 const bgSuccess = GroundDefault.success
 ```
 
-### Classes
+### Module
 
 <<< @/../src/configs/palettes/GroundDefault.js
 
@@ -194,7 +194,7 @@ const bgSecondary = GroundMonochromatic.secondary
 const bgSuccess = GroundMonochromatic.success
 ```
 
-### Classes
+### Module
 
 <<< @/../src/configs/palettes/GroundMonochromatic.js
 
@@ -222,7 +222,7 @@ const bgSecondary = GroundPastel.secondary
 const bgSuccess = GroundPastel.success
 ```
 
-### Classes
+### Module
 
 <<< @/../src/configs/palettes/GroundPastel.js
 
@@ -250,7 +250,7 @@ const borderSecondary = BorderDefault.secondary
 const borderSuccess = BorderDefault.success
 ```
 
-### Classes
+### Module
 
 <<< @/../src/configs/palettes/BorderDefault.js
 
