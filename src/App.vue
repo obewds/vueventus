@@ -1,5 +1,8 @@
 <script setup>
 
+    import VvColorModeButton from '@/components/buttons/VvColorModeButton.vue'
+
+    const colorMode = localStorage && localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') : 'light'
     const year = new Date().getFullYear()
 
 </script>
@@ -7,11 +10,12 @@
 
 <template>
 
-    <nav class="fixed top flex items-center w-full bg-gray-700 text-white px-3 py-2 drop-shadow-xl z-10">
+    <nav class="fixed top flex items-center justify-between w-full bg-gray-700 text-white px-3 py-2 drop-shadow-xl z-10">
         <router-link to="/" class="flex items-center">
             <img class="w-7" alt="VueVentus logo" src="./assets/vue-ventus-mark-and-favicon.png"/>
             <span class="pl-3 text-2xl">VueVentus</span>
         </router-link>
+        <VvColorModeButton :mode="colorMode"/>
     </nav>
 
     <div class="h-14"> </div>
@@ -32,7 +36,6 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
-        color: #2c3e50;
     }
 
 </style>
