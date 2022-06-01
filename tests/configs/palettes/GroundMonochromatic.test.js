@@ -1,4 +1,4 @@
-// ./tests/GroundMonochromatic.test.js
+// ./tests/configs/palettes/GroundMonochromatic.test.js
 
 import { GroundMonochromatic } from '../../../src/index'
 

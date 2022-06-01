@@ -1,4 +1,4 @@
-// ./tests/ButtonOutline.test.js
+// ./tests/configs/palettes/ButtonOutline.test.js
 
 import { ButtonOutline } from '../../../src/index'
 

@@ -1,4 +1,4 @@
-// ./tests/ButtonSolid.test.js
+// ./tests/configs/palettes/ButtonSolid.test.js
 
 import { ButtonSolid } from '../../../src/index'
 

@@ -6,20 +6,24 @@ The VueVentus component system comes with a variety of components that are pre-c
 
 
 
-## Configuration Components
+## Config Modules
 
-Review all the [Configuration Components](/configuration-components) or drill down on them individually:
+Review the [Config Modules](/config-modules), [Palette Config Modules](/palette-config-modules), or drill down on any one module individually with the lists below:
 
-### Palettes
+### Config Modules
 
-* [AnchorDefault](/configuration-components#anchordefault-palette)
-* [BorderDefault](/configuration-components#borderdefault-palette)
-* [ButtonOutline](/configuration-components#buttonoutline-palette)
-* [ButtonSolid](/configuration-components#buttonsolid-palette)
-* [GroundConsole](/configuration-components#groundconsole-palette)
-* [GroundDefault](/configuration-components#grounddefault-palette)
-* [GroundMonochromatic](/configuration-components#groundmonochromatic-palette)
-* [GroundPastel](/configuration-components#groundpastel-palette)
-* [TextDefault](/configuration-components#textdefault-palette)
+* [Transitions](/config-modules#transitions)
+
+### Palette Config Modules
+
+* [AnchorDefault](/palette-config-modules#anchordefault-palette)
+* [BorderDefault](/palette-config-modules#borderdefault-palette)
+* [ButtonOutline](/palette-config-modules#buttonoutline-palette)
+* [ButtonSolid](/palette-config-modules#buttonsolid-palette)
+* [GroundConsole](/palette-config-modules#groundconsole-palette)
+* [GroundDefault](/palette-config-modules#grounddefault-palette)
+* [GroundMonochromatic](/palette-config-modules#groundmonochromatic-palette)
+* [GroundPastel](/palette-config-modules#groundpastel-palette)
+* [TextDefault](/palette-config-modules#textdefault-palette)
 
 <br>

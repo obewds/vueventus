@@ -1,4 +1,4 @@
-// ./tests/TextDefault.test.js
+// ./tests/configs/palettes/TextDefault.test.js
 
 import { TextDefault } from '../../../src/index'
 

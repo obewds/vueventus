@@ -1,4 +1,4 @@
-// ./tests/GroundDefault.test.js
+// ./tests/configs/palettes/GroundDefault.test.js
 
 import { GroundDefault } from '../../../src/index'
 

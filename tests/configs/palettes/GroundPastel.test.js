@@ -1,4 +1,4 @@
-// ./tests/GroundPastel.test.js
+// ./tests/configs/palettes/GroundPastel.test.js
 
 import { GroundPastel } from '../../../src/index'
 
