@@ -5,6 +5,7 @@ import Home from '@/views/Home.vue'
 // config pages
 import ButtonsPage from '@/views/configs/ButtonsPage.vue'
 import TransitionsPage from '@/views/configs/TransitionsPage.vue'
+import VvConfigPage from '@/views/configs/VvConfigPage.vue'
 
 // palette config pages
 import AnchorDefaultPage from '@/views/configs/palettes/AnchorDefaultPage.vue'
@@ -42,6 +43,10 @@ const router = createRouter({
             name: 'Transitions Config Module',
             component: TransitionsPage,
             path: '/configs/transitions'
+        },{
+            name: 'VvConfig Module',
+            component: VvConfigPage,
+            path: '/configs/vv-config'
         },
         
         //
