@@ -1,5 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-const tailwindColors = require('./src/data/tailwind.colors.json')
+const tailwindColors = require('./src/data/vueventus.tw.colors.json')
 
 module.exports = {
 
