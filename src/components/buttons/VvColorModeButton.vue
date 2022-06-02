@@ -8,7 +8,6 @@
 
     import { inject, computed, ref } from 'vue'
     import VvButton from './VvButton.vue'
-    import AppTwColors from '../../data/tailwind.colors.json'
 
     const props = defineProps({
         mode: {
@@ -36,17 +35,41 @@
             type: String,
             default: 'button',
         },
+        bgClassDark: {
+            type: String,
+            default: 'bg-gray-900',
+        },
+        bgClassLight: {
+            type: String,
+            default: 'bg-gray-100',
+        },
+        bgHexDark: {
+            type: String,
+            default: '#242426',
+        },
+        bgHexLight: {
+            type: String,
+            default: '#e1e1e3',
+        },
+        textClassDark: {
+            type: String,
+            default: 'text-gray-900',
+        },
+        textClassLight: {
+            type: String,
+            default: 'text-gray-100',
+        },
     })
 
     const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject('vv') : {
         colorMode: {
             dark: {
-                bg: "bg-gray-900",
-                text: "text-gray-100",
+                bg: props.bgClassDark,
+                text: props.textClassLight,
             },
             light: {
-                bg: "bg-gray-100",
-                text: "text-gray-900",
+                bg: props.bgClassLight,
+                text: props.textClassDark,
             },
         },
     }
@@ -65,7 +88,7 @@
             vv.colorMode.light.bg,
             vv.colorMode.light.text
         )
-        document.documentElement.style.backgroundColor = AppTwColors.gray['100']
+        document.documentElement.style.backgroundColor = props.bgHexLight
     }
 
     if (mode.value === 'dark' && document) {
@@ -78,7 +101,7 @@
             vv.colorMode.dark.bg,
             vv.colorMode.dark.text
         )
-        document.documentElement.style.backgroundColor = AppTwColors.gray['900']
+        document.documentElement.style.backgroundColor = props.bgHexDark
     }
 
     function toggleColorMode (event) {
@@ -94,7 +117,7 @@
                 vv.colorMode.dark.bg,
                 vv.colorMode.dark.text
             )
-            document.documentElement.style.backgroundColor = AppTwColors.gray['900']
+            document.documentElement.style.backgroundColor = props.bgHexDark
         } else if (mode.value === 'dark' && document) {
             mode.value = 'light'
             localStorage.setItem('colorMode', 'light')
@@ -107,7 +130,7 @@
                 vv.colorMode.light.bg,
                 vv.colorMode.light.text
             )
-            document.documentElement.style.backgroundColor = AppTwColors.gray['100']
+            document.documentElement.style.backgroundColor = props.bgHexLight
         }
     }
 </script>
@@ -125,11 +148,11 @@
         :type="type"
         :size="size"
     >
-        <svg v-if="icon === 'moon'" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg v-if="icon === 'moon'" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
 
-        <svg v-if="icon === 'sun'" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg v-if="icon === 'sun'" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
 
