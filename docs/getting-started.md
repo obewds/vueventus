@@ -1,6 +1,6 @@
 # Getting Started
 
-This guide will walk through installing and setting up VueVentus along with [Vite.js](https://vitejs.dev/guide/#scaffolding-your-first-vite-project), [Vue.js](https://vuejs.org/) and [Tailwind CSS](https://tailwindcss.com/). The guide will finish with a test drive of teh VvButton component, to provide a quick working example of how to iterate with design system components and atomic classes.
+This guide will walk through installing and setting up VueVentus along with [Vite.js](https://vitejs.dev/guide/#scaffolding-your-first-vite-project), [Vue.js](https://vuejs.org/) and [Tailwind CSS](https://tailwindcss.com/). The guide will finish with a test drive of the VvButton component, to provide a quick working example of how to iterate with design system components and atomic classes.
 
 <br>
 
@@ -123,42 +123,34 @@ const vvTwThemeExtend = require(vvPath + 'vueventus.tw.theme.extend.json')
 
 module.exports = {
 
-    // Enable darkMode using the 'class' option
-    darkMode: 'class',
+    darkMode: 'class', // Enable darkMode using the 'class' option
 
     content: [
         "./index.html",
         "./src/**/*.{vue,js,ts,jsx,tsx}",
-        // To include VueVentus default Tailwind CSS classes for prototyping
-        "./node_modules/@obewds/vueventus/**/*.{vue,js,ts,jsx,tsx,json}",
+        "./node_modules/@obewds/vueventus/**/*.{vue,js,ts,jsx,tsx,json}", // To include VueVentus default Tailwind CSS classes for prototyping
     ],
 
     theme: {
         extend: {
-            // This is useful for custom or Google Fonts
-            fontFamily: {
+            fontFamily: { // This is useful for custom or Google Fonts
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
                 heading: ['Nunito', ...defaultTheme.fontFamily.sans],
                 body: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
-            // Include VueVentus theme extended data values
-            ...vvTwThemeExtend,
+            ...vvTwThemeExtend, // Include VueVentus theme extended data values
         },
-        // Include VueVentus additional theme data values
-        ...vvTwTheme,
-        // Use the VueVentus default colors palette
-        colors: vvProtoColors,
+        ...vvTwTheme, // Include VueVentus additional theme data values
+        colors: vvProtoColors, // Use the VueVentus default colors palette
     },
 
     variants: {
         extend: {
-            // Enable disabled variants for opacity classes
-            opacity: ['disabled']
+            opacity: ['disabled'] // Enable disabled variants for opacity classes
         }
     },
 
-    plugins: [
-        // These are VueVentus dependencies so they should be in node_modules already :)
+    plugins: [ // VueVentus deps are already in node_modules :)
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
         require('@tailwindcss/aspect-ratio'),
@@ -263,3 +255,8 @@ Your VvButton component instance should now be a solid primary colored button wi
 
 
 
+
+
+## Next Steps: Guides
+
+Check out the [guides page](/guides) to get familiar with the nuts, bolts and opportunities of a design system component library built specifically for atomic classes!
