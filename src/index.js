@@ -11,6 +11,8 @@ export { default as TextDefault } from './configs/palettes/TextDefault.js'
 
 // .src/configs
 export { default as Transitions } from './configs/Transitions.js'
+export { default as Buttons } from './configs/Buttons.js'
 
 // .src/components/buttons
 export { default as VvButton } from './components/buttons/VvButton.vue'
+export { default as VvColorModeButton } from './components/buttons/VvColorModeButton.vue'
