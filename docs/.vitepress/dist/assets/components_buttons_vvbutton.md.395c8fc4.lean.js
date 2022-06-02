@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as n,a}from"./app.2c28a372.js";const v='{"title":"VvButton Component","description":"","frontmatter":{},"headers":[{"level":2,"title":"Import","slug":"import"}],"relativePath":"components/buttons/vvbutton.md"}',o={},s=a("",6),r=[s];function p(c,i,d,u,_,l){return n(),e("div",null,r)}var h=t(o,[["render",p]]);export{v as __pageData,h as default};

@@ -1,7 +1,7 @@
 {
   "name": "@obewds/vueventus",
   "description": "A modular design system component library built for Vue.js and Tailwind CSS.",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
   "license": "MIT",
@@ -49,12 +49,12 @@
     "auto-changelog": "^2.4.0",
     "autoprefixer": "^10.4.7",
     "c8": "^7.11.3",
-    "happy-dom": "^4.1.0",
+    "happy-dom": "^5.0.0",
     "postcss": "^8.4.14",
     "rimraf": "^3.0.2",
     "vite": "^2.9.9",
-    "vitepress": "^0.22.4",
-    "vitest": "^0.13.0",
+    "vitepress": "^1.0.0-alpha.1",
+    "vitest": "^0.13.1",
     "vue-router": "^4.0.15"
   },
   "repository": {
@@ -72,6 +72,7 @@
     "obewds",
     "rollup",
     "vitepress",
-    "postcss"
+    "postcss",
+    "nodejs"
   ]
 }

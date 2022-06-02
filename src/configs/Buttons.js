@@ -1,5 +1,6 @@
 export default {
     border: 'border border-transparent',
+    cursor: 'cursor-pointer',
     disabled: 'disabled:opacity-25',
     display: 'inline-flex items-center',
     focus: 'focus:outline-none focus:ring focus:ring-opacity-50',
@@ -7,6 +8,7 @@ export default {
     base: function () {
         return [
             this.border,
+            this.cursor,
             this.disabled,
             this.display,
             this.focus,
@@ -41,6 +43,7 @@ export default {
     blockBase: function () {
         return [
             this.border,
+            this.cursor,
             this.disabled,
             this.blockDisplay,
             this.focus,
@@ -75,6 +78,7 @@ export default {
     fabBase: function () {
         return [
             this.border,
+            this.cursor,
             this.disabled,
             this.fabDisplay,
             this.focus,
