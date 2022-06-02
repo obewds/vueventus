@@ -1,6 +1,6 @@
 # Getting Started
 
-This guide will walk through installing and setting up VueVentus along with Vite.js, Vue.js and Tailwind CSS. The guide will finish with a test drive of teh VvButton component, to provide a quick working example of how to iterate with design system components and atomic classes.
+This guide will walk through installing and setting up VueVentus along with [Vite.js](https://vitejs.dev/guide/#scaffolding-your-first-vite-project), [Vue.js](https://vuejs.org/) and [Tailwind CSS](https://tailwindcss.com/). The guide will finish with a test drive of teh VvButton component, to provide a quick working example of how to iterate with design system components and atomic classes.
 
 <br>
 

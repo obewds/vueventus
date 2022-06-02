@@ -9,6 +9,7 @@ module.exports = {
     },
     themeConfig: {
         logo: 'https://obewds.github.io/vueventus/images/vue-ventus-mark-and-favicon.png',
+        logoLink: 'https://obewds.github.io/vueventus/',
         nav: [
             { text: "Get Started", link: "/getting-started" },
             { text: "Components", link: "/components" },
