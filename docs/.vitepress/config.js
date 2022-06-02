@@ -8,7 +8,7 @@ module.exports = {
       lineNumbers: true,
     },
     themeConfig: {
-        logo: '/images/vue-ventus-mark-and-favicon.png',
+        logo: 'images/vue-ventus-mark-and-favicon.png',
         nav: [
             { text: "Get Started", link: "/getting-started" },
             { text: "Components", link: "/components" },
