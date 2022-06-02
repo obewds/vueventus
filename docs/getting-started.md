@@ -181,21 +181,24 @@ First we'll open up the `./src/components/HelloWorld.vue` component, and import 
 ```html
 <script setup>
 
+    import { ref } from 'vue'
     import { VvButton } from '@obewds/vueventus'
 
     // ...
 
+    const count = ref(0)
+
 </script>
+```
 
+Next up, we can add our `VvButton` instance in the HelloWorld.vue SFC file `<template>` tag:
+
+```html
 <template>
-
-    <!-- ... -->
     
     <VvButton @click="count++">
         Count: {{ count }}
     </VvButton>
-
-    <!-- ... -->
 
 </template>
 ```
