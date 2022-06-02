@@ -114,7 +114,7 @@ Go haead and open up the `./tailwind.config.js` file and add the following mods:
 ```javascript
 // ./tailwind.config.js
 const defaultTheme = require('tailwindcss/defaultTheme')
-const prototypeVvColors = require('./node_modules/@obewds/vueventus/data/vueventus.tw.colors.json')
+const prototypeVvColors = require('./node_modules/@obewds/vueventus/src/data/vueventus.tw.colors.json')
 
 module.exports = {
 
@@ -124,8 +124,9 @@ module.exports = {
         "./index.html",
         "./src/**/*.{vue,js,ts,jsx,tsx}",
         // To include VueVentus default Tailwind CSS classes for prototyping
-        "./node_modules/@obewds/vueventus",
+        "./node_modules/@obewds/vueventus/**/*.{vue,js,ts,jsx,tsx,json}",
     ],
+
     theme: {
         extend: {
             fontFamily: {
