@@ -1,6 +1,6 @@
 # Getting Started
 
-Installing the VueVentus component system is easy.
+This guide will walk through installing and setting up VueVentus along with Vite.js, Vue.js and Tailwind CSS. The guide will finish with a test drive of teh VvButton component, to provide a quick working example of how to iterate with design system components and atomic classes.
 
 <br>
 
@@ -30,6 +30,19 @@ npm run dev
 ```
 
 
+
+<br>
+
+
+
+
+## Installing VueVentus
+
+With Vue and Tailwind installed, it's time to install VueVentus. From your project's root directory, you can install the VueVentus package with:
+
+```bash
+npm install @obewds/vueventus --save-dev
+```
 
 <br>
 
@@ -92,20 +105,7 @@ npm run dev
 
 
 
-## Installing VueVentus
-
-With Vue and Tailwind installed, it's time to install VueVentus. From your project's root directory, you can install the VueVentus package with:
-
-```bash
-npm install @obewds/vueventus --save-dev
-```
-
-<br>
-
-
-
-
-## Tailwind Setup
+## Tailwind Config Setup
 
 There's a few mods to the Tailwind config file needed to open up a more "design system" configuration for your app and to use the VueVentus default Tailwind component system to its fullest. 
 
@@ -166,6 +166,95 @@ module.exports = {
     ],
 }
 ```
+
+<br>
+
+
+
+
+## Test Drive: VvButton
+
+Now that everything is wired up, let's test drive the VvButton component.
+
+First we'll open up the `./src/components/HelloWorld.vue` component, and import the `VvButton` component:
+
+```html
+<script setup>
+
+    import { VvButton } from '@obewds/vueventus'
+
+    // ...
+
+</script>
+
+<template>
+
+    <!-- ... -->
+    
+    <VvButton @click="count++">
+        Count: {{ count }}
+    </VvButton>
+
+    <!-- ... -->
+
+</template>
+```
+
+You should now see a button with default Tailwind CSS button classes from the ButtonSolid Configs Module.
+
+Next, let's change the color rapid protyping style:
+
+```html
+<template>
+    
+    <VvButton
+        @click="count++"
+        color="primary"
+    >
+        Count: {{ count }}
+    
+    </VvButton>
+
+</template>
+```
+
+Looking better! Next, let's switch our primary color button to an outline button color palette:
+
+```html
+<template>
+    
+    <VvButton
+        @click="count++"
+        color="primary"
+        palette="outline"
+    >
+        Count: {{ count }}
+    
+    </VvButton>
+
+</template>
+```
+
+So that's how colors and palettes work. Palettes are overall styling groups or themes, while colors are key/value pairs where the key describes the value and the value is a group of Tailwind CSS classes. Like `color="primary"`, `color="error"` or `color="success"`, etc.
+
+Next, let's switch back to a solid color palette by dropping the `palette` attribute (the default palette of the VvButton component is `'solid'`). And let's add some rounded corners to our solid primary button, too:
+
+```html
+<template>
+    
+    <VvButton
+        @click="count++"
+        color="primary"
+        class="rounded-lg"
+    >
+        Count: {{ count }}
+    
+    </VvButton>
+
+</template>
+```
+
+Your VvButton component instance should now be a solid primary colored button with rounded corners!
 
 <br>
 
