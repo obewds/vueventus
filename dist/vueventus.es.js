@@ -328,289 +328,10 @@ const _sfc_main$1 = {
     };
   }
 };
-const black = "#0a0a0a";
-const white = "#fcfcfc";
-const gray = {
-  "50": "#f0f0f1",
-  "100": "#e1e1e3",
-  "200": "#c4c4c8",
-  "300": "#a7a7ad",
-  "400": "#8c8c93",
-  "500": "#71717a",
-  "600": "#5f5f67",
-  "700": "#434348",
-  "800": "#333337",
-  "900": "#242426"
-};
-const trueGray = {
-  "50": "#f0f0f0",
-  "100": "#e1e1e1",
-  "200": "#c5c5c5",
-  "300": "#a9a9a9",
-  "400": "#8d8d8d",
-  "500": "#737373",
-  "600": "#616161",
-  "700": "#444444",
-  "800": "#343434",
-  "900": "#252525"
-};
-const warmGray = {
-  "50": "#f1f0ef",
-  "100": "#e3e1e0",
-  "200": "#c7c4c2",
-  "300": "#aca7a4",
-  "400": "#928c87",
-  "500": "#78716c",
-  "600": "#655f5b",
-  "700": "#474341",
-  "800": "#363331",
-  "900": "#262423"
-};
-const coolGray = {
-  "50": "#eff0f2",
-  "100": "#e0e1e4",
-  "200": "#c1c4ca",
-  "300": "#a4a8b1",
-  "400": "#878c98",
-  "500": "#6b7280",
-  "600": "#5b606c",
-  "700": "#40444c",
-  "800": "#313439",
-  "900": "#232428"
-};
-const red = {
-  "50": "#ffeeeb",
-  "100": "#ffdcd7",
-  "200": "#ffb9b0",
-  "300": "#ff968a",
-  "400": "#f97066",
-  "500": "#ef4444",
-  "600": "#c83c3a",
-  "700": "#8a2e2b",
-  "800": "#672522",
-  "900": "#451c19"
-};
-const rose = {
-  "50": "#ffeeee",
-  "100": "#ffdcdd",
-  "200": "#ffb9bb",
-  "300": "#ff959b",
-  "400": "#fd6e7c",
-  "500": "#f43f5e",
-  "600": "#cc3850",
-  "700": "#8c2c39",
-  "800": "#68242c",
-  "900": "#461c1f"
-};
-const pink = {
-  "50": "#ffeef4",
-  "100": "#ffdeea",
-  "200": "#febcd5",
-  "300": "#fa99c1",
-  "400": "#f474ad",
-  "500": "#ec4899",
-  "600": "#c53f80",
-  "700": "#873059",
-  "800": "#652743",
-  "900": "#441d2e"
-};
-const fuchsia = {
-  "50": "#fdeefe",
-  "100": "#fbdefd",
-  "200": "#f5bcfa",
-  "300": "#ed99f7",
-  "400": "#e473f3",
-  "500": "#d946ef",
-  "600": "#b53ec7",
-  "700": "#7d3088",
-  "800": "#5d2765",
-  "900": "#3f1d43"
-};
-const purple = {
-  "50": "#f8eeff",
-  "100": "#f1ddfe",
-  "200": "#e1bcfd",
-  "300": "#d09bfc",
-  "400": "#bd79fa",
-  "500": "#a855f7",
-  "600": "#8d49ce",
-  "700": "#63358d",
-  "800": "#4a2a68",
-  "900": "#331f45"
-};
-const violet = {
-  "50": "#f5eeff",
-  "100": "#ebdefe",
-  "200": "#d7bdfd",
-  "300": "#c09cfb",
-  "400": "#a77cf9",
-  "500": "#8b5cf6",
-  "600": "#764ecd",
-  "700": "#53398c",
-  "800": "#402c67",
-  "900": "#2d2045"
-};
-const indigo = {
-  "50": "#f2effe",
-  "100": "#e5dffd",
-  "200": "#c9bffb",
-  "300": "#aca0f8",
-  "400": "#8b83f5",
-  "500": "#6366f1",
-  "600": "#5656c9",
-  "700": "#3f3d89",
-  "800": "#322f65",
-  "900": "#242244"
-};
-const blue = {
-  "50": "#f0f2ff",
-  "100": "#e0e4fe",
-  "200": "#c0cbfd",
-  "300": "#9db1fb",
-  "400": "#7599f9",
-  "500": "#3b82f6",
-  "600": "#376dcd",
-  "700": "#2e4d8c",
-  "800": "#273a67",
-  "900": "#1e2845"
-};
-const lightBlue = {
-  "50": "#eef6fd",
-  "100": "#ddecfb",
-  "200": "#badaf7",
-  "300": "#93c8f2",
-  "400": "#66b6ee",
-  "500": "#0ea5e9",
-  "600": "#1c8ac2",
-  "700": "#216085",
-  "800": "#1f4862",
-  "900": "#1a3142"
-};
-const cyan = {
-  "50": "#eef8fb",
-  "100": "#dcf0f6",
-  "200": "#b8e2ee",
-  "300": "#91d3e5",
-  "400": "#63c5dd",
-  "500": "#06b6d4",
-  "600": "#1998b1",
-  "700": "#1f6979",
-  "800": "#1d4e5a",
-  "900": "#19353c"
-};
-const teal = {
-  "50": "#edf8f6",
-  "100": "#daf1ed",
-  "200": "#b4e3db",
-  "300": "#8dd5c9",
-  "400": "#60c7b7",
-  "500": "#14b8a6",
-  "600": "#1c9a8b",
-  "700": "#1f6a60",
-  "800": "#1c4f48",
-  "900": "#183631"
-};
-const emerald = {
-  "50": "#ecf8f2",
-  "100": "#d9f2e5",
-  "200": "#b3e4cb",
-  "300": "#8ad6b2",
-  "400": "#5dc899",
-  "500": "#10b981",
-  "600": "#1a9b6d",
-  "700": "#1d6b4c",
-  "800": "#1b503a",
-  "900": "#173628"
-};
-const green = {
-  "50": "#edfaee",
-  "100": "#dbf5de",
-  "200": "#b7e9be",
-  "300": "#90de9e",
-  "400": "#64d27e",
-  "500": "#22c55e",
-  "600": "#25a550",
-  "700": "#23723a",
-  "800": "#1f552d",
-  "900": "#193920"
-};
-const lime = {
-  "50": "#f4faea",
-  "100": "#eaf5d5",
-  "200": "#d3ebab",
-  "300": "#bbe181",
-  "400": "#a1d754",
-  "500": "#84cc16",
-  "600": "#70aa1a",
-  "700": "#4f751a",
-  "800": "#3d5718",
-  "900": "#2b3b14"
-};
-const yellow = {
-  "50": "#fff7e9",
-  "100": "#ffefd3",
-  "200": "#ffe0a8",
-  "300": "#fad07d",
-  "400": "#f3c14f",
-  "500": "#eab308",
-  "600": "#c49612",
-  "700": "#876716",
-  "800": "#644d15",
-  "900": "#433413"
-};
-const amber = {
-  "50": "#fff5e9",
-  "100": "#ffebd2",
-  "200": "#ffd7a6",
-  "300": "#ffc47b",
-  "400": "#fdb14d",
-  "500": "#f59e0b",
-  "600": "#cd8513",
-  "700": "#8d5c16",
-  "800": "#694515",
-  "900": "#462f12"
-};
-const orange = {
-  "50": "#fff1e8",
-  "100": "#ffe3d1",
-  "200": "#ffc8a4",
-  "300": "#ffac77",
-  "400": "#ff904b",
-  "500": "#f97316",
-  "600": "#d06117",
-  "700": "#8f4516",
-  "800": "#6b3514",
-  "900": "#482611"
-};
-var AppTwColors = {
-  black,
-  white,
-  gray,
-  trueGray,
-  warmGray,
-  coolGray,
-  red,
-  rose,
-  pink,
-  fuchsia,
-  purple,
-  violet,
-  indigo,
-  blue,
-  lightBlue,
-  cyan,
-  teal,
-  emerald,
-  green,
-  lime,
-  yellow,
-  amber,
-  orange
-};
 const _hoisted_1 = {
   key: 0,
   xmlns: "http://www.w3.org/2000/svg",
-  class: "h-6 w-6",
+  class: "h-5 w-5",
   fill: "none",
   viewBox: "0 0 24 24",
   stroke: "currentColor",
@@ -627,7 +348,7 @@ const _hoisted_3 = [
 const _hoisted_4 = {
   key: 1,
   xmlns: "http://www.w3.org/2000/svg",
-  class: "h-6 w-6",
+  class: "h-5 w-5",
   fill: "none",
   viewBox: "0 0 24 24",
   stroke: "currentColor",
@@ -668,6 +389,30 @@ const _sfc_main = {
     type: {
       type: String,
       default: "button"
+    },
+    bgClassDark: {
+      type: String,
+      default: "bg-gray-900"
+    },
+    bgClassLight: {
+      type: String,
+      default: "bg-gray-100"
+    },
+    bgHexDark: {
+      type: String,
+      default: "#242426"
+    },
+    bgHexLight: {
+      type: String,
+      default: "#e1e1e3"
+    },
+    textClassDark: {
+      type: String,
+      default: "text-gray-900"
+    },
+    textClassLight: {
+      type: String,
+      default: "text-gray-100"
     }
   },
   setup(__props) {
@@ -675,12 +420,12 @@ const _sfc_main = {
     const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : {
       colorMode: {
         dark: {
-          bg: "bg-gray-900",
-          text: "text-gray-100"
+          bg: props.bgClassDark,
+          text: props.textClassLight
         },
         light: {
-          bg: "bg-gray-100",
-          text: "text-gray-900"
+          bg: props.bgClassLight,
+          text: props.textClassDark
         }
       }
     };
@@ -690,12 +435,12 @@ const _sfc_main = {
     if (mode.value === "light" && document) {
       document.documentElement.classList.remove("dark", vv.colorMode.dark.bg, vv.colorMode.dark.text);
       document.documentElement.classList.add(vv.colorMode.light.bg, vv.colorMode.light.text);
-      document.documentElement.style.backgroundColor = AppTwColors.gray["100"];
+      document.documentElement.style.backgroundColor = props.bgHexLight;
     }
     if (mode.value === "dark" && document) {
       document.documentElement.classList.remove(vv.colorMode.light.bg, vv.colorMode.light.text);
       document.documentElement.classList.add("dark", vv.colorMode.dark.bg, vv.colorMode.dark.text);
-      document.documentElement.style.backgroundColor = AppTwColors.gray["900"];
+      document.documentElement.style.backgroundColor = props.bgHexDark;
     }
     function toggleColorMode(event) {
       if (mode.value === "light" && document) {
@@ -703,13 +448,13 @@ const _sfc_main = {
         localStorage.setItem("colorMode", "dark");
         document.documentElement.classList.remove(vv.colorMode.light.bg, vv.colorMode.light.text);
         document.documentElement.classList.add("dark", vv.colorMode.dark.bg, vv.colorMode.dark.text);
-        document.documentElement.style.backgroundColor = AppTwColors.gray["900"];
+        document.documentElement.style.backgroundColor = props.bgHexDark;
       } else if (mode.value === "dark" && document) {
         mode.value = "light";
         localStorage.setItem("colorMode", "light");
         document.documentElement.classList.remove("dark", vv.colorMode.dark.bg, vv.colorMode.dark.text);
         document.documentElement.classList.add(vv.colorMode.light.bg, vv.colorMode.light.text);
-        document.documentElement.style.backgroundColor = AppTwColors.gray["100"];
+        document.documentElement.style.backgroundColor = props.bgHexLight;
       }
     }
     return (_ctx, _cache) => {
