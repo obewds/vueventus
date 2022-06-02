@@ -18,9 +18,12 @@ import GroundMonochromaticPage from '@/views/configs/palettes/GroundMonochromati
 import GroundPastelPage from '@/views/configs/palettes/GroundPastelPage.vue'
 import TextDefaultPage from '@/views/configs/palettes/TextDefaultPage.vue'
 
-// component pages
+// button component pages
 import VvButtonPage from '@/views/components/buttons/VvButtonPage.vue'
 import VvColorModeButtonPage from '@/views/components/buttons/VvColorModeButtonPage.vue'
+
+// element component pages
+import VvElPage from '@/views/components/elements/VvElPage.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -92,7 +95,7 @@ const router = createRouter({
         },
         
         //
-        // component pages
+        // button component pages
         //
 
         {
@@ -103,6 +106,16 @@ const router = createRouter({
             name: 'VvColorModeButton Component',
             component: VvColorModeButtonPage,
             path: '/components/buttons/vv-color-mode-button'
+        },
+        
+        //
+        // element component pages
+        //
+
+        {
+            name: 'VvEl Component',
+            component: VvElPage,
+            path: '/components/elements/vv-el'
         },
 
     ],
