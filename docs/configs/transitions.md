@@ -23,16 +23,7 @@ import { Transitions } from '@obewds/vueventus'
 
 
 
-## Properties
-
-The {{ $frontmatter.title }} has the following properties:
-
-<br>
-
-
-
-
-### .durations
+## Transitions.durations
 
 ```javascript
 durations: {
@@ -52,7 +43,7 @@ durations: {
 
 
 
-### .easings
+## Transitions.easings
 
 ```javascript
 easings: {
@@ -68,7 +59,7 @@ easings: {
 
 
 
-### .transitions
+## Transitions.transitions
 
 ```javascript
 transitions: {
@@ -84,25 +75,7 @@ transitions: {
 
 
 
-
-
-
-
-
-
-
-
-
-## Methods
-
-The {{ $frontmatter.title }} has the following methods:
-
-<br>
-
-
-
-
-### .classes()
+## Transitions.classes()
 
 ```javascript
 const transition = Transitions.classes() // defaults are 'default', 'inOut', '300'
@@ -117,7 +90,7 @@ const transition = Transitions.classes('colors', 'linear', '1000')
 
 
 
-### .custom()
+## Transitions.custom()
 
 ```javascript
 const transition = Transitions.custom() // defaults are 'default', 'inOut', '300'
@@ -135,7 +108,7 @@ const transition = Transitions.custom({
 
 
 
-### .getDurationClasses()
+## Transitions.getDurationClasses()
 
 ```javascript
 const duration = Transitions.getDurationClasses() // default is '300'
@@ -150,7 +123,7 @@ const duration = Transitions.getDurationClasses('1000')
 
 
 
-### .getEasingClasses()
+## Transitions.getEasingClasses()
 
 ```javascript
 const easing = Transitions.getEasingClasses() // default is 'inOut'
@@ -165,7 +138,7 @@ const easing = Transitions.getEasingClasses('in')
 
 
 
-### .getTransitionClasses()
+## Transitions.getTransitionClasses()
 
 ```javascript
 const transition = Transitions.getTransitionClasses() // default is 'default'

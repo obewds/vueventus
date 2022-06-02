@@ -8,7 +8,7 @@ module.exports = {
       lineNumbers: true,
     },
     themeConfig: {
-        logo: 'images/vue-ventus-mark-and-favicon.png',
+        logo: 'https://obewds.github.io/vueventus/images/vue-ventus-mark-and-favicon.png',
         nav: [
             { text: "Get Started", link: "/getting-started" },
             { text: "Components", link: "/components" },
@@ -20,7 +20,7 @@ module.exports = {
             message: 'Released under the MIT License.',
             copyright: 'Copyright © 2022-present Matt McT LLC'
         },
-        sidebarDepth: 2,
+        // sidebarDepth: 2,
         // sidebar: [
             // { text: "Installation", link: "/#installation" },
         // ],
