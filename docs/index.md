@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /getting-started
+      link: /vueventus/getting-started
     - theme: alt
       text: View on GitHub
       link: https://github.com/obewds/vueventus
