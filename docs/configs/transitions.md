@@ -1,6 +1,12 @@
-# Transitions
+---
+title: Transitions Config Module
+---
 
-The Transitions Config Module provides Tailwind CSS transition orientated classes using a collection of methods such as `.classes()`, `.custom()`, `.getDurationClasses()`, `.getEasingClasses()` and `.getTransitionClasses()`
+
+
+# {{ $frontmatter.title }}
+
+The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for CSS transitions throughout your application.
 
 <br>
 
@@ -17,35 +23,16 @@ import { Transitions } from '@obewds/vueventus'
 
 
 
-## .classes()
+## Properties
 
-```javascript
-const transition = Transitions.classes()
-const transitionColorsSlow = Transitions.classes('colors', 'linear', '1000')
-```
+The {{ $frontmatter.title }} has the following properties:
 
 <br>
 
 
 
 
-## .custom()
-
-```javascript
-const transition = Transitions.custom()
-const transitionColorsSlow = Transitions.custom({
-    transitions: 'colors',
-    easings: 'linear',
-    durations: '1000'
-})
-```
-
-<br>
-
-
-
-
-## .durations
+### .durations
 
 ```javascript
 durations: {
@@ -65,7 +52,7 @@ durations: {
 
 
 
-## .easings
+### .easings
 
 ```javascript
 easings: {
@@ -80,43 +67,8 @@ easings: {
 
 
 
-## .getDurationClasses()
 
-```javascript
-const duration = Transitions.getDurationClasses()
-const durationSlow = Transitions.getDurationClasses('1000')
-```
-
-<br>
-
-
-
-
-## .getEasingClasses()
-
-```javascript
-const easing = Transitions.getEasingClasses()
-const easingIn = Transitions.getEasingClasses('in')
-```
-
-<br>
-
-
-
-
-## .getTransitionClasses()
-
-```javascript
-const transition = Transitions.getTransitionClasses()
-const transitionColors = Transitions.getTransitionClasses('colors')
-```
-
-<br>
-
-
-
-
-## .transitions
+### .transitions
 
 ```javascript
 transitions: {
@@ -132,7 +84,106 @@ transitions: {
 
 
 
-## Module
+
+
+
+
+
+
+
+
+
+## Methods
+
+The {{ $frontmatter.title }} has the following methods:
+
+<br>
+
+
+
+
+### .classes()
+
+```javascript
+const transition = Transitions.classes() // defaults are 'default', 'inOut', '300'
+```
+
+```javascript
+const transition = Transitions.classes('colors', 'linear', '1000')
+```
+
+<br>
+
+
+
+
+### .custom()
+
+```javascript
+const transition = Transitions.custom() // defaults are 'default', 'inOut', '300'
+```
+
+```javascript
+const transition = Transitions.custom({
+    transitions: 'colors',
+    easings: 'linear',
+    durations: '1000'
+})
+```
+
+<br>
+
+
+
+### .getDurationClasses()
+
+```javascript
+const duration = Transitions.getDurationClasses() // default is '300'
+```
+
+```javascript
+const duration = Transitions.getDurationClasses('1000')
+```
+
+<br>
+
+
+
+
+### .getEasingClasses()
+
+```javascript
+const easing = Transitions.getEasingClasses() // default is 'inOut'
+```
+
+```javascript
+const easing = Transitions.getEasingClasses('in')
+```
+
+<br>
+
+
+
+
+### .getTransitionClasses()
+
+```javascript
+const transition = Transitions.getTransitionClasses() // default is 'default'
+```
+
+```javascript
+const transition = Transitions.getTransitionClasses('colors')
+```
+
+<br>
+
+
+
+
+
+
+
+## Module Code
 
 <<< @/../src/configs/Transitions.js
 
