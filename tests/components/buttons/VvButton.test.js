@@ -4,6 +4,7 @@
 
 import { mount } from '@vue/test-utils'
 import { VvButton } from '../../../src/index'
+import { VvConfig } from '../../../src/index'
 
 
 
@@ -15,7 +16,7 @@ test('VvButton.vue component mounts successfully', async () => {
 
 
 
-test('VvButton.vue component accepts an object literal value with markup and text content', async () => {
+test('VvButton.vue component accepts an object literal slot value with markup and text content', async () => {
 
     const testString = `<div>Test String Value</div>`
 
@@ -26,5 +27,50 @@ test('VvButton.vue component accepts an object literal value with markup and tex
     })
 
     expect(wrapper.html()).toContain(testString)
+    
+})
+
+
+
+test('VvButton.vue component can successfully inject() a parent component provide() property "vv"', async () => {
+
+    const wrapper = mount(VvButton, {
+        global: {
+            provide: {
+                vv: VvConfig,
+            },
+        },
+    })
+
+    expect(wrapper.html()).toContain('button')
+    
+})
+
+
+
+test('VvButton.vue component returns Tailwind CSS classes for a full width element', async () => {
+
+    const wrapper = mount(VvButton, {
+        props: {
+            block: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('w-full')
+    
+})
+
+
+
+test('VvButton.vue component returns Tailwind CSS classes for a specific width and height sized element', async () => {
+
+    const wrapper = mount(VvButton, {
+        props: {
+            fab: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('w-')
+    expect(wrapper.html()).toContain('h-')
     
 })
