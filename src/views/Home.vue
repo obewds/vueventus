@@ -17,8 +17,12 @@
             VueVentus Local Testing Site
         </h1>
 
+
+
+
+
         <div :class="tw.subhead">
-            VUE COMPONENTS
+            VUE BUTTON COMPONENTS
         </div>
 
         <div :class="tw.grid">
@@ -32,6 +36,26 @@
             </router-link>
 
         </div>
+
+
+
+
+
+        <div :class="tw.subhead">
+            VUE ELEMENT COMPONENTS
+        </div>
+
+        <div :class="tw.grid">
+
+            <router-link to="/components/elements/vv-el" :class="tw.gridCardLink">
+                VvEl
+            </router-link>
+
+        </div>
+
+
+
+
 
         <div :class="tw.subhead">
             CONFIG MODULES
