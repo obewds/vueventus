@@ -7,10 +7,7 @@
 <script setup>
 
     import { computed, inject } from 'vue'
-    import Buttons from '../../configs/Buttons.js'
-    import Transitions from '../../configs/Transitions.js'
-    import ButtonOutline from '../../configs/palettes/ButtonOutline.js'
-    import ButtonSolid from '../../configs/palettes/ButtonSolid.js'
+    import VvConfig from '../../configs/VvConfig.js'
 
     const props = defineProps({
         block: {
@@ -35,7 +32,7 @@
         },
         transitionClasses: {
             type: String,
-            default: Transitions.classes(),
+            default: VvConfig.transitions.classes(),
         },
         type: {
             type: String,
@@ -44,20 +41,7 @@
         },
     })
 
-    const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject('vv') : {
-        buttons: {
-            base: Buttons.base(),
-            palettes: {
-                outline: ButtonOutline,
-                solid: ButtonSolid,
-            },
-            sizes: Buttons.sizes,
-            blockBase: Buttons.blockBase(),
-            blockSizes: Buttons.blockSizes,
-            fabBase: Buttons.fabBase(),
-            fabSizes: Buttons.fabSizes,
-        },
-    }
+    const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject('vv') : VvConfig
 
     let classes = computed( () => {
 
@@ -65,8 +49,8 @@
 
         if (props.block === true && props.fab === false) {
 
-            if ( vv?.buttons?.blockBase ) {
-                output.push( vv.buttons.blockBase )
+            if ( vv?.buttons?.blockBase() ) {
+                output.push( vv.buttons.blockBase() )
             }
 
             if ( props.size !== '' && vv?.buttons?.blockSizes?.[props.size] ) {
@@ -75,8 +59,8 @@
 
         } else if (props.fab === true && props.block === false) {
             
-            if ( vv?.buttons?.fabBase ) {
-                output.push( vv.buttons.fabBase )
+            if ( vv?.buttons?.fabBase() ) {
+                output.push( vv.buttons.fabBase() )
             }
 
             if ( props.size !== '' && vv?.buttons?.fabSizes?.[props.size] ) {
@@ -85,8 +69,8 @@
 
         } else {
             
-            if ( vv?.buttons?.base ) {
-                output.push( vv.buttons.base )
+            if ( vv?.buttons?.base() ) {
+                output.push( vv.buttons.base() )
             }
 
             if ( props.size !== '' && vv?.buttons?.sizes?.[props.size] ) {

@@ -1,6 +1,7 @@
 <script setup>
 
     import { inject } from 'vue'
+    import DevViewLinkCard from '@/views/compos/DevViewLinkCard.vue'
 
     const globals = inject('globals')
 
@@ -17,35 +18,63 @@
             VueVentus Local Testing Site
         </h1>
 
+
+
+
+
         <div :class="tw.subhead">
-            VUE COMPONENTS
+            VUE BUTTON COMPONENTS
         </div>
 
-        <div :class="tw.grid">
+        <div :class="[tw.grid, 'grid-cols-1 sm:grid-cols-2']">
 
-            <router-link to="/components/buttons/vv-button" :class="tw.gridCardLink">
-                VvButton
-            </router-link>
+            <DevViewLinkCard icon="component" to="/components/buttons/vv-button">
+                VvButton.vue
+            </DevViewLinkCard>
 
-            <router-link to="/components/buttons/vv-color-mode-button" :class="tw.gridCardLink">
-                VvColorModeButton
-            </router-link>
+            <DevViewLinkCard icon="component" to="/components/buttons/vv-color-mode-button">
+                VvColorModeButton.vue
+            </DevViewLinkCard>
 
         </div>
+
+
+
+
+
+        <div :class="tw.subhead">
+            VUE ELEMENT COMPONENTS
+        </div>
+
+        <div :class="[tw.grid, 'grid-cols-1']">
+
+            <DevViewLinkCard icon="component" to="/components/elements/vv-el">
+                VvEl.vue
+            </DevViewLinkCard>
+
+        </div>
+
+
+
+
 
         <div :class="tw.subhead">
             CONFIG MODULES
         </div>
 
-        <div :class="tw.grid">
+        <div :class="[tw.grid, 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3']">
 
-            <router-link to="/configs/buttons" :class="tw.gridCardLinkModule">
-                Buttons
-            </router-link>
+            <DevViewLinkCard icon="config" to="/configs/buttons" :link-classes="tw.gridCardLinkModule">
+                Buttons.js
+            </DevViewLinkCard>
 
-            <router-link to="/configs/transitions" :class="tw.gridCardLinkModule">
-                Transitions
-            </router-link>
+            <DevViewLinkCard icon="config" to="/configs/transitions" :link-classes="tw.gridCardLinkModule">
+                Transitions.js
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="config" to="/configs/vv-config" :link-classes="tw.gridCardLinkModule">
+                VvConfig.js
+            </DevViewLinkCard>
 
         </div>
 
@@ -53,43 +82,43 @@
             PALETTE CONFIG MODULES
         </div>
 
-        <div :class="tw.grid">
+        <div :class="[tw.grid, 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3']">
 
-            <router-link to="/configs/palettes/anchor-default" :class="tw.gridCardLinkPalette">
-                AnchorDefault
-            </router-link>
+            <DevViewLinkCard icon="palette" to="/configs/palettes/anchor-default" :link-classes="tw.gridCardLinkPalette">
+                AnchorDefault.js
+            </DevViewLinkCard>
 
-            <router-link to="/configs/palettes/border-default" :class="tw.gridCardLinkPalette">
-                BorderDefault
-            </router-link>
+            <DevViewLinkCard icon="palette" to="/configs/palettes/border-default" :link-classes="tw.gridCardLinkPalette">
+                BorderDefault.js
+            </DevViewLinkCard>
 
-            <router-link to="/configs/palettes/button-outline" :class="tw.gridCardLinkPalette">
-                ButtonOutline
-            </router-link>
+            <DevViewLinkCard icon="palette" to="/configs/palettes/button-outline" :link-classes="tw.gridCardLinkPalette">
+                ButtonOutline.js
+            </DevViewLinkCard>
 
-            <router-link to="/configs/palettes/button-solid" :class="tw.gridCardLinkPalette">
-                ButtonSolid
-            </router-link>
+            <DevViewLinkCard icon="palette" to="/configs/palettes/button-solid" :link-classes="tw.gridCardLinkPalette">
+                ButtonSolid.js
+            </DevViewLinkCard>
 
-            <router-link to="/configs/palettes/ground-console" :class="tw.gridCardLinkPalette">
-                GroundConsole
-            </router-link>
+            <DevViewLinkCard icon="palette" to="/configs/palettes/ground-console" :link-classes="tw.gridCardLinkPalette">
+                GroundConsole.js
+            </DevViewLinkCard>
 
-            <router-link to="/configs/palettes/ground-default" :class="tw.gridCardLinkPalette">
-                GroundDefault
-            </router-link>
+            <DevViewLinkCard icon="palette" to="/configs/palettes/ground-default" :link-classes="tw.gridCardLinkPalette">
+                GroundDefault.js
+            </DevViewLinkCard>
 
-            <router-link to="/configs/palettes/ground-monochromatic" :class="tw.gridCardLinkPalette">
-                GroundMonochromatic
-            </router-link>
+            <DevViewLinkCard icon="palette" to="/configs/palettes/ground-monochromatic" :link-classes="tw.gridCardLinkPalette">
+                GroundMonochromatic.js
+            </DevViewLinkCard>
 
-            <router-link to="/configs/palettes/ground-pastel" :class="tw.gridCardLinkPalette">
-                GroundPastel
-            </router-link>
+            <DevViewLinkCard icon="palette" to="/configs/palettes/ground-pastel" :link-classes="tw.gridCardLinkPalette">
+                GroundPastel.js
+            </DevViewLinkCard>
 
-            <router-link to="/configs/palettes/text-default" :class="tw.gridCardLinkPalette">
-                TextDefault
-            </router-link>
+            <DevViewLinkCard icon="palette" to="/configs/palettes/text-default" :link-classes="tw.gridCardLinkPalette">
+                TextDefault.js
+            </DevViewLinkCard>
 
         </div>
     

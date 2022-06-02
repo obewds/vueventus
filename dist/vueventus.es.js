@@ -1,4 +1,23 @@
-import { inject, computed, openBlock, createElementBlock, normalizeClass, unref, renderSlot, ref, createBlock, withCtx, createCommentVNode, createElementVNode } from "vue";
+var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (__hasOwnProp.call(b, prop))
+      __defNormalProp(a, prop, b[prop]);
+  if (__getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(b)) {
+      if (__propIsEnum.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
+var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+import { inject, computed, openBlock, createElementBlock, normalizeClass, unref, renderSlot, ref, createBlock, withCtx, createCommentVNode, createElementVNode, resolveDynamicComponent } from "vue";
 var AnchorDefault = {
   "default": "text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-200",
   error: "text-rose-500 hover:text-rose-600 dark:text-rose-300 dark:hover:text-rose-200",
@@ -235,8 +254,50 @@ var Buttons = {
     ].join(" ");
   }
 };
+var VvConfig = {
+  anchors: {
+    palettes: {
+      default: AnchorDefault
+    }
+  },
+  borders: {
+    palettes: {
+      default: BorderDefault
+    }
+  },
+  buttons: __spreadProps(__spreadValues({}, Buttons), {
+    palettes: {
+      outline: ButtonOutline,
+      solid: ButtonSolid
+    }
+  }),
+  colorMode: {
+    dark: {
+      bg: "bg-gray-900",
+      text: "text-gray-100"
+    },
+    light: {
+      bg: "bg-gray-100",
+      text: "text-gray-900"
+    }
+  },
+  grounds: {
+    palettes: {
+      console: GroundConsole,
+      default: GroundDefault,
+      monochromatic: GroundMonochromatic,
+      pastel: GroundPastel
+    }
+  },
+  text: {
+    palettes: {
+      default: TextDefault
+    }
+  },
+  transitions: __spreadValues({}, Transitions)
+};
 const _hoisted_1$1 = ["type"];
-const _sfc_main$1 = {
+const _sfc_main$2 = {
   name: "VvButton",
   props: {
     block: {
@@ -261,7 +322,7 @@ const _sfc_main$1 = {
     },
     transitionClasses: {
       type: String,
-      default: Transitions.classes()
+      default: VvConfig.transitions.classes()
     },
     type: {
       type: String,
@@ -271,40 +332,27 @@ const _sfc_main$1 = {
   },
   setup(__props) {
     const props = __props;
-    const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : {
-      buttons: {
-        base: Buttons.base(),
-        palettes: {
-          outline: ButtonOutline,
-          solid: ButtonSolid
-        },
-        sizes: Buttons.sizes,
-        blockBase: Buttons.blockBase(),
-        blockSizes: Buttons.blockSizes,
-        fabBase: Buttons.fabBase(),
-        fabSizes: Buttons.fabSizes
-      }
-    };
+    const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
     let classes = computed(() => {
       var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l;
       let output = [];
       if (props.block === true && props.fab === false) {
-        if ((_a = vv == null ? void 0 : vv.buttons) == null ? void 0 : _a.blockBase) {
-          output.push(vv.buttons.blockBase);
+        if ((_a = vv == null ? void 0 : vv.buttons) == null ? void 0 : _a.blockBase()) {
+          output.push(vv.buttons.blockBase());
         }
         if (props.size !== "" && ((_c = (_b = vv == null ? void 0 : vv.buttons) == null ? void 0 : _b.blockSizes) == null ? void 0 : _c[props.size])) {
           output.push(vv.buttons.blockSizes[props.size]);
         }
       } else if (props.fab === true && props.block === false) {
-        if ((_d = vv == null ? void 0 : vv.buttons) == null ? void 0 : _d.fabBase) {
-          output.push(vv.buttons.fabBase);
+        if ((_d = vv == null ? void 0 : vv.buttons) == null ? void 0 : _d.fabBase()) {
+          output.push(vv.buttons.fabBase());
         }
         if (props.size !== "" && ((_f = (_e = vv == null ? void 0 : vv.buttons) == null ? void 0 : _e.fabSizes) == null ? void 0 : _f[props.size])) {
           output.push(vv.buttons.fabSizes[props.size]);
         }
       } else {
-        if ((_g = vv == null ? void 0 : vv.buttons) == null ? void 0 : _g.base) {
-          output.push(vv.buttons.base);
+        if ((_g = vv == null ? void 0 : vv.buttons) == null ? void 0 : _g.base()) {
+          output.push(vv.buttons.base());
         }
         if (props.size !== "" && ((_i = (_h = vv == null ? void 0 : vv.buttons) == null ? void 0 : _h.sizes) == null ? void 0 : _i[props.size])) {
           output.push(vv.buttons.sizes[props.size]);
@@ -362,7 +410,7 @@ const _hoisted_5 = /* @__PURE__ */ createElementVNode("path", {
 const _hoisted_6 = [
   _hoisted_5
 ];
-const _sfc_main = {
+const _sfc_main$1 = {
   name: "VvColorModeButton",
   props: {
     mode: {
@@ -392,11 +440,11 @@ const _sfc_main = {
     },
     bgClassDark: {
       type: String,
-      default: "bg-gray-900"
+      default: VvConfig.colorMode.dark.bg
     },
     bgClassLight: {
       type: String,
-      default: "bg-gray-100"
+      default: VvConfig.colorMode.light.bg
     },
     bgHexDark: {
       type: String,
@@ -408,27 +456,16 @@ const _sfc_main = {
     },
     textClassDark: {
       type: String,
-      default: "text-gray-900"
+      default: VvConfig.colorMode.dark.text
     },
     textClassLight: {
       type: String,
-      default: "text-gray-100"
+      default: VvConfig.colorMode.light.text
     }
   },
   setup(__props) {
     const props = __props;
-    const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : {
-      colorMode: {
-        dark: {
-          bg: props.bgClassDark,
-          text: props.textClassLight
-        },
-        light: {
-          bg: props.bgClassLight,
-          text: props.textClassDark
-        }
-      }
-    };
+    const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
     const mode = ref(props.mode);
     const icon = computed(() => mode.value === "dark" ? "sun" : "moon");
     const title = computed(() => mode.value === "dark" ? "Enable Light Mode" : "Enable Dark Mode");
@@ -458,7 +495,7 @@ const _sfc_main = {
       }
     }
     return (_ctx, _cache) => {
-      return openBlock(), createBlock(_sfc_main$1, {
+      return openBlock(), createBlock(_sfc_main$2, {
         title: unref(title),
         onClick: _cache[0] || (_cache[0] = ($event) => toggleColorMode()),
         class: "rounded-full",
@@ -477,4 +514,66 @@ const _sfc_main = {
     };
   }
 };
-export { AnchorDefault, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, TextDefault, Transitions, _sfc_main$1 as VvButton, _sfc_main as VvColorModeButton };
+const _sfc_main = {
+  name: "VvEl",
+  props: {
+    borderPalette: {
+      type: String,
+      default: "default"
+    },
+    borderColor: {
+      type: String,
+      default: ""
+    },
+    groundPalette: {
+      type: String,
+      default: "default"
+    },
+    groundColor: {
+      type: String,
+      default: "default"
+    },
+    tag: {
+      type: String,
+      default: "div"
+    },
+    textPalette: {
+      type: String,
+      default: "default"
+    },
+    textColor: {
+      type: String,
+      default: "default"
+    }
+  },
+  setup(__props) {
+    const props = __props;
+    inject("globals");
+    const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
+    let classes = computed(() => {
+      var _a, _b, _c, _d, _e, _f, _g, _h, _i;
+      let output = [];
+      if ((_c = (_b = (_a = vv == null ? void 0 : vv.borders) == null ? void 0 : _a.palettes) == null ? void 0 : _b[props.borderPalette]) == null ? void 0 : _c[props.borderColor]) {
+        output.push(vv.borders.palettes[props.borderPalette][props.borderColor]);
+      }
+      if ((_f = (_e = (_d = vv == null ? void 0 : vv.grounds) == null ? void 0 : _d.palettes) == null ? void 0 : _e[props.groundPalette]) == null ? void 0 : _f[props.groundColor]) {
+        output.push(vv.grounds.palettes[props.groundPalette][props.groundColor]);
+      }
+      if ((_i = (_h = (_g = vv == null ? void 0 : vv.text) == null ? void 0 : _g.palettes) == null ? void 0 : _h[props.textPalette]) == null ? void 0 : _i[props.textColor]) {
+        output.push(vv.text.palettes[props.textPalette][props.textColor]);
+      }
+      return output.join(" ");
+    });
+    return (_ctx, _cache) => {
+      return openBlock(), createBlock(resolveDynamicComponent(__props.tag), {
+        class: normalizeClass(unref(classes))
+      }, {
+        default: withCtx(() => [
+          renderSlot(_ctx.$slots, "default")
+        ]),
+        _: 3
+      }, 8, ["class"]);
+    };
+  }
+};
+export { AnchorDefault, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, TextDefault, Transitions, _sfc_main$2 as VvButton, _sfc_main$1 as VvColorModeButton, VvConfig, _sfc_main as VvEl };

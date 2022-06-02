@@ -8,6 +8,7 @@
 
     import { inject, computed, ref } from 'vue'
     import VvButton from './VvButton.vue'
+    import VvConfig from '../../configs/VvConfig.js'
 
     const props = defineProps({
         mode: {
@@ -37,11 +38,11 @@
         },
         bgClassDark: {
             type: String,
-            default: 'bg-gray-900',
+            default: VvConfig.colorMode.dark.bg,
         },
         bgClassLight: {
             type: String,
-            default: 'bg-gray-100',
+            default: VvConfig.colorMode.light.bg,
         },
         bgHexDark: {
             type: String,
@@ -53,26 +54,15 @@
         },
         textClassDark: {
             type: String,
-            default: 'text-gray-900',
+            default: VvConfig.colorMode.dark.text,
         },
         textClassLight: {
             type: String,
-            default: 'text-gray-100',
+            default: VvConfig.colorMode.light.text,
         },
     })
 
-    const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject('vv') : {
-        colorMode: {
-            dark: {
-                bg: props.bgClassDark,
-                text: props.textClassLight,
-            },
-            light: {
-                bg: props.bgClassLight,
-                text: props.textClassDark,
-            },
-        },
-    }
+    const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject('vv') : VvConfig
 
     const mode = ref(props.mode)
     const icon = computed(() => mode.value === 'dark' ? 'sun' : 'moon')

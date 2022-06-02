@@ -25,7 +25,7 @@ Here's the steps to complete:
 
 Assuming our JSON color palettes file is called `vueventus.tailwind.colors.json`, we should now have a `./vueventus.tailwind.colors.json` file in the root directory.
 
-::: info AFTER THE GETTING STARTED GUIDE
+::: tip AFTER THE GETTING STARTED GUIDE
 Now we can use our `./vueventus.tailwind.colors.json` file in our project's `./tailwind.config.js` file, instead of pulling our colors from the VueVentus package like we did in the Getting Started guide.
 :::
 
@@ -64,6 +64,7 @@ const coolGray = vvTvColors.coolGray['600']
 
 
 
+<!---
 ## Working with Config Modules
 
 Documentation coming soon!
@@ -93,3 +94,12 @@ Documentation coming soon!
 Documentation coming soon!
 
 <br>
+--->
+
+
+
+
+
+## Next Steps: Components
+
+Check out all of the [components](/components) pages to get a complete list of props, properties, methods, events and everything component-related!

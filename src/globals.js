@@ -9,7 +9,7 @@ export default {
         cardFlex: 'w-full flex flex-col justify-center bg-gray-50 dark:bg-gray-800 p-6 rounded-xl drop-shadow-md gap-8 mb-10',
         flexStack: 'w-full flex flex-col space-y-1',
         flexWrap: 'w-full flex flex-wrap justify-center items-center gap-8',
-        grid: 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-10',
+        grid: 'max-w-5xl mx-auto grid gap-8 pb-10',
         gridCardLink: 'bg-emerald-600 hover:bg-emerald-700 text-white text-xl p-6 rounded-xl drop-shadow-md cursor-pointer ' + Transitions.classes(),
         gridCardLinkModule: 'bg-amber-600 hover:bg-amber-700 text-white text-xl p-6 rounded-xl drop-shadow-md cursor-pointer ' + Transitions.classes(),
         gridCardLinkPalette: 'bg-indigo-600 hover:bg-indigo-700 text-white text-xl p-6 rounded-xl drop-shadow-md cursor-pointer ' + Transitions.classes(),

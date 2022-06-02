@@ -5,6 +5,7 @@ import Home from '@/views/Home.vue'
 // config pages
 import ButtonsPage from '@/views/configs/ButtonsPage.vue'
 import TransitionsPage from '@/views/configs/TransitionsPage.vue'
+import VvConfigPage from '@/views/configs/VvConfigPage.vue'
 
 // palette config pages
 import AnchorDefaultPage from '@/views/configs/palettes/AnchorDefaultPage.vue'
@@ -17,9 +18,12 @@ import GroundMonochromaticPage from '@/views/configs/palettes/GroundMonochromati
 import GroundPastelPage from '@/views/configs/palettes/GroundPastelPage.vue'
 import TextDefaultPage from '@/views/configs/palettes/TextDefaultPage.vue'
 
-// component pages
+// button component pages
 import VvButtonPage from '@/views/components/buttons/VvButtonPage.vue'
 import VvColorModeButtonPage from '@/views/components/buttons/VvColorModeButtonPage.vue'
+
+// element component pages
+import VvElPage from '@/views/components/elements/VvElPage.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -42,6 +46,10 @@ const router = createRouter({
             name: 'Transitions Config Module',
             component: TransitionsPage,
             path: '/configs/transitions'
+        },{
+            name: 'VvConfig Module',
+            component: VvConfigPage,
+            path: '/configs/vv-config'
         },
         
         //
@@ -87,7 +95,7 @@ const router = createRouter({
         },
         
         //
-        // component pages
+        // button component pages
         //
 
         {
@@ -98,6 +106,16 @@ const router = createRouter({
             name: 'VvColorModeButton Component',
             component: VvColorModeButtonPage,
             path: '/components/buttons/vv-color-mode-button'
+        },
+        
+        //
+        // element component pages
+        //
+
+        {
+            name: 'VvEl Component',
+            component: VvElPage,
+            path: '/components/elements/vv-el'
         },
 
     ],

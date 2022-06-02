@@ -1,3 +1,7 @@
+<!--
+    ./src/views/components/buttons/VvColorModeButtonPage.vue
+    @/views/components/buttons/VvColorModeButtonPage.vue
+-->
 
 
 <script setup>
