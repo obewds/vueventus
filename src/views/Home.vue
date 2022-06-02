@@ -47,6 +47,10 @@
                 Transitions
             </router-link>
 
+            <router-link to="/configs/vv-config" :class="tw.gridCardLinkModule">
+                VvConfig
+            </router-link>
+
         </div>
 
         <div :class="tw.subhead">
