@@ -39,7 +39,7 @@ export default {
             text: 'text-gray-900',
         },
     },
-    ground: {
+    grounds: {
         palettes: {
             console: GroundConsole,
             default: GroundDefault,
