@@ -11,7 +11,9 @@ module.exports = {
         logo: 'https://obewds.github.io/vueventus/images/vue-ventus-mark-and-favicon.png',
         logoLink: 'https://obewds.github.io/vueventus/',
         nav: [
+            { text: "Home", link: "/" },
             { text: "Get Started", link: "/getting-started" },
+            { text: "Guides", link: "/guides" },
             { text: "Components", link: "/components" },
             // { text: "Tests", link: "/tests" },
             { text: "npm", link: "https://www.npmjs.com/package/@obewds/vueventus" },
