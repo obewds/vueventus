@@ -281,7 +281,7 @@ var VvConfig = {
       text: "text-gray-900"
     }
   },
-  ground: {
+  grounds: {
     palettes: {
       console: GroundConsole,
       default: GroundDefault,
@@ -523,7 +523,7 @@ const _sfc_main = {
     },
     borderColor: {
       type: String,
-      default: "default"
+      default: ""
     },
     groundPalette: {
       type: String,
@@ -548,50 +548,19 @@ const _sfc_main = {
   },
   setup(__props) {
     const props = __props;
-    const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : {
-      buttons: {
-        base: Buttons.base(),
-        palettes: {
-          outline: ButtonOutline,
-          solid: ButtonSolid
-        },
-        sizes: Buttons.sizes,
-        blockBase: Buttons.blockBase(),
-        blockSizes: Buttons.blockSizes,
-        fabBase: Buttons.fabBase(),
-        fabSizes: Buttons.fabSizes
-      }
-    };
+    inject("globals");
+    const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
     let classes = computed(() => {
-      var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l;
+      var _a, _b, _c, _d, _e, _f, _g, _h, _i;
       let output = [];
-      if (props.block === true && props.fab === false) {
-        if ((_a = vv == null ? void 0 : vv.buttons) == null ? void 0 : _a.blockBase) {
-          output.push(vv.buttons.blockBase);
-        }
-        if (props.size !== "" && ((_c = (_b = vv == null ? void 0 : vv.buttons) == null ? void 0 : _b.blockSizes) == null ? void 0 : _c[props.size])) {
-          output.push(vv.buttons.blockSizes[props.size]);
-        }
-      } else if (props.fab === true && props.block === false) {
-        if ((_d = vv == null ? void 0 : vv.buttons) == null ? void 0 : _d.fabBase) {
-          output.push(vv.buttons.fabBase);
-        }
-        if (props.size !== "" && ((_f = (_e = vv == null ? void 0 : vv.buttons) == null ? void 0 : _e.fabSizes) == null ? void 0 : _f[props.size])) {
-          output.push(vv.buttons.fabSizes[props.size]);
-        }
-      } else {
-        if ((_g = vv == null ? void 0 : vv.buttons) == null ? void 0 : _g.base) {
-          output.push(vv.buttons.base);
-        }
-        if (props.size !== "" && ((_i = (_h = vv == null ? void 0 : vv.buttons) == null ? void 0 : _h.sizes) == null ? void 0 : _i[props.size])) {
-          output.push(vv.buttons.sizes[props.size]);
-        }
+      if ((_c = (_b = (_a = vv == null ? void 0 : vv.borders) == null ? void 0 : _a.palettes) == null ? void 0 : _b[props.borderPalette]) == null ? void 0 : _c[props.borderColor]) {
+        output.push(vv.borders.palettes[props.borderPalette][props.borderColor]);
       }
-      if (props.transitionClasses !== "") {
-        output.push(props.transitionClasses);
+      if ((_f = (_e = (_d = vv == null ? void 0 : vv.grounds) == null ? void 0 : _d.palettes) == null ? void 0 : _e[props.groundPalette]) == null ? void 0 : _f[props.groundColor]) {
+        output.push(vv.grounds.palettes[props.groundPalette][props.groundColor]);
       }
-      if ((_l = (_k = (_j = vv == null ? void 0 : vv.buttons) == null ? void 0 : _j.palettes) == null ? void 0 : _k[props.palette]) == null ? void 0 : _l[props.color]) {
-        output.push(vv.buttons.palettes[props.palette][props.color]);
+      if ((_i = (_h = (_g = vv == null ? void 0 : vv.text) == null ? void 0 : _g.palettes) == null ? void 0 : _h[props.textPalette]) == null ? void 0 : _i[props.textColor]) {
+        output.push(vv.text.palettes[props.textPalette][props.textColor]);
       }
       return output.join(" ");
     });
