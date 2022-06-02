@@ -21,14 +21,12 @@ features:
   - icon: ⏱️
     title: Sprint to Production
     details: You are in complete control of your atomic class management, and are able to prune your payloads down to DRY goodness on macro and micro levels.
-
-
-home: true
-heroImage: /images/vue-ventus-mark-and-favicon.png
-heroAlt: VueVentus logo mark fan shape with blue and green blades
-heroText: VueVentus
-tagline: A modular design system component library built for Vue.js and Tailwind CSS
-actionText: Get Started
-actionLink: /getting-started
-footer: MIT Licensed | Copyright © 2022-present Matt McT LLC
+# home: true
+# heroImage: /images/vue-ventus-mark-and-favicon.png
+# heroAlt: VueVentus logo mark fan shape with blue and green blades
+# heroText: VueVentus
+# tagline: A modular design system component library built for Vue.js and Tailwind CSS
+# actionText: Get Started
+# actionLink: /getting-started
+# footer: MIT Licensed | Copyright © 2022-present Matt McT LLC
 ---
