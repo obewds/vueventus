@@ -6,7 +6,7 @@ title: Buttons Config Module
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for Button elements in your application, excluding color and color palette classes (see [Palette Config Modules](/configs/palettes/index) for more info about palette modules).
+The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for Button elements in your application, excluding color and color palette classes (see [Palette Config Modules](/components#palette-config-modules) for more info about palette modules).
 
 <br>
 
