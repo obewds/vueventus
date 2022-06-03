@@ -8,7 +8,7 @@ title: Transitions Config Module
 
 The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for CSS transitions throughout your application.
 
-<br>
+
 
 
 
@@ -18,7 +18,7 @@ The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for C
 import { Transitions } from '@obewds/vueventus'
 ```
 
-<br>
+
 
 
 
@@ -38,7 +38,7 @@ durations: {
 }
 ```
 
-<br>
+
 
 
 
@@ -54,7 +54,7 @@ easings: {
 }
 ```
 
-<br>
+
 
 
 
@@ -70,7 +70,7 @@ transitions: {
 }
 ```
 
-<br>
+
 
 
 
@@ -85,7 +85,7 @@ const transition = Transitions.classes() // defaults are 'default', 'inOut', '30
 const transition = Transitions.classes('colors', 'linear', '1000')
 ```
 
-<br>
+
 
 
 
@@ -104,7 +104,7 @@ const transition = Transitions.custom({
 })
 ```
 
-<br>
+
 
 
 
@@ -118,7 +118,7 @@ const duration = Transitions.getDurationClasses() // default is '300'
 const duration = Transitions.getDurationClasses('1000')
 ```
 
-<br>
+
 
 
 
@@ -133,7 +133,7 @@ const easing = Transitions.getEasingClasses() // default is 'inOut'
 const easing = Transitions.getEasingClasses('in')
 ```
 
-<br>
+
 
 
 
@@ -148,7 +148,7 @@ const transition = Transitions.getTransitionClasses() // default is 'default'
 const transition = Transitions.getTransitionClasses('colors')
 ```
 
-<br>
+
 
 
 
@@ -160,5 +160,5 @@ const transition = Transitions.getTransitionClasses('colors')
 
 <<< @/../src/configs/Transitions.js
 
-<br>
+
 

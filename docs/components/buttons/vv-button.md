@@ -3,7 +3,7 @@ title: VvButton Component
 ---
 
 <script setup>
-    import { VvButton, VvConfig } from '../../../src/index'
+    import { VvButton } from '../../../src/index'
 </script>
 
 
@@ -128,7 +128,7 @@ The VvButton `palette` prop sets the component instance color based both on the 
 ### Result
 
 <div class="w-full py-4">
-    <VvButton palette="outline" color="primary">
+    <VvButton palette="outline" color="primary" class="border-solid">
         VvButton
     </VvButton>
 </div>

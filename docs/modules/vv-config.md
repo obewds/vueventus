@@ -8,7 +8,7 @@ title: VvConfig Module
 
 The {{ $frontmatter.title }} is the backbone of VueVentus in a prototypal sense. However, it should and will also be used as a blueprint to define your app's brand and color palettes at the global level, as well!
 
-<br>
+
 
 
 
@@ -19,7 +19,7 @@ The {{ $frontmatter.title }} is the backbone of VueVentus in a prototypal sense.
 import { VvConfig } from '@obewds/vueventus'
 ```
 
-<br>
+
 
 
 
@@ -28,4 +28,3 @@ import { VvConfig } from '@obewds/vueventus'
 
 <<< @/../src/configs/VvConfig.js
 
-<br>

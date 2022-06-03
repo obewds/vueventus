@@ -8,7 +8,7 @@ title: Buttons Config Module
 
 The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for Button elements in your application, excluding color and color palette classes (see [Palette Config Modules](/modules/palettes/) for more info about palette modules).
 
-<br>
+
 
 
 
@@ -19,7 +19,7 @@ The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for B
 import { Buttons } from '@obewds/vueventus'
 ```
 
-<br>
+
 
 
 
@@ -34,7 +34,7 @@ let appButtons = Buttons
 appButtons.blockDisplay = ''
 ```
 
-<br>
+
 
 
 
@@ -61,7 +61,7 @@ appButtons.blockSizes = {
 }
 ```
 
-<br>
+
 
 
 
@@ -76,7 +76,7 @@ let appButtons = Buttons
 appButtons.border = ''
 ```
 
-<br>
+
 
 
 
@@ -91,7 +91,7 @@ let appButtons = Buttons
 appButtons.cursor = ''
 ```
 
-<br>
+
 
 
 
@@ -106,7 +106,7 @@ let appButtons = Buttons
 appButtons.disabled = ''
 ```
 
-<br>
+
 
 
 
@@ -121,7 +121,7 @@ let appButtons = Buttons
 appButtons.display = ''
 ```
 
-<br>
+
 
 
 
@@ -136,7 +136,7 @@ let appButtons = Buttons
 appButtons.focus = ''
 ```
 
-<br>
+
 
 
 
@@ -163,7 +163,7 @@ appButtons.sizes = {
 }
 ```
 
-<br>
+
 
 
 
@@ -178,7 +178,7 @@ let appButtons = Buttons
 appButtons.text = ''
 ```
 
-<br>
+
 
 
 
@@ -189,7 +189,7 @@ appButtons.text = ''
 const buttonBase = Buttons.base()
 ```
 
-<br>
+
 
 
 
@@ -200,7 +200,7 @@ const buttonBase = Buttons.base()
 const buttonBlockBase = Buttons.blockBase()
 ```
 
-<br>
+
 
 
 
@@ -215,7 +215,7 @@ const button = Buttons.classes() // default is 'md'
 const button = Buttons.classes('lg')
 ```
 
-<br>
+
 
 
 
@@ -230,7 +230,7 @@ const button = Buttons.getBlockSizeClasses() // default is 'md'
 const button = Buttons.getBlockSizeClasses('sm')
 ```
 
-<br>
+
 
 
 
@@ -245,7 +245,7 @@ const button = Buttons.getSizeClasses() // default is 'md'
 const button = Buttons.getSizeClasses('sm')
 ```
 
-<br>
+
 
 
 
@@ -257,5 +257,5 @@ const button = Buttons.getSizeClasses('sm')
 
 <<< @/../src/configs/Buttons.js
 
-<br>
+
 
