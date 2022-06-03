@@ -1,0 +1,1 @@
+import{_ as e,o,c as a,e as t}from"./app.7b5d5b32.js";const h='{"title":"Config Modules","description":"","frontmatter":{},"headers":[],"relativePath":"modules/index.md"}',s={name:"modules/index.md"},i=t("",4),n=[i];function l(d,c,u,r,f,p){return o(),a("div",null,n)}var m=e(s,[["render",l]]);export{h as __pageData,m as default};
