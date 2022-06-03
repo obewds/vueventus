@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as s,e as u}from"./app.2c7b05dd.js";const h='{"title":"VueVentus + Vue CLI","description":"","frontmatter":{},"headers":[],"relativePath":"guides/vueventus-vue-cli.md"}',a={name:"guides/vueventus-vue-cli.md"},i=u("",4),o=[i];function n(c,r,_,d,l,v){return t(),s("div",null,o)}var m=e(a,[["render",n]]);export{h as __pageData,m as default};
