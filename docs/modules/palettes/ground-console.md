@@ -2,7 +2,7 @@
 
 A console themed palette of ground colors with properties/values with the keys of `default`, `error`, `primary`, `secondary`, and `success`.
 
-<br>
+
 
 
 
@@ -13,7 +13,7 @@ A console themed palette of ground colors with properties/values with the keys o
 import { GroundConsole } from '@obewds/vueventus'
 ```
 
-<br>
+
 
 
 
@@ -28,7 +28,7 @@ const bgSecondary = GroundConsole.secondary
 const bgSuccess = GroundConsole.success
 ```
 
-<br>
+
 
 
 
@@ -37,4 +37,4 @@ const bgSuccess = GroundConsole.success
 
 <<< @/../src/configs/palettes/GroundConsole.js
 
-<br>
+

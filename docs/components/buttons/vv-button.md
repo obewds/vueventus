@@ -12,7 +12,7 @@ title: VvButton Component
 
 The {{ $frontmatter.title }} provides a variety of props and config module based settings to make a huge variety of buttons for applications with extremely DRY implementation of atomic classes.
 
-<br>
+
 
 
 
@@ -22,7 +22,7 @@ The {{ $frontmatter.title }} provides a variety of props and config module based
 import { VvButton } from '@obewds/vueventus'
 ```
 
-<br>
+
 
 
 
@@ -48,7 +48,7 @@ The VvButton `block` prop sets the component instance to use block-level base cl
     </VvButton>
 </div>
 
-<br>
+
 
 
 
@@ -74,7 +74,7 @@ The VvButton `color` prop sets the component instance color based both on the `c
     </VvButton>
 </div>
 
-<br>
+
 
 
 
@@ -107,7 +107,7 @@ The VvButton `fab` prop sets the component instance to use base classes with equ
     </VvButton>
 </div>
 
-<br>
+
 
 
 
@@ -133,7 +133,7 @@ The VvButton `palette` prop sets the component instance color based both on the 
     </VvButton>
 </div>
 
-<br>
+
 
 
 
@@ -159,7 +159,7 @@ The VvButton `size` prop sets the component instance size-based classes with in 
     </VvButton>
 </div>
 
-<br>
+
 
 
 
@@ -185,7 +185,7 @@ The VvButton `transitionClasses` prop sets the button transition classes to anim
     </VvButton>
 </div>
 
-<br>
+
 
 
 
@@ -212,7 +212,7 @@ The VvButton `type` prop sets the button HTML `type` attribute to a value that s
     </VvButton>
 </div>
 
-<br>
+
 
 
 
@@ -236,4 +236,4 @@ The VvButton has a standard `#default` Vue slot to insert child elements/nodes i
     </VvButton>
 </div>
 
-<br>
+

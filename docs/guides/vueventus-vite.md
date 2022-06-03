@@ -138,7 +138,7 @@ With your testing deps installed, you can now add the following commands to your
 
 
 
-<br>
+
 
 ::: tip CONFIGURATION STATION
 If you'd like to skip ahead to the [configuration guide](/guides/configuration), you'll skip the next install guide(s)!

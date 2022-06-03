@@ -78,6 +78,13 @@ module.exports = {
                 collapsible: true,
                 items: [
                     { text: 'VvButton', link: '/components/buttons/vv-button' },
+                    { text: 'VvColorModeButton', link: '/components/buttons/vv-color-mode-button' },
+                ],
+            },{
+                text: 'Element Components',
+                collapsible: true,
+                items: [
+                    { text: 'VvEl', link: '/components/elements/vv-el' },
                 ],
             },
         ],
