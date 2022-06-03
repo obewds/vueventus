@@ -8,6 +8,7 @@ module.exports = {
     content: [
         "./index.html",
         "./src/**/*.{vue,js,ts,jsx,tsx}",
+        "./docs/**/*.{md,html,js}",
     ],
 
     theme: {

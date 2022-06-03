@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /vueventus/getting-started
+      link: /vueventus/guides/
     - theme: alt
       text: View on GitHub
       link: https://github.com/obewds/vueventus
@@ -21,6 +21,7 @@ features:
   - icon: ⏱️
     title: Sprint to Production
     details: You are in complete control of your atomic class management, and are able to prune your payloads down to DRY goodness on macro and micro levels.
+sidebar: false
 # home: true
 # heroImage: /images/vue-ventus-mark-and-favicon.png
 # heroAlt: VueVentus logo mark fan shape with blue and green blades
