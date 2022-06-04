@@ -55,7 +55,7 @@ Next, let's change the color rapid protyping style:
 ```html
 <template>
     
-    <VvButton color="primary">
+    <VvButton color="secondary">
         VvButton
     </VvButton>
 
@@ -63,7 +63,7 @@ Next, let's change the color rapid protyping style:
 ```
 
 <div class="w-full py-4 text-center">
-    <VvButton color="primary">
+    <VvButton color="secondary">
         VvButton
     </VvButton>
 </div>
