@@ -144,24 +144,24 @@ The {{ $frontmatter.title }} `groundColor` prop sets the component instance bord
 
 Type: **`String`**  
 Valid Values: [ValidElementTags Module](/components/prop-validators#validelementtags)  
-Default: **`VvConfig.defaults.VvButton.type`**
+Default: **`VvConfig.defaults.VvEl.tag`**
 
 The {{ $frontmatter.title }} `tag` prop sets the HTML `tag` attribute to a value that should be present in the [ValidElementTags Module](/components/prop-validators#validelementtags) to be a valid value for this component.
 
 ### Syntax
 
 ```html
-<VvButton type="submit">
+<VvEl tag="submit">
     Submit
-</VvButton>
+</VvEl>
 ```
 
 ### Result
 
 <div class="w-full pt-4">
-    <VvButton type="submit">
+    <VvEl tag="submit">
         Submit
-    </VvButton>
+    </VvEl>
 </div>
 
 
