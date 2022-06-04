@@ -18,7 +18,8 @@
     "dist",
     "src/components",
     "src/configs",
-    "src/data"
+    "src/data",
+    "src/validators"
   ],
   "sideEffects": false,
   "scripts": {
