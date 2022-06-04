@@ -6,7 +6,7 @@ title: App Color Data
 
 # {{ $frontmatter.title }}
 
-For prototyping, VueVentus comes with a default color palette that tweaks Tailwind CSS's default color palette slightly for dark/light mode accessiblity reasons. But this file is only meant for prototyping, as a production application would want to control many if not all of the visual characteristics VueVentus provides generically.
+For prototyping, VueVentus comes with a default color palette that tweaks Tailwind CSS's default color palette slightly for dark/light mode accessiblity reasons. However, this file is only meant for prototyping! A production application would want to control many if not all of the visual characteristics VueVentus provides generically.
 
 
 
@@ -36,16 +36,16 @@ The TWCSS Colors Tool allows you to copy the raw JSON data or download a file
 Once you have your JSON color palette data, create a file with a descriptive name in your project's root directory and paste your data in it (or copy the file into your root if you downloaded a file)
 
 
-Assuming our JSON color palettes file is called `vueventus.tailwind.colors.json`, we should now have a `./vueventus.tailwind.colors.json` file in the root directory.
+Assuming our JSON color palettes file is called `my-app-colors.json`, we should now have a `./my-app-colors.json` file in the root directory.
 
 ::: tip AFTER THE GETTING STARTED GUIDE
-Now we can use our `./vueventus.tailwind.colors.json` file in our project's `./tailwind.config.js` file, instead of pulling our colors from the VueVentus package like we did in the Getting Started guide.
+Now we can use our `./my-app-colors.json` file in our project's `./tailwind.config.js` file, instead of pulling our colors from the VueVentus package like we did in the Getting Started guide.
 :::
 
 Let's open up our `./tailwind.config.js` file and change the following line:
 
 ```javascript
-const appColorData = require('./vueventus.tailwind.colors.json')
+const appColors = require('./my-app-colors.json')
 ```
 
 And of course this means we'll also need to change the variable reference for the one we just replaced deeper in the `./tailwind.config.js` file like so: 
@@ -56,7 +56,7 @@ module.exports = {
     theme: {
         extend: { /* ... */ },
         // ...
-        colors: appColorData,
+        colors: appColors,
     },
     // ...
 }
@@ -72,8 +72,8 @@ Additionally, we can also access this data within our application and with our c
 Here's what that looks like for the default naming conventions the [TWCSS Colors Tool](https://tailwind.mattmct.com/) provides:
 
 ```javascript
-import appColorData from './vueventus.tailwind.colors.json'
+import appColors from './my-app-colors.json'
 
-const red = appColorData.red['400']
-const coolGray = appColorData.coolGray['600']
+const red = appColors.red['400']
+const coolGray = appColors.coolGray['600']
 ```
