@@ -1,15 +1,25 @@
 // ./docs/.vitepress/config.js
 
+import { resolve } from 'path'
+
+// const include = require('markdown-it-include')
+
 module.exports = {
     base: '/vueventus/',
     title: 'VueVentus Docs',
     description: 'A documentation site for the VueVentus component design system',
+    lastUpdated: true,
     markdown: {
       lineNumbers: true,
+      config: (md) => {
+        // use more markdown-it plugins!
+        md.use(require('markdown-it-include'), resolve(__dirname))
+      },
     },
     themeConfig: {
         logo: 'https://obewds.github.io/vueventus/images/vue-ventus-mark-and-favicon.png',
         logoLink: '/vueventus/',
+        lastUpdatedText: 'Last Updated',
         nav: [
             { text: "Home", link: "/" },
             // { text: "Get Started", link: "/getting-started" },
@@ -39,9 +49,17 @@ module.exports = {
                     { text: 'VueVentus + VILT', link: '/guides/vueventus-vilt' },
                     { text: 'Configuration', link: '/guides/configuration' },
                     { text: 'Test Drive: VvButton', link: '/guides/test-drive-vv-button' },
-                    { text: 'App Color Config File', link: '/guides/app-color-config-file' },
                     { text: 'Palettes vs Colors', link: '/guides/palettes-vs-colors' },
                     { text: 'Colors and State', link: '/guides/colors-and-state' },
+                ],
+            },{
+                text: 'JSON Data Modules',
+                collapsible: true,
+                items: [
+                    { text: 'JSON Data Modules', link: '/data/' },
+                    { text: 'Theme Extenders', link: '/data/theme-extenders' },
+                    { text: 'Theme Additions', link: '/data/theme-additions' },
+                    { text: 'App Color Data', link: '/data/app-color-data' },
                 ],
             },{
                 text: 'Config Modules',
