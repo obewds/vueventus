@@ -6,121 +6,120 @@
 
 <script setup>
 
-    import { inject, computed, ref } from 'vue'
+    import { computed, ref } from 'vue'
+    import ValidColorModes from '../../validators/ValidColorModes.js'
     import VvButton from './VvButton.vue'
     import VvConfig from '../../configs/VvConfig.js'
 
     const props = defineProps({
         mode: {
             type: String,
-            default: 'light',
-            validator: (prop) => (['light','dark']).includes(prop),
+            default: VvConfig.defaults.VvColorModeButton.mode,
+            validator: (prop) => (ValidColorModes).includes(prop),
         },
         color: {
             type: String,
-            default: 'default',
-        },
-        fab: {
-            type: Boolean,
-            default: true,
+            default: VvConfig.defaults.VvColorModeButton.color,
         },
         palette: {
             type: String,
-            default: 'outline',
+            default: VvConfig.defaults.VvColorModeButton.palette,
         },
         size: {
             type: String,
-            default: 'xs',
+            default: VvConfig.defaults.VvColorModeButton.size,
         },
-        type: {
+        groundDark: {
             type: String,
-            default: 'button',
+            default: VvConfig.colorMode.dark.ground,
         },
-        bgClassDark: {
+        groundDarkHex: {
             type: String,
-            default: VvConfig.colorMode.dark.bg,
+            default: VvConfig.colorMode.dark.hex,
         },
-        bgClassLight: {
+        groundLight: {
             type: String,
-            default: VvConfig.colorMode.light.bg,
+            default: VvConfig.colorMode.light.ground,
         },
-        bgHexDark: {
+        groundLightHex: {
             type: String,
-            default: '#242426',
+            default: VvConfig.colorMode.light.hex,
         },
-        bgHexLight: {
-            type: String,
-            default: '#e1e1e3',
-        },
-        textClassDark: {
+        textDark: {
             type: String,
             default: VvConfig.colorMode.dark.text,
         },
-        textClassLight: {
+        textLight: {
             type: String,
             default: VvConfig.colorMode.light.text,
         },
+        titleDark: {
+            type: String,
+            default: VvConfig.colorMode.dark.title,
+        },
+        titleLight: {
+            type: String,
+            default: VvConfig.colorMode.light.title,
+        },
     })
-
-    const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject('vv') : VvConfig
 
     const mode = ref(props.mode)
     const icon = computed(() => mode.value === 'dark' ? 'sun' : 'moon')
-    const title = computed(() => mode.value === 'dark' ? 'Enable Light Mode' : 'Enable Dark Mode')
+    const title = computed(() => mode.value === 'dark' ? props.titleLight : props.titleDark)
 
-    if (mode.value === 'light' && document) {
+    if (document && mode.value === 'light') {
         document.documentElement.classList.remove(
             'dark',
-            vv.colorMode.dark.bg,
-            vv.colorMode.dark.text
+            props.groundDark,
+            props.textDark
         )
         document.documentElement.classList.add(
-            vv.colorMode.light.bg,
-            vv.colorMode.light.text
+            props.groundLight,
+            props.textLight
         )
-        document.documentElement.style.backgroundColor = props.bgHexLight
+        document.documentElement.style.backgroundColor = props.groundLightHex
     }
 
-    if (mode.value === 'dark' && document) {
+    if (document && mode.value === 'dark') {
         document.documentElement.classList.remove(
-            vv.colorMode.light.bg,
-            vv.colorMode.light.text
+            props.groundLight,
+            props.textLight
         )
         document.documentElement.classList.add(
             'dark',
-            vv.colorMode.dark.bg,
-            vv.colorMode.dark.text
+            props.groundDark,
+            props.textDark
         )
-        document.documentElement.style.backgroundColor = props.bgHexDark
+        document.documentElement.style.backgroundColor = props.groundDarkHex
     }
 
     function toggleColorMode (event) {
-        if (mode.value === 'light' && document) {
+        if (document && mode.value === 'light') {
             mode.value = 'dark'
             localStorage.setItem('colorMode', 'dark')
             document.documentElement.classList.remove(
-                vv.colorMode.light.bg,
-                vv.colorMode.light.text
+                props.groundLight,
+                props.textLight
             )
             document.documentElement.classList.add(
                 'dark',
-                vv.colorMode.dark.bg,
-                vv.colorMode.dark.text
+                props.groundDark,
+                props.textDark
             )
-            document.documentElement.style.backgroundColor = props.bgHexDark
-        } else if (mode.value === 'dark' && document) {
+            document.documentElement.style.backgroundColor = props.groundDarkHex
+        } else if (document && mode.value === 'dark') {
             mode.value = 'light'
             localStorage.setItem('colorMode', 'light')
             document.documentElement.classList.remove(
                 'dark',
-                vv.colorMode.dark.bg,
-                vv.colorMode.dark.text
+                props.groundDark,
+                props.textDark
             )
             document.documentElement.classList.add(
-                vv.colorMode.light.bg,
-                vv.colorMode.light.text
+                props.groundLight,
+                props.textLight
             )
-            document.documentElement.style.backgroundColor = props.bgHexLight
+            document.documentElement.style.backgroundColor = props.groundLightHex
         }
     }
 </script>
@@ -133,9 +132,9 @@
         @click="toggleColorMode($event)"
         class="rounded-full"
         :color="color"
-        :fab="fab"
+        :fab="true"
         :palette="palette"
-        :type="type"
+        type="button"
         :size="size"
     >
         <svg v-if="icon === 'moon'" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
