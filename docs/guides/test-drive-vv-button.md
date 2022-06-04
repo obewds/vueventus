@@ -82,7 +82,7 @@ Looking better! Next, let's switch our primary color button to an outline button
 ```html
 <template>
     
-    <VvButton color="primary" palette="outline">
+    <VvButton palette="outline">
         VvButton
     </VvButton>
 
@@ -90,7 +90,7 @@ Looking better! Next, let's switch our primary color button to an outline button
 ```
 
 <div class="w-full py-4 text-center">
-    <VvButton color="primary" palette="outline" class="border-solid">
+    <VvButton palette="outline" class="border-solid">
         VvButton
     </VvButton>
 </div>
@@ -107,12 +107,12 @@ So that's how colors and palettes work. Palettes are overall styling groups or t
 
 ## Adding Classes
 
-Next, let's switch back to a solid color palette by dropping the `palette` attribute (the default palette of the VvButton component is `'solid'`). And let's add some rounded corners to our solid primary button, too:
+Next, let's switch back to a solid color palette by dropping the `palette` attribute (the default palette of the VvButton component is `'solid'` and the default color is `'primary'`). And let's add some rounded corners to our solid primary button, too:
 
 ```html
 <template>
     
-    <VvButton color="primary" class="rounded-lg">
+    <VvButton class="rounded-lg">
         VvButton
     </VvButton>
 
@@ -120,7 +120,7 @@ Next, let's switch back to a solid color palette by dropping the `palette` attri
 ```
 
 <div class="w-full py-4 text-center">
-    <VvButton color="primary" class="rounded-lg">
+    <VvButton class="rounded-lg">
         VvButton
     </VvButton>
 </div>
