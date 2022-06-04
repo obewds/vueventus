@@ -151,16 +151,16 @@ The {{ $frontmatter.title }} `tag` prop sets the HTML `tag` attribute to a value
 ### Syntax
 
 ```html
-<VvEl tag="submit">
-    Submit
+<VvEl tag="span" class="border-b-2">
+    VvEl
 </VvEl>
 ```
 
 ### Result
 
 <div class="w-full pt-4">
-    <VvEl tag="submit">
-        Submit
+    <VvEl tag="span" class="border-b-2">
+        VvEl
     </VvEl>
 </div>
 
