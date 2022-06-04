@@ -137,9 +137,43 @@ With your testing deps installed, you can now add the following commands to your
 
 
 
+## Vite Config Setup
+
+There's also a couple of tiny tweaks to make in our project's `./vite.config.js` file:
+
+```javascript
+// ./vite.config.js
+
+// import the resolve method
+import { resolve } from 'path'
+
+export default defineConfig({
+    plugins: [...],
+    // add a resolve parameter/alias
+    resolve: {
+        alias: {
+            '@': resolve(__dirname, 'src'),
+        },
+    },
+    // optionally open page on server start
+    server: {
+        open: true,
+    },
+    // for Vitest!
+    test: {
+        globals: true,
+    },
+    build: {...},
+})
+```
 
 
 
-::: tip CONFIGURATION STATION
-If you'd like to skip ahead to the [configuration guide](/guides/configuration), you'll skip the next install guide(s)!
-:::
+
+
+
+
+
+
+
+!!!include(snippets/skipToConfiguration.md)!!!

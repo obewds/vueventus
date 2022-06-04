@@ -1,3 +1,3 @@
-# Palettes, Colors, Props, and State
+# Colors and State
 
 Documentation coming soon!

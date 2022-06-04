@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as s,e as a}from"./app.00720049.js";const h='{"title":"VueVentus + VILT","description":"","frontmatter":{},"headers":[],"relativePath":"guides/vueventus-vilt.md","lastUpdated":1654227247000}',i={name:"guides/vueventus-vilt.md"},o=a("",3),n=[o];function u(c,d,r,_,l,v){return t(),s("div",null,n)}var m=e(i,[["render",u]]);export{h as __pageData,m as default};
