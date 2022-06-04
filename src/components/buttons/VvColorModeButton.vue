@@ -6,7 +6,7 @@
 
 <script setup>
 
-    import { computed, ref } from 'vue'
+    import { computed, onMounted, ref } from 'vue'
     import ValidColorModes from '../../validators/ValidColorModes.js'
     import VvButton from './VvButton.vue'
     import VvConfig from '../../configs/VvConfig.js'
@@ -67,31 +67,35 @@
     const icon = computed(() => mode.value === 'dark' ? 'sun' : 'moon')
     const title = computed(() => mode.value === 'dark' ? props.titleLight : props.titleDark)
 
-    if (document && mode.value === 'light') {
-        document.documentElement.classList.remove(
-            'dark',
-            props.groundDark,
-            props.textDark
-        )
-        document.documentElement.classList.add(
-            props.groundLight,
-            props.textLight
-        )
-        document.documentElement.style.backgroundColor = props.groundLightHex
-    }
+    onMounted( () => {
+    
+        if (document && mode.value === 'light') {
+            document.documentElement.classList.remove(
+                'dark',
+                props.groundDark,
+                props.textDark
+            )
+            document.documentElement.classList.add(
+                props.groundLight,
+                props.textLight
+            )
+            document.documentElement.style.backgroundColor = props.groundLightHex
+        }
 
-    if (document && mode.value === 'dark') {
-        document.documentElement.classList.remove(
-            props.groundLight,
-            props.textLight
-        )
-        document.documentElement.classList.add(
-            'dark',
-            props.groundDark,
-            props.textDark
-        )
-        document.documentElement.style.backgroundColor = props.groundDarkHex
-    }
+        if (document && mode.value === 'dark') {
+            document.documentElement.classList.remove(
+                props.groundLight,
+                props.textLight
+            )
+            document.documentElement.classList.add(
+                'dark',
+                props.groundDark,
+                props.textDark
+            )
+            document.documentElement.style.backgroundColor = props.groundDarkHex
+        }
+
+    })
 
     function toggleColorMode (event) {
         if (document && mode.value === 'light') {
@@ -122,6 +126,7 @@
             document.documentElement.style.backgroundColor = props.groundLightHex
         }
     }
+
 </script>
 
 
