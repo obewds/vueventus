@@ -2,25 +2,25 @@
 layout: home
 hero:
   name: VueVentus
-  text: Design System Components
-  tagline: A modular design system component library built for Vue.js and Tailwind CSS
+  text: Modular Component System
+  tagline: An aesthetically flexible design system component library for Vue.js & Tailwind CSS
   actions:
     - theme: brand
       text: Get Started
-      link: /vueventus/guides/
+      link: /vueventus/guides/why-vueventus
     - theme: alt
       text: View on GitHub
       link: https://github.com/obewds/vueventus
 features:
   - icon: ⚡️
-    title: Prototype Fast
-    details: VueVentus components come pre-configured with Tailwind CSS classes and Vue.js component props for logical groups of visual/aesthetic classes.
+    title: Blazing Fast Prototyping
+    details: VueVentus components are bundled with Tailwind CSS classes and Vue.js component props for logical groupings of visual/aesthetic classes.
   - icon: 🧰
-    title: Customize Everything
+    title: Exhaustingly Customizable
     details: Each VueVentus component can be customized from a single root config file, giving a bird's eye view of the visual design aspects of your app.
   - icon: ⏱️
-    title: Sprint to Production
-    details: You are in complete control of your atomic class management, and are able to prune your payloads down to DRY goodness on macro and micro levels.
+    title: Production Focused
+    details: You are in control of your atomic class configurations, and can prune CSS payloads down to DRY goodness on both macro and micro levels.
 sidebar: false
 # home: true
 # heroImage: /images/vue-ventus-mark-and-favicon.png

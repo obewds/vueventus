@@ -12,35 +12,33 @@
     const props = defineProps({
         borderPalette: {
             type: String,
-            default: 'default',
+            default: VvConfig.defaults.VvEl.borderPalette,
         },
         borderColor: {
             type: String,
-            default: '',
+            default: VvConfig.defaults.VvEl.borderColor,
         },
         groundPalette: {
             type: String,
-            default: 'default',
+            default: VvConfig.defaults.VvEl.groundPalette,
         },
         groundColor: {
             type: String,
-            default: 'default',
+            default: VvConfig.defaults.VvEl.groundColor,
         },
         tag: {
             type: String,
-            default: 'div',
+            default: VvConfig.defaults.VvEl.tag,
         },
         textPalette: {
             type: String,
-            default: 'default',
+            default: VvConfig.defaults.VvEl.textPalette,
         },
         textColor: {
             type: String,
-            default: 'default',
+            default: VvConfig.defaults.VvEl.textColor,
         },
     })
-
-    const globals = inject('globals')
 
     const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject('vv') : VvConfig
 

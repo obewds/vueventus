@@ -17,7 +17,7 @@ var __spreadValues = (a, b) => {
   return a;
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
-import { inject, computed, openBlock, createElementBlock, normalizeClass, unref, renderSlot, ref, createBlock, withCtx, createCommentVNode, createElementVNode, resolveDynamicComponent } from "vue";
+import { inject, computed, openBlock, createElementBlock, normalizeClass, unref, renderSlot, ref, onMounted, createBlock, withCtx, createCommentVNode, createElementVNode, resolveDynamicComponent } from "vue";
 var AnchorDefault = {
   "default": "text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-200",
   error: "text-rose-500 hover:text-rose-600 dark:text-rose-300 dark:hover:text-rose-200",
@@ -300,11 +300,17 @@ var VvConfig = {
   colorMode: {
     dark: {
       bg: "bg-gray-900",
-      text: "text-gray-100"
+      ground: "bg-gray-900",
+      hex: "#242426",
+      text: "text-gray-100",
+      title: "Enable Dark Mode"
     },
     light: {
       bg: "bg-gray-100",
-      text: "text-gray-900"
+      ground: "bg-gray-100",
+      hex: "#e1e1e3",
+      text: "text-gray-900",
+      title: "Enable Light Mode"
     }
   },
   grounds: {
@@ -320,31 +326,61 @@ var VvConfig = {
       default: TextDefault
     }
   },
-  transitions: __spreadValues({}, Transitions)
+  transitions: __spreadValues({}, Transitions),
+  defaults: {
+    "VvButton": {
+      block: false,
+      color: "primary",
+      fab: false,
+      palette: "solid",
+      size: "md",
+      type: "button"
+    },
+    "VvColorModeButton": {
+      color: "default",
+      mode: "light",
+      palette: "outline",
+      size: "xs"
+    },
+    "VvEl": {
+      borderPalette: "default",
+      borderColor: "",
+      groundPalette: "default",
+      groundColor: "default",
+      tag: "div",
+      textPalette: "default",
+      textColor: "default"
+    }
+  }
 };
+var ValidButtonTypes = [
+  "button",
+  "submit",
+  "reset"
+];
 const _hoisted_1$1 = ["type"];
 const _sfc_main$2 = {
   name: "VvButton",
   props: {
     block: {
       type: Boolean,
-      default: false
+      default: VvConfig.defaults.VvButton.block
     },
     color: {
       type: String,
-      default: "default"
+      default: VvConfig.defaults.VvButton.color
     },
     fab: {
       type: Boolean,
-      default: false
+      default: VvConfig.defaults.VvButton.fab
     },
     palette: {
       type: String,
-      default: "solid"
+      default: VvConfig.defaults.VvButton.palette
     },
     size: {
       type: String,
-      default: "md"
+      default: VvConfig.defaults.VvButton.size
     },
     transitionClasses: {
       type: String,
@@ -352,8 +388,8 @@ const _sfc_main$2 = {
     },
     type: {
       type: String,
-      default: "button",
-      validator: (prop) => ["button", "submit", "reset"].includes(prop)
+      default: VvConfig.defaults.VvButton.type,
+      validator: (prop) => ValidButtonTypes.includes(prop)
     }
   },
   setup(__props) {
@@ -402,6 +438,10 @@ const _sfc_main$2 = {
     };
   }
 };
+var ValidColorModes = [
+  "light",
+  "dark"
+];
 const _hoisted_1 = {
   key: 0,
   xmlns: "http://www.w3.org/2000/svg",
@@ -441,83 +481,84 @@ const _sfc_main$1 = {
   props: {
     mode: {
       type: String,
-      default: "light",
-      validator: (prop) => ["light", "dark"].includes(prop)
+      default: VvConfig.defaults.VvColorModeButton.mode,
+      validator: (prop) => ValidColorModes.includes(prop)
     },
     color: {
       type: String,
-      default: "default"
-    },
-    fab: {
-      type: Boolean,
-      default: true
+      default: VvConfig.defaults.VvColorModeButton.color
     },
     palette: {
       type: String,
-      default: "outline"
+      default: VvConfig.defaults.VvColorModeButton.palette
     },
     size: {
       type: String,
-      default: "xs"
+      default: VvConfig.defaults.VvColorModeButton.size
     },
-    type: {
+    groundDark: {
       type: String,
-      default: "button"
+      default: VvConfig.colorMode.dark.ground
     },
-    bgClassDark: {
+    groundDarkHex: {
       type: String,
-      default: VvConfig.colorMode.dark.bg
+      default: VvConfig.colorMode.dark.hex
     },
-    bgClassLight: {
+    groundLight: {
       type: String,
-      default: VvConfig.colorMode.light.bg
+      default: VvConfig.colorMode.light.ground
     },
-    bgHexDark: {
+    groundLightHex: {
       type: String,
-      default: "#242426"
+      default: VvConfig.colorMode.light.hex
     },
-    bgHexLight: {
-      type: String,
-      default: "#e1e1e3"
-    },
-    textClassDark: {
+    textDark: {
       type: String,
       default: VvConfig.colorMode.dark.text
     },
-    textClassLight: {
+    textLight: {
       type: String,
       default: VvConfig.colorMode.light.text
+    },
+    titleDark: {
+      type: String,
+      default: VvConfig.colorMode.dark.title
+    },
+    titleLight: {
+      type: String,
+      default: VvConfig.colorMode.light.title
     }
   },
   setup(__props) {
     const props = __props;
-    const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
     const mode = ref(props.mode);
     const icon = computed(() => mode.value === "dark" ? "sun" : "moon");
-    const title = computed(() => mode.value === "dark" ? "Enable Light Mode" : "Enable Dark Mode");
-    if (mode.value === "light" && document) {
-      document.documentElement.classList.remove("dark", vv.colorMode.dark.bg, vv.colorMode.dark.text);
-      document.documentElement.classList.add(vv.colorMode.light.bg, vv.colorMode.light.text);
-      document.documentElement.style.backgroundColor = props.bgHexLight;
-    }
-    if (mode.value === "dark" && document) {
-      document.documentElement.classList.remove(vv.colorMode.light.bg, vv.colorMode.light.text);
-      document.documentElement.classList.add("dark", vv.colorMode.dark.bg, vv.colorMode.dark.text);
-      document.documentElement.style.backgroundColor = props.bgHexDark;
-    }
+    const title = computed(() => mode.value === "dark" ? props.titleLight : props.titleDark);
+    onMounted(() => {
+      if (document && mode.value === "light") {
+        document.documentElement.classList.remove("dark", props.groundDark, props.textDark);
+        document.documentElement.classList.add(props.groundLight, props.textLight);
+        document.documentElement.style.backgroundColor = props.groundLightHex;
+      }
+      if (document && mode.value === "dark") {
+        document.documentElement.classList.remove(props.groundLight, props.textLight);
+        document.documentElement.classList.add("dark", props.groundDark, props.textDark);
+        document.documentElement.style.backgroundColor = props.groundDarkHex;
+      }
+    });
     function toggleColorMode(event) {
-      if (mode.value === "light" && document) {
+      if (document && mode.value === "light") {
         mode.value = "dark";
         localStorage.setItem("colorMode", "dark");
-        document.documentElement.classList.remove(vv.colorMode.light.bg, vv.colorMode.light.text);
-        document.documentElement.classList.add("dark", vv.colorMode.dark.bg, vv.colorMode.dark.text);
-        document.documentElement.style.backgroundColor = props.bgHexDark;
-      } else if (mode.value === "dark" && document) {
+        document.documentElement.classList.remove(props.groundLight, props.textLight);
+        document.documentElement.classList.add("dark", props.groundDark, props.textDark);
+        document.documentElement.style.backgroundColor = props.groundDarkHex;
+      } else if (document && mode.value === "dark") {
         mode.value = "light";
         localStorage.setItem("colorMode", "light");
-        document.documentElement.classList.remove("dark", vv.colorMode.dark.bg, vv.colorMode.dark.text);
-        document.documentElement.classList.add(vv.colorMode.light.bg, vv.colorMode.light.text);
-        document.documentElement.style.backgroundColor = props.bgHexLight;
+        document.documentElement.classList.remove("dark", props.groundDark, props.textDark);
+        document.documentElement.classList.add(props.groundLight, props.textLight);
+        document.documentElement.style.backgroundColor = props.groundLightHex;
       }
     }
     return (_ctx, _cache) => {
@@ -526,9 +567,9 @@ const _sfc_main$1 = {
         onClick: _cache[0] || (_cache[0] = ($event) => toggleColorMode()),
         class: "rounded-full",
         color: __props.color,
-        fab: __props.fab,
+        fab: true,
         palette: __props.palette,
-        type: __props.type,
+        type: "button",
         size: __props.size
       }, {
         default: withCtx(() => [
@@ -536,7 +577,7 @@ const _sfc_main$1 = {
           unref(icon) === "sun" ? (openBlock(), createElementBlock("svg", _hoisted_4, _hoisted_6)) : createCommentVNode("", true)
         ]),
         _: 1
-      }, 8, ["title", "color", "fab", "palette", "type", "size"]);
+      }, 8, ["title", "color", "palette", "size"]);
     };
   }
 };
@@ -545,36 +586,35 @@ const _sfc_main = {
   props: {
     borderPalette: {
       type: String,
-      default: "default"
+      default: VvConfig.defaults.VvEl.borderPalette
     },
     borderColor: {
       type: String,
-      default: ""
+      default: VvConfig.defaults.VvEl.borderColor
     },
     groundPalette: {
       type: String,
-      default: "default"
+      default: VvConfig.defaults.VvEl.groundPalette
     },
     groundColor: {
       type: String,
-      default: "default"
+      default: VvConfig.defaults.VvEl.groundColor
     },
     tag: {
       type: String,
-      default: "div"
+      default: VvConfig.defaults.VvEl.tag
     },
     textPalette: {
       type: String,
-      default: "default"
+      default: VvConfig.defaults.VvEl.textPalette
     },
     textColor: {
       type: String,
-      default: "default"
+      default: VvConfig.defaults.VvEl.textColor
     }
   },
   setup(__props) {
     const props = __props;
-    inject("globals");
     const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
     let classes = computed(() => {
       var _a, _b, _c, _d, _e, _f, _g, _h, _i;

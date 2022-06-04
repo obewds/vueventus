@@ -12,6 +12,9 @@ import GroundPastel from './palettes/GroundPastel.js'
 import TextDefault from './palettes/TextDefault.js'
 
 export default {
+    //
+    // Design System Defaults
+    //
     anchors: {
         palettes: {
             default: AnchorDefault,
@@ -32,11 +35,17 @@ export default {
     colorMode: {
         dark: {
             bg: 'bg-gray-900',
+            ground: 'bg-gray-900',
+            hex: '#242426',
             text: 'text-gray-100',
+            title: 'Enable Dark Mode',
         },
         light: {
             bg: 'bg-gray-100',
+            ground: 'bg-gray-100',
+            hex: '#e1e1e3',
             text: 'text-gray-900',
+            title: 'Enable Light Mode',
         },
     },
     grounds: {
@@ -54,5 +63,33 @@ export default {
     },
     transitions: {
         ...Transitions,
+    },
+    //
+    // Component Prop Defaults
+    //
+    defaults: {
+        "VvButton": {
+            block: false,
+            color: 'primary',
+            fab: false,
+            palette: 'solid',
+            size: 'md',
+            type: 'button',
+        },
+        "VvColorModeButton": {
+            color: 'default',
+            mode: 'light',
+            palette: 'outline',
+            size: 'xs',
+        },
+        "VvEl": {
+            borderPalette: 'default',
+            borderColor: '',
+            groundPalette: 'default',
+            groundColor: 'default',
+            tag: 'div',
+            textPalette: 'default',
+            textColor: 'default',
+        },
     },
 }
