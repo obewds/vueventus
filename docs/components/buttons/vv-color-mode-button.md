@@ -95,6 +95,8 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
     <VvColorModeButton :color="VvConfig.defaults.VvColorModeButton.color" class="border-solid"/>
 </div>
 
+!!!include(snippets/colorCodeExamplesWarning.md)!!!
+
 
 
 
@@ -121,6 +123,8 @@ The {{ $frontmatter.title }} `groundDark` prop sets the component instance class
     <VvColorModeButton :ground-dark="VvConfig.colorMode.dark.ground" class="border-solid"/>
 </div>
 
+!!!include(snippets/colorCodeExamplesWarning.md)!!!
+
 
 
 
@@ -145,6 +149,8 @@ The {{ $frontmatter.title }} `groundDarkHex` prop sets the component instance co
 <div class="w-full pt-4">
     <VvColorModeButton :ground-dark-hex="VvConfig.colorMode.dark.hex" class="border-solid"/>
 </div>
+
+!!!include(snippets/colorCodeExamplesWarning.md)!!!
 
 
 
@@ -172,6 +178,8 @@ The {{ $frontmatter.title }} `groundLight` prop sets the component instance clas
     <VvColorModeButton :ground-light="VvConfig.colorMode.light.ground" class="border-solid"/>
 </div>
 
+!!!include(snippets/colorCodeExamplesWarning.md)!!!
+
 
 
 
@@ -196,6 +204,8 @@ The {{ $frontmatter.title }} `groundLightHex` prop sets the component instance c
 <div class="w-full pt-4">
     <VvColorModeButton :ground-light-hex="VvConfig.colorMode.light.hex" class="border-solid"/>
 </div>
+
+!!!include(snippets/colorCodeExamplesWarning.md)!!!
 
 
 
@@ -223,6 +233,8 @@ The {{ $frontmatter.title }} `type` prop sets the button HTML `type` attribute t
     <VvColorModeButton :mode="VvConfig.defaults.VvColorModeButton.mode" class="border-solid"/>
 </div>
 
+!!!include(snippets/colorCodeExamplesWarning.md)!!!
+
 
 
 
@@ -247,6 +259,8 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance color ba
 <div class="w-full pt-4">
     <VvColorModeButton :palette="VvConfig.defaults.VvColorModeButton.palette" class="border-solid"/>
 </div>
+
+!!!include(snippets/colorCodeExamplesWarning.md)!!!
 
 
 
@@ -274,6 +288,8 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
     <VvColorModeButton :size="VvConfig.defaults.VvColorModeButton.size" class="border-solid"/>
 </div>
 
+!!!include(snippets/colorCodeExamplesWarning.md)!!!
+
 
 
 
@@ -299,6 +315,8 @@ The {{ $frontmatter.title }} `textDark` prop sets the component instance class(e
 <div class="w-full pt-4">
     <VvColorModeButton :text-dark="VvConfig.colorMode.dark.text" class="border-solid"/>
 </div>
+
+!!!include(snippets/colorCodeExamplesWarning.md)!!!
 
 
 
@@ -326,6 +344,8 @@ The {{ $frontmatter.title }} `textLight` prop sets the component instance class(
     <VvColorModeButton :text-light="VvConfig.colorMode.light.text" class="border-solid"/>
 </div>
 
+!!!include(snippets/colorCodeExamplesWarning.md)!!!
+
 
 
 
@@ -338,19 +358,23 @@ The {{ $frontmatter.title }} `textLight` prop sets the component instance class(
 Type: **`String`**  
 Default: **`VvConfig.colorMode.dark.title`**
 
-The {{ $frontmatter.title }} `titleDark` prop sets the component instance class(es) for the text color of the application when in the dark color mode state.
+The {{ $frontmatter.title }} `titleDark` prop sets the component instance title attribute string of the component when the app is currently in the dark color mode state.
+
+!!!include(snippets/lightModeDarkModeTitleTip.md)!!!
 
 ### Syntax
 
 ```html
-<VvColorModeButton title-dark="text-gray-900"/>
+<VvColorModeButton title-dark="Custom Enable Light Mode"/>
 ```
 
 ### Result
 
 <div class="w-full pt-4">
-    <VvColorModeButton :title-dark="VvConfig.colorMode.dark.title" class="border-solid"/>
+    <VvColorModeButton :title-dark="'Custom ' + VvConfig.colorMode.dark.title" class="border-solid"/>
 </div>
+
+!!!include(snippets/colorCodeExamplesWarning.md)!!!
 
 
 
@@ -364,19 +388,24 @@ The {{ $frontmatter.title }} `titleDark` prop sets the component instance class(
 Type: **`String`**  
 Default: **`VvConfig.colorMode.light.title`**
 
-The {{ $frontmatter.title }} `titleLight` prop sets the component instance class(es) for the text color of the application when in the light color mode state.
+The {{ $frontmatter.title }} `titleLight` prop sets the component instance title attribute string of the component when the app is currently in the light color mode state.
+
+!!!include(snippets/lightModeDarkModeTitleTip.md)!!!
 
 ### Syntax
 
 ```html
-<VvColorModeButton title-light="text-gray-900"/>
+<VvColorModeButton title-light="Custom Enable Dark Mode"/>
 ```
 
 ### Result
 
 <div class="w-full pt-4">
-    <VvColorModeButton :title-light="VvConfig.colorMode.light.title" class="border-solid"/>
+    <VvColorModeButton :title-light="'Custom ' + VvConfig.colorMode.light.title" class="border-solid"/>
 </div>
+
+
+!!!include(snippets/colorCodeExamplesWarning.md)!!!
 
 
 
