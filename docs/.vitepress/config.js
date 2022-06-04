@@ -43,6 +43,7 @@ module.exports = {
                 text: 'Guides',
                 collapsible: true,
                 items: [
+                    { text: 'Why VueVentus', link: '/guides/why-vueventus' },
                     { text: 'Getting Started', link: '/guides/' },
                     { text: 'Install with Vite.js', link: '/guides/install-vite' },
                     { text: 'Install with Vue CLI', link: '/guides/install-vue-cli' },
@@ -88,6 +89,7 @@ module.exports = {
                 collapsible: true,
                 items: [
                     { text: 'Components', link: '/components/' },
+                    { text: 'Prop Validators', link: '/components/prop-validators' },
                 ],
             },{
                 text: 'Button Components',
