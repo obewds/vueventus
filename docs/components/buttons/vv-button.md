@@ -28,9 +28,10 @@ import { VvButton } from '@obewds/vueventus'
 
 ## Prop: block
 
-Type: **`String`**
+Type: **`String`**  
+Default: **`false`**
 
-The VvButton `block` prop sets the component instance to use block-level base classes making the returned `<button>` element a full width and block-level element.
+The {{ $frontmatter.title }} `block` prop sets the component instance to use block-level base classes making the returned `<button>` element a full width and block-level element.
 
 ### Syntax
 
@@ -54,9 +55,10 @@ The VvButton `block` prop sets the component instance to use block-level base cl
 
 ## Prop: color
 
-Type: **`String`**
+Type: **`String`**  
+Default: **`"default"`**
 
-The VvButton `color` prop sets the component instance color based both on the `color` prop and the `palette` prop value together.
+The {{ $frontmatter.title }} `color` prop sets the component instance color based both on the `color` prop and the `palette` prop value together.
 
 ### Syntax
 
@@ -80,9 +82,10 @@ The VvButton `color` prop sets the component instance color based both on the `c
 
 ## Prop: fab
 
-Type: **`Boolean`**
+Type: **`Boolean`**  
+Default: **`false`**
 
-The VvButton `fab` prop sets the component instance to use base classes with equal width and height classes making the returned `<button>` element a square button element that can also be styled as a circle using a Tailwind CSS `.rounded-full` class.
+The {{ $frontmatter.title }} `fab` prop sets the component instance to use base classes with equal width and height classes making the returned `<button>` element a square button element that can also be styled as a circle using a Tailwind CSS `.rounded-full` class.
 
 ### Syntax
 
@@ -113,9 +116,10 @@ The VvButton `fab` prop sets the component instance to use base classes with equ
 
 ## Prop: palette
 
-Type: **`String`**
+Type: **`String`**  
+Default: **`"solid"`**
 
-The VvButton `palette` prop sets the component instance color based both on the `palette` prop and the `color` prop values together.
+The {{ $frontmatter.title }} `palette` prop sets the component instance color based both on the `palette` prop and the `color` prop values together.
 
 ### Syntax
 
@@ -139,9 +143,10 @@ The VvButton `palette` prop sets the component instance color based both on the 
 
 ## Prop: size
 
-Type: **`String`**
+Type: **`String`**  
+Default: **`"md"`**
 
-The VvButton `size` prop sets the component instance size-based classes with in the context of buttons typically involves padding and font size atomic classes.
+The {{ $frontmatter.title }} `size` prop sets the component instance size-based classes with in the context of buttons typically involves padding and font size atomic classes.
 
 ### Syntax
 
@@ -165,9 +170,10 @@ The VvButton `size` prop sets the component instance size-based classes with in 
 
 ## Prop: transitionClasses
 
-Type: **`String`**
+Type: **`String`**  
+Default: **`VvConfig.transitions.classes()`**
 
-The VvButton `transitionClasses` prop sets the button transition classes to animate between different states. In the context of a button this is often background colors, text colors, sometimes border colors and more.
+The {{ $frontmatter.title }} `transitionClasses` prop sets the button transition classes to animate between different states. In the context of a button this is often background colors, text colors, sometimes border colors and more.
 
 ### Syntax
 
@@ -192,9 +198,10 @@ The VvButton `transitionClasses` prop sets the button transition classes to anim
 ## Prop: type
 
 Type: **`String`**  
-Valid: **`"button"`**, **`"submit"`**, **`"reset"`**
+Valid: **`"button"`**, **`"submit"`** or **`"reset"`**  
+Default: **`"button"`**
 
-The VvButton `type` prop sets the button HTML `type` attribute to a value that should be either `"button"`, `"submit"` or `"reset"` to be a valid value for this element attribute.
+The {{ $frontmatter.title }} `type` prop sets the button HTML `type` attribute to a value that should be either `"button"`, `"submit"` or `"reset"` to be a valid value for this element attribute.
 
 ### Syntax
 
@@ -218,7 +225,7 @@ The VvButton `type` prop sets the button HTML `type` attribute to a value that s
 
 ## Slot: #default
 
-The VvButton has a standard `#default` Vue slot to insert child elements/nodes into the component.
+The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child elements/nodes into the component.
 
 ### Syntax
 
