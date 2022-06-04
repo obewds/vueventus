@@ -1,8 +1,13 @@
-# Getting Started
+---
+title: Getting Started
+---
+
+# {{ $frontmatter.title }}
 
 Welcome to the VueVentus design system component docs!
 
 You'll find lots of information and insight here covering how to use the VueVentus data flows in the contexts of Vue.js, to end the era of massive atomic class strings.
+
 
 
 
@@ -29,7 +34,6 @@ VueVentus is not currently written with Typescript. There are some components li
 ## Functionality and Concept Guides
 
 * [Test Drive: VvButton](/guides/test-drive-vv-button)
-* [App Color Config File](/guides/app-color-config-file)
 * [Palettes vs Colors](/guides/palettes-vs-colors)
 * [Colors and State](/guides/colors-and-state)
 

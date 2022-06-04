@@ -1,54 +1,71 @@
 # Configuration
 
-Next up, we need to configure our app's Tailwind CSS config file to use a handful of extenstions and additions to Tailwind's awesome arsenal of atomic classes.
+Next up, we need to configure the app's Vite config file and the app's Tailwind CSS config file. The Vite updates are for convenience and testing purposes. The Tailwind updates bring a handful of extenstions and additions to Tailwind's already awesome arsenal of atomic class name fragments.
 
 
 
 
 ## Tailwind Config Setup
 
-There's a few mods to the Tailwind config file needed to open up a more "design system" configuration for your app and to use the VueVentus default Tailwind component system to its fullest. 
+There's a few mods to the Tailwind config file needed to open up a more "design system" configuration for your app.
 
-Go haead and open up the `./tailwind.config.js` file and add the following variables and `require()` methods:
+To manage and maintain this, VueVentus uses JSON formatted data files as modules thanks to Node.js. 
+
+::: tip
+Feel free to read more about the [JSON Data Modules](/data/) used below before proceeding. Or continue to follow the docs here and you will get to them soon enough!
+:::
+
+Go haead and open up your app's `./tailwind.config.js` file, and add the following variables and `require()` methods:
 
 ```javascript
 // ./tailwind.config.js
 
 const defaultTheme = require('tailwindcss/defaultTheme')
-const vvPath = './node_modules/@obewds/vueventus/src/data/'
-const vvProtoColors = require(vvPath + 'vueventus.tw.colors.json')
-const vvTwTheme = require(vvPath + 'vueventus.tw.theme.json')
-const vvTwThemeExtend = require(vvPath + 'vueventus.tw.theme.extend.json')
+const vv = './node_modules/@obewds/vueventus/src/data/'
 
 module.exports = {
+
     // Enable darkMode using the 'class' option
     darkMode: 'class',
+
     content: [
+        "./index.html",
+        "./src/**/*.{vue,js,ts,jsx,tsx}",
+        "./docs/**/*.{md,html,js}",
         // To include VueVentus default Tailwind CSS classes for prototyping
         "./node_modules/@obewds/vueventus/**/*.{vue,js,ts,jsx,tsx,json}",
     ],
+
     theme: {
         extend: {
-            // This is useful for custom and/or Google Fonts
+            // VueVentus heading/body text fragments and format to add custom/Google fonts
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
                 heading: ['Nunito', ...defaultTheme.fontFamily.sans],
                 body: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
-            // Include VueVentus theme extended data values
-            ...vvTwThemeExtend,
+            // VueVentus TW theme extensions
+            maxWidth: require( vv + 'extend.maxWidth.json' ),
+            rotate: require( vv + 'extend.rotate.json' ),
+            scale: require( vv + 'extend.scale.json' ),
+            transitionDuration: require( vv + 'extend.transitionDuration.json' ),
+            width: require( vv + 'extend.width.json' ),
         },
-        // Include VueVentus additional theme data values
-        ...vvTwTheme,
-        // Use the VueVentus default colors palette
-        colors: vvProtoColors,
+        // VueVentus TW theme overrides
+        colors: require( vv + 'app.color.data.json' ),
+        fontSize: require( vv + 'theme.fontSize.json' ),
+        listStyleType: require( vv + 'theme.listStyleType.json' ),
+        opacity: require( vv + 'theme.opacity.json' ),
+        screens: require( vv + 'theme.screens.json' ),
     },
+
     variants: {
         extend: {
-            // Enable disabled variants for opacity classes
-            opacity: ['disabled'],
+            // VueVentus enable disabled variants for opacity classes
+            opacity: ['disabled']
         }
     },
+
     plugins: [
         // VueVentus deps should already be in node_modules :)
         require('@tailwindcss/forms'),
@@ -57,41 +74,5 @@ module.exports = {
         require('@tailwindcss/line-clamp'),
     ],
 }
-```
-
-
-
-
-
-
-
-## Vite Config Setup
-
-There's also a couple of tiny tweaks to make in our project's `./vite.config.js` file:
-
-```javascript
-// ./vite.config.js
-
-// import the resolve method
-import { resolve } from 'path'
-
-export default defineConfig({
-    plugins: [...],
-    // add a resolve parameter/alias
-    resolve: {
-        alias: {
-            '@': resolve(__dirname, 'src'),
-        },
-    },
-    // optionally open page on server start
-    server: {
-        open: true,
-    },
-    // for Vitest!
-    test: {
-        globals: true,
-    },
-    build: {...},
-})
 ```
 
