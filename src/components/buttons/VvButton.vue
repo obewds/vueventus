@@ -7,28 +7,29 @@
 <script setup>
 
     import { computed, inject } from 'vue'
+    import ValidButtonTypes from '../../validators/ValidButtonTypes.js'
     import VvConfig from '../../configs/VvConfig.js'
 
     const props = defineProps({
         block: {
             type: Boolean,
-            default: false,
+            default: VvConfig.defaults.VvButton.block,
         },
         color: {
             type: String,
-            default: 'default',
+            default: VvConfig.defaults.VvButton.color,
         },
         fab: {
             type: Boolean,
-            default: false,
+            default: VvConfig.defaults.VvButton.fab,
         },
         palette: {
             type: String,
-            default: 'solid',
+            default: VvConfig.defaults.VvButton.palette,
         },
         size: {
             type: String,
-            default: 'md',
+            default: VvConfig.defaults.VvButton.size,
         },
         transitionClasses: {
             type: String,
@@ -36,8 +37,8 @@
         },
         type: {
             type: String,
-            default: 'button',
-            validator: (prop) => ['button', 'submit', 'reset'].includes(prop),
+            default: VvConfig.defaults.VvButton.type,
+            validator: (prop) => (ValidButtonTypes).includes(prop),
         },
     })
 
