@@ -19,6 +19,7 @@
     "src/components",
     "src/configs",
     "src/data",
+    "src/helpers",
     "src/validators"
   ],
   "sideEffects": false,
