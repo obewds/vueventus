@@ -59,3 +59,49 @@ test('VvAnchor.vue component "button" prop returns an expected result', async ()
     expect(wrapper.html()).toContain('items-center')
     
 })
+
+
+
+test('VvAnchor.vue component returns Tailwind CSS classes for a full width element', async () => {
+
+    const wrapper = mount(VvAnchor, {
+        props: {
+            button: true,
+            buttonBlock: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('w-full')
+    
+})
+
+
+
+test('VvAnchor.vue component returns Tailwind CSS classes for a fab button set of classes', async () => {
+
+    const wrapper = mount(VvAnchor, {
+        props: {
+            button: true,
+            buttonFab: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('cursor-pointer')
+    
+})
+
+
+
+test('VvAnchor.vue component mutton mode color prop returns an expected result', async () => {
+
+    const wrapper = mount(VvAnchor, {
+        props: {
+            button: true,
+            palette: 'solid',
+            color: 'success',
+        },
+    })
+
+    expect(wrapper.html()).toContain('green')
+    
+})
