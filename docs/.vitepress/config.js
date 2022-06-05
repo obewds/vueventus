@@ -103,7 +103,9 @@ function sidebarModules() {
             collapsible: true,
             items: [
                 { text: 'Config Modules', link: '/modules/' },
+                { text: 'Anchors', link: '/modules/anchors' },
                 { text: 'Buttons', link: '/modules/buttons' },
+                { text: 'Text', link: '/modules/text' },
                 { text: 'Transitions', link: '/modules/transitions' },
                 { text: 'VvConfig', link: '/modules/vv-config' },
             ]
@@ -121,6 +123,13 @@ function sidebarModules() {
                 { text: 'GroundMonochromatic', link: '/modules/palettes/ground-monochromatic' },
                 { text: 'GroundPastel', link: '/modules/palettes/ground-pastel' },
                 { text: 'TextDefault', link: '/modules/palettes/text-default' },
+            ]
+        },{
+            text: 'Helper Modules',
+            collapsible: true,
+            items: [
+                { text: 'Helper Modules', link: '/modules/helpers/' },
+                { text: 'mergeWithVvConfig()', link: '/modules/helpers/merge-with-vv-config' },
             ]
         },
     ]

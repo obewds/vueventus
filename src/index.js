@@ -1,3 +1,10 @@
+// .src/configs
+export { default as Anchors } from './configs/Anchors.js'
+export { default as Buttons } from './configs/Buttons.js'
+export { default as Text } from './configs/Text.js'
+export { default as Transitions } from './configs/Transitions.js'
+export { default as VvConfig } from './configs/VvConfig.js'
+
 // .src/configs/palettes
 export { default as AnchorDefault } from './configs/palettes/AnchorDefault.js'
 export { default as BorderDefault } from './configs/palettes/BorderDefault.js'
@@ -9,11 +16,8 @@ export { default as GroundMonochromatic } from './configs/palettes/GroundMonochr
 export { default as GroundPastel } from './configs/palettes/GroundPastel.js'
 export { default as TextDefault } from './configs/palettes/TextDefault.js'
 
-// .src/configs
-export { default as Anchors } from './configs/Anchors.js'
-export { default as Buttons } from './configs/Buttons.js'
-export { default as Transitions } from './configs/Transitions.js'
-export { default as VvConfig } from './configs/VvConfig.js'
+// .src/helpers
+export { default as mergeWithVvConfig } from './helpers/mergeWithVvConfig.js'
 
 // .src/components/anchors
 export { default as VvAnchor } from './components/anchors/VvAnchor.vue'

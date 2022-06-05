@@ -1,7 +1,7 @@
 {
   "name": "@obewds/vueventus",
   "description": "A modular design system component library built for Vue.js and Tailwind CSS.",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
   "license": "MIT",
@@ -19,6 +19,7 @@
     "src/components",
     "src/configs",
     "src/data",
+    "src/helpers",
     "src/validators"
   ],
   "sideEffects": false,
@@ -45,6 +46,7 @@
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
+    "deepmerge": "^4.2.2",
     "tailwindcss": "^3.0.24",
     "vue": "^3.2.25"
   },

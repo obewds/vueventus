@@ -5,6 +5,7 @@ import Home from '@/views/Home.vue'
 // config pages
 import AnchorsPage from '@/views/configs/AnchorsPage.vue'
 import ButtonsPage from '@/views/configs/ButtonsPage.vue'
+import TextPage from '@/views/configs/TextPage.vue'
 import TransitionsPage from '@/views/configs/TransitionsPage.vue'
 import VvConfigPage from '@/views/configs/VvConfigPage.vue'
 
@@ -50,6 +51,10 @@ const router = createRouter({
             name: 'Buttons Config Module',
             component: ButtonsPage,
             path: '/configs/buttons'
+        },{
+            name: 'Text Config Module',
+            component: TextPage,
+            path: '/configs/text'
         },{
             name: 'Transitions Config Module',
             component: TransitionsPage,

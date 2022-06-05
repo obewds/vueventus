@@ -3,7 +3,7 @@ export default {
     disabled: 'disabled:opacity-25',
     display: '',
     focus: '',
-    text: 'underline',
+    text: 'underline underline-offset-1',
     base: function () {
         return [
             this.cursor,

@@ -1,5 +1,6 @@
 import Anchors from './Anchors.js'
 import Buttons from './Buttons.js'
+import Text from './Text.js'
 import Transitions from './Transitions.js'
 
 import AnchorDefault from './palettes/AnchorDefault.js'
@@ -59,6 +60,7 @@ export default {
         },
     },
     text: {
+        ...Text,
         palettes: {
             default: TextDefault,
         },
