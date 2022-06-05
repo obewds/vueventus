@@ -9,7 +9,7 @@ import './css/tailwind.css'
 // import your app VueVentus config file
 // use the method to merge app configs into default VueVentus configs
 import mergeWithVvConfig from './helpers/mergeWithVvConfig.js'
-import appVueVentus from './appVueVentus.js'
+import appVvConfig from './appVvConfig.js'
 // const vv = mergeWithVvConfig(appVv)
 
 
@@ -17,7 +17,7 @@ const app = createApp(App)
 
 
 // provide the merged configs
-app.provide('vv', mergeWithVvConfig(appVueVentus))
+app.provide('vv', mergeWithVvConfig(appVvConfig))
 
 
 app.provide('globals', globals)
