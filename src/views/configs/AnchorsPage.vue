@@ -9,6 +9,8 @@
     const globals = inject('globals')
     const tw = globals.classes
 
+    const vv = inject('vv')
+
 </script>
 
 
@@ -20,7 +22,7 @@
             <div>
                 <h3 :class="tw.h3">Anchors</h3>
                 <div :class="tw.flexWrap">
-                    <div :class="[VvConfig.anchors.classes(), VvConfig.anchors.palettes.solid.primary, tw.pad]">
+                    <div :class="[vv.anchors.classes(), vv.anchors.palettes.default.primary, tw.pad]">
                         Anchors.classes()
                     </div>
                 </div>
