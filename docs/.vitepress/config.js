@@ -103,7 +103,9 @@ function sidebarModules() {
             collapsible: true,
             items: [
                 { text: 'Config Modules', link: '/modules/' },
+                { text: 'Anchors', link: '/modules/anchors' },
                 { text: 'Buttons', link: '/modules/buttons' },
+                { text: 'Text', link: '/modules/text' },
                 { text: 'Transitions', link: '/modules/transitions' },
                 { text: 'VvConfig', link: '/modules/vv-config' },
             ]
