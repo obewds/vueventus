@@ -1,3 +1,4 @@
+import Anchors from './Anchors.js'
 import Buttons from './Buttons.js'
 import Transitions from './Transitions.js'
 
@@ -16,6 +17,7 @@ export default {
     // Design System Defaults
     //
     anchors: {
+        ...Anchors,
         palettes: {
             default: AnchorDefault,
         },
@@ -68,6 +70,15 @@ export default {
     // Component Prop Defaults
     //
     defaults: {
+        "VvAnchor": {
+            button: false,
+            buttonBlock: false,
+            buttonFab: false,
+            buttonSize: 'md',
+            color: 'default',
+            href: '#',
+            palette: 'default',
+        },
         "VvButton": {
             block: false,
             color: 'primary',

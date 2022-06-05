@@ -90,15 +90,6 @@ function sidebarGuides() {
 function sidebarModules() {
     return [
         {
-            text: 'JSON Data Modules',
-            collapsible: true,
-            items: [
-                { text: 'JSON Data Modules', link: '/modules/data/' },
-                { text: 'Theme Extenders', link: '/modules/data/theme-extenders' },
-                { text: 'Theme Additions', link: '/modules/data/theme-additions' },
-                { text: 'App Color Data', link: '/modules/data/app-color-data' },
-            ]
-        },{
             text: 'Config Modules',
             collapsible: true,
             items: [
@@ -123,21 +114,15 @@ function sidebarModules() {
                 { text: 'TextDefault', link: '/modules/palettes/text-default' },
             ]
         },{
-            text: 'Palette Modules',
+            text: 'JSON Data Modules',
             collapsible: true,
             items: [
-                { text: 'Palette Modules', link: '/modules/palettes/' },
-                { text: 'AnchorDefault', link: '/modules/palettes/anchor-default' },
-                { text: 'BorderDefault', link: '/modules/palettes/border-default' },
-                { text: 'ButtonOutline', link: '/modules/palettes/button-outline' },
-                { text: 'ButtonSolid', link: '/modules/palettes/button-solid' },
-                { text: 'GroundConsole', link: '/modules/palettes/ground-console' },
-                { text: 'GroundDefault', link: '/modules/palettes/ground-default' },
-                { text: 'GroundMonochromatic', link: '/modules/palettes/ground-monochromatic' },
-                { text: 'GroundPastel', link: '/modules/palettes/ground-pastel' },
-                { text: 'TextDefault', link: '/modules/palettes/text-default' },
+                { text: 'JSON Data Modules', link: '/modules/data/' },
+                { text: 'Theme Extenders', link: '/modules/data/theme-extenders' },
+                { text: 'Theme Additions', link: '/modules/data/theme-additions' },
+                { text: 'App Color Data', link: '/modules/data/app-color-data' },
             ]
-        }
+        },
     ]
 }
 
@@ -150,6 +135,12 @@ function sidebarComponents() {
             items: [
                 { text: 'Components', link: '/components/' },
                 { text: 'Prop Validators', link: '/components/prop-validators' },
+            ]
+        },{
+            text: 'Anchor Components',
+            collapsible: true,
+            items: [
+                { text: 'VvAnchor', link: '/components/anchors/vv-anchor' },
             ]
         },{
             text: 'Button Components',

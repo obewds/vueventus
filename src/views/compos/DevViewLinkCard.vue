@@ -25,9 +25,23 @@
 
     const tw = globals.classes
 
-    const iconClasses = 'w-12 h-12 mx-auto opacity-50 mb-3'
+    const iconClasses = 'w-12 h-12 mx-auto opacity-40 mb-3'
 
     const linkClasses = computed(() => props.linkClasses !== '' ? props.linkClasses : tw.gridCardLink)
+
+    const textClasses = 'opacity-65 mb-3 mx-auto text-xs tracking-widest uppercase'
+
+    const iconText = computed(() => {
+        if (props.icon === 'component') {
+            return 'Vue Component'
+        }
+        if (props.icon === 'config') {
+            return 'Config Module'
+        }
+        if (props.icon === 'palette') {
+            return 'Palette Config Module'
+        }
+    })
 
 </script>
 
@@ -47,6 +61,10 @@
         <svg v-if="icon === 'palette'" :class="iconClasses" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
         </svg>
+
+        <div v-if="icon === 'component'" :class="textClasses">{{ iconText }}</div>
+        <div v-if="icon === 'config'" :class="textClasses">{{ iconText }}</div>
+        <div v-if="icon === 'palette'" :class="textClasses">{{ iconText }}</div>
 
         <slot/>
 

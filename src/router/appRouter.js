@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
 
 // config pages
+import AnchorsPage from '@/views/configs/AnchorsPage.vue'
 import ButtonsPage from '@/views/configs/ButtonsPage.vue'
 import TransitionsPage from '@/views/configs/TransitionsPage.vue'
 import VvConfigPage from '@/views/configs/VvConfigPage.vue'
@@ -17,6 +18,9 @@ import GroundDefaultPage from '@/views/configs/palettes/GroundDefaultPage.vue'
 import GroundMonochromaticPage from '@/views/configs/palettes/GroundMonochromaticPage.vue'
 import GroundPastelPage from '@/views/configs/palettes/GroundPastelPage.vue'
 import TextDefaultPage from '@/views/configs/palettes/TextDefaultPage.vue'
+
+// anchor component pages
+import VvAnchorPage from '@/views/components/anchors/VvAnchorPage.vue'
 
 // button component pages
 import VvButtonPage from '@/views/components/buttons/VvButtonPage.vue'
@@ -39,6 +43,10 @@ const router = createRouter({
         //
         
         {
+            name: 'Anchors Config Module',
+            component: AnchorsPage,
+            path: '/configs/anchors'
+        },{
             name: 'Buttons Config Module',
             component: ButtonsPage,
             path: '/configs/buttons'
@@ -92,6 +100,16 @@ const router = createRouter({
             name: 'TextDefault Palette Config Module',
             component: TextDefaultPage,
             path: '/configs/palettes/text-default'
+        },
+        
+        //
+        // anchor component pages
+        //
+
+        {
+            name: 'VvAnchor Component',
+            component: VvAnchorPage,
+            path: '/components/anchors/vv-anchor'
         },
         
         //
