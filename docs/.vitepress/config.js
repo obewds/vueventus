@@ -63,7 +63,7 @@ function mainNav() {
     return [
         { text: "Home", link: "/" },
         { text: "Guides", link: "/guides/", activeMatch: '/guides/' },
-        { text: "Modules", link: "/modules/", activeMatch: '/modules/' },
+        { text: "Modules", link: "/modules/data/", activeMatch: '/modules/' },
         { text: "Components", link: "/components/", activeMatch: '/compoents/' },
         // { text: 'Changelog', link: 'https://github.com/obewds/vueventus/blob/main/CHANGELOG.md' },
         // { text: "npm", link: "https://www.npmjs.com/package/@obewds/vueventus" },
@@ -90,6 +90,15 @@ function sidebarGuides() {
 function sidebarModules() {
     return [
         {
+            text: 'Tailwind Modules',
+            collapsible: true,
+            items: [
+                { text: 'Tailwind Modules', link: '/modules/data/' },
+                { text: 'Theme Extenders', link: '/modules/data/theme-extenders' },
+                { text: 'Theme Additions', link: '/modules/data/theme-additions' },
+                { text: 'App Color Data', link: '/modules/data/app-color-data' },
+            ]
+        },{
             text: 'Config Modules',
             collapsible: true,
             items: [
@@ -112,15 +121,6 @@ function sidebarModules() {
                 { text: 'GroundMonochromatic', link: '/modules/palettes/ground-monochromatic' },
                 { text: 'GroundPastel', link: '/modules/palettes/ground-pastel' },
                 { text: 'TextDefault', link: '/modules/palettes/text-default' },
-            ]
-        },{
-            text: 'JSON Data Modules',
-            collapsible: true,
-            items: [
-                { text: 'JSON Data Modules', link: '/modules/data/' },
-                { text: 'Theme Extenders', link: '/modules/data/theme-extenders' },
-                { text: 'Theme Additions', link: '/modules/data/theme-additions' },
-                { text: 'App Color Data', link: '/modules/data/app-color-data' },
             ]
         },
     ]
