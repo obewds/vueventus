@@ -88,13 +88,17 @@
                 Buttons
             </DevViewLinkCard>
 
-            <DevViewLinkCard icon="config" to="/configs/transitions" :link-classes="tw.gridCardLinkModule">
-                Transitions
+            <DevViewLinkCard icon="config" to="/configs/text" :link-classes="tw.gridCardLinkModule">
+                Text
             </DevViewLinkCard>
 
         </div>
 
-        <div :class="[tw.grid, 'grid-cols-1']">
+        <div :class="[tw.grid, 'grid-cols-1 sm:grid-cols-2']">
+
+            <DevViewLinkCard icon="config" to="/configs/transitions" :link-classes="tw.gridCardLinkModule">
+                Transitions
+            </DevViewLinkCard>
 
             <DevViewLinkCard icon="config" to="/configs/vv-config" :link-classes="tw.gridCardLinkModule">
                 VvConfig
