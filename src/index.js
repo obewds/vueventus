@@ -10,9 +10,13 @@ export { default as GroundPastel } from './configs/palettes/GroundPastel.js'
 export { default as TextDefault } from './configs/palettes/TextDefault.js'
 
 // .src/configs
-export { default as Transitions } from './configs/Transitions.js'
+export { default as Anchors } from './configs/Anchors.js'
 export { default as Buttons } from './configs/Buttons.js'
+export { default as Transitions } from './configs/Transitions.js'
 export { default as VvConfig } from './configs/VvConfig.js'
+
+// .src/components/anchors
+export { default as VvAnchor } from './components/anchors/VvAnchor.vue'
 
 // .src/components/buttons
 export { default as VvButton } from './components/buttons/VvButton.vue'
