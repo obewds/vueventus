@@ -11,7 +11,7 @@ test('Anchors component returns a truthy value', async () => {
 })
 
 
-test('Anchors component returns a truthy value for "cursor", "disabled", "display", "focus" abd "text" properties', async () => {
+test('Anchors component returns a truthy value for "cursor", "disabled", "display", "focus" and "text" properties', async () => {
 
     expect(Anchors.cursor).toBeTruthy()
     expect(Anchors.disabled).toBeTruthy()
