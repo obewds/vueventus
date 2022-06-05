@@ -9,6 +9,9 @@ hero:
       text: Get Started
       link: /vueventus/guides/why-vueventus
     - theme: alt
+      text: Modules
+      link: /vueventus/modules/
+    - theme: alt
       text: Components
       link: /vueventus/components/
     - theme: alt
