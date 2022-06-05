@@ -1,5 +1,5 @@
 ---
-title: JSON Data Modules
+title: Tailwind Modules
 ---
 
 # {{ $frontmatter.title }}
@@ -8,6 +8,6 @@ VueVentus uses {{ $frontmatter.title }} to store various raw data settings that 
 
 There are currently three main types of {{ $frontmatter.title }} to use in your app's Tailwind CSS config file:
 
-* [Theme Extenders]()
-* [Theme Additions]()
-* [App Color Configs]()
+* [Theme Extenders](/modules/data/theme-extenders)
+* [Theme Additions](/modules/data/theme-additions)
+* [App Color Data](/modules/data/app-color-data)
