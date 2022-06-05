@@ -1,1 +1,0 @@
-import{_ as e,o,c as t,l as a}from"./app.2bb2eaf1.js";const h='{"title":"Config Modules","description":"","frontmatter":{},"headers":[],"relativePath":"modules/index.md","lastUpdated":1654395885000}',s={name:"modules/index.md"},n=a("",5),i=[n];function l(d,c,u,r,p,m){return o(),t("div",null,i)}var _=e(s,[["render",l]]);export{h as __pageData,_ as default};
