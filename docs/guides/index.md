@@ -9,7 +9,7 @@ Welcome to the VueVentus design system component docs!
 You'll find lots of information and insight here covering how to use the VueVentus data flows in the contexts of Vue.js, to end the era of massive atomic class strings.
 
 
-
+!!!include(snippets/alphaStageWarning.md)!!!
 
 
 
