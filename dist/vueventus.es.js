@@ -18,153 +18,19 @@ var __spreadValues = (a, b) => {
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 import { inject, computed, openBlock, createElementBlock, normalizeClass, unref, renderSlot, ref, onMounted, createBlock, withCtx, createCommentVNode, createElementVNode, resolveDynamicComponent } from "vue";
-var AnchorDefault = {
-  "default": "text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-200",
-  error: "text-rose-500 hover:text-rose-600 dark:text-rose-300 dark:hover:text-rose-200",
-  primary: "text-blue-500 hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-200",
-  secondary: "text-teal-500 hover:text-teal-600 dark:text-teal-300 dark:hover:text-teal-200",
-  success: "text-green-600 hover:text-green-700 dark:text-green-300 dark:hover:text-green-200"
-};
-var BorderDefault = {
-  "": "",
-  "default": "border-gray-200 dark:border-gray-600",
-  "error": "border-rose-600 dark:border-rose-300",
-  "primary": "border-blue-600 dark:border-blue-300",
-  "secondary": "border-violet-600 dark:border-violet-300",
-  "success": "border-green-600 dark:border-green-300"
-};
-var ButtonOutline = {
-  "default": "text-gray-500 dark:text-gray-300 hover:text-white dark:hover:text-white hover:bg-gray-500 active:bg-gray-600 border-gray-300 hover:border-gray-800 focus:ring-gray-400 focus:border-gray-900",
-  error: "text-rose-500 dark:text-rose-300 hover:text-white dark:hover:text-white hover:bg-rose-500 active:bg-rose-600 border-rose-300 hover:border-rose-800 focus:ring-rose-400 focus:border-rose-900",
-  primary: "text-blue-500 dark:text-blue-300 hover:text-white dark:hover:text-white hover:bg-blue-500 active:bg-blue-600 border-blue-300 hover:border-blue-800 focus:ring-blue-400 focus:border-blue-900",
-  secondary: "text-teal-600 dark:text-teal-500 hover:text-white dark:hover:text-white hover:bg-teal-600 active:bg-teal-800 border-teal-600 hover:border-teal-800 focus:ring-teal-500 focus:border-teal-900",
-  success: "text-green-600 dark:text-green-500 hover:text-white dark:hover:text-white hover:bg-green-600 active:bg-green-800 border-green-600 hover:border-green-800 focus:ring-green-500 focus:border-green-900"
-};
-var ButtonSolid = {
-  "default": "text-gray-800 hover:text-black bg-gray-100 hover:bg-gray-200 active:bg-gray-300 border-gray-900 focus:border-black focus:ring-gray-400",
-  error: "text-white bg-rose-500 hover:bg-rose-600 active:bg-rose-700 border-rose-800 focus:ring-rose-400 focus:border-rose-900",
-  primary: "text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700 border-blue-800 focus:ring-blue-400 focus:border-blue-900",
-  secondary: "text-gray-900 hover:text-white bg-teal-500 hover:bg-teal-600 active:text-white active:bg-teal-700 border-teal-800 focus:ring-teal-400 focus:border-teal-900",
-  success: "text-gray-900 hover:text-white bg-green-500 hover:bg-green-600 active:text-white active:bg-green-700 border-green-800 focus:ring-green-400 focus:border-green-900"
-};
-var GroundConsole = {
-  "default": "text-gray-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
-  "error": "text-rose-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
-  "primary": "text-blue-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
-  "secondary": "text-violet-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
-  "success": "text-green-300 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80"
-};
-var GroundDefault = {
-  "default": "",
-  "error": "text-white bg-rose-500 dark:bg-rose-600",
-  "primary": "text-white bg-blue-500 dark:bg-blue-600",
-  "secondary": "text-white bg-violet-500 dark:bg-violet-600",
-  "success": "text-white bg-green-500 dark:bg-green-600"
-};
-var GroundMonochromatic = {
-  "default": "text-gray-800 bg-gray-200 dark:bg-gray-800 dark:text-gray-200",
-  "error": "text-rose-800 bg-rose-200 dark:bg-rose-800 dark:text-rose-200",
-  "primary": "text-blue-800 bg-blue-200 dark:bg-blue-800 dark:text-blue-200",
-  "secondary": "text-violet-800 bg-violet-200 dark:bg-violet-800 dark:text-violet-200",
-  "success": "text-green-800 bg-green-300 dark:bg-green-800 dark:text-green-300"
-};
-var GroundPastel = {
-  "default": "text-black bg-gray-100 dark:bg-gray-200",
-  "error": "text-black bg-rose-200 dark:bg-rose-300",
-  "primary": "text-black bg-blue-200 dark:bg-blue-300",
-  "secondary": "text-black bg-violet-200 dark:bg-violet-300",
-  "success": "text-black bg-green-300 dark:bg-green-400"
-};
-var TextDefault = {
-  "default": "",
-  "error": "text-rose-500 dark:text-rose-300",
-  "primary": "text-blue-500 dark:text-blue-300",
-  "secondary": "text-violet-500 dark:text-violet-300",
-  "success": "text-green-600 dark:text-green-300"
-};
-var Transitions = {
-  durations: {
-    "1200": "duration-1200",
-    "1150": "duration-1150",
-    "1100": "duration-1100",
-    "1050": "duration-1050",
-    "1000": "duration-1000",
-    "950": "duration-950",
-    "900": "duration-900",
-    "850": "duration-850",
-    "800": "duration-800",
-    "750": "duration-750",
-    "700": "duration-700",
-    "650": "duration-650",
-    "600": "duration-600",
-    "550": "duration-550",
-    "500": "duration-500",
-    "475": "duration-475",
-    "450": "duration-450",
-    "425": "duration-425",
-    "400": "duration-400",
-    "375": "duration-375",
-    "350": "duration-350",
-    "325": "duration-325",
-    "300": "duration-300",
-    "275": "duration-275",
-    "250": "duration-250",
-    "225": "duration-225",
-    "200": "duration-200",
-    "175": "duration-175",
-    "150": "duration-150",
-    "125": "duration-125",
-    "100": "duration-100",
-    "75": "duration-75",
-    "50": "duration-50",
-    "25": "duration-25"
-  },
-  easings: {
-    linear: "ease-linear",
-    in: "ease-in",
-    out: "ease-out",
-    inOut: "ease-in-out"
-  },
-  transitions: {
-    default: "transition",
-    all: "transition-all",
-    colors: "transition-colors",
-    opacity: "transition-opacity",
-    shadow: "transition-shadow",
-    transform: "transition-transform"
-  },
-  getDurationClasses: function(durationsKey) {
-    const key = durationsKey && this.durations[durationsKey] ? durationsKey : "300";
-    return this.durations[key];
-  },
-  getEasingClasses: function(easingsKey) {
-    const key = easingsKey && this.easings[easingsKey] ? easingsKey : "inOut";
-    return this.easings[key];
-  },
-  getTransitionClasses: function(transitionsKey) {
-    const key = transitionsKey && this.transitions[transitionsKey] ? transitionsKey : "default";
-    return this.transitions[key];
-  },
-  custom: function(settingsObj) {
-    const settings = {
-      transitions: settingsObj && settingsObj.transitions ? settingsObj.transitions : "",
-      easings: settingsObj && settingsObj.easings ? settingsObj.easings : "",
-      durations: settingsObj && settingsObj.durations ? settingsObj.durations : ""
-    };
+var Anchors = {
+  cursor: "cursor-pointer",
+  disabled: "disabled:opacity-25",
+  display: "",
+  focus: "",
+  text: "underline underline-offset-1",
+  base: function() {
     return [
-      this.getTransitionClasses(settings.transitions),
-      this.getEasingClasses(settings.easings),
-      this.getDurationClasses(settings.durations)
-    ].join(" ");
-  },
-  classes: function(transitionsKey, easingsKey, durationsKey) {
-    const transitions = transitionsKey ? transitionsKey : "";
-    const easings = easingsKey ? easingsKey : "";
-    const durations = durationsKey ? durationsKey : "";
-    return [
-      this.getTransitionClasses(transitions),
-      this.getEasingClasses(easings),
-      this.getDurationClasses(durations)
+      this.cursor,
+      this.disabled,
+      this.display,
+      this.focus,
+      this.text
     ].join(" ");
   }
 };
@@ -280,12 +146,208 @@ var Buttons = {
     ].join(" ");
   }
 };
+var Text = {
+  align: "",
+  decoration: "",
+  family: "",
+  lineHeight: "",
+  smoothing: "subpixel-antialiased",
+  spacing: "",
+  weight: "",
+  wordBreak: "",
+  base: function() {
+    return [
+      this.align,
+      this.decoration,
+      this.family,
+      this.lineHeight,
+      this.smoothing,
+      this.spacing,
+      this.weight,
+      this.wordBreak
+    ].join(" ");
+  },
+  sizes: {
+    "4xs": "text-4xs leading-3",
+    "3xs": "text-3xs leading-4",
+    "2xs": "text-2xs leading-5",
+    "xs": "text-xs leading-6",
+    "sm": "text-sm leading-7",
+    "md": "text-base leading-8",
+    "lg": "text-lg leading-9",
+    "xl": "text-xl leading-10",
+    "2xl": "text-2xl leading-10",
+    "3xl": "text-3xl leading-10",
+    "4xl": "text-4xl leading-10"
+  },
+  getSizeClasses: function(sizesKey) {
+    const key = sizesKey && this.sizes[sizesKey] ? sizesKey : "md";
+    return this.sizes[key];
+  },
+  classes: function(sizesKey) {
+    const sizes = sizesKey ? sizesKey : "";
+    return [
+      this.base(),
+      this.getSizeClasses(sizes)
+    ].join(" ");
+  }
+};
+var Transitions = {
+  durations: {
+    "1200": "duration-1200",
+    "1150": "duration-1150",
+    "1100": "duration-1100",
+    "1050": "duration-1050",
+    "1000": "duration-1000",
+    "950": "duration-950",
+    "900": "duration-900",
+    "850": "duration-850",
+    "800": "duration-800",
+    "750": "duration-750",
+    "700": "duration-700",
+    "650": "duration-650",
+    "600": "duration-600",
+    "550": "duration-550",
+    "500": "duration-500",
+    "475": "duration-475",
+    "450": "duration-450",
+    "425": "duration-425",
+    "400": "duration-400",
+    "375": "duration-375",
+    "350": "duration-350",
+    "325": "duration-325",
+    "300": "duration-300",
+    "275": "duration-275",
+    "250": "duration-250",
+    "225": "duration-225",
+    "200": "duration-200",
+    "175": "duration-175",
+    "150": "duration-150",
+    "125": "duration-125",
+    "100": "duration-100",
+    "75": "duration-75",
+    "50": "duration-50",
+    "25": "duration-25"
+  },
+  easings: {
+    linear: "ease-linear",
+    in: "ease-in",
+    out: "ease-out",
+    inOut: "ease-in-out"
+  },
+  transitions: {
+    default: "transition",
+    all: "transition-all",
+    colors: "transition-colors",
+    opacity: "transition-opacity",
+    shadow: "transition-shadow",
+    transform: "transition-transform"
+  },
+  getDurationClasses: function(durationsKey) {
+    const key = durationsKey && this.durations[durationsKey] ? durationsKey : "300";
+    return this.durations[key];
+  },
+  getEasingClasses: function(easingsKey) {
+    const key = easingsKey && this.easings[easingsKey] ? easingsKey : "inOut";
+    return this.easings[key];
+  },
+  getTransitionClasses: function(transitionsKey) {
+    const key = transitionsKey && this.transitions[transitionsKey] ? transitionsKey : "default";
+    return this.transitions[key];
+  },
+  custom: function(settingsObj) {
+    const settings = {
+      transitions: settingsObj && settingsObj.transitions ? settingsObj.transitions : "",
+      easings: settingsObj && settingsObj.easings ? settingsObj.easings : "",
+      durations: settingsObj && settingsObj.durations ? settingsObj.durations : ""
+    };
+    return [
+      this.getTransitionClasses(settings.transitions),
+      this.getEasingClasses(settings.easings),
+      this.getDurationClasses(settings.durations)
+    ].join(" ");
+  },
+  classes: function(transitionsKey, easingsKey, durationsKey) {
+    const transitions = transitionsKey ? transitionsKey : "";
+    const easings = easingsKey ? easingsKey : "";
+    const durations = durationsKey ? durationsKey : "";
+    return [
+      this.getTransitionClasses(transitions),
+      this.getEasingClasses(easings),
+      this.getDurationClasses(durations)
+    ].join(" ");
+  }
+};
+var AnchorDefault = {
+  "default": "text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-200",
+  error: "text-rose-500 hover:text-rose-600 dark:text-rose-300 dark:hover:text-rose-200",
+  primary: "text-blue-500 hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-200",
+  secondary: "text-teal-500 hover:text-teal-600 dark:text-teal-300 dark:hover:text-teal-200",
+  success: "text-green-600 hover:text-green-700 dark:text-green-300 dark:hover:text-green-200"
+};
+var BorderDefault = {
+  "": "",
+  "default": "border-gray-200 dark:border-gray-600",
+  "error": "border-rose-600 dark:border-rose-300",
+  "primary": "border-blue-600 dark:border-blue-300",
+  "secondary": "border-violet-600 dark:border-violet-300",
+  "success": "border-green-600 dark:border-green-300"
+};
+var ButtonOutline = {
+  "default": "text-gray-500 dark:text-gray-300 hover:text-white dark:hover:text-white hover:bg-gray-500 active:bg-gray-600 border-gray-300 hover:border-gray-800 focus:ring-gray-400 focus:border-gray-900",
+  error: "text-rose-500 dark:text-rose-300 hover:text-white dark:hover:text-white hover:bg-rose-500 active:bg-rose-600 border-rose-300 hover:border-rose-800 focus:ring-rose-400 focus:border-rose-900",
+  primary: "text-blue-500 dark:text-blue-300 hover:text-white dark:hover:text-white hover:bg-blue-500 active:bg-blue-600 border-blue-300 hover:border-blue-800 focus:ring-blue-400 focus:border-blue-900",
+  secondary: "text-teal-600 dark:text-teal-500 hover:text-white dark:hover:text-white hover:bg-teal-600 active:bg-teal-800 border-teal-600 hover:border-teal-800 focus:ring-teal-500 focus:border-teal-900",
+  success: "text-green-600 dark:text-green-500 hover:text-white dark:hover:text-white hover:bg-green-600 active:bg-green-800 border-green-600 hover:border-green-800 focus:ring-green-500 focus:border-green-900"
+};
+var ButtonSolid = {
+  "default": "text-gray-800 hover:text-black bg-gray-100 hover:bg-gray-200 active:bg-gray-300 border-gray-900 focus:border-black focus:ring-gray-400",
+  error: "text-white bg-rose-500 hover:bg-rose-600 active:bg-rose-700 border-rose-800 focus:ring-rose-400 focus:border-rose-900",
+  primary: "text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700 border-blue-800 focus:ring-blue-400 focus:border-blue-900",
+  secondary: "text-gray-900 hover:text-white bg-teal-500 hover:bg-teal-600 active:text-white active:bg-teal-700 border-teal-800 focus:ring-teal-400 focus:border-teal-900",
+  success: "text-gray-900 hover:text-white bg-green-500 hover:bg-green-600 active:text-white active:bg-green-700 border-green-800 focus:ring-green-400 focus:border-green-900"
+};
+var GroundConsole = {
+  "default": "text-gray-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
+  "error": "text-rose-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
+  "primary": "text-blue-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
+  "secondary": "text-violet-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
+  "success": "text-green-300 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80"
+};
+var GroundDefault = {
+  "default": "",
+  "error": "text-white bg-rose-500 dark:bg-rose-600",
+  "primary": "text-white bg-blue-500 dark:bg-blue-600",
+  "secondary": "text-white bg-violet-500 dark:bg-violet-600",
+  "success": "text-white bg-green-500 dark:bg-green-600"
+};
+var GroundMonochromatic = {
+  "default": "text-gray-800 bg-gray-200 dark:bg-gray-800 dark:text-gray-200",
+  "error": "text-rose-800 bg-rose-200 dark:bg-rose-800 dark:text-rose-200",
+  "primary": "text-blue-800 bg-blue-200 dark:bg-blue-800 dark:text-blue-200",
+  "secondary": "text-violet-800 bg-violet-200 dark:bg-violet-800 dark:text-violet-200",
+  "success": "text-green-800 bg-green-300 dark:bg-green-800 dark:text-green-300"
+};
+var GroundPastel = {
+  "default": "text-black bg-gray-100 dark:bg-gray-200",
+  "error": "text-black bg-rose-200 dark:bg-rose-300",
+  "primary": "text-black bg-blue-200 dark:bg-blue-300",
+  "secondary": "text-black bg-violet-200 dark:bg-violet-300",
+  "success": "text-black bg-green-300 dark:bg-green-400"
+};
+var TextDefault = {
+  "default": "",
+  "error": "text-rose-500 dark:text-rose-300",
+  "primary": "text-blue-500 dark:text-blue-300",
+  "secondary": "text-violet-500 dark:text-violet-300",
+  "success": "text-green-600 dark:text-green-300"
+};
 var VvConfig = {
-  anchors: {
+  anchors: __spreadProps(__spreadValues({}, Anchors), {
     palettes: {
       default: AnchorDefault
     }
-  },
+  }),
   borders: {
     palettes: {
       default: BorderDefault
@@ -321,13 +383,22 @@ var VvConfig = {
       pastel: GroundPastel
     }
   },
-  text: {
+  text: __spreadProps(__spreadValues({}, Text), {
     palettes: {
       default: TextDefault
     }
-  },
+  }),
   transitions: __spreadValues({}, Transitions),
   defaults: {
+    "VvAnchor": {
+      button: false,
+      buttonBlock: false,
+      buttonFab: false,
+      buttonSize: "md",
+      color: "default",
+      href: "#",
+      palette: "default"
+    },
     "VvButton": {
       block: false,
       color: "primary",
@@ -351,6 +422,191 @@ var VvConfig = {
       textPalette: "default",
       textColor: "default"
     }
+  }
+};
+var isMergeableObject = function isMergeableObject2(value) {
+  return isNonNullObject(value) && !isSpecial(value);
+};
+function isNonNullObject(value) {
+  return !!value && typeof value === "object";
+}
+function isSpecial(value) {
+  var stringValue = Object.prototype.toString.call(value);
+  return stringValue === "[object RegExp]" || stringValue === "[object Date]" || isReactElement(value);
+}
+var canUseSymbol = typeof Symbol === "function" && Symbol.for;
+var REACT_ELEMENT_TYPE = canUseSymbol ? Symbol.for("react.element") : 60103;
+function isReactElement(value) {
+  return value.$$typeof === REACT_ELEMENT_TYPE;
+}
+function emptyTarget(val) {
+  return Array.isArray(val) ? [] : {};
+}
+function cloneUnlessOtherwiseSpecified(value, options) {
+  return options.clone !== false && options.isMergeableObject(value) ? deepmerge(emptyTarget(value), value, options) : value;
+}
+function defaultArrayMerge(target, source, options) {
+  return target.concat(source).map(function(element) {
+    return cloneUnlessOtherwiseSpecified(element, options);
+  });
+}
+function getMergeFunction(key, options) {
+  if (!options.customMerge) {
+    return deepmerge;
+  }
+  var customMerge = options.customMerge(key);
+  return typeof customMerge === "function" ? customMerge : deepmerge;
+}
+function getEnumerableOwnPropertySymbols(target) {
+  return Object.getOwnPropertySymbols ? Object.getOwnPropertySymbols(target).filter(function(symbol) {
+    return target.propertyIsEnumerable(symbol);
+  }) : [];
+}
+function getKeys(target) {
+  return Object.keys(target).concat(getEnumerableOwnPropertySymbols(target));
+}
+function propertyIsOnObject(object, property) {
+  try {
+    return property in object;
+  } catch (_) {
+    return false;
+  }
+}
+function propertyIsUnsafe(target, key) {
+  return propertyIsOnObject(target, key) && !(Object.hasOwnProperty.call(target, key) && Object.propertyIsEnumerable.call(target, key));
+}
+function mergeObject(target, source, options) {
+  var destination = {};
+  if (options.isMergeableObject(target)) {
+    getKeys(target).forEach(function(key) {
+      destination[key] = cloneUnlessOtherwiseSpecified(target[key], options);
+    });
+  }
+  getKeys(source).forEach(function(key) {
+    if (propertyIsUnsafe(target, key)) {
+      return;
+    }
+    if (propertyIsOnObject(target, key) && options.isMergeableObject(source[key])) {
+      destination[key] = getMergeFunction(key, options)(target[key], source[key], options);
+    } else {
+      destination[key] = cloneUnlessOtherwiseSpecified(source[key], options);
+    }
+  });
+  return destination;
+}
+function deepmerge(target, source, options) {
+  options = options || {};
+  options.arrayMerge = options.arrayMerge || defaultArrayMerge;
+  options.isMergeableObject = options.isMergeableObject || isMergeableObject;
+  options.cloneUnlessOtherwiseSpecified = cloneUnlessOtherwiseSpecified;
+  var sourceIsArray = Array.isArray(source);
+  var targetIsArray = Array.isArray(target);
+  var sourceAndTargetTypesMatch = sourceIsArray === targetIsArray;
+  if (!sourceAndTargetTypesMatch) {
+    return cloneUnlessOtherwiseSpecified(source, options);
+  } else if (sourceIsArray) {
+    return options.arrayMerge(target, source, options);
+  } else {
+    return mergeObject(target, source, options);
+  }
+}
+deepmerge.all = function deepmergeAll(array, options) {
+  if (!Array.isArray(array)) {
+    throw new Error("first argument should be an array");
+  }
+  return array.reduce(function(prev, next) {
+    return deepmerge(prev, next, options);
+  }, {});
+};
+var deepmerge_1 = deepmerge;
+var cjs = deepmerge_1;
+function mergeWithVvConfig(appTwConfig) {
+  return Object.keys(appTwConfig).length > 0 ? cjs(VvConfig, appTwConfig) : VvConfig;
+}
+const _hoisted_1$2 = ["href"];
+const _sfc_main$3 = {
+  name: "VvAnchor",
+  props: {
+    button: {
+      type: Boolean,
+      default: VvConfig.defaults.VvAnchor.button
+    },
+    buttonBlock: {
+      type: Boolean,
+      default: VvConfig.defaults.VvAnchor.buttonBlock
+    },
+    buttonFab: {
+      type: Boolean,
+      default: VvConfig.defaults.VvAnchor.buttonFab
+    },
+    buttonSize: {
+      type: String,
+      default: VvConfig.defaults.VvAnchor.buttonSize
+    },
+    color: {
+      type: String,
+      default: VvConfig.defaults.VvAnchor.color
+    },
+    href: {
+      type: String,
+      default: VvConfig.defaults.VvAnchor.href
+    },
+    palette: {
+      type: String,
+      default: VvConfig.defaults.VvAnchor.palette
+    },
+    transitionClasses: {
+      type: String,
+      default: VvConfig.transitions.classes()
+    }
+  },
+  setup(__props) {
+    const props = __props;
+    const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
+    let classes = computed(() => {
+      var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l;
+      let output = [];
+      if (props.transitionClasses !== "") {
+        output.push(props.transitionClasses);
+      }
+      if (props.button === true) {
+        if (props.buttonBlock === true && props.buttonFab === false) {
+          if ((_a = vv == null ? void 0 : vv.buttons) == null ? void 0 : _a.blockBase()) {
+            output.push(vv.buttons.blockBase());
+          }
+        } else if (props.buttonBlock === false && props.buttonFab === true) {
+          if ((_b = vv == null ? void 0 : vv.buttons) == null ? void 0 : _b.fabBase()) {
+            output.push(vv.buttons.fabBase());
+          }
+        } else {
+          if ((_c = vv == null ? void 0 : vv.buttons) == null ? void 0 : _c.base()) {
+            output.push(vv.buttons.base());
+          }
+        }
+        if (props.buttonSize !== "" && ((_e = (_d = vv == null ? void 0 : vv.buttons) == null ? void 0 : _d.sizes) == null ? void 0 : _e[props.buttonSize])) {
+          output.push(vv.buttons.sizes[props.buttonSize]);
+        }
+        if ((_h = (_g = (_f = vv == null ? void 0 : vv.buttons) == null ? void 0 : _f.palettes) == null ? void 0 : _g[props.palette]) == null ? void 0 : _h[props.color]) {
+          output.push(vv.buttons.palettes[props.palette][props.color]);
+        }
+      } else {
+        if ((_i = vv == null ? void 0 : vv.anchors) == null ? void 0 : _i.base()) {
+          output.push(vv.anchors.base());
+        }
+        if ((_l = (_k = (_j = vv == null ? void 0 : vv.anchors) == null ? void 0 : _j.palettes) == null ? void 0 : _k[props.palette]) == null ? void 0 : _l[props.color]) {
+          output.push(vv.anchors.palettes[props.palette][props.color]);
+        }
+      }
+      return output.join(" ");
+    });
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("a", {
+        href: __props.href,
+        class: normalizeClass(unref(classes))
+      }, [
+        renderSlot(_ctx.$slots, "default")
+      ], 10, _hoisted_1$2);
+    };
   }
 };
 var ValidButtonTypes = [
@@ -642,4 +898,4 @@ const _sfc_main = {
     };
   }
 };
-export { AnchorDefault, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, TextDefault, Transitions, _sfc_main$2 as VvButton, _sfc_main$1 as VvColorModeButton, VvConfig, _sfc_main as VvEl };
+export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, Text, TextDefault, Transitions, _sfc_main$3 as VvAnchor, _sfc_main$2 as VvButton, _sfc_main$1 as VvColorModeButton, VvConfig, _sfc_main as VvEl, mergeWithVvConfig };
