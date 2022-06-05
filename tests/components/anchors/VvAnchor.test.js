@@ -56,8 +56,6 @@ test('VvAnchor.vue component "button" prop returns an expected result', async ()
         },
     })
 
-    console.log(wrapper.html())
-
     expect(wrapper.html()).toContain('items-center')
     
 })
