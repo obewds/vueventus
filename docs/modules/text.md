@@ -8,7 +8,7 @@ title: Text Config Module
 
 {{ $frontmatter.title }} documentation coming soon!
 
-<!-- #TODO write docs --->
+The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for elements/coponents containing rendered text string in your application, excluding color and color palette classes (see [Palette Config Modules](/modules/palettes/) for more info about palette modules).
 
 
 
@@ -175,6 +175,47 @@ import { Text } from '@obewds/vueventus'
 let appText = Text
 
 appText.wordBreak = ''
+```
+
+
+
+
+
+
+## Text.base()
+
+```javascript
+const textBase = Text.base()
+```
+
+
+
+
+
+
+## Text.classes()
+
+```javascript
+const textClasses = Text.classes() // default is 'md'
+```
+
+```javascript
+const textClasses = Text.classes('lg')
+```
+
+
+
+
+
+
+## Text.getSizeClasses()
+
+```javascript
+const textSizeClasses = Text.getSizeClasses() // default is 'md'
+```
+
+```javascript
+const textSizeClasses = Text.getSizeClasses('sm')
 ```
 
 
