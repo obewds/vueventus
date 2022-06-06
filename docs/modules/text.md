@@ -18,3 +18,15 @@ title: Text Config Module
 ```javascript
 import { Text } from '@obewds/vueventus'
 ```
+
+
+
+
+
+
+
+
+
+## Module Code
+
+<<< @/../src/configs/Text.js
