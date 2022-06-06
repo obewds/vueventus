@@ -6,4 +6,6 @@ title: App Specific Config
 
 # {{ $frontmatter.title }}
 
-{{ $frontmatter.title }} documentation coming soon! <!--- #TODO write docs --->
+{{ $frontmatter.title }} documentation coming soon!
+
+<!--- #TODO write docs --->
