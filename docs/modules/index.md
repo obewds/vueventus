@@ -9,6 +9,7 @@ Config Modules keep reusable and customizable groups of non-color orientated Tai
 * [Text Config Module](/modules/text)
 * [Transitions Config Module](/modules/transitions)
 * [VvConfig Module](/modules/vv-config)
+* [App Specific Config](/modules/app-specific-config)
 
 
 
