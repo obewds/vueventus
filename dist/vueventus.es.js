@@ -18,19 +18,84 @@ var __spreadValues = (a, b) => {
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 import { inject, computed, openBlock, createElementBlock, normalizeClass, unref, renderSlot, ref, onMounted, createBlock, withCtx, createCommentVNode, createElementVNode, resolveDynamicComponent } from "vue";
+var Text = {
+  align: "",
+  decoration: "",
+  family: "",
+  lineHeight: "",
+  smoothing: "subpixel-antialiased",
+  spacing: "",
+  weight: "",
+  wordBreak: "",
+  base: function() {
+    return [
+      this.align,
+      this.decoration,
+      this.family,
+      this.lineHeight,
+      this.smoothing,
+      this.spacing,
+      this.weight,
+      this.wordBreak
+    ].join(" ");
+  },
+  sizes: {
+    "5xs": "text-5xs",
+    "4xs": "text-4xs",
+    "3xs": "text-3xs",
+    "2xs": "text-2xs",
+    "xs": "text-xs",
+    "sm": "text-sm",
+    "md": "text-base",
+    "lg": "text-lg",
+    "xl": "text-xl",
+    "2xl": "text-2xl",
+    "3xl": "text-3xl",
+    "4xl": "text-4xl",
+    "5xl": "text-5xl",
+    "6xl": "text-6xl",
+    "7xl": "text-7xl",
+    "8xl": "text-8xl",
+    "9xl": "text-9xl",
+    "10xl": "text-10xl",
+    "11xl": "text-11xl",
+    "12xl": "text-12xl"
+  },
+  getSizeClasses: function(sizesKey) {
+    const key = sizesKey && this.sizes[sizesKey] ? sizesKey : "md";
+    return this.sizes[key];
+  },
+  classes: function(sizesKey) {
+    const sizes = sizesKey ? sizesKey : "";
+    return [
+      this.base(),
+      this.getSizeClasses(sizes)
+    ].join(" ");
+  }
+};
 var Anchors = {
   cursor: "cursor-pointer",
-  disabled: "disabled:opacity-25",
   display: "",
   focus: "",
-  text: "underline underline-offset-1",
+  text: "underline underline-offset-2",
   base: function() {
     return [
       this.cursor,
-      this.disabled,
       this.display,
       this.focus,
       this.text
+    ].join(" ");
+  },
+  sizes: Text.sizes,
+  getSizeClasses: function(sizesKey) {
+    const key = sizesKey && this.sizes[sizesKey] ? sizesKey : "md";
+    return this.sizes[key];
+  },
+  classes: function(sizesKey) {
+    const sizes = sizesKey ? sizesKey : "";
+    return [
+      this.base(),
+      this.getSizeClasses(sizes)
     ].join(" ");
   }
 };
@@ -146,52 +211,6 @@ var Buttons = {
     ].join(" ");
   }
 };
-var Text = {
-  align: "",
-  decoration: "",
-  family: "",
-  lineHeight: "",
-  smoothing: "subpixel-antialiased",
-  spacing: "",
-  weight: "",
-  wordBreak: "",
-  base: function() {
-    return [
-      this.align,
-      this.decoration,
-      this.family,
-      this.lineHeight,
-      this.smoothing,
-      this.spacing,
-      this.weight,
-      this.wordBreak
-    ].join(" ");
-  },
-  sizes: {
-    "4xs": "text-4xs leading-3",
-    "3xs": "text-3xs leading-4",
-    "2xs": "text-2xs leading-5",
-    "xs": "text-xs leading-6",
-    "sm": "text-sm leading-7",
-    "md": "text-base leading-8",
-    "lg": "text-lg leading-9",
-    "xl": "text-xl leading-10",
-    "2xl": "text-2xl leading-10",
-    "3xl": "text-3xl leading-10",
-    "4xl": "text-4xl leading-10"
-  },
-  getSizeClasses: function(sizesKey) {
-    const key = sizesKey && this.sizes[sizesKey] ? sizesKey : "md";
-    return this.sizes[key];
-  },
-  classes: function(sizesKey) {
-    const sizes = sizesKey ? sizesKey : "";
-    return [
-      this.base(),
-      this.getSizeClasses(sizes)
-    ].join(" ");
-  }
-};
 var Transitions = {
   durations: {
     "1200": "duration-1200",
@@ -288,10 +307,10 @@ var AnchorDefault = {
 var BorderDefault = {
   "": "",
   "default": "border-gray-200 dark:border-gray-600",
-  "error": "border-rose-600 dark:border-rose-300",
-  "primary": "border-blue-600 dark:border-blue-300",
-  "secondary": "border-violet-600 dark:border-violet-300",
-  "success": "border-green-600 dark:border-green-300"
+  error: "border-rose-600 dark:border-rose-300",
+  primary: "border-blue-600 dark:border-blue-300",
+  secondary: "border-violet-600 dark:border-violet-300",
+  success: "border-green-600 dark:border-green-300"
 };
 var ButtonOutline = {
   "default": "text-gray-500 dark:text-gray-300 hover:text-white dark:hover:text-white hover:bg-gray-500 active:bg-gray-600 border-gray-300 hover:border-gray-800 focus:ring-gray-400 focus:border-gray-900",
@@ -309,38 +328,38 @@ var ButtonSolid = {
 };
 var GroundConsole = {
   "default": "text-gray-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
-  "error": "text-rose-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
-  "primary": "text-blue-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
-  "secondary": "text-violet-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
-  "success": "text-green-300 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80"
+  error: "text-rose-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
+  primary: "text-blue-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
+  secondary: "text-violet-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
+  success: "text-green-300 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80"
 };
 var GroundDefault = {
   "default": "",
-  "error": "text-white bg-rose-500 dark:bg-rose-600",
-  "primary": "text-white bg-blue-500 dark:bg-blue-600",
-  "secondary": "text-white bg-violet-500 dark:bg-violet-600",
-  "success": "text-white bg-green-500 dark:bg-green-600"
+  error: "text-white bg-rose-500 dark:bg-rose-600",
+  primary: "text-white bg-blue-500 dark:bg-blue-600",
+  secondary: "text-white bg-violet-500 dark:bg-violet-600",
+  success: "text-white bg-green-500 dark:bg-green-600"
 };
 var GroundMonochromatic = {
   "default": "text-gray-800 bg-gray-200 dark:bg-gray-800 dark:text-gray-200",
-  "error": "text-rose-800 bg-rose-200 dark:bg-rose-800 dark:text-rose-200",
-  "primary": "text-blue-800 bg-blue-200 dark:bg-blue-800 dark:text-blue-200",
-  "secondary": "text-violet-800 bg-violet-200 dark:bg-violet-800 dark:text-violet-200",
-  "success": "text-green-800 bg-green-300 dark:bg-green-800 dark:text-green-300"
+  error: "text-rose-800 bg-rose-200 dark:bg-rose-800 dark:text-rose-200",
+  primary: "text-blue-800 bg-blue-200 dark:bg-blue-800 dark:text-blue-200",
+  secondary: "text-violet-800 bg-violet-200 dark:bg-violet-800 dark:text-violet-200",
+  success: "text-green-800 bg-green-300 dark:bg-green-800 dark:text-green-300"
 };
 var GroundPastel = {
   "default": "text-black bg-gray-100 dark:bg-gray-200",
-  "error": "text-black bg-rose-200 dark:bg-rose-300",
-  "primary": "text-black bg-blue-200 dark:bg-blue-300",
-  "secondary": "text-black bg-violet-200 dark:bg-violet-300",
-  "success": "text-black bg-green-300 dark:bg-green-400"
+  error: "text-black bg-rose-200 dark:bg-rose-300",
+  primary: "text-black bg-blue-200 dark:bg-blue-300",
+  secondary: "text-black bg-violet-200 dark:bg-violet-300",
+  success: "text-black bg-green-300 dark:bg-green-400"
 };
 var TextDefault = {
   "default": "",
-  "error": "text-rose-500 dark:text-rose-300",
-  "primary": "text-blue-500 dark:text-blue-300",
-  "secondary": "text-violet-500 dark:text-violet-300",
-  "success": "text-green-600 dark:text-green-300"
+  error: "text-rose-500 dark:text-rose-300",
+  primary: "text-blue-500 dark:text-blue-300",
+  secondary: "text-violet-500 dark:text-violet-300",
+  success: "text-green-600 dark:text-green-300"
 };
 var VvConfig = {
   anchors: __spreadProps(__spreadValues({}, Anchors), {
