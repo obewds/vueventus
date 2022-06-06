@@ -6,7 +6,7 @@ title: Text Config Module
 
 # {{ $frontmatter.title }}
 
-{{ $frontmatter.title }} documentation coming soon! <!--- #TODO --->
+{{ $frontmatter.title }} documentation coming soon! <!--- #TODO write docs --->
 
 
 
