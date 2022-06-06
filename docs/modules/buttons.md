@@ -208,11 +208,11 @@ const buttonBlockBase = Buttons.blockBase()
 ## Buttons.classes()
 
 ```javascript
-const button = Buttons.classes() // default is 'md'
+const buttonClasses = Buttons.classes() // default is 'md'
 ```
 
 ```javascript
-const button = Buttons.classes('lg')
+const buttonClasses = Buttons.classes('lg')
 ```
 
 
