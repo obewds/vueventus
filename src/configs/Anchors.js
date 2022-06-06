@@ -4,7 +4,7 @@ export default {
     cursor: 'cursor-pointer',
     display: '',
     focus: '',
-    text: 'underline underline-offset-1',
+    text: 'underline underline-offset-2',
     base: function () {
         return [
             this.cursor,
