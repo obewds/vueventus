@@ -108,6 +108,7 @@ function sidebarModules() {
                 { text: 'Text', link: '/modules/text' },
                 { text: 'Transitions', link: '/modules/transitions' },
                 { text: 'VvConfig', link: '/modules/vv-config' },
+                { text: 'App Specific Config', link: '/modules/app-specific-config' },
             ]
         },{
             text: 'Palette Modules',
