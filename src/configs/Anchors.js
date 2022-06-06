@@ -14,7 +14,10 @@ export default {
         ].join(' ')
     },
     sizes: Text.sizes,
-    getSizeClasses: Text.getSizeClasses(sizesKey),
+    getSizeClasses: function (sizesKey) {
+        const key = sizesKey && this.sizes[sizesKey] ? sizesKey : 'md'
+        return this.sizes[key]
+    },
     classes: function (sizesKey) {
         const sizes = sizesKey ? sizesKey : ''
         return [
