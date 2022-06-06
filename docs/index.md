@@ -10,7 +10,7 @@ hero:
       link: /vueventus/guides/why-vueventus
     - theme: alt
       text: Modules
-      link: /vueventus/modules/
+      link: /vueventus/modules/data/
     - theme: alt
       text: Components
       link: /vueventus/components/

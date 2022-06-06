@@ -1,10 +1,12 @@
 # Components
 
+!!!include(snippets/alphaStageWarning.md)!!!
+
 The VueVentus component system comes with a variety of components that are pre-configured with grouped Tailwind CSS classes controlled through Vue.js props.
 
 
 
-!!!include(snippets/alphaStageWarning.md)!!!
+
 
 
 
