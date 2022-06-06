@@ -62,7 +62,7 @@
     "rimraf": "^3.0.2",
     "vite": "^2.9.9",
     "vitepress": "^1.0.0-alpha.1",
-    "vitest": "^0.14.0",
+    "vitest": "^0.14.1",
     "vue-router": "^4.0.15"
   },
   "repository": {
