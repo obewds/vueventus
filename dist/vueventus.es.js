@@ -544,7 +544,7 @@ function mergeWithVvConfig(appTwConfig) {
 }
 const _hoisted_1$2 = ["href"];
 const _sfc_main$3 = {
-  name: "VvAnchor",
+  __name: "VvAnchor",
   props: {
     button: {
       type: Boolean,
@@ -635,7 +635,7 @@ var ValidButtonTypes = [
 ];
 const _hoisted_1$1 = ["type"];
 const _sfc_main$2 = {
-  name: "VvButton",
+  __name: "VvButton",
   props: {
     block: {
       type: Boolean,
@@ -752,7 +752,7 @@ const _hoisted_6 = [
   _hoisted_5
 ];
 const _sfc_main$1 = {
-  name: "VvColorModeButton",
+  __name: "VvColorModeButton",
   props: {
     mode: {
       type: String,
@@ -857,7 +857,7 @@ const _sfc_main$1 = {
   }
 };
 const _sfc_main = {
-  name: "VvEl",
+  __name: "VvEl",
   props: {
     borderPalette: {
       type: String,
