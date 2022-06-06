@@ -77,6 +77,30 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
     </VvButton>
 </div>
 
+::: details color prop default color examples
+<div class="pt-4">
+    <VvButton color="default" class="p-2 mb-2">
+        color="default"
+    </VvButton>
+    <br>
+    <VvButton color="error" class="p-2 mb-2">
+        color="error"
+    </VvButton>
+    <br>
+    <VvButton color="primary" class="p-2 mb-2">
+        color="primary"
+    </VvButton>
+    <br>
+    <VvButton color="secondary" class="p-2 mb-2">
+        color="secondary"
+    </VvButton>
+    <br>
+    <VvButton color="success" class="p-2 mb-2">
+        color="success"
+    </VvButton>
+</div>
+:::
+
 
 
 
@@ -138,6 +162,59 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance color ba
     </VvButton>
 </div>
 
+::: details color prop default palette color examples
+<div class="pt-4">
+    <VvButton color="default" class="p-2 mb-2">
+        color="default"
+    </VvButton>
+    <br>
+    <VvButton color="error" class="p-2 mb-2">
+        color="error"
+    </VvButton>
+    <br>
+    <VvButton color="primary" class="p-2 mb-2">
+        color="primary"
+    </VvButton>
+    <br>
+    <VvButton color="secondary" class="p-2 mb-2">
+        color="secondary"
+    </VvButton>
+    <br>
+    <VvButton color="success" class="p-2 mb-2">
+        color="success"
+    </VvButton>
+</div>
+:::
+
+::: details color prop outline palette color examples
+<div class="pt-4">
+    <VvButton palette="outline" color="default" class="border-solid p-2 mb-2">
+        color="default"
+    </VvButton>
+    <br>
+    <VvButton palette="outline" color="error" class="border-solid p-2 mb-2">
+        color="error"
+    </VvButton>
+    <br>
+    <VvButton palette="outline" color="primary" class="border-solid p-2 mb-2">
+        color="primary"
+    </VvButton>
+    <br>
+    <VvButton palette="outline" color="secondary" class="border-solid p-2 mb-2">
+        color="secondary"
+    </VvButton>
+    <br>
+    <VvButton palette="outline" color="success" class="border-solid p-2 mb-2">
+        color="success"
+    </VvButton>
+</div>
+:::
+
+
+
+
+
+
 
 
 
@@ -164,6 +241,82 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
         VvButton
     </VvButton>
 </div>
+
+::: details size prop button size examples
+<div class="flex flex-wrap items-center gap-2 pt-4">
+    <VvButton size="4xs">
+        size="4xs"
+    </VvButton>
+    <VvButton size="3xs">
+        size="3xs"
+    </VvButton>
+    <VvButton size="2xs">
+        size="2xs"
+    </VvButton>
+    <VvButton size="xs">
+        size="xs"
+    </VvButton>
+    <VvButton size="sm">
+        size="sm"
+    </VvButton>
+    <VvButton size="md">
+        size="md"
+    </VvButton>
+    <VvButton size="lg">
+        size="lg"
+    </VvButton>
+    <VvButton size="xl">
+        size="xl"
+    </VvButton>
+    <VvButton size="2xl">
+        size="2xl"
+    </VvButton>
+    <VvButton size="3xl">
+        size="3xl"
+    </VvButton>
+    <VvButton size="4xl">
+        size="4xl"
+    </VvButton>
+</div>
+:::
+
+::: details size prop block button size examples
+<div class="flex flex-wrap items-center gap-2 pt-4">
+    <VvButton :block="true" size="4xs">
+        size="4xs"
+    </VvButton>
+    <VvButton :block="true" size="3xs">
+        size="3xs"
+    </VvButton>
+    <VvButton :block="true" size="2xs">
+        size="2xs"
+    </VvButton>
+    <VvButton :block="true" size="xs">
+        size="xs"
+    </VvButton>
+    <VvButton :block="true" size="sm">
+        size="sm"
+    </VvButton>
+    <VvButton :block="true" size="md">
+        size="md"
+    </VvButton>
+    <VvButton :block="true" size="lg">
+        size="lg"
+    </VvButton>
+    <VvButton :block="true" size="xl">
+        size="xl"
+    </VvButton>
+    <VvButton :block="true" size="2xl">
+        size="2xl"
+    </VvButton>
+    <VvButton :block="true" size="3xl">
+        size="3xl"
+    </VvButton>
+    <VvButton :block="true" size="4xl">
+        size="4xl"
+    </VvButton>
+</div>
+:::
 
 
 

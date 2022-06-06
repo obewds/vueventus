@@ -79,7 +79,25 @@ The {{ $frontmatter.title }} `borderColor` prop sets the component instance bord
     </VvEl>
 </div>
 
-
+::: details borderColor prop defaults examples
+<div class="flex flex-col space-y-2 w-full pt-4">
+    <VvEl border-color="default" class="border p-2">
+        border-color="default"
+    </VvEl>
+    <VvEl border-color="error" class="border p-2">
+        border-color="error"
+    </VvEl>
+    <VvEl border-color="primary" class="border p-2">
+        border-color="primary"
+    </VvEl>
+    <VvEl border-color="secondary" class="border p-2">
+        border-color="secondary"
+    </VvEl>
+    <VvEl border-color="success" class="border p-2">
+        border-color="success"
+    </VvEl>
+</div>
+:::
 
 
 
@@ -106,6 +124,91 @@ The {{ $frontmatter.title }} `groundPalette` prop sets the component instance bo
         VvEl
     </VvEl>
 </div>
+
+::: details groundPalette "default" palette examples
+<div class="flex flex-col space-y-2 w-full pt-4">
+    <VvEl ground-palette="default" ground-color="default" class="p-2">
+        ground-palette="default" ground-color="default"
+    </VvEl>
+    <VvEl ground-palette="default" ground-color="error" class="p-2">
+        ground-palette="default" ground-color="error"
+    </VvEl>
+    <VvEl ground-palette="default" ground-color="primary" class="p-2">
+        ground-palette="default" ground-color="primary"
+    </VvEl>
+    <VvEl ground-palette="default" ground-color="secondary" class="p-2">
+        ground-palette="default" ground-color="secondary"
+    </VvEl>
+    <VvEl ground-palette="default" ground-color="success" class="p-2">
+        ground-palette="default" ground-color="success"
+    </VvEl>
+</div>
+:::
+
+::: details groundPalette "console" palette examples
+<div class="flex flex-col space-y-2 w-full pt-4">
+    <VvEl ground-palette="console" ground-color="default" class="p-2">
+        ground-palette="console" ground-color="default"
+    </VvEl>
+    <VvEl ground-palette="console" ground-color="error" class="p-2">
+        ground-palette="console" ground-color="error"
+    </VvEl>
+    <VvEl ground-palette="console" ground-color="primary" class="p-2">
+        ground-palette="console" ground-color="primary"
+    </VvEl>
+    <VvEl ground-palette="console" ground-color="secondary" class="p-2">
+        ground-palette="console" ground-color="secondary"
+    </VvEl>
+    <VvEl ground-palette="console" ground-color="success" class="p-2">
+        ground-palette="console" ground-color="success"
+    </VvEl>
+</div>
+:::
+
+::: details groundPalette "monochromatic" palette examples
+<div class="flex flex-col space-y-2 w-full pt-4">
+    <VvEl ground-palette="monochromatic" ground-color="default" class="p-2">
+        ground-palette="monochromatic" ground-color="default"
+    </VvEl>
+    <VvEl ground-palette="monochromatic" ground-color="error" class="p-2">
+        ground-palette="monochromatic" ground-color="error"
+    </VvEl>
+    <VvEl ground-palette="monochromatic" ground-color="primary" class="p-2">
+        ground-palette="monochromatic" ground-color="primary"
+    </VvEl>
+    <VvEl ground-palette="monochromatic" ground-color="secondary" class="p-2">
+        ground-palette="monochromatic" ground-color="secondary"
+    </VvEl>
+    <VvEl ground-palette="monochromatic" ground-color="success" class="p-2">
+        ground-palette="monochromatic" ground-color="success"
+    </VvEl>
+</div>
+:::
+
+::: details groundPalette "pastel" palette examples
+<div class="flex flex-col space-y-2 w-full pt-4">
+    <VvEl ground-palette="pastel" ground-color="default" class="p-2">
+        ground-palette="pastel" ground-color="default"
+    </VvEl>
+    <VvEl ground-palette="pastel" ground-color="error" class="p-2">
+        ground-palette="pastel" ground-color="error"
+    </VvEl>
+    <VvEl ground-palette="pastel" ground-color="primary" class="p-2">
+        ground-palette="pastel" ground-color="primary"
+    </VvEl>
+    <VvEl ground-palette="pastel" ground-color="secondary" class="p-2">
+        ground-palette="pastel" ground-color="secondary"
+    </VvEl>
+    <VvEl ground-palette="pastel" ground-color="success" class="p-2">
+        ground-palette="pastel" ground-color="success"
+    </VvEl>
+</div>
+:::
+
+
+
+
+
 
 
 
@@ -134,6 +237,26 @@ The {{ $frontmatter.title }} `groundColor` prop sets the component instance bord
         VvEl
     </VvEl>
 </div>
+
+::: details groundColor prop defaults examples
+<div class="flex flex-col space-y-2 w-full pt-4">
+    <VvEl ground-color="default" class="p-2">
+        ground-color="default"
+    </VvEl>
+    <VvEl ground-color="error" class="p-2">
+        ground-color="error"
+    </VvEl>
+    <VvEl ground-color="primary" class="p-2">
+        ground-color="primary"
+    </VvEl>
+    <VvEl ground-color="secondary" class="p-2">
+        ground-color="secondary"
+    </VvEl>
+    <VvEl ground-color="success" class="p-2">
+        ground-color="success"
+    </VvEl>
+</div>
+:::
 
 
 
@@ -219,5 +342,25 @@ The {{ $frontmatter.title }} `textColor` prop sets the component instance border
         VvEl
     </VvEl>
 </div>
+
+::: details textColor prop defaults examples
+<div class="flex flex-col space-y-2 w-full pt-4">
+    <VvEl text-color="default">
+        text-color="default"
+    </VvEl>
+    <VvEl text-color="error">
+        text-color="error"
+    </VvEl>
+    <VvEl text-color="primary">
+        text-color="primary"
+    </VvEl>
+    <VvEl text-color="secondary">
+        text-color="secondary"
+    </VvEl>
+    <VvEl text-color="success">
+        text-color="success"
+    </VvEl>
+</div>
+:::
 
 
