@@ -1,19 +1,17 @@
 # Config Modules
 
+!!!include(snippets/alphaStageWarning.md)!!!
+
 Config Modules keep reusable and customizable groups of non-color orientated Tailwind CSS classes for use in element, component, and layout levels of an application.
 
 
 
-* [Anchors Config Module](/modules/anchors)
-* [Buttons Config Module](/modules/buttons)
-* [Text Config Module](/modules/text)
-* [Transitions Config Module](/modules/transitions)
-* [VvConfig Module](/modules/vv-config)
+* [Anchors](/modules/anchors)
+* [Buttons](/modules/buttons)
+* [Text](/modules/text)
+* [Transitions](/modules/transitions)
+* [VvConfig](/modules/vv-config)
 * [App Specific Config](/modules/app-specific-config)
-
-
-
-!!!include(snippets/alphaStageWarning.md)!!!
 
 
 
