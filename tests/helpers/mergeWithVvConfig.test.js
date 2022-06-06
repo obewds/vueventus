@@ -9,4 +9,4 @@ test('mergeWithVvConfig component returns a truthy value', async () => {
 
 })
 
-// TODO
+// TODO add a test that tests functionality of the func

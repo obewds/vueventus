@@ -1,5 +1,7 @@
 # Why VueVentus
 
+!!!include(snippets/alphaStageWarning.md)!!!
+
 If you're already a fan of the sometimes controversial way of managing large HTML and CSS projects with atomic classes, then you already know what the main pain point is... very long strings of atomic CSS classes! :scream:
 
 Add to that problem the inherently tricky normal solution of abstracting common strings for reuse, and things always seem to end up in a tough decision between:
@@ -8,8 +10,6 @@ Add to that problem the inherently tricky normal solution of abstracting common 
 * Or just plan on a future find/replace? :thinking: 
 
 That fork in the road is exactly where VueVentus begins.
-
-!!!include(snippets/alphaStageWarning.md)!!!
 
 
 

@@ -1,5 +1,7 @@
 # Helper Modules
 
+!!!include(snippets/alphaStageWarning.md)!!!
+
 Helper Modules are utility functions for use around and withing VueVentus.
 
 

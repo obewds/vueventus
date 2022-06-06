@@ -1,5 +1,7 @@
 # Palette Config Modules
 
+!!!include(snippets/alphaStageWarning.md)!!!
+
 Palette Config Modules are subset of config modules specifically meant for atomic color class groupings. They are intented to be used with contextual language to humanize visual color state classes for various states of application elements.
 
 
