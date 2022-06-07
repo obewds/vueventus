@@ -25,6 +25,16 @@ The {{ $frontmatter.title }} provides a variety of props and config module based
 
 
 
+## Import
+
+```javascript
+import { VvAnchor } from '@obewds/vueventus'
+```
+
+
+
+
+
 
 
 

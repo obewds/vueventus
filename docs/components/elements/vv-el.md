@@ -364,3 +364,30 @@ The {{ $frontmatter.title }} `textColor` prop sets the component instance border
 :::
 
 
+
+
+
+
+
+
+
+
+## Slot: #default
+
+The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child elements/nodes into the component.
+
+### Syntax
+
+```html
+<VvEl>
+    Slot <span class="text-red-500">Content</span>
+</VvEl>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvEl>
+        Slot <span class="text-red-500">Content</span>
+    </VvEl>
+</div>
