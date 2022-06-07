@@ -49,11 +49,11 @@
 
         let output = []
 
-        if ( props.transitionClasses !== '' ) {
-            output.push( props.transitionClasses )
-        }
+        output.push( props.transitionClasses )
 
         if ( props.button === true ) {
+
+            // collect classes for VvAnchor with button styling
 
             if (props.buttonBlock === true && props.buttonFab === false) {
 
@@ -84,6 +84,8 @@
             }
 
         } else {
+
+            // collect classes for VvAnchor with anchor styling
 
             if ( vv?.anchors?.base() ) {
                 output.push( vv.anchors.base() )
