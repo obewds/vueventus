@@ -585,9 +585,7 @@ const _sfc_main$3 = {
     let classes = computed(() => {
       var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l;
       let output = [];
-      if (props.transitionClasses !== "") {
-        output.push(props.transitionClasses);
-      }
+      output.push(props.transitionClasses);
       if (props.button === true) {
         if (props.buttonBlock === true && props.buttonFab === false) {
           if ((_a = vv == null ? void 0 : vv.buttons) == null ? void 0 : _a.blockBase()) {
