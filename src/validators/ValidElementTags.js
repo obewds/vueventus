@@ -1,3 +1,5 @@
+// ./src/validators/ValidElementTags.js
+
 export default [
 
     // HTML Main root element
