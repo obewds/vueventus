@@ -17,7 +17,7 @@ var __spreadValues = (a, b) => {
   return a;
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
-import { inject, computed, openBlock, createElementBlock, normalizeClass, unref, renderSlot, ref, onMounted, createBlock, withCtx, createCommentVNode, createElementVNode, resolveDynamicComponent } from "vue";
+import { inject, computed, openBlock, createElementBlock, normalizeClass, unref, renderSlot, ref, onMounted, createBlock, withCtx, createCommentVNode, createElementVNode, resolveDynamicComponent, pushScopeId, popScopeId } from "vue";
 var Text = {
   align: "",
   decoration: "",
@@ -542,8 +542,8 @@ var cjs = deepmerge_1;
 function mergeWithVvConfig(appTwConfig) {
   return Object.keys(appTwConfig).length > 0 ? cjs(VvConfig, appTwConfig) : VvConfig;
 }
-const _hoisted_1$2 = ["href"];
-const _sfc_main$3 = {
+const _hoisted_1$4 = ["href"];
+const _sfc_main$5 = {
   __name: "VvAnchor",
   props: {
     button: {
@@ -622,7 +622,7 @@ const _sfc_main$3 = {
         class: normalizeClass(unref(classes))
       }, [
         renderSlot(_ctx.$slots, "default")
-      ], 10, _hoisted_1$2);
+      ], 10, _hoisted_1$4);
     };
   }
 };
@@ -631,8 +631,8 @@ var ValidButtonTypes = [
   "submit",
   "reset"
 ];
-const _hoisted_1$1 = ["type"];
-const _sfc_main$2 = {
+const _hoisted_1$3 = ["type"];
+const _sfc_main$4 = {
   __name: "VvButton",
   props: {
     block: {
@@ -707,7 +707,7 @@ const _sfc_main$2 = {
         class: normalizeClass(unref(classes))
       }, [
         renderSlot(_ctx.$slots, "default")
-      ], 10, _hoisted_1$1);
+      ], 10, _hoisted_1$3);
     };
   }
 };
@@ -715,7 +715,7 @@ var ValidColorModes = [
   "light",
   "dark"
 ];
-const _hoisted_1 = {
+const _hoisted_1$2 = {
   key: 0,
   xmlns: "http://www.w3.org/2000/svg",
   class: "h-5 w-5",
@@ -724,13 +724,13 @@ const _hoisted_1 = {
   stroke: "currentColor",
   "stroke-width": "2"
 };
-const _hoisted_2 = /* @__PURE__ */ createElementVNode("path", {
+const _hoisted_2$2 = /* @__PURE__ */ createElementVNode("path", {
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   d: "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
 }, null, -1);
-const _hoisted_3 = [
-  _hoisted_2
+const _hoisted_3$1 = [
+  _hoisted_2$2
 ];
 const _hoisted_4 = {
   key: 1,
@@ -749,7 +749,7 @@ const _hoisted_5 = /* @__PURE__ */ createElementVNode("path", {
 const _hoisted_6 = [
   _hoisted_5
 ];
-const _sfc_main$1 = {
+const _sfc_main$3 = {
   __name: "VvColorModeButton",
   props: {
     mode: {
@@ -835,7 +835,7 @@ const _sfc_main$1 = {
       }
     }
     return (_ctx, _cache) => {
-      return openBlock(), createBlock(_sfc_main$2, {
+      return openBlock(), createBlock(_sfc_main$4, {
         title: unref(title),
         onClick: _cache[0] || (_cache[0] = ($event) => toggleColorMode()),
         class: "rounded-full",
@@ -846,7 +846,7 @@ const _sfc_main$1 = {
         size: __props.size
       }, {
         default: withCtx(() => [
-          unref(icon) === "moon" ? (openBlock(), createElementBlock("svg", _hoisted_1, _hoisted_3)) : createCommentVNode("", true),
+          unref(icon) === "moon" ? (openBlock(), createElementBlock("svg", _hoisted_1$2, _hoisted_3$1)) : createCommentVNode("", true),
           unref(icon) === "sun" ? (openBlock(), createElementBlock("svg", _hoisted_4, _hoisted_6)) : createCommentVNode("", true)
         ]),
         _: 1
@@ -854,7 +854,7 @@ const _sfc_main$1 = {
     };
   }
 };
-const _sfc_main = {
+const _sfc_main$2 = {
   __name: "VvEl",
   props: {
     borderPalette: {
@@ -915,4 +915,73 @@ const _sfc_main = {
     };
   }
 };
-export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, Text, TextDefault, Transitions, _sfc_main$3 as VvAnchor, _sfc_main$2 as VvButton, _sfc_main$1 as VvColorModeButton, VvConfig, _sfc_main as VvEl, mergeWithVvConfig };
+const _hoisted_1$1 = /* @__PURE__ */ createElementVNode("path", { d: "m6.5 0 51.9 121.1L110.3 0h6.7L61.6 129h-6.2L0 0h6.5zM181.2 124.4c8.2 0 15-1.5 20.4-4.6 5.4-3.1 9.7-7.1 12.8-12 3.1-5 5.3-10.6 6.6-16.9 1.3-6.3 1.9-12.7 1.9-19.2V14.2h5.5v57.5c0 7.7-.8 15-2.4 22-1.6 7-4.3 13.2-8 18.5-3.7 5.3-8.6 9.6-14.5 12.8-6 3.2-13.4 4.8-22.2 4.8-9.1 0-16.6-1.7-22.7-5-6.1-3.3-11-7.7-14.6-13.2-3.7-5.4-6.3-11.6-7.8-18.6-1.6-6.9-2.3-14-2.3-21.3V14.2h5.7v57.5c0 6.7.6 13.2 1.9 19.5 1.3 6.3 3.6 11.9 6.8 16.8 3.2 4.9 7.5 8.9 12.8 11.9 5.3 3 12 4.5 20.1 4.5zM333.6 123.8v5.2h-75.8V14.2h74.3v5.2h-68.7v48.3h60.1v5.2h-60.1v50.9h70.2zM351.3 0l51.9 121.1L455 0h6.7l-55.4 129h-6.2L344.7 0h6.6zM556.1 123.8v5.2h-75.8V14.2h74.3v5.2H486v48.3h60.1v5.2H486v50.9h70.1zM585.4 24.9V129h-5.7V14.2h4.2l84.4 105.9V14.2h5.7V129h-5.5L585.4 24.9zM784 19.4h-43V129h-5.7V19.4h-43v-5.2H784v5.2zM848 124.4c8.2 0 15-1.5 20.4-4.6 5.4-3.1 9.7-7.1 12.8-12 3.1-5 5.3-10.6 6.6-16.9 1.3-6.3 1.9-12.7 1.9-19.2V14.2h5.5v57.5c0 7.7-.8 15-2.4 22-1.6 7-4.3 13.2-8 18.5-3.7 5.3-8.6 9.6-14.5 12.8-6 3.2-13.4 4.8-22.2 4.8-9.1 0-16.6-1.7-22.7-5-6.1-3.3-11-7.7-14.6-13.2-3.7-5.4-6.3-11.6-7.8-18.6-1.6-6.9-2.3-14-2.3-21.3V14.2h5.7v57.5c0 6.7.6 13.2 1.9 19.5 1.3 6.3 3.6 11.9 6.8 16.8 3.2 4.9 7.5 8.9 12.8 11.9 5.3 3 12 4.5 20.1 4.5zM991.2 31.2c-4.2-4.6-8.8-7.9-13.9-9.8-5.1-1.9-11-2.8-17.8-2.8-12.2 0-21 2.3-26.5 6.9-5.5 4.6-8.2 10.8-8.2 18.6 0 3.9.7 7.1 2 9.8 1.3 2.6 3.4 4.9 6.2 6.7 2.8 1.8 6.4 3.4 10.8 4.6 4.4 1.2 9.7 2.5 15.8 3.8 6.2 1.3 11.9 2.7 17 4.2s9.4 3.4 12.9 5.7c3.6 2.3 6.3 5.2 8.2 8.6 1.9 3.4 2.9 7.7 2.9 12.8 0 4.8-.9 9.1-2.8 12.8-1.9 3.7-4.6 6.7-8.2 9.2-3.6 2.5-7.8 4.3-12.8 5.6-5 1.2-10.6 1.9-16.7 1.9-9.2 0-17.4-1.4-24.7-4.3-7.3-2.9-14.1-7.2-20.4-13.2l3.4-4c5.4 5.5 11.5 9.6 18.4 12.4 6.9 2.8 14.7 4.2 23.4 4.2 10.8 0 19.3-2 25.5-5.9 6.2-3.9 9.3-9.9 9.3-18 0-4.1-.8-7.6-2.3-10.4-1.5-2.9-3.8-5.3-6.9-7.3-3.1-2-7-3.7-11.6-5.2S964 75.3 957.6 74c-6.3-1.3-11.8-2.6-16.6-4-4.8-1.4-8.8-3.2-12.1-5.3-3.3-2.2-5.8-4.8-7.4-7.9-1.7-3.1-2.5-7.1-2.5-11.8 0-5.1 1-9.6 2.9-13.5 1.9-3.9 4.7-7.2 8.2-9.9 3.5-2.6 7.7-4.7 12.7-6.1 5-1.4 10.4-2.1 16.5-2.1 7.4 0 14 1.1 19.6 3.2 5.6 2.2 10.7 5.6 15.4 10.3l-3.1 4.3z" }, null, -1);
+const _hoisted_2$1 = [
+  _hoisted_1$1
+];
+const _sfc_main$1 = {
+  __name: "VueVentusLogoText",
+  props: {
+    fillClasses: {
+      type: String,
+      default: "text-gray-900 dark:text-gray-100"
+    }
+  },
+  setup(__props) {
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("svg", {
+        class: normalizeClass(__props.fillClasses),
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 1000 129",
+        "xml:space": "preserve"
+      }, _hoisted_2$1, 2);
+    };
+  }
+};
+var VueVentusSpinningMark_vue_vue_type_style_index_0_scoped_true_lang = /* @__PURE__ */ (() => ".mark-color-base[data-v-3ce21263]{fill-rule:evenodd;clip-rule:evenodd;fill:#2298bd}.mark-color-accent[data-v-3ce21263]{fill:#41b883}.logo-image-rotation[data-v-3ce21263]{-webkit-animation:spinlogo-3ce21263 4s linear infinite;animation:spinlogo-3ce21263 4s linear infinite}@-webkit-keyframes spinlogo-3ce21263{to{-webkit-transform:rotate(-360deg)}}@keyframes spinlogo-3ce21263{to{transform:rotate(-360deg)}}\n")();
+var _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
+const _withScopeId = (n) => (pushScopeId("data-v-3ce21263"), n = n(), popScopeId(), n);
+const _hoisted_1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("path", {
+  class: "mark-color-base",
+  d: "M716 707.8c-21.2-87.5-88.6-165.6-186.2-178.2-24.6 215.6-276 328.9-453.7 205.1 38.9 115.6 205.6 246 371.4 255.6 161.6 9.4 309.9-110.9 268.5-282.5zM339.8 77.1C205 211.6 291 440.2 471 463.4c7.6-66.9 37.9-126.8 83.1-172 52.5-52.5 125-85 205.1-85 61.4 0 118.5 19.2 165.4 51.8C844.8 84.9 530.1-88.1 339.8 77.1z"
+}, null, -1));
+const _hoisted_2 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("g", null, [
+  /* @__PURE__ */ createElementVNode("path", {
+    class: "mark-color-accent",
+    d: "M81 657c134.5 134.8 363 48.8 386.2-131.2-66.9-7.6-126.8-37.9-172-83.1-52.5-52.5-85-125-85-205.1 0-61.4 19.2-118.5 51.8-165.4C88.8 152.1-84.2 466.7 81 657zM919.7 336c-134.5-134.8-363-48.8-386.2 131.2 66.9 7.6 126.8 37.9 172 83.1 52.5 52.5 85 125 85 205.1 0 61.4-19.2 118.5-51.8 165.4 173.2-79.9 346.3-394.6 181-584.8z"
+  })
+], -1));
+const _hoisted_3 = [
+  _hoisted_1,
+  _hoisted_2
+];
+const _sfc_main = {
+  __name: "VueVentusSpinningMark",
+  props: {
+    enableSpin: {
+      type: Boolean,
+      default: true
+    }
+  },
+  setup(__props) {
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("svg", {
+        class: normalizeClass(__props.enableSpin ? "logo-image-rotation" : ""),
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg",
+        x: "0",
+        y: "0",
+        viewBox: "0 0 1000 1000",
+        "xml:space": "preserve"
+      }, _hoisted_3, 2);
+    };
+  }
+};
+var VueVentusSpinningMark = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-3ce21263"]]);
+export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, Text, TextDefault, Transitions, _sfc_main$1 as VueVentusLogoText, VueVentusSpinningMark, _sfc_main$5 as VvAnchor, _sfc_main$4 as VvButton, _sfc_main$3 as VvColorModeButton, VvConfig, _sfc_main$2 as VvEl, mergeWithVvConfig };

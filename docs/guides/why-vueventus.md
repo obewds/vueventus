@@ -1,4 +1,18 @@
-# Why VueVentus
+---
+title: Why VueVentus
+---
+
+<script setup>
+    import DocsAnimatedLogoSection from '../../src/views/compos/DocsAnimatedLogoSection.vue'
+</script>
+
+
+
+
+<DocsAnimatedLogoSection/>
+
+
+# {{ $frontmatter.title }}
 
 !!!include(snippets/alphaStageWarning.md)!!!
 
