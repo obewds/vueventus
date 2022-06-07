@@ -28,3 +28,7 @@ export { default as VvColorModeButton } from './components/buttons/VvColorModeBu
 
 // .src/components/elements
 export { default as VvEl } from './components/elements/VvEl.vue'
+
+// .src/components/logos
+export { default as VueVentusLogoText } from './components/logos/VueVentusLogoText.vue'
+export { default as VueVentusSpinningMark } from './components/logos/VueVentusSpinningMark.vue'
