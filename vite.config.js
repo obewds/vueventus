@@ -36,6 +36,17 @@ export default defineConfig({
                 },
                 //sourcemap: true,
             },
+            // output: {
+            //     // Provide global variables to use in the UMD build for externalized deps
+            //     globals: {
+            //         vue: 'Vue',
+            //     },
+            //     //sourcemap: true,
+            //     preserveModules: true,
+            //     entryFileNames: ({ name: fileName }) => {
+            //         return `${fileName}.js`
+            //     },
+            // },
             // plugins: [],
         },
     },
