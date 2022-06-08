@@ -3,6 +3,11 @@ title: mergeWithVvConfig()
 ---
 
 
+<script setup>
+    //
+</script>
+
+
 
 # {{ $frontmatter.title }}
 
@@ -36,7 +41,7 @@ import './index.css' // (Tailwind CSS file)
 // import the mergeWithVvConfig() method
 import { mergeWithVvConfig } from '@obewds/vueventus'
 
-// import an app VueVentus config file
+// import an app specific config file
 import appVv from './app.vv.js'
 
 const app = createApp(App)
