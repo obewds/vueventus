@@ -34,13 +34,13 @@ import App from './App.vue'
 import './index.css' // (Tailwind CSS file)
 
 // import the mergeWithVvConfig() method
-import mergeWithVvConfig from './helpers/mergeWithVvConfig.js'
+import { mergeWithVvConfig } from '@obewds/vueventus'
 
 // import an app VueVentus config file
-import appVvConfig from './appVvConfig.js'
+import appVv from './app.vv.js'
 
 // use the method to merge app configs into default VueVentus configs
-const vv = mergeWithVvConfig(appVvConfig)
+const vv = mergeWithVvConfig(appVv)
 
 const app = createApp(App)
 
@@ -51,7 +51,7 @@ app.mount('#app')
 ```
 
 ```javascript
-// ./src/appVvConfig.js
+// ./src/app.vv.js
 
 export default {
     test: {
