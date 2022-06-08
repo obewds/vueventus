@@ -542,6 +542,176 @@ var cjs = deepmerge_1;
 function mergeWithVvConfig(appTwConfig) {
   return Object.keys(appTwConfig).length > 0 ? cjs(VvConfig, appTwConfig) : VvConfig;
 }
+var ValidAudioSourceTypes = [
+  "audio/flac",
+  "audio/mp4",
+  "audio/mpeg",
+  "audio/ogg",
+  "audio/x-flac",
+  "audio/webm"
+];
+var ValidButtonTypes = [
+  "button",
+  "submit",
+  "reset"
+];
+var ValidColorModes = [
+  "light",
+  "dark"
+];
+var ValidDirections = [
+  "up",
+  "down",
+  "left",
+  "right",
+  ""
+];
+var ValidElementTags = [
+  "style",
+  "title",
+  "address",
+  "article",
+  "aside",
+  "footer",
+  "header",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "main",
+  "nav",
+  "section",
+  "blockquote",
+  "dd",
+  "div",
+  "dl",
+  "dt",
+  "figcaption",
+  "figure",
+  "li",
+  "menu",
+  "ol",
+  "p",
+  "pre",
+  "ul",
+  "a",
+  "abbr",
+  "b",
+  "bdi",
+  "bdo",
+  "cite",
+  "code",
+  "data",
+  "dfn",
+  "em",
+  "i",
+  "kbd",
+  "mark",
+  "q",
+  "rp",
+  "rt",
+  "ruby",
+  "s",
+  "samp",
+  "small",
+  "span",
+  "strong",
+  "sub",
+  "sup",
+  "time",
+  "u",
+  "var",
+  "audio",
+  "map",
+  "video",
+  "iframe",
+  "object",
+  "picture",
+  "portal",
+  "svg",
+  "math",
+  "canvas",
+  "del",
+  "ins",
+  "caption",
+  "colgroup",
+  "table",
+  "tbody",
+  "td",
+  "tfoot",
+  "th",
+  "thead",
+  "tr",
+  "button",
+  "datalist",
+  "fieldset",
+  "form",
+  "input",
+  "label",
+  "legend",
+  "meter",
+  "optgroup",
+  "option",
+  "output",
+  "progress",
+  "select",
+  "textarea",
+  "details",
+  "dialog",
+  "summary"
+];
+var ValidFontAwesomeFamilies = [
+  "fab",
+  "fad",
+  "fal",
+  "far",
+  "fas",
+  "fat"
+];
+var ValidFontAwesomeSizes = [
+  "xs",
+  "sm",
+  "1x",
+  "lg",
+  "2x",
+  "3x",
+  "4x",
+  "5x",
+  "6x",
+  "7x",
+  "8x",
+  "9x",
+  "10x"
+];
+var ValidHeadingLevels = [1, 2, 3, 4, 5, 6];
+var ValidImageSourceTypes = [
+  "image/gif",
+  "image/jpeg",
+  "image/png",
+  "image/svg+xml",
+  "image/webp"
+];
+var ValidInputTypes = [
+  "color",
+  "date",
+  "datetime-local",
+  "email",
+  "month",
+  "number",
+  "password",
+  "search",
+  "tel",
+  "text",
+  "time",
+  "url"
+];
+var ValidVideoSourceTypes = [
+  "video/mp4",
+  "video/ogg",
+  "video/webm"
+];
 const _hoisted_1$4 = ["href"];
 const _sfc_main$5 = {
   __name: "VvAnchor",
@@ -626,11 +796,6 @@ const _sfc_main$5 = {
     };
   }
 };
-var ValidButtonTypes = [
-  "button",
-  "submit",
-  "reset"
-];
 const _hoisted_1$3 = ["type"];
 const _sfc_main$4 = {
   __name: "VvButton",
@@ -711,10 +876,6 @@ const _sfc_main$4 = {
     };
   }
 };
-var ValidColorModes = [
-  "light",
-  "dark"
-];
 const _hoisted_1$2 = {
   key: 0,
   xmlns: "http://www.w3.org/2000/svg",
@@ -984,4 +1145,4 @@ const _sfc_main = {
   }
 };
 var VueVentusSpinningMark = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-3ce21263"]]);
-export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, Text, TextDefault, Transitions, _sfc_main$1 as VueVentusLogoText, VueVentusSpinningMark, _sfc_main$5 as VvAnchor, _sfc_main$4 as VvButton, _sfc_main$3 as VvColorModeButton, VvConfig, _sfc_main$2 as VvEl, mergeWithVvConfig };
+export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, Text, TextDefault, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, _sfc_main$1 as VueVentusLogoText, VueVentusSpinningMark, _sfc_main$5 as VvAnchor, _sfc_main$4 as VvButton, _sfc_main$3 as VvColorModeButton, VvConfig, _sfc_main$2 as VvEl, mergeWithVvConfig };

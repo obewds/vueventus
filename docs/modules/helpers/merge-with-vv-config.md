@@ -39,13 +39,12 @@ import { mergeWithVvConfig } from '@obewds/vueventus'
 // import an app VueVentus config file
 import appVv from './app.vv.js'
 
-// use the method to merge app configs into default VueVentus configs
-const vv = mergeWithVvConfig(appVv)
-
 const app = createApp(App)
 
-// provide the merged configs
-app.provide('vv', vv)
+// Use the mergeWithVvConfig method to merge an app 
+// specific config into the default VueVentus VvConfig
+// and provide the merged result to VueVentus as 'vv'
+app.provide('vv', mergeWithVvConfig(appVv))
 
 app.mount('#app')
 ```
