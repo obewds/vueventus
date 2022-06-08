@@ -19,6 +19,19 @@ export { default as TextDefault } from './configs/palettes/TextDefault.js'
 // .src/helpers
 export { default as mergeWithVvConfig } from './helpers/mergeWithVvConfig.js'
 
+// .src/validators
+export { default as ValidAudioSourceTypes } from './validators/ValidAudioSourceTypes.js'
+export { default as ValidButtonTypes } from './validators/ValidButtonTypes.js'
+export { default as ValidColorModes } from './validators/ValidColorModes.js'
+export { default as ValidDirections } from './validators/ValidDirections.js'
+export { default as ValidElementTags } from './validators/ValidElementTags.js'
+export { default as ValidFontAwesomeFamilies } from './validators/ValidFontAwesomeFamilies.js'
+export { default as ValidFontAwesomeSizes } from './validators/ValidFontAwesomeSizes.js'
+export { default as ValidHeadingLevels } from './validators/ValidHeadingLevels.js'
+export { default as ValidImageSourceTypes } from './validators/ValidImageSourceTypes.js'
+export { default as ValidInputTypes } from './validators/ValidInputTypes.js'
+export { default as ValidVideoSourceTypes } from './validators/ValidVideoSourceTypes.js'
+
 // .src/components/anchors
 export { default as VvAnchor } from './components/anchors/VvAnchor.vue'
 
