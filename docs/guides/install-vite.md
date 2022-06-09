@@ -1,4 +1,17 @@
-# Install with Vite.js
+---
+title: Install with Vite.js
+---
+
+<script setup>
+    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
+
+# {{ $frontmatter.title }}
 
 This guide will walk through installing and setting up VueVentus along with [Vite.js](https://vitejs.dev/guide/#scaffolding-your-first-vite-project), [Vue.js](https://vuejs.org/), [Tailwind CSS](https://tailwindcss.com/), [Vitest](https://vitest.dev/), [Vue Test Utils](https://test-utils.vuejs.org/guide/), [c8](https://github.com/bcoe/c8) and [happy-dom](https://github.com/capricorn86/happy-dom).
 
@@ -47,3 +60,10 @@ npm run dev
 
 
 !!!include(snippets/skipToConfiguration.md)!!!
+
+
+
+
+
+
+<DocsPackageVersion/>

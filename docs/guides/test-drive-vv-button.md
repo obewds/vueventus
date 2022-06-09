@@ -1,10 +1,18 @@
+---
+title: "Test Drive: VvButton"
+---
+
 <script setup>
-    import { VvButton, VvConfig } from '../../src/index'
+    import { VvButton } from '../../src/index'
+    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
 </script>
 
 
 
-# Test Drive: VvButton
+
+
+
+# {{ $frontmatter.title }}
 
 Now that everything is wired up, let's test drive the VvButton component.
 
@@ -126,4 +134,11 @@ Next, let's switch back to a solid color palette by dropping the `palette` attri
 </div>
 
 Your VvButton component instance should now be a solid primary colored button with rounded corners!
+
+
+
+
+
+
+<DocsPackageVersion/>
 

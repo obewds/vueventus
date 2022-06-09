@@ -1,4 +1,17 @@
-# Install with VILT Stack
+---
+title: Install with VILT Stack
+---
+
+<script setup>
+    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
+
+# {{ $frontmatter.title }}
 
 Documentation coming soon!
 
@@ -7,3 +20,10 @@ Documentation coming soon!
 
 
 !!!include(snippets/skipToConfiguration.md)!!!
+
+
+
+
+
+
+<DocsPackageVersion/>
