@@ -2,6 +2,14 @@
 title: App Color Data
 ---
 
+<script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
 
 
 # {{ $frontmatter.title }}
@@ -77,3 +85,10 @@ import appColors from './my-app-colors.json'
 const red = appColors.red['400']
 const coolGray = appColors.coolGray['600']
 ```
+
+
+
+
+
+
+<DocsPackageVersion/>

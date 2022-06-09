@@ -4,6 +4,7 @@ title: Why VueVentus
 
 <script setup>
     import DocsAnimatedLogoSection from '../../src/views/compos/DocsAnimatedLogoSection.vue'
+    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
 </script>
 
 
@@ -63,7 +64,14 @@ The compliexity and learning curve only applies to the need to make surgical com
 In the end, VueVentus acts as an initial data store for rapid prototyping, and a structural blueprint for DRYness in production apps built with atomic classes.
 
 ::: tip
-Over time, VueVentus defaults should be replaced as needed by a custom configuration file (or files) that follow the [VvConfig](/modules/vv-config) structure.
+Over time, VueVentus defaults should be replaced as needed by a custom configuration file (or files) that follow the [VvConfig](/modules/configs/vv-config) structure.
 
 In most cases, an app's custom configs are merged with VueVentus defaults at app start. In the case of Vue.js v3, the merged config data should then use the `provide()`/`inject()` pattern to pass the merged data down to app layouts, components and modules.
 :::
+
+
+
+
+
+
+<DocsPackageVersion/>

@@ -2,6 +2,16 @@
 title: Theme Extenders
 ---
 
+<script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
+
+
 # {{ $frontmatter.title }}
 
 VueVentus {{ $frontmatter.title }} are simple and static JSON object data files that contain Tailwind CSS specific property names and values for your app's Tailwind CSS config file.
@@ -90,6 +100,13 @@ The `extend.transitionDuration` data module extends a Tailwind config object's `
 The `extend.width` data module extends a Tailwind config object's `theme.extend.width` values with the data below:
 
 <<< @/../src/data/extend.width.json
+
+
+
+
+
+
+<DocsPackageVersion/>
 
 
 

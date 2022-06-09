@@ -3,8 +3,8 @@ title: VvButton Component
 ---
 
 <script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
     import { VvButton } from '../../../src/index'
-    import { VvConfig } from '../../../src/index'
 </script>
 
 
@@ -396,5 +396,12 @@ The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child 
         Slot <span class="text-red-500">Content</span>
     </VvButton>
 </div>
+
+
+
+
+
+
+<DocsPackageVersion/>
 
 

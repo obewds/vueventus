@@ -1,4 +1,19 @@
-# ButtonOutline Palette
+---
+title: ButtonOutline Palette
+---
+
+<script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
+
+
+
+# {{ $frontmatter.title }}
 
 An outline themed palette of button colors with properties/values with the keys of `default`, `error`, `primary`, `secondary`, and `success`.
 
@@ -36,5 +51,12 @@ const buttonSuccess = ButtonOutline.success
 ## Module
 
 <<< @/../src/configs/palettes/ButtonOutline.js
+
+
+
+
+
+
+<DocsPackageVersion/>
 
 

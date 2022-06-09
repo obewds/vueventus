@@ -1,4 +1,16 @@
-# GroundDefault Palette
+---
+title: GroundDefault Palette
+---
+
+<script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
+# {{ $frontmatter.title }}
 
 A default palette of ground colors with properties/values with the keys of `default`, `error`, `primary`, `secondary`, and `success`.
 
@@ -36,5 +48,12 @@ const bgSuccess = GroundDefault.success
 ## Module
 
 <<< @/../src/configs/palettes/GroundDefault.js
+
+
+
+
+
+
+<DocsPackageVersion/>
 
 

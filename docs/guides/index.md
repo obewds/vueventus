@@ -4,6 +4,7 @@ title: Getting Started
 
 <script setup>
     import DocsAnimatedLogoSection from '../../src/views/compos/DocsAnimatedLogoSection.vue'
+    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
 </script>
 
 
@@ -36,3 +37,9 @@ But first, you'll need to choose your path for installation:
 VueVentus is not currently written with Typescript. There are some components like VueVentus's `VvEl` and `VvConfig` that were written in Typescript, but some pesky bugs pushed this project back into normal Vue 3 SFCs and the composition API to move forward. ¯\\_(ツ)_/¯
 :::
 
+
+
+
+
+
+<DocsPackageVersion/>

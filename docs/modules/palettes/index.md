@@ -1,8 +1,22 @@
-# Palette Config Modules
+---
+title: Palette Config Modules
+---
+
+<script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
+
+
+# {{ $frontmatter.title }}
 
 !!!include(snippets/alphaStageWarning.md)!!!
 
-Palette Config Modules are subset of config modules specifically meant for atomic color class groupings. They are intented to be used with contextual language to humanize visual color state classes for various states of application elements.
+{{ $frontmatter.title }} are subset of config modules specifically meant for atomic color class groupings. They are intented to be used with contextual language to humanize visual color state classes for various states of application elements.
 
 
 * [AnchorDefault](/modules/palettes/anchor-default)
@@ -17,5 +31,12 @@ Palette Config Modules are subset of config modules specifically meant for atomi
 
 
 ::: info ABOUT PALETTE MODULES
-Palette Config Modules are also like the Tailwind CSS `@apply` directive, but specifically for the color CSS characteristics. Like all Config Modules, this means CSS values data isn't stuck inside CSS files or syntax. So the data can exist outside of the scope of CSS, and enjoy the flexibility of JS/JSON color data throughout the stack.
+{{ $frontmatter.title }} are also like the Tailwind CSS `@apply` directive, but specifically for the color CSS characteristics. Like all Config Modules, this means CSS values data isn't stuck inside CSS files or syntax. So the data can exist outside of the scope of CSS, and enjoy the flexibility of JS/JSON color data throughout the stack.
 :::
+
+
+
+
+
+
+<DocsPackageVersion/>

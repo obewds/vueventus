@@ -1,4 +1,17 @@
-# Configuration
+---
+title: Configuration
+---
+
+<script setup>
+    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
+
+# {{ $frontmatter.title }}
 
 Next up, we need to configure the app's Vite config file and the app's Tailwind CSS config file. The Vite updates are for convenience and testing purposes. The Tailwind updates bring a handful of extenstions and additions to Tailwind's already awesome arsenal of atomic class name fragments.
 
@@ -80,4 +93,11 @@ module.exports = {
     ],
 }
 ```
+
+
+
+
+
+
+<DocsPackageVersion/>
 

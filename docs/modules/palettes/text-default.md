@@ -1,4 +1,16 @@
-# TextDefault Palette
+---
+title: TextDefault Palette
+---
+
+<script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
+# {{ $frontmatter.title }}
 
 A default palette of text colors with properties/values with the keys of `default`, `error`, `primary`, `secondary`, and `success`.
 
@@ -36,5 +48,12 @@ const borderSuccess = BorderDefault.success
 ## Module
 
 <<< @/../src/configs/palettes/BorderDefault.js
+
+
+
+
+
+
+<DocsPackageVersion/>
 
 

@@ -2,6 +2,14 @@
 title: Tailwind Modules
 ---
 
+<script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
 # {{ $frontmatter.title }}
 
 !!!include(snippets/alphaStageWarning.md)!!!
@@ -13,3 +21,10 @@ There are currently three main types of {{ $frontmatter.title }} to use in your 
 * [Theme Extenders](/modules/data/theme-extenders)
 * [Theme Additions](/modules/data/theme-additions)
 * [App Color Data](/modules/data/app-color-data)
+
+
+
+
+
+
+<DocsPackageVersion/>

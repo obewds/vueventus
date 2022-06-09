@@ -4,14 +4,14 @@ title: mergeWithVvConfig()
 
 
 <script setup>
-    //
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
 </script>
 
 
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that requires a single argument, which is expected to be an app-specific VueVentus config object that will be deeply merged on top of any defaults VueVentus uses from the [VvConfig](/modules/vv-config) module.
+The {{ $frontmatter.title }} helper module provides a helper function that requires a single argument, which is expected to be an app-specific VueVentus config object that will be deeply merged on top of any defaults VueVentus uses from the [VvConfig](/modules/configs/vv-config) module.
 
 
 
@@ -93,4 +93,11 @@ console.log(vv.anchors.palettes.default.secondary)
 console.log(vv.anchors.palettes.myCustomPalette.default)
 // returns (string): text-indigo-500 hover:text-indigo-400
 ```
+
+
+
+
+
+
+<DocsPackageVersion/>
 

@@ -1,4 +1,19 @@
-# ButtonSolid Palette
+---
+title: ButtonSolid Palette
+---
+
+<script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
+
+
+
+# {{ $frontmatter.title }}
 
 A solid themed palette of button colors with properties/values with the keys of `default`, `error`, `primary`, `secondary`, and `success`.
 
@@ -36,5 +51,12 @@ const buttonSuccess = ButtonSolid.success
 ## Module
 
 <<< @/../src/configs/palettes/ButtonSolid.js
+
+
+
+
+
+
+<DocsPackageVersion/>
 
 
