@@ -29,6 +29,10 @@
             type: String,
             default: VvConfig.defaults.VvAnchor.color,
         },
+        external: {
+            type: Boolean,
+            default: false
+        },
         href: {
             type: String,
             default: VvConfig.defaults.VvAnchor.href,
@@ -113,7 +117,10 @@
 
 
 <template>
-    <a :href="href" :class="classes">
+    <a v-if="external" :href="href" :class="classes" target="_blank" rel="noopener noreferrer">
+        <slot/>
+    </a>
+    <a v-else :href="href" :class="classes">
         <slot/>
     </a>
 </template>

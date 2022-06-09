@@ -78,6 +78,7 @@ export default {
             buttonFab: false,
             buttonSize: 'md',
             color: 'default',
+            external: false,
             href: '#',
             palette: 'default',
         },

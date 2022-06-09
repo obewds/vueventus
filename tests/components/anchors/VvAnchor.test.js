@@ -92,7 +92,7 @@ test('VvAnchor.vue component returns Tailwind CSS classes for a fab button set o
 
 
 
-test('VvAnchor.vue component mutton mode color prop returns an expected result', async () => {
+test('VvAnchor.vue component button mode color prop returns an expected result', async () => {
 
     const wrapper = mount(VvAnchor, {
         props: {
@@ -103,5 +103,20 @@ test('VvAnchor.vue component mutton mode color prop returns an expected result',
     })
 
     expect(wrapper.html()).toContain('green')
+    
+})
+
+
+
+test('VvAnchor.vue component external mode returns an expected result', async () => {
+
+    const wrapper = mount(VvAnchor, {
+        props: {
+            external: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('target="_blank"')
+    expect(wrapper.html()).toContain('rel="noopener noreferrer"')
     
 })
