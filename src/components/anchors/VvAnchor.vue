@@ -60,11 +60,19 @@
                 if ( vv?.buttons?.blockBase() ) {
                     output.push( vv.buttons.blockBase() )
                 }
+
+                if ( props.buttonSize !== '' && vv?.buttons?.blockSizes?.[props.buttonSize] ) {
+                    output.push( vv.buttons.blockSizes[props.buttonSize] )
+                }
                 
             } else if (props.buttonBlock === false && props.buttonFab === true) {
 
                 if ( vv?.buttons?.fabBase() ) {
                     output.push( vv.buttons.fabBase() )
+                }
+
+                if ( props.buttonSize !== '' && vv?.buttons?.fabSizes?.[props.buttonSize] ) {
+                    output.push( vv.buttons.fabSizes[props.buttonSize] )
                 }
 
             } else {
@@ -73,10 +81,10 @@
                     output.push( vv.buttons.base() )
                 }
 
-            }
+                if ( props.buttonSize !== '' && vv?.buttons?.sizes?.[props.buttonSize] ) {
+                    output.push( vv.buttons.sizes[props.buttonSize] )
+                }
 
-            if ( props.buttonSize !== '' && vv?.buttons?.sizes?.[props.buttonSize] ) {
-                output.push( vv.buttons.sizes[props.buttonSize] )
             }
 
             if ( vv?.buttons?.palettes?.[props.palette]?.[props.color] ) {
