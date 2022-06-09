@@ -21,7 +21,7 @@ Go haead and open up your app's `./tailwind.config.js` file, and add the followi
 // ./tailwind.config.js
 
 const defaultTheme = require('tailwindcss/defaultTheme')
-const vv = './node_modules/@obewds/vueventus/src/data/'
+const vvPath = './node_modules/@obewds/vueventus/src/data/'
 
 module.exports = {
 
@@ -32,8 +32,11 @@ module.exports = {
         "./index.html",
         "./src/**/*.{vue,js,ts,jsx,tsx}",
         "./docs/**/*.{md,html,js}",
-        // To include VueVentus default Tailwind CSS classes for prototyping
+        // Include VueVentus default TWCSS classes (for prototyping):
         "./node_modules/@obewds/vueventus/**/*.{vue,js,ts,jsx,tsx,json}",
+        // Include an app specific config file to
+        // replace VueVentus default classes above:
+        // "./src/app.vv.js",
     ],
 
     theme: {
@@ -45,18 +48,20 @@ module.exports = {
                 body: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
             // VueVentus TW theme extensions
-            maxWidth: require( vv + 'extend.maxWidth.json' ),
-            rotate: require( vv + 'extend.rotate.json' ),
-            scale: require( vv + 'extend.scale.json' ),
-            transitionDuration: require( vv + 'extend.transitionDuration.json' ),
-            width: require( vv + 'extend.width.json' ),
+            animation: require( vvPath + 'extend.animation.json' ),
+            keyframes: require( vvPath + 'extend.keyframes.json' ),
+            maxWidth: require( vvPath + 'extend.maxWidth.json' ),
+            rotate: require( vvPath + 'extend.rotate.json' ),
+            scale: require( vvPath + 'extend.scale.json' ),
+            transitionDuration: require( vvPath + 'extend.transitionDuration.json' ),
+            width: require( vvPath + 'extend.width.json' ),
         },
         // VueVentus TW theme overrides
-        colors: require( vv + 'app.color.data.json' ),
-        fontSize: require( vv + 'theme.fontSize.json' ),
-        listStyleType: require( vv + 'theme.listStyleType.json' ),
-        opacity: require( vv + 'theme.opacity.json' ),
-        screens: require( vv + 'theme.screens.json' ),
+        colors: require( vvPath + 'app.color.data.json' ),
+        fontSize: require( vvPath + 'theme.fontSize.json' ),
+        listStyleType: require( vvPath + 'theme.listStyleType.json' ),
+        opacity: require( vvPath + 'theme.opacity.json' ),
+        screens: require( vvPath + 'theme.screens.json' ),
     },
 
     variants: {
