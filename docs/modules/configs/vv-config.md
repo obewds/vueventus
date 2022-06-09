@@ -3,7 +3,7 @@ title: VvConfig Module
 ---
 
 <script setup>
-    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
 </script>
 
 
@@ -34,7 +34,7 @@ import { VvConfig } from '@obewds/vueventus'
 
 ## Module Code
 
-<<< @/../src/configs/VvConfig.js
+<<< @/../../src/configs/VvConfig.js
 
 
 

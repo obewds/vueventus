@@ -1,10 +1,16 @@
 ---
-title: Config Modules
+title: Component Modules
 ---
 
 <script setup>
+    import DocsAnimatedLogoSection from '../../src/views/compos/DocsAnimatedLogoSection.vue'
     import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
 </script>
+
+
+
+
+<DocsAnimatedLogoSection/>
 
 
 
@@ -14,22 +20,14 @@ title: Config Modules
 
 !!!include(snippets/alphaStageWarning.md)!!!
 
-{{ $frontmatter.title }} keep reusable and customizable groups of non-color orientated Tailwind CSS classes for use in element, component, and layout levels of an application.
+{{ $frontmatter.title }} are JavaScript modules that act as the conduits between global Tailwind CSS string groups of classes in a default/prototypal secnario, and conversely as a blueprint for composing an [app specific config](/modules/configs/app-specific-config) file to replace any/all VueVentus default Tailwind CSS string groups for an application's own branding and app specific config settings.
 
 
 
-* [Anchors](/modules/anchors)
-* [Buttons](/modules/buttons)
-* [Text](/modules/text)
-* [Transitions](/modules/transitions)
-* [VvConfig](/modules/vv-config)
-* [App Specific Config](/modules/app-specific-config)
-
-
-
-::: info ABOUT CONFIG MODULES
-{{ $frontmatter.title }} are like the Tailwind CSS `@apply` directive, but are instead managed outside of the CSS scope. {{ $frontmatter.title }} rely on the Tailwind purge process, which allows JavaScript and JSON atomic classes data to be used throughout the JavaScript stack in a fully DRY way.
-:::
+* [Tailwind Modules](/modules/data/)
+* [Config Modules](/modules/configs/)
+* [Palette Modules](/modules/palettes/)
+* [Helper Modules](/modules/helpers/)
 
 
 

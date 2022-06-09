@@ -3,7 +3,7 @@ title: App Specific Config
 ---
 
 <script setup>
-    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
 </script>
 
 

@@ -3,8 +3,14 @@ title: Components
 ---
 
 <script setup>
+    import DocsAnimatedLogoSection from '../../src/views/compos/DocsAnimatedLogoSection.vue'
     import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
 </script>
+
+
+
+
+<DocsAnimatedLogoSection/>
 
 
 
