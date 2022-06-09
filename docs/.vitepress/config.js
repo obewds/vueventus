@@ -102,7 +102,7 @@ function mainNav() {
     return [
         { text: "Home", link: "/" },
         { text: "Guides", link: "/guides/", activeMatch: '/guides/' },
-        { text: "Modules", link: "/modules/data/", activeMatch: '/modules/' },
+        { text: "Modules", link: "/modules/", activeMatch: '/modules/' },
         { text: "Components", link: "/components/", activeMatch: '/compoents/' },
         // { text: 'Changelog', link: 'https://github.com/obewds/vueventus/blob/main/CHANGELOG.md' },
         // { text: "npm", link: "https://www.npmjs.com/package/@obewds/vueventus" },
@@ -129,6 +129,12 @@ function sidebarGuides() {
 function sidebarModules() {
     return [
         {
+            text: 'Modules',
+            collapsible: true,
+            items: [
+                { text: 'Component Modules', link: '/modules/' },
+            ]
+        },{
             text: 'Tailwind Modules',
             collapsible: true,
             items: [
@@ -141,13 +147,13 @@ function sidebarModules() {
             text: 'Config Modules',
             collapsible: true,
             items: [
-                { text: 'Config Modules', link: '/modules/' },
-                { text: 'Anchors', link: '/modules/anchors' },
-                { text: 'Buttons', link: '/modules/buttons' },
-                { text: 'Text', link: '/modules/text' },
-                { text: 'Transitions', link: '/modules/transitions' },
-                { text: 'VvConfig', link: '/modules/vv-config' },
-                { text: 'App Specific Config', link: '/modules/app-specific-config' },
+                { text: 'Config Modules', link: '/modules/configs/' },
+                { text: 'Anchors', link: '/modules/configs/anchors' },
+                { text: 'Buttons', link: '/modules/configs/buttons' },
+                { text: 'Text', link: '/modules/configs/text' },
+                { text: 'Transitions', link: '/modules/configs/transitions' },
+                { text: 'VvConfig', link: '/modules/configs/vv-config' },
+                { text: 'App Specific Config', link: '/modules/configs/app-specific-config' },
             ]
         },{
             text: 'Palette Modules',
