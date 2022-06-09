@@ -103,7 +103,7 @@ function mainNav() {
         { text: "Home", link: "/" },
         { text: "Guides", link: "/guides/", activeMatch: '/guides/' },
         { text: "Modules", link: "/modules/", activeMatch: '/modules/' },
-        { text: "Components", link: "/components/", activeMatch: '/compoents/' },
+        { text: "Components", link: "/components/", activeMatch: '/components/' },
         // { text: 'Changelog', link: 'https://github.com/obewds/vueventus/blob/main/CHANGELOG.md' },
         // { text: "npm", link: "https://www.npmjs.com/package/@obewds/vueventus" },
     ]
