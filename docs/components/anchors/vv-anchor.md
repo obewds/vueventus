@@ -3,8 +3,8 @@ title: VvAnchor Component
 ---
 
 <script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
     import { VvAnchor } from '../../../src/index'
-    import { VvConfig } from '../../../src/index'
     import appColors from '../../../src/data/app.color.data.json'
 
     const grayColorStyles = {
@@ -449,3 +449,10 @@ The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child 
         Slot <span class="text-red-500">Content</span>
     </VvAnchor>
 </div>
+
+
+
+
+
+
+<DocsPackageVersion/>

@@ -3,8 +3,11 @@ title: Prop Validators
 ---
 
 <script setup>
-    //
+    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
 </script>
+
+
+
 
 
 # {{ $frontmatter.title }}
@@ -325,4 +328,11 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ### Module Code
 
 <<< @/../src/validators/ValidVideoSourceTypes.js
+
+
+
+
+
+
+<DocsPackageVersion/>
 

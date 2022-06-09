@@ -3,6 +3,7 @@ title: VvColorModeButton Component
 ---
 
 <script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
     import { VvColorModeButton } from '../../../src/index'
     import { VvConfig } from '../../../src/index'
 </script>
@@ -418,4 +419,11 @@ The {{ $frontmatter.title }} `titleLight` prop sets the component instance title
 ::: danger NO SLOT AVAILABLE
 The {{ $frontmatter.title }} does not have Vue slot option, because the component uses two [heroicons](https://heroicons.com/) and is intended to output an equal in height and width `<button>` element that toggles between two icons and leverages HTML `title` attributes to compensate for the use of non-text iconography.
 :::
+
+
+
+
+
+
+<DocsPackageVersion/>
 
