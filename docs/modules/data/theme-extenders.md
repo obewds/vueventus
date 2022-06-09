@@ -12,6 +12,39 @@ VueVentus {{ $frontmatter.title }} are simple and static JSON object data files 
 
 
 
+
+
+
+
+## extend.animation
+
+The `extend.animation` data module extends a Tailwind config object's `theme.extend.animation` values with the data below:
+
+<<< @/../src/data/extend.animation.json
+
+
+
+
+
+
+
+
+
+
+## extend.keyframes
+
+The `extend.keyframes` data module extends a Tailwind config object's `theme.extend.keyframes` values with the data below:
+
+<<< @/../src/data/extend.keyframes.json
+
+
+
+
+
+
+
+
+
 ## extend.maxWidth
 
 The `extend.maxWidth` data module extends a Tailwind config object's `theme.extend.maxWidth` values with the data below:
