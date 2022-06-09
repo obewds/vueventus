@@ -16,7 +16,7 @@ title: Getting Started
 
 !!!include(snippets/alphaStageWarning.md)!!!
 
-Welcome to the VueVentus design system component docs!
+Welcome to the docs for VueVentus, a modular design system component library for Vue.js and Tailwind CSS.
 
 You'll find lots of information and insight here covering how to use the VueVentus data flows in the contexts of Vue.js and Tailwind CSS, to end the era of massive atomic class strings.
 
