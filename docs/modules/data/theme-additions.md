@@ -2,6 +2,16 @@
 title: Theme Additions
 ---
 
+<script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
+
+
 # {{ $frontmatter.title }}
 
 VueVentus {{ $frontmatter.title }} are simple and static JSON object data files that contain Tailwind CSS specific property names and values for your app's Tailwind CSS config file.
@@ -47,4 +57,11 @@ The `theme.opacity` data module extends a Tailwind config object's `theme.opacit
 The `theme.screens` data module extends a Tailwind config object's `theme.screens` values with the data below:
 
 <<< @/../src/data/theme.screens.json
+
+
+
+
+
+
+<DocsPackageVersion/>
 

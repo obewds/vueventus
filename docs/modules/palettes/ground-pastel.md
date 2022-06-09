@@ -1,4 +1,16 @@
-# GroundPastel Palette
+---
+title: GroundPastel Palette
+---
+
+<script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
+# {{ $frontmatter.title }}
 
 A pastel themed palette of ground colors with properties/values with the keys of `default`, `error`, `primary`, `secondary`, and `success`.
 
@@ -36,5 +48,12 @@ const bgSuccess = GroundPastel.success
 ## Module
 
 <<< @/../src/configs/palettes/GroundPastel.js
+
+
+
+
+
+
+<DocsPackageVersion/>
 
 

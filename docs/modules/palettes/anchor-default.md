@@ -1,4 +1,18 @@
-# AnchorDefault Palette
+---
+title: AnchorDefault Palette
+---
+
+<script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
+
+
+# {{ $frontmatter.title }}
 
 A default palette of anchor colors with properties/values with the keys of `default`, `error`, `primary`, `secondary`, and `success`.
 
@@ -36,5 +50,12 @@ const anchorSuccess = AnchorDefault.success
 ## Module
 
 <<< @/../src/configs/palettes/AnchorDefault.js
+
+
+
+
+
+
+<DocsPackageVersion/>
 
 

@@ -2,6 +2,14 @@
 title: Transitions Config Module
 ---
 
+<script setup>
+    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
 
 
 # {{ $frontmatter.title }}
@@ -159,6 +167,13 @@ const transition = Transitions.getTransitionClasses('colors')
 ## Module Code
 
 <<< @/../src/configs/Transitions.js
+
+
+
+
+
+
+<DocsPackageVersion/>
 
 
 

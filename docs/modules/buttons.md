@@ -2,6 +2,10 @@
 title: Buttons Config Module
 ---
 
+<script setup>
+    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
 
 
 # {{ $frontmatter.title }}
@@ -256,6 +260,13 @@ const button = Buttons.getSizeClasses('sm')
 ## Module Code
 
 <<< @/../src/configs/Buttons.js
+
+
+
+
+
+
+<DocsPackageVersion/>
 
 
 

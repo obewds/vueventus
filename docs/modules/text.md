@@ -2,6 +2,14 @@
 title: Text Config Module
 ---
 
+<script setup>
+    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
 
 
 # {{ $frontmatter.title }}
@@ -229,3 +237,10 @@ const textSizeClasses = Text.getSizeClasses('sm')
 ## Module Code
 
 <<< @/../src/configs/Text.js
+
+
+
+
+
+
+<DocsPackageVersion/>

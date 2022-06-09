@@ -2,6 +2,14 @@
 title: Anchors Config Module
 ---
 
+<script setup>
+    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
 
 
 # {{ $frontmatter.title }}
@@ -141,3 +149,10 @@ const anchorSizeClasses = Anchors.getSizeClasses('sm')
 ## Module Code
 
 <<< @/../src/configs/Anchors.js
+
+
+
+
+
+
+<DocsPackageVersion/>

@@ -2,6 +2,14 @@
 title: VvConfig Module
 ---
 
+<script setup>
+    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
 
 
 # {{ $frontmatter.title }}
@@ -27,4 +35,11 @@ import { VvConfig } from '@obewds/vueventus'
 ## Module Code
 
 <<< @/../src/configs/VvConfig.js
+
+
+
+
+
+
+<DocsPackageVersion/>
 

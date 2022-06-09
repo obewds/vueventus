@@ -1,4 +1,16 @@
-# GroundConsole Palette
+---
+title: GroundConsole Palette
+---
+
+<script setup>
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
+
+# {{ $frontmatter.title }}
 
 A console themed palette of ground colors with properties/values with the keys of `default`, `error`, `primary`, `secondary`, and `success`.
 
@@ -36,5 +48,12 @@ const bgSuccess = GroundConsole.success
 ## Module
 
 <<< @/../src/configs/palettes/GroundConsole.js
+
+
+
+
+
+
+<DocsPackageVersion/>
 
 

@@ -2,6 +2,13 @@
 title: App Specific Config
 ---
 
+<script setup>
+    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+</script>
+
+
+
+
 
 
 # {{ $frontmatter.title }}
@@ -9,3 +16,10 @@ title: App Specific Config
 {{ $frontmatter.title }} documentation coming soon!
 
 <!--- #TODO write docs --->
+
+
+
+
+
+
+<DocsPackageVersion/>

@@ -4,7 +4,7 @@ title: mergeWithVvConfig()
 
 
 <script setup>
-    //
+    import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
 </script>
 
 
@@ -93,4 +93,11 @@ console.log(vv.anchors.palettes.default.secondary)
 console.log(vv.anchors.palettes.myCustomPalette.default)
 // returns (string): text-indigo-500 hover:text-indigo-400
 ```
+
+
+
+
+
+
+<DocsPackageVersion/>
 
