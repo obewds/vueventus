@@ -78,7 +78,7 @@ appAnchors.focus = ''
 
 ## Anchors.sizes
 
-The `Anchors.sizes` parameter object for the {{ $frontmatter.title }} is inhereted directly from the [Text Config Module](/modules/text#text-sizes).
+The `Anchors.sizes` parameter object for the {{ $frontmatter.title }} is inhereted directly from the [Text Config Module](/modules/configs/text#text-sizes).
 
 
 
@@ -148,8 +148,7 @@ const anchorSizeClasses = Anchors.getSizeClasses('sm')
 
 ## Module Code
 
-<<< @/../../src/configs/Anchors.js
-
+<<< @/../src/configs/Anchors.js
 
 
 

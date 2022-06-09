@@ -11,7 +11,7 @@ title: mergeWithVvConfig()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that requires a single argument, which is expected to be an app-specific VueVentus config object that will be deeply merged on top of any defaults VueVentus uses from the [VvConfig](/modules/vv-config) module.
+The {{ $frontmatter.title }} helper module provides a helper function that requires a single argument, which is expected to be an app-specific VueVentus config object that will be deeply merged on top of any defaults VueVentus uses from the [VvConfig](/modules/configs/vv-config) module.
 
 
 

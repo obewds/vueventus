@@ -43,7 +43,7 @@ import { VvAnchor } from '@obewds/vueventus'
 Type: **`Boolean`**  
 Default: **`VvConfig.defaults.VvAnchor.button`**
 
-When the {{ $frontmatter.title }} `button` prop value is `true`, the output element changes from normal anchor element styling set in the [Anchor Config Module](/modules/anchors) to button styling that is driven by the Tailwind CSS classes in the [Button Config Module](/modules/buttons).
+When the {{ $frontmatter.title }} `button` prop value is `true`, the output element changes from normal anchor element styling set in the [Anchor Config Module](/modules/configs/anchors) to button styling that is driven by the Tailwind CSS classes in the [Button Config Module](/modules/configs/buttons).
 
 ### Syntax
 

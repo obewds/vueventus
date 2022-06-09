@@ -236,7 +236,7 @@ const textSizeClasses = Text.getSizeClasses('sm')
 
 ## Module Code
 
-<<< @/../../src/configs/Text.js
+<<< @/../src/configs/Text.js
 
 
 

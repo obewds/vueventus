@@ -166,7 +166,7 @@ const transition = Transitions.getTransitionClasses('colors')
 
 ## Module Code
 
-<<< @/../../src/configs/Transitions.js
+<<< @/../src/configs/Transitions.js
 
 
 

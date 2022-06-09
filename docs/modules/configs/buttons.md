@@ -259,7 +259,7 @@ const button = Buttons.getSizeClasses('sm')
 
 ## Module Code
 
-<<< @/../../src/configs/Buttons.js
+<<< @/../src/configs/Buttons.js
 
 
 
