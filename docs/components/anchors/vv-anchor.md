@@ -264,6 +264,38 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 
 
 
+## Prop: external
+
+Type: **`Boolean`**  
+Default: **`VvConfig.defaults.VvAnchor.external`**
+
+When the {{ $frontmatter.title }} `external` prop value is `true`, the output `<anchor>` element will have a `target="_blank"` and `rel="noopener noreferrer"` attributes/values so links that leave the application space open in a new tab for users.
+
+### Syntax
+
+```html
+<VvAnchor
+    :external="true"
+    href="https://obewds.github.io/vueventus/components/anchors/vv-anchor.html"
+>
+    VueVentus VvAnchor Docs
+</VvAnchor>
+```
+
+### Result
+
+<div data-css-override class="w-full pt-4">
+    <VvAnchor :external="true" href="https://obewds.github.io/vueventus/components/anchors/vv-anchor.html">
+        VueVentus VvAnchor Docs
+    </VvAnchor>
+</div>
+
+
+
+
+
+
+
 ## Prop: href
 
 Type: **`String`**  

@@ -24,6 +24,15 @@
 
         <div :class="tw.cardFlex">
             <div>
+                <h3 :class="tw.h3">VvAnchor External Link Mode</h3>
+                <div :class="tw.flexWrap">
+                    <VvAnchor :external="true" href="https://tailwind.mattmct.com/">TWCSS Color Tool</VvAnchor>
+                </div>
+            </div>
+        </div>
+
+        <div :class="tw.cardFlex">
+            <div>
                 <h3 :class="tw.h3">VvAnchor Default Palette</h3>
                 <div :class="tw.flexWrap">
                     <VvAnchor color="default">default</VvAnchor>

@@ -14,15 +14,15 @@
             default: true,
         },
         animationClass: {
-            type: Boolean,
+            type: String,
             default: 'animate-spin-reverse-4s',
         },
         fillOne: {
-            type: Boolean,
+            type: String,
             default: '#41b883',
         },
         fillTwo: {
-            type: Boolean,
+            type: String,
             default: '#2298bd',
         },
     })

@@ -415,6 +415,7 @@ var VvConfig = {
       buttonFab: false,
       buttonSize: "md",
       color: "default",
+      external: false,
       href: "#",
       palette: "default"
     },
@@ -713,6 +714,7 @@ var ValidVideoSourceTypes = [
   "video/webm"
 ];
 const _hoisted_1$4 = ["href"];
+const _hoisted_2$3 = ["href"];
 const _sfc_main$5 = {
   __name: "VvAnchor",
   props: {
@@ -735,6 +737,10 @@ const _sfc_main$5 = {
     color: {
       type: String,
       default: VvConfig.defaults.VvAnchor.color
+    },
+    external: {
+      type: Boolean,
+      default: false
     },
     href: {
       type: String,
@@ -793,12 +799,21 @@ const _sfc_main$5 = {
       return output.join(" ");
     });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("a", {
+      return __props.external ? (openBlock(), createElementBlock("a", {
+        key: 0,
+        href: __props.href,
+        class: normalizeClass(unref(classes)),
+        target: "_blank",
+        rel: "noopener noreferrer"
+      }, [
+        renderSlot(_ctx.$slots, "default")
+      ], 10, _hoisted_1$4)) : (openBlock(), createElementBlock("a", {
+        key: 1,
         href: __props.href,
         class: normalizeClass(unref(classes))
       }, [
         renderSlot(_ctx.$slots, "default")
-      ], 10, _hoisted_1$4);
+      ], 10, _hoisted_2$3));
     };
   }
 };
@@ -1115,15 +1130,15 @@ const _sfc_main = {
       default: true
     },
     animationClass: {
-      type: Boolean,
+      type: String,
       default: "animate-spin-reverse-4s"
     },
     fillOne: {
-      type: Boolean,
+      type: String,
       default: "#41b883"
     },
     fillTwo: {
-      type: Boolean,
+      type: String,
       default: "#2298bd"
     }
   },
