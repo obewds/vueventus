@@ -753,7 +753,7 @@ const _sfc_main$5 = {
     const props = __props;
     const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
     let classes = computed(() => {
-      var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l;
+      var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p;
       let output = [];
       output.push(props.transitionClasses);
       if (props.button === true) {
@@ -761,26 +761,32 @@ const _sfc_main$5 = {
           if ((_a = vv == null ? void 0 : vv.buttons) == null ? void 0 : _a.blockBase()) {
             output.push(vv.buttons.blockBase());
           }
+          if (props.buttonSize !== "" && ((_c = (_b = vv == null ? void 0 : vv.buttons) == null ? void 0 : _b.blockSizes) == null ? void 0 : _c[props.buttonSize])) {
+            output.push(vv.buttons.blockSizes[props.buttonSize]);
+          }
         } else if (props.buttonBlock === false && props.buttonFab === true) {
-          if ((_b = vv == null ? void 0 : vv.buttons) == null ? void 0 : _b.fabBase()) {
+          if ((_d = vv == null ? void 0 : vv.buttons) == null ? void 0 : _d.fabBase()) {
             output.push(vv.buttons.fabBase());
           }
+          if (props.buttonSize !== "" && ((_f = (_e = vv == null ? void 0 : vv.buttons) == null ? void 0 : _e.fabSizes) == null ? void 0 : _f[props.buttonSize])) {
+            output.push(vv.buttons.fabSizes[props.buttonSize]);
+          }
         } else {
-          if ((_c = vv == null ? void 0 : vv.buttons) == null ? void 0 : _c.base()) {
+          if ((_g = vv == null ? void 0 : vv.buttons) == null ? void 0 : _g.base()) {
             output.push(vv.buttons.base());
           }
+          if (props.buttonSize !== "" && ((_i = (_h = vv == null ? void 0 : vv.buttons) == null ? void 0 : _h.sizes) == null ? void 0 : _i[props.buttonSize])) {
+            output.push(vv.buttons.sizes[props.buttonSize]);
+          }
         }
-        if (props.buttonSize !== "" && ((_e = (_d = vv == null ? void 0 : vv.buttons) == null ? void 0 : _d.sizes) == null ? void 0 : _e[props.buttonSize])) {
-          output.push(vv.buttons.sizes[props.buttonSize]);
-        }
-        if ((_h = (_g = (_f = vv == null ? void 0 : vv.buttons) == null ? void 0 : _f.palettes) == null ? void 0 : _g[props.palette]) == null ? void 0 : _h[props.color]) {
+        if ((_l = (_k = (_j = vv == null ? void 0 : vv.buttons) == null ? void 0 : _j.palettes) == null ? void 0 : _k[props.palette]) == null ? void 0 : _l[props.color]) {
           output.push(vv.buttons.palettes[props.palette][props.color]);
         }
       } else {
-        if ((_i = vv == null ? void 0 : vv.anchors) == null ? void 0 : _i.base()) {
+        if ((_m = vv == null ? void 0 : vv.anchors) == null ? void 0 : _m.base()) {
           output.push(vv.anchors.base());
         }
-        if ((_l = (_k = (_j = vv == null ? void 0 : vv.anchors) == null ? void 0 : _j.palettes) == null ? void 0 : _k[props.palette]) == null ? void 0 : _l[props.color]) {
+        if ((_p = (_o = (_n = vv == null ? void 0 : vv.anchors) == null ? void 0 : _n.palettes) == null ? void 0 : _o[props.palette]) == null ? void 0 : _p[props.color]) {
           output.push(vv.anchors.palettes[props.palette][props.color]);
         }
       }

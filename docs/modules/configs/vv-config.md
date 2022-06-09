@@ -34,7 +34,7 @@ import { VvConfig } from '@obewds/vueventus'
 
 ## Module Code
 
-<<< @/../../src/configs/VvConfig.js
+<<< @/../src/configs/VvConfig.js
 
 
 
