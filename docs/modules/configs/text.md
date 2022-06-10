@@ -29,6 +29,12 @@ The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for e
 import { Text } from '@obewds/vueventus'
 ```
 
+For the remainder of the examples for this component, assume the following declaration:
+
+```javascript
+let appText = Text
+```
+
 
 
 
@@ -37,10 +43,6 @@ import { Text } from '@obewds/vueventus'
 ## Text.cursor
 
 ```javascript
-import { Text } from '@obewds/vueventus'
-
-let appText = Text
-
 appText.align = ''
 ```
 
@@ -52,10 +54,6 @@ appText.align = ''
 ## Text.decoration
 
 ```javascript
-import { Text } from '@obewds/vueventus'
-
-let appText = Text
-
 appText.decoration = ''
 ```
 
@@ -67,10 +65,6 @@ appText.decoration = ''
 ## Text.family
 
 ```javascript
-import { Text } from '@obewds/vueventus'
-
-let appText = Text
-
 appText.family = ''
 ```
 
@@ -82,10 +76,6 @@ appText.family = ''
 ## Text.lineHeight
 
 ```javascript
-import { Text } from '@obewds/vueventus'
-
-let appText = Text
-
 appText.lineHeight = ''
 ```
 
@@ -97,10 +87,6 @@ appText.lineHeight = ''
 ## Text.sizes
 
 ```javascript
-import { Text } from '@obewds/vueventus'
-
-let appText = Text
-
 appText.sizes = {
     '5xs': '',
     '4xs': '',
@@ -133,10 +119,6 @@ appText.sizes = {
 ## Text.smoothing
 
 ```javascript
-import { Text } from '@obewds/vueventus'
-
-let appText = Text
-
 appText.smoothing = ''
 ```
 
@@ -148,10 +130,6 @@ appText.smoothing = ''
 ## Text.spacing
 
 ```javascript
-import { Text } from '@obewds/vueventus'
-
-let appText = Text
-
 appText.spacing = ''
 ```
 
@@ -163,10 +141,6 @@ appText.spacing = ''
 ## Text.weight
 
 ```javascript
-import { Text } from '@obewds/vueventus'
-
-let appText = Text
-
 appText.weight = ''
 ```
 
@@ -178,10 +152,6 @@ appText.weight = ''
 ## Text.wordBreak
 
 ```javascript
-import { Text } from '@obewds/vueventus'
-
-let appText = Text
-
 appText.wordBreak = ''
 ```
 

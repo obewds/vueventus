@@ -23,6 +23,12 @@ The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for B
 import { Buttons } from '@obewds/vueventus'
 ```
 
+For the remainder of the examples for this component, assume the following declaration:
+
+```javascript
+let appButtons = Buttons
+```
+
 
 
 
@@ -31,10 +37,6 @@ import { Buttons } from '@obewds/vueventus'
 ## Buttons.blockDisplay
 
 ```javascript
-import { Buttons } from '@obewds/vueventus'
-
-let appButtons = Buttons
-
 appButtons.blockDisplay = ''
 ```
 
@@ -46,10 +48,6 @@ appButtons.blockDisplay = ''
 ## Buttons.blockSizes
 
 ```javascript
-import { Buttons } from '@obewds/vueventus'
-
-let appButtons = Buttons
-
 appButtons.blockSizes = {
     '4xs': '',
     '3xs': '',
@@ -73,10 +71,6 @@ appButtons.blockSizes = {
 ## Buttons.border
 
 ```javascript
-import { Buttons } from '@obewds/vueventus'
-
-let appButtons = Buttons
-
 appButtons.border = ''
 ```
 
@@ -88,10 +82,6 @@ appButtons.border = ''
 ## Buttons.cursor
 
 ```javascript
-import { Buttons } from '@obewds/vueventus'
-
-let appButtons = Buttons
-
 appButtons.cursor = ''
 ```
 
@@ -103,10 +93,6 @@ appButtons.cursor = ''
 ## Buttons.disabled
 
 ```javascript
-import { Buttons } from '@obewds/vueventus'
-
-let appButtons = Buttons
-
 appButtons.disabled = ''
 ```
 
@@ -118,10 +104,6 @@ appButtons.disabled = ''
 ## Buttons.display
 
 ```javascript
-import { Buttons } from '@obewds/vueventus'
-
-let appButtons = Buttons
-
 appButtons.display = ''
 ```
 
@@ -133,10 +115,6 @@ appButtons.display = ''
 ## Buttons.focus
 
 ```javascript
-import { Buttons } from '@obewds/vueventus'
-
-let appButtons = Buttons
-
 appButtons.focus = ''
 ```
 
@@ -148,10 +126,6 @@ appButtons.focus = ''
 ## Buttons.sizes
 
 ```javascript
-import { Buttons } from '@obewds/vueventus'
-
-let appButtons = Buttons
-
 appButtons.sizes = {
     '4xs': '',
     '3xs': '',
@@ -175,10 +149,6 @@ appButtons.sizes = {
 ## Buttons.text
 
 ```javascript
-import { Buttons } from '@obewds/vueventus'
-
-let appButtons = Buttons
-
 appButtons.text = ''
 ```
 

@@ -33,9 +33,9 @@ import { InputValidation } from '@obewds/vueventus'
 ## Use
 
 ```javascript
-const bgDefault = InputValidation.default
-const bgError = InputValidation.error
-const bgSuccess = InputValidation.success
+const inputDefault = InputValidation.default
+const inputError = InputValidation.error
+const inputSuccess = InputValidation.success
 ```
 
 
