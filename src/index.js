@@ -14,6 +14,7 @@ export { default as GroundConsole } from './configs/palettes/GroundConsole.js'
 export { default as GroundDefault } from './configs/palettes/GroundDefault.js'
 export { default as GroundMonochromatic } from './configs/palettes/GroundMonochromatic.js'
 export { default as GroundPastel } from './configs/palettes/GroundPastel.js'
+export { default as InputValidation } from './configs/palettes/InputValidation.js'
 export { default as TextDefault } from './configs/palettes/TextDefault.js'
 
 // .src/helpers
