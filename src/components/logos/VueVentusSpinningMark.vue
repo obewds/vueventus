@@ -9,13 +9,13 @@
     import { computed } from 'vue'
 
     const props = defineProps({
-        enableSpin: {
-            type: Boolean,
-            default: true,
-        },
         animationClass: {
             type: String,
             default: 'animate-spin-reverse-4s',
+        },
+        enableAnimation: {
+            type: Boolean,
+            default: true,
         },
         fillOne: {
             type: String,
@@ -27,7 +27,7 @@
         },
     })
 
-    const classes = computed( () => props.enableSpin ? props.animationClass : '' )
+    const classes = computed( () => props.enableAnimation ? props.animationClass : '' )
 
 </script>
 

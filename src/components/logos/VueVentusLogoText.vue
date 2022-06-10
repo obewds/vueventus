@@ -9,7 +9,7 @@
     const props = defineProps({
         class: {
             type: String,
-            default: 'text-gray-900 dark:text-gray-100'
+            default: 'w-full fill-gray-900 dark:fill-gray-100'
         },
     })
 
