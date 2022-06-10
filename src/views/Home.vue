@@ -147,6 +147,10 @@
                 GroundPastel
             </DevViewLinkCard>
 
+            <DevViewLinkCard icon="palette" to="/configs/palettes/input-validation" :link-classes="tw.gridCardLinkPalette">
+                InputValidation
+            </DevViewLinkCard>
+
             <DevViewLinkCard icon="palette" to="/configs/palettes/text-default" :link-classes="tw.gridCardLinkPalette">
                 TextDefault
             </DevViewLinkCard>

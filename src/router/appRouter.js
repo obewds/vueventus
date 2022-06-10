@@ -18,6 +18,7 @@ import GroundConsolePage from '@/views/configs/palettes/GroundConsolePage.vue'
 import GroundDefaultPage from '@/views/configs/palettes/GroundDefaultPage.vue'
 import GroundMonochromaticPage from '@/views/configs/palettes/GroundMonochromaticPage.vue'
 import GroundPastelPage from '@/views/configs/palettes/GroundPastelPage.vue'
+import InputValidationPage from '@/views/configs/palettes/InputValidationPage.vue'
 import TextDefaultPage from '@/views/configs/palettes/TextDefaultPage.vue'
 
 // anchor component pages
@@ -101,6 +102,10 @@ const router = createRouter({
             name: 'GroundPastel Palette Config Module',
             component: GroundPastelPage,
             path: '/configs/palettes/ground-pastel'
+        },{
+            name: 'InputValidation Palette Config Module',
+            component: InputValidationPage,
+            path: '/configs/palettes/input-validation'
         },{
             name: 'TextDefault Palette Config Module',
             component: TextDefaultPage,
