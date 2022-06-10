@@ -26,6 +26,12 @@ The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for C
 import { Transitions } from '@obewds/vueventus'
 ```
 
+For the remainder of the examples for this component, assume the following declaration:
+
+```javascript
+let appTransitions = Transitions
+```
+
 
 
 
@@ -34,7 +40,7 @@ import { Transitions } from '@obewds/vueventus'
 ## Transitions.durations
 
 ```javascript
-durations: {
+appTransitions.durations = {
     '1200': '',
     '1150': '',
     '1100': '',
@@ -80,7 +86,7 @@ durations: {
 ## Transitions.easings
 
 ```javascript
-easings: {
+appTransitions.easings = {
     linear: '',
     in: '',
     out: '',
@@ -96,7 +102,7 @@ easings: {
 ## Transitions.transitions
 
 ```javascript
-transitions: {
+appTransitions.transitions = {
     linear: '',
     in: '',
     out: '',

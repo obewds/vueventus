@@ -26,6 +26,12 @@ The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for I
 import { Inputs } from '@obewds/vueventus'
 ```
 
+For the remainder of the examples for this component, assume the following declaration:
+
+```javascript
+let appInputs = Inputs
+```
+
 
 
 
@@ -36,10 +42,6 @@ import { Inputs } from '@obewds/vueventus'
 ## Inputs.display
 
 ```javascript
-import { Inputs } from '@obewds/vueventus'
-
-let appInputs = Inputs
-
 appInputs.display = ''
 ```
 
@@ -53,10 +55,6 @@ appInputs.display = ''
 ## Inputs.ring
 
 ```javascript
-import { Inputs } from '@obewds/vueventus'
-
-let appInputs = Inputs
-
 appInputs.ring = ''
 ```
 
@@ -70,10 +68,6 @@ appInputs.ring = ''
 ## Inputs.text
 
 ```javascript
-import { Inputs } from '@obewds/vueventus'
-
-let appInputs = Inputs
-
 appInputs.text = ''
 ```
 

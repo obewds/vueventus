@@ -26,6 +26,12 @@ The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for A
 import { Anchors } from '@obewds/vueventus'
 ```
 
+For the remainder of the examples for this component, assume the following declaration:
+
+```javascript
+let appAnchors = Anchors
+```
+
 
 
 
@@ -34,10 +40,6 @@ import { Anchors } from '@obewds/vueventus'
 ## Anchors.cursor
 
 ```javascript
-import { Anchors } from '@obewds/vueventus'
-
-let appAnchors = Anchors
-
 appAnchors.cursor = ''
 ```
 
@@ -49,10 +51,6 @@ appAnchors.cursor = ''
 ## Anchors.display
 
 ```javascript
-import { Anchors } from '@obewds/vueventus'
-
-let appAnchors = Anchors
-
 appAnchors.display = ''
 ```
 
@@ -64,10 +62,6 @@ appAnchors.display = ''
 ## Anchors.focus
 
 ```javascript
-import { Anchors } from '@obewds/vueventus'
-
-let appAnchors = Anchors
-
 appAnchors.focus = ''
 ```
 
@@ -90,10 +84,6 @@ The `Anchors.sizes` parameter object for the {{ $frontmatter.title }} is inheret
 ## Anchors.text
 
 ```javascript
-import { Anchors } from '@obewds/vueventus'
-
-let appAnchors = Anchors
-
 appAnchors.text = ''
 ```
 
