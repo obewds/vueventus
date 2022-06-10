@@ -20,6 +20,7 @@ title: Config Modules
 
 * [Anchors](/modules/configs/anchors)
 * [Buttons](/modules/configs/buttons)
+* [Inputs](/modules/configs/inputs)
 * [Text](/modules/configs/text)
 * [Transitions](/modules/configs/transitions)
 * [VvConfig](/modules/configs/vv-config)
