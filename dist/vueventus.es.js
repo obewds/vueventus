@@ -444,6 +444,11 @@ var VvConfig = {
     }
   }
 };
+var InputValidation = {
+  "default": "bg-gray-50 dark:bg-gray-800 focus:bg-white dark:focus:bg-gray-700 text-black dark:text-white border-gray-300 dark:border-black focus:ring-lightBlue-500 focus:border-lightBlue-500",
+  success: "bg-green-100 dark:bg-green-900 focus:bg-green-50 dark:focus:bg-green-800 text-black dark:text-white border-green-300 dark:border-black focus:ring-green-500 focus:border-green-500",
+  error: "bg-rose-100 dark:bg-rose-900 focus:bg-rose-50 dark:focus:bg-rose-800 text-black dark:text-white border-rose-300 dark:border-black focus:ring-rose-500 focus:border-rose-500"
+};
 var isMergeableObject = function isMergeableObject2(value) {
   return isNonNullObject(value) && !isSpecial(value);
 };
@@ -1106,7 +1111,7 @@ const _sfc_main$1 = {
   props: {
     class: {
       type: String,
-      default: "text-gray-900 dark:text-gray-100"
+      default: "w-full fill-gray-900 dark:fill-gray-100"
     }
   },
   setup(__props) {
@@ -1125,13 +1130,13 @@ const _hoisted_2 = ["fill"];
 const _sfc_main = {
   __name: "VueVentusSpinningMark",
   props: {
-    enableSpin: {
-      type: Boolean,
-      default: true
-    },
     animationClass: {
       type: String,
       default: "animate-spin-reverse-4s"
+    },
+    enableAnimation: {
+      type: Boolean,
+      default: true
     },
     fillOne: {
       type: String,
@@ -1144,7 +1149,7 @@ const _sfc_main = {
   },
   setup(__props) {
     const props = __props;
-    const classes = computed(() => props.enableSpin ? props.animationClass : "");
+    const classes = computed(() => props.enableAnimation ? props.animationClass : "");
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("svg", {
         class: normalizeClass(unref(classes)),
@@ -1169,4 +1174,4 @@ const _sfc_main = {
     };
   }
 };
-export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, Text, TextDefault, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, _sfc_main$1 as VueVentusLogoText, _sfc_main as VueVentusSpinningMark, _sfc_main$5 as VvAnchor, _sfc_main$4 as VvButton, _sfc_main$3 as VvColorModeButton, VvConfig, _sfc_main$2 as VvEl, mergeWithVvConfig };
+export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, InputValidation, Text, TextDefault, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, _sfc_main$1 as VueVentusLogoText, _sfc_main as VueVentusSpinningMark, _sfc_main$5 as VvAnchor, _sfc_main$4 as VvButton, _sfc_main$3 as VvColorModeButton, VvConfig, _sfc_main$2 as VvEl, mergeWithVvConfig };
