@@ -210,6 +210,13 @@ function sidebarComponents() {
             items: [
                 { text: 'VvEl', link: '/components/elements/vv-el' },
             ]
+        },{
+            text: 'Logo Components',
+            collapsible: true,
+            items: [
+                { text: 'VueVentusLogoText', link: '/components/logos/vueventus-logo-text' },
+                { text: 'VueVentusSpinningMark', link: '/components/logos/vueventus-spinning-market' },
+            ]
         }
     ]
 }

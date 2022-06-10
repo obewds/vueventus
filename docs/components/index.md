@@ -28,6 +28,18 @@ The VueVentus component system comes with a variety of {{ $frontmatter.title }} 
 
 
 
+## Anchor {{ $frontmatter.title }}
+
+HTML `<a>` element based {{ $frontmatter.title }}.
+
+* [VvAnchor](/components/anchors/vv-anchor)
+
+
+
+
+
+
+
 ## Button {{ $frontmatter.title }}
 
 HTML `<button>` element based {{ $frontmatter.title }}.
@@ -43,9 +55,22 @@ HTML `<button>` element based {{ $frontmatter.title }}.
 
 ## Element {{ $frontmatter.title }}
 
-Specific or variable HTML element based {{ $frontmatter.title }}.
+Variable HTML element based {{ $frontmatter.title }}.
 
 * [VvEl](/components/elements/vv-el)
+
+
+
+
+
+
+
+## Logo {{ $frontmatter.title }}
+
+VueVentus brand `<svg>` element based {{ $frontmatter.title }}. These components are included in the package both to allow downstream devs/designers to include tech stack information into an end app (thank you kindly :smiling_face_with_three_hearts:), as well as giving desingers/developers examples of how to use VueVentus with SVGs and Tailwind CSS animation-based atomic classes.
+
+* [VueVentusLogoText](/components/logos/vueventus-logo-text)
+* [VueVentusSpinningMark](/components/logos/vueventus-spinning-market)
 
 
 
