@@ -3,7 +3,7 @@
     "spin-3s": "spin 3s linear infinite",
     "spin-4s": "spin 4s linear infinite",
     "spin-5s": "spin 5s linear infinite",
-    "spin-reverse-1s": "spin-reverse 1s linear infinite",
+    "spin-reverse": "spin-reverse 1s linear infinite",
     "spin-reverse-2s": "spin-reverse 2s linear infinite",
     "spin-reverse-3s": "spin-reverse 3s linear infinite",
     "spin-reverse-4s": "spin-reverse 4s linear infinite",
