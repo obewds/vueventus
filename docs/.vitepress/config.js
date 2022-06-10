@@ -168,6 +168,7 @@ function sidebarModules() {
                 { text: 'GroundDefault', link: '/modules/palettes/ground-default' },
                 { text: 'GroundMonochromatic', link: '/modules/palettes/ground-monochromatic' },
                 { text: 'GroundPastel', link: '/modules/palettes/ground-pastel' },
+                { text: 'InputValidation', link: '/modules/palettes/input-validation' },
                 { text: 'TextDefault', link: '/modules/palettes/text-default' },
             ]
         },{
