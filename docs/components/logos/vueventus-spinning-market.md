@@ -127,7 +127,7 @@ The {{ $frontmatter.title }} `fillOne` prop sets the color code for two of the f
 ## Prop: fillTwo
 
 Type: **`String`**  
-Default: **`"#41b883"`**
+Default: **`"#2298bd"`**
 
 The {{ $frontmatter.title }} `fillTwo` prop sets the color code for the other two of the four mark shapes that the `fillOne` prop doesn't cover.
 
