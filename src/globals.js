@@ -40,6 +40,11 @@ export default {
             { name: 'Secondary', key: 'secondary' },
             { name: 'Success', key: 'success' },
         ],
+        inputColors: [
+            { name: 'Default', key: 'default' },
+            { name: 'Error', key: 'error' },
+            { name: 'Success', key: 'success' },
+        ],
         textSizes: [
             { name: '4xs', maxWidth: 'max-w-md' },
             { name: '3xs', maxWidth: 'max-w-md' },

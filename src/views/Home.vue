@@ -75,6 +75,26 @@
 
 
         <div :class="tw.subhead">
+            VUE LOGO COMPONENTS
+        </div>
+
+        <div :class="[tw.grid, 'grid-cols-1 sm:grid-cols-2']">
+
+            <DevViewLinkCard icon="component" to="/components/logos/vueventus-logo-text">
+                VueVentusLogoText
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="component" to="/components/logos/vueventus-spinning-mark">
+                VueVentusSpinningMark
+            </DevViewLinkCard>
+
+        </div>
+
+
+
+
+
+        <div :class="tw.subhead">
             CONFIG MODULES
         </div>
 
@@ -145,6 +165,10 @@
 
             <DevViewLinkCard icon="palette" to="/configs/palettes/ground-pastel" :link-classes="tw.gridCardLinkPalette">
                 GroundPastel
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="palette" to="/configs/palettes/input-validation" :link-classes="tw.gridCardLinkPalette">
+                InputValidation
             </DevViewLinkCard>
 
             <DevViewLinkCard icon="palette" to="/configs/palettes/text-default" :link-classes="tw.gridCardLinkPalette">

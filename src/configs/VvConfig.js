@@ -1,5 +1,6 @@
 import Anchors from './Anchors.js'
 import Buttons from './Buttons.js'
+import Inputs from './Inputs.js'
 import Text from './Text.js'
 import Transitions from './Transitions.js'
 
@@ -11,6 +12,7 @@ import GroundConsole from './palettes/GroundConsole.js'
 import GroundDefault from './palettes/GroundDefault.js'
 import GroundMonochromatic from './palettes/GroundMonochromatic.js'
 import GroundPastel from './palettes/GroundPastel.js'
+import InputValidation from './palettes/InputValidation.js'
 import TextDefault from './palettes/TextDefault.js'
 
 export default {
@@ -33,6 +35,12 @@ export default {
         palettes: {
             outline: ButtonOutline,
             solid: ButtonSolid,
+        },
+    },
+    inputs: {
+        ...Inputs,
+        palettes: {
+            validation: InputValidation,
         },
     },
     colorMode: {

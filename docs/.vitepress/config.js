@@ -150,6 +150,7 @@ function sidebarModules() {
                 { text: 'Config Modules', link: '/modules/configs/' },
                 { text: 'Anchors', link: '/modules/configs/anchors' },
                 { text: 'Buttons', link: '/modules/configs/buttons' },
+                { text: 'Inputs', link: '/modules/configs/inputs' },
                 { text: 'Text', link: '/modules/configs/text' },
                 { text: 'Transitions', link: '/modules/configs/transitions' },
                 { text: 'VvConfig', link: '/modules/configs/vv-config' },
@@ -168,6 +169,7 @@ function sidebarModules() {
                 { text: 'GroundDefault', link: '/modules/palettes/ground-default' },
                 { text: 'GroundMonochromatic', link: '/modules/palettes/ground-monochromatic' },
                 { text: 'GroundPastel', link: '/modules/palettes/ground-pastel' },
+                { text: 'InputValidation', link: '/modules/palettes/input-validation' },
                 { text: 'TextDefault', link: '/modules/palettes/text-default' },
             ]
         },{

@@ -27,6 +27,7 @@ title: Palette Config Modules
 * [GroundDefault](/modules/palettes/ground-default)
 * [GroundMonochromatic](/modules/palettes/ground-monochromatic)
 * [GroundPastel](/modules/palettes/ground-pastel)
+* [InputValidation](/modules/palettes/input-validation)
 * [TextDefault](/modules/palettes/text-default)
 
 

@@ -1,6 +1,7 @@
 // .src/configs
 export { default as Anchors } from './configs/Anchors.js'
 export { default as Buttons } from './configs/Buttons.js'
+export { default as Inputs } from './configs/Inputs.js'
 export { default as Text } from './configs/Text.js'
 export { default as Transitions } from './configs/Transitions.js'
 export { default as VvConfig } from './configs/VvConfig.js'

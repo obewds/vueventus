@@ -18,6 +18,7 @@ import GroundConsolePage from '@/views/configs/palettes/GroundConsolePage.vue'
 import GroundDefaultPage from '@/views/configs/palettes/GroundDefaultPage.vue'
 import GroundMonochromaticPage from '@/views/configs/palettes/GroundMonochromaticPage.vue'
 import GroundPastelPage from '@/views/configs/palettes/GroundPastelPage.vue'
+import InputValidationPage from '@/views/configs/palettes/InputValidationPage.vue'
 import TextDefaultPage from '@/views/configs/palettes/TextDefaultPage.vue'
 
 // anchor component pages
@@ -29,6 +30,11 @@ import VvColorModeButtonPage from '@/views/components/buttons/VvColorModeButtonP
 
 // element component pages
 import VvElPage from '@/views/components/elements/VvElPage.vue'
+
+// logo component pages
+import VueVentusLogoTextPage from '@/views/components/logos/VueVentusLogoTextPage.vue'
+import VueVentusSpinningMarkPage from '@/views/components/logos/VueVentusSpinningMarkPage.vue'
+
 
 const router = createRouter({
     history: createWebHistory(),
@@ -102,6 +108,10 @@ const router = createRouter({
             component: GroundPastelPage,
             path: '/configs/palettes/ground-pastel'
         },{
+            name: 'InputValidation Palette Config Module',
+            component: InputValidationPage,
+            path: '/configs/palettes/input-validation'
+        },{
             name: 'TextDefault Palette Config Module',
             component: TextDefaultPage,
             path: '/configs/palettes/text-default'
@@ -139,6 +149,20 @@ const router = createRouter({
             name: 'VvEl Component',
             component: VvElPage,
             path: '/components/elements/vv-el'
+        },
+        
+        //
+        // logo component pages
+        //
+
+        {
+            name: 'VueVentusLogoText Component',
+            component: VueVentusLogoTextPage,
+            path: '/components/logos/vueventus-logo-text'
+        },{
+            name: 'VueVentusSpinningMark Component',
+            component: VueVentusSpinningMarkPage,
+            path: '/components/logos/vueventus-spinning-mark'
         },
 
     ],
