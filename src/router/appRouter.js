@@ -31,6 +31,11 @@ import VvColorModeButtonPage from '@/views/components/buttons/VvColorModeButtonP
 // element component pages
 import VvElPage from '@/views/components/elements/VvElPage.vue'
 
+// logo component pages
+import VueVentusLogoTextPage from '@/views/components/logos/VueVentusLogoTextPage.vue'
+import VueVentusSpinningMarkPage from '@/views/components/logos/VueVentusSpinningMarkPage.vue'
+
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -144,6 +149,20 @@ const router = createRouter({
             name: 'VvEl Component',
             component: VvElPage,
             path: '/components/elements/vv-el'
+        },
+        
+        //
+        // logo component pages
+        //
+
+        {
+            name: 'VueVentusLogoText Component',
+            component: VueVentusLogoTextPage,
+            path: '/components/logos/vueventus-logo-text'
+        },{
+            name: 'VueVentusSpinningMark Component',
+            component: VueVentusSpinningMarkPage,
+            path: '/components/logos/vueventus-spinning-mark'
         },
 
     ],
