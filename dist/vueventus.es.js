@@ -211,6 +211,18 @@ var Buttons = {
     ].join(" ");
   }
 };
+var Inputs = {
+  display: "block w-full",
+  ring: "ring-opacity-50",
+  text: "text-sm",
+  base: function() {
+    return [
+      this.display,
+      this.ring,
+      this.text
+    ].join(" ");
+  }
+};
 var Transitions = {
   durations: {
     "1200": "duration-1200",
@@ -354,6 +366,11 @@ var GroundPastel = {
   secondary: "text-black bg-violet-200 dark:bg-violet-300",
   success: "text-black bg-green-300 dark:bg-green-400"
 };
+var InputValidation = {
+  "default": "bg-gray-50 dark:bg-gray-800 focus:bg-white dark:focus:bg-gray-700 text-black dark:text-white border-gray-300 dark:border-black focus:ring-lightBlue-500 focus:border-lightBlue-500",
+  success: "bg-green-100 dark:bg-green-900 focus:bg-green-50 dark:focus:bg-green-800 text-black dark:text-white border-green-300 dark:border-black focus:ring-green-500 focus:border-green-500",
+  error: "bg-rose-100 dark:bg-rose-900 focus:bg-rose-50 dark:focus:bg-rose-800 text-black dark:text-white border-rose-300 dark:border-black focus:ring-rose-500 focus:border-rose-500"
+};
 var TextDefault = {
   "default": "",
   error: "text-rose-500 dark:text-rose-300",
@@ -376,6 +393,11 @@ var VvConfig = {
     palettes: {
       outline: ButtonOutline,
       solid: ButtonSolid
+    }
+  }),
+  inputs: __spreadProps(__spreadValues({}, Inputs), {
+    palettes: {
+      validation: InputValidation
     }
   }),
   colorMode: {
@@ -443,11 +465,6 @@ var VvConfig = {
       textColor: "default"
     }
   }
-};
-var InputValidation = {
-  "default": "bg-gray-50 dark:bg-gray-800 focus:bg-white dark:focus:bg-gray-700 text-black dark:text-white border-gray-300 dark:border-black focus:ring-lightBlue-500 focus:border-lightBlue-500",
-  success: "bg-green-100 dark:bg-green-900 focus:bg-green-50 dark:focus:bg-green-800 text-black dark:text-white border-green-300 dark:border-black focus:ring-green-500 focus:border-green-500",
-  error: "bg-rose-100 dark:bg-rose-900 focus:bg-rose-50 dark:focus:bg-rose-800 text-black dark:text-white border-rose-300 dark:border-black focus:ring-rose-500 focus:border-rose-500"
 };
 var isMergeableObject = function isMergeableObject2(value) {
   return isNonNullObject(value) && !isSpecial(value);
@@ -1174,4 +1191,4 @@ const _sfc_main = {
     };
   }
 };
-export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, InputValidation, Text, TextDefault, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, _sfc_main$1 as VueVentusLogoText, _sfc_main as VueVentusSpinningMark, _sfc_main$5 as VvAnchor, _sfc_main$4 as VvButton, _sfc_main$3 as VvColorModeButton, VvConfig, _sfc_main$2 as VvEl, mergeWithVvConfig };
+export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, InputValidation, Inputs, Text, TextDefault, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, _sfc_main$1 as VueVentusLogoText, _sfc_main as VueVentusSpinningMark, _sfc_main$5 as VvAnchor, _sfc_main$4 as VvButton, _sfc_main$3 as VvColorModeButton, VvConfig, _sfc_main$2 as VvEl, mergeWithVvConfig };

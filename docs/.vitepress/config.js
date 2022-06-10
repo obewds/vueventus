@@ -150,6 +150,7 @@ function sidebarModules() {
                 { text: 'Config Modules', link: '/modules/configs/' },
                 { text: 'Anchors', link: '/modules/configs/anchors' },
                 { text: 'Buttons', link: '/modules/configs/buttons' },
+                { text: 'Inputs', link: '/modules/configs/inputs' },
                 { text: 'Text', link: '/modules/configs/text' },
                 { text: 'Transitions', link: '/modules/configs/transitions' },
                 { text: 'VvConfig', link: '/modules/configs/vv-config' },
