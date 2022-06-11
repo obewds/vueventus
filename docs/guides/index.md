@@ -31,6 +31,7 @@ But first, you'll need to choose your path for installation:
 
 * [Install with Vite.js](/guides/install-vite)
 * [Install with Vue CLI](/guides/install-vue-cli)
+* [Install with Nuxt.js 3](/guides/install-nuxt)
 * [Install with VILT Stack](/guides/install-vilt-stack)
 
 ::: warning 

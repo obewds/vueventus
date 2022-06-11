@@ -118,6 +118,7 @@ function sidebarGuides() {
             { text: 'Getting Started', link: '/guides/' },
             { text: 'Install with Vite.js', link: '/guides/install-vite' },
             { text: 'Install with Vue CLI', link: '/guides/install-vue-cli' },
+            { text: 'Install with Nuxt.js 3', link: '/guides/install-nuxt' },
             { text: 'Install with VILT Stack', link: '/guides/install-vilt-stack' },
             { text: 'Configuration', link: '/guides/configuration' },
             { text: 'Test Drive: VvButton', link: '/guides/test-drive-vv-button' },
