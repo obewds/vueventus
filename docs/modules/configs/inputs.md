@@ -80,6 +80,9 @@ Inputs.ring = ''
 
 ## Inputs.text
 
+Type: **`String`**  
+Default: **`"{{ Inputs.text }}"`**
+
 The `Inputs.text` parameter is meant to isolate the text orientated characteristics and requirements for an application's input elements.
 
 !!!include(snippets/avoidingVueVentusAbstractsTip.md)!!!
