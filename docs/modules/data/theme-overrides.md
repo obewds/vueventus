@@ -16,7 +16,7 @@ title: Theme Overrides
 
 VueVentus {{ $frontmatter.title }} are simple and static JSON object data files that contain Tailwind CSS specific property names and values for your app's Tailwind CSS config file.
 
-{{ $frontmatter.title }} themselves sometimes add entirely new nomenclature to Tailwind CSS defaults, and therefore don't necessilarily follow the naming conventions of Tailwind's awesome defaults. That said, the naming conventions used aren't far off in most cases.
+{{ $frontmatter.title }} themselves sometimes add entirely new nomenclature to Tailwind CSS defaults, and therefore don't necessarily follow the naming conventions of Tailwind's awesome defaults. That said, the naming conventions used aren't far off in most cases.
 
 
 
