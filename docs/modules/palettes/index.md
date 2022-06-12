@@ -16,7 +16,7 @@ title: Palette Config Modules
 
 !!!include(snippets/alphaStageWarning.md)!!!
 
-{{ $frontmatter.title }} are subset of config modules specifically meant for atomic color class groupings. They are intented to be used with contextual language to humanize visual color state classes for various states of application elements.
+{{ $frontmatter.title }} are subset of config modules specifically meant for atomic color class groupings. They are intended to be used with contextual language to humanize visual color state classes for various states of application elements.
 
 
 * [AnchorDefault](/modules/palettes/anchor-default)
@@ -63,7 +63,16 @@ This means you can access color palettes for the characteristics above at any ti
 
 When used in combination and with parents and children, there's a staggering amount of color control and interface complexity that becomes possible by leveraging strategic and state-focused _groups_ of atomic classes.
 
-### Ground & Text Palette Overlaps
+
+
+
+
+
+
+
+
+
+## Ground & Text Palette Overlaps
 
 ::: warning 
 Be aware that due to accessibility being a highest order concept in the VueVentus premise, there is a sometimes confusing overlap in two of the global palette characteristics: **Grounds** and **Text**.
