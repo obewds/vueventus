@@ -141,7 +141,7 @@ function sidebarModules() {
             items: [
                 { text: 'Tailwind Modules', link: '/modules/data/' },
                 { text: 'Theme Extenders', link: '/modules/data/theme-extenders' },
-                { text: 'Theme Additions', link: '/modules/data/theme-additions' },
+                { text: 'Theme Overrides', link: '/modules/data/theme-overrides' },
                 { text: 'App Color Data', link: '/modules/data/app-color-data' },
             ]
         },{

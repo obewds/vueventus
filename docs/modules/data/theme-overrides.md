@@ -1,5 +1,5 @@
 ---
-title: Theme Additions
+title: Theme Overrides
 ---
 
 <script setup>
