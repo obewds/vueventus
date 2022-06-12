@@ -4,6 +4,7 @@ title: Text Config Module
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+    import Text from '../../../src/configs/Text.js'
 </script>
 
 
@@ -16,7 +17,7 @@ title: Text Config Module
 
 {{ $frontmatter.title }} documentation coming soon!
 
-The {{ $frontmatter.title }} holds your application's default/prototypal Tailwind CSS classes for elements/coponents containing rendered text string in your application, excluding color and color palette classes (see [Palette Config Modules](/modules/palettes/) for more info about palette modules).
+The {{ $frontmatter.title }} holds your application's default/prototypal Tailwind CSS classes for elements/components containing rendered text string in your application, excluding color and color palette classes (see [Palette Config Modules](/modules/palettes/) for more info about palette modules).
 
 
 
@@ -29,25 +30,17 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 import { Text } from '@obewds/vueventus'
 ```
 
-<!-- #TODO: update doc by removing example below and replacing all examples referencing this variable on this docs page -->
-
-For the remainder of the examples for this component, assume the following declaration:
-
-```javascript
-let appText = Text
-```
 
 
 
 
 
-
-## Text.cursor
+## Text.align
 
 <!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
-appText.align = ''
+Text.align = ''
 ```
 
 
@@ -60,7 +53,7 @@ appText.align = ''
 <!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
-appText.decoration = ''
+Text.decoration = ''
 ```
 
 
@@ -73,7 +66,7 @@ appText.decoration = ''
 <!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
-appText.family = ''
+Text.family = ''
 ```
 
 
@@ -86,7 +79,7 @@ appText.family = ''
 <!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
-appText.lineHeight = ''
+Text.lineHeight = ''
 ```
 
 
@@ -99,7 +92,7 @@ appText.lineHeight = ''
 <!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
-appText.sizes = {
+Text.sizes = {
     '5xs': '',
     '4xs': '',
     '3xs': '',
@@ -133,7 +126,7 @@ appText.sizes = {
 <!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
-appText.smoothing = ''
+Text.smoothing = ''
 ```
 
 
@@ -146,7 +139,7 @@ appText.smoothing = ''
 <!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
-appText.spacing = ''
+Text.spacing = ''
 ```
 
 
@@ -159,7 +152,7 @@ appText.spacing = ''
 <!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
-appText.weight = ''
+Text.weight = ''
 ```
 
 
@@ -172,7 +165,7 @@ appText.weight = ''
 <!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
-appText.wordBreak = ''
+Text.wordBreak = ''
 ```
 
 

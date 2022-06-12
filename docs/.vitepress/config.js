@@ -191,7 +191,7 @@ function sidebarComponents() {
             text: 'Components',
             collapsible: true,
             items: [
-                { text: 'Components', link: '/components/' },
+                { text: 'Vue Components', link: '/components/' },
                 { text: 'Prop Validators', link: '/components/prop-validators' },
             ]
         },{

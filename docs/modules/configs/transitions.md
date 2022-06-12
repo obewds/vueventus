@@ -4,6 +4,7 @@ title: Transitions Config Module
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+    import Transitions from '../../../src/configs/Transitions.js'
 </script>
 
 
@@ -26,14 +27,6 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 import { Transitions } from '@obewds/vueventus'
 ```
 
-<!-- #TODO: update doc by removing example below and replacing all examples referencing this variable on this docs page -->
-
-For the remainder of the examples for this component, assume the following declaration:
-
-```javascript
-let appTransitions = Transitions
-```
-
 
 
 
@@ -44,7 +37,7 @@ let appTransitions = Transitions
 <!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
-appTransitions.durations = {
+Transitions.durations = {
     '1200': '',
     '1150': '',
     '1100': '',
@@ -92,7 +85,7 @@ appTransitions.durations = {
 <!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
-appTransitions.easings = {
+Transitions.easings = {
     linear: '',
     in: '',
     out: '',
@@ -110,7 +103,7 @@ appTransitions.easings = {
 <!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
-appTransitions.transitions = {
+Transitions.transitions = {
     linear: '',
     in: '',
     out: '',

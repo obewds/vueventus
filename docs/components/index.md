@@ -1,5 +1,5 @@
 ---
-title: Components
+title: Vue Components
 ---
 
 <script setup>
@@ -28,7 +28,7 @@ The VueVentus component system comes with a variety of {{ $frontmatter.title }} 
 
 
 
-## Anchor {{ $frontmatter.title }}
+## Anchor Components
 
 HTML `<a>` element based {{ $frontmatter.title }}.
 
@@ -40,7 +40,7 @@ HTML `<a>` element based {{ $frontmatter.title }}.
 
 
 
-## Button {{ $frontmatter.title }}
+## Button Components
 
 HTML `<button>` element based {{ $frontmatter.title }}.
 
@@ -53,7 +53,7 @@ HTML `<button>` element based {{ $frontmatter.title }}.
 
 
 
-## Element {{ $frontmatter.title }}
+## Element Components
 
 Variable HTML element based {{ $frontmatter.title }}.
 
@@ -65,7 +65,7 @@ Variable HTML element based {{ $frontmatter.title }}.
 
 
 
-## Logo {{ $frontmatter.title }}
+## Logo Components
 
 VueVentus brand `<svg>` element based {{ $frontmatter.title }}. These components are included in the package both to allow downstream devs/designers to include tech stack information into an end app (thank you kindly :smiling_face_with_three_hearts:), as well as giving designers/developers examples of how to use VueVentus with SVGs and Tailwind CSS animation-based atomic classes.
 
