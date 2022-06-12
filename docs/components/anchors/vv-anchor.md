@@ -4,7 +4,7 @@ title: VvAnchor Component
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
-    import { VvAnchor } from '../../../src/index'
+    import { VvAnchor, VvConfig } from '../../../src/index'
     import appColors from '../../../src/data/app.color.data.json'
 
     const grayColorStyles = {
@@ -41,9 +41,7 @@ import { VvAnchor } from '@obewds/vueventus'
 ## Prop: button
 
 Type: **`Boolean`**  
-Default: **`VvConfig.defaults.VvAnchor.button`**
-
-<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+Default: **`{{ VvConfig.defaults.VvAnchor.button }}`**
 
 When the {{ $frontmatter.title }} `button` prop value is `true`, the output element changes from normal anchor element styling set in the [Anchor Config Module](/modules/configs/anchors) to button styling that is driven by the Tailwind CSS classes in the [Button Config Module](/modules/configs/buttons).
 
@@ -83,9 +81,7 @@ When the {{ $frontmatter.title }} `button` prop value is `true`, the output elem
 ## Prop: buttonBlock
 
 Type: **`Boolean`**  
-Default: **`VvConfig.defaults.VvAnchor.buttonBlock`**
-
-<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+Default: **`{{ VvConfig.defaults.VvAnchor.buttonBlock }}`**
 
 The {{ $frontmatter.title }} `buttonBlock` prop sets the component instance to use block-level base classes making the returned `<a>` element a full width and block-level button styled element.
 
@@ -121,9 +117,7 @@ The {{ $frontmatter.title }} `buttonBlock` prop sets the component instance to u
 ## Prop: buttonFab
 
 Type: **`Boolean`**  
-Default: **`VvConfig.defaults.VvAnchor.buttonFab`**
-
-<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+Default: **`{{ VvConfig.defaults.VvAnchor.buttonFab }}`**
 
 The {{ $frontmatter.title }} `buttonFab` prop sets the component instance to use base classes with equal width and height classes making the returned `<anchor>` element a square element that can also be styled as a circle using a Tailwind CSS `.rounded-full` class.
 
@@ -171,9 +165,7 @@ The {{ $frontmatter.title }} `buttonFab` prop sets the component instance to use
 ## Prop: buttonSize
 
 Type: **`String`**  
-Default: **`VvConfig.defaults.VvAnchor.buttonSize`**
-
-<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+Default: **`"{{ VvConfig.defaults.VvAnchor.buttonSize }}"`**
 
 The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classes applied to the output element. By default, these classes match the size classes (and examples) over in the [VvButton Prop: Size](/components/buttons/vv-button#prop-size) docs section.
 
@@ -214,15 +206,13 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 ## Prop: color
 
 Type: **`String`**  
-Default: **`VvConfig.defaults.VvAnchor.color`**
-
-<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+Default: **`"{{ VvConfig.defaults.VvAnchor.color }}"`**
 
 The {{ $frontmatter.title }} `color` prop sets the component instance color based both on the `color` prop and the `palette` prop values together with the `button` prop value.
 
-If the `button` prop value is `false` and the component is being used to output a visully text styled `<anchor>` element, then the `color` prop value pulls a color from an anchor palette.
+If the `button` prop value is `false` and the component is being used to output a visually text styled `<anchor>` element, then the `color` prop value pulls a color from an anchor palette.
 
-Conversely, if the `button` prop value is `true` and button mode is enabled to output a visully text styled `<button>` element, then the `color` prop value is pulls a color from a button palette.
+Conversely, if the `button` prop value is `true` and button mode is enabled to output a visually text styled `<button>` element, then the `color` prop value is pulls a color from a button palette.
 
 !!!include(snippets/vvAnchorCompoPaletteButtonTip.md)!!!
 
@@ -277,9 +267,7 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 ## Prop: external
 
 Type: **`Boolean`**  
-Default: **`VvConfig.defaults.VvAnchor.external`**
-
-<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+Default: **`{{ VvConfig.defaults.VvAnchor.external }}`**
 
 When the {{ $frontmatter.title }} `external` prop value is `true`, the output `<anchor>` element will have a `target="_blank"` and `rel="noopener noreferrer"` attributes/values so links that leave the application space open in a new tab for users.
 
@@ -311,9 +299,7 @@ When the {{ $frontmatter.title }} `external` prop value is `true`, the output `<
 ## Prop: href
 
 Type: **`String`**  
-Default: **`VvConfig.defaults.VvAnchor.href`**
-
-<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+Default: **`"{{ VvConfig.defaults.VvAnchor.href }}"`**
 
 The {{ $frontmatter.title }} `href` prop value sets the href value for the output `<a>` element.
 
@@ -343,15 +329,13 @@ The {{ $frontmatter.title }} `href` prop value sets the href value for the outpu
 ## Prop: palette
 
 Type: **`String`**  
-Default: **`VvConfig.defaults.VvAnchor.palette`**
-
-<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+Default: **`"{{ VvConfig.defaults.VvAnchor.palette }}"`**
 
 The {{ $frontmatter.title }} `palette` prop sets the component instance color based both on the `palette` prop and the `color` prop values together with the `button` prop value.
 
-If the `button` prop value is `false` and the component is being used to output a visully text styled `<anchor>` element, then the `palette` prop value points to an anchor palette.
+If the `button` prop value is `false` and the component is being used to output a visually text styled `<anchor>` element, then the `palette` prop value points to an anchor palette.
 
-Conversely, if the `button` prop value is `true` and button mode is enabled to output a visully text styled `<button>` element, then the `color` prop value points to a button palette.
+Conversely, if the `button` prop value is `true` and button mode is enabled to output a visually text styled `<button>` element, then the `color` prop value points to a button palette.
 
 !!!include(snippets/vvAnchorCompoPaletteButtonTip.md)!!!
 
@@ -451,9 +435,7 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 ## Prop: transitionClasses
 
 Type: **`String`**  
-Default: **`VvConfig.transitions.classes()`**
-
-<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+Default: **`"{{ VvConfig.transitions.classes() }}"`**
 
 The {{ $frontmatter.title }} `transitionClasses` prop value sets the Tailwind CSS transition group classes that are applied to the output `<a>` element.
 
