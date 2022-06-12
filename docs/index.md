@@ -28,7 +28,7 @@ features:
     title: Production Focused
     details: You are in control of your atomic class configurations, and can prune CSS payloads down to DRY goodness on both macro and micro levels.
 sidebar: false
-heroImage: /images/vue-ventus-mark-and-favicon.png
+# heroImage: /vueventus/images/vue-ventus-mark-and-favicon.png
 # home: true
 # heroImage: /images/vue-ventus-mark-and-favicon.png
 # heroAlt: VueVentus logo mark fan shape with blue and green blades
