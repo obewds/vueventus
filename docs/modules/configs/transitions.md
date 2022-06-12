@@ -14,7 +14,7 @@ title: Transitions Config Module
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for CSS transitions throughout your application.
+The {{ $frontmatter.title }} holds your application's default/prototypal Tailwind CSS classes for CSS transitions throughout your application.
 
 
 
