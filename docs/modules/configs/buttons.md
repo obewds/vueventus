@@ -4,13 +4,14 @@ title: Buttons Config Module
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+    import Buttons from '../../../src/configs/Buttons.js'
 </script>
 
 
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for Button elements in your application, excluding color and color palette classes (see [Palette Config Modules](/modules/palettes/) for more info about palette modules).
+The {{ $frontmatter.title }} holds your application's default/prototypal Tailwind CSS classes for Button elements in your application, excluding color and color palette classes (see [Palette Config Modules](/modules/palettes/) for more info about palette modules).
 
 
 
@@ -23,12 +24,6 @@ The {{ $frontmatter.title }} holds your application's Tailwind CSS classes for B
 import { Buttons } from '@obewds/vueventus'
 ```
 
-For the remainder of the examples for this component, assume the following declaration:
-
-```javascript
-let appButtons = Buttons
-```
-
 
 
 
@@ -36,8 +31,11 @@ let appButtons = Buttons
 
 ## Buttons.blockDisplay
 
+Type: **`String`**  
+Default: **`"{{ Buttons.blockDisplay }}"`**
+
 ```javascript
-appButtons.blockDisplay = ''
+Buttons.blockDisplay = ''
 ```
 
 
@@ -48,7 +46,7 @@ appButtons.blockDisplay = ''
 ## Buttons.blockSizes
 
 ```javascript
-appButtons.blockSizes = {
+Buttons.blockSizes = {
     '4xs': '',
     '3xs': '',
     '2xs': '',
@@ -70,8 +68,11 @@ appButtons.blockSizes = {
 
 ## Buttons.border
 
+Type: **`String`**  
+Default: **`"{{ Buttons.border }}"`**
+
 ```javascript
-appButtons.border = ''
+Buttons.border = ''
 ```
 
 
@@ -81,8 +82,11 @@ appButtons.border = ''
 
 ## Buttons.cursor
 
+Type: **`String`**  
+Default: **`"{{ Buttons.cursor }}"`**
+
 ```javascript
-appButtons.cursor = ''
+Buttons.cursor = ''
 ```
 
 
@@ -92,8 +96,11 @@ appButtons.cursor = ''
 
 ## Buttons.disabled
 
+Type: **`String`**  
+Default: **`"{{ Buttons.disabled }}"`**
+
 ```javascript
-appButtons.disabled = ''
+Buttons.disabled = ''
 ```
 
 
@@ -103,8 +110,11 @@ appButtons.disabled = ''
 
 ## Buttons.display
 
+Type: **`String`**  
+Default: **`"{{ Buttons.display }}"`**
+
 ```javascript
-appButtons.display = ''
+Buttons.display = ''
 ```
 
 
@@ -112,10 +122,49 @@ appButtons.display = ''
 
 
 
-## Buttons.focus
+## Buttons.fabDisplay
+
+Type: **`String`**  
+Default: **`"{{ Buttons.fabDisplay }}"`**
 
 ```javascript
-appButtons.focus = ''
+Buttons.fabDisplay = ''
+```
+
+
+
+
+
+
+## Buttons.fabSizes
+
+```javascript
+Buttons.fabSizes = {
+    '4xs': '',
+    '3xs': '',
+    '2xs': '',
+    'xs': '',
+    'sm': '',
+    'md': '',
+    'lg': '',
+    'xl': '',
+    '2xl': '',
+    '3xl': '',
+    '4xl': '',
+}
+```
+
+
+
+
+
+## Buttons.focus
+
+Type: **`String`**  
+Default: **`"{{ Buttons.focus }}"`**
+
+```javascript
+Buttons.focus = ''
 ```
 
 
@@ -126,7 +175,7 @@ appButtons.focus = ''
 ## Buttons.sizes
 
 ```javascript
-appButtons.sizes = {
+Buttons.sizes = {
     '4xs': '',
     '3xs': '',
     '2xs': '',
@@ -148,8 +197,11 @@ appButtons.sizes = {
 
 ## Buttons.text
 
+Type: **`String`**  
+Default: **`"{{ Buttons.text }}"`**
+
 ```javascript
-appButtons.text = ''
+Buttons.text = ''
 ```
 
 
@@ -159,8 +211,11 @@ appButtons.text = ''
 
 ## Buttons.base()
 
+Returns: **`String`**  
+Default: **`"{{ Buttons.base() }}"`**
+
 ```javascript
-const buttonBase = Buttons.base()
+const buttonsBase = Buttons.base()
 ```
 
 
@@ -170,8 +225,26 @@ const buttonBase = Buttons.base()
 
 ## Buttons.blockBase()
 
+Returns: **`String`**  
+Default: **`"{{ Buttons.blockBase() }}"`**
+
 ```javascript
-const buttonBlockBase = Buttons.blockBase()
+const buttonsBlockBase = Buttons.blockBase()
+```
+
+
+
+
+
+
+## Buttons.blockClasses()
+
+```javascript
+const mdButtonBlockClasses = Buttons.blockClasses() // default is 'md'
+```
+
+```javascript
+const lgButtonBlockClasses = Buttons.blockClasses('lg')
 ```
 
 
@@ -182,11 +255,40 @@ const buttonBlockBase = Buttons.blockBase()
 ## Buttons.classes()
 
 ```javascript
-const buttonClasses = Buttons.classes() // default is 'md'
+const buttonsClasses = Buttons.classes() // default is 'md'
 ```
 
 ```javascript
-const buttonClasses = Buttons.classes('lg')
+const buttonsClasses = Buttons.classes('lg')
+```
+
+
+
+
+
+
+## Buttons.fabBase()
+
+Returns: **`String`**  
+Default: **`"{{ Buttons.fabBase() }}"`**
+
+```javascript
+const buttonsFabBase = Buttons.fabBase()
+```
+
+
+
+
+
+
+## Buttons.fabClasses()
+
+```javascript
+const mdButtonFabClasses = Buttons.fabClasses() // default is 'md'
+```
+
+```javascript
+const lgButtonFabClasses = Buttons.fabClasses('lg')
 ```
 
 
@@ -197,11 +299,26 @@ const buttonClasses = Buttons.classes('lg')
 ## Buttons.getBlockSizeClasses()
 
 ```javascript
-const button = Buttons.getBlockSizeClasses() // default is 'md'
+const mdBlockButtons = Buttons.getBlockSizeClasses() // default is 'md'
 ```
 
 ```javascript
-const button = Buttons.getBlockSizeClasses('sm')
+const smBlockButtons = Buttons.getBlockSizeClasses('sm')
+```
+
+
+
+
+
+
+## Buttons.getFabSizeClasses()
+
+```javascript
+const mdFabButtons = Buttons.getFabSizeClasses() // default is 'md'
+```
+
+```javascript
+const smFabButtons = Buttons.getFabSizeClasses('sm')
 ```
 
 
@@ -212,11 +329,11 @@ const button = Buttons.getBlockSizeClasses('sm')
 ## Buttons.getSizeClasses()
 
 ```javascript
-const button = Buttons.getSizeClasses() // default is 'md'
+const mdButtons = Buttons.getSizeClasses() // default is 'md'
 ```
 
 ```javascript
-const button = Buttons.getSizeClasses('sm')
+const smButtons = Buttons.getSizeClasses('sm')
 ```
 
 
