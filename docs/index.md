@@ -2,8 +2,8 @@
 layout: home
 hero:
   name: VueVentus
-  text: Modular Component System
-  tagline: An aesthetically flexible design system component library for Vue.js & Tailwind CSS
+  text: Design System Component Library
+  tagline: The aesthetically flexible design system component library for Vue.js & Tailwind CSS
   actions:
     - theme: brand
       text: Get Started

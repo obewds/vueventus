@@ -82,6 +82,8 @@ import { VvColorModeButton } from '@obewds/vueventus'
 Type: **`String`**  
 Default: **`VvConfig.defaults.VvColorModeButton.color`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 The {{ $frontmatter.title }} `color` prop sets the component instance color based both on the `color` prop and the `palette` prop value together.
 
 ### Syntax
@@ -110,6 +112,8 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
 Type: **`String`**  
 Default: **`VvConfig.colorMode.dark.ground`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 The {{ $frontmatter.title }} `groundDark` prop sets the component instance class(es) for the background color of the application when in the dark color mode state.
 
 ### Syntax
@@ -136,6 +140,8 @@ The {{ $frontmatter.title }} `groundDark` prop sets the component instance class
 
 Type: **`String`**  
 Default: **`VvConfig.colorMode.dark.hex`**
+
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
 
 The {{ $frontmatter.title }} `groundDarkHex` prop sets the component instance color code for the background color of the application when in the dark color mode state.
 
@@ -165,6 +171,8 @@ The {{ $frontmatter.title }} `groundDarkHex` prop sets the component instance co
 Type: **`String`**  
 Default: **`VvConfig.colorMode.light.ground`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 The {{ $frontmatter.title }} `groundLight` prop sets the component instance class(es) for the background color of the application when in the light color mode state.
 
 ### Syntax
@@ -191,6 +199,8 @@ The {{ $frontmatter.title }} `groundLight` prop sets the component instance clas
 
 Type: **`String`**  
 Default: **`VvConfig.colorMode.light.hex`**
+
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
 
 The {{ $frontmatter.title }} `groundLightHex` prop sets the component instance color code for the background color of the application when in the light color mode state.
 
@@ -220,6 +230,8 @@ Type: **`String`**
 Valid Values: [ValidColorModes Module](/components/prop-validators#validcolormodes)  
 Default: **`VvConfig.defaults.VvColorModeButton.mode`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 The {{ $frontmatter.title }} `type` prop sets the button HTML `type` attribute to a value that should be present in the [ValidColorModes Module](/components/prop-validators#validcolormodes) to be a valid value for this component.
 
 ### Syntax
@@ -246,6 +258,8 @@ The {{ $frontmatter.title }} `type` prop sets the button HTML `type` attribute t
 
 Type: **`String`**  
 Default: **`VvConfig.defaults.VvColorModeButton.palette`**
+
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
 
 The {{ $frontmatter.title }} `palette` prop sets the component instance color based both on the `palette` prop and the `color` prop values together.
 
@@ -275,6 +289,8 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance color ba
 Type: **`String`**  
 Default: **`VvConfig.defaults.VvColorModeButton.size`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 The {{ $frontmatter.title }} `size` prop sets the component instance size-based classes with in the context of buttons typically involves padding and font size atomic classes.
 
 ### Syntax
@@ -302,6 +318,8 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
 
 Type: **`String`**  
 Default: **`VvConfig.colorMode.dark.text`**
+
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
 
 The {{ $frontmatter.title }} `textDark` prop sets the component instance class(es) for the text color of the application when in the dark color mode state.
 
@@ -331,6 +349,8 @@ The {{ $frontmatter.title }} `textDark` prop sets the component instance class(e
 Type: **`String`**  
 Default: **`VvConfig.colorMode.light.text`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 The {{ $frontmatter.title }} `textLight` prop sets the component instance class(es) for the text color of the application when in the light color mode state.
 
 ### Syntax
@@ -358,6 +378,8 @@ The {{ $frontmatter.title }} `textLight` prop sets the component instance class(
 
 Type: **`String`**  
 Default: **`VvConfig.colorMode.dark.title`**
+
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
 
 The {{ $frontmatter.title }} `titleDark` prop sets the component instance title attribute string of the component when the app is currently in the dark color mode state.
 
@@ -388,6 +410,8 @@ The {{ $frontmatter.title }} `titleDark` prop sets the component instance title 
 
 Type: **`String`**  
 Default: **`VvConfig.colorMode.light.title`**
+
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
 
 The {{ $frontmatter.title }} `titleLight` prop sets the component instance title attribute string of the component when the app is currently in the light color mode state.
 

@@ -218,7 +218,7 @@ function sidebarComponents() {
             collapsible: true,
             items: [
                 { text: 'VueVentusLogoText', link: '/components/logos/vueventus-logo-text' },
-                { text: 'VueVentusSpinningMark', link: '/components/logos/vueventus-spinning-market' },
+                { text: 'VueVentusSpinningMark', link: '/components/logos/vueventus-spinning-mark' },
             ]
         }
     ]

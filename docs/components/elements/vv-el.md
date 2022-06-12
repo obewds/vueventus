@@ -34,6 +34,8 @@ import { VvEl } from '@obewds/vueventus'
 Type: **`String`**  
 Default: **`VvConfig.defaults.VvEl.borderPalette`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 The {{ $frontmatter.title }} `borderPalette` prop sets the component instance border color based both on the `borderColor` prop and the `borderPalette` prop value together.
 
 ### Syntax
@@ -61,6 +63,8 @@ The {{ $frontmatter.title }} `borderPalette` prop sets the component instance bo
 
 Type: **`String`**  
 Default: **`VvConfig.defaults.VvEl.borderColor`**
+
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
 
 The {{ $frontmatter.title }} `borderColor` prop sets the component instance border color based both on the `borderPalette` prop and the `borderColor` prop value together.
 
@@ -107,6 +111,8 @@ The {{ $frontmatter.title }} `borderColor` prop sets the component instance bord
 
 Type: **`String`**  
 Default: **`VvConfig.defaults.VvEl.groundPalette`**
+
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
 
 The {{ $frontmatter.title }} `groundPalette` prop sets the component instance border color based both on the `groundColor` prop and the `groundPalette` prop value together.
 
@@ -221,6 +227,8 @@ The {{ $frontmatter.title }} `groundPalette` prop sets the component instance bo
 Type: **`String`**  
 Default: **`VvConfig.defaults.VvEl.groundColor`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 The {{ $frontmatter.title }} `groundColor` prop sets the component instance border color based both on the `groundPalette` prop and the `groundColor` prop value together.
 
 ### Syntax
@@ -270,6 +278,8 @@ Type: **`String`**
 Valid Values: [ValidElementTags Module](/components/prop-validators#validelementtags)  
 Default: **`VvConfig.defaults.VvEl.tag`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 The {{ $frontmatter.title }} `tag` prop sets the HTML `tag` attribute to a value that should be present in the [ValidElementTags Module](/components/prop-validators#validelementtags) to be a valid value for this component.
 
 ### Syntax
@@ -298,6 +308,8 @@ The {{ $frontmatter.title }} `tag` prop sets the HTML `tag` attribute to a value
 Type: **`String`**  
 Default: **`VvConfig.defaults.VvEl.textPalette`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 The {{ $frontmatter.title }} `textPalette` prop sets the component instance border color based both on the `textColor` prop and the `textPalette` prop value together.
 
 ### Syntax
@@ -325,6 +337,8 @@ The {{ $frontmatter.title }} `textPalette` prop sets the component instance bord
 
 Type: **`String`**  
 Default: **`VvConfig.defaults.VvEl.textColor`**
+
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
 
 The {{ $frontmatter.title }} `textColor` prop sets the component instance border color based both on the `textPalette` prop and the `textColor` prop value together.
 
