@@ -29,6 +29,8 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 import { Text } from '@obewds/vueventus'
 ```
 
+<!-- #TODO: update doc by removing example below and replacing all examples referencing this variable on this docs page -->
+
 For the remainder of the examples for this component, assume the following declaration:
 
 ```javascript
@@ -42,6 +44,8 @@ let appText = Text
 
 ## Text.cursor
 
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+
 ```javascript
 appText.align = ''
 ```
@@ -52,6 +56,8 @@ appText.align = ''
 
 
 ## Text.decoration
+
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
 appText.decoration = ''
@@ -64,6 +70,8 @@ appText.decoration = ''
 
 ## Text.family
 
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+
 ```javascript
 appText.family = ''
 ```
@@ -75,6 +83,8 @@ appText.family = ''
 
 ## Text.lineHeight
 
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+
 ```javascript
 appText.lineHeight = ''
 ```
@@ -85,6 +95,8 @@ appText.lineHeight = ''
 
 
 ## Text.sizes
+
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
 appText.sizes = {
@@ -118,6 +130,8 @@ appText.sizes = {
 
 ## Text.smoothing
 
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+
 ```javascript
 appText.smoothing = ''
 ```
@@ -128,6 +142,8 @@ appText.smoothing = ''
 
 
 ## Text.spacing
+
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
 appText.spacing = ''
@@ -140,6 +156,8 @@ appText.spacing = ''
 
 ## Text.weight
 
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+
 ```javascript
 appText.weight = ''
 ```
@@ -150,6 +168,8 @@ appText.weight = ''
 
 
 ## Text.wordBreak
+
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
 appText.wordBreak = ''
@@ -162,6 +182,8 @@ appText.wordBreak = ''
 
 ## Text.base()
 
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+
 ```javascript
 const textBase = Text.base()
 ```
@@ -172,6 +194,8 @@ const textBase = Text.base()
 
 
 ## Text.classes()
+
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
 const textClasses = Text.classes() // default is 'md'
@@ -187,6 +211,8 @@ const textClasses = Text.classes('lg')
 
 
 ## Text.getSizeClasses()
+
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
 const textSizeClasses = Text.getSizeClasses() // default is 'md'

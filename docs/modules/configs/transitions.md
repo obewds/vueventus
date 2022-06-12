@@ -26,6 +26,8 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 import { Transitions } from '@obewds/vueventus'
 ```
 
+<!-- #TODO: update doc by removing example below and replacing all examples referencing this variable on this docs page -->
+
 For the remainder of the examples for this component, assume the following declaration:
 
 ```javascript
@@ -38,6 +40,8 @@ let appTransitions = Transitions
 
 
 ## Transitions.durations
+
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
 appTransitions.durations = {
@@ -85,6 +89,8 @@ appTransitions.durations = {
 
 ## Transitions.easings
 
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+
 ```javascript
 appTransitions.easings = {
     linear: '',
@@ -100,6 +106,8 @@ appTransitions.easings = {
 
 
 ## Transitions.transitions
+
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
 appTransitions.transitions = {
@@ -117,6 +125,8 @@ appTransitions.transitions = {
 
 ## Transitions.classes()
 
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+
 ```javascript
 const transition = Transitions.classes() // defaults are 'default', 'inOut', '300'
 ```
@@ -131,6 +141,8 @@ const transition = Transitions.classes('colors', 'linear', '1000')
 
 
 ## Transitions.custom()
+
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
 const transition = Transitions.custom() // defaults are 'default', 'inOut', '300'
@@ -150,6 +162,8 @@ const transition = Transitions.custom({
 
 ## Transitions.getDurationClasses()
 
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+
 ```javascript
 const duration = Transitions.getDurationClasses() // default is '300'
 ```
@@ -165,6 +179,8 @@ const duration = Transitions.getDurationClasses('1000')
 
 ## Transitions.getEasingClasses()
 
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+
 ```javascript
 const easing = Transitions.getEasingClasses() // default is 'inOut'
 ```
@@ -179,6 +195,8 @@ const easing = Transitions.getEasingClasses('in')
 
 
 ## Transitions.getTransitionClasses()
+
+<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
 
 ```javascript
 const transition = Transitions.getTransitionClasses() // default is 'default'

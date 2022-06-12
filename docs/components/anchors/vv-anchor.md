@@ -43,6 +43,8 @@ import { VvAnchor } from '@obewds/vueventus'
 Type: **`Boolean`**  
 Default: **`VvConfig.defaults.VvAnchor.button`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 When the {{ $frontmatter.title }} `button` prop value is `true`, the output element changes from normal anchor element styling set in the [Anchor Config Module](/modules/configs/anchors) to button styling that is driven by the Tailwind CSS classes in the [Button Config Module](/modules/configs/buttons).
 
 ### Syntax
@@ -83,6 +85,8 @@ When the {{ $frontmatter.title }} `button` prop value is `true`, the output elem
 Type: **`Boolean`**  
 Default: **`VvConfig.defaults.VvAnchor.buttonBlock`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 The {{ $frontmatter.title }} `buttonBlock` prop sets the component instance to use block-level base classes making the returned `<a>` element a full width and block-level button styled element.
 
 ### Syntax
@@ -118,6 +122,8 @@ The {{ $frontmatter.title }} `buttonBlock` prop sets the component instance to u
 
 Type: **`Boolean`**  
 Default: **`VvConfig.defaults.VvAnchor.buttonFab`**
+
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
 
 The {{ $frontmatter.title }} `buttonFab` prop sets the component instance to use base classes with equal width and height classes making the returned `<anchor>` element a square element that can also be styled as a circle using a Tailwind CSS `.rounded-full` class.
 
@@ -167,6 +173,8 @@ The {{ $frontmatter.title }} `buttonFab` prop sets the component instance to use
 Type: **`String`**  
 Default: **`VvConfig.defaults.VvAnchor.buttonSize`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classes applied to the output element. By default, these classes match the size classes (and examples) over in the [VvButton Prop: Size](/components/buttons/vv-button#prop-size) docs section.
 
 ### Syntax
@@ -207,6 +215,8 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 
 Type: **`String`**  
 Default: **`VvConfig.defaults.VvAnchor.color`**
+
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
 
 The {{ $frontmatter.title }} `color` prop sets the component instance color based both on the `color` prop and the `palette` prop values together with the `button` prop value.
 
@@ -269,6 +279,8 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 Type: **`Boolean`**  
 Default: **`VvConfig.defaults.VvAnchor.external`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 When the {{ $frontmatter.title }} `external` prop value is `true`, the output `<anchor>` element will have a `target="_blank"` and `rel="noopener noreferrer"` attributes/values so links that leave the application space open in a new tab for users.
 
 ### Syntax
@@ -301,6 +313,8 @@ When the {{ $frontmatter.title }} `external` prop value is `true`, the output `<
 Type: **`String`**  
 Default: **`VvConfig.defaults.VvAnchor.href`**
 
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
+
 The {{ $frontmatter.title }} `href` prop value sets the href value for the output `<a>` element.
 
 ### Syntax
@@ -330,6 +344,8 @@ The {{ $frontmatter.title }} `href` prop value sets the href value for the outpu
 
 Type: **`String`**  
 Default: **`VvConfig.defaults.VvAnchor.palette`**
+
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
 
 The {{ $frontmatter.title }} `palette` prop sets the component instance color based both on the `palette` prop and the `color` prop values together with the `button` prop value.
 
@@ -436,6 +452,8 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 
 Type: **`String`**  
 Default: **`VvConfig.transitions.classes()`**
+
+<!-- #TODO: change default to dynamic vue default value and instead link to VvConfig page with code string -->
 
 The {{ $frontmatter.title }} `transitionClasses` prop value sets the Tailwind CSS transition group classes that are applied to the output `<a>` element.
 
