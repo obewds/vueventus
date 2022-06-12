@@ -19,7 +19,7 @@ VueVentus uses {{ $frontmatter.title }} to store various raw data settings that 
 There are currently three main types of {{ $frontmatter.title }} to use in your app's Tailwind CSS config file:
 
 * [Theme Extenders](/modules/data/theme-extenders)
-* [Theme Additions](/modules/data/theme-additions)
+* [Theme Overrides](/modules/data/theme-overrides)
 * [App Color Data](/modules/data/app-color-data)
 
 
