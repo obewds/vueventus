@@ -13,7 +13,7 @@ export default {
             this.display,
             this.focus,
             this.text,
-        ].join(' ')
+        ].join(' ').trim()
     },
     sizes: {
         '4xs': 'px-1 py-px text-xxs',
@@ -37,7 +37,7 @@ export default {
         return [
             this.base(),
             this.getSizeClasses(sizes),
-        ].join(' ')
+        ].join(' ').trim()
     },
     blockDisplay: 'block w-full flex flex-col items-center justify-center',
     blockBase: function () {
@@ -48,7 +48,7 @@ export default {
             this.blockDisplay,
             this.focus,
             this.text,
-        ].join(' ')
+        ].join(' ').trim()
     },
     blockSizes: {
         '4xs': 'px-1 py-1 text-2xs',
@@ -72,7 +72,7 @@ export default {
         return [
             this.blockBase(),
             this.getBlockSizeClasses(sizes),
-        ].join(' ')
+        ].join(' ').trim()
     },
     fabDisplay: 'inline-flex items-center items-center justify-center',
     fabBase: function () {
@@ -83,7 +83,7 @@ export default {
             this.fabDisplay,
             this.focus,
             this.text,
-        ].join(' ')
+        ].join(' ').trim()
     },
     fabSizes: {
         '4xs': 'w-6 h-6 text-xxs',
@@ -107,6 +107,6 @@ export default {
         return [
             this.fabBase(),
             this.getFabSizeClasses(sizes),
-        ].join(' ')
+        ].join(' ').trim()
     },
 }

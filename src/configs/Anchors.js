@@ -11,7 +11,7 @@ export default {
             this.display,
             this.focus,
             this.text,
-        ].join(' ')
+        ].join(' ').trim()
     },
     sizes: Text.sizes,
     getSizeClasses: function (sizesKey) {
@@ -23,6 +23,6 @@ export default {
         return [
             this.base(),
             this.getSizeClasses(sizes),
-        ].join(' ')
+        ].join(' ').trim()
     },
 }

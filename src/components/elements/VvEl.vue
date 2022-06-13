@@ -58,7 +58,7 @@
             output.push( vv.text.palettes[props.textPalette][props.textColor] )
         }
 
-        return output.join(' ')
+        return output.join(' ').trim()
 
     })
 

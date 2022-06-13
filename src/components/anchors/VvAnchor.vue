@@ -109,7 +109,7 @@
 
         }
 
-        return output.join(' ')
+        return output.join(' ').trim()
 
     })
 
