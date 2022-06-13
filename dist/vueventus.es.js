@@ -37,7 +37,7 @@ var Text = {
       this.spacing,
       this.weight,
       this.wordBreak
-    ].join(" ");
+    ].join(" ").trim();
   },
   sizes: {
     "5xs": "text-5xs",
@@ -70,7 +70,7 @@ var Text = {
     return [
       this.base(),
       this.getSizeClasses(sizes)
-    ].join(" ");
+    ].join(" ").trim();
   }
 };
 var Anchors = {
@@ -84,7 +84,7 @@ var Anchors = {
       this.display,
       this.focus,
       this.text
-    ].join(" ");
+    ].join(" ").trim();
   },
   sizes: Text.sizes,
   getSizeClasses: function(sizesKey) {
@@ -96,7 +96,7 @@ var Anchors = {
     return [
       this.base(),
       this.getSizeClasses(sizes)
-    ].join(" ");
+    ].join(" ").trim();
   }
 };
 var Buttons = {
@@ -114,7 +114,7 @@ var Buttons = {
       this.display,
       this.focus,
       this.text
-    ].join(" ");
+    ].join(" ").trim();
   },
   sizes: {
     "4xs": "px-1 py-px text-xxs",
@@ -138,7 +138,7 @@ var Buttons = {
     return [
       this.base(),
       this.getSizeClasses(sizes)
-    ].join(" ");
+    ].join(" ").trim();
   },
   blockDisplay: "block w-full flex flex-col items-center justify-center",
   blockBase: function() {
@@ -149,7 +149,7 @@ var Buttons = {
       this.blockDisplay,
       this.focus,
       this.text
-    ].join(" ");
+    ].join(" ").trim();
   },
   blockSizes: {
     "4xs": "px-1 py-1 text-2xs",
@@ -173,7 +173,7 @@ var Buttons = {
     return [
       this.blockBase(),
       this.getBlockSizeClasses(sizes)
-    ].join(" ");
+    ].join(" ").trim();
   },
   fabDisplay: "inline-flex items-center items-center justify-center",
   fabBase: function() {
@@ -184,7 +184,7 @@ var Buttons = {
       this.fabDisplay,
       this.focus,
       this.text
-    ].join(" ");
+    ].join(" ").trim();
   },
   fabSizes: {
     "4xs": "w-6 h-6 text-xxs",
@@ -208,7 +208,7 @@ var Buttons = {
     return [
       this.fabBase(),
       this.getFabSizeClasses(sizes)
-    ].join(" ");
+    ].join(" ").trim();
   }
 };
 var Inputs = {
@@ -220,7 +220,7 @@ var Inputs = {
       this.display,
       this.ring,
       this.text
-    ].join(" ");
+    ].join(" ").trim();
   }
 };
 var Transitions = {
@@ -296,7 +296,7 @@ var Transitions = {
       this.getTransitionClasses(settings.transitions),
       this.getEasingClasses(settings.easings),
       this.getDurationClasses(settings.durations)
-    ].join(" ");
+    ].join(" ").trim();
   },
   classes: function(transitionsKey, easingsKey, durationsKey) {
     const transitions = transitionsKey ? transitionsKey : "";
@@ -306,7 +306,7 @@ var Transitions = {
       this.getTransitionClasses(transitions),
       this.getEasingClasses(easings),
       this.getDurationClasses(durations)
-    ].join(" ");
+    ].join(" ").trim();
   }
 };
 var AnchorDefault = {
@@ -818,7 +818,7 @@ const _sfc_main$5 = {
           output.push(vv.anchors.palettes[props.palette][props.color]);
         }
       }
-      return output.join(" ");
+      return output.join(" ").trim();
     });
     return (_ctx, _cache) => {
       return __props.external ? (openBlock(), createElementBlock("a", {
@@ -907,7 +907,7 @@ const _sfc_main$4 = {
       if ((_l = (_k = (_j = vv == null ? void 0 : vv.buttons) == null ? void 0 : _j.palettes) == null ? void 0 : _k[props.palette]) == null ? void 0 : _l[props.color]) {
         output.push(vv.buttons.palettes[props.palette][props.color]);
       }
-      return output.join(" ");
+      return output.join(" ").trim();
     });
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("button", {
@@ -1105,7 +1105,7 @@ const _sfc_main$2 = {
       if ((_i = (_h = (_g = vv == null ? void 0 : vv.text) == null ? void 0 : _g.palettes) == null ? void 0 : _h[props.textPalette]) == null ? void 0 : _i[props.textColor]) {
         output.push(vv.text.palettes[props.textPalette][props.textColor]);
       }
-      return output.join(" ");
+      return output.join(" ").trim();
     });
     return (_ctx, _cache) => {
       return openBlock(), createBlock(resolveDynamicComponent(__props.tag), {

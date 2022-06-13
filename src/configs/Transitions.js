@@ -71,7 +71,7 @@ export default {
             this.getTransitionClasses(settings.transitions),
             this.getEasingClasses(settings.easings),
             this.getDurationClasses(settings.durations),
-        ].join(' ')
+        ].join(' ').trim()
     },
     classes: function (transitionsKey, easingsKey, durationsKey) {
         const transitions = transitionsKey ? transitionsKey : ''
@@ -81,6 +81,6 @@ export default {
             this.getTransitionClasses(transitions),
             this.getEasingClasses(easings),
             this.getDurationClasses(durations),
-        ].join(' ')
+        ].join(' ').trim()
     },
 }

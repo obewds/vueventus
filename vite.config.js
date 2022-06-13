@@ -34,6 +34,7 @@ export default defineConfig({
                 globals: {
                     vue: 'Vue',
                 },
+                //preserveModules: true,
                 //sourcemap: true,
             },
             // output: {

@@ -88,7 +88,7 @@
             output.push( vv.buttons.palettes[props.palette][props.color] )
         }
 
-        return output.join(' ')
+        return output.join(' ').trim()
 
     })
 

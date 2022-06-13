@@ -17,7 +17,7 @@ export default {
             this.spacing,
             this.weight,
             this.wordBreak,
-        ].join(' ')
+        ].join(' ').trim()
     },
     sizes: {
         '5xs': 'text-5xs',
@@ -50,6 +50,6 @@ export default {
         return [
             this.base(),
             this.getSizeClasses(sizes),
-        ].join(' ')
+        ].join(' ').trim()
     },
 }

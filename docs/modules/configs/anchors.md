@@ -148,7 +148,7 @@ Default: **`"{{ Anchors.classes() }}"`**
 
 The `Anchors.classes()` method returns a joined `String` of the atomic classes within the various base properties of the {{ $frontmatter.title }} object using the `Anchors.base()` method under the hood.
 
-However, the `Anchors.classes()` method also returns `Anchor.getSizeClasses()` method classes in addition to the base property classes/values, which augments the returned value based on the optional argument value passed into the method.
+However, the `Anchors.classes()` method also returns `Anchors.getSizeClasses()` method classes in addition to the base property classes/values, which augments the returned value based on the optional argument value passed into the method.
 
 ### Arguments
 
@@ -197,33 +197,6 @@ const anchorsSizeClasses = Anchors.getSizeClasses() // default is 'md'
 ```javascript
 const anchorsSizeClasses = Anchors.getSizeClasses('sm')
 ```
-
-<!----
-### Default Arguments/Returned Values
-
-The following lists out the default VueVentus argument and returned atomic string values for the `getSizeClasses()` method.
-
-Default ('5xs'): **`"{{ Anchors.getSizeClasses('5xs') }}"`**  
-Default ('4xs'): **`"{{ Anchors.getSizeClasses('4xs') }}"`**  
-Default ('3xs'): **`"{{ Anchors.getSizeClasses('3xs') }}"`**  
-Default ('2xs'): **`"{{ Anchors.getSizeClasses('2xs') }}"`**  
-Default ('xs'): **`"{{ Anchors.getSizeClasses('xs') }}"`**  
-Default ('sm'): **`"{{ Anchors.getSizeClasses('sm') }}"`**  
-Default ('md'): **`"{{ Anchors.getSizeClasses('md') }}"`**  
-Default ('lg'): **`"{{ Anchors.getSizeClasses('lg') }}"`**  
-Default ('xl'): **`"{{ Anchors.getSizeClasses('xl') }}"`**  
-Default ('2xl'): **`"{{ Anchors.getSizeClasses('2xl') }}"`**  
-Default ('3xl'): **`"{{ Anchors.getSizeClasses('3xl') }}"`**  
-Default ('4xl'): **`"{{ Anchors.getSizeClasses('4xl') }}"`**  
-Default ('5xl'): **`"{{ Anchors.getSizeClasses('5xl') }}"`**  
-Default ('6xl'): **`"{{ Anchors.getSizeClasses('6xl') }}"`**  
-Default ('7xl'): **`"{{ Anchors.getSizeClasses('7xl') }}"`**  
-Default ('8xl'): **`"{{ Anchors.getSizeClasses('8xl') }}"`**  
-Default ('9xl'): **`"{{ Anchors.getSizeClasses('9xl') }}"`**  
-Default ('10xl'): **`"{{ Anchors.getSizeClasses('10xl') }}"`**  
-Default ('11xl'): **`"{{ Anchors.getSizeClasses('11xl') }}"`**  
-Default ('12xl'): **`"{{ Anchors.getSizeClasses('12xl') }}"`**  
--->
 
 
 

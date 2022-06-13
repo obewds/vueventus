@@ -7,6 +7,6 @@ export default {
             this.display,
             this.ring,
             this.text,
-        ].join(' ')
+        ].join(' ').trim()
     },
 }
