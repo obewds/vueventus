@@ -1,5 +1,5 @@
 ---
-title: GroundPastel Palette
+title: GroundPastel Palette Config Module
 ---
 
 <script setup>

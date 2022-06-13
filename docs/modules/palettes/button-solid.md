@@ -1,5 +1,5 @@
 ---
-title: ButtonSolid Palette
+title: ButtonSolid Palette Config Module
 ---
 
 <script setup>

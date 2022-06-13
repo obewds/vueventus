@@ -1,5 +1,5 @@
 ---
-title: ButtonOutline Palette
+title: ButtonOutline Palette Config Module
 ---
 
 <script setup>

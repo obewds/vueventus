@@ -1,5 +1,5 @@
 ---
-title: AnchorDefault Palette
+title: AnchorDefault Palette Config Module
 ---
 
 <script setup>

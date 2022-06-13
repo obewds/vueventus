@@ -1,5 +1,5 @@
 ---
-title: BorderDefault Palette
+title: BorderDefault Palette Config Module
 ---
 
 <script setup>

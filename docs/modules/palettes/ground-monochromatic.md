@@ -1,5 +1,5 @@
 ---
-title: GroundMonochromatic Palette
+title: GroundMonochromatic Palette Config Module
 ---
 
 <script setup>
