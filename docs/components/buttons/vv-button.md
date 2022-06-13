@@ -322,33 +322,6 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
 
 
 
-## Prop: transitionClasses
-
-Type: **`String`**  
-Default: **`"{{ VvConfig.transitions.classes() }}"`**
-
-The {{ $frontmatter.title }} `transitionClasses` prop sets the button transition classes to animate between different states. In the context of a button this is often background colors, text colors, sometimes border colors and more.
-
-### Syntax
-
-```html
-<VvButton color="success" transition-classes="transition-colors ease-in duration-1000">
-    VvButton
-</VvButton>
-```
-
-### Result
-
-<div class="w-full pt-4">
-    <VvButton color="success" transition-classes="transition-colors ease-in duration-1000">
-        VvButton
-    </VvButton>
-</div>
-
-
-
-
-
 ## Prop: type
 
 Type: **`String`**  

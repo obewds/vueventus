@@ -8,7 +8,7 @@ import './css/tailwind.css'
 
 const app = createApp(App)
 
-app.provide('vv', mergeWithVvConfig(appVv))
+// app.provide('vv', mergeWithVvConfig(appVv))
 
 app.provide('globals', globals)
 

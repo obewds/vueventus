@@ -41,10 +41,6 @@
             type: String,
             default: VvConfig.defaults.VvAnchor.palette,
         },
-        transitionClasses: {
-            type: String,
-            default: VvConfig.transitions.classes(),
-        },
     })
 
     const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject('vv') : VvConfig
@@ -52,8 +48,6 @@
     let classes = computed( () => {
 
         let output = []
-
-        output.push( props.transitionClasses )
 
         if ( props.button === true ) {
 

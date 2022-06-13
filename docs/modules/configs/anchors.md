@@ -123,6 +123,29 @@ Anchors.text = ''
 
 
 
+
+
+## Anchors.transition
+
+Type: **`String`**  
+Default: **`"{{ Anchors.transition }}"`**
+
+The `Anchors.transition` parameter is meant to isolate the transition/animation specific atomic classes an application's anchor elements.
+
+### Example
+
+```javascript
+Anchors.transition = ''
+```
+
+
+
+
+
+
+
+
+
 ## Anchors.base()
 
 Returns: **`String`**  

@@ -19,9 +19,12 @@ test('Buttons component returns a truthy object for "blockDisplay", "blockSizes"
     expect(Buttons.cursor).toBeTruthy()
     expect(Buttons.disabled).toBeTruthy()
     expect(Buttons.display).toBeTruthy()
+    expect(Buttons.fabDisplay).toBeTruthy()
+    expect(Buttons.fabSizes).toBeTruthy()
     expect(Buttons.focus).toBeTruthy()
     expect(Buttons.sizes).toBeTruthy()
     expect(Buttons.text).toBeTruthy()
+    expect(Buttons.transition).toBeTruthy()
 
 })
 

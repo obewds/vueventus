@@ -17,6 +17,7 @@ test('Anchors component returns a truthy value for "cursor", "disabled", "displa
     expect(Anchors.display).toBe('')
     expect(Anchors.focus).toBe('')
     expect(Anchors.text).toBeTruthy()
+    expect(Anchors.transition).toBeTruthy()
 
 })
 

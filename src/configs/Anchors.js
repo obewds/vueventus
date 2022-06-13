@@ -1,16 +1,19 @@
 import Text from './Text.js'
+import Transitions from './Transitions.js'
 
 export default {
     cursor: 'cursor-pointer',
     display: '',
     focus: '',
     text: 'underline underline-offset-2',
+    transition: Transitions.classes('colors', 'inOut', '300'),
     base: function () {
         return [
             this.cursor,
             this.display,
             this.focus,
             this.text,
+            this.transition,
         ].join(' ').trim()
     },
     sizes: Text.sizes,
