@@ -34,7 +34,47 @@ import { Transitions } from '@obewds/vueventus'
 
 ## Transitions.durations
 
-<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+Type: **`Object`**  
+
+| Transitions.durations Properties | Transitions.durations Prop Values       |
+|----------------------------------|-----------------------------------------|
+| `"1200"`                         | `"{{ Transitions.durations['1200'] }}"` |
+| `"1150"`                         | `"{{ Transitions.durations['1150'] }}"` |
+| `"1100"`                         | `"{{ Transitions.durations['1100'] }}"` |
+| `"1050"`                         | `"{{ Transitions.durations['1050'] }}"` |
+| `"1000"`                         | `"{{ Transitions.durations['1000'] }}"` |
+| `"950"`                          | `"{{ Transitions.durations['950'] }}"`  |
+| `"900"`                          | `"{{ Transitions.durations['900'] }}"`  |
+| `"850"`                          | `"{{ Transitions.durations['850'] }}"`  |
+| `"800"`                          | `"{{ Transitions.durations['800'] }}"`  |
+| `"750"`                          | `"{{ Transitions.durations['750'] }}"`  |
+| `"700"`                          | `"{{ Transitions.durations['700'] }}"`  |
+| `"650"`                          | `"{{ Transitions.durations['650'] }}"`  |
+| `"600"`                          | `"{{ Transitions.durations['600'] }}"`  |
+| `"550"`                          | `"{{ Transitions.durations['550'] }}"`  |
+| `"500"`                          | `"{{ Transitions.durations['500'] }}"`  |
+| `"475"`                          | `"{{ Transitions.durations['475'] }}"`  |
+| `"450"`                          | `"{{ Transitions.durations['450'] }}"`  |
+| `"425"`                          | `"{{ Transitions.durations['425'] }}"`  |
+| `"400"`                          | `"{{ Transitions.durations['400'] }}"`  |
+| `"375"`                          | `"{{ Transitions.durations['375'] }}"`  |
+| `"350"`                          | `"{{ Transitions.durations['350'] }}"`  |
+| `"325"`                          | `"{{ Transitions.durations['325'] }}"`  |
+| `"300"`                          | `"{{ Transitions.durations['300'] }}"`  |
+| `"275"`                          | `"{{ Transitions.durations['275'] }}"`  |
+| `"250"`                          | `"{{ Transitions.durations['250'] }}"`  |
+| `"225"`                          | `"{{ Transitions.durations['225'] }}"`  |
+| `"200"`                          | `"{{ Transitions.durations['200'] }}"`  |
+| `"175"`                          | `"{{ Transitions.durations['175'] }}"`  |
+| `"150"`                          | `"{{ Transitions.durations['150'] }}"`  |
+| `"125"`                          | `"{{ Transitions.durations['125'] }}"`  |
+| `"100"`                          | `"{{ Transitions.durations['100'] }}"`  |
+| `"75"`                           | `"{{ Transitions.durations['75'] }}"`   |
+| `"50"`                           | `"{{ Transitions.durations['50'] }}"`   |
+| `"25"`                           | `"{{ Transitions.durations['25'] }}"`   |
+
+
+### Examples
 
 ```javascript
 Transitions.durations = {
@@ -75,6 +115,46 @@ Transitions.durations = {
 }
 ```
 
+```javascript
+Transitions.durations['1200'] = ''
+Transitions.durations['1150'] = ''
+Transitions.durations['1100'] = ''
+Transitions.durations['1050'] = ''
+Transitions.durations['1000'] = ''
+Transitions.durations['950'] = ''
+Transitions.durations['900'] = ''
+Transitions.durations['850'] = ''
+Transitions.durations['800'] = ''
+Transitions.durations['750'] = ''
+Transitions.durations['700'] = ''
+Transitions.durations['650'] = ''
+Transitions.durations['600'] = ''
+Transitions.durations['550'] = ''
+Transitions.durations['500'] = ''
+Transitions.durations['475'] = ''
+Transitions.durations['450'] = ''
+Transitions.durations['425'] = ''
+Transitions.durations['400'] = ''
+Transitions.durations['375'] = ''
+Transitions.durations['350'] = ''
+Transitions.durations['325'] = ''
+Transitions.durations['300'] = ''
+Transitions.durations['275'] = ''
+Transitions.durations['250'] = ''
+Transitions.durations['225'] = ''
+Transitions.durations['200'] = ''
+Transitions.durations['175'] = ''
+Transitions.durations['150'] = ''
+Transitions.durations['125'] = ''
+Transitions.durations['100'] = ''
+Transitions.durations['75'] = ''
+Transitions.durations['50'] = ''
+Transitions.durations['25'] = ''
+```
+
+
+
+
 
 
 
@@ -82,15 +162,31 @@ Transitions.durations = {
 
 ## Transitions.easings
 
-<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+Type: **`Object`**  
+
+| Transitions.easings Properties | Transitions.easings Prop Values      |
+|--------------------------------|--------------------------------------|
+| `"linear"`                     | `"{{ Transitions.easings.linear }}"` |
+| `"in"`                         | `"{{ Transitions.easings.in }}"`     |
+| `"out"`                        | `"{{ Transitions.easings.out }}"`    |
+| `"inOut"`                      | `"{{ Transitions.easings.inOut }}"`  |
+
+### Examples
 
 ```javascript
 Transitions.easings = {
-    linear: '',
-    in: '',
-    out: '',
-    inOut: '',
+    'linear': '',
+    'in': '',
+    'out': '',
+    'inOut': '',
 }
+```
+
+```javascript
+Transitions.easings.linear = ''
+Transitions.easings.in = ''
+Transitions.easings.out = ''
+Transitions.easings.inOut = ''
 ```
 
 
@@ -100,16 +196,40 @@ Transitions.easings = {
 
 ## Transitions.transitions
 
-<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+Type: **`Object`**  
+
+| Transitions.transitions Properties | Transitions.transitions Prop Values            |
+|------------------------------------|------------------------------------------------|
+| `"default"`                        | `"{{ Transitions.transitions.default }}"`   |
+| `"all"`                            | `"{{ Transitions.transitions.all }}"`       |
+| `"colors"`                         | `"{{ Transitions.transitions.colors }}"`    |
+| `"opacity"`                        | `"{{ Transitions.transitions.opacity }}"`   |
+| `"shadow"`                         | `"{{ Transitions.transitions.shadow }}"`    |
+| `"transform"`                      | `"{{ Transitions.transitions.transform }}"` |
+
+### Examples
 
 ```javascript
 Transitions.transitions = {
-    linear: '',
-    in: '',
-    out: '',
-    inOut: '',
+    'default': '',
+    'all': '',
+    'colors': '',
+    'opacity': '',
+    'shadow': '',
+    'transform': '',
 }
 ```
+
+```javascript
+Transitions.transitions.default = ''
+Transitions.transitions.all = ''
+Transitions.transitions.colors = ''
+Transitions.transitions.opacity = ''
+Transitions.transitions.shadow = ''
+Transitions.transitions.transform = ''
+```
+
+
 
 
 
@@ -118,7 +238,26 @@ Transitions.transitions = {
 
 ## Transitions.classes()
 
-<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+Returns: **`String`**  
+Default: **`"{{ Transitions.classes() }}"`**
+
+The `Transitions.classes()` method returns a joined `String` of the atomic classes within the various base properties of the {{ $frontmatter.title }} object using the `Transitions.getTransitionClasses()`, `Transitions.getEasingClasses()`, and `Transitions.getDurationClasses()` methods under the hood.
+
+### Arguments
+
+| Args           | Type      | Status     | Description |
+|----------------|:---------:|:----------:|-------------|
+| transitionsKey | `String`  | Optional   | Property names/keys of a Transitions.transitions object |
+| easingsKey     | `String`  | Optional   | Property names/keys of a Transitions.easings object |
+| durationsKey   | `String`  | Optional   | Property names/keys of a Transitions.durations object |
+
+The applicable values for the `transitionsKey` argument are set via the [Transitions.transitions](/modules/configs/transitions#transitions-transitions) property names/keys and atomic class values.
+
+The applicable values for the `easingsKey` argument are set via the [Transitions.easings](/modules/configs/transitions#transitions-easings) property names/keys and atomic class values.
+
+The applicable values for the `durationsKey` argument are set via the [Transitions.durations](/modules/configs/transitions#transitions-durations) property names/keys and atomic class values.
+
+### Examples
 
 ```javascript
 const transition = Transitions.classes() // defaults are 'default', 'inOut', '300'
@@ -155,7 +294,20 @@ const transition = Transitions.custom({
 
 ## Transitions.getDurationClasses()
 
-<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+Returns: **`String`**  
+Default: **`"{{ Transitions.getDurationClasses() }}"`**
+
+The `Transitions.getDurationClasses()` method returns transition duration classes based on the optional argument value passed into the method. These duration related classes come from the `Transitions.durations` object property names/keys and values (of atomic classes).
+
+### Arguments
+
+| Args         | Type      | Status     | Description |
+|--------------|:---------:|:----------:|-------------|
+| durationsKey | `String`  | Optional   | Property names/keys of an Transitions.durations object |
+
+The applicable values for the `durationsKey` argument are set via the [Transitions.durations](/modules/configs/transitions#transitions-durations) property names/keys and atomic class values.
+
+### Examples
 
 ```javascript
 const duration = Transitions.getDurationClasses() // default is '300'
@@ -172,7 +324,20 @@ const duration = Transitions.getDurationClasses('1000')
 
 ## Transitions.getEasingClasses()
 
-<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+Returns: **`String`**  
+Default: **`"{{ Transitions.getEasingClasses() }}"`**
+
+The `Transitions.getEasingClasses()` method returns transition duration classes based on the optional argument value passed into the method. These duration related classes come from the `Transitions.easings` object property names/keys and values (of atomic classes).
+
+### Arguments
+
+| Args       | Type      | Status     | Description |
+|------------|:---------:|:----------:|-------------|
+| easingsKey | `String`  | Optional   | Property names/keys of an Transitions.easings object |
+
+The applicable values for the `easingsKey` argument are set via the [Transitions.easings](/modules/configs/transitions#transitions-easings) property names/keys and atomic class values.
+
+### Examples
 
 ```javascript
 const easing = Transitions.getEasingClasses() // default is 'inOut'
@@ -189,7 +354,20 @@ const easing = Transitions.getEasingClasses('in')
 
 ## Transitions.getTransitionClasses()
 
-<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+Returns: **`String`**  
+Default: **`"{{ Transitions.getTransitionClasses() }}"`**
+
+The `Transitions.getTransitionClasses()` method returns transition duration classes based on the optional argument value passed into the method. These duration related classes come from the `Transitions.transitions` object property names/keys and values (of atomic classes).
+
+### Arguments
+
+| Args           | Type      | Status     | Description |
+|----------------|:---------:|:----------:|-------------|
+| transitionsKey | `String`  | Optional   | Property names/keys of an Transitions.transitions object |
+
+The applicable values for the `transitionsKey` argument are set via the [Transitions.transitions](/modules/configs/transitions#transitions-transitions) property names/keys and atomic class values.
+
+### Examples
 
 ```javascript
 const transition = Transitions.getTransitionClasses() // default is 'default'
