@@ -41,7 +41,7 @@ title: Palette Config Modules
 
 
 
-## Global Element Color palettes
+## Global Element Color Palettes
 
 It's worth noting that in the VueVentus premise, there are a handful of special element design/visual orientated characteristics that are considered "global" or "universal" from a design system hierarchical POV.
 

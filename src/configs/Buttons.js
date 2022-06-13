@@ -1,3 +1,5 @@
+import Transitions from './Transitions.js'
+
 export default {
     border: 'border border-transparent',
     cursor: 'cursor-pointer',
@@ -5,6 +7,7 @@ export default {
     display: 'inline-flex items-center',
     focus: 'focus:outline-none focus:ring focus:ring-opacity-50',
     text: 'font-semibold uppercase tracking-widest',
+    transition: Transitions.classes('all', 'inOut', '300'),
     base: function () {
         return [
             this.border,
@@ -13,6 +16,7 @@ export default {
             this.display,
             this.focus,
             this.text,
+            this.transition,
         ].join(' ').trim()
     },
     sizes: {
@@ -48,6 +52,7 @@ export default {
             this.blockDisplay,
             this.focus,
             this.text,
+            this.transition,
         ].join(' ').trim()
     },
     blockSizes: {
@@ -83,6 +88,7 @@ export default {
             this.fabDisplay,
             this.focus,
             this.text,
+            this.transition,
         ].join(' ').trim()
     },
     fabSizes: {

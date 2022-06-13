@@ -66,7 +66,7 @@ Type: **`Object`**
 | `"lg"`                        | `"{{ Buttons.blockSizes['lg'] }}"`  |
 | `"xl"`                        | `"{{ Buttons.blockSizes['xl'] }}"`  |
 | `"2xl"`                       | `"{{ Buttons.blockSizes['2xl'] }}"` |
-| `"2xl"`                       | `"{{ Buttons.blockSizes['3xl'] }}"` |
+| `"3xl"`                       | `"{{ Buttons.blockSizes['3xl'] }}"` |
 | `"4xl"`                       | `"{{ Buttons.blockSizes['4xl'] }}"` |
 
 ### Examples
@@ -223,7 +223,7 @@ Type: **`Object`**
 | `"lg"`                        | `"{{ Buttons.fabSizes['lg'] }}"`  |
 | `"xl"`                        | `"{{ Buttons.fabSizes['xl'] }}"`  |
 | `"2xl"`                       | `"{{ Buttons.fabSizes['2xl'] }}"` |
-| `"2xl"`                       | `"{{ Buttons.fabSizes['3xl'] }}"` |
+| `"3xl"`                       | `"{{ Buttons.fabSizes['3xl'] }}"` |
 | `"4xl"`                       | `"{{ Buttons.fabSizes['4xl'] }}"` |
 
 ### Examples
@@ -301,7 +301,7 @@ Type: **`Object`**
 | `"lg"`                        | `"{{ Buttons.sizes['lg'] }}"`  |
 | `"xl"`                        | `"{{ Buttons.sizes['xl'] }}"`  |
 | `"2xl"`                       | `"{{ Buttons.sizes['2xl'] }}"` |
-| `"2xl"`                       | `"{{ Buttons.sizes['3xl'] }}"` |
+| `"3xl"`                       | `"{{ Buttons.sizes['3xl'] }}"` |
 | `"4xl"`                       | `"{{ Buttons.sizes['4xl'] }}"` |
 
 ### Examples
@@ -357,6 +357,30 @@ The `Buttons.text` parameter is meant to isolate the text specific atomic classe
 ```javascript
 Buttons.text = ''
 ```
+
+
+
+
+
+
+
+
+## Buttons.transition
+
+Type: **`String`**  
+Default: **`"{{ Buttons.transition }}"`**
+
+The `Buttons.transition` parameter is meant to isolate the transition/animation specific atomic classes for an application's button elements.
+
+### Example
+
+```javascript
+Buttons.transition = ''
+```
+
+
+
+
 
 
 

@@ -31,10 +31,6 @@
             type: String,
             default: VvConfig.defaults.VvButton.size,
         },
-        transitionClasses: {
-            type: String,
-            default: VvConfig.transitions.classes(),
-        },
         type: {
             type: String,
             default: VvConfig.defaults.VvButton.type,
@@ -78,10 +74,6 @@
                 output.push( vv.buttons.sizes[props.size] )
             }
 
-        }  
-
-        if ( props.transitionClasses !== '' ) {
-            output.push( props.transitionClasses )
         }
 
         if ( vv?.buttons?.palettes?.[props.palette]?.[props.color] ) {

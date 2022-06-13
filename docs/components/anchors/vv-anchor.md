@@ -432,36 +432,6 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 
 
 
-## Prop: transitionClasses
-
-Type: **`String`**  
-Default: **`"{{ VvConfig.transitions.classes() }}"`**
-
-The {{ $frontmatter.title }} `transitionClasses` prop value sets the Tailwind CSS transition group classes that are applied to the output `<a>` element.
-
-### Syntax
-
-```html
-<VvAnchor transition-classes="transition-colors ease-in-out duration-300" href="#">
-    VvAnchor
-</VvAnchor>
-```
-
-### Result
-
-<div data-css-override class="w-full pt-4">
-    <VvAnchor transition-classes="transition-colors ease-in-out duration-300" href="#">
-        VvAnchor
-    </VvAnchor>
-</div>
-
-
-
-
-
-
-
-
 ## Slot: #default
 
 The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child elements/nodes into the component.
