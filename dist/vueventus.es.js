@@ -73,156 +73,6 @@ var Text = {
     ].join(" ").trim();
   }
 };
-var Anchors = {
-  cursor: "cursor-pointer",
-  display: "",
-  focus: "",
-  text: "underline underline-offset-2",
-  base: function() {
-    return [
-      this.cursor,
-      this.display,
-      this.focus,
-      this.text
-    ].join(" ").trim();
-  },
-  sizes: Text.sizes,
-  getSizeClasses: function(sizesKey) {
-    const key = sizesKey && this.sizes[sizesKey] ? sizesKey : "md";
-    return this.sizes[key];
-  },
-  classes: function(sizesKey) {
-    const sizes = sizesKey ? sizesKey : "";
-    return [
-      this.base(),
-      this.getSizeClasses(sizes)
-    ].join(" ").trim();
-  }
-};
-var Buttons = {
-  border: "border border-transparent",
-  cursor: "cursor-pointer",
-  disabled: "disabled:opacity-25",
-  display: "inline-flex items-center",
-  focus: "focus:outline-none focus:ring focus:ring-opacity-50",
-  text: "font-semibold uppercase tracking-widest",
-  base: function() {
-    return [
-      this.border,
-      this.cursor,
-      this.disabled,
-      this.display,
-      this.focus,
-      this.text
-    ].join(" ").trim();
-  },
-  sizes: {
-    "4xs": "px-1 py-px text-xxs",
-    "3xs": "px-1.5 py-0.5 text-xxs",
-    "2xs": "px-2 py-1 text-xs",
-    "xs": "px-2.5 py-1.5 text-xs",
-    "sm": "px-2.5 py-1.5 text-sm",
-    "md": "px-4 py-2 text-sm",
-    "lg": "px-4 py-2 text-base",
-    "xl": "px-6 py-3 text-base",
-    "2xl": "px-7 py-4 text-lg",
-    "3xl": "px-8 py-4 text-xl",
-    "4xl": "px-8 py-5 text-xl"
-  },
-  getSizeClasses: function(sizesKey) {
-    const key = sizesKey && this.sizes[sizesKey] ? sizesKey : "md";
-    return this.sizes[key];
-  },
-  classes: function(sizesKey) {
-    const sizes = sizesKey ? sizesKey : "";
-    return [
-      this.base(),
-      this.getSizeClasses(sizes)
-    ].join(" ").trim();
-  },
-  blockDisplay: "block w-full flex flex-col items-center justify-center",
-  blockBase: function() {
-    return [
-      this.border,
-      this.cursor,
-      this.disabled,
-      this.blockDisplay,
-      this.focus,
-      this.text
-    ].join(" ").trim();
-  },
-  blockSizes: {
-    "4xs": "px-1 py-1 text-2xs",
-    "3xs": "px-2.5 py-1.5 text-2xs",
-    "2xs": "px-2.5 py-1.5 text-xs",
-    "xs": "px-4 py-2 text-sm",
-    "sm": "px-4 py-2 text-base",
-    "md": "px-6 py-3 text-base",
-    "lg": "px-6 py-3 text-lg",
-    "xl": "px-7 py-3.5 text-lg",
-    "2xl": "px-8 py-5 text-xl",
-    "3xl": "px-9 py-5 text-2xl",
-    "4xl": "px-10 py-6 text-2xl"
-  },
-  getBlockSizeClasses: function(sizesKey) {
-    const key = sizesKey && this.blockSizes[sizesKey] ? sizesKey : "md";
-    return this.blockSizes[key];
-  },
-  blockClasses: function(sizesKey) {
-    const sizes = sizesKey ? sizesKey : "";
-    return [
-      this.blockBase(),
-      this.getBlockSizeClasses(sizes)
-    ].join(" ").trim();
-  },
-  fabDisplay: "inline-flex items-center items-center justify-center",
-  fabBase: function() {
-    return [
-      this.border,
-      this.cursor,
-      this.disabled,
-      this.fabDisplay,
-      this.focus,
-      this.text
-    ].join(" ").trim();
-  },
-  fabSizes: {
-    "4xs": "w-6 h-6 text-xxs",
-    "3xs": "w-7 h-7 text-xxs",
-    "2xs": "w-8 h-8 text-xs",
-    "xs": "w-9 h-9 text-xs",
-    "sm": "w-10 h-10 text-sm",
-    "md": "w-11 h-11 text-sm",
-    "lg": "w-12 h-12 text-base",
-    "xl": "w-14 h-14 text-base",
-    "2xl": "w-16 h-16 text-lg",
-    "3xl": "w-20 h-20 text-xl",
-    "4xl": "w-24 h-24 text-xl"
-  },
-  getFabSizeClasses: function(sizesKey) {
-    const key = sizesKey && this.fabSizes[sizesKey] ? sizesKey : "md";
-    return this.fabSizes[key];
-  },
-  fabClasses: function(sizesKey) {
-    const sizes = sizesKey ? sizesKey : "";
-    return [
-      this.fabBase(),
-      this.getFabSizeClasses(sizes)
-    ].join(" ").trim();
-  }
-};
-var Inputs = {
-  display: "block w-full",
-  ring: "ring-opacity-50",
-  text: "text-sm",
-  base: function() {
-    return [
-      this.display,
-      this.ring,
-      this.text
-    ].join(" ").trim();
-  }
-};
 var Transitions = {
   durations: {
     "1200": "duration-1200",
@@ -270,6 +120,7 @@ var Transitions = {
     default: "transition",
     all: "transition-all",
     colors: "transition-colors",
+    none: "transition-none",
     opacity: "transition-opacity",
     shadow: "transition-shadow",
     transform: "transition-transform"
@@ -306,6 +157,189 @@ var Transitions = {
       this.getTransitionClasses(transitions),
       this.getEasingClasses(easings),
       this.getDurationClasses(durations)
+    ].join(" ").trim();
+  }
+};
+var Anchors = {
+  cursor: "cursor-pointer",
+  display: "",
+  focus: "",
+  text: "underline underline-offset-2",
+  transition: Transitions.classes("colors", "inOut", "300"),
+  base: function() {
+    return [
+      this.cursor,
+      this.display,
+      this.focus,
+      this.text,
+      this.transition
+    ].join(" ").trim();
+  },
+  sizes: Text.sizes,
+  getSizeClasses: function(sizesKey) {
+    const key = sizesKey && this.sizes[sizesKey] ? sizesKey : "md";
+    return this.sizes[key];
+  },
+  classes: function(sizesKey) {
+    const sizes = sizesKey ? sizesKey : "";
+    return [
+      this.base(),
+      this.getSizeClasses(sizes)
+    ].join(" ").trim();
+  }
+};
+var Buttons = {
+  border: "border border-transparent",
+  cursor: "cursor-pointer",
+  disabled: "disabled:opacity-25",
+  display: "inline-flex items-center",
+  focus: "focus:outline-none focus:ring focus:ring-opacity-50",
+  text: "font-semibold uppercase tracking-widest",
+  transition: Transitions.classes("all", "inOut", "300"),
+  base: function() {
+    return [
+      this.border,
+      this.cursor,
+      this.disabled,
+      this.display,
+      this.focus,
+      this.text,
+      this.transition
+    ].join(" ").trim();
+  },
+  sizes: {
+    "4xs": "px-1 py-px text-xxs",
+    "3xs": "px-1.5 py-0.5 text-xxs",
+    "2xs": "px-2 py-1 text-xs",
+    "xs": "px-2.5 py-1.5 text-xs",
+    "sm": "px-2.5 py-1.5 text-sm",
+    "md": "px-4 py-2 text-sm",
+    "lg": "px-4 py-2 text-base",
+    "xl": "px-6 py-3 text-base",
+    "2xl": "px-7 py-4 text-lg",
+    "3xl": "px-8 py-4 text-xl",
+    "4xl": "px-8 py-5 text-xl"
+  },
+  getSizeClasses: function(sizesKey) {
+    const key = sizesKey && this.sizes[sizesKey] ? sizesKey : "md";
+    return this.sizes[key];
+  },
+  classes: function(sizesKey) {
+    const sizes = sizesKey ? sizesKey : "";
+    return [
+      this.base(),
+      this.getSizeClasses(sizes)
+    ].join(" ").trim();
+  },
+  blockDisplay: "block w-full flex flex-col items-center justify-center",
+  blockBase: function() {
+    return [
+      this.border,
+      this.cursor,
+      this.disabled,
+      this.blockDisplay,
+      this.focus,
+      this.text,
+      this.transition
+    ].join(" ").trim();
+  },
+  blockSizes: {
+    "4xs": "px-1 py-1 text-2xs",
+    "3xs": "px-2.5 py-1.5 text-2xs",
+    "2xs": "px-2.5 py-1.5 text-xs",
+    "xs": "px-4 py-2 text-sm",
+    "sm": "px-4 py-2 text-base",
+    "md": "px-6 py-3 text-base",
+    "lg": "px-6 py-3 text-lg",
+    "xl": "px-7 py-3.5 text-lg",
+    "2xl": "px-8 py-5 text-xl",
+    "3xl": "px-9 py-5 text-2xl",
+    "4xl": "px-10 py-6 text-2xl"
+  },
+  getBlockSizeClasses: function(sizesKey) {
+    const key = sizesKey && this.blockSizes[sizesKey] ? sizesKey : "md";
+    return this.blockSizes[key];
+  },
+  blockClasses: function(sizesKey) {
+    const sizes = sizesKey ? sizesKey : "";
+    return [
+      this.blockBase(),
+      this.getBlockSizeClasses(sizes)
+    ].join(" ").trim();
+  },
+  fabDisplay: "inline-flex items-center items-center justify-center",
+  fabBase: function() {
+    return [
+      this.border,
+      this.cursor,
+      this.disabled,
+      this.fabDisplay,
+      this.focus,
+      this.text,
+      this.transition
+    ].join(" ").trim();
+  },
+  fabSizes: {
+    "4xs": "w-6 h-6 text-xxs",
+    "3xs": "w-7 h-7 text-xxs",
+    "2xs": "w-8 h-8 text-xs",
+    "xs": "w-9 h-9 text-xs",
+    "sm": "w-10 h-10 text-sm",
+    "md": "w-11 h-11 text-sm",
+    "lg": "w-12 h-12 text-base",
+    "xl": "w-14 h-14 text-base",
+    "2xl": "w-16 h-16 text-lg",
+    "3xl": "w-20 h-20 text-xl",
+    "4xl": "w-24 h-24 text-xl"
+  },
+  getFabSizeClasses: function(sizesKey) {
+    const key = sizesKey && this.fabSizes[sizesKey] ? sizesKey : "md";
+    return this.fabSizes[key];
+  },
+  fabClasses: function(sizesKey) {
+    const sizes = sizesKey ? sizesKey : "";
+    return [
+      this.fabBase(),
+      this.getFabSizeClasses(sizes)
+    ].join(" ").trim();
+  }
+};
+var Inputs = {
+  border: "border",
+  display: "block w-full",
+  outline: "outline-none outline-offset-0 outline-2",
+  placeholder: "",
+  ring: "",
+  text: "",
+  transition: Transitions.classes("all", "inOut", "300"),
+  base: function() {
+    return [
+      this.border,
+      this.display,
+      this.outline,
+      this.placeholder,
+      this.ring,
+      this.text,
+      this.transition
+    ].join(" ").trim();
+  },
+  sizes: {
+    "xs": "px-2 py-1.5 text-sm",
+    "sm": "px-3 py-2 text-base",
+    "md": "px-3 py-2 text-lg",
+    "lg": "px-4 py-3 text-xl",
+    "xl": "px-4 py-3 text-2xl",
+    "2xl": "px-5 py-4 text-3xl"
+  },
+  getSizeClasses: function(sizesKey) {
+    const key = sizesKey && this.sizes[sizesKey] ? sizesKey : "md";
+    return this.sizes[key];
+  },
+  classes: function(sizesKey) {
+    const sizes = sizesKey ? sizesKey : "";
+    return [
+      this.base(),
+      this.getSizeClasses(sizes)
     ].join(" ").trim();
   }
 };
@@ -367,9 +401,9 @@ var GroundPastel = {
   success: "text-black bg-green-300 dark:bg-green-400"
 };
 var InputValidation = {
-  "default": "bg-gray-50 dark:bg-gray-800 focus:bg-white dark:focus:bg-gray-700 text-black dark:text-white border-gray-300 dark:border-black focus:ring-lightBlue-500 focus:border-lightBlue-500",
-  success: "bg-green-100 dark:bg-green-900 focus:bg-green-50 dark:focus:bg-green-800 text-black dark:text-white border-green-300 dark:border-black focus:ring-green-500 focus:border-green-500",
-  error: "bg-rose-100 dark:bg-rose-900 focus:bg-rose-50 dark:focus:bg-rose-800 text-black dark:text-white border-rose-300 dark:border-black focus:ring-rose-500 focus:border-rose-500"
+  "default": "bg-gray-50 dark:bg-gray-800 focus:bg-white dark:focus:bg-gray-900 border-gray-300 dark:border-gray-600 focus:border-lightBlue-500 focus:outline-lightBlue-500/50 placeholder:text-gray-200 dark:placeholder:text-gray-600",
+  success: "text-green-700 dark:text-green-200 bg-green-100 dark:bg-green-800 focus:bg-green-50 dark:focus:bg-green-900 border-green-300 dark:border-green-600 focus:border-green-500 focus:outline-green-500/50 placeholder:text-green-300 dark:placeholder:text-green-600",
+  error: "text-rose-700 dark:text-rose-200 bg-rose-100 dark:bg-rose-800 focus:bg-rose-50 dark:focus:bg-rose-900 border-rose-300 dark:border-rose-600 focus:border-rose-500 focus:outline-rose-500/50 placeholder:text-rose-300 dark:placeholder:text-rose-600"
 };
 var TextDefault = {
   "default": "",
@@ -771,10 +805,6 @@ const _sfc_main$5 = {
     palette: {
       type: String,
       default: VvConfig.defaults.VvAnchor.palette
-    },
-    transitionClasses: {
-      type: String,
-      default: VvConfig.transitions.classes()
     }
   },
   setup(__props) {
@@ -783,7 +813,6 @@ const _sfc_main$5 = {
     let classes = computed(() => {
       var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p;
       let output = [];
-      output.push(props.transitionClasses);
       if (props.button === true) {
         if (props.buttonBlock === true && props.buttonFab === false) {
           if ((_a = vv == null ? void 0 : vv.buttons) == null ? void 0 : _a.blockBase()) {
@@ -863,10 +892,6 @@ const _sfc_main$4 = {
       type: String,
       default: VvConfig.defaults.VvButton.size
     },
-    transitionClasses: {
-      type: String,
-      default: VvConfig.transitions.classes()
-    },
     type: {
       type: String,
       default: VvConfig.defaults.VvButton.type,
@@ -900,9 +925,6 @@ const _sfc_main$4 = {
         if (props.size !== "" && ((_i = (_h = vv == null ? void 0 : vv.buttons) == null ? void 0 : _h.sizes) == null ? void 0 : _i[props.size])) {
           output.push(vv.buttons.sizes[props.size]);
         }
-      }
-      if (props.transitionClasses !== "") {
-        output.push(props.transitionClasses);
       }
       if ((_l = (_k = (_j = vv == null ? void 0 : vv.buttons) == null ? void 0 : _j.palettes) == null ? void 0 : _k[props.palette]) == null ? void 0 : _l[props.color]) {
         output.push(vv.buttons.palettes[props.palette][props.color]);
