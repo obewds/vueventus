@@ -198,11 +198,12 @@ Transitions.easings.inOut = ''
 
 Type: **`Object`**  
 
-| Transitions.transitions Properties | Transitions.transitions Prop Values            |
-|------------------------------------|------------------------------------------------|
+| Transitions.transitions Properties | Transitions.transitions Prop Values         |
+|------------------------------------|---------------------------------------------|
 | `"default"`                        | `"{{ Transitions.transitions.default }}"`   |
 | `"all"`                            | `"{{ Transitions.transitions.all }}"`       |
 | `"colors"`                         | `"{{ Transitions.transitions.colors }}"`    |
+| `"none"`                           | `"{{ Transitions.transitions.none }}"`      |
 | `"opacity"`                        | `"{{ Transitions.transitions.opacity }}"`   |
 | `"shadow"`                         | `"{{ Transitions.transitions.shadow }}"`    |
 | `"transform"`                      | `"{{ Transitions.transitions.transform }}"` |
@@ -214,6 +215,7 @@ Transitions.transitions = {
     'default': '',
     'all': '',
     'colors': '',
+    'none': '',
     'opacity': '',
     'shadow': '',
     'transform': '',
@@ -224,6 +226,7 @@ Transitions.transitions = {
 Transitions.transitions.default = ''
 Transitions.transitions.all = ''
 Transitions.transitions.colors = ''
+Transitions.transitions.none = ''
 Transitions.transitions.opacity = ''
 Transitions.transitions.shadow = ''
 Transitions.transitions.transform = ''

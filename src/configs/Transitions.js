@@ -45,6 +45,7 @@ export default {
         default: 'transition',
         all: 'transition-all',
         colors: 'transition-colors',
+        none: 'transition-none',
         opacity: 'transition-opacity',
         shadow: 'transition-shadow',
         transform: 'transition-transform',
