@@ -1,9 +1,18 @@
 // ./src/helpers/digitsOnly.js
 
-export default function(str) {
+export default function (value, originalNumber) {
 
-    var temp = str.replace( /([A-Z])/g, " $1")
-    
-    return temp.charAt(0).toUpperCase() + temp.slice(1)
+    const val = (String(value)).trim()
+
+    // Allow only be positive integer b/w 1 and 9
+    if (/^[1-9]\d*$/.test(val)) {
+
+        return Number(val)
+        
+    } else {
+
+        return originalNumber
+
+    }
 
 }
