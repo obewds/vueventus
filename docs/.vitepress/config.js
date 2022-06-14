@@ -178,7 +178,17 @@ function sidebarModules() {
             collapsible: true,
             items: [
                 { text: 'Helper Modules', link: '/modules/helpers/' },
+                { text: 'camelCaseToTitleCase()', link: '/modules/helpers/camel-case-to-title-case' },
+                { text: 'digitsOnly()', link: '/modules/helpers/digits-only' },
+                { text: 'formatBytes()', link: '/modules/helpers/format-bytes' },
+                { text: 'formatMediaTime()', link: '/modules/helpers/format-media-time' },
+                { text: 'formatNumber()', link: '/modules/helpers/format-number' },
                 { text: 'mergeWithVvConfig()', link: '/modules/helpers/merge-with-vv-config' },
+                { text: 'randomString()', link: '/modules/helpers/random-string' },
+                { text: 'slugifyString()', link: '/modules/helpers/slugify-string' },
+                { text: 'stringToCamelCase()', link: '/modules/helpers/string-to-camel-case' },
+                { text: 'stringToFilename()', link: '/modules/helpers/string-to-filename' },
+                { text: 'uniqueArray()', link: '/modules/helpers/unique-array' },
             ]
         },
     ]
