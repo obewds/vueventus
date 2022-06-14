@@ -1,26 +1,26 @@
 // ./src/validators/ValidInputTypes.js
 
 export default [
-    // 'button',
-    // 'checkbox',
+    // 'button', // (use VvButton)
+    // 'checkbox', // (use TBD)
     'color',
     'date',
     'datetime-local',
     'email',
-    // 'file',
+    // 'file', // (use TBD)
     // 'hidden',
-    // 'image',
+    // 'image', // (use TBD)
     'month',
     'number',
     'password',
-    // 'radio',
-    // 'range',
-    // 'reset',
+    // 'radio', // (use TBD)
+    // 'range', // (use TBD)
+    // 'reset', // (use VvButton)
     'search',
-    // 'submit',
+    // 'submit', // (use VvButton)
     'tel',
     'text',
     'time',
     'url',
-    // 'week',
+    // 'week', // (use TBD)
 ]
