@@ -11,8 +11,8 @@ title: stringToFilename()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that... docs coming soon!
-<!-- #TODO: complete description docs for helper module -->
+The {{ $frontmatter.title }} helper module provides a helper function that takes in a string argument and returns a filename safe variation of the argument string.
+
 
 
 

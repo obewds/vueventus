@@ -95,7 +95,7 @@ The {{ $frontmatter.title }} `buttonBlock` prop sets the component instance to u
     color="primary"
     href="#"
 >
-    VvButton
+    VvAnchor
 </VvAnchor>
 ```
 
@@ -103,7 +103,7 @@ The {{ $frontmatter.title }} `buttonBlock` prop sets the component instance to u
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor :button="true" :button-block="true" palette="solid" color="primary" href="#" :style="whiteColorStyles">
-        VvButton
+        VvAnchor
     </VvAnchor>
 </div>
 

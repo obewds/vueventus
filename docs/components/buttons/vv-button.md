@@ -358,7 +358,7 @@ The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child 
 
 ```html
 <VvButton>
-    Slot <span class="text-red-500">Content</span>
+    Slot<span class="text-yellow-300 pl-2">Content</span>
 </VvButton>
 ```
 
@@ -366,7 +366,7 @@ The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child 
 
 <div class="w-full pt-4">
     <VvButton>
-        Slot <span class="text-red-500">Content</span>
+        Slot<span class="text-yellow-300 pl-2">Content</span>
     </VvButton>
 </div>
 

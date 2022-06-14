@@ -11,8 +11,8 @@ title: slugifyString()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that... docs coming soon!
-<!-- #TODO: complete description docs for helper module -->
+The {{ $frontmatter.title }} helper module provides a helper function that takes a string argument and modifies/returns it as a URL safe and human-readable "slug" string.
+
 
 
 
