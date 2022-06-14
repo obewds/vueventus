@@ -10,7 +10,16 @@ test('formatMediaTime helper module returns a truthy value', async () => {
 })
 
 
-test('formatMediaTime() accepts a number value and returns an expected result', async () => {
+test('formatMediaTime() accepts a number value and returns an expected 00:00 format', async () => {
+
+    const test = formatMediaTime(2.123456)
+    
+    expect(test).toBe('00:02')
+
+})
+
+
+test('formatMediaTime() accepts a number value and returns an expected 00:00 format', async () => {
 
     const test = formatMediaTime(122.123456)
     
@@ -18,5 +27,21 @@ test('formatMediaTime() accepts a number value and returns an expected result', 
 
 })
 
-// TODO update helper to include hours, optionally, and make a test for the output
+
+test('formatMediaTime() accepts a number value over an hour and returns results in 00:00:00 format', async () => {
+
+    const test = formatMediaTime(6069.123456)
+    
+    expect(test).toBe('01:41:09')
+
+})
+
+
+test('formatMediaTime() accepts a number value over an hour and returns results in 00:00:00:00 format', async () => {
+
+    const test = formatMediaTime(806069.123456)
+    
+    expect(test).toBe('09:07:54:29')
+
+})
 

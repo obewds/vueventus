@@ -266,7 +266,7 @@ However, the `Inputs.classes()` method also returns `Inputs.getSizeClasses()` me
 
 | Args       | Type      | Status     | Description |
 |------------|:---------:|:----------:|-------------|
-| sizesKey   | `String`  | Optional   | Property names/keys of an Inputs.sizes object |
+| sizesKey   | `String`  | Optional   | Property name/key of an Inputs.sizes object |
 
 The applicable values for the `sizesKey` argument are set via the [Inputs.sizes](/modules/configs/inputs#inputs-sizes) property names/keys and atomic class values.
 
@@ -297,7 +297,7 @@ The `Inputs.getSizeClasses()` method returns text size related classes based on 
 
 | Args       | Type      | Status     | Description |
 |------------|:---------:|:----------:|-------------|
-| sizesKey   | `String`  | Optional   | Property names/keys of an Inputs.sizes object |
+| sizesKey   | `String`  | Optional   | Property name/key of an Inputs.sizes object |
 
 The applicable values for the `sizesKey` argument are set via the [Inputs.sizes](/modules/configs/inputs#inputs-sizes) property names/keys and atomic class values.
 

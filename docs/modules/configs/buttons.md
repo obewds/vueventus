@@ -436,7 +436,7 @@ However, the `Buttons.blockClasses()` method also returns `Buttons.getBlockSizeC
 
 | Args       | Type      | Status     | Description |
 |------------|:---------:|:----------:|-------------|
-| sizesKey   | `String`  | Optional   | Property names/keys of an Buttons.blockSizes object |
+| sizesKey   | `String`  | Optional   | Property name/key of an Buttons.blockSizes object |
 
 The applicable values for the `sizesKey` argument are set via the [Buttons.blockSizes](/modules/configs/buttons#buttons-blocksizes) property names/keys and atomic class values.
 
@@ -468,7 +468,7 @@ However, the `Buttons.classes()` method also returns `Buttons.getSizeClasses()` 
 
 | Args       | Type      | Status     | Description |
 |------------|:---------:|:----------:|-------------|
-| sizesKey   | `String`  | Optional   | Property names/keys of an Buttons.sizes object |
+| sizesKey   | `String`  | Optional   | Property name/key of an Buttons.sizes object |
 
 The applicable values for the `sizesKey` argument are set via the [Buttons.sizes](/modules/configs/buttons#buttons-sizes) property names/keys and atomic class values.
 
@@ -518,7 +518,7 @@ However, the `Buttons.fabClasses()` method also returns `Buttons.getFabSizeClass
 
 | Args       | Type      | Status     | Description |
 |------------|:---------:|:----------:|-------------|
-| sizesKey   | `String`  | Optional   | Property names/keys of an Buttons.fabSizes object |
+| sizesKey   | `String`  | Optional   | Property name/key of an Buttons.fabSizes object |
 
 The applicable values for the `sizesKey` argument are set via the [Buttons.fabSizes](/modules/configs/buttons#buttons-fabsizes) property names/keys and atomic class values.
 
@@ -548,7 +548,7 @@ The `Buttons.getBlockSizeClasses()` method returns text size related classes bas
 
 | Args       | Type      | Status     | Description |
 |------------|:---------:|:----------:|-------------|
-| sizesKey   | `String`  | Optional   | Property names/keys of an Buttons.sizes object |
+| sizesKey   | `String`  | Optional   | Property name/key of an Buttons.sizes object |
 
 The applicable values for the `sizesKey` argument are set via the [Buttons.blockSizes](/modules/configs/buttons#buttons-blocksizes) property names/keys and atomic class values.
 
@@ -578,7 +578,7 @@ The `Buttons.getFabSizeClasses()` method returns text size related classes based
 
 | Args       | Type      | Status     | Description |
 |------------|:---------:|:----------:|-------------|
-| sizesKey   | `String`  | Optional   | Property names/keys of an Buttons.sizes object |
+| sizesKey   | `String`  | Optional   | Property name/key of an Buttons.sizes object |
 
 The applicable values for the `sizesKey` argument are set via the [Buttons.fabSizes](/modules/configs/buttons#buttons-fabsizes) property names/keys and atomic class values.
 
@@ -608,7 +608,7 @@ The `Buttons.getSizeClasses()` method returns text size related classes based on
 
 | Args       | Type      | Status     | Description |
 |------------|:---------:|:----------:|-------------|
-| sizesKey   | `String`  | Optional   | Property names/keys of an Buttons.sizes object |
+| sizesKey   | `String`  | Optional   | Property name/key of an Buttons.sizes object |
 
 The applicable values for the `sizesKey` argument are set via the [Buttons.sizes](/modules/configs/buttons#buttons-sizes) property names/keys and atomic class values.
 

@@ -2,8 +2,10 @@
 // https://gist.github.com/codeguy/6684588#gistcomment-3243980
 
 export default function (text, separator) {
-    let txt = text
-    let sep = separator
+
+    let txt = text ? text : ''
+    let sep = separator ? separator : '-'
+
     return (txt)
         .toString()
         .toLowerCase()
@@ -12,4 +14,5 @@ export default function (text, separator) {
         .replace(/\s+/g, sep)
         .replace(/[^\w\-]+/g, '')
         .replace(/\-\-+/g, sep)
+        
 }

@@ -250,9 +250,9 @@ The `Transitions.classes()` method returns a joined `String` of the atomic class
 
 | Args           | Type      | Status     | Description |
 |----------------|:---------:|:----------:|-------------|
-| transitionsKey | `String`  | Optional   | Property names/keys of a Transitions.transitions object |
-| easingsKey     | `String`  | Optional   | Property names/keys of a Transitions.easings object |
-| durationsKey   | `String`  | Optional   | Property names/keys of a Transitions.durations object |
+| transitionsKey | `String`  | Optional   | Property name/key of a Transitions.transitions object |
+| easingsKey     | `String`  | Optional   | Property name/key of a Transitions.easings object |
+| durationsKey   | `String`  | Optional   | Property name/key of a Transitions.durations object |
 
 The applicable values for the `transitionsKey` argument are set via the [Transitions.transitions](/modules/configs/transitions#transitions-transitions) property names/keys and atomic class values.
 
@@ -278,6 +278,28 @@ const transition = Transitions.classes('colors', 'linear', '1000')
 ## Transitions.custom()
 
 <!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
+
+Returns: **`String`**  
+Default: **`"{{ Transitions.classes() }}"`**
+
+The `Transitions.custom()` method is essentially a more verbose and declarative version of the `Transitions.classes()` method, which also returns a joined `String` of the atomic classes within the various base properties of the {{ $frontmatter.title }} object using the `Transitions.getTransitionClasses()`, `Transitions.getEasingClasses()`, and `Transitions.getDurationClasses()` methods under the hood.
+
+### Arguments
+
+| Args               | Type      | Status     | Description |
+|--------------------|:---------:|:----------:|-------------|
+| object             | `Object`  | Required   | A settings parameter object |
+| object.transitions | `String`  | Optional   | Property name/key of a Transitions.transitions object |
+| object.easings     | `String`  | Optional   | Property name/key of a Transitions.easings object |
+| object.durations   | `String`  | Optional   | Property name/key of a Transitions.durations object |
+
+The applicable values for the `object.transitions` settings object property are set via the [Transitions.transitions](/modules/configs/transitions#transitions-transitions) property names/keys and atomic class values.
+
+The applicable values for the `object.easings` settings object property are set via the [Transitions.easings](/modules/configs/transitions#transitions-easings) property names/keys and atomic class values.
+
+The applicable values for the `object.durations` settings object property are set via the [Transitions.durations](/modules/configs/transitions#transitions-durations) property names/keys and atomic class values.
+
+### Examples
 
 ```javascript
 const transition = Transitions.custom() // defaults are 'default', 'inOut', '300'
@@ -306,7 +328,7 @@ The `Transitions.getDurationClasses()` method returns transition duration classe
 
 | Args         | Type      | Status     | Description |
 |--------------|:---------:|:----------:|-------------|
-| durationsKey | `String`  | Optional   | Property names/keys of an Transitions.durations object |
+| durationsKey | `String`  | Optional   | Property name/key of an Transitions.durations object |
 
 The applicable values for the `durationsKey` argument are set via the [Transitions.durations](/modules/configs/transitions#transitions-durations) property names/keys and atomic class values.
 
@@ -336,7 +358,7 @@ The `Transitions.getEasingClasses()` method returns transition duration classes 
 
 | Args       | Type      | Status     | Description |
 |------------|:---------:|:----------:|-------------|
-| easingsKey | `String`  | Optional   | Property names/keys of an Transitions.easings object |
+| easingsKey | `String`  | Optional   | Property name/key of an Transitions.easings object |
 
 The applicable values for the `easingsKey` argument are set via the [Transitions.easings](/modules/configs/transitions#transitions-easings) property names/keys and atomic class values.
 
@@ -366,7 +388,7 @@ The `Transitions.getTransitionClasses()` method returns transition duration clas
 
 | Args           | Type      | Status     | Description |
 |----------------|:---------:|:----------:|-------------|
-| transitionsKey | `String`  | Optional   | Property names/keys of an Transitions.transitions object |
+| transitionsKey | `String`  | Optional   | Property name/key of an Transitions.transitions object |
 
 The applicable values for the `transitionsKey` argument are set via the [Transitions.transitions](/modules/configs/transitions#transitions-transitions) property names/keys and atomic class values.
 
