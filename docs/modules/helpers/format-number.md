@@ -11,8 +11,8 @@ title: formatNumber()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that... docs coming soon!
-<!-- #TODO: complete description docs for helper module -->
+The {{ $frontmatter.title }} helper module provides a helper function that returns it's passed argument as a formatted number using JavaScript's Intl.NumberFormat() API/method.
+
 
 
 

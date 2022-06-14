@@ -11,8 +11,8 @@ title: randomString()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that... docs coming soon!
-<!-- #TODO: complete description docs for helper module -->
+The {{ $frontmatter.title }} helper module provides a helper function that generates a random continuous string.
+
 
 
 

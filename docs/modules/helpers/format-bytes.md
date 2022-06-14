@@ -11,8 +11,7 @@ title: formatBytes()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that... docs coming soon!
-<!-- #TODO: complete description docs for helper module -->
+The {{ $frontmatter.title }} helper module provides a helper function that takes in a decimal number and an optional number of decimal places, and returns a formatted string of that number in the bytes, kilobytes, megabytes, etc. depending on the size of the input decimal number.
 
 
 

@@ -11,8 +11,8 @@ title: stringToCamelCase()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that... docs coming soon!
-<!-- #TODO: complete description docs for helper module -->
+The {{ $frontmatter.title }} helper module provides a helper function that converts a passed in string and returns that string formatted in camelCase.
+
 
 
 
