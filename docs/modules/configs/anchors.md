@@ -177,7 +177,7 @@ However, the `Anchors.classes()` method also returns `Anchors.getSizeClasses()` 
 
 | Args       | Type      | Status     | Description |
 |------------|:---------:|:----------:|-------------|
-| sizesKey   | `String`  | Optional   | Property names/keys of an Anchors.sizes object |
+| sizesKey   | `String`  | Optional   | Property name/key of an Anchors.sizes object |
 
 The applicable values for the `sizesKey` argument are set via the [Text Config Module Text.sizes](/modules/configs/text#text-sizes) property names/keys and atomic class values.
 
@@ -207,7 +207,7 @@ The `Anchors.getSizeClasses()` method returns text size related classes based on
 
 | Args       | Type      | Status     | Description |
 |------------|:---------:|:----------:|-------------|
-| sizesKey   | `String`  | Optional   | Property names/keys of an Anchors.sizes object |
+| sizesKey   | `String`  | Optional   | Property name/key of an Anchors.sizes object |
 
 The applicable values for the `sizesKey` argument are set via the [Text Config Module Text.sizes](/modules/configs/text#text-sizes) property names/keys and atomic class values.
 

@@ -9,4 +9,29 @@ test('slugifyString helper module returns a truthy value', async () => {
 
 })
 
-// TODO add better test(s) for helper
+
+test('slugifyString() method converts a sentence to an expected slug string', async () => {
+
+    const test = 'This is a test.'
+    
+    expect( slugifyString( test ) ).toBe('this-is-a-test')
+
+})
+
+
+test('slugifyString() method converts a sentence to an expected slug string', async () => {
+
+    const test = ' This is a 2nd test!!!'
+    
+    expect( slugifyString( test ) ).toBe('this-is-a-2nd-test')
+
+})
+
+
+test('slugifyString() method converts a sentence to an expected slug string', async () => {
+
+    const test = 'And (&) THIS is a 3rd?!?!'
+    
+    expect( slugifyString( test ) ).toBe('and-this-is-a-3rd')
+
+})

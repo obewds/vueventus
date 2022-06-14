@@ -9,4 +9,24 @@ test('mergeWithVvConfig helper module returns a truthy value', async () => {
 
 })
 
-// TODO add a test that tests functionality of the func
+
+test('mergeWithVvConfig helper module returns a truthy value', async () => {
+
+    const testVal = 'test-value'
+    const testAddition = {
+        test: {
+            testProp: testVal
+        },
+        anchors: {
+            palettes: {
+                default: testVal
+            }
+        }
+    }
+
+    const testMerged = mergeWithVvConfig(testAddition)
+    
+    expect(testMerged.test.testProp).toBe(testVal)
+    expect(testMerged.anchors.palettes.default).toBe(testVal)
+
+})

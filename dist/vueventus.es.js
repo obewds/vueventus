@@ -522,9 +522,30 @@ function formatBytes(bytes, decimals = 2) {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
 }
 function formatMediaTime(currentTime = 0) {
-  const minutes = "0" + Math.floor(currentTime / 60);
-  const seconds = "0" + Math.floor(currentTime - minutes * 60);
-  return minutes.substring(-2) + ":" + seconds.substring(-2);
+  let sec_num = parseInt(currentTime, 10);
+  let days = Math.floor(parseInt(sec_num / (24 * 3600)));
+  sec_num = sec_num % (24 * 3600);
+  let hours = Math.floor(parseInt(sec_num / 3600));
+  sec_num %= 3600;
+  let minutes = Math.floor(sec_num / 60);
+  sec_num %= 60;
+  let seconds = Math.floor(sec_num);
+  if (days < 10) {
+    days = "0" + days;
+  }
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
+  let output = days === "00" ? "" : days + ":";
+  output += hours === "00" ? "" : hours + ":";
+  output += minutes + ":" + seconds;
+  return output;
 }
 function formatNumber(number) {
   return new Intl.NumberFormat().format(number);
@@ -638,12 +659,12 @@ function randomString(length = 10) {
   return result;
 }
 function slugifyString(text, separator) {
-  let txt = text;
-  let sep = separator;
+  let txt = text ? text : "";
+  let sep = separator ? separator : "-";
   return txt.toString().toLowerCase().normalize("NFD").trim().replace(/\s+/g, sep).replace(/[^\w\-]+/g, "").replace(/\-\-+/g, sep);
 }
 function stringToCamelCase(str) {
-  return str.replace(/[\W_]+/g, "").replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+  return str.replace(/[^\w\s\']|_/g, " ").replace(/\s+/g, " ").replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
     return index === 0 ? word.toLowerCase() : word.toUpperCase();
   }).replace(/\s+/g, "");
 }
