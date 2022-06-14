@@ -401,7 +401,7 @@ var GroundPastel = {
   success: "text-black bg-green-300 dark:bg-green-400"
 };
 var InputValidation = {
-  "default": "bg-gray-50 dark:bg-gray-800 focus:bg-white dark:focus:bg-gray-900 border-gray-300 dark:border-gray-600 focus:border-lightBlue-500 focus:outline-lightBlue-500/50 placeholder:text-gray-200 dark:placeholder:text-gray-600",
+  "default": "bg-gray-50 dark:bg-gray-800 focus:bg-white dark:focus:bg-gray-900 border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:outline-blue-500/50 placeholder:text-gray-200 dark:placeholder:text-gray-600",
   success: "text-green-700 dark:text-green-200 bg-green-100 dark:bg-green-800 focus:bg-green-50 dark:focus:bg-green-900 border-green-300 dark:border-green-600 focus:border-green-500 focus:outline-green-500/50 placeholder:text-green-300 dark:placeholder:text-green-600",
   error: "text-rose-700 dark:text-rose-200 bg-rose-100 dark:bg-rose-800 focus:bg-rose-50 dark:focus:bg-rose-900 border-rose-300 dark:border-rose-600 focus:border-rose-500 focus:outline-rose-500/50 placeholder:text-rose-300 dark:placeholder:text-rose-600"
 };
@@ -500,6 +500,35 @@ var VvConfig = {
     }
   }
 };
+function camelCaseToTitleCase(str) {
+  var temp = str.replace(/([A-Z])/g, " $1");
+  return temp.charAt(0).toUpperCase() + temp.slice(1);
+}
+function digitsOnly(value, originalNumber) {
+  const val = String(value).trim();
+  if (/^[1-9]\d*$/.test(val)) {
+    return Number(val);
+  } else {
+    return originalNumber;
+  }
+}
+function formatBytes(bytes, decimals = 2) {
+  if (bytes === 0)
+    return "0 Bytes";
+  const k = 1024;
+  const dm = decimals < 0 ? 0 : decimals;
+  const sizes = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
+}
+function formatMediaTime(currentTime = 0) {
+  const minutes = "0" + Math.floor(currentTime / 60);
+  const seconds = "0" + Math.floor(currentTime - minutes * 60);
+  return minutes.substring(-2) + ":" + seconds.substring(-2);
+}
+function formatNumber(number) {
+  return new Intl.NumberFormat().format(number);
+}
 var isMergeableObject = function isMergeableObject2(value) {
   return isNonNullObject(value) && !isSpecial(value);
 };
@@ -598,6 +627,31 @@ var deepmerge_1 = deepmerge;
 var cjs = deepmerge_1;
 function mergeWithVvConfig(appTwConfig) {
   return Object.keys(appTwConfig).length > 0 ? cjs(VvConfig, appTwConfig) : VvConfig;
+}
+function randomString(length = 10) {
+  let result = "";
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const charactersLength = characters.length;
+  for (let i = 0; i < Number(length); i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+function slugifyString(text, separator) {
+  let txt = text;
+  let sep = separator;
+  return txt.toString().toLowerCase().normalize("NFD").trim().replace(/\s+/g, sep).replace(/[^\w\-]+/g, "").replace(/\-\-+/g, sep);
+}
+function stringToCamelCase(str) {
+  return str.replace(/[\W_]+/g, "").replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+    return index === 0 ? word.toLowerCase() : word.toUpperCase();
+  }).replace(/\s+/g, "");
+}
+function stringToFilename(str) {
+  return str.replace(/[^A-z0-9._-]/gi, "");
+}
+function uniqueArray(array) {
+  return array.filter((value, index, self) => self.indexOf(value) === index);
 }
 var ValidAudioSourceTypes = [
   "audio/flac",
@@ -1213,4 +1267,4 @@ const _sfc_main = {
     };
   }
 };
-export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, InputValidation, Inputs, Text, TextDefault, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, _sfc_main$1 as VueVentusLogoText, _sfc_main as VueVentusSpinningMark, _sfc_main$5 as VvAnchor, _sfc_main$4 as VvButton, _sfc_main$3 as VvColorModeButton, VvConfig, _sfc_main$2 as VvEl, mergeWithVvConfig };
+export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, InputValidation, Inputs, Text, TextDefault, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, _sfc_main$1 as VueVentusLogoText, _sfc_main as VueVentusSpinningMark, _sfc_main$5 as VvAnchor, _sfc_main$4 as VvButton, _sfc_main$3 as VvColorModeButton, VvConfig, _sfc_main$2 as VvEl, camelCaseToTitleCase, digitsOnly, formatBytes, formatMediaTime, formatNumber, mergeWithVvConfig, randomString, slugifyString, stringToCamelCase, stringToFilename, uniqueArray };
