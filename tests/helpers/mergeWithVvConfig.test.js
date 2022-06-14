@@ -1,9 +1,9 @@
 // ./tests/helpers/mergeWithVvConfig.test.js
 
-import mergeWithVvConfig from '../../src/helpers/mergeWithVvConfig.js'
+import { mergeWithVvConfig } from '../../src/index'
 
 
-test('mergeWithVvConfig component returns a truthy value', async () => {
+test('mergeWithVvConfig helper module returns a truthy value', async () => {
 
     expect(mergeWithVvConfig).toBeTruthy()
 

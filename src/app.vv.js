@@ -78,6 +78,15 @@ export default {
             },
         },
     },
+    inputs: {
+        palettes: {
+            validation: {
+                'default': 'bg-gray-50 dark:bg-gray-800 focus:bg-white dark:focus:bg-gray-900 border-gray-300 dark:border-gray-600 focus:border-lightBlue-500 focus:outline-lightBlue-500/50 placeholder:text-gray-200 dark:placeholder:text-gray-600',
+                success: 'text-green-700 dark:text-green-200 bg-green-100 dark:bg-green-800 focus:bg-green-50 dark:focus:bg-green-900 border-green-300 dark:border-green-600 focus:border-green-500 focus:outline-green-500/50 placeholder:text-green-300 dark:placeholder:text-green-600',
+                error: 'text-pink-700 dark:text-pink-200 bg-pink-100 dark:bg-pink-800 focus:bg-pink-50 dark:focus:bg-pink-900 border-pink-300 dark:border-pink-600 focus:border-pink-500 focus:outline-pink-500/50 placeholder:text-pink-300 dark:placeholder:text-pink-600',
+            },
+        },
+    },
     text: {
         palettes: {
             'default': {

@@ -1,5 +1,5 @@
 ---
-title: InputValidation Palette
+title: InputValidation Palette Config Module
 ---
 
 <script setup>

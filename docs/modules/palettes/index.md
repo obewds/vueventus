@@ -19,16 +19,16 @@ title: Palette Config Modules
 {{ $frontmatter.title }} are subset of config modules specifically meant for atomic color class groupings. They are intended to be used with contextual language to humanize visual color state classes for various states of application elements.
 
 
-* [AnchorDefault](/modules/palettes/anchor-default)
-* [BorderDefault](/modules/palettes/border-default)
-* [ButtonOutline](/modules/palettes/button-outline)
-* [ButtonSolid](/modules/palettes/button-solid)
-* [GroundConsole](/modules/palettes/ground-console)
-* [GroundDefault](/modules/palettes/ground-default)
-* [GroundMonochromatic](/modules/palettes/ground-monochromatic)
-* [GroundPastel](/modules/palettes/ground-pastel)
-* [InputValidation](/modules/palettes/input-validation)
-* [TextDefault](/modules/palettes/text-default)
+* [AnchorDefault Palette](/modules/palettes/anchor-default)
+* [BorderDefault Palette](/modules/palettes/border-default)
+* [ButtonOutline Palette](/modules/palettes/button-outline)
+* [ButtonSolid Palette](/modules/palettes/button-solid)
+* [GroundConsole Palette](/modules/palettes/ground-console)
+* [GroundDefault Palette](/modules/palettes/ground-default)
+* [GroundMonochromatic Palette](/modules/palettes/ground-monochromatic)
+* [GroundPastel Palette](/modules/palettes/ground-pastel)
+* [InputValidation Palette](/modules/palettes/input-validation)
+* [TextDefault Palette](/modules/palettes/text-default)
 
 
 ::: info ABOUT PALETTE MODULES

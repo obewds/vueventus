@@ -1,7 +1,7 @@
 {
   "name": "@obewds/vueventus",
   "description": "A modular design system component library built for Vue.js and Tailwind CSS.",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
   "license": "MIT",

@@ -1,5 +1,5 @@
 ---
-title: TextDefault Palette
+title: TextDefault Palette Config Module
 ---
 
 <script setup>

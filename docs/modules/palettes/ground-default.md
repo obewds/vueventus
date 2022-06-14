@@ -1,5 +1,5 @@
 ---
-title: GroundDefault Palette
+title: GroundDefault Palette Config Module
 ---
 
 <script setup>

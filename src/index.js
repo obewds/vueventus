@@ -19,7 +19,17 @@ export { default as InputValidation } from './configs/palettes/InputValidation.j
 export { default as TextDefault } from './configs/palettes/TextDefault.js'
 
 // .src/helpers
+export { default as camelCaseToTitleCase } from './helpers/camelCaseToTitleCase.js'
+export { default as digitsOnly } from './helpers/digitsOnly.js'
+export { default as formatBytes } from './helpers/formatBytes.js'
+export { default as formatMediaTime } from './helpers/formatMediaTime.js'
+export { default as formatNumber } from './helpers/formatNumber.js'
 export { default as mergeWithVvConfig } from './helpers/mergeWithVvConfig.js'
+export { default as randomString } from './helpers/randomString.js'
+export { default as slugifyString } from './helpers/slugifyString.js'
+export { default as stringToCamelCase } from './helpers/stringToCamelCase.js'
+export { default as stringToFilename } from './helpers/stringToFilename.js'
+export { default as uniqueArray } from './helpers/uniqueArray.js'
 
 // .src/validators
 export { default as ValidAudioSourceTypes } from './validators/ValidAudioSourceTypes.js'

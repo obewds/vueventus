@@ -1,5 +1,5 @@
 ---
-title: GroundConsole Palette
+title: GroundConsole Palette Config Module
 ---
 
 <script setup>
