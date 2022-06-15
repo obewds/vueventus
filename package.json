@@ -1,28 +1,10 @@
 {
   "name": "@obewds/vueventus",
   "description": "A modular design system component library built for Vue.js and Tailwind CSS.",
-  "version": "0.13.2",
+  "version": "0.13.3",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
   "license": "MIT",
-  "main": "./dist/vueventus.umd.js",
-  "module": "./dist/vueventus.es.js",
-  "browser": "./dist/vueventus.iife.js",
-  "exports": {
-    ".": {
-      "import": "./dist/vueventus.es.js",
-      "require": "./dist/vueventus.umd.js"
-    }
-  },
-  "files": [
-    "dist",
-    "src/components",
-    "src/configs",
-    "src/data",
-    "src/helpers",
-    "src/validators"
-  ],
-  "sideEffects": false,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -64,6 +46,85 @@
     "vitepress": "^1.0.0-alpha.1",
     "vitest": "^0.14.2",
     "vue-router": "^4.0.16"
+  },
+  "sideEffects": false,
+  "main": "./dist/vueventus.umd.js",
+  "module": "./dist/vueventus.es.js",
+  "browser": "./dist/vueventus.iife.js",
+  "files": [
+    "dist",
+    "src/components",
+    "src/configs",
+    "src/data",
+    "src/helpers",
+    "src/validators"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/vueventus.es.js",
+      "require": "./dist/vueventus.umd.js"
+    },
+    "./VvAnchor": "./src/components/anchors/VvAnchor.vue",
+    "./VvButton": "./src/components/buttons/VvButton.vue",
+    "./VvColorModeButton": "./src/components/buttons/VvColorModeButton.vue",
+    "./VvEl": "./src/components/elements/VvEl.vue",
+    "./VueVentusLogoText": "./src/components/logos/VueVentusLogoText.vue",
+    "./VueVentusSpinningMark": "./src/components/logos/VueVentusSpinningMark.vue",
+
+    "./Anchors": "./src/configs/Anchors.js",
+    "./Buttons": "./src/configs/Buttons.js",
+    "./Inputs": "./src/configs/Inputs.js",
+    "./Text": "./src/configs/Text.js",
+    "./Transitions": "./src/configs/Transitions.js",
+    "./VvConfig": "./src/configs/VvConfig.js",
+
+    "./AnchorDefault": "./src/configs/palettes/AnchorDefault.js",
+    "./BorderDefault": "./src/configs/palettes/BorderDefault.js",
+    "./ButtonOutline": "./src/configs/palettes/ButtonOutline.js",
+    "./ButtonSolid": "./src/configs/palettes/ButtonSolid.js",
+    "./GroundConsole": "./src/configs/palettes/GroundConsole.js",
+    "./GroundDefault": "./src/configs/palettes/GroundDefault.js",
+    "./GroundMonochromatic": "./src/configs/palettes/GroundMonochromatic.js",
+    "./GroundPastel": "./src/configs/palettes/GroundPastel.js",
+    "./InputValidation": "./src/configs/palettes/InputValidation.js",
+    "./TextDefault": "./src/configs/palettes/TextDefault.js",
+
+    "./appColorData": "./src/data/app.color.data.json",
+    "./extendAnimation": "./src/data/extend.animation.json",
+    "./extendKeyframes": "./src/data/extend.keyframes.json",
+    "./extendMaxWidth": "./src/data/extend.maxWidth.json",
+    "./extendRotate": "./src/data/extend.rotate.json",
+    "./extendScale": "./src/data/extend.scale.json",
+    "./extendTransitionDuration": "./src/data/extend.transitionDuration.json",
+    "./extendWidth": "./src/data/extend.width.json",
+    "./themeFontSize": "./src/data/theme.fontSize.json",
+    "./themeListStyleType": "./src/data/theme.listStyleType.json",
+    "./themeOpacity": "./src/data/theme.opacity.json",
+    "./themeScreens": "./src/data/theme.screens.json",
+
+    "./camelCaseToTitleCase": "./src/helpers/camelCaseToTitleCase.js",
+    "./digitsOnly": "./src/helpers/digitsOnly.js",
+    "./formatBytes": "./src/helpers/formatBytes.js",
+    "./formatMediaTime": "./src/helpers/formatMediaTime.js",
+    "./formatNumber": "./src/helpers/formatNumber.js",
+    "./mergeWithVvConfig": "./src/helpers/mergeWithVvConfig.js",
+    "./randomString": "./src/helpers/randomString.js",
+    "./slugifyString": "./src/helpers/slugifyString.js",
+    "./stringToCamelCase": "./src/helpers/stringToCamelCase.js",
+    "./stringToFilename": "./src/helpers/stringToFilename.js",
+    "./uniqueArray": "./src/helpers/uniqueArray.js",
+
+    "./ValidAudioSourceTypes": "./src/validators/ValidAudioSourceTypes.js",
+    "./ValidButtonTypes": "./src/validators/ValidButtonTypes.js",
+    "./ValidColorModes": "./src/validators/ValidColorModes.js",
+    "./ValidDirections": "./src/validators/ValidDirections.js",
+    "./ValidElementTags": "./src/validators/ValidElementTags.js",
+    "./ValidFontAwesomeFamilies": "./src/validators/ValidFontAwesomeFamilies.js",
+    "./ValidFontAwesomeSizes": "./src/validators/ValidFontAwesomeSizes.js",
+    "./ValidHeadingLevels": "./src/validators/ValidHeadingLevels.js",
+    "./ValidImageSourceTypes": "./src/validators/ValidImageSourceTypes.js",
+    "./ValidInputTypes": "./src/validators/ValidInputTypes.js",
+    "./ValidVideoSourceTypes": "./src/validators/ValidVideoSourceTypes.js"
   },
   "repository": {
     "type": "git",
