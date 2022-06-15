@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '@/views/Home.vue'
+import Test from '@/views/Test.vue'
 
 // config pages
 import AnchorsPage from '@/views/configs/AnchorsPage.vue'
@@ -44,6 +45,10 @@ const router = createRouter({
             name: 'Home',
             component: Home,
             path: '/'
+        },{
+            name: 'Test',
+            component: Test,
+            path: '/test'
         },
         
         //
