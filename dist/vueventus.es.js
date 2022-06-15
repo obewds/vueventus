@@ -501,8 +501,12 @@ var VvConfig = {
   }
 };
 function camelCaseToTitleCase(str) {
-  var temp = str.replace(/([A-Z])/g, " $1");
-  return temp.charAt(0).toUpperCase() + temp.slice(1);
+  let temp = str.replace(/([A-Z])/g, " $1").replace(/\s+/g, " ");
+  let tempArray = temp.split(" ");
+  let casedArray = tempArray.map((str2) => {
+    return str2.charAt(0).toUpperCase() + str2.substring(1).toLowerCase();
+  });
+  return casedArray.join(" ").trim();
 }
 function digitsOnly(value, originalNumber) {
   const val = String(value).trim();
