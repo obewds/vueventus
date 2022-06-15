@@ -32,8 +32,16 @@ import { randomString } from '@obewds/vueventus'
 
 ## Use Example
 
-Documentation coming soon!
-<!-- #TODO: complete example docs for helper module -->
+```javascript
+console.log( randomString() )
+// returns 10 character long random (string)
+
+console.log( randomString(5) )
+// returns 5 character long random (string)
+
+console.log( randomString(35) )
+// returns 35 character long random (string)
+```
 
 
 

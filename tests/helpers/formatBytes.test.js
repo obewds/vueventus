@@ -28,6 +28,15 @@ test('formatBytes() accepts a decimal number value with a wrong negative decimal
 })
 
 
+test('formatBytes() accepts a decimal number value with a wrong negative decimal place value passed as a second argument, and still returns an expected result', async () => {
+
+    const test = formatBytes(1000.12345, 5)
+    
+    expect(test).toBe('1000.12345 Bytes')
+
+})
+
+
 test('formatBytes() accepts a number value and returns an expected result', async () => {
 
     const test = formatBytes(1000)
@@ -51,6 +60,7 @@ test('formatBytes() accepts a KB sized value and returns an expected result', as
     const test = formatBytes('10000')
     
     expect(test).toBe('9.77 KB')
+    expect(formatBytes(10000)).toBe('9.77 KB')
 
 })
 

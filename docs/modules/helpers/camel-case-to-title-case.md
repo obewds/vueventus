@@ -31,8 +31,19 @@ import { camelCaseToTitleCase } from '@obewds/vueventus'
 
 ## Use Example
 
-Documentation coming soon!
-<!-- #TODO: complete example docs for helper module -->
+```javascript
+console.log( camelCaseToTitleCase('testCamelCase') )
+// returns (string): 'Test Camel Case'
+
+console.log( camelCaseToTitleCase('testCamelCase22') )
+// returns (string): 'Test Camel Case22'
+
+console.log( camelCaseToTitleCase('PascalCaseString') )
+// returns (string): 'Pascal Case String'
+
+console.log( camelCaseToTitleCase('spaced camelCase') )
+// returns (string): 'Spaced Camel Case'
+```
 
 
 

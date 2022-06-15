@@ -31,8 +31,22 @@ import { formatMediaTime } from '@obewds/vueventus'
 
 ## Use Example
 
-Documentation coming soon!
-<!-- #TODO: complete example docs for helper module -->
+```javascript
+console.log( formatMediaTime(2.123) )
+// returns (string): '00:02'
+
+console.log( formatMediaTime(122.123) )
+// returns (string): '02:02'
+
+console.log( formatMediaTime(6069) )
+// returns (string): '01:41:09'
+
+console.log( formatMediaTime(6069) )
+// returns (string): '01:41:09'
+
+console.log( formatMediaTime(806069) )
+// returns (string): '09:07:54:29'
+```
 
 
 

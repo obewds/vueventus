@@ -2,8 +2,12 @@
 
 export default function(str) {
 
-    var temp = str.replace( /([A-Z])/g, " $1")
+    let temp = str.replace( /([A-Z])/g, " $1").replace(/\s+/g, " ")
+    let tempArray = temp.split(' ')
+    let casedArray = tempArray.map(str => {
+        return str.charAt(0).toUpperCase() + str.substring(1).toLowerCase()
+    })
     
-    return temp.charAt(0).toUpperCase() + temp.slice(1)
+    return (casedArray.join(' ')).trim()
 
 }

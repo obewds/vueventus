@@ -32,8 +32,16 @@ import { slugifyString } from '@obewds/vueventus'
 
 ## Use Example
 
-Documentation coming soon!
-<!-- #TODO: complete example docs for helper module -->
+```javascript
+console.log( slugifyString('This is a test.') )
+// returns (string): 'this-is-a-test'
+
+console.log( slugifyString(' This is a 2nd test!!!') )
+// returns (string): 'this-is-a-2nd-test'
+
+console.log( slugifyString('And (&) THIS is a 3rd?!?!') )
+// returns (string): 'and-this-is-a-3rd'
+```
 
 
 

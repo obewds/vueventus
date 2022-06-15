@@ -32,8 +32,7 @@ test('camelCaseToTitleCase() method to not convert a pascal case string to a tit
     
     const test = 'PascalCaseString'
     
-    expect(camelCaseToTitleCase(test)).not.toBe('Pascal Case String')
-    expect(camelCaseToTitleCase(test)).toBe(' Pascal Case String')
+    expect(camelCaseToTitleCase(test)).toBe('Pascal Case String')
 
 })
 
@@ -42,7 +41,6 @@ test('camelCaseToTitleCase() method to not convert a spaced string to a title ca
     
     const test = 'spaced camelCase'
     
-    expect(camelCaseToTitleCase(test)).not.toBe('Spaced Camel Case')
-    expect(camelCaseToTitleCase(test)).toBe('Spaced camel Case')
+    expect(camelCaseToTitleCase(test)).toBe('Spaced Camel Case')
 
 })

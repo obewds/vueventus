@@ -32,8 +32,16 @@ import { formatNumber } from '@obewds/vueventus'
 
 ## Use Example
 
-Documentation coming soon!
-<!-- #TODO: complete example docs for helper module -->
+```javascript
+console.log( formatNumber(123456) )
+// returns (string): '123,456'
+
+console.log( formatNumber(123456789) )
+// returns (string): '123,456,789'
+
+console.log( formatNumber(123456.1234) )
+// returns (string): '123,456.123'
+```
 
 
 
