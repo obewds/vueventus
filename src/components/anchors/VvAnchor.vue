@@ -31,7 +31,7 @@
         },
         external: {
             type: Boolean,
-            default: false
+            default: VvConfig.defaults.VvAnchor.external,
         },
         href: {
             type: String,

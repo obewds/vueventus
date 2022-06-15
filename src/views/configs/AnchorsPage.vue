@@ -3,13 +3,13 @@
 <script setup>
 
     import { inject } from 'vue'
-    import VvConfig from '@/configs/VvConfig.js'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
+    import VvConfig from '@/configs/VvConfig.js'
 
     const globals = inject('globals')
     const tw = globals.classes
 
-    const vv = inject('vv')
+    const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject('vv') : VvConfig
 
 </script>
 

@@ -875,7 +875,7 @@ const _sfc_main$5 = {
     },
     external: {
       type: Boolean,
-      default: false
+      default: VvConfig.defaults.VvAnchor.external
     },
     href: {
       type: String,
