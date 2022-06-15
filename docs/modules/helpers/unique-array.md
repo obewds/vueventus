@@ -32,8 +32,18 @@ import { uniqueArray } from '@obewds/vueventus'
 
 ## Use Example
 
-Documentation coming soon!
-<!-- #TODO: complete example docs for helper module -->
+```javascript
+console.log(
+    uniqueArray([true, 12, 'test string', true, 12, 'test string'])
+)
+// returns (array): [true, 12, 'test string']
+
+
+console.log(
+    uniqueArray([{prop:'test'}, [3,'a'], {prop:'test'}, [3,'a']])
+)
+// returns (array): [{prop:'test'}, [3,'a']]
+```
 
 
 
