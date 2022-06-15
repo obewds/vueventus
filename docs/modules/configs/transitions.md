@@ -277,8 +277,6 @@ const transition = Transitions.classes('colors', 'linear', '1000')
 
 ## Transitions.custom()
 
-<!-- #TODO: update doc item with type, default, descriptions, and example subhead -->
-
 Returns: **`String`**  
 Default: **`"{{ Transitions.classes() }}"`**
 

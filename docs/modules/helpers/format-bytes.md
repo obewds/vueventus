@@ -31,8 +31,37 @@ import { formatBytes } from '@obewds/vueventus'
 
 ## Use Example
 
-Documentation coming soon!
-<!-- #TODO: complete example docs for helper module -->
+```javascript
+console.log( formatBytes(0) )
+// returns (string): '0 Bytes'
+
+console.log( formatBytes(1000.12345, 5) )
+// returns (string): '1000.12345 Bytes'
+
+console.log( formatBytes('1000') )
+// returns (string): '1000 Bytes'
+
+console.log( formatBytes(10000) )
+// returns (string): '9.77 KB'
+
+console.log( formatBytes(10000000) )
+// returns (string): '9.54 MB'
+
+console.log( formatBytes(10000000000) )
+// returns (string): '9.31 GB'
+
+console.log( formatBytes(10000000000000) )
+// returns (string): '9.09 TB'
+
+console.log( formatBytes(10000000000000000) )
+// returns (string): '8.67 EB'
+
+console.log( formatBytes(10000000000000000000000) )
+// returns (string): '8.47 ZB'
+
+console.log( formatBytes(10000000000000000000000000) )
+// returns (string): '8.27 YB'
+```
 
 
 

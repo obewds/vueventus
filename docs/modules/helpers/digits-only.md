@@ -33,8 +33,24 @@ import { digitsOnly } from '@obewds/vueventus'
 
 ## Use Example
 
-Documentation coming soon!
-<!-- #TODO: complete example docs for helper module -->
+```javascript
+const startNumber = 10
+
+console.log( digitsOnly(11, startNumber) )
+// returns (number): 11
+
+console.log( digitsOnly(9, startNumber) )
+// returns (number): 9
+
+console.log( digitsOnly(11.123, startNumber) )
+// returns (number): 10
+
+console.log( digitsOnly('11.123', startNumber) )
+// returns (number): 10
+
+console.log( digitsOnly('abc', startNumber) )
+// returns (number): 10
+```
 
 
 
