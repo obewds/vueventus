@@ -32,8 +32,22 @@ import { stringToCamelCase } from '@obewds/vueventus'
 
 ## Use Example
 
-Documentation coming soon!
-<!-- #TODO: complete example docs for helper module -->
+```javascript
+console.log( stringToCamelCase('test string here') )
+// returns (string): 'testStringHere'
+
+console.log( stringToCamelCase('Test String Here') )
+// returns (string): 'testStringHere'
+
+console.log( stringToCamelCase('TestString here') )
+// returns (string): 'testStringHere'
+
+console.log( stringToCamelCase('Test stringHere') )
+// returns (string): 'testStringHere'
+
+console.log( stringToCamelCase('test-string-here') )
+// returns (string): 'testStringHere'
+```
 
 
 

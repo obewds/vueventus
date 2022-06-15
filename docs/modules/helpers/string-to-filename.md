@@ -32,8 +32,22 @@ import { stringToFilename } from '@obewds/vueventus'
 
 ## Use Example
 
-Documentation coming soon!
-<!-- #TODO: complete example docs for helper module -->
+```javascript
+console.log( stringToFilename('Test String') )
+// returns (string): 'TestString'
+
+console.log( stringToFilename('Test-String _here') )
+// returns (string): 'Test-String_here'
+
+console.log( stringToFilename('Test-String! _@here') )
+// returns (string): 'Test-String_here'
+
+console.log( stringToFilename('Test.String._@here.jpg') )
+// returns (string): 'Test.String._here.jpg'
+
+console.log( stringToFilename('Test. 12345._@here.jpg') )
+// returns (string): 'Test.12345._here.jpg'
+```
 
 
 
