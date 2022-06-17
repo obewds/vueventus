@@ -75,6 +75,23 @@
 
 
         <div :class="tw.subhead">
+            VUE INPUT COMPONENTS
+        </div>
+
+        <div :class="[tw.grid, 'grid-cols-1']">
+
+            <DevViewLinkCard icon="component" to="/components/inputs/vv-input">
+                VvInput
+            </DevViewLinkCard>
+
+        </div>
+
+
+
+
+
+
+        <div :class="tw.subhead">
             VUE LOGO COMPONENTS
         </div>
 

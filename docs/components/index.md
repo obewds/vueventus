@@ -65,6 +65,18 @@ Variable HTML element based {{ $frontmatter.title }}.
 
 
 
+## Input Components
+
+HTML `<input>` element based {{ $frontmatter.title }}.
+
+* [VvInput](/components/inputs/vv-input)
+
+
+
+
+
+
+
 ## Logo Components
 
 VueVentus brand `<svg>` element based {{ $frontmatter.title }}. These components are included in the package both to allow downstream devs/designers to include tech stack information into an end app (thank you kindly :smiling_face_with_three_hearts:), as well as giving designers/developers examples of how to use VueVentus with SVGs and Tailwind CSS animation-based atomic classes.

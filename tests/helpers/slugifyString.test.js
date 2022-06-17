@@ -35,3 +35,21 @@ test('slugifyString() method converts a sentence to an expected slug string', as
     expect( slugifyString( test ) ).toBe('and-this-is-a-3rd')
 
 })
+
+
+test('slugifyString() method converts a sentence to an expected slug string with a custom separator', async () => {
+
+    const test = 'This is a test.'
+    
+    expect( slugifyString( test, '_' ) ).toBe('this_is_a_test')
+
+})
+
+
+test('slugifyString() method returns an empty string if passed an empty string', async () => {
+
+    const test = ''
+    
+    expect( slugifyString( test ) ).toBe('')
+
+})

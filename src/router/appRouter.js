@@ -33,6 +33,9 @@ import VvColorModeButtonPage from '@/views/components/buttons/VvColorModeButtonP
 // element component pages
 import VvElPage from '@/views/components/elements/VvElPage.vue'
 
+// input component pages
+import VvInputPage from '@/views/components/inputs/VvInputPage.vue'
+
 // logo component pages
 import VueVentusLogoTextPage from '@/views/components/logos/VueVentusLogoTextPage.vue'
 import VueVentusSpinningMarkPage from '@/views/components/logos/VueVentusSpinningMarkPage.vue'
@@ -159,6 +162,16 @@ const router = createRouter({
             name: 'VvEl Component',
             component: VvElPage,
             path: '/components/elements/vv-el'
+        },
+        
+        //
+        // input component pages
+        //
+
+        {
+            name: 'VvInput Component',
+            component: VvInputPage,
+            path: '/components/inputs/vv-input'
         },
         
         //

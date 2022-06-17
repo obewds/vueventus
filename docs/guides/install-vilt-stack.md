@@ -19,7 +19,7 @@ Documentation coming soon!
 
 
 
-!!!include(snippets/skipToConfiguration.md)!!!
+!!!include(snippets/skipToTestDrive.md)!!!
 
 
 

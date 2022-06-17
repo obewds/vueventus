@@ -497,6 +497,12 @@ var VvConfig = {
       tag: "div",
       textPalette: "default",
       textColor: "default"
+    },
+    "VvInput": {
+      color: "default",
+      palette: "validation",
+      size: "md",
+      type: "text"
     }
   }
 };
@@ -848,9 +854,9 @@ var ValidVideoSourceTypes = [
   "video/ogg",
   "video/webm"
 ];
-const _hoisted_1$4 = ["href"];
+const _hoisted_1$5 = ["href"];
 const _hoisted_2$3 = ["href"];
-const _sfc_main$5 = {
+const _sfc_main$6 = {
   __name: "VvAnchor",
   props: {
     button: {
@@ -937,7 +943,7 @@ const _sfc_main$5 = {
         rel: "noopener noreferrer"
       }, [
         renderSlot(_ctx.$slots, "default")
-      ], 10, _hoisted_1$4)) : (openBlock(), createElementBlock("a", {
+      ], 10, _hoisted_1$5)) : (openBlock(), createElementBlock("a", {
         key: 1,
         href: __props.href,
         class: normalizeClass(unref(classes))
@@ -947,8 +953,8 @@ const _sfc_main$5 = {
     };
   }
 };
-const _hoisted_1$3 = ["type"];
-const _sfc_main$4 = {
+const _hoisted_1$4 = ["type"];
+const _sfc_main$5 = {
   __name: "VvButton",
   props: {
     block: {
@@ -1016,11 +1022,11 @@ const _sfc_main$4 = {
         class: normalizeClass(unref(classes))
       }, [
         renderSlot(_ctx.$slots, "default")
-      ], 10, _hoisted_1$3);
+      ], 10, _hoisted_1$4);
     };
   }
 };
-const _hoisted_1$2 = {
+const _hoisted_1$3 = {
   key: 0,
   xmlns: "http://www.w3.org/2000/svg",
   class: "h-5 w-5",
@@ -1054,7 +1060,7 @@ const _hoisted_5 = /* @__PURE__ */ createElementVNode("path", {
 const _hoisted_6 = [
   _hoisted_5
 ];
-const _sfc_main$3 = {
+const _sfc_main$4 = {
   __name: "VvColorModeButton",
   props: {
     mode: {
@@ -1140,7 +1146,7 @@ const _sfc_main$3 = {
       }
     }
     return (_ctx, _cache) => {
-      return openBlock(), createBlock(_sfc_main$4, {
+      return openBlock(), createBlock(_sfc_main$5, {
         title: unref(title),
         onClick: _cache[0] || (_cache[0] = ($event) => toggleColorMode()),
         class: "rounded-full",
@@ -1151,7 +1157,7 @@ const _sfc_main$3 = {
         size: __props.size
       }, {
         default: withCtx(() => [
-          unref(icon) === "moon" ? (openBlock(), createElementBlock("svg", _hoisted_1$2, _hoisted_3)) : createCommentVNode("", true),
+          unref(icon) === "moon" ? (openBlock(), createElementBlock("svg", _hoisted_1$3, _hoisted_3)) : createCommentVNode("", true),
           unref(icon) === "sun" ? (openBlock(), createElementBlock("svg", _hoisted_4, _hoisted_6)) : createCommentVNode("", true)
         ]),
         _: 1
@@ -1159,7 +1165,7 @@ const _sfc_main$3 = {
     };
   }
 };
-const _sfc_main$2 = {
+const _sfc_main$3 = {
   __name: "VvEl",
   props: {
     borderPalette: {
@@ -1217,6 +1223,52 @@ const _sfc_main$2 = {
         ]),
         _: 3
       }, 8, ["class"]);
+    };
+  }
+};
+const _hoisted_1$2 = ["type"];
+const _sfc_main$2 = {
+  __name: "VvInput",
+  props: {
+    color: {
+      type: String,
+      default: VvConfig.defaults.VvInput.color
+    },
+    palette: {
+      type: String,
+      default: VvConfig.defaults.VvInput.palette
+    },
+    size: {
+      type: String,
+      default: VvConfig.defaults.VvInput.size
+    },
+    type: {
+      type: String,
+      default: VvConfig.defaults.VvInput.type
+    }
+  },
+  setup(__props) {
+    const props = __props;
+    const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
+    let classes = computed(() => {
+      var _a, _b, _c, _d, _e, _f;
+      let output = [];
+      if ((_a = vv == null ? void 0 : vv.inputs) == null ? void 0 : _a.base()) {
+        output.push(vv.inputs.base());
+      }
+      if (props.size !== "" && ((_c = (_b = vv == null ? void 0 : vv.inputs) == null ? void 0 : _b.sizes) == null ? void 0 : _c[props.size])) {
+        output.push(vv.inputs.sizes[props.size]);
+      }
+      if ((_f = (_e = (_d = vv == null ? void 0 : vv.inputs) == null ? void 0 : _d.palettes) == null ? void 0 : _e[props.palette]) == null ? void 0 : _f[props.color]) {
+        output.push(vv.inputs.palettes[props.palette][props.color]);
+      }
+      return output.join(" ").trim();
+    });
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("input", {
+        type: __props.type,
+        class: normalizeClass(unref(classes))
+      }, null, 10, _hoisted_1$2);
     };
   }
 };
@@ -1292,4 +1344,4 @@ const _sfc_main = {
     };
   }
 };
-export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, InputValidation, Inputs, Text, TextDefault, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, _sfc_main$1 as VueVentusLogoText, _sfc_main as VueVentusSpinningMark, _sfc_main$5 as VvAnchor, _sfc_main$4 as VvButton, _sfc_main$3 as VvColorModeButton, VvConfig, _sfc_main$2 as VvEl, camelCaseToTitleCase, digitsOnly, formatBytes, formatMediaTime, formatNumber, mergeWithVvConfig, randomString, slugifyString, stringToCamelCase, stringToFilename, uniqueArray };
+export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, InputValidation, Inputs, Text, TextDefault, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, _sfc_main$1 as VueVentusLogoText, _sfc_main as VueVentusSpinningMark, _sfc_main$6 as VvAnchor, _sfc_main$5 as VvButton, _sfc_main$4 as VvColorModeButton, VvConfig, _sfc_main$3 as VvEl, _sfc_main$2 as VvInput, camelCaseToTitleCase, digitsOnly, formatBytes, formatMediaTime, formatNumber, mergeWithVvConfig, randomString, slugifyString, stringToCamelCase, stringToFilename, uniqueArray };
