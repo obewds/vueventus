@@ -44,3 +44,12 @@ test('slugifyString() method converts a sentence to an expected slug string with
     expect( slugifyString( test, '_' ) ).toBe('this_is_a_test')
 
 })
+
+
+test('slugifyString() method returns an empty string if passed an empty string', async () => {
+
+    const test = ''
+    
+    expect( slugifyString( test ) ).toBe('')
+
+})
