@@ -1,0 +1,50 @@
+<!--
+    ./src/views/components/inputs/VvInputPage.vue
+    @/views/components/inputs/VvInputPage.vue
+-->
+
+
+<script setup>
+
+    import { inject } from 'vue'
+    import DevViewArticle from '@/views/compos/DevViewArticle.vue'
+    import VvInput from '@/components/inputs/VvInput.vue'
+
+    const globals = inject('globals')
+    const tw = globals.classes
+
+</script>
+
+
+<template>
+
+    <DevViewArticle title="VvAnchor">
+
+        <div :class="tw.cardFlex">
+            <div>
+                <h3 :class="tw.h3">VvInput Colors</h3>
+                <div :class="tw.flexWrap">
+                    <VvInput/>
+                    <VvInput color="error"/>
+                    <VvInput color="success"/>
+                </div>
+            </div>
+        </div>
+
+        <div :class="tw.cardFlex">
+            <div>
+                <h3 :class="tw.h3">VvInput Sizes</h3>
+                <div :class="tw.flexWrap">
+                    <VvInput size="xs" placeholder='size="xs"'/>
+                    <VvInput size="sm" placeholder='size="sm"'/>
+                    <VvInput size="md" placeholder='size="md"'/>
+                    <VvInput size="lg" placeholder='size="lg"'/>
+                    <VvInput size="xl" placeholder='size="xl"'/>
+                    <VvInput size="2xl" placeholder='size="2xl"'/>
+                </div>
+            </div>
+        </div>
+
+    </DevViewArticle>
+
+</template>

@@ -113,5 +113,11 @@ export default {
             textPalette: 'default',
             textColor: 'default',
         },
+        "VvInput": {
+            color: 'default',
+            palette: 'validation',
+            size: 'md',
+            type: 'text',
+        },
     },
 }

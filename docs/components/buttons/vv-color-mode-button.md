@@ -275,7 +275,7 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance color ba
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvColorModeButton.size }}"`**
 
-The {{ $frontmatter.title }} `size` prop sets the component instance size-based classes with in the context of buttons typically involves padding and font size atomic classes.
+The {{ $frontmatter.title }} `size` prop sets the component instance size-based classes which in the context of buttons typically involves padding and font size atomic classes.
 
 ### Syntax
 

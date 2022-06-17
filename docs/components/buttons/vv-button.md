@@ -224,7 +224,7 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance color ba
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvButton.size }}"`**
 
-The {{ $frontmatter.title }} `size` prop sets the component instance size-based classes with in the context of buttons typically involves padding and font size atomic classes.
+The {{ $frontmatter.title }} `size` prop sets the component instance size-based classes which in the context of buttons typically involves padding and font size atomic classes.
 
 ### Syntax
 
@@ -328,7 +328,7 @@ Type: **`String`**
 Valid Values: [ValidButtonTypes Module](/components/prop-validators#validbuttontypes)  
 Default: **`"{{ VvConfig.defaults.VvButton.type }}"`**
 
-The {{ $frontmatter.title }} `type` prop sets the button HTML `type` attribute to a value that should be present in the [ValidButtonTypes Module](/components/prop-validators#validbuttontypes) to be a valid value for this this component.
+The {{ $frontmatter.title }} `type` prop sets the button HTML `type` attribute to a value that should be present in the [ValidButtonTypes Module](/components/prop-validators#validbuttontypes) to be a valid value for this component.
 
 ### Syntax
 

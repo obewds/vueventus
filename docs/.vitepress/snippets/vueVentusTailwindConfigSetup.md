@@ -1,26 +1,6 @@
----
-title: Configuration
----
+## Updating Tailwind's Config
 
-<script setup>
-    import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
-</script>
-
-
-
-
-
-
-# {{ $frontmatter.title }}
-
-Next up, we need to configure the app's Vite config file and the app's Tailwind CSS config file. The Vite updates are for convenience and testing purposes. The Tailwind updates bring a handful of extenstions and additions to Tailwind's already awesome arsenal of atomic class name fragments.
-
-
-
-
-## Tailwind Config Setup
-
-There's a few mods to the Tailwind config file needed to open up a more "design system" configuration for your app.
+There's a few mods to the Tailwind config file needed to open up a more "design system" configuration for your app. These Tailwind updates bring a handful of extensions and additions to Tailwind's already awesome arsenal of atomic class name fragments.
 
 To manage and maintain this, VueVentus uses JSON formatted data files as modules thanks to Node.js. 
 
@@ -93,11 +73,3 @@ module.exports = {
     ],
 }
 ```
-
-
-
-
-
-
-<DocsPackageVersion/>
-

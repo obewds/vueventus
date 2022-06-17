@@ -112,7 +112,7 @@ function mainNav() {
 
 function sidebarGuides() {
     return [{
-        text: 'Config',
+        text: 'Guides',
         items: [
             { text: 'Why VueVentus', link: '/guides/why-vueventus' },
             { text: 'Getting Started', link: '/guides/' },
@@ -120,7 +120,6 @@ function sidebarGuides() {
             { text: 'Install with Vue CLI', link: '/guides/install-vue-cli' },
             { text: 'Install with Nuxt.js 3', link: '/guides/install-nuxt' },
             { text: 'Install with VILT Stack', link: '/guides/install-vilt-stack' },
-            { text: 'Configuration', link: '/guides/configuration' },
             { text: 'Test Drive: VvButton', link: '/guides/test-drive-vv-button' },
         ]
     }]
@@ -222,6 +221,12 @@ function sidebarComponents() {
             collapsible: true,
             items: [
                 { text: 'VvEl', link: '/components/elements/vv-el' },
+            ]
+        },{
+            text: 'Input Components',
+            collapsible: true,
+            items: [
+                { text: 'VvInput', link: '/components/inputs/vv-input' },
             ]
         },{
             text: 'Logo Components',

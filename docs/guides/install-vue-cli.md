@@ -34,7 +34,7 @@ npm init vue@latest
 1. Select `no`/`yes` for everything you don't want/need
     - VueVentus doesn't support Typescript yet
     - `Vitest`, `ESLint` and `Prettier` are usually a good idea
-1. `cd` into your newly created app directory
+1. Either `cd` into your new directory if you want to run the app from inside the generated folder, or grab the generated files and move them all into the project root directory and delete the generated directory
 1. Install the application dependencies with:
 
 
@@ -57,10 +57,19 @@ npm run dev
 !!!include(snippets/installingVueVentus.md)!!!
 
 
+!!!include(snippets/vueVentusTailwindConfigSetup.md)!!!
+
+
 !!!include(snippets/viteConfigSetup.md)!!!
 
 
-!!!include(snippets/skipToConfiguration.md)!!!
+!!!include(snippets/installingVitest.md)!!!
+
+
+!!!include(snippets/vitestUnitTestExample.md)!!!
+
+
+!!!include(snippets/skipToTestDrive.md)!!!
 
 
 
