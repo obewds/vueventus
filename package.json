@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "test": "vitest --dom",
     "coverage": "vitest run --dom --coverage",
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs --open",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "changelog": "auto-changelog --package --unreleased --backfill-limit 20",
