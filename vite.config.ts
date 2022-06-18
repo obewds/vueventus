@@ -15,28 +15,24 @@ export default defineConfig({
     server: {
         open: true,
     },
-    test: {
-        globals: true,
-    },
     build: {
         outDir: './dist',
         lib: {
-            entry: resolve(__dirname, 'src/index.js'),
+            entry: resolve(__dirname, 'src/index.ts'),
             name: 'VueVentus',
             formats: ['es','cjs','umd','iife'],
             fileName: (format) => `vueventus.${format}.js`,
         },
         rollupOptions: {
-            // make sure to externalize deps that shouldn't be bundled into your library
             external: ['vue'],
             output: {
-                // Provide global variables to use in the UMD build for externalized deps
                 globals: {
                     vue: 'Vue',
                 },
                 //preserveModules: true,
                 //sourcemap: true,
             },
+            // plugins: [],
             // output: {
             //     // Provide global variables to use in the UMD build for externalized deps
             //     globals: {
@@ -48,7 +44,6 @@ export default defineConfig({
             //         return `${fileName}.js`
             //     },
             // },
-            // plugins: [],
         },
     },
 })
