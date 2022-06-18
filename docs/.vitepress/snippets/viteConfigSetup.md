@@ -3,13 +3,16 @@
 There's also a couple of tiny tweaks to make in our project's `./vite.config.js` file:
 
 ```javascript
-// ./vite.config.js
+// ./vite.config.ts
 
 // import the resolve method
+import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
 export default defineConfig({
-    plugins: [...],
+    plugins: [
+        vue()
+    ],
     // add a resolve parameter/alias
     resolve: {
         alias: {
@@ -19,10 +22,6 @@ export default defineConfig({
     // optionally open page on server start
     server: {
         open: true,
-    },
-    // for Vitest!
-    test: {
-        globals: true,
     },
     build: {...},
 })

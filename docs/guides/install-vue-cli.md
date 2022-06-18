@@ -32,7 +32,7 @@ npm init vue@latest
 1. Select `y` to install with `create-vue@latest`
 1. Enter a Project Name in the Vue CLI create-vue interface
 1. Select `no`/`yes` for everything you don't want/need
-    - VueVentus doesn't support Typescript yet
+    - VueVentus is a Vue/Typescript lib, so you'll likely want to select `Typescript`!
     - `Vitest`, `ESLint` and `Prettier` are usually a good idea
 1. Either `cd` into your new directory if you want to run the app from inside the generated folder, or grab the generated files and move them all into the project root directory and delete the generated directory
 1. Install the application dependencies with:

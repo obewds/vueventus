@@ -7,7 +7,7 @@ First up, create a new directory and/or component `./components/HelloVueVentus.v
 ```html
 <!-- ./src/components/HelloVueVentus.vue // for Vue/Vite CLIs -->
 <!-- ./components/HelloVueVentus.vue // for Nuxt -->
-<script setup>
+<script setup lang="ts">
     import VvButton from '@obewds/vueventus/VvButton'
 </script>
 <template>
@@ -23,8 +23,10 @@ And lastly, create a new directory and/or test file `./tests/HelloVueVentus.test
 // ./tests/HelloVueVentus.test.js
 
 import { mount } from '@vue/test-utils'
-import HelloVueVentus from '../src/components/HelloVueVentus.vue' // for Vue/Vite CLIs
-// import HelloVueVentus from '../components/HelloVueVentus.vue' // for Nuxt
+// for Vue/Vite CLI projects use:
+import HelloVueVentus from '../src/components/HelloVueVentus.vue'
+// for Nuxt projects use:
+import HelloVueVentus from '../components/HelloVueVentus.vue'
 
 test('HelloVueVentus.vue component mounts successfully', async () => {
     expect(HelloVueVentus).toBeTruthy()

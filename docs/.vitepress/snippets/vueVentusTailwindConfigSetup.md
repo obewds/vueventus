@@ -27,9 +27,6 @@ module.exports = {
         "./docs/**/*.{md,html,js}",
         // Include VueVentus default TWCSS classes (for prototyping):
         "./node_modules/@obewds/vueventus/**/*.{vue,js,ts,jsx,tsx,json}",
-        // Include an app specific config file to
-        // replace VueVentus default classes above:
-        // "./src/app.vv.js",
     ],
 
     theme: {

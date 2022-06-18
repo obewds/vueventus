@@ -30,14 +30,14 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ### Use example
 
 ```html
-<script setup>
+<script setup lang="ts">
 
     import ValidAudioSourceTypes from '@obewds/vueventus/src/validators/ValidAudioSourceTypes.js'
 
     const props = defineProps({
         audioSource: {
             type: String,
-            validator: (prop) => (ValidAudioSourceTypes).includes(prop),
+            validator: (prop: ValidAudioSourceTypes) => (ValidAudioSourceTypes).includes(prop),
         }
     })
     
@@ -59,14 +59,14 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ### Use example
 
 ```html
-<script setup>
+<script setup lang="ts">
 
     import ValidButtonTypes from '@obewds/vueventus/src/validators/ValidButtonTypes.js'
 
     const props = defineProps({
         buttonType: {
             type: String,
-            validator: (prop) => (ValidButtonTypes).includes(prop),
+            validator: (prop: ValidButtonTypes) => (ValidButtonTypes).includes(prop),
         }
     })
 
@@ -87,14 +87,14 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ### Use example
 
 ```html
-<script setup>
+<script setup lang="ts">
 
     import ValidColorModes from '@obewds/vueventus/src/validators/ValidColorModes.js'
 
     const props = defineProps({
         colorMode: {
             type: String,
-            validator: (prop) => (ValidColorModes).includes(prop),
+            validator: (prop: ValidColorModes) => (ValidColorModes).includes(prop),
         }
     })
 
@@ -115,14 +115,14 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ### Use example
 
 ```html
-<script setup>
+<script setup lang="ts">
 
     import ValidDirections from '@obewds/vueventus/src/validators/ValidDirections.js'
 
     const props = defineProps({
         direction: {
             type: String,
-            validator: (prop) => (ValidDirections).includes(prop),
+            validator: (prop: ValidDirections) => (ValidDirections).includes(prop),
         }
     })
 
@@ -143,14 +143,14 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ### Use example
 
 ```html
-<script setup>
+<script setup lang="ts">
 
     import ValidElementTags from '@obewds/vueventus/src/validators/ValidElementTags.js'
 
     const props = defineProps({
         tag: {
             type: String,
-            validator: (prop) => (ValidElementTags).includes(prop),
+            validator: (prop: ValidElementTags) => (ValidElementTags).includes(prop),
         }
     })
 
@@ -171,14 +171,14 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ### Use example
 
 ```html
-<script setup>
+<script setup lang="ts">
 
     import ValidFontAwesomeFamilies from '@obewds/vueventus/src/validators/ValidFontAwesomeFamilies.js'
 
     const props = defineProps({
         faFamily: {
             type: String,
-            validator: (prop) => (ValidFontAwesomeFamilies).includes(prop),
+            validator: (prop: ValidFontAwesomeFamilies) => (ValidFontAwesomeFamilies).includes(prop),
         }
     })
 
@@ -199,14 +199,14 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ### Use example
 
 ```html
-<script setup>
+<script setup lang="ts">
 
     import ValidFontAwesomeSizes from '@obewds/vueventus/src/validators/ValidFontAwesomeSizes.js'
 
     const props = defineProps({
         faSize: {
             type: String,
-            validator: (prop) => (ValidFontAwesomeSizes).includes(prop),
+            validator: (prop: ValidFontAwesomeSizes) => (ValidFontAwesomeSizes).includes(prop),
         }
     })
 
@@ -227,14 +227,14 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ### Use example
 
 ```html
-<script setup>
+<script setup lang="ts">
 
     import ValidHeadingLevels from '@obewds/vueventus/src/validators/ValidHeadingLevels.js'
 
     const props = defineProps({
         headingLevel: {
             type: String,
-            validator: (prop) => (ValidHeadingLevels).includes(prop),
+            validator: (prop: ValidHeadingLevels) => (ValidHeadingLevels).includes(prop),
         }
     })
 
@@ -255,14 +255,14 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ### Use example
 
 ```html
-<script setup>
+<script setup lang="ts">
 
     import ValidImageSourceTypes from '@obewds/vueventus/src/validators/ValidImageSourceTypes.js'
 
     const props = defineProps({
         headingLevel: {
             type: String,
-            validator: (prop) => (ValidImageSourceTypes).includes(prop),
+            validator: (prop: ValidImageSourceTypes) => (ValidImageSourceTypes).includes(prop),
         }
     })
 
@@ -283,14 +283,14 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ### Use example
 
 ```html
-<script setup>
+<script setup lang="ts">
 
     import ValidInputTypes from '@obewds/vueventus/src/validators/ValidInputTypes.js'
 
     const props = defineProps({
         headingLevel: {
             type: String,
-            validator: (prop) => (ValidInputTypes).includes(prop),
+            validator: (prop: ValidInputTypes) => (ValidInputTypes).includes(prop),
         }
     })
 
@@ -311,14 +311,14 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ### Use example
 
 ```html
-<script setup>
+<script setup lang="ts">
 
     import ValidVideoSourceTypes from '@obewds/vueventus/src/validators/ValidVideoSourceTypes.js'
 
     const props = defineProps({
         headingLevel: {
             type: String,
-            validator: (prop) => (ValidVideoSourceTypes).includes(prop),
+            validator: (prop: ValidVideoSourceTypes) => (ValidVideoSourceTypes).includes(prop),
         }
     })
 

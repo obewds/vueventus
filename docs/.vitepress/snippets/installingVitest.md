@@ -16,3 +16,21 @@ With your testing deps installed, you can now add the following commands to your
   }
 }
 ```
+
+And lastly, with Typescript involved it's advantageous to use a Vitest config file to control Vitest and not interfere with the Vite/Typescript configs. So go ahead and create a new file in the project root directory called `./vitest.config.ts` and add the following code:
+
+```typescript
+// ./vitest.config.ts
+
+import vue from '@vitejs/plugin-vue'
+
+export default {
+    plugins: [
+        vue()
+    ],
+    test: {
+        globals: true,
+        environment: 'happy-dom',
+    },
+}
+```
