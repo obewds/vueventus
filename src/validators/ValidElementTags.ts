@@ -1,6 +1,6 @@
-// ./src/validators/ValidElementTags.js
+// ./src/validators/ValidElementTags.ts
 
-export default [
+const ValidElementTags = [
 
     // HTML Main root element
     // 'html',
@@ -54,4 +54,8 @@ export default [
     // HTML Web Components elements
     // 'slot', 'template',
 
-]
+] as const
+
+type ValidElementTags = typeof ValidElementTags[number]
+  
+export default ValidElementTags

@@ -1,6 +1,6 @@
-// ./src/validators/ValidInputTypes.js
+// ./src/validators/ValidInputTypes.ts
 
-export default [
+const ValidInputTypes = [
     // 'button', // (use VvButton)
     // 'checkbox', // (use TBD)
     'color',
@@ -23,4 +23,8 @@ export default [
     'time',
     'url',
     // 'week', // (use TBD)
-]
+] as const
+
+type ValidInputTypes = typeof ValidInputTypes[number]
+  
+export default ValidInputTypes
