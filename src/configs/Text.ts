@@ -1,4 +1,8 @@
-export default {
+// ./src/configs/Text.ts
+
+import { ConfigText } from '../types/ConfigText'
+
+export default <ConfigText>{
     align: '',
     decoration: '',
     family: '',

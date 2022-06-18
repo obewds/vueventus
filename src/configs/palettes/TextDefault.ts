@@ -1,4 +1,8 @@
-export default {
+// ./src/configs/palettes/TextDefault.ts
+
+import { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+
+export default <DefaultConfigPalette>{
     'default': '',
     error: 'text-rose-500 dark:text-rose-300',
     primary: 'text-blue-500 dark:text-blue-300',

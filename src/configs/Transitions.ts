@@ -1,4 +1,8 @@
-export default {
+// ./src/configs/Transitions.ts
+
+import { ConfigTransitions } from '../types/ConfigTransitions'
+
+export default <ConfigTransitions>{
     durations: {
         '1200': 'duration-1200',
         '1150': 'duration-1150',
@@ -50,31 +54,34 @@ export default {
         shadow: 'transition-shadow',
         transform: 'transition-transform',
     },
-    getDurationClasses: function (durationsKey) {
-        const key = durationsKey && this.durations[durationsKey] ? durationsKey : '300'
-        return this.durations[key]
+    getDurationClasses: function ( durationsKey ) {
+        const key = durationsKey && this.durations?.[durationsKey] ? durationsKey : '300'
+        const output = this.durations?.[key] || ''
+        return output
     },
-    getEasingClasses: function (easingsKey) {
-        const key = easingsKey && this.easings[easingsKey] ? easingsKey : 'inOut'
-        return this.easings[key]
+    getEasingClasses: function ( easingsKey ) {
+        const key = easingsKey && this.easings?.[easingsKey] ? easingsKey : 'inOut'
+        const output = this.easings?.[key] || ''
+        return output
     },
-    getTransitionClasses: function (transitionsKey) {
-        const key = transitionsKey && this.transitions[transitionsKey] ? transitionsKey : 'default'
-        return this.transitions[key]
+    getTransitionClasses: function ( transitionsKey ) {
+        const key = transitionsKey && this.transitions?.[transitionsKey] ? transitionsKey : 'default'
+        const output = this.transitions?.[key] || ''
+        return output
     },
-    custom: function (settingsObj) {
-        const settings = {
-            transitions: settingsObj && settingsObj.transitions ? settingsObj.transitions : '',
-            easings: settingsObj && settingsObj.easings ? settingsObj.easings : '',
-            durations: settingsObj && settingsObj.durations ? settingsObj.durations : '',
+    custom: function ( settings ) {
+        const obj = {
+            transitions: settings && settings.transitions ? settings.transitions : '',
+            easings: settings && settings.easings ? settings.easings : '',
+            durations: settings && settings.durations ? settings.durations : '',
         }
         return [
-            this.getTransitionClasses(settings.transitions),
-            this.getEasingClasses(settings.easings),
-            this.getDurationClasses(settings.durations),
+            this.getTransitionClasses(obj.transitions),
+            this.getEasingClasses(obj.easings),
+            this.getDurationClasses(obj.durations),
         ].join(' ').trim()
     },
-    classes: function (transitionsKey, easingsKey, durationsKey) {
+    classes: function ( transitionsKey, easingsKey, durationsKey ) {
         const transitions = transitionsKey ? transitionsKey : ''
         const easings = easingsKey ? easingsKey : ''
         const durations = durationsKey ? durationsKey : ''

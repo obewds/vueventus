@@ -1,4 +1,8 @@
-export default {
+// ./src/configs/palettes/GroundDefault.ts
+
+import { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+
+export default <DefaultConfigPalette>{
     'default': '',
     error: 'text-white bg-rose-500 dark:bg-rose-600',
     primary: 'text-white bg-blue-500 dark:bg-blue-600',

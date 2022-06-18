@@ -1,4 +1,8 @@
-export default {
+// ./src/configs/palettes/BorderDefault.ts
+
+import { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+
+export default <DefaultConfigPalette>{
     '': '',
     'default': 'border-gray-200 dark:border-gray-600',
     error: 'border-rose-600 dark:border-rose-300',

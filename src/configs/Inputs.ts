@@ -1,6 +1,9 @@
+// ./src/configs/Inputs.ts
+
+import { ConfigInputs } from '../types/ConfigInputs'
 import Transitions from './Transitions.js'
 
-export default {
+export default <ConfigInputs>{
     border: 'border',
     display: 'block w-full',
     outline: 'outline-none outline-offset-0 outline-2',

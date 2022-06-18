@@ -1,3 +1,5 @@
+// ./src/configs/VvConfig.ts
+
 import Anchors from './Anchors.js'
 import Buttons from './Buttons.js'
 import Inputs from './Inputs.js'
@@ -14,6 +16,8 @@ import GroundMonochromatic from './palettes/GroundMonochromatic.js'
 import GroundPastel from './palettes/GroundPastel.js'
 import InputValidation from './palettes/InputValidation.js'
 import TextDefault from './palettes/TextDefault.js'
+
+import VvComponentDefaults from './VvComponentDefaults'
 
 export default {
     //
@@ -79,7 +83,8 @@ export default {
     //
     // Component Prop Defaults
     //
-    defaults: {
+    defaults: VvComponentDefaults,
+    /*{
         "VvAnchor": {
             button: false,
             buttonBlock: false,
@@ -119,5 +124,5 @@ export default {
             size: 'md',
             type: 'text',
         },
-    },
+    },*/
 }

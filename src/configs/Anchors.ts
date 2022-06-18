@@ -1,7 +1,10 @@
+// ./src/configs/Anchors.ts
+
+import { ConfigAnchors } from '../types/ConfigAnchors'
 import Text from './Text.js'
 import Transitions from './Transitions.js'
 
-export default {
+export default <ConfigAnchors>{
     cursor: 'cursor-pointer',
     display: '',
     focus: '',

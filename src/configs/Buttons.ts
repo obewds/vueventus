@@ -1,6 +1,9 @@
+// ./src/configs/Buttons.ts
+
+import { ConfigButtons } from '../types/ConfigButtons'
 import Transitions from './Transitions.js'
 
-export default {
+export default <ConfigButtons>{
     border: 'border border-transparent',
     cursor: 'cursor-pointer',
     disabled: 'disabled:opacity-25',

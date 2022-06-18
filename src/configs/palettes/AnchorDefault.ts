@@ -1,4 +1,8 @@
-export default {
+// ./src/configs/palettes/AnchorDefault.ts
+
+import { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+
+export default <DefaultConfigPalette>{
     'default': 'text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-200',
     error: 'text-rose-500 hover:text-rose-600 dark:text-rose-300 dark:hover:text-rose-200',
     primary: 'text-blue-500 hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-200',
