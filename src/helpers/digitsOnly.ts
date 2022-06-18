@@ -1,6 +1,6 @@
-// ./src/helpers/digitsOnly.js
+// ./src/helpers/digitsOnly.ts
 
-export default function (value, originalNumber) {
+export default function (value: number|string, originalNumber: number): number {
 
     const val = (String(value)).trim()
 

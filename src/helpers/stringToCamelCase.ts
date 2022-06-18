@@ -1,6 +1,6 @@
-// ./src/helpers/stringToCamelCase.js
+// ./src/helpers/stringToCamelCase.ts
 
-export default function(str) {
+export default function(str: string): string {
 
     // 1st replace everything except alphanumeric characters and whitespace with a space
     // 2nd replace collapses multiple adjacent whitespace to single spaces

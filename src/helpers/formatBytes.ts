@@ -1,6 +1,6 @@
-// ./src/helpers/formatBytes.js
+// ./src/helpers/formatBytes.ts
 
-export default function (bytes, decimals = 2) {
+export default function (bytes: number, decimals = 2): string {
 
     if ( bytes === 0 ) return '0 Bytes'
 
