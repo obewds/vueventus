@@ -4,7 +4,7 @@ title: Inputs Config Module
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
-    import Inputs from '../../../src/configs/Inputs.js'
+    import Inputs from '../../../src/configs/Inputs'
 </script>
 
 
@@ -325,7 +325,7 @@ const inputsSizeClasses = Inputs.getSizeClasses('sm')
 
 ## Module Code
 
-<<< @/../src/configs/Inputs.js
+<<< @/../src/configs/Inputs.ts
 
 
 

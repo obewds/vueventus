@@ -3,17 +3,17 @@ layout: home
 hero:
   name: VueVentus
   text: Design System Component Library
-  tagline: The aesthetically flexible design system component library for Vue.js & Tailwind CSS
+  tagline: An aesthetics focused design system component library for Vue.js, Tailwind CSS, and Typescript projects
   actions:
     - theme: brand
       text: Get Started
-      link: /vueventus/guides/why-vueventus
+      link: /guides/why-vueventus
     - theme: alt
       text: Modules
-      link: /vueventus/modules/
+      link: /modules/
     - theme: alt
       text: Components
-      link: /vueventus/components/
+      link: /components/
     - theme: alt
       text: View on GitHub
       link: https://github.com/obewds/vueventus
@@ -33,7 +33,6 @@ sidebar: false
 # heroImage: /images/vue-ventus-mark-and-favicon.png
 # heroAlt: VueVentus logo mark fan shape with blue and green blades
 # heroText: VueVentus
-# tagline: A modular design system component library built for Vue.js and Tailwind CSS
 # actionText: Get Started
 # actionLink: /getting-started
 # footer: MIT Licensed | Copyright © 2022-present Matt McT LLC

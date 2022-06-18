@@ -47,7 +47,7 @@ const borderSuccess = BorderDefault.success
 
 ## Module
 
-<<< @/../src/configs/palettes/BorderDefault.js
+<<< @/../src/configs/palettes/BorderDefault.ts
 
 
 

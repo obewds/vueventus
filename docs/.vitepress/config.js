@@ -19,7 +19,7 @@ module.exports = {
         },
     },
 
-    head: [
+    /*head: [
         // ['meta', {property: 'og:description', content: 'description is here...'}],
         ['meta', {name: 'twitter:title', content: title()}],
         ['meta', {name: 'og:title', content: title()}],
@@ -48,7 +48,7 @@ module.exports = {
         ['meta', {name: 'msapplication-TileColor', content: '#ffffff'}],
         ['meta', {name: 'msapplication-TileImage', content: '/vueventus/images/favicons/ms-icon-144x144.png'}],
         ['meta', {name: 'theme-color', content: '#ffffff'}],
-    ],
+    ],*/
 
     themeConfig: {
 
@@ -64,11 +64,11 @@ module.exports = {
           '/components/': sidebarComponents(),
         },
 
-        editLink: {
-            repo: 'obewds/vueventus',
-            dir: 'docs',
-            text: 'Edit this page on GitHub',
-        },
+        // editLink: {
+        //     repo: 'obewds/vueventus',
+        //     dir: 'docs',
+        //     text: 'Edit this page on GitHub',
+        // },
 
         footer: {
             message: 'Released under the MIT License',

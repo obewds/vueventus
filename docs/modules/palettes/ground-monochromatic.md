@@ -47,7 +47,7 @@ const bgSuccess = GroundMonochromatic.success
 
 ## Module
 
-<<< @/../src/configs/palettes/GroundMonochromatic.js
+<<< @/../src/configs/palettes/GroundMonochromatic.ts
 
 
 

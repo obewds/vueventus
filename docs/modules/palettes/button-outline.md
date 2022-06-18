@@ -50,7 +50,7 @@ const buttonSuccess = ButtonOutline.success
 
 ## Module
 
-<<< @/../src/configs/palettes/ButtonOutline.js
+<<< @/../src/configs/palettes/ButtonOutline.ts
 
 
 

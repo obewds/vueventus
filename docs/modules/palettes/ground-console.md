@@ -47,7 +47,7 @@ const bgSuccess = GroundConsole.success
 
 ## Module
 
-<<< @/../src/configs/palettes/GroundConsole.js
+<<< @/../src/configs/palettes/GroundConsole.ts
 
 
 

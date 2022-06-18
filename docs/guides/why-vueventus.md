@@ -52,14 +52,14 @@ There is a learning curve to be able to fully customize the visual aesthetics of
 
 However, a major reason for these abstractions, is to make rapid prototyping efficient/logical for devs and iteratively fast/flexible for designers.
 
-The compliexity and learning curve only applies to the need to make surgical component-level edits or global component-wide edits well into the production process for:
+The complexity and learning curve only applies to the need to make surgical component-level edits or global component-wide edits well into the production process for:
 
 * Design changes
-* Feature callouts
+* Feature call-outs
 * Accessibility updates
 * Branding reasons
 * Re-designs
-* Legal callouts
+* Legal call-outs
 
 In the end, VueVentus acts as an initial data store for rapid prototyping, and a structural blueprint for DRYness in production apps built with atomic classes.
 
