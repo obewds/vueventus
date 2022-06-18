@@ -24,7 +24,7 @@ Now that everything is wired up, let's test drive the VvButton component.
 First we'll open up the `./src/components/HelloWorld.vue` component, and import the `VvButton` component:
 
 ```html
-<script setup>
+<script setup lang="ts">
 
     import { VvButton } from '@obewds/vueventus'
 
@@ -58,7 +58,7 @@ You should now see a button with default Tailwind CSS button classes like the on
 
 ## Using the Color Prop
 
-Next, let's change the color rapid protyping style:
+Next, let's change the color rapid prototyping style:
 
 ```html
 <template>

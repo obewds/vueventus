@@ -30,7 +30,7 @@ npm create vite@latest
 
 1. Enter a Project Name in the Vite CLI interface
 1. Select `vue` for the framework
-1. Select `vue` for the variant (VueVentus doesn't support Typescript yet)
+1. Select `typescript` for the variant
 1. Either `cd` into your new directory if you want to run the app from inside the generated folder, or grab the generated files and move them all into the project root directory and delete the generated directory
 1. Install the application dependencies with:
 
