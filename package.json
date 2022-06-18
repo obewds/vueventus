@@ -1,7 +1,7 @@
 {
   "name": "@obewds/vueventus",
   "description": "An aesthetics focused design system component library for Vue.js, Tailwind CSS, and Typescript projects",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
   "scripts": {
