@@ -23,8 +23,16 @@ The {{ $frontmatter.title }} is the backbone of VueVentus in a prototypal sense.
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { VvConfig } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import VvConfig from '@obewds/vueventus/VvConfig'
 ```
 
 

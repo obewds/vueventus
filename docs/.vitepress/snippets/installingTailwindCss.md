@@ -37,7 +37,7 @@ Next, create a new file `./src/css/tailwind.css`, and add the base Tailwind CSS 
 @tailwind utilities;
 ```
 
-Next up, include the tailwind.css file into the app and Vite's build process, by opening up the `./src/main.js` file and importing the css file like so:
+Next up, include the tailwind.css file into the app and Vite's build process, by opening up the `./src/main.ts` file and importing the css file like so:
 
 ```javascript
 import './css/tailwind.css'

@@ -1,5 +1,5 @@
 ---
-title: formatMediaTime()
+title: formatMediaTime() Helper Method
 ---
 
 
@@ -11,7 +11,7 @@ title: formatMediaTime()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that returns a string formatted as minutes:seconds time code for time-based media.
+The {{ $frontmatter.title }} module provides a helper function that returns a string formatted as minutes:seconds time code for time-based media.
 
 
 
@@ -20,8 +20,16 @@ The {{ $frontmatter.title }} helper module provides a helper function that retur
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { formatMediaTime } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import formatMediaTime from '@obewds/vueventus/formatMediaTime'
 ```
 
 

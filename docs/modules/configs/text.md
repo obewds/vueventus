@@ -26,9 +26,20 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { Text } from '@obewds/vueventus'
 ```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import Text from '@obewds/vueventus/Text'
+```
+
+
+
 
 
 

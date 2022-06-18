@@ -19,7 +19,7 @@ module.exports = {
         },
     },
 
-    /*head: [
+    head: [
         // ['meta', {property: 'og:description', content: 'description is here...'}],
         ['meta', {name: 'twitter:title', content: title()}],
         ['meta', {name: 'og:title', content: title()}],
@@ -48,7 +48,7 @@ module.exports = {
         ['meta', {name: 'msapplication-TileColor', content: '#ffffff'}],
         ['meta', {name: 'msapplication-TileImage', content: '/vueventus/images/favicons/ms-icon-144x144.png'}],
         ['meta', {name: 'theme-color', content: '#ffffff'}],
-    ],*/
+    ],
 
     themeConfig: {
 
@@ -100,7 +100,7 @@ function description() {
 
 function mainNav() {
     return [
-        { text: "Home", link: "/" },
+        // { text: "Home", link: "/" },
         { text: "Guides", link: "/guides/", activeMatch: '/guides/' },
         { text: "Modules", link: "/modules/", activeMatch: '/modules/' },
         { text: "Components", link: "/components/", activeMatch: '/components/' },

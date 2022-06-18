@@ -1,5 +1,5 @@
 ---
-title: uniqueArray()
+title: uniqueArray() Helper Method
 ---
 
 
@@ -11,7 +11,7 @@ title: uniqueArray()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that takes an array as an argument and returns a new array with any duplicate values in the argument array removed.
+The {{ $frontmatter.title }} module provides a helper function that takes an array as an argument and returns a new array with any duplicate values in the argument array removed.
 
 
 
@@ -21,8 +21,16 @@ The {{ $frontmatter.title }} helper module provides a helper function that takes
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { uniqueArray } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import uniqueArray from '@obewds/vueventus/uniqueArray'
 ```
 
 

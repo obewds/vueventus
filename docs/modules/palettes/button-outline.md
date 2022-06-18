@@ -24,8 +24,16 @@ An outline themed palette of button colors with properties/values with the keys 
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { ButtonOutline } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import ButtonOutline from '@obewds/vueventus/ButtonOutline'
 ```
 
 

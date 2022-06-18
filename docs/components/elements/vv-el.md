@@ -20,8 +20,16 @@ The {{ $frontmatter.title }} provides a variety of props and config module based
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { VvEl } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} SFC directly:
+
+```javascript
+import VvEl from '@obewds/vueventus/VvEl'
 ```
 
 

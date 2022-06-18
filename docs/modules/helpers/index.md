@@ -1,5 +1,5 @@
 ---
-title: Helper Modules
+title: Helper Method Modules
 ---
 
 <script setup>

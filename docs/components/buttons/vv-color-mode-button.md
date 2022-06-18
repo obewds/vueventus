@@ -67,8 +67,16 @@ Here's the script that needs to be added to an app's main/base HTML:
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { VvColorModeButton } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} SFC directly:
+
+```javascript
+import VvColorModeButton from '@obewds/vueventus/VvColorModeButton'
 ```
 
 

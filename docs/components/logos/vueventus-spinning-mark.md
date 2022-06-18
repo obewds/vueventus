@@ -19,8 +19,16 @@ The {{ $frontmatter.title }} provides an `<svg>` component of the VueVentus logo
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { VueVentusSpinningMark } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} SFC directly:
+
+```javascript
+import VueVentusSpinningMark from '@obewds/vueventus/VueVentusSpinningMark'
 ```
 
 

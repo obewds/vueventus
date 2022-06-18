@@ -1,5 +1,5 @@
 ---
-title: stringToFilename()
+title: stringToFilename() Helper Method
 ---
 
 
@@ -11,7 +11,7 @@ title: stringToFilename()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that takes in a string argument and returns a filename safe variation of the argument string.
+The {{ $frontmatter.title }} module provides a helper function that takes in a string argument and returns a filename safe variation of the argument string.
 
 
 
@@ -21,8 +21,16 @@ The {{ $frontmatter.title }} helper module provides a helper function that takes
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { stringToFilename } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import stringToFilename from '@obewds/vueventus/stringToFilename'
 ```
 
 
