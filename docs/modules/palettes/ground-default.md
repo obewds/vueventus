@@ -21,8 +21,16 @@ A default palette of ground colors with properties/values with the keys of `defa
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { GroundDefault } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import GroundDefault from '@obewds/vueventus/GroundDefault'
 ```
 
 

@@ -1,5 +1,5 @@
 ---
-title: randomString()
+title: randomString() Helper Method
 ---
 
 
@@ -11,7 +11,7 @@ title: randomString()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that generates a random continuous string.
+The {{ $frontmatter.title }} module provides a helper function that generates a random continuous string.
 
 
 
@@ -21,8 +21,16 @@ The {{ $frontmatter.title }} helper module provides a helper function that gener
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { randomString } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import randomString from '@obewds/vueventus/randomString'
 ```
 
 

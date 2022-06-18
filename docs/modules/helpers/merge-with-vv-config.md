@@ -1,5 +1,5 @@
 ---
-title: mergeWithVvConfig()
+title: mergeWithVvConfig() Helper Method
 ---
 
 
@@ -11,7 +11,7 @@ title: mergeWithVvConfig()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that requires a single argument, which is expected to be an app-specific VueVentus config object that will be deeply merged on top of any defaults VueVentus uses from the [VvConfig](/modules/configs/vv-config) module.
+The {{ $frontmatter.title }} module provides a helper function that requires a single argument, which is expected to be an app-specific VueVentus config object that will be deeply merged on top of any defaults VueVentus uses from the [VvConfig](/modules/configs/vv-config) module.
 
 
 
@@ -20,8 +20,16 @@ The {{ $frontmatter.title }} helper module provides a helper function that requi
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { mergeWithVvConfig } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import mergeWithVvConfig from '@obewds/vueventus/mergeWithVvConfig'
 ```
 
 

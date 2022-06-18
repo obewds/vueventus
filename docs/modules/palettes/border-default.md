@@ -23,8 +23,16 @@ A default palette of border colors with properties/values with the keys of `defa
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { BorderDefault } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import BorderDefault from '@obewds/vueventus/BorderDefault'
 ```
 
 

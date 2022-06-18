@@ -1,5 +1,5 @@
 ---
-title: camelCaseToTitleCase()
+title: camelCaseToTitleCase() Helper Method
 ---
 
 
@@ -11,7 +11,7 @@ title: camelCaseToTitleCase()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that converts a passed string formatted in camelCase and returns that string formatted in Title Case.
+The {{ $frontmatter.title }} module provides a helper function that converts a passed string formatted in camelCase and returns that string formatted in Title Case.
 
 
 
@@ -20,8 +20,16 @@ The {{ $frontmatter.title }} helper module provides a helper function that conve
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { camelCaseToTitleCase } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import camelCaseToTitleCase from '@obewds/vueventus/camelCaseToTitleCase'
 ```
 
 

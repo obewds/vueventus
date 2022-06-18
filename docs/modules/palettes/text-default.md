@@ -21,8 +21,16 @@ A default palette of text colors with properties/values with the keys of `defaul
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
-import { BorderDefault } from '@obewds/vueventus'
+import { TextDefault } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import TextDefault from '@obewds/vueventus/TextDefault'
 ```
 
 

@@ -21,8 +21,16 @@ A console themed palette of ground colors with properties/values with the keys o
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { GroundConsole } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import GroundConsole from '@obewds/vueventus/GroundConsole'
 ```
 
 

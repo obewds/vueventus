@@ -6,6 +6,7 @@ There's also a couple of tiny tweaks to make in our project's `./vite.config.js`
 // ./vite.config.ts
 
 // import the resolve method
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 

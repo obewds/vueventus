@@ -1,5 +1,5 @@
 ---
-title: formatBytes()
+title: formatBytes() Helper Method
 ---
 
 
@@ -11,7 +11,7 @@ title: formatBytes()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that takes in a decimal number and an optional number of decimal places, and returns a formatted string of that number in the bytes, kilobytes, megabytes, etc. depending on the size of the input decimal number.
+The {{ $frontmatter.title }} module provides a helper function that takes in a decimal number and an optional number of decimal places, and returns a formatted string of that number in the bytes, kilobytes, megabytes, etc. depending on the size of the input decimal number.
 
 
 
@@ -20,8 +20,16 @@ The {{ $frontmatter.title }} helper module provides a helper function that takes
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { formatBytes } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import formatBytes from '@obewds/vueventus/formatBytes'
 ```
 
 

@@ -1,5 +1,5 @@
 ---
-title: formatNumber()
+title: formatNumber() Helper Method
 ---
 
 
@@ -11,7 +11,7 @@ title: formatNumber()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that returns it's passed argument as a formatted number using JavaScript's Intl.NumberFormat() API/method.
+The {{ $frontmatter.title }} module provides a helper function that returns it's passed argument as a formatted number using JavaScript's Intl.NumberFormat() API/method.
 
 
 
@@ -21,8 +21,16 @@ The {{ $frontmatter.title }} helper module provides a helper function that retur
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { formatNumber } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import formatNumber from '@obewds/vueventus/formatNumber'
 ```
 
 

@@ -21,8 +21,16 @@ A validation focused palette of a variety of color class types for use with form
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { InputValidation } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import InputValidation from '@obewds/vueventus/InputValidation'
 ```
 
 

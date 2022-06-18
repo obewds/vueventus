@@ -1,5 +1,5 @@
 ---
-title: slugifyString()
+title: slugifyString() Helper Method
 ---
 
 
@@ -11,7 +11,7 @@ title: slugifyString()
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} helper module provides a helper function that takes a string argument and modifies/returns it as a URL safe and human-readable "slug" string.
+The {{ $frontmatter.title }} module provides a helper function that takes a string argument and modifies/returns it as a URL safe and human-readable "slug" string.
 
 
 
@@ -21,8 +21,16 @@ The {{ $frontmatter.title }} helper module provides a helper function that takes
 
 ## Import
 
+To import the compiled library version of the {{ $frontmatter.title }}:
+
 ```javascript
 import { slugifyString } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} directly:
+
+```javascript
+import slugifyString from '@obewds/vueventus/slugifyString'
 ```
 
 
