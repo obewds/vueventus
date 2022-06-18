@@ -1,12 +1,11 @@
 <!-- ./src/views/configs/palettes/AnchorDefaultPage.vue -->
 
-<script setup>
+<script setup lang="ts">
 
-    import { inject } from 'vue'
-    import { AnchorDefault } from '@/index'
+    import globals from '../../../globals'
+    import AnchorDefault from '../../../configs/palettes/AnchorDefault'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
 
-    const globals = inject('globals')
     const tw = globals.classes
 
 </script>

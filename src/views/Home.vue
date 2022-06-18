@@ -1,9 +1,7 @@
-<script setup>
+<script setup lang="ts">
 
-    import { inject } from 'vue'
+    import globals from '../globals'
     import DevViewLinkCard from '@/views/compos/DevViewLinkCard.vue'
-
-    const globals = inject('globals')
 
     const tw = globals.classes
     
@@ -106,6 +104,7 @@
             </DevViewLinkCard>
 
         </div>
+
 
 
 

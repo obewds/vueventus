@@ -1,20 +1,12 @@
-<!--
-    ./src/views/components/logos/VueVentusLogoTextPage.vue
-    @/views/components/logos/VueVentusLogoTextPage.vue
--->
+<!-- ./src/views/components/logos/VueVentusLogoTextPage.vue -->
 
+<script setup lang="ts">
 
-<script setup>
-
-    import { inject } from 'vue'
+    import globals from '../../../globals'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
     import VueVentusLogoText from '@/components/logos/VueVentusLogoText.vue'
-    import VvConfig from '@/configs/VvConfig.js'
 
-    const globals = inject('globals')
     const tw = globals.classes
-
-    const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject('vv') : VvConfig
 
 </script>
 

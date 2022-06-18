@@ -1,12 +1,11 @@
 <!-- ./src/views/configs/palettes/GroundDefaultPage.vue -->
 
-<script setup>
+<script setup lang="ts">
 
-    import { inject } from 'vue'
-    import { GroundDefault } from '@/index'
+    import globals from '../../../globals'
+    import GroundDefault from '../../../configs/palettes/GroundDefault'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
 
-    const globals = inject('globals')
     const tw = globals.classes
 
 </script>

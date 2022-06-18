@@ -1,7 +1,6 @@
 <!-- ./src/views/compos/DocsPackageVersion.vue -->
 
-
-<script setup>
+<script setup lang="ts">
 
     import pkg from '../../../package.json'
 
@@ -12,8 +11,7 @@
 
     <aside class="block w-full text-center pt-12">
         <div class="opacity-50 text-xs">Current Version:</div>
-        <a
-            href="https://github.com/obewds/vueventus/blob/main/CHANGELOG.md"
+        <a href="https://github.com/obewds/vueventus/blob/main/CHANGELOG.md"
             class="text-sm"
             target="_blank"
             rel="noopener noreferrer"

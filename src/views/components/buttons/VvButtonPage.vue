@@ -1,18 +1,12 @@
-<!--
-    ./src/views/components/buttons/VvButtonPage.vue
-    @/views/components/buttons/VvButtonPage.vue
--->
+<!-- ./src/views/components/buttons/VvButtonPage.vue -->
 
+<script setup lang="ts">
 
-
-<script setup>
-
-    import { inject } from 'vue'
     import { Transitions } from '../../../index'
+    import globals from '../../../globals'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
     import VvButton from '@/components/buttons/VvButton.vue'
 
-    const globals = inject('globals')
     const tw = globals.classes
 
 </script>

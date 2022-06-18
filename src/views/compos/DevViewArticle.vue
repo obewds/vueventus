@@ -1,9 +1,8 @@
 <!-- ./src/views/compos/DevViewArticle.vue -->
 
+<script setup lang="ts">
 
-<script setup>
-
-    import { inject } from 'vue'
+    import globals from '../../globals'
 
     const props = defineProps({
         title: {
@@ -11,8 +10,6 @@
             required: true,
         },
     })
-
-    const globals = inject('globals')
 
     const tw = globals.classes
 
