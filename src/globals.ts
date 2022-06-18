@@ -1,7 +1,48 @@
 
 import { Transitions } from './index'
 
-export default {
+interface GlobalsIconKey {
+    icon: string
+    key: string
+}
+
+interface GlobalsNameKey {
+    name: string
+    key: string
+}
+
+interface GlobalsNameMaxWidth {
+    name: string
+    maxWidth: string
+}
+
+interface Globals {
+    classes: {
+        anchor: string
+        article: string
+        border: string
+        cardFlex: string
+        flexStack: string
+        flexWrap: string
+        grid: string
+        gridCardLink: string
+        gridCardLinkModule: string
+        gridCardLinkPalette: string
+        h1: string
+        h2: string
+        h3: string
+        pad: string
+        subhead: string
+    },
+    data: {
+        btnSizes: GlobalsIconKey[]
+        colors: GlobalsNameKey[]
+        inputColors: GlobalsNameKey[]
+        textSizes: GlobalsNameMaxWidth[]
+    }
+}
+
+export default <Globals>{
     classes: {
         anchor: 'text-green-600 hover:text-green-700 dark:text-green-300 dark:hover:text-green-400',
         article: 'px-4 pb-20',
