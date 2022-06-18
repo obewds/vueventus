@@ -4,7 +4,7 @@ title: Text Config Module
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
-    import Text from '../../../src/configs/Text.js'
+    import Text from '../../../src/configs/Text'
 </script>
 
 
@@ -359,7 +359,7 @@ const textSizeClasses = Text.getSizeClasses('sm')
 
 ## Module Code
 
-<<< @/../src/configs/Text.js
+<<< @/../src/configs/Text.ts
 
 
 

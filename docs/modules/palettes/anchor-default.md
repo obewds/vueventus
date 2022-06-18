@@ -49,7 +49,7 @@ const anchorSuccess = AnchorDefault.success
 
 ## Module
 
-<<< @/../src/configs/palettes/AnchorDefault.js
+<<< @/../src/configs/palettes/AnchorDefault.ts
 
 
 

@@ -50,7 +50,7 @@ const buttonSuccess = ButtonSolid.success
 
 ## Module
 
-<<< @/../src/configs/palettes/ButtonSolid.js
+<<< @/../src/configs/palettes/ButtonSolid.ts
 
 
 

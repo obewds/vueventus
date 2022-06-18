@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 
-    import VvColorModeButton from '@/components/buttons/VvColorModeButton.vue'
-    import VueVentusTWColors from '@/data/app.color.data.json'
+    import VvColorModeButton from  './components/buttons/VvColorModeButton.vue'
+    import VueVentusTWColors from './data/app.color.data.json'
 
     const colorMode = localStorage && localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') : 'light'
     const year = new Date().getFullYear()

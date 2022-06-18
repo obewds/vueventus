@@ -1,12 +1,11 @@
 <!-- ./src/views/configs/palettes/GroundMonochromaticPage.vue -->
 
-<script setup>
+<script setup lang="ts">
 
-    import { inject } from 'vue'
-    import { GroundMonochromatic } from '@/index'
+    import globals from '../../../globals'
+    import GroundMonochromatic from '../../../configs/palettes/GroundMonochromatic'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
 
-    const globals = inject('globals')
     const tw = globals.classes
 
 </script>

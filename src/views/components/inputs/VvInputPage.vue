@@ -1,16 +1,11 @@
-<!--
-    ./src/views/components/inputs/VvInputPage.vue
-    @/views/components/inputs/VvInputPage.vue
--->
+<!-- ./src/views/components/inputs/VvInputPage.vue -->
 
+<script setup lang="ts">
 
-<script setup>
-
-    import { inject } from 'vue'
+    import globals from '../../../globals'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
     import VvInput from '@/components/inputs/VvInput.vue'
 
-    const globals = inject('globals')
     const tw = globals.classes
 
 </script>
@@ -18,7 +13,7 @@
 
 <template>
 
-    <DevViewArticle title="VvAnchor">
+    <DevViewArticle title="VvInput">
 
         <div :class="tw.cardFlex">
             <div>

@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 
     import { inject } from 'vue'
-    import AnchorDefault from '@/configs/palettes/AnchorDefault'
+    import AnchorDefault from '../configs/palettes/AnchorDefault'
     import VvAnchor from '@/components/anchors/VvAnchor.vue'
 
     //const globals = inject('globals')

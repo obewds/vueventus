@@ -4,7 +4,7 @@ title: Anchors Config Module
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
-    import Anchors from '../../../src/configs/Anchors.js'
+    import Anchors from '../../../src/configs/Anchors'
 </script>
 
 
@@ -230,7 +230,7 @@ const anchorsSizeClasses = Anchors.getSizeClasses('sm')
 
 ## Module Code
 
-<<< @/../src/configs/Anchors.js
+<<< @/../src/configs/Anchors.ts
 
 
 

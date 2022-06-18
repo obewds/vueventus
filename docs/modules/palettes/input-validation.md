@@ -45,7 +45,7 @@ const inputSuccess = InputValidation.success
 
 ## Module
 
-<<< @/../src/configs/palettes/InputValidation.js
+<<< @/../src/configs/palettes/InputValidation.ts
 
 
 

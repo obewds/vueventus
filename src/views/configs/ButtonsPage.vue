@@ -1,12 +1,11 @@
 <!-- ./src/views/configs/ButtonsPage.vue -->
 
-<script setup>
+<script setup lang="ts">
 
-    import { inject } from 'vue'
-    import VvConfig from '@/configs/VvConfig.js'
+    import globals from '../../globals'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
+    import VvConfig from '../../configs/VvConfig'
 
-    const globals = inject('globals')
     const tw = globals.classes
 
 </script>

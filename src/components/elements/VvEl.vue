@@ -1,64 +1,72 @@
-<!--
-    ./src/components/buttons/VvEl.vue
-    @/components/buttons/VvEl.vue
--->
+<!-- ./src/components/elements/VvEl.vue -->
 
+<script lang="ts">
 
-<script setup>
-
-    import { computed, inject } from 'vue'
+    import { computed, defineComponent, inject } from 'vue'
     import VvConfig from '../../configs/VvConfig.js'
 
-    const props = defineProps({
-        borderPalette: {
-            type: String,
-            default: VvConfig.defaults.VvEl.borderPalette,
-        },
-        borderColor: {
-            type: String,
-            default: VvConfig.defaults.VvEl.borderColor,
-        },
-        groundPalette: {
-            type: String,
-            default: VvConfig.defaults.VvEl.groundPalette,
-        },
-        groundColor: {
-            type: String,
-            default: VvConfig.defaults.VvEl.groundColor,
-        },
-        tag: {
-            type: String,
-            default: VvConfig.defaults.VvEl.tag,
-        },
-        textPalette: {
-            type: String,
-            default: VvConfig.defaults.VvEl.textPalette,
-        },
-        textColor: {
-            type: String,
-            default: VvConfig.defaults.VvEl.textColor,
-        },
-    })
+    export default defineComponent({
 
-    const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject('vv') : VvConfig
+        name: 'VvEl',
 
-    let classes = computed( () => {
+        props: {
+            borderPalette: {
+                type: String,
+                default: VvConfig.defaults.VvEl.borderPalette,
+            },
+            borderColor: {
+                type: String,
+                default: VvConfig.defaults.VvEl.borderColor,
+            },
+            groundPalette: {
+                type: String,
+                default: VvConfig.defaults.VvEl.groundPalette,
+            },
+            groundColor: {
+                type: String,
+                default: VvConfig.defaults.VvEl.groundColor,
+            },
+            tag: {
+                type: String,
+                default: VvConfig.defaults.VvEl.tag,
+            },
+            textPalette: {
+                type: String,
+                default: VvConfig.defaults.VvEl.textPalette,
+            },
+            textColor: {
+                type: String,
+                default: VvConfig.defaults.VvEl.textColor,
+            },
+        },
 
-        let output = []
+        setup (props) {
+            
+            const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject<typeof VvConfig>('vv') : VvConfig
 
-        if ( vv?.borders?.palettes?.[props.borderPalette]?.[props.borderColor] ) {
-            output.push( vv.borders.palettes[props.borderPalette][props.borderColor] )
-        }
+            let classes = computed( () => {
 
-        if ( vv?.grounds?.palettes?.[props.groundPalette]?.[props.groundColor] ) {
-            output.push( vv.grounds.palettes[props.groundPalette][props.groundColor] )
-        }
+                let output = []
 
-        if ( vv?.text?.palettes?.[props.textPalette]?.[props.textColor] ) {
-            output.push( vv.text.palettes[props.textPalette][props.textColor] )
-        }
+                if ( vv?.borders?.palettes?.[props.borderPalette as keyof typeof vv.borders.palettes]?.[props.borderColor] ) {
+                    output.push( vv.borders.palettes[props.borderPalette as keyof typeof vv.borders.palettes][props.borderColor] )
+                }
 
-        return output.join(' ').trim()
+                if ( vv?.grounds?.palettes?.[props.groundPalette as keyof typeof vv.grounds.palettes]?.[props.groundColor] ) {
+                    output.push( vv.grounds.palettes[props.groundPalette as keyof typeof vv.grounds.palettes][props.groundColor] )
+                }
+
+                if ( vv?.text?.palettes?.[props.textPalette as keyof typeof vv.text.palettes]?.[props.textColor] ) {
+                    output.push( vv.text.palettes[props.textPalette as keyof typeof vv.text.palettes][props.textColor] )
+                }
+
+                return output.join(' ').trim()
+
+            })
+
+            return { classes }
+
+        },
 
     })
 

@@ -1,13 +1,13 @@
 {
   "name": "@obewds/vueventus",
-  "description": "A modular design system component library built for Vue.js and Tailwind CSS.",
-  "version": "0.14.0",
+  "description": "An aesthetics focused design system component library for Vue.js, Tailwind CSS, and Typescript projects",
+  "version": "0.15.0",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
-  "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vue-tsc --noEmit && vite build",
+    "ts:build": "npx rimraf dist && npm run build && vue-tsc --emitDeclarationOnly",
     "preview": "vite preview",
     "test": "vitest --dom",
     "coverage": "vitest run --dom --coverage",
@@ -17,7 +17,7 @@
     "changelog": "auto-changelog --package --unreleased --backfill-limit 20",
     "tag": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
     "bump": "npm run tag && npm run changelog",
-    "generate": "npx rimraf dist && npx rimraf docs/.vitepress/dist && npm run build && npm run docs:build",
+    "generate": "npx rimraf dist && npx rimraf docs/.vitepress/dist && npm run build && vue-tsc --emitDeclarationOnly && npm run docs:build",
     "pkg:org": "npm config set scope obewds",
     "pkg:login": "npm adduser",
     "pkg:publish": "npm publish --access public",
@@ -29,7 +29,7 @@
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
     "deepmerge": "^4.2.2",
-    "tailwindcss": "^3.1.2",
+    "tailwindcss": "^3.1.3",
     "vue": "^3.2.37"
   },
   "devDependencies": {
@@ -38,14 +38,16 @@
     "auto-changelog": "^2.4.0",
     "autoprefixer": "^10.4.7",
     "c8": "^7.11.3",
-    "happy-dom": "^5.2.0",
+    "happy-dom": "^5.3.1",
     "markdown-it-include": "^2.0.0",
     "postcss": "^8.4.14",
     "rimraf": "^3.0.2",
+    "typescript": "^4.7.4",
     "vite": "^2.9.12",
-    "vitepress": "^1.0.0-alpha.1",
-    "vitest": "^0.14.2",
-    "vue-router": "^4.0.16"
+    "vitepress": "^1.0.0-alpha.2",
+    "vitest": "^0.15.1",
+    "vue-router": "^4.0.16",
+    "vue-tsc": "^0.37.9"
   },
   "sideEffects": false,
   "main": "./dist/vueventus.umd.js",
@@ -59,6 +61,7 @@
     "src/helpers",
     "src/validators"
   ],
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vueventus.es.js",

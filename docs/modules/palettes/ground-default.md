@@ -47,7 +47,7 @@ const bgSuccess = GroundDefault.success
 
 ## Module
 
-<<< @/../src/configs/palettes/GroundDefault.js
+<<< @/../src/configs/palettes/GroundDefault.ts
 
 
 

@@ -1,33 +1,42 @@
-<!--
-    ./src/components/logos/VueVentusSpinningMark.vue
-    @/components/logos/VueVentusSpinningMark.vue
--->
+<!-- ./src/components/logos/VueVentusSpinningMark.vue -->
 
+<script lang="ts">
 
-<script setup>
+    import { computed, defineComponent } from 'vue'
 
-    import { computed } from 'vue'
+    export default defineComponent({
 
-    const props = defineProps({
-        animationClass: {
-            type: String,
-            default: 'animate-spin-reverse-4s',
+        name: 'VueVentusSpinningMark',
+
+        props: {
+            animationClass: {
+                type: String,
+                default: 'animate-spin-reverse-4s',
+            },
+            enableAnimation: {
+                type: Boolean,
+                default: true,
+            },
+            fillOne: {
+                type: String,
+                default: '#41b883',
+            },
+            fillTwo: {
+                type: String,
+                default: '#2298bd',
+            },
         },
-        enableAnimation: {
-            type: Boolean,
-            default: true,
+
+        setup (props) {
+
+            const classes = computed( () => props.enableAnimation ? props.animationClass : '' )
+
+            return { classes }
+
         },
-        fillOne: {
-            type: String,
-            default: '#41b883',
-        },
-        fillTwo: {
-            type: String,
-            default: '#2298bd',
-        },
+
     })
-
-    const classes = computed( () => props.enableAnimation ? props.animationClass : '' )
+    
 
 </script>
 

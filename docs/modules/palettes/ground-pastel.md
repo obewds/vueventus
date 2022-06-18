@@ -47,7 +47,7 @@ const bgSuccess = GroundPastel.success
 
 ## Module
 
-<<< @/../src/configs/palettes/GroundPastel.js
+<<< @/../src/configs/palettes/GroundPastel.ts
 
 
 

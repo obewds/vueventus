@@ -1,12 +1,11 @@
 <!-- ./src/views/configs/palettes/ButtonSolidPage.vue -->
 
-<script setup>
+<script setup lang="ts">
 
-    import { inject } from 'vue'
-    import { ButtonSolid } from '@/index'
+    import globals from '../../../globals'
+    import ButtonSolid from '../../../configs/palettes/ButtonSolid'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
 
-    const globals = inject('globals')
     const tw = globals.classes
 
 </script>

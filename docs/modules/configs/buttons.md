@@ -4,7 +4,7 @@ title: Buttons Config Module
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
-    import Buttons from '../../../src/configs/Buttons.js'
+    import Buttons from '../../../src/configs/Buttons'
 </script>
 
 
@@ -632,7 +632,7 @@ const smButtons = Buttons.getSizeClasses('sm')
 
 ## Module Code
 
-<<< @/../src/configs/Buttons.js
+<<< @/../src/configs/Buttons.ts
 
 
 

@@ -47,7 +47,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 
 ### Module Code
 
-<<< @/../src/validators/ValidAudioSourceTypes.js
+<<< @/../src/validators/ValidAudioSourceTypes.ts
 
 
 
@@ -75,7 +75,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 
 ### Module Code
 
-<<< @/../src/validators/ValidButtonTypes.js
+<<< @/../src/validators/ValidButtonTypes.ts
 
 
 
@@ -103,7 +103,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 
 ### Module Code
 
-<<< @/../src/validators/ValidColorModes.js
+<<< @/../src/validators/ValidColorModes.ts
 
 
 
@@ -131,7 +131,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 
 ### Module Code
 
-<<< @/../src/validators/ValidDirections.js
+<<< @/../src/validators/ValidDirections.ts
 
 
 
@@ -159,7 +159,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 
 ### Module Code
 
-<<< @/../src/validators/ValidElementTags.js
+<<< @/../src/validators/ValidElementTags.ts
 
 
 
@@ -187,7 +187,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 
 ### Module Code
 
-<<< @/../src/validators/ValidFontAwesomeFamilies.js
+<<< @/../src/validators/ValidFontAwesomeFamilies.ts
 
 
 
@@ -215,7 +215,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 
 ### Module Code
 
-<<< @/../src/validators/ValidFontAwesomeSizes.js
+<<< @/../src/validators/ValidFontAwesomeSizes.ts
 
 
 
@@ -243,7 +243,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 
 ### Module Code
 
-<<< @/../src/validators/ValidHeadingLevels.js
+<<< @/../src/validators/ValidHeadingLevels.ts
 
 
 
@@ -271,7 +271,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 
 ### Module Code
 
-<<< @/../src/validators/ValidImageSourceTypes.js
+<<< @/../src/validators/ValidImageSourceTypes.ts
 
 
 
@@ -299,7 +299,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 
 ### Module Code
 
-<<< @/../src/validators/ValidInputTypes.js
+<<< @/../src/validators/ValidInputTypes.ts
 
 
 
@@ -327,7 +327,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 
 ### Module Code
 
-<<< @/../src/validators/ValidVideoSourceTypes.js
+<<< @/../src/validators/ValidVideoSourceTypes.ts
 
 
 

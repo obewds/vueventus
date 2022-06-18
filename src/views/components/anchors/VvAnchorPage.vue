@@ -1,18 +1,13 @@
-<!--
-    ./src/views/components/anchors/VvAnchorPage.vue
-    @/views/components/anchors/VvAnchorPage.vue
--->
+<!-- ./src/views/components/anchors/VvAnchorPage.vue -->
 
-
-
-<script setup>
+<script setup lang="ts">
 
     import { inject } from 'vue'
     import { Transitions } from '../../../index'
+    import globals from '../../../globals'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
     import VvAnchor from '@/components/anchors/VvAnchor.vue'
 
-    const globals = inject('globals')
     const tw = globals.classes
 
 </script>

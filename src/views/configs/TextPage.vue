@@ -1,12 +1,11 @@
 <!-- ./src/views/configs/Text.vue -->
 
-<script setup>
+<script setup lang="ts">
 
-    import { inject } from 'vue'
-    import VvConfig from '@/configs/VvConfig.js'
+    import globals from '../../globals'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
+    import VvConfig from '../../configs/VvConfig'
 
-    const globals = inject('globals')
     const tw = globals.classes
 
     const sentence = 'Oh, no room for Bender, huh? Fine! I’ll go build my own lunar lander, with blackjack and hookers. In fact, forget the lunar lander and the blackjack. Ahh, screw the whole thing! '

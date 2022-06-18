@@ -17,7 +17,7 @@ var __spreadValues = (a, b) => {
   return a;
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
-import { inject, computed, openBlock, createElementBlock, normalizeClass, unref, renderSlot, ref, onMounted, createBlock, withCtx, createCommentVNode, createElementVNode, resolveDynamicComponent } from "vue";
+import { defineComponent, inject, computed, openBlock, createElementBlock, normalizeClass, renderSlot, ref, onMounted, resolveComponent, createBlock, withCtx, createCommentVNode, createElementVNode, resolveDynamicComponent } from "vue";
 var Text = {
   align: "",
   decoration: "",
@@ -126,27 +126,33 @@ var Transitions = {
     transform: "transition-transform"
   },
   getDurationClasses: function(durationsKey) {
-    const key = durationsKey && this.durations[durationsKey] ? durationsKey : "300";
-    return this.durations[key];
+    var _a, _b;
+    const key = durationsKey && ((_a = this.durations) == null ? void 0 : _a[durationsKey]) ? durationsKey : "300";
+    const output = ((_b = this.durations) == null ? void 0 : _b[key]) || "";
+    return output;
   },
   getEasingClasses: function(easingsKey) {
-    const key = easingsKey && this.easings[easingsKey] ? easingsKey : "inOut";
-    return this.easings[key];
+    var _a, _b;
+    const key = easingsKey && ((_a = this.easings) == null ? void 0 : _a[easingsKey]) ? easingsKey : "inOut";
+    const output = ((_b = this.easings) == null ? void 0 : _b[key]) || "";
+    return output;
   },
   getTransitionClasses: function(transitionsKey) {
-    const key = transitionsKey && this.transitions[transitionsKey] ? transitionsKey : "default";
-    return this.transitions[key];
+    var _a, _b;
+    const key = transitionsKey && ((_a = this.transitions) == null ? void 0 : _a[transitionsKey]) ? transitionsKey : "default";
+    const output = ((_b = this.transitions) == null ? void 0 : _b[key]) || "";
+    return output;
   },
-  custom: function(settingsObj) {
-    const settings = {
-      transitions: settingsObj && settingsObj.transitions ? settingsObj.transitions : "",
-      easings: settingsObj && settingsObj.easings ? settingsObj.easings : "",
-      durations: settingsObj && settingsObj.durations ? settingsObj.durations : ""
+  custom: function(settings) {
+    const obj = {
+      transitions: settings && settings.transitions ? settings.transitions : "",
+      easings: settings && settings.easings ? settings.easings : "",
+      durations: settings && settings.durations ? settings.durations : ""
     };
     return [
-      this.getTransitionClasses(settings.transitions),
-      this.getEasingClasses(settings.easings),
-      this.getDurationClasses(settings.durations)
+      this.getTransitionClasses(obj.transitions),
+      this.getEasingClasses(obj.easings),
+      this.getDurationClasses(obj.durations)
     ].join(" ").trim();
   },
   classes: function(transitionsKey, easingsKey, durationsKey) {
@@ -412,6 +418,47 @@ var TextDefault = {
   secondary: "text-violet-500 dark:text-violet-300",
   success: "text-green-600 dark:text-green-300"
 };
+var VvComponentDefaults = {
+  "VvAnchor": {
+    button: false,
+    buttonBlock: false,
+    buttonFab: false,
+    buttonSize: "md",
+    color: "default",
+    external: false,
+    href: "#",
+    palette: "default"
+  },
+  "VvButton": {
+    block: false,
+    color: "primary",
+    fab: false,
+    palette: "solid",
+    size: "md",
+    type: "button"
+  },
+  "VvColorModeButton": {
+    color: "default",
+    mode: "light",
+    palette: "outline",
+    size: "xs"
+  },
+  "VvEl": {
+    borderPalette: "default",
+    borderColor: "",
+    groundPalette: "default",
+    groundColor: "default",
+    tag: "div",
+    textPalette: "default",
+    textColor: "default"
+  },
+  "VvInput": {
+    color: "default",
+    palette: "validation",
+    size: "md",
+    type: "text"
+  }
+};
 var VvConfig = {
   anchors: __spreadProps(__spreadValues({}, Anchors), {
     palettes: {
@@ -464,53 +511,13 @@ var VvConfig = {
     }
   }),
   transitions: __spreadValues({}, Transitions),
-  defaults: {
-    "VvAnchor": {
-      button: false,
-      buttonBlock: false,
-      buttonFab: false,
-      buttonSize: "md",
-      color: "default",
-      external: false,
-      href: "#",
-      palette: "default"
-    },
-    "VvButton": {
-      block: false,
-      color: "primary",
-      fab: false,
-      palette: "solid",
-      size: "md",
-      type: "button"
-    },
-    "VvColorModeButton": {
-      color: "default",
-      mode: "light",
-      palette: "outline",
-      size: "xs"
-    },
-    "VvEl": {
-      borderPalette: "default",
-      borderColor: "",
-      groundPalette: "default",
-      groundColor: "default",
-      tag: "div",
-      textPalette: "default",
-      textColor: "default"
-    },
-    "VvInput": {
-      color: "default",
-      palette: "validation",
-      size: "md",
-      type: "text"
-    }
-  }
+  defaults: VvComponentDefaults
 };
-function camelCaseToTitleCase(str) {
-  let temp = str.replace(/([A-Z])/g, " $1").replace(/\s+/g, " ");
+function camelCaseToTitleCase(string) {
+  let temp = string.replace(/([A-Z])/g, " $1").replace(/\s+/g, " ");
   let tempArray = temp.split(" ");
-  let casedArray = tempArray.map((str2) => {
-    return str2.charAt(0).toUpperCase() + str2.substring(1).toLowerCase();
+  let casedArray = tempArray.map((str) => {
+    return str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
   });
   return casedArray.join(" ").trim();
 }
@@ -531,30 +538,22 @@ function formatBytes(bytes, decimals = 2) {
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
 }
-function formatMediaTime(currentTime = 0) {
+function formatMediaTime(currentTime) {
   let sec_num = parseInt(currentTime, 10);
-  let days = Math.floor(parseInt(sec_num / (24 * 3600)));
+  let days = Math.floor(parseInt(String(Number(sec_num) / (24 * 3600))));
   sec_num = sec_num % (24 * 3600);
-  let hours = Math.floor(parseInt(sec_num / 3600));
+  let hours = Math.floor(parseInt(String(Number(sec_num) / 3600)));
   sec_num %= 3600;
   let minutes = Math.floor(sec_num / 60);
   sec_num %= 60;
   let seconds = Math.floor(sec_num);
-  if (days < 10) {
-    days = "0" + days;
-  }
-  if (hours < 10) {
-    hours = "0" + hours;
-  }
-  if (minutes < 10) {
-    minutes = "0" + minutes;
-  }
-  if (seconds < 10) {
-    seconds = "0" + seconds;
-  }
-  let output = days === "00" ? "" : days + ":";
-  output += hours === "00" ? "" : hours + ":";
-  output += minutes + ":" + seconds;
+  let sDays = days < 10 ? "0" + days : days;
+  let sHrs = hours < 10 ? "0" + hours : hours;
+  let sMins = minutes < 10 ? "0" + minutes : minutes;
+  let sSecs = seconds < 10 ? "0" + seconds : seconds;
+  let output = sDays === "00" ? "" : sDays + ":";
+  output += sHrs === "00" ? "" : sHrs + ":";
+  output += sMins + ":" + sSecs;
   return output;
 }
 function formatNumber(number) {
@@ -684,7 +683,7 @@ function stringToFilename(str) {
 function uniqueArray(array) {
   return array.filter((value, index, self) => self.indexOf(value) === index);
 }
-var ValidAudioSourceTypes = [
+const ValidAudioSourceTypes = [
   "audio/flac",
   "audio/mp4",
   "audio/mpeg",
@@ -692,23 +691,23 @@ var ValidAudioSourceTypes = [
   "audio/x-flac",
   "audio/webm"
 ];
-var ValidButtonTypes = [
+const ValidButtonTypes = [
   "button",
   "submit",
   "reset"
 ];
-var ValidColorModes = [
+const ValidColorModes = [
   "light",
   "dark"
 ];
-var ValidDirections = [
+const ValidDirections = [
   "up",
   "down",
   "left",
   "right",
   ""
 ];
-var ValidElementTags = [
+const ValidElementTags = [
   "style",
   "title",
   "address",
@@ -804,7 +803,7 @@ var ValidElementTags = [
   "dialog",
   "summary"
 ];
-var ValidFontAwesomeFamilies = [
+const ValidFontAwesomeFamilies = [
   "fab",
   "fad",
   "fal",
@@ -812,7 +811,7 @@ var ValidFontAwesomeFamilies = [
   "fas",
   "fat"
 ];
-var ValidFontAwesomeSizes = [
+const ValidFontAwesomeSizes = [
   "xs",
   "sm",
   "1x",
@@ -827,15 +826,15 @@ var ValidFontAwesomeSizes = [
   "9x",
   "10x"
 ];
-var ValidHeadingLevels = [1, 2, 3, 4, 5, 6];
-var ValidImageSourceTypes = [
+const ValidHeadingLevels = [1, 2, 3, 4, 5, 6];
+const ValidImageSourceTypes = [
   "image/gif",
   "image/jpeg",
   "image/png",
   "image/svg+xml",
   "image/webp"
 ];
-var ValidInputTypes = [
+const ValidInputTypes = [
   "color",
   "date",
   "datetime-local",
@@ -849,15 +848,20 @@ var ValidInputTypes = [
   "time",
   "url"
 ];
-var ValidVideoSourceTypes = [
+const ValidVideoSourceTypes = [
   "video/mp4",
   "video/ogg",
   "video/webm"
 ];
-const _hoisted_1$5 = ["href"];
-const _hoisted_2$3 = ["href"];
-const _sfc_main$6 = {
-  __name: "VvAnchor",
+var _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
+const _sfc_main$6 = defineComponent({
+  name: "VvAnchor",
   props: {
     button: {
       type: Boolean,
@@ -892,8 +896,7 @@ const _sfc_main$6 = {
       default: VvConfig.defaults.VvAnchor.palette
     }
   },
-  setup(__props) {
-    const props = __props;
+  setup(props) {
     const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
     let classes = computed(() => {
       var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p;
@@ -934,28 +937,31 @@ const _sfc_main$6 = {
       }
       return output.join(" ").trim();
     });
-    return (_ctx, _cache) => {
-      return __props.external ? (openBlock(), createElementBlock("a", {
-        key: 0,
-        href: __props.href,
-        class: normalizeClass(unref(classes)),
-        target: "_blank",
-        rel: "noopener noreferrer"
-      }, [
-        renderSlot(_ctx.$slots, "default")
-      ], 10, _hoisted_1$5)) : (openBlock(), createElementBlock("a", {
-        key: 1,
-        href: __props.href,
-        class: normalizeClass(unref(classes))
-      }, [
-        renderSlot(_ctx.$slots, "default")
-      ], 10, _hoisted_2$3));
-    };
+    return { classes };
   }
-};
-const _hoisted_1$4 = ["type"];
-const _sfc_main$5 = {
-  __name: "VvButton",
+});
+const _hoisted_1$5 = ["href"];
+const _hoisted_2$3 = ["href"];
+function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+  return _ctx.external ? (openBlock(), createElementBlock("a", {
+    key: 0,
+    href: _ctx.href,
+    class: normalizeClass(_ctx.classes),
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, [
+    renderSlot(_ctx.$slots, "default")
+  ], 10, _hoisted_1$5)) : (openBlock(), createElementBlock("a", {
+    key: 1,
+    href: _ctx.href,
+    class: normalizeClass(_ctx.classes)
+  }, [
+    renderSlot(_ctx.$slots, "default")
+  ], 10, _hoisted_2$3));
+}
+var VvAnchor = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$6]]);
+const _sfc_main$5 = defineComponent({
+  name: "VvAnchor",
   props: {
     block: {
       type: Boolean,
@@ -983,9 +989,9 @@ const _sfc_main$5 = {
       validator: (prop) => ValidButtonTypes.includes(prop)
     }
   },
-  setup(__props) {
-    const props = __props;
+  setup(props) {
     const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
+    const btnType = props.type;
     let classes = computed(() => {
       var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l;
       let output = [];
@@ -1016,52 +1022,24 @@ const _sfc_main$5 = {
       }
       return output.join(" ").trim();
     });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("button", {
-        type: __props.type,
-        class: normalizeClass(unref(classes))
-      }, [
-        renderSlot(_ctx.$slots, "default")
-      ], 10, _hoisted_1$4);
-    };
+    return { btnType, classes };
   }
-};
-const _hoisted_1$3 = {
-  key: 0,
-  xmlns: "http://www.w3.org/2000/svg",
-  class: "h-5 w-5",
-  fill: "none",
-  viewBox: "0 0 24 24",
-  stroke: "currentColor",
-  "stroke-width": "2"
-};
-const _hoisted_2$2 = /* @__PURE__ */ createElementVNode("path", {
-  "stroke-linecap": "round",
-  "stroke-linejoin": "round",
-  d: "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-}, null, -1);
-const _hoisted_3 = [
-  _hoisted_2$2
-];
-const _hoisted_4 = {
-  key: 1,
-  xmlns: "http://www.w3.org/2000/svg",
-  class: "h-5 w-5",
-  fill: "none",
-  viewBox: "0 0 24 24",
-  stroke: "currentColor",
-  "stroke-width": "2"
-};
-const _hoisted_5 = /* @__PURE__ */ createElementVNode("path", {
-  "stroke-linecap": "round",
-  "stroke-linejoin": "round",
-  d: "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-}, null, -1);
-const _hoisted_6 = [
-  _hoisted_5
-];
-const _sfc_main$4 = {
-  __name: "VvColorModeButton",
+});
+const _hoisted_1$4 = ["type"];
+function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("button", {
+    type: _ctx.btnType,
+    class: normalizeClass(_ctx.classes)
+  }, [
+    renderSlot(_ctx.$slots, "default")
+  ], 10, _hoisted_1$4);
+}
+var VvButton = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$5]]);
+const _sfc_main$4 = defineComponent({
+  name: "VvColorModeButton",
+  components: {
+    VvButton
+  },
   props: {
     mode: {
       type: String,
@@ -1113,8 +1091,7 @@ const _sfc_main$4 = {
       default: VvConfig.colorMode.light.title
     }
   },
-  setup(__props) {
-    const props = __props;
+  setup(props) {
     const mode = ref(props.mode);
     const icon = computed(() => mode.value === "dark" ? "sun" : "moon");
     const title = computed(() => mode.value === "dark" ? props.titleLight : props.titleDark);
@@ -1130,43 +1107,82 @@ const _sfc_main$4 = {
         document.documentElement.style.backgroundColor = props.groundDarkHex;
       }
     });
-    function toggleColorMode(event) {
-      if (document && mode.value === "light") {
-        mode.value = "dark";
+    return { mode, icon, title };
+  },
+  methods: {
+    toggleColorMode(event) {
+      if (document && this.mode === "light") {
+        this.mode = "dark";
         localStorage.setItem("colorMode", "dark");
-        document.documentElement.classList.remove(props.groundLight, props.textLight);
-        document.documentElement.classList.add("dark", props.groundDark, props.textDark);
-        document.documentElement.style.backgroundColor = props.groundDarkHex;
-      } else if (document && mode.value === "dark") {
-        mode.value = "light";
+        document.documentElement.classList.remove(this.groundLight, this.textLight);
+        document.documentElement.classList.add("dark", this.groundDark, this.textDark);
+        document.documentElement.style.backgroundColor = this.groundDarkHex;
+      } else if (document && this.mode === "dark") {
+        this.mode = "light";
         localStorage.setItem("colorMode", "light");
-        document.documentElement.classList.remove("dark", props.groundDark, props.textDark);
-        document.documentElement.classList.add(props.groundLight, props.textLight);
-        document.documentElement.style.backgroundColor = props.groundLightHex;
+        document.documentElement.classList.remove("dark", this.groundDark, this.textDark);
+        document.documentElement.classList.add(this.groundLight, this.textLight);
+        document.documentElement.style.backgroundColor = this.groundLightHex;
       }
     }
-    return (_ctx, _cache) => {
-      return openBlock(), createBlock(_sfc_main$5, {
-        title: unref(title),
-        onClick: _cache[0] || (_cache[0] = ($event) => toggleColorMode()),
-        class: "rounded-full",
-        color: __props.color,
-        fab: true,
-        palette: __props.palette,
-        type: "button",
-        size: __props.size
-      }, {
-        default: withCtx(() => [
-          unref(icon) === "moon" ? (openBlock(), createElementBlock("svg", _hoisted_1$3, _hoisted_3)) : createCommentVNode("", true),
-          unref(icon) === "sun" ? (openBlock(), createElementBlock("svg", _hoisted_4, _hoisted_6)) : createCommentVNode("", true)
-        ]),
-        _: 1
-      }, 8, ["title", "color", "palette", "size"]);
-    };
   }
+});
+const _hoisted_1$3 = {
+  key: 0,
+  class: "h-5 w-5",
+  xmlns: "http://www.w3.org/2000/svg",
+  fill: "none",
+  viewBox: "0 0 24 24",
+  stroke: "currentColor",
+  "stroke-width": "2"
 };
-const _sfc_main$3 = {
-  __name: "VvEl",
+const _hoisted_2$2 = /* @__PURE__ */ createElementVNode("path", {
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  d: "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+}, null, -1);
+const _hoisted_3 = [
+  _hoisted_2$2
+];
+const _hoisted_4 = {
+  key: 1,
+  class: "h-5 w-5",
+  xmlns: "http://www.w3.org/2000/svg",
+  fill: "none",
+  viewBox: "0 0 24 24",
+  stroke: "currentColor",
+  "stroke-width": "2"
+};
+const _hoisted_5 = /* @__PURE__ */ createElementVNode("path", {
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  d: "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+}, null, -1);
+const _hoisted_6 = [
+  _hoisted_5
+];
+function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_VvButton = resolveComponent("VvButton");
+  return openBlock(), createBlock(_component_VvButton, {
+    title: _ctx.title,
+    onClick: _cache[0] || (_cache[0] = ($event) => _ctx.toggleColorMode($event)),
+    class: "rounded-full",
+    color: _ctx.color,
+    fab: true,
+    palette: _ctx.palette,
+    type: "button",
+    size: _ctx.size
+  }, {
+    default: withCtx(() => [
+      _ctx.icon === "moon" ? (openBlock(), createElementBlock("svg", _hoisted_1$3, _hoisted_3)) : createCommentVNode("", true),
+      _ctx.icon === "sun" ? (openBlock(), createElementBlock("svg", _hoisted_4, _hoisted_6)) : createCommentVNode("", true)
+    ]),
+    _: 1
+  }, 8, ["title", "color", "palette", "size"]);
+}
+var VvColorModeButton = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$4]]);
+const _sfc_main$3 = defineComponent({
+  name: "VvEl",
   props: {
     borderPalette: {
       type: String,
@@ -1197,8 +1213,7 @@ const _sfc_main$3 = {
       default: VvConfig.defaults.VvEl.textColor
     }
   },
-  setup(__props) {
-    const props = __props;
+  setup(props) {
     const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
     let classes = computed(() => {
       var _a, _b, _c, _d, _e, _f, _g, _h, _i;
@@ -1214,21 +1229,22 @@ const _sfc_main$3 = {
       }
       return output.join(" ").trim();
     });
-    return (_ctx, _cache) => {
-      return openBlock(), createBlock(resolveDynamicComponent(__props.tag), {
-        class: normalizeClass(unref(classes))
-      }, {
-        default: withCtx(() => [
-          renderSlot(_ctx.$slots, "default")
-        ]),
-        _: 3
-      }, 8, ["class"]);
-    };
+    return { classes };
   }
-};
-const _hoisted_1$2 = ["type"];
-const _sfc_main$2 = {
-  __name: "VvInput",
+});
+function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createBlock(resolveDynamicComponent(_ctx.tag), {
+    class: normalizeClass(_ctx.classes)
+  }, {
+    default: withCtx(() => [
+      renderSlot(_ctx.$slots, "default")
+    ]),
+    _: 3
+  }, 8, ["class"]);
+}
+var VvEl = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3]]);
+const _sfc_main$2 = defineComponent({
+  name: "VvEl",
   props: {
     color: {
       type: String,
@@ -1244,11 +1260,11 @@ const _sfc_main$2 = {
     },
     type: {
       type: String,
-      default: VvConfig.defaults.VvInput.type
+      default: VvConfig.defaults.VvInput.type,
+      validator: (prop) => ValidInputTypes.includes(prop)
     }
   },
-  setup(__props) {
-    const props = __props;
+  setup(props) {
     const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
     let classes = computed(() => {
       var _a, _b, _c, _d, _e, _f;
@@ -1264,41 +1280,41 @@ const _sfc_main$2 = {
       }
       return output.join(" ").trim();
     });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("input", {
-        type: __props.type,
-        class: normalizeClass(unref(classes))
-      }, null, 10, _hoisted_1$2);
-    };
+    return { classes };
   }
-};
+});
+const _hoisted_1$2 = ["type"];
+function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("input", {
+    type: _ctx.type,
+    class: normalizeClass(_ctx.classes)
+  }, null, 10, _hoisted_1$2);
+}
+var VvInput = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$2]]);
+const _sfc_main$1 = defineComponent({
+  name: "VueVentusLogoText",
+  props: {
+    colorClasses: {
+      type: String,
+      default: "w-full fill-gray-900 dark:fill-gray-100"
+    }
+  }
+});
 const _hoisted_1$1 = /* @__PURE__ */ createElementVNode("path", { d: "m6.5 0 51.9 121.1L110.3 0h6.7L61.6 129h-6.2L0 0h6.5zM181.2 124.4c8.2 0 15-1.5 20.4-4.6 5.4-3.1 9.7-7.1 12.8-12 3.1-5 5.3-10.6 6.6-16.9 1.3-6.3 1.9-12.7 1.9-19.2V14.2h5.5v57.5c0 7.7-.8 15-2.4 22-1.6 7-4.3 13.2-8 18.5-3.7 5.3-8.6 9.6-14.5 12.8-6 3.2-13.4 4.8-22.2 4.8-9.1 0-16.6-1.7-22.7-5-6.1-3.3-11-7.7-14.6-13.2-3.7-5.4-6.3-11.6-7.8-18.6-1.6-6.9-2.3-14-2.3-21.3V14.2h5.7v57.5c0 6.7.6 13.2 1.9 19.5 1.3 6.3 3.6 11.9 6.8 16.8 3.2 4.9 7.5 8.9 12.8 11.9 5.3 3 12 4.5 20.1 4.5zM333.6 123.8v5.2h-75.8V14.2h74.3v5.2h-68.7v48.3h60.1v5.2h-60.1v50.9h70.2zM351.3 0l51.9 121.1L455 0h6.7l-55.4 129h-6.2L344.7 0h6.6zM556.1 123.8v5.2h-75.8V14.2h74.3v5.2H486v48.3h60.1v5.2H486v50.9h70.1zM585.4 24.9V129h-5.7V14.2h4.2l84.4 105.9V14.2h5.7V129h-5.5L585.4 24.9zM784 19.4h-43V129h-5.7V19.4h-43v-5.2H784v5.2zM848 124.4c8.2 0 15-1.5 20.4-4.6 5.4-3.1 9.7-7.1 12.8-12 3.1-5 5.3-10.6 6.6-16.9 1.3-6.3 1.9-12.7 1.9-19.2V14.2h5.5v57.5c0 7.7-.8 15-2.4 22-1.6 7-4.3 13.2-8 18.5-3.7 5.3-8.6 9.6-14.5 12.8-6 3.2-13.4 4.8-22.2 4.8-9.1 0-16.6-1.7-22.7-5-6.1-3.3-11-7.7-14.6-13.2-3.7-5.4-6.3-11.6-7.8-18.6-1.6-6.9-2.3-14-2.3-21.3V14.2h5.7v57.5c0 6.7.6 13.2 1.9 19.5 1.3 6.3 3.6 11.9 6.8 16.8 3.2 4.9 7.5 8.9 12.8 11.9 5.3 3 12 4.5 20.1 4.5zM991.2 31.2c-4.2-4.6-8.8-7.9-13.9-9.8-5.1-1.9-11-2.8-17.8-2.8-12.2 0-21 2.3-26.5 6.9-5.5 4.6-8.2 10.8-8.2 18.6 0 3.9.7 7.1 2 9.8 1.3 2.6 3.4 4.9 6.2 6.7 2.8 1.8 6.4 3.4 10.8 4.6 4.4 1.2 9.7 2.5 15.8 3.8 6.2 1.3 11.9 2.7 17 4.2s9.4 3.4 12.9 5.7c3.6 2.3 6.3 5.2 8.2 8.6 1.9 3.4 2.9 7.7 2.9 12.8 0 4.8-.9 9.1-2.8 12.8-1.9 3.7-4.6 6.7-8.2 9.2-3.6 2.5-7.8 4.3-12.8 5.6-5 1.2-10.6 1.9-16.7 1.9-9.2 0-17.4-1.4-24.7-4.3-7.3-2.9-14.1-7.2-20.4-13.2l3.4-4c5.4 5.5 11.5 9.6 18.4 12.4 6.9 2.8 14.7 4.2 23.4 4.2 10.8 0 19.3-2 25.5-5.9 6.2-3.9 9.3-9.9 9.3-18 0-4.1-.8-7.6-2.3-10.4-1.5-2.9-3.8-5.3-6.9-7.3-3.1-2-7-3.7-11.6-5.2S964 75.3 957.6 74c-6.3-1.3-11.8-2.6-16.6-4-4.8-1.4-8.8-3.2-12.1-5.3-3.3-2.2-5.8-4.8-7.4-7.9-1.7-3.1-2.5-7.1-2.5-11.8 0-5.1 1-9.6 2.9-13.5 1.9-3.9 4.7-7.2 8.2-9.9 3.5-2.6 7.7-4.7 12.7-6.1 5-1.4 10.4-2.1 16.5-2.1 7.4 0 14 1.1 19.6 3.2 5.6 2.2 10.7 5.6 15.4 10.3l-3.1 4.3z" }, null, -1);
 const _hoisted_2$1 = [
   _hoisted_1$1
 ];
-const _sfc_main$1 = {
-  __name: "VueVentusLogoText",
-  props: {
-    class: {
-      type: String,
-      default: "w-full fill-gray-900 dark:fill-gray-100"
-    }
-  },
-  setup(__props) {
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("svg", {
-        class: normalizeClass(__props.class),
-        xmlns: "http://www.w3.org/2000/svg",
-        viewBox: "0 0 1000 129",
-        "xml:space": "preserve"
-      }, _hoisted_2$1, 2);
-    };
-  }
-};
-const _hoisted_1 = ["fill"];
-const _hoisted_2 = ["fill"];
-const _sfc_main = {
-  __name: "VueVentusSpinningMark",
+function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("svg", {
+    class: normalizeClass(_ctx.colorClasses),
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 1000 129",
+    "xml:space": "preserve"
+  }, _hoisted_2$1, 2);
+}
+var VueVentusLogoText = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1]]);
+const _sfc_main = defineComponent({
+  name: "VueVentusSpinningMark",
   props: {
     animationClass: {
       type: String,
@@ -1317,31 +1333,34 @@ const _sfc_main = {
       default: "#2298bd"
     }
   },
-  setup(__props) {
-    const props = __props;
+  setup(props) {
     const classes = computed(() => props.enableAnimation ? props.animationClass : "");
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("svg", {
-        class: normalizeClass(unref(classes)),
-        version: "1.1",
-        xmlns: "http://www.w3.org/2000/svg",
-        x: "0",
-        y: "0",
-        viewBox: "0 0 1000 1000",
-        "xml:space": "preserve"
-      }, [
-        createElementVNode("path", {
-          fill: __props.fillOne,
-          d: "M210.3 237.6c0-61.4 19.2-118.5 51.8-165.4C88.8 152.1-84.2 466.7 81 657c134.5 134.8 363 48.8 386.2-131.2-66.9-7.6-126.8-37.9-172-83.1-52.4-52.4-84.9-125-84.9-205.1zM919.7 336c-134.5-134.8-363-48.8-386.2 131.2 66.9 7.6 126.8 37.9 172 83.1 52.5 52.5 85 125 85 205.1 0 61.4-19.2 118.5-51.8 165.4 173.2-79.9 346.3-394.6 181-584.8z"
-        }, null, 8, _hoisted_1),
-        createElementVNode("g", null, [
-          createElementVNode("path", {
-            fill: __props.fillTwo,
-            d: "M529.7 529.6C505.2 745.2 253.8 858.5 76.1 734.7c38.9 115.6 205.6 246 371.4 255.6 161.6 9.4 309.9-110.9 268.4-282.5-21.1-87.5-88.6-165.6-186.2-178.2zM339.8 77.1C205 211.6 291 440.2 471 463.4c7.6-66.9 37.9-126.8 83.1-172 52.5-52.5 125-85 205.1-85 61.4 0 118.5 19.2 165.4 51.8C844.8 84.9 530.1-88.1 339.8 77.1z"
-          }, null, 8, _hoisted_2)
-        ])
-      ], 2);
-    };
+    return { classes };
   }
-};
-export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, InputValidation, Inputs, Text, TextDefault, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, _sfc_main$1 as VueVentusLogoText, _sfc_main as VueVentusSpinningMark, _sfc_main$6 as VvAnchor, _sfc_main$5 as VvButton, _sfc_main$4 as VvColorModeButton, VvConfig, _sfc_main$3 as VvEl, _sfc_main$2 as VvInput, camelCaseToTitleCase, digitsOnly, formatBytes, formatMediaTime, formatNumber, mergeWithVvConfig, randomString, slugifyString, stringToCamelCase, stringToFilename, uniqueArray };
+});
+const _hoisted_1 = ["fill"];
+const _hoisted_2 = ["fill"];
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("svg", {
+    class: normalizeClass(_ctx.classes),
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    x: "0",
+    y: "0",
+    viewBox: "0 0 1000 1000",
+    "xml:space": "preserve"
+  }, [
+    createElementVNode("path", {
+      fill: _ctx.fillOne,
+      d: "M210.3 237.6c0-61.4 19.2-118.5 51.8-165.4C88.8 152.1-84.2 466.7 81 657c134.5 134.8 363 48.8 386.2-131.2-66.9-7.6-126.8-37.9-172-83.1-52.4-52.4-84.9-125-84.9-205.1zM919.7 336c-134.5-134.8-363-48.8-386.2 131.2 66.9 7.6 126.8 37.9 172 83.1 52.5 52.5 85 125 85 205.1 0 61.4-19.2 118.5-51.8 165.4 173.2-79.9 346.3-394.6 181-584.8z"
+    }, null, 8, _hoisted_1),
+    createElementVNode("g", null, [
+      createElementVNode("path", {
+        fill: _ctx.fillTwo,
+        d: "M529.7 529.6C505.2 745.2 253.8 858.5 76.1 734.7c38.9 115.6 205.6 246 371.4 255.6 161.6 9.4 309.9-110.9 268.4-282.5-21.1-87.5-88.6-165.6-186.2-178.2zM339.8 77.1C205 211.6 291 440.2 471 463.4c7.6-66.9 37.9-126.8 83.1-172 52.5-52.5 125-85 205.1-85 61.4 0 118.5 19.2 165.4 51.8C844.8 84.9 530.1-88.1 339.8 77.1z"
+      }, null, 8, _hoisted_2)
+    ])
+  ], 2);
+}
+var VueVentusSpinningMark = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
+export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, InputValidation, Inputs, Text, TextDefault, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, VueVentusLogoText, VueVentusSpinningMark, VvAnchor, VvButton, VvColorModeButton, VvConfig, VvEl, VvInput, camelCaseToTitleCase, digitsOnly, formatBytes, formatMediaTime, formatNumber, mergeWithVvConfig, randomString, slugifyString, stringToCamelCase, stringToFilename, uniqueArray };

@@ -1,12 +1,11 @@
 <!-- ./src/views/configs/palettes/BorderDefaultPage.vue -->
 
-<script setup>
+<script setup lang="ts">
 
-    import { inject } from 'vue'
-    import { BorderDefault } from '@/index'
+    import globals from '../../../globals'
+    import BorderDefault from '../../../configs/palettes/BorderDefault'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
 
-    const globals = inject('globals')
     const tw = globals.classes
 
 </script>
