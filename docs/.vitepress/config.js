@@ -135,10 +135,10 @@ function sidebarModules() {
                 { text: 'Component Modules', link: '/modules/' },
             ]
         },{
-            text: 'Tailwind Modules',
+            text: 'Tailwind Data Modules',
             collapsible: true,
             items: [
-                { text: 'Tailwind Modules', link: '/modules/data/' },
+                { text: 'Tailwind Data Modules', link: '/modules/data/' },
                 { text: 'Theme Extenders', link: '/modules/data/theme-extenders' },
                 { text: 'Theme Overrides', link: '/modules/data/theme-overrides' },
                 { text: 'App Color Data', link: '/modules/data/app-color-data' },
