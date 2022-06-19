@@ -17,7 +17,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     color: {
         type: StringConstructor;
-        default: string | import("../../types/DefaultPaletteColors.js").DefaultPaletteColors;
+        default: string | import("../../index.js").DefaultPaletteColors;
     };
     external: {
         type: BooleanConstructor;
@@ -52,7 +52,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     color: {
         type: StringConstructor;
-        default: string | import("../../types/DefaultPaletteColors.js").DefaultPaletteColors;
+        default: string | import("../../index.js").DefaultPaletteColors;
     };
     external: {
         type: BooleanConstructor;

@@ -2,7 +2,7 @@ import ValidInputTypes from '../../validators/ValidInputTypes';
 declare const _default: import("vue").DefineComponent<{
     color: {
         type: StringConstructor;
-        default: string | import("../../types/ValidationInputPaletteColors").ValidationInputPaletteColors;
+        default: string | import("../..").ValidationInputPaletteColors;
     };
     palette: {
         type: StringConstructor;
@@ -22,7 +22,7 @@ declare const _default: import("vue").DefineComponent<{
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     color: {
         type: StringConstructor;
-        default: string | import("../../types/ValidationInputPaletteColors").ValidationInputPaletteColors;
+        default: string | import("../..").ValidationInputPaletteColors;
     };
     palette: {
         type: StringConstructor;

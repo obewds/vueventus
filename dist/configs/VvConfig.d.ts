@@ -1,27 +1,27 @@
 declare const _default: {
     anchors: {
         palettes: {
-            default: import("../types/DefaultConfigPalette.js").DefaultConfigPalette;
+            default: import("../index.js").DefaultConfigPalette;
         };
         cursor: string | undefined;
         display: string | undefined;
         focus: string | undefined;
         text: string | undefined;
         transition: string | undefined;
-        base: import("../types/BaseFunction.js").BaseFunction;
-        sizes: import("../types/TextSizes.js").TextSizes;
-        getSizeClasses: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
-        classes: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
+        base: import("../index.js").BaseFunction;
+        sizes: import("../index.js").TextSizes;
+        getSizeClasses: import("../index.js").ReturnsClassesFunction;
+        classes: import("../index.js").ReturnsClassesFunction;
     };
     borders: {
         palettes: {
-            default: import("../types/DefaultConfigPalette.js").DefaultConfigPalette;
+            default: import("../index.js").DefaultConfigPalette;
         };
     };
     buttons: {
         palettes: {
-            outline: import("../types/DefaultConfigPalette.js").DefaultConfigPalette;
-            solid: import("../types/DefaultConfigPalette.js").DefaultConfigPalette;
+            outline: import("../index.js").DefaultConfigPalette;
+            solid: import("../index.js").DefaultConfigPalette;
         };
         border: string | undefined;
         cursor: string | undefined;
@@ -30,24 +30,24 @@ declare const _default: {
         focus: string | undefined;
         text: string | undefined;
         transition: string | undefined;
-        base: import("../types/BaseFunction.js").BaseFunction;
-        sizes: import("../types/ButtonsSizes.js").ButtonsSizes;
-        getSizeClasses: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
-        classes: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
+        base: import("../index.js").BaseFunction;
+        sizes: import("../index.js").ButtonsSizes;
+        getSizeClasses: import("../index.js").ReturnsClassesFunction;
+        classes: import("../index.js").ReturnsClassesFunction;
         blockDisplay: string | undefined;
-        blockBase: import("../types/BaseFunction.js").BaseFunction;
-        blockSizes: import("../types/ButtonsSizes.js").ButtonsSizes;
-        getBlockSizeClasses: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
-        blockClasses: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
+        blockBase: import("../index.js").BaseFunction;
+        blockSizes: import("../index.js").ButtonsSizes;
+        getBlockSizeClasses: import("../index.js").ReturnsClassesFunction;
+        blockClasses: import("../index.js").ReturnsClassesFunction;
         fabDisplay: string | undefined;
-        fabBase: import("../types/BaseFunction.js").BaseFunction;
-        fabSizes: import("../types/ButtonsSizes.js").ButtonsSizes;
-        getFabSizeClasses: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
-        fabClasses: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
+        fabBase: import("../index.js").BaseFunction;
+        fabSizes: import("../index.js").ButtonsSizes;
+        getFabSizeClasses: import("../index.js").ReturnsClassesFunction;
+        fabClasses: import("../index.js").ReturnsClassesFunction;
     };
     inputs: {
         palettes: {
-            validation: import("../types/ValidationInputPaletteColors.js").ValidationInputPaletteColors;
+            validation: import("../index.js").ValidationInputPaletteColors;
         };
         border: string | undefined;
         display: string | undefined;
@@ -56,10 +56,10 @@ declare const _default: {
         ring: string | undefined;
         text: string | undefined;
         transition: string | undefined;
-        base: import("../types/BaseFunction.js").BaseFunction;
-        sizes: import("../types/InputsSizes.js").InputsSizes;
-        getSizeClasses: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
-        classes: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
+        base: import("../index.js").BaseFunction;
+        sizes: import("../index.js").InputsSizes;
+        getSizeClasses: import("../index.js").ReturnsClassesFunction;
+        classes: import("../index.js").ReturnsClassesFunction;
     };
     colorMode: {
         dark: {
@@ -79,15 +79,15 @@ declare const _default: {
     };
     grounds: {
         palettes: {
-            console: import("../types/DefaultConfigPalette.js").DefaultConfigPalette;
-            default: import("../types/DefaultConfigPalette.js").DefaultConfigPalette;
-            monochromatic: import("../types/DefaultConfigPalette.js").DefaultConfigPalette;
-            pastel: import("../types/DefaultConfigPalette.js").DefaultConfigPalette;
+            console: import("../index.js").DefaultConfigPalette;
+            default: import("../index.js").DefaultConfigPalette;
+            monochromatic: import("../index.js").DefaultConfigPalette;
+            pastel: import("../index.js").DefaultConfigPalette;
         };
     };
     text: {
         palettes: {
-            default: import("../types/DefaultConfigPalette.js").DefaultConfigPalette;
+            default: import("../index.js").DefaultConfigPalette;
         };
         align: string | undefined;
         decoration: string | undefined;
@@ -97,22 +97,22 @@ declare const _default: {
         spacing: string | undefined;
         weight: string | undefined;
         wordBreak: string | undefined;
-        base: import("../types/BaseFunction.js").BaseFunction;
-        sizes: import("../types/TextSizes.js").TextSizes;
-        getSizeClasses: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
-        classes: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
+        base: import("../index.js").BaseFunction;
+        sizes: import("../index.js").TextSizes;
+        getSizeClasses: import("../index.js").ReturnsClassesFunction;
+        classes: import("../index.js").ReturnsClassesFunction;
     };
     transitions: {
         [x: string]: any;
-        durations: import("../types/TransitionsDurations.js").TransitionsDurations;
-        easings: import("../types/TransitionsEasings.js").TransitionsEasings;
-        transitions: import("../types/TransitionsTransitions.js").TransitionsTransitions;
-        classes: import("../types/TransitionsClasses.js").TransitionsClasses;
-        custom: import("../types/TransitionsCustom.js").TransitionsCustom;
-        getDurationClasses: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
-        getEasingClasses: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
-        getTransitionClasses: import("../types/ReturnsClassesFunction.js").ReturnsClassesFunction;
+        durations: import("../index.js").TransitionsDurations;
+        easings: import("../index.js").TransitionsEasings;
+        transitions: import("../index.js").TransitionsTransitions;
+        classes: import("../index.js").TransitionsClasses;
+        custom: import("../index.js").TransitionsCustom;
+        getDurationClasses: import("../index.js").ReturnsClassesFunction;
+        getEasingClasses: import("../index.js").ReturnsClassesFunction;
+        getTransitionClasses: import("../index.js").ReturnsClassesFunction;
     };
-    defaults: import("../types/ConfigDefaults.js").ConfigDefaults;
+    defaults: import("../index.js").ConfigDefaults;
 };
 export default _default;

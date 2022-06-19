@@ -31,6 +31,54 @@ export { default as stringToCamelCase } from './helpers/stringToCamelCase'
 export { default as stringToFilename } from './helpers/stringToFilename'
 export { default as uniqueArray } from './helpers/uniqueArray'
 
+// .src/types
+import type { BaseFunction } from './types/BaseFunction'
+export type { BaseFunction }
+import type { ButtonsSizes } from './types/ButtonsSizes'
+export type { ButtonsSizes }
+import type { ConfigAnchors } from './types/ConfigAnchors'
+export type { ConfigAnchors }
+import type { ConfigBorders } from './types/ConfigBorders'
+export type { ConfigBorders }
+import type { ConfigButtons } from './types/ConfigButtons'
+export type { ConfigButtons }
+import type { ConfigColorMode } from './types/ConfigColorMode'
+export type { ConfigColorMode }
+import type { ConfigDefaults } from './types/ConfigDefaults'
+export type { ConfigDefaults }
+import type { ConfigGrounds } from './types/ConfigGrounds'
+export type { ConfigGrounds }
+import type { ConfigInputs } from './types/ConfigInputs'
+export type { ConfigInputs }
+import type { ConfigTransitions } from './types/ConfigTransitions'
+export type { ConfigTransitions }
+import type { ConfigVv } from './types/ConfigVv'
+export type { ConfigVv }
+import type { DefaultConfigPalette } from './types/DefaultConfigPalette'
+export type { DefaultConfigPalette }
+import type { DefaultPaletteColors } from './types/DefaultPaletteColors'
+export type { DefaultPaletteColors }
+import type { InputsSizes } from './types/InputsSizes'
+export type { InputsSizes }
+import type { ReturnsClassesFunction } from './types/ReturnsClassesFunction'
+export type { ReturnsClassesFunction }
+import type { TextSizes } from './types/TextSizes'
+export type { TextSizes }
+import type { TransitionsClasses } from './types/TransitionsClasses'
+export type { TransitionsClasses }
+import type { TransitionsCustom } from './types/TransitionsCustom'
+export type { TransitionsCustom }
+import type { TransitionsCustomOptions } from './types/TransitionsCustomOptions'
+export type { TransitionsCustomOptions }
+import type { TransitionsDurations } from './types/TransitionsDurations'
+export type { TransitionsDurations }
+import type { TransitionsEasings } from './types/TransitionsEasings'
+export type { TransitionsEasings }
+import type { TransitionsTransitions } from './types/TransitionsTransitions'
+export type { TransitionsTransitions }
+import type { ValidationInputPaletteColors } from './types/ValidationInputPaletteColors'
+export type { ValidationInputPaletteColors }
+
 // .src/validators
 export { default as ValidAudioSourceTypes } from './validators/ValidAudioSourceTypes'
 export { default as ValidButtonTypes } from './validators/ValidButtonTypes'
