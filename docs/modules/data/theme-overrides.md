@@ -22,9 +22,9 @@ VueVentus {{ $frontmatter.title }} are simple and static JSON object data files 
 
 
 
-## theme.fontSize
+## theme.fontSize.json
 
-The `theme.fontSize` data module overrides a Tailwind config object's `theme.fontSize` values with the data below:
+The `theme.fontSize.json` data module overrides a Tailwind config object's `theme.fontSize` values with the data below:
 
 <<< @/../src/data/theme.fontSize.json
 
@@ -32,9 +32,9 @@ The `theme.fontSize` data module overrides a Tailwind config object's `theme.fon
 
 
 
-## theme.listStyleType
+## theme.listStyleType.json
 
-The `theme.listStyleType` data module overrides a Tailwind config object's `theme.listStyleType` values with the data below:
+The `theme.listStyleType.json` data module overrides a Tailwind config object's `theme.listStyleType` values with the data below:
 
 <<< @/../src/data/theme.listStyleType.json
 
@@ -42,9 +42,9 @@ The `theme.listStyleType` data module overrides a Tailwind config object's `them
 
 
 
-## theme.opacity
+## theme.opacity.json
 
-The `theme.opacity` data module overrides a Tailwind config object's `theme.opacity` values with the data below:
+The `theme.opacity.json` data module overrides a Tailwind config object's `theme.opacity` values with the data below:
 
 <<< @/../src/data/theme.opacity.json
 
@@ -52,9 +52,9 @@ The `theme.opacity` data module overrides a Tailwind config object's `theme.opac
 
 
 
-## theme.screens
+## theme.screens.json
 
-The `theme.screens` data module overrides a Tailwind config object's `theme.screens` values with the data below:
+The `theme.screens.json` data module overrides a Tailwind config object's `theme.screens` values with the data below:
 
 <<< @/../src/data/theme.screens.json
 

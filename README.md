@@ -1,6 +1,6 @@
 # VueVentus
 
-An aesthetics focused design system component library for Vue.js, Tailwind CSS, and Typescript projects
+Aesthetically flexible components for modern Vue.js, Tailwind CSS, and Typescript apps.
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/obewds/vueventus?label=Github&logo=github&style=for-the-badge) &nbsp; ![npm](https://img.shields.io/npm/v/@obewds/vueventus?color=%23cc3534&logo=npm&style=for-the-badge)
 
