@@ -29,7 +29,7 @@ import { mergeWithVvConfig } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import mergeWithVvConfig from '@obewds/vueventus/mergeWithVvConfig'
+import mergeWithVvConfig from '@obewds/vueventus/dist/helpers/mergeWithVvConfig.js'
 ```
 
 

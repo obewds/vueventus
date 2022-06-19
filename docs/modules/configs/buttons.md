@@ -29,7 +29,7 @@ import { Buttons } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import Buttons from '@obewds/vueventus/Buttons'
+import Buttons from '@obewds/vueventus/dist/configs/Buttons.js'
 ```
 
 

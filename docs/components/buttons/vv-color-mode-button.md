@@ -76,7 +76,7 @@ import { VvColorModeButton } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} SFC directly:
 
 ```javascript
-import VvColorModeButton from '@obewds/vueventus/VvColorModeButton'
+import VvColorModeButton from '@obewds/vueventus/dist/components/buttons/VvColorModeButton.vue'
 ```
 
 

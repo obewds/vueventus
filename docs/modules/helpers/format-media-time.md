@@ -29,7 +29,7 @@ import { formatMediaTime } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import formatMediaTime from '@obewds/vueventus/formatMediaTime'
+import formatMediaTime from '@obewds/vueventus/dist/helpers/formatMediaTime.js'
 ```
 
 

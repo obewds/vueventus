@@ -30,7 +30,7 @@ import { GroundDefault } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import GroundDefault from '@obewds/vueventus/GroundDefault'
+import GroundDefault from '@obewds/vueventus/dist/configs/palettes/GroundDefault.js'
 ```
 
 

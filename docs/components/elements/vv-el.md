@@ -29,7 +29,7 @@ import { VvEl } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} SFC directly:
 
 ```javascript
-import VvEl from '@obewds/vueventus/VvEl'
+import VvEl from '@obewds/vueventus/dist/components/elements/VvEl.vue'
 ```
 
 

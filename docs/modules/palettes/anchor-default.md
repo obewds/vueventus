@@ -32,7 +32,7 @@ import { AnchorDefault } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import AnchorDefault from '@obewds/vueventus/AnchorDefault'
+import AnchorDefault from '@obewds/vueventus/dist/configs/palettes/AnchorDefault.js'
 ```
 
 

@@ -31,7 +31,7 @@ import { digitsOnly } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import digitsOnly from '@obewds/vueventus/digitsOnly'
+import digitsOnly from '@obewds/vueventus/dist/helpers/digitsOnly.js'
 ```
 
 

@@ -30,7 +30,7 @@ import { uniqueArray } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import uniqueArray from '@obewds/vueventus/uniqueArray'
+import uniqueArray from '@obewds/vueventus/dist/helpers/uniqueArray.js'
 ```
 
 

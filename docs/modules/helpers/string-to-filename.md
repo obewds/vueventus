@@ -30,7 +30,7 @@ import { stringToFilename } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import stringToFilename from '@obewds/vueventus/stringToFilename'
+import stringToFilename from '@obewds/vueventus/dist/helpers/stringToFilename.js'
 ```
 
 

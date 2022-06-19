@@ -36,7 +36,7 @@ import { VvAnchor } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} SFC directly:
 
 ```javascript
-import VvAnchor from '@obewds/vueventus/VvAnchor'
+import VvAnchor from '@obewds/vueventus/dist/components/anchors/VvAnchor.vue'
 ```
 
 

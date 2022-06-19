@@ -30,7 +30,7 @@ import { randomString } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import randomString from '@obewds/vueventus/randomString'
+import randomString from '@obewds/vueventus/dist/helpers/randomString.js'
 ```
 
 

@@ -33,7 +33,7 @@ import { ButtonOutline } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import ButtonOutline from '@obewds/vueventus/ButtonOutline'
+import ButtonOutline from '@obewds/vueventus/dist/configs/palettes/ButtonOutline.js'
 ```
 
 

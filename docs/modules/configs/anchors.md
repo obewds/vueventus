@@ -32,7 +32,7 @@ import { Anchors } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import Anchors from '@obewds/vueventus/Anchors'
+import Anchors from '@obewds/vueventus/dist/configs/Anchors.js'
 ```
 
 
