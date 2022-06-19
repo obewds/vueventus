@@ -30,7 +30,7 @@ import { GroundPastel } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import GroundPastel from '@obewds/vueventus/GroundPastel'
+import GroundPastel from '@obewds/vueventus/dist/configs/palettes/GroundPastel.js'
 ```
 
 

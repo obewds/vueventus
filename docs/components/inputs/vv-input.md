@@ -28,7 +28,7 @@ import { VvInput } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} SFC directly:
 
 ```javascript
-import VvInput from '@obewds/vueventus/VvInput'
+import VvInput from '@obewds/vueventus/dist/components/inputs/VvInput.vue'
 ```
 
 

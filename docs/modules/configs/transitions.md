@@ -32,7 +32,7 @@ import { Transitions } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import Transitions from '@obewds/vueventus/Transitions'
+import Transitions from '@obewds/vueventus/dist/configs/Transitions.js'
 ```
 
 

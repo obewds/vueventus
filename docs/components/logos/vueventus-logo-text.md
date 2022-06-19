@@ -28,7 +28,7 @@ import { VueVentusLogoText } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} SFC directly:
 
 ```javascript
-import VueVentusLogoText from '@obewds/vueventus/VueVentusLogoText'
+import VueVentusLogoText from '@obewds/vueventus/dist/components/logos/VueVentusLogoText.vue'
 ```
 
 

@@ -29,7 +29,7 @@ import { formatBytes } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import formatBytes from '@obewds/vueventus/formatBytes'
+import formatBytes from '@obewds/vueventus/dist/helpers/formatBytes.js'
 ```
 
 

@@ -35,7 +35,7 @@ import { Text } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import Text from '@obewds/vueventus/Text'
+import Text from '@obewds/vueventus/dist/configs/Text.js'
 ```
 
 

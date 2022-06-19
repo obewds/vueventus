@@ -30,7 +30,7 @@ import { GroundMonochromatic } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import GroundMonochromatic from '@obewds/vueventus/GroundMonochromatic'
+import GroundMonochromatic from '@obewds/vueventus/dist/configs/palettes/GroundMonochromatic.js'
 ```
 
 

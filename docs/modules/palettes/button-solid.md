@@ -33,7 +33,7 @@ import { ButtonSolid } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import ButtonSolid from '@obewds/vueventus/ButtonSolid'
+import ButtonSolid from '@obewds/vueventus/dist/configs/palettes/ButtonSolid.js'
 ```
 
 

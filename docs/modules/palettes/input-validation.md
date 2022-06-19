@@ -30,7 +30,7 @@ import { InputValidation } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import InputValidation from '@obewds/vueventus/InputValidation'
+import InputValidation from '@obewds/vueventus/dist/configs/palettes/InputValidation.js'
 ```
 
 

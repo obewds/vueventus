@@ -30,7 +30,7 @@ import { GroundConsole } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import GroundConsole from '@obewds/vueventus/GroundConsole'
+import GroundConsole from '@obewds/vueventus/dist/configs/palettes/GroundConsole.js'
 ```
 
 

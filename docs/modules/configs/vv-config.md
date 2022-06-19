@@ -32,7 +32,7 @@ import { VvConfig } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import VvConfig from '@obewds/vueventus/VvConfig'
+import VvConfig from '@obewds/vueventus/dist/configs/VvConfig.js'
 ```
 
 

@@ -30,7 +30,7 @@ import { stringToCamelCase } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import stringToCamelCase from '@obewds/vueventus/stringToCamelCase'
+import stringToCamelCase from '@obewds/vueventus/dist/helpers/stringToCamelCase.js'
 ```
 
 

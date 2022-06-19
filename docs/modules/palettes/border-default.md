@@ -32,7 +32,7 @@ import { BorderDefault } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import BorderDefault from '@obewds/vueventus/BorderDefault'
+import BorderDefault from '@obewds/vueventus/dist/configs/palettes/BorderDefault.js'
 ```
 
 

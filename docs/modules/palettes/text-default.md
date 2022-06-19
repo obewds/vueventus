@@ -30,7 +30,7 @@ import { TextDefault } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import TextDefault from '@obewds/vueventus/TextDefault'
+import TextDefault from '@obewds/vueventus/dist/configs/palettes/TextDefault.js'
 ```
 
 

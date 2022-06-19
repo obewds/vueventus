@@ -28,7 +28,7 @@ import { VueVentusSpinningMark } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} SFC directly:
 
 ```javascript
-import VueVentusSpinningMark from '@obewds/vueventus/VueVentusSpinningMark'
+import VueVentusSpinningMark from '@obewds/vueventus/dist/components/logos/VueVentusSpinningMark.vue'
 ```
 
 

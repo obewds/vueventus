@@ -28,7 +28,7 @@ import { VvButton } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} SFC directly:
 
 ```javascript
-import VvButton from '@obewds/vueventus/VvButton'
+import VvButton from '@obewds/vueventus/dist/components/buttons/VvButton.vue'
 ```
 
 

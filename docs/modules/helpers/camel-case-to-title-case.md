@@ -29,7 +29,7 @@ import { camelCaseToTitleCase } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import camelCaseToTitleCase from '@obewds/vueventus/camelCaseToTitleCase'
+import camelCaseToTitleCase from '@obewds/vueventus/dist/helpers/camelCaseToTitleCase.js'
 ```
 
 

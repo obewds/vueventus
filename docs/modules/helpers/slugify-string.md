@@ -30,7 +30,7 @@ import { slugifyString } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import slugifyString from '@obewds/vueventus/slugifyString'
+import slugifyString from '@obewds/vueventus/dist/helpers/slugifyString.js'
 ```
 
 

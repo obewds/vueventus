@@ -32,7 +32,7 @@ import { Inputs } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import Inputs from '@obewds/vueventus/Inputs'
+import Inputs from '@obewds/vueventus/dist/configs/Inputs.js'
 ```
 
 

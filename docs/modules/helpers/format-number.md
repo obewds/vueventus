@@ -30,7 +30,7 @@ import { formatNumber } from '@obewds/vueventus'
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import formatNumber from '@obewds/vueventus/formatNumber'
+import formatNumber from '@obewds/vueventus/dist/helpers/formatNumber.js'
 ```
 
 
