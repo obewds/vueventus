@@ -6,7 +6,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     color: {
         type: StringConstructor;
-        default: string | import("../../types/DefaultPaletteColors").DefaultPaletteColors;
+        default: string | import("../..").DefaultPaletteColors;
     };
     fab: {
         type: BooleanConstructor;
@@ -35,7 +35,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     color: {
         type: StringConstructor;
-        default: string | import("../../types/DefaultPaletteColors").DefaultPaletteColors;
+        default: string | import("../..").DefaultPaletteColors;
     };
     fab: {
         type: BooleanConstructor;

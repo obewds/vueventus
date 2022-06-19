@@ -7,7 +7,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     color: {
         type: StringConstructor;
-        default: string | import("../../types/DefaultPaletteColors").DefaultPaletteColors;
+        default: string | import("../..").DefaultPaletteColors;
     };
     palette: {
         type: StringConstructor;
@@ -63,7 +63,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     color: {
         type: StringConstructor;
-        default: string | import("../../types/DefaultPaletteColors").DefaultPaletteColors;
+        default: string | import("../..").DefaultPaletteColors;
     };
     palette: {
         type: StringConstructor;

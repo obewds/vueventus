@@ -2,27 +2,27 @@ import VvConfig from '../configs/VvConfig';
 export default function (appTwConfig: typeof VvConfig): {
     anchors: {
         palettes: {
-            default: import("../types/DefaultConfigPalette").DefaultConfigPalette;
+            default: import("..").DefaultConfigPalette;
         };
         cursor: string | undefined;
         display: string | undefined;
         focus: string | undefined;
         text: string | undefined;
         transition: string | undefined;
-        base: import("../types/BaseFunction").BaseFunction;
-        sizes: import("../types/TextSizes").TextSizes;
-        getSizeClasses: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
-        classes: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
+        base: import("..").BaseFunction;
+        sizes: import("..").TextSizes;
+        getSizeClasses: import("..").ReturnsClassesFunction;
+        classes: import("..").ReturnsClassesFunction;
     };
     borders: {
         palettes: {
-            default: import("../types/DefaultConfigPalette").DefaultConfigPalette;
+            default: import("..").DefaultConfigPalette;
         };
     };
     buttons: {
         palettes: {
-            outline: import("../types/DefaultConfigPalette").DefaultConfigPalette;
-            solid: import("../types/DefaultConfigPalette").DefaultConfigPalette;
+            outline: import("..").DefaultConfigPalette;
+            solid: import("..").DefaultConfigPalette;
         };
         border: string | undefined;
         cursor: string | undefined;
@@ -31,24 +31,24 @@ export default function (appTwConfig: typeof VvConfig): {
         focus: string | undefined;
         text: string | undefined;
         transition: string | undefined;
-        base: import("../types/BaseFunction").BaseFunction;
-        sizes: import("../types/ButtonsSizes").ButtonsSizes;
-        getSizeClasses: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
-        classes: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
+        base: import("..").BaseFunction;
+        sizes: import("..").ButtonsSizes;
+        getSizeClasses: import("..").ReturnsClassesFunction;
+        classes: import("..").ReturnsClassesFunction;
         blockDisplay: string | undefined;
-        blockBase: import("../types/BaseFunction").BaseFunction;
-        blockSizes: import("../types/ButtonsSizes").ButtonsSizes;
-        getBlockSizeClasses: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
-        blockClasses: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
+        blockBase: import("..").BaseFunction;
+        blockSizes: import("..").ButtonsSizes;
+        getBlockSizeClasses: import("..").ReturnsClassesFunction;
+        blockClasses: import("..").ReturnsClassesFunction;
         fabDisplay: string | undefined;
-        fabBase: import("../types/BaseFunction").BaseFunction;
-        fabSizes: import("../types/ButtonsSizes").ButtonsSizes;
-        getFabSizeClasses: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
-        fabClasses: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
+        fabBase: import("..").BaseFunction;
+        fabSizes: import("..").ButtonsSizes;
+        getFabSizeClasses: import("..").ReturnsClassesFunction;
+        fabClasses: import("..").ReturnsClassesFunction;
     };
     inputs: {
         palettes: {
-            validation: import("../types/ValidationInputPaletteColors").ValidationInputPaletteColors;
+            validation: import("..").ValidationInputPaletteColors;
         };
         border: string | undefined;
         display: string | undefined;
@@ -57,10 +57,10 @@ export default function (appTwConfig: typeof VvConfig): {
         ring: string | undefined;
         text: string | undefined;
         transition: string | undefined;
-        base: import("../types/BaseFunction").BaseFunction;
-        sizes: import("../types/InputsSizes").InputsSizes;
-        getSizeClasses: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
-        classes: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
+        base: import("..").BaseFunction;
+        sizes: import("..").InputsSizes;
+        getSizeClasses: import("..").ReturnsClassesFunction;
+        classes: import("..").ReturnsClassesFunction;
     };
     colorMode: {
         dark: {
@@ -80,15 +80,15 @@ export default function (appTwConfig: typeof VvConfig): {
     };
     grounds: {
         palettes: {
-            console: import("../types/DefaultConfigPalette").DefaultConfigPalette;
-            default: import("../types/DefaultConfigPalette").DefaultConfigPalette;
-            monochromatic: import("../types/DefaultConfigPalette").DefaultConfigPalette;
-            pastel: import("../types/DefaultConfigPalette").DefaultConfigPalette;
+            console: import("..").DefaultConfigPalette;
+            default: import("..").DefaultConfigPalette;
+            monochromatic: import("..").DefaultConfigPalette;
+            pastel: import("..").DefaultConfigPalette;
         };
     };
     text: {
         palettes: {
-            default: import("../types/DefaultConfigPalette").DefaultConfigPalette;
+            default: import("..").DefaultConfigPalette;
         };
         align: string | undefined;
         decoration: string | undefined;
@@ -98,21 +98,21 @@ export default function (appTwConfig: typeof VvConfig): {
         spacing: string | undefined;
         weight: string | undefined;
         wordBreak: string | undefined;
-        base: import("../types/BaseFunction").BaseFunction;
-        sizes: import("../types/TextSizes").TextSizes;
-        getSizeClasses: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
-        classes: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
+        base: import("..").BaseFunction;
+        sizes: import("..").TextSizes;
+        getSizeClasses: import("..").ReturnsClassesFunction;
+        classes: import("..").ReturnsClassesFunction;
     };
     transitions: {
         [x: string]: any;
-        durations: import("../types/TransitionsDurations").TransitionsDurations;
-        easings: import("../types/TransitionsEasings").TransitionsEasings;
-        transitions: import("../types/TransitionsTransitions").TransitionsTransitions;
-        classes: import("../types/TransitionsClasses").TransitionsClasses;
-        custom: import("../types/TransitionsCustom").TransitionsCustom;
-        getDurationClasses: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
-        getEasingClasses: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
-        getTransitionClasses: import("../types/ReturnsClassesFunction").ReturnsClassesFunction;
+        durations: import("..").TransitionsDurations;
+        easings: import("..").TransitionsEasings;
+        transitions: import("..").TransitionsTransitions;
+        classes: import("..").TransitionsClasses;
+        custom: import("..").TransitionsCustom;
+        getDurationClasses: import("..").ReturnsClassesFunction;
+        getEasingClasses: import("..").ReturnsClassesFunction;
+        getTransitionClasses: import("..").ReturnsClassesFunction;
     };
-    defaults: import("../types/ConfigDefaults").ConfigDefaults;
+    defaults: import("..").ConfigDefaults;
 };

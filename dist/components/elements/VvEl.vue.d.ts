@@ -5,7 +5,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     borderColor: {
         type: StringConstructor;
-        default: string | import("../../types/DefaultPaletteColors.js").DefaultPaletteColors;
+        default: string | import("../../index.js").DefaultPaletteColors;
     };
     groundPalette: {
         type: StringConstructor;
@@ -13,7 +13,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     groundColor: {
         type: StringConstructor;
-        default: string | import("../../types/DefaultPaletteColors.js").DefaultPaletteColors;
+        default: string | import("../../index.js").DefaultPaletteColors;
     };
     tag: {
         type: StringConstructor;
@@ -25,7 +25,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     textColor: {
         type: StringConstructor;
-        default: string | import("../../types/DefaultPaletteColors.js").DefaultPaletteColors;
+        default: string | import("../../index.js").DefaultPaletteColors;
     };
 }, {
     classes: import("vue").ComputedRef<string>;
@@ -36,7 +36,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     borderColor: {
         type: StringConstructor;
-        default: string | import("../../types/DefaultPaletteColors.js").DefaultPaletteColors;
+        default: string | import("../../index.js").DefaultPaletteColors;
     };
     groundPalette: {
         type: StringConstructor;
@@ -44,7 +44,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     groundColor: {
         type: StringConstructor;
-        default: string | import("../../types/DefaultPaletteColors.js").DefaultPaletteColors;
+        default: string | import("../../index.js").DefaultPaletteColors;
     };
     tag: {
         type: StringConstructor;
@@ -56,7 +56,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     textColor: {
         type: StringConstructor;
-        default: string | import("../../types/DefaultPaletteColors.js").DefaultPaletteColors;
+        default: string | import("../../index.js").DefaultPaletteColors;
     };
 }>>, {
     borderPalette: string;
