@@ -32,7 +32,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ```html
 <script setup lang="ts">
 
-    import ValidAudioSourceTypes from '@obewds/vueventus/src/validators/ValidAudioSourceTypes.js'
+    import ValidAudioSourceTypes from '@obewds/vueventus/dist/validators/ValidAudioSourceTypes.js'
 
     const props = defineProps({
         audioSource: {
@@ -61,7 +61,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ```html
 <script setup lang="ts">
 
-    import ValidButtonTypes from '@obewds/vueventus/src/validators/ValidButtonTypes.js'
+    import ValidButtonTypes from '@obewds/vueventus/dist/validators/ValidButtonTypes.js'
 
     const props = defineProps({
         buttonType: {
@@ -89,7 +89,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ```html
 <script setup lang="ts">
 
-    import ValidColorModes from '@obewds/vueventus/src/validators/ValidColorModes.js'
+    import ValidColorModes from '@obewds/vueventus/dist/validators/ValidColorModes.js'
 
     const props = defineProps({
         colorMode: {
@@ -117,7 +117,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ```html
 <script setup lang="ts">
 
-    import ValidDirections from '@obewds/vueventus/src/validators/ValidDirections.js'
+    import ValidDirections from '@obewds/vueventus/dist/validators/ValidDirections.js'
 
     const props = defineProps({
         direction: {
@@ -145,7 +145,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ```html
 <script setup lang="ts">
 
-    import ValidElementTags from '@obewds/vueventus/src/validators/ValidElementTags.js'
+    import ValidElementTags from '@obewds/vueventus/dist/validators/ValidElementTags.js'
 
     const props = defineProps({
         tag: {
@@ -173,7 +173,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ```html
 <script setup lang="ts">
 
-    import ValidFontAwesomeFamilies from '@obewds/vueventus/src/validators/ValidFontAwesomeFamilies.js'
+    import ValidFontAwesomeFamilies from '@obewds/vueventus/dist/validators/ValidFontAwesomeFamilies.js'
 
     const props = defineProps({
         faFamily: {
@@ -201,7 +201,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ```html
 <script setup lang="ts">
 
-    import ValidFontAwesomeSizes from '@obewds/vueventus/src/validators/ValidFontAwesomeSizes.js'
+    import ValidFontAwesomeSizes from '@obewds/vueventus/dist/validators/ValidFontAwesomeSizes.js'
 
     const props = defineProps({
         faSize: {
@@ -229,7 +229,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ```html
 <script setup lang="ts">
 
-    import ValidHeadingLevels from '@obewds/vueventus/src/validators/ValidHeadingLevels.js'
+    import ValidHeadingLevels from '@obewds/vueventus/dist/validators/ValidHeadingLevels.js'
 
     const props = defineProps({
         headingLevel: {
@@ -257,7 +257,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ```html
 <script setup lang="ts">
 
-    import ValidImageSourceTypes from '@obewds/vueventus/src/validators/ValidImageSourceTypes.js'
+    import ValidImageSourceTypes from '@obewds/vueventus/dist/validators/ValidImageSourceTypes.js'
 
     const props = defineProps({
         headingLevel: {
@@ -285,7 +285,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ```html
 <script setup lang="ts">
 
-    import ValidInputTypes from '@obewds/vueventus/src/validators/ValidInputTypes.js'
+    import ValidInputTypes from '@obewds/vueventus/dist/validators/ValidInputTypes.js'
 
     const props = defineProps({
         headingLevel: {
@@ -313,7 +313,7 @@ An added bonus of the {{ $frontmatter.title }} approach: web app and accessibili
 ```html
 <script setup lang="ts">
 
-    import ValidVideoSourceTypes from '@obewds/vueventus/src/validators/ValidVideoSourceTypes.js'
+    import ValidVideoSourceTypes from '@obewds/vueventus/dist/validators/ValidVideoSourceTypes.js'
 
     const props = defineProps({
         headingLevel: {

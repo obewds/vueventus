@@ -68,18 +68,21 @@
     },
     "./package.json": "./package.json",
     "./dist/*": "./dist/*",
+
     "./components/*": "./dist/components/*",
     "./anchors/*": "./dist/components/anchors/*",
     "./buttons/*": "./dist/components/buttons/*",
     "./elements/*": "./dist/components/elements/*",
     "./inputs/*": "./dist/components/inputs/*",
     "./logos/*": "./dist/components/logos/*",
+
     "./configs/*": "./dist/configs/*",
     "./data/*": "./dist/data/*",
     "./helpers/*": "./dist/helpers/*",
     "./palettes/*": "./dist/configs/palettes/*",
     "./types/*": "./dist/types/*",
     "./validators/*": "./dist/validators/*",
+
     "./VvAnchor.vue": "./dist/components/anchors/VvAnchor.vue",
     "./VvButton.vue": "./dist/components/buttons/VvButton.vue",
     "./VvColorModeButton.vue": "./dist/components/buttons/VvColorModeButton.vue",
@@ -87,12 +90,14 @@
     "./VvInput.vue": "./dist/components/inputs/VvInput.vue",
     "./VueVentusLogoText.vue": "./dist/components/logos/VueVentusLogoText.vue",
     "./VueVentusSpinningMark.vue": "./dist/components/logos/VueVentusSpinningMark.vue",
+
     "./Anchors.js": "./dist/configs/Anchors.js",
     "./Buttons.js": "./dist/configs/Buttons.js",
     "./Inputs.js": "./dist/configs/Inputs.js",
     "./Text.js": "./dist/configs/Text.js",
     "./Transitions.js": "./dist/configs/Transitions.js",
     "./VvConfig.js": "./dist/configs/VvConfig.js",
+
     "./app.color.data.json": "./dist/data/app.color.data.json",
     "./extend.animation.json": "./dist/data/extend.animation.json",
     "./extend.keyframes.json": "./dist/data/extend.keyframes.json",
@@ -105,6 +110,7 @@
     "./extend.listStyleType.json": "./dist/data/theme.listStyleType.json",
     "./extend.opacity.json": "./dist/data/theme.opacity.json",
     "./extend.screens.json": "./dist/data/theme.screens.json",
+
     "./camelCaseToTitleCase.js": "./dist/helpers/camelCaseToTitleCase.js",
     "./digitsOnly.js": "./dist/helpers/digitsOnly.js",
     "./formatBytes.js": "./dist/helpers/formatBytes.js",
@@ -116,6 +122,7 @@
     "./stringToCamelCase.js": "./dist/helpers/stringToCamelCase.js",
     "./stringToFilename.js": "./dist/helpers/stringToFilename.js",
     "./uniqueArray.js": "./dist/helpers/uniqueArray.js",
+
     "./AnchorDefault.js": "./dist/configs/palettes/AnchorDefault.js",
     "./BorderDefault.js": "./dist/configs/palettes/BorderDefault.js",
     "./ButtonOutline.js": "./dist/configs/palettes/ButtonOutline.js",
@@ -126,6 +133,7 @@
     "./GroundPastel.js": "./dist/configs/palettes/GroundPastel.js",
     "./InputValidation.js": "./dist/configs/palettes/InputValidation.js",
     "./TextDefault.js": "./dist/configs/palettes/TextDefault.js",
+    
     "./ValidAudioSourceTypes.js": "./dist/validators/ValidAudioSourceTypes.js",
     "./ValidButtonTypes.js": "./dist/validators/ValidButtonTypes.js",
     "./ValidColorModes.js": "./dist/validators/ValidColorModes.js",

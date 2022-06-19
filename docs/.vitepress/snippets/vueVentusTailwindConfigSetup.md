@@ -14,7 +14,7 @@ Go ahead and open up your app's `./tailwind.config.js` file, and add the followi
 // ./tailwind.config.js
 
 const defaultTheme = require('tailwindcss/defaultTheme')
-const vvPath = './node_modules/@obewds/vueventus/src/data/'
+const vvPath = './node_modules/@obewds/vueventus/dist/data/'
 
 module.exports = {
 
