@@ -1,5 +1,5 @@
 // ./scripts/cleanup.js
-// remove unneeded artifacts from running tsc on ./src/types files
+// Remove unneeded artifacts from running tsc on ./src/types files
 
 const fs = require('fs-extra')
 
