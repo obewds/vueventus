@@ -56,7 +56,7 @@ npm run dev
 !!!include(snippets/vueVentusTailwindConfigSetup.md)!!!
 
 
-!!!include(snippets/viteConfigSetup.md)!!!
+!!!include(snippets/viteSetup.md)!!!
 
 
 !!!include(snippets/installingVitest.md)!!!
