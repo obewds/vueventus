@@ -1,7 +1,7 @@
 {
   "name": "@obewds/vueventus",
   "description": "Aesthetically flexible components for modern Vue.js, Tailwind CSS, and Typescript apps",
-  "version": "0.15.3",
+  "version": "0.15.4",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
   "scripts": {
@@ -19,7 +19,7 @@
     "bump": "npm run tag && npm run changelog",
     "cleanup": "node scripts/cleanup.mjs",
     "originals": "node scripts/copyToDist.mjs",
-    "generate": "npx rimraf dist && npx rimraf docs/.vitepress/dist && npm run build && vue-tsc --emitDeclarationOnly && tsc && npm run docs:build && npm run cleanup && npm run originals",
+    "generate": "npx rimraf dist && npx rimraf docs/.vitepress/dist && npm run build && vue-tsc --emitDeclarationOnly && tsc && npm run docs:build && npm run originals",
     "pkg:org": "npm config set scope obewds",
     "pkg:login": "npm adduser",
     "pkg:publish": "npm publish --access public",
@@ -58,7 +58,8 @@
   "module": "./dist/vueventus.es.js",
   "browser": "./dist/vueventus.iife.js",
   "files": [
-    "dist"
+    "dist",
+    "src/configs"
   ],
   "types": "./dist/index.d.ts",
   "exports": {
