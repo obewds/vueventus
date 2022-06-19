@@ -1,5 +1,5 @@
 ---
-title: Tailwind Modules
+title: Tailwind Data Modules
 ---
 
 <script setup>

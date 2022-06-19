@@ -27,3 +27,10 @@ export default defineConfig({
     build: {...},
 })
 ```
+
+<!--- 
+#TODO: this file is now not being used and 
+was extended in ./docs/.vitepress/snippets/ViteSetup.md
+-------------------------------------------------------
+??? Should this file be deleted ???
+--->
