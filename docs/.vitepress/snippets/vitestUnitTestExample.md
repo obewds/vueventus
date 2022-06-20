@@ -2,7 +2,7 @@
 
 Now to actually ensure everything is working, we need to create a quick component and a couple of rudimentary tests for that component to know we're ready to get to business!
 
-First up, create a new directory and/or component `./components/HelloVueVentus.vue` and add the following code:
+The first step is to create a new component. For this example, and a standard Vue structure this would be: `./src/components/HelloVueVentus.vue`, while in a Nuxt.js project structure this would be: `./components/HelloVueVentus.vue`. Either way, add code like this to taste:
 
 ```html
 <!-- ./src/components/HelloVueVentus.vue // for Vue/Vite CLIs -->
