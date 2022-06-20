@@ -1,9 +1,10 @@
 {
   "name": "@obewds/vueventus",
   "description": "Aesthetically flexible components for modern Vue.js, Tailwind CSS, and Typescript apps",
-  "version": "0.15.5",
+  "version": "0.15.6",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -51,7 +52,7 @@
     "vitepress": "^1.0.0-alpha.2",
     "vitest": "^0.15.1",
     "vue-router": "^4.0.16",
-    "vue-tsc": "^0.37.9"
+    "vue-tsc": "^0.38.1"
   },
   "sideEffects": false,
   "main": "./dist/vueventus.umd.js",
