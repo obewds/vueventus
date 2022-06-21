@@ -1,6 +1,6 @@
 // ./tests/validators/ValidDirections.test.js
 
-import ValidDirections from '../../src/validators/ValidDirections'
+import { ValidDirections } from '../../src/index'
 
 
 test('ValidDirections component returns a truthy value', async () => {

@@ -2,6 +2,8 @@
 
 import { Transitions } from '../../src/index'
 
+let testTransitions = {...Transitions}
+
 
 test('Transitions component returns a truthy value', async () => {
 
@@ -35,6 +37,18 @@ test('Transitions.getDurationClasses() method returns expected values', async ()
 })
 
 
+test('Transitions.getDurationClasses() method returns expected values for a custom defined transitions durations property that has no original Transitions.durations key/value pairs, and test that a wrong key that was not defined in the custom ones returns an empty string.', async () => {
+
+    testTransitions.durations = {
+        'somethingNew': 'duration-test-value'
+    }
+
+    expect(testTransitions.getDurationClasses('somethingNew')).toBe('duration-test-value')
+    expect(testTransitions.getDurationClasses('wrongKey')).toBe('')
+
+})
+
+
 test('Transitions.getEasingClasses() method returns expected values', async () => {
     
     expect(Transitions.getEasingClasses('')).toBe('ease-in-out')
@@ -43,6 +57,18 @@ test('Transitions.getEasingClasses() method returns expected values', async () =
     expect(Transitions.getEasingClasses('out')).toBe('ease-out')
     expect(Transitions.getEasingClasses('inOut')).toBe('ease-in-out')
     expect(Transitions.getEasingClasses('wrongValue')).toBe('ease-in-out')
+
+})
+
+
+test('Transitions.getEasingClasses() method returns expected values for a custom defined transitions easings property that has no original Transitions.easings key/value pairs, and test that a wrong key that was not defined in the custom ones returns an empty string.', async () => {
+
+    testTransitions.easings = {
+        'somethingNew': 'duration-test-value'
+    }
+
+    expect(testTransitions.getEasingClasses('somethingNew')).toBe('duration-test-value')
+    expect(testTransitions.getEasingClasses('wrongKey')).toBe('')
 
 })
 
@@ -60,6 +86,7 @@ test('Transitions.custom() method returns expected values', async () => {
     expect(Transitions.custom()).toBe(defaultStr)
     expect(Transitions.custom({})).toBe(defaultStr)
     expect(Transitions.custom(emptySettings)).toBe(defaultStr)
+    expect(Transitions.custom('wrong', 'strings', 'passed')).toBe(defaultStr)
 
     const customSettings = {
         transitions: 'colors',
@@ -82,11 +109,24 @@ test('Transitions.classes() method returns expected values', async () => {
     
     expect(Transitions.classes()).toBe(defaultStr)
     expect(Transitions.classes(transitionsKey, easingsKey, durationsKey)).toBe(defaultStr)
+    expect(Transitions.classes('wrong', 'strings', 'passed')).toBe(defaultStr)
 
     transitionsKey = 'colors'
     easingsKey = 'linear'
     durationsKey = '1000'
 
     expect(Transitions.classes(transitionsKey, easingsKey, durationsKey)).toBe('transition-colors ease-linear duration-1000')
+
+})
+
+
+test('Transitions.getTransitionClasses() method returns expected values for a custom defined transitions transitions property that has no original Transitions.transitions key/value pairs, and test that a wrong key that was not defined in the custom ones returns an empty string.', async () => {
+
+    testTransitions.transitions = {
+        'somethingNew': 'duration-test-value'
+    }
+
+    expect(testTransitions.getTransitionClasses('somethingNew')).toBe('duration-test-value')
+    expect(testTransitions.getTransitionClasses('wrongKey')).toBe('')
 
 })
