@@ -15,8 +15,11 @@ hero:
       text: Components
       link: /components/
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/obewds/vueventus
+      text: Typescript
+      link: /typescript/
+#    - theme: alt
+#      text: View on GitHub
+#      link: https://github.com/obewds/vueventus
 features:
   - icon: ⚡️
     title: Blazing Fast Prototyping
