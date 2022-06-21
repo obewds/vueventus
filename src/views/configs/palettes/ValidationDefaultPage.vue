@@ -1,9 +1,9 @@
-<!-- ./src/views/configs/palettes/InputValidationPage.vue -->
+<!-- ./src/views/configs/palettes/ValidationDefaultPage.vue -->
 
 <script setup lang="ts">
 
     import globals from '../../../globals'
-    import InputValidation from '../../../configs/palettes/InputValidation'
+    import ValidationDefault from '../../../configs/palettes/ValidationDefault'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
 
     const tw = globals.classes
@@ -13,13 +13,13 @@
 
 <template>
 
-    <DevViewArticle title="InputValidation Palette Config Module">
+    <DevViewArticle title="ValidationDefault Palette Config Module">
 
         <div :class="tw.cardFlex">
             <div>
-                <h3 :class="tw.h3">InputValidation</h3>
+                <h3 :class="tw.h3">ValidationDefault</h3>
                 <div :class="tw.flexWrap">
-                    <div v-for="color in globals.data.inputColors" :class="[InputValidation[color.key], tw.pad]">
+                    <div v-for="color in globals.data.inputColors" :class="[String(ValidationDefault[color.key]), tw.pad]">
                         {{ color.name }}
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 ---
-title: InputValidation Palette Config Module
+title: ValidationDefault Palette Config Module
 ---
 
 <script setup>
@@ -24,13 +24,13 @@ A validation focused palette of a variety of color class types for use with form
 To import the compiled library version of the {{ $frontmatter.title }}:
 
 ```javascript
-import { InputValidation } from '@obewds/vueventus'
+import { ValidationDefault } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} directly:
 
 ```javascript
-import InputValidation from '@obewds/vueventus/dist/configs/palettes/InputValidation.js'
+import ValidationDefault from '@obewds/vueventus/dist/configs/palettes/ValidationDefault.js'
 ```
 
 
@@ -41,9 +41,9 @@ import InputValidation from '@obewds/vueventus/dist/configs/palettes/InputValida
 ## Use
 
 ```javascript
-const inputDefault = InputValidation.default
-const inputError = InputValidation.error
-const inputSuccess = InputValidation.success
+const inputDefault = ValidationDefault.default
+const inputError = ValidationDefault.error
+const inputSuccess = ValidationDefault.success
 ```
 
 
@@ -53,7 +53,7 @@ const inputSuccess = InputValidation.success
 
 ## Module
 
-<<< @/../src/configs/palettes/InputValidation.ts
+<<< @/../src/configs/palettes/ValidationDefault.ts
 
 
 
