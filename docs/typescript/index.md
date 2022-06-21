@@ -25,7 +25,9 @@ title: Typescript Modules
 ## Typescript Types
 
 * [BaseFunction](/typescript/types#basefunction)
+* [DefaultInputPalettes](/typescript/types#defaultinputpalettes)
 * [DefaultPaletteColors](/typescript/types#defaultpalettecolors)
+* [DefaultPalettes](/typescript/types#defaultpalettes)
 * [ReturnsClassesFunction](/typescript/types#returnsclassesfunction)
 * [TransitionsClasses](/typescript/types#transitionsclasses)
 * [TransitionsCustom](/typescript/types#transitionscustom)
@@ -33,6 +35,7 @@ title: Typescript Modules
 ## Typescript Interfaces
 
 * [ButtonsSizes](/typescript/interfaces#buttonssizes)
+* [ColorMode](/typescript/interfaces#colormode)
 * [ConfigAnchors](/typescript/interfaces#configanchors)
 * [ConfigBorders](/typescript/interfaces#configborders)
 * [ConfigButtons](/typescript/interfaces#configbuttons)
@@ -52,6 +55,11 @@ title: Typescript Modules
 * [TransitionsEasings](/typescript/interfaces#transitionseasings)
 * [TransitionsTransitions](/typescript/interfaces#transitionstransitions)
 * [ValidationInputPaletteColors](/typescript/interfaces#validationinputpalettecolors)
+* [VvAnchorProps](/typescript/interfaces#vvanchorprops)
+* [VvButtonProps](/typescript/interfaces#vvbuttonprops)
+* [VvColorModeButtonProps](/typescript/interfaces#vvcolormodebuttonprops)
+* [VvElProps](/typescript/interfaces#vvelprops)
+* [VvInputProps](/typescript/interfaces#vvinputprops)
 
 
 
