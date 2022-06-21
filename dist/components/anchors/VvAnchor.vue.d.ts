@@ -29,7 +29,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     palette: {
         type: StringConstructor;
-        default: string;
+        default: string | import("../../index.js").DefaultPalettes;
     };
 }, {
     classes: import("vue").ComputedRef<string>;
@@ -64,7 +64,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     palette: {
         type: StringConstructor;
-        default: string;
+        default: string | import("../../index.js").DefaultPalettes;
     };
 }>>, {
     button: boolean;

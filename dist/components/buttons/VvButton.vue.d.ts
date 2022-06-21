@@ -14,7 +14,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     palette: {
         type: StringConstructor;
-        default: string;
+        default: string | import("../..").DefaultPalettes;
     };
     size: {
         type: StringConstructor;
@@ -43,7 +43,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     palette: {
         type: StringConstructor;
-        default: string;
+        default: string | import("../..").DefaultPalettes;
     };
     size: {
         type: StringConstructor;

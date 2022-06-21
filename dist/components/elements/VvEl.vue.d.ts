@@ -1,7 +1,7 @@
 declare const _default: import("vue").DefineComponent<{
     borderPalette: {
         type: StringConstructor;
-        default: string;
+        default: string | import("../../index.js").DefaultPalettes;
     };
     borderColor: {
         type: StringConstructor;
@@ -9,7 +9,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     groundPalette: {
         type: StringConstructor;
-        default: string;
+        default: string | import("../../index.js").DefaultPalettes;
     };
     groundColor: {
         type: StringConstructor;
@@ -21,7 +21,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     textPalette: {
         type: StringConstructor;
-        default: string;
+        default: string | import("../../index.js").DefaultPalettes;
     };
     textColor: {
         type: StringConstructor;
@@ -32,7 +32,7 @@ declare const _default: import("vue").DefineComponent<{
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     borderPalette: {
         type: StringConstructor;
-        default: string;
+        default: string | import("../../index.js").DefaultPalettes;
     };
     borderColor: {
         type: StringConstructor;
@@ -40,7 +40,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     groundPalette: {
         type: StringConstructor;
-        default: string;
+        default: string | import("../../index.js").DefaultPalettes;
     };
     groundColor: {
         type: StringConstructor;
@@ -52,7 +52,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     textPalette: {
         type: StringConstructor;
-        default: string;
+        default: string | import("../../index.js").DefaultPalettes;
     };
     textColor: {
         type: StringConstructor;
