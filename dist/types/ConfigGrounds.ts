@@ -1,6 +1,7 @@
 // ./src/types/ConfigGrounds.ts
 
 import { DefaultConfigPalette } from '../types/DefaultConfigPalette'
+import { EmptyPalette } from './EmptyPalette'
 
 export interface ConfigGrounds {
     palettes: {
@@ -8,7 +9,7 @@ export interface ConfigGrounds {
         default?: DefaultConfigPalette,
         monochromatic?: DefaultConfigPalette,
         pastel?: DefaultConfigPalette,
-        [key: string]: any
+        [key: string]: EmptyPalette | undefined
     },
     [key: string]: any
 }

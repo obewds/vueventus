@@ -62,6 +62,7 @@ module.exports = {
           '/guides/': sidebarGuides(),
           '/modules/': sidebarModules(),
           '/components/': sidebarComponents(),
+          '/typescript/': sidebarTypescript(),
         },
 
         // editLink: {
@@ -104,6 +105,7 @@ function mainNav() {
         { text: "Guides", link: "/guides/", activeMatch: '/guides/' },
         { text: "Modules", link: "/modules/", activeMatch: '/modules/' },
         { text: "Components", link: "/components/", activeMatch: '/components/' },
+        { text: "Typescript", link: "/typescript/", activeMatch: '/typescript/' },
         // { text: 'Changelog', link: 'https://github.com/obewds/vueventus/blob/main/CHANGELOG.md' },
         // { text: "npm", link: "https://www.npmjs.com/package/@obewds/vueventus" },
     ]
@@ -237,4 +239,16 @@ function sidebarComponents() {
             ]
         }
     ]
+}
+
+
+function sidebarTypescript() {
+    return [{
+        text: 'Typescript',
+        items: [
+            { text: 'Typescript Modules', link: '/typescript/' },
+            { text: 'Types', link: '/typescript/types' },
+            { text: 'Interfaces', link: '/typescript/interfaces' },
+        ]
+    }]
 }

@@ -56,17 +56,17 @@ export default <ConfigTransitions>{
     },
     getDurationClasses: function ( durationsKey ) {
         const key = durationsKey && this.durations?.[durationsKey] ? durationsKey : '300'
-        const output = this.durations?.[key] || ''
+        const output = this.durations?.[key] ? this.durations?.[key] : ''
         return output
     },
     getEasingClasses: function ( easingsKey ) {
         const key = easingsKey && this.easings?.[easingsKey] ? easingsKey : 'inOut'
-        const output = this.easings?.[key] || ''
+        const output = this.easings?.[key] ? this.easings?.[key] : ''
         return output
     },
     getTransitionClasses: function ( transitionsKey ) {
         const key = transitionsKey && this.transitions?.[transitionsKey] ? transitionsKey : 'default'
-        const output = this.transitions?.[key] || ''
+        const output = this.transitions?.[key] ? this.transitions?.[key] : ''
         return output
     },
     custom: function ( settings ) {

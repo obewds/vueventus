@@ -45,3 +45,12 @@ test('formatMediaTime() accepts a number value over an hour and returns results 
 
 })
 
+
+test('formatMediaTime() accepts a number value over an hour and returns results in (10+):00:00:00 format', async () => {
+
+    const test = formatMediaTime(906069.123456)
+    
+    expect(test).toBe('10:11:41:09')
+
+})
+

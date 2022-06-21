@@ -2,6 +2,7 @@
 
 import { DefaultConfigPalette } from '../types/DefaultConfigPalette'
 import { BaseFunction } from './BaseFunction'
+import { EmptyPalette } from './EmptyPalette'
 import { ReturnsClassesFunction } from './ReturnsClassesFunction'
 import { TextSizes } from './TextSizes'
 
@@ -17,7 +18,7 @@ export interface ConfigAnchors {
     classes: ReturnsClassesFunction
     palettes: {
         default?: DefaultConfigPalette
-        [key: string]: any
+        [key: string]: EmptyPalette | undefined
     }
     [key: string]: any
 }
