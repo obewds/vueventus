@@ -2,7 +2,6 @@
 
 <script setup lang="ts">
 
-    import { inject } from 'vue'
     import { Transitions } from '../../../index'
     import globals from '../../../globals'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'

@@ -19,7 +19,7 @@
             <div>
                 <h3 :class="tw.h3">ButtonOutline</h3>
                 <div :class="tw.flexWrap">
-                    <div v-for="color in globals.data.colors" :class="[ButtonOutline[color.key], tw.border, tw.pad]">
+                    <div v-for="color in globals.data.colors" :class="[String(ButtonOutline[color.key]), tw.border, tw.pad]">
                         {{ color.name }}
                     </div>
                 </div>
