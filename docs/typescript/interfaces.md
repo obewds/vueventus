@@ -47,6 +47,32 @@ import { ButtonsSizes } from '@obewds/vueventus/dist/types/ButtonsSizes'
 
 
 
+## ColorMode
+
+To import the compiled library version of the ColorMode Type:
+
+```javascript
+import { ColorMode } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import { ColorMode } from '@obewds/vueventus/dist/types/ColorMode'
+```
+
+### Module Code
+
+<<< @/../src/types/ColorMode.ts
+
+
+
+
+
+
+
+
+
 ## ConfigAnchors
 
 To import the compiled library version of the ConfigAnchors Type:
@@ -532,6 +558,146 @@ import { ValidationInputPaletteColors } from '@obewds/vueventus/dist/types/Valid
 ### Module Code
 
 <<< @/../src/types/ValidationInputPaletteColors.ts
+
+
+
+
+
+
+
+
+
+## VvAnchorProps
+
+To import the compiled library version of the VvAnchorProps Type:
+
+```javascript
+import { VvAnchorProps } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import { VvAnchorProps } from '@obewds/vueventus/dist/types/VvAnchorProps'
+```
+
+### Module Code
+
+<<< @/../src/types/VvAnchorProps.ts
+
+
+
+
+
+
+
+
+
+## VvButtonProps
+
+To import the compiled library version of the VvButtonProps Type:
+
+```javascript
+import { VvButtonProps } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import { VvButtonProps } from '@obewds/vueventus/dist/types/VvButtonProps'
+```
+
+### Module Code
+
+<<< @/../src/types/VvButtonProps.ts
+
+
+
+
+
+
+
+
+
+## VvColorModeButtonProps
+
+To import the compiled library version of the VvColorModeButtonProps Type:
+
+```javascript
+import { VvColorModeButtonProps } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import { VvColorModeButtonProps } from '@obewds/vueventus/dist/types/VvColorModeButtonProps'
+```
+
+### Module Code
+
+<<< @/../src/types/VvColorModeButtonProps.ts
+
+
+
+
+
+
+
+
+
+## VvElProps
+
+To import the compiled library version of the VvElProps Type:
+
+```javascript
+import { VvElProps } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import { VvElProps } from '@obewds/vueventus/dist/types/VvElProps'
+```
+
+### Module Code
+
+<<< @/../src/types/VvElProps.ts
+
+
+
+
+
+
+
+
+
+## VvInputProps
+
+To import the compiled library version of the VvInputProps Type:
+
+```javascript
+import { VvInputProps } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import { VvInputProps } from '@obewds/vueventus/dist/types/VvInputProps'
+```
+
+### Module Code
+
+<<< @/../src/types/VvInputProps.ts
+
+
+
+
+
+
+
+
+
+
 
 
 

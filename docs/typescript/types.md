@@ -47,6 +47,32 @@ import { BaseFunction } from '@obewds/vueventus/dist/types/BaseFunction'
 
 
 
+## DefaultInputPalettes
+
+To import the compiled library version of the DefaultInputPalettes Type:
+
+```javascript
+import { DefaultInputPalettes } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import { DefaultInputPalettes } from '@obewds/vueventus/dist/types/DefaultInputPalettes'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultInputPalettes.ts
+
+
+
+
+
+
+
+
+
 ## DefaultPaletteColors
 
 To import the compiled library version of the DefaultPaletteColors Type:
@@ -64,6 +90,32 @@ import { DefaultPaletteColors } from '@obewds/vueventus/dist/types/DefaultPalett
 ### Module Code
 
 <<< @/../src/types/DefaultPaletteColors.ts
+
+
+
+
+
+
+
+
+
+## DefaultPalettes
+
+To import the compiled library version of the DefaultPalettes Type:
+
+```javascript
+import { DefaultPalettes } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import { DefaultPalettes } from '@obewds/vueventus/dist/types/DefaultPalettes'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultPalettes.ts
 
 
 

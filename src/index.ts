@@ -36,6 +36,8 @@ import type { BaseFunction } from './types/BaseFunction'
 export type { BaseFunction }
 import type { ButtonsSizes } from './types/ButtonsSizes'
 export type { ButtonsSizes }
+import type { ColorMode } from './types/ColorMode'
+export type { ColorMode }
 import type { ConfigAnchors } from './types/ConfigAnchors'
 export type { ConfigAnchors }
 import type { ConfigBorders } from './types/ConfigBorders'
@@ -50,14 +52,20 @@ import type { ConfigGrounds } from './types/ConfigGrounds'
 export type { ConfigGrounds }
 import type { ConfigInputs } from './types/ConfigInputs'
 export type { ConfigInputs }
+import type { ConfigText } from './types/ConfigText'
+export type { ConfigText }
 import type { ConfigTransitions } from './types/ConfigTransitions'
 export type { ConfigTransitions }
 import type { ConfigVv } from './types/ConfigVv'
 export type { ConfigVv }
 import type { DefaultConfigPalette } from './types/DefaultConfigPalette'
 export type { DefaultConfigPalette }
+import type { DefaultInputPalettes } from './types/DefaultInputPalettes'
+export type { DefaultInputPalettes }
 import type { DefaultPaletteColors } from './types/DefaultPaletteColors'
 export type { DefaultPaletteColors }
+import type { DefaultPalettes } from './types/DefaultPalettes'
+export type { DefaultPalettes }
 import type { InputsSizes } from './types/InputsSizes'
 export type { InputsSizes }
 import type { ReturnsClassesFunction } from './types/ReturnsClassesFunction'
@@ -78,6 +86,16 @@ import type { TransitionsTransitions } from './types/TransitionsTransitions'
 export type { TransitionsTransitions }
 import type { ValidationInputPaletteColors } from './types/ValidationInputPaletteColors'
 export type { ValidationInputPaletteColors }
+import type { VvAnchorProps } from './types/VvAnchorProps'
+export type { VvAnchorProps }
+import type { VvButtonProps } from './types/VvButtonProps'
+export type { VvButtonProps }
+import type { VvColorModeButtonProps } from './types/VvColorModeButtonProps'
+export type { VvColorModeButtonProps }
+import type { VvElProps } from './types/VvElProps'
+export type { VvElProps }
+import type { VvInputProps } from './types/VvInputProps'
+export type { VvInputProps }
 
 // .src/validators
 export { default as ValidAudioSourceTypes } from './validators/ValidAudioSourceTypes'

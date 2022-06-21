@@ -15,6 +15,8 @@
             VvButton
         },
 
+        // #TODO: add prop for button type (validated) so this compo can be wrapped in a form
+        //        to persist user/ip's w/ color mode pref of user
         props: {
             mode: {
                 type: String,

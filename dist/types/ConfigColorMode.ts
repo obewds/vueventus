@@ -1,20 +1,8 @@
 // ./src/types/ConfigColorMode.ts
 
+import { ColorMode } from './ColorMode'
+
 export interface ConfigColorMode {
-    dark: {
-        bg: string,
-        ground: string,
-        hex: string,
-        text: string,
-        title: string,
-        [key: string]: any
-    },
-    light: {
-        bg: string,
-        ground: string,
-        hex: string,
-        text: string,
-        title: string,
-        [key: string]: any
-    }
+    dark: ColorMode
+    light: ColorMode
 }
