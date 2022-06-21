@@ -2,8 +2,8 @@
 layout: home
 hero:
   name: VueVentus
-  text: Designable Components
-  tagline: Aesthetically flexible components for modern Vue.js, Tailwind CSS, and Typescript apps
+  text: Aesthetically Flexible Components
+  tagline: A component library and styling management system for modern Vue.js, Tailwind CSS, and Typescript apps
   actions:
     - theme: brand
       text: Get Started

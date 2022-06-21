@@ -17,7 +17,7 @@ title: Getting Started
 
 !!!include(snippets/alphaStageWarning.md)!!!
 
-Welcome to the docs for VueVentus, aesthetically flexible components for modern Vue.js, Tailwind CSS, and Typescript apps.
+Welcome to the docs for VueVentus, a component library and styling management system for modern Vue.js, Tailwind CSS, and Typescript apps.
 
 You'll find lots of information and insight here covering how to use the VueVentus data flows in the contexts of Vue.js and Tailwind CSS, to end the era of massive atomic class strings.
 
