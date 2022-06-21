@@ -126,21 +126,21 @@ var Transitions = {
     transform: "transition-transform"
   },
   getDurationClasses: function(durationsKey) {
-    var _a, _b;
+    var _a, _b, _c;
     const key = durationsKey && ((_a = this.durations) == null ? void 0 : _a[durationsKey]) ? durationsKey : "300";
-    const output = ((_b = this.durations) == null ? void 0 : _b[key]) || "";
+    const output = ((_b = this.durations) == null ? void 0 : _b[key]) ? (_c = this.durations) == null ? void 0 : _c[key] : "";
     return output;
   },
   getEasingClasses: function(easingsKey) {
-    var _a, _b;
+    var _a, _b, _c;
     const key = easingsKey && ((_a = this.easings) == null ? void 0 : _a[easingsKey]) ? easingsKey : "inOut";
-    const output = ((_b = this.easings) == null ? void 0 : _b[key]) || "";
+    const output = ((_b = this.easings) == null ? void 0 : _b[key]) ? (_c = this.easings) == null ? void 0 : _c[key] : "";
     return output;
   },
   getTransitionClasses: function(transitionsKey) {
-    var _a, _b;
+    var _a, _b, _c;
     const key = transitionsKey && ((_a = this.transitions) == null ? void 0 : _a[transitionsKey]) ? transitionsKey : "default";
-    const output = ((_b = this.transitions) == null ? void 0 : _b[key]) || "";
+    const output = ((_b = this.transitions) == null ? void 0 : _b[key]) ? (_c = this.transitions) == null ? void 0 : _c[key] : "";
     return output;
   },
   custom: function(settings) {
