@@ -35,7 +35,7 @@ But first, you'll need to choose your path for installation:
 * [Install with VILT Stack](/guides/install-vilt-stack)
 
 ::: tip 
-VueVentus is now fully written in Typescript and Vue SFC vernaculars!
+VueVentus is now fully written in Typescript and with Vue SFC Composition API syntax!
 :::
 
 

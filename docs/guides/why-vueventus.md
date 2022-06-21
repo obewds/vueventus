@@ -58,7 +58,7 @@ That's why the system provides sets of getters to allow devs to reach into the s
 
 There is a learning curve to be able to fully customize the visual aesthetics of a modern web application through VueVentus's abstractions. :nerd_face:
 
-However, a major reason for these abstractions are key aspects for rapid prototyping on the dev side of things and iteratively fast/flexible for the designer side of the equation.
+However, a major reason for these abstractions is to facilitate both rapid prototyping on the dev side of things and iteratively fast/flexible styling changes for the designer side of things.
 
 The complexity and learning curve mainly apply when the need to make surgical component-level edits or global component-wide edits well into the production process due to:
 
@@ -79,7 +79,7 @@ VueVentus handles these normally expensive/arduous issues surprisingly well - an
 
 
 
-## The Mission
+## Project Mission
 
 VueVentus aims to:
 
