@@ -1,9 +1,10 @@
-// ./src/configs/Inputs.ts
+// ./src/configs/Textareas.ts
 
-import { ConfigInputs } from '../types/ConfigInputs'
+import { ConfigTextareas } from '../types/ConfigTextareas'
+import Inputs from './Inputs'
 import Transitions from './Transitions.js'
 
-export default <ConfigInputs>{
+export default <ConfigTextareas>{
     border: 'border',
     display: 'block w-full',
     outline: '',
@@ -26,14 +27,7 @@ export default <ConfigInputs>{
             this.transition,
         ].join(' ').replace(/\s+/g,' ').trim()
     },
-    sizes: {
-        'xs': 'px-2 py-1.5 text-sm rounded',
-        'sm': 'px-3 py-2 text-base rounded',
-        'md': 'px-3 py-2 text-lg rounded-md',
-        'lg': 'px-4 py-3 text-xl rounded-md',
-        'xl': 'px-4 py-3 text-2xl rounded-lg',
-        '2xl': 'px-5 py-4 text-3xl rounded-lg',
-    },
+    sizes: Inputs.sizes,
     getSizeClasses: function (sizesKey) {
         const key = sizesKey && this.sizes[sizesKey] ? sizesKey : 'md'
         return this.sizes[key]
@@ -45,4 +39,18 @@ export default <ConfigInputs>{
             this.getSizeClasses(sizes),
         ].join(' ').replace(/\s+/g,' ').trim()
     },
+    rowSizes: {
+        'xs': 1,
+        'sm': 2,
+        'md': 3,
+        'lg': 4,
+        'xl': 6,
+        '2xl': 8,
+    },
+    getRowSize: function (sizesKey) {
+        const key = sizesKey && this.rowSizes[sizesKey] ? sizesKey : 'md'
+        return this.rowSizes[key]
+    },
 }
+
+// #TODO: Add Textareas to docs

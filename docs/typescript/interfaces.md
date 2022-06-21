@@ -541,32 +541,6 @@ import { TransitionsTransitions } from '@obewds/vueventus/dist/types/Transitions
 
 
 
-## ValidationInputPaletteColors
-
-To import the compiled library version of the ValidationInputPaletteColors Type:
-
-```javascript
-import { ValidationInputPaletteColors } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import { ValidationInputPaletteColors } from '@obewds/vueventus/dist/types/ValidationInputPaletteColors'
-```
-
-### Module Code
-
-<<< @/../src/types/ValidationInputPaletteColors.ts
-
-
-
-
-
-
-
-
-
 ## VvAnchorProps
 
 To import the compiled library version of the VvAnchorProps Type:

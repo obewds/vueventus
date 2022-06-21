@@ -19,9 +19,9 @@
             <div>
                 <h3 :class="tw.h3">VvInput Colors</h3>
                 <div :class="tw.flexWrap">
-                    <VvInput/>
-                    <VvInput color="error"/>
-                    <VvInput color="success"/>
+                    <VvInput color="default" placeholder="default Color"/>
+                    <VvInput color="error" placeholder="error Color"/>
+                    <VvInput color="success" placeholder="success Color"/>
                 </div>
             </div>
         </div>

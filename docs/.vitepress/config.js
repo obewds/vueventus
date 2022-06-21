@@ -171,8 +171,8 @@ function sidebarModules() {
                 { text: 'GroundDefault Palette', link: '/modules/palettes/ground-default' },
                 { text: 'GroundMonochromatic Palette', link: '/modules/palettes/ground-monochromatic' },
                 { text: 'GroundPastel Palette', link: '/modules/palettes/ground-pastel' },
-                { text: 'InputValidation Palette', link: '/modules/palettes/input-validation' },
                 { text: 'TextDefault Palette', link: '/modules/palettes/text-default' },
+                { text: 'ValidationDefault Palette', link: '/modules/palettes/validation-default' },
             ]
         },{
             text: 'Helper Modules',
@@ -236,6 +236,12 @@ function sidebarComponents() {
             items: [
                 { text: 'VueVentusLogoText', link: '/components/logos/vueventus-logo-text' },
                 { text: 'VueVentusSpinningMark', link: '/components/logos/vueventus-spinning-mark' },
+            ]
+        },{
+            text: 'Textarea Components',
+            collapsible: true,
+            items: [
+                { text: 'VvTextarea', link: '/components/textareas/vv-textarea' },
             ]
         }
     ]

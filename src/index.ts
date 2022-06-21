@@ -3,6 +3,7 @@ export { default as Anchors } from './configs/Anchors'
 export { default as Buttons } from './configs/Buttons'
 export { default as Inputs } from './configs/Inputs'
 export { default as Text } from './configs/Text'
+export { default as Textareas } from './configs/Textareas'
 export { default as Transitions } from './configs/Transitions'
 export { default as VvConfig } from './configs/VvConfig'
 
@@ -15,8 +16,8 @@ export { default as GroundConsole } from './configs/palettes/GroundConsole'
 export { default as GroundDefault } from './configs/palettes/GroundDefault'
 export { default as GroundMonochromatic } from './configs/palettes/GroundMonochromatic'
 export { default as GroundPastel } from './configs/palettes/GroundPastel'
-export { default as InputValidation } from './configs/palettes/InputValidation'
 export { default as TextDefault } from './configs/palettes/TextDefault'
+export { default as ValidationDefault } from './configs/palettes/ValidationDefault'
 
 // .src/helpers
 export { default as camelCaseToTitleCase } from './helpers/camelCaseToTitleCase'
@@ -54,6 +55,11 @@ import type { ConfigInputs } from './types/ConfigInputs'
 export type { ConfigInputs }
 import type { ConfigText } from './types/ConfigText'
 export type { ConfigText }
+
+
+import type { ConfigTextareas } from './types/ConfigTextareas'
+export type { ConfigTextareas }
+
 import type { ConfigTransitions } from './types/ConfigTransitions'
 export type { ConfigTransitions }
 import type { ConfigVv } from './types/ConfigVv'
@@ -70,6 +76,13 @@ import type { InputsSizes } from './types/InputsSizes'
 export type { InputsSizes }
 import type { ReturnsClassesFunction } from './types/ReturnsClassesFunction'
 export type { ReturnsClassesFunction }
+
+import type { ReturnsNumberFunction } from './types/ReturnsNumberFunction'
+export type { ReturnsNumberFunction }
+
+import type { TextareasSizes } from './types/TextareasSizes'
+export type { TextareasSizes }
+
 import type { TextSizes } from './types/TextSizes'
 export type { TextSizes }
 import type { TransitionsClasses } from './types/TransitionsClasses'
@@ -84,8 +97,6 @@ import type { TransitionsEasings } from './types/TransitionsEasings'
 export type { TransitionsEasings }
 import type { TransitionsTransitions } from './types/TransitionsTransitions'
 export type { TransitionsTransitions }
-import type { ValidationInputPaletteColors } from './types/ValidationInputPaletteColors'
-export type { ValidationInputPaletteColors }
 import type { VvAnchorProps } from './types/VvAnchorProps'
 export type { VvAnchorProps }
 import type { VvButtonProps } from './types/VvButtonProps'

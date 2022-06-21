@@ -42,4 +42,10 @@ export default <ConfigDefaults>{
         size: 'md',
         type: 'text',
     },
+    "VvTextarea": {
+        color: 'default',
+        palette: 'validation',
+        size: 'md',
+        rowSize: 'md',
+    },
 }

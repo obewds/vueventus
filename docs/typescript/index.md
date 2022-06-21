@@ -54,7 +54,6 @@ title: Typescript Modules
 * [TransitionsDurations](/typescript/interfaces#transitionsdurations)
 * [TransitionsEasings](/typescript/interfaces#transitionseasings)
 * [TransitionsTransitions](/typescript/interfaces#transitionstransitions)
-* [ValidationInputPaletteColors](/typescript/interfaces#validationinputpalettecolors)
 * [VvAnchorProps](/typescript/interfaces#vvanchorprops)
 * [VvButtonProps](/typescript/interfaces#vvbuttonprops)
 * [VvColorModeButtonProps](/typescript/interfaces#vvcolormodebuttonprops)

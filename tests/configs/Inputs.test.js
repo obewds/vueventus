@@ -15,9 +15,11 @@ test('Inputs component returns a truthy object for "display", "ring", "text" pro
 
     expect(Inputs.border).toBeTruthy()
     expect(Inputs.display).toBeTruthy()
-    expect(Inputs.outline).toBeTruthy()
-    expect(Inputs.placeholder).toBe('')
+    expect(Inputs.outline).toBe('')
+    expect(Inputs.placeholder).toBeTruthy()
     expect(Inputs.ring).toBe('')
+    expect(Inputs.rounding).toBe('')
+    expect(Inputs.shadow).toBe('')
     expect(Inputs.text).toBe('')
     expect(Inputs.transition).toBeTruthy()
 

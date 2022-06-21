@@ -1,12 +1,14 @@
-// ./src/types/VvInputProps.ts
+// ./src/types/VvTextareaProps.ts
 
 import { DefaultValidationPaletteColors } from '../types/DefaultValidationPaletteColors'
 import { DefaultValidationPalette } from '../types/DefaultValidationPalette'
-import ValidInputTypes from '../validators/ValidInputTypes'
 
-export interface VvInputProps {
+export interface VvTextareaProps {
     color: DefaultValidationPaletteColors | string
     palette: DefaultValidationPalette | string
     size: string
-    type: ValidInputTypes
+    rowSize: string
 }
+
+// #TODO: Add VvTextareaProps to docs
+// #TODO: Add VvTextareaProps to index.ts

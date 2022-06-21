@@ -1,12 +1,14 @@
-// ./src/types/ConfigInputs.ts
+// ./src/types/ConfigTextareas.ts
 
 import { BaseFunction } from './BaseFunction'
 import { DefaultValidationPalette } from './DefaultValidationPalette'
 import { EmptyPalette } from './EmptyPalette'
-import { InputsSizes } from './InputsSizes'
+import { TextareasSizes } from './TextareasSizes'
+import { TextareasRowSizes } from './TextareasRowSizes'
 import { ReturnsClassesFunction } from './ReturnsClassesFunction'
+import { ReturnsNumberFunction } from './ReturnsNumberFunction'
 
-export interface ConfigInputs {
+export interface ConfigTextareas {
     border: string | undefined
     display: string | undefined
     outline: string | undefined
@@ -17,12 +19,16 @@ export interface ConfigInputs {
     text: string | undefined
     transition: string | undefined
     base: BaseFunction
-    sizes: InputsSizes
     getSizeClasses: ReturnsClassesFunction
     classes: ReturnsClassesFunction
     palettes: {
         validation: DefaultValidationPalette
         [key: string]: EmptyPalette | undefined
     }
+    sizes: TextareasSizes
+    rowSizes: TextareasRowSizes
+    getRowSize: ReturnsNumberFunction
     [key: string]: any
-}
+} 
+
+// #TODO: Add ConfigTextareas to docs
