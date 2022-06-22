@@ -8,7 +8,7 @@ The first step is to create a new component. For this example, and a standard Vu
 <!-- ./src/components/HelloVueVentus.vue // for Vue/Vite CLIs -->
 <!-- ./components/HelloVueVentus.vue // for Nuxt -->
 <script setup lang="ts">
-    import VvButton from '@obewds/vueventus/VvButton'
+    import { VvButton } from '@obewds/vueventus'
 </script>
 <template>
     <VvButton>

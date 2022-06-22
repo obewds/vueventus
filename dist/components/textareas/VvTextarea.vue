@@ -36,9 +36,6 @@
 
                 let output = []
 
-                let propsPalette = props.palette ? props.palette : String(vv?.defaults.VvTextarea.palette)
-                let propsColor = props.color ? props.color : String(vv?.defaults.VvTextarea.color)
-
                 if ( vv?.textareas?.base() ) {
                     output.push( vv.textareas.base() )
                 }
@@ -47,8 +44,8 @@
                     output.push( vv.textareas.sizes[props.size as keyof typeof vv.textareas.sizes] )
                 }
 
-                if ( vv?.textareas?.palettes?.[propsPalette as keyof typeof vv.textareas.palettes]?.[propsColor] ) {
-                    output.push( vv.textareas.palettes[propsPalette as keyof typeof vv.textareas.palettes][propsColor] )
+                if ( vv?.textareas?.palettes?.[props.palette as keyof typeof vv.textareas.palettes]?.[props.color] ) {
+                    output.push( vv.textareas.palettes[props.palette as keyof typeof vv.textareas.palettes][props.color] )
                 }
 
                 return output.join(' ').trim()

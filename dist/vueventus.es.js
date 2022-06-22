@@ -1457,16 +1457,14 @@ const _sfc_main = defineComponent({
     let classes = computed(() => {
       var _a, _b, _c, _d, _e, _f;
       let output = [];
-      let propsPalette = props.palette ? props.palette : String(vv == null ? void 0 : vv.defaults.VvTextarea.palette);
-      let propsColor = props.color ? props.color : String(vv == null ? void 0 : vv.defaults.VvTextarea.color);
       if ((_a = vv == null ? void 0 : vv.textareas) == null ? void 0 : _a.base()) {
         output.push(vv.textareas.base());
       }
       if (props.size !== "" && ((_c = (_b = vv == null ? void 0 : vv.textareas) == null ? void 0 : _b.sizes) == null ? void 0 : _c[props.size])) {
         output.push(vv.textareas.sizes[props.size]);
       }
-      if ((_f = (_e = (_d = vv == null ? void 0 : vv.textareas) == null ? void 0 : _d.palettes) == null ? void 0 : _e[propsPalette]) == null ? void 0 : _f[propsColor]) {
-        output.push(vv.textareas.palettes[propsPalette][propsColor]);
+      if ((_f = (_e = (_d = vv == null ? void 0 : vv.textareas) == null ? void 0 : _d.palettes) == null ? void 0 : _e[props.palette]) == null ? void 0 : _f[props.color]) {
+        output.push(vv.textareas.palettes[props.palette][props.color]);
       }
       return output.join(" ").trim();
     });
