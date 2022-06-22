@@ -90,6 +90,7 @@
     "vite",
     "tailwindcss",
     "obewds",
+    "typescript",
     "rollup",
     "vitepress",
     "postcss",
