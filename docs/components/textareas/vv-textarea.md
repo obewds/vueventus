@@ -146,16 +146,51 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
 
 
 
-<!--
 
-    #TODO: Figure out how to handle slot content in text area (check VILT kickoff guide for working version)
+## Prop: rowSize
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvTextarea.rowSize }}"`**
+
+The {{ $frontmatter.title }} `rowSize` prop sets the component instance `<textarea row="">` number value for the rendered Textarea element, which controls the vertical height of the element.
+
+### Syntax
+
+```html
+<VvTextarea row-size="lg" placeholder="Size: lg"/>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvTextarea row-size="lg" placeholder="Size: lg"/>
+</div>
+
+::: details size prop textarea size examples
+<div class="flex flex-wrap items-center gap-2 pt-4">
+    <VvTextarea row-size="xs" placeholder="Size: xs"/>
+    <VvTextarea row-size="sm" placeholder="Size: sm"/>
+    <VvTextarea row-size="md" placeholder="Size: md"/>
+    <VvTextarea row-size="lg" placeholder="Size: lg"/>
+    <VvTextarea row-size="xl" placeholder="Size: xl"/>
+    <VvTextarea row-size="2xl" placeholder="Size: 2xl"/>
+</div>
+:::
+
+
+
+
+
+
+
+
 
 ## Slot: None
 
 ::: danger NO SLOT AVAILABLE
-The {{ $frontmatter.title }} does not have Vue slot option, because an `<textarea>` element is a HTML Empty Element, which cannot have children or child nodes.
+The {{ $frontmatter.title }} does not have Vue slot option, because it's expected to use this `<textarea>` based component with reactive values that are bound to this component (like `v-bind-""` etc.)
 :::
--->
+
 
 
 
