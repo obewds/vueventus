@@ -22,6 +22,7 @@ title: Config Modules
 * [Buttons Config](/modules/configs/buttons)
 * [Inputs Config](/modules/configs/inputs)
 * [Text Config](/modules/configs/text)
+* [Textareas Config](/modules/configs/textareas)
 * [Transitions Config](/modules/configs/transitions)
 * [VvConfig](/modules/configs/vv-config)
 * [App Specific Config](/modules/configs/app-specific-config)
