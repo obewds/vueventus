@@ -1,7 +1,5 @@
 <!-- ./src/components/textareas/VvTextarea.vue -->
 
-<!-- #TODO: Add VvTextarea to docs -->
-
 <script lang="ts">
 
     import { computed, defineComponent, inject } from 'vue'
@@ -27,10 +25,6 @@
             rowSize: {
                 type: String,
                 default: VvConfig.defaults.VvTextarea.rowSize,
-            },
-            value: {
-                type: String,
-                default: '',
             },
         },
 
@@ -77,5 +71,7 @@
 
 
 <template>
-    <textarea :class="classes" :rows="rows" :value="value">{{ value }}</textarea>
+
+    <textarea :class="classes" :rows="rows"/>
+
 </template>
