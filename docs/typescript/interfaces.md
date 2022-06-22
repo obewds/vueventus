@@ -26,13 +26,13 @@ These are the VueVentus {{ $frontmatter.title }} Modules are used throughout Vue
 To import the compiled library version of the ButtonsSizes Type:
 
 ```javascript
-import { ButtonsSizes } from '@obewds/vueventus'
+import type { ButtonsSizes } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { ButtonsSizes } from '@obewds/vueventus/dist/types/ButtonsSizes'
+import type { ButtonsSizes } from '@obewds/vueventus/dist/types/ButtonsSizes'
 ```
 
 ### Module Code
@@ -52,13 +52,13 @@ import { ButtonsSizes } from '@obewds/vueventus/dist/types/ButtonsSizes'
 To import the compiled library version of the ColorMode Type:
 
 ```javascript
-import { ColorMode } from '@obewds/vueventus'
+import type { ColorMode } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { ColorMode } from '@obewds/vueventus/dist/types/ColorMode'
+import type { ColorMode } from '@obewds/vueventus/dist/types/ColorMode'
 ```
 
 ### Module Code
@@ -78,13 +78,13 @@ import { ColorMode } from '@obewds/vueventus/dist/types/ColorMode'
 To import the compiled library version of the ConfigAnchors Type:
 
 ```javascript
-import { ConfigAnchors } from '@obewds/vueventus'
+import type { ConfigAnchors } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { ConfigAnchors } from '@obewds/vueventus/dist/types/ConfigAnchors'
+import type { ConfigAnchors } from '@obewds/vueventus/dist/types/ConfigAnchors'
 ```
 
 ### Module Code
@@ -104,13 +104,13 @@ import { ConfigAnchors } from '@obewds/vueventus/dist/types/ConfigAnchors'
 To import the compiled library version of the ConfigBorders Type:
 
 ```javascript
-import { ConfigBorders } from '@obewds/vueventus'
+import type { ConfigBorders } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { ConfigBorders } from '@obewds/vueventus/dist/types/ConfigBorders'
+import type { ConfigBorders } from '@obewds/vueventus/dist/types/ConfigBorders'
 ```
 
 ### Module Code
@@ -130,13 +130,13 @@ import { ConfigBorders } from '@obewds/vueventus/dist/types/ConfigBorders'
 To import the compiled library version of the ConfigButtons Type:
 
 ```javascript
-import { ConfigButtons } from '@obewds/vueventus'
+import type { ConfigButtons } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { ConfigButtons } from '@obewds/vueventus/dist/types/ConfigButtons'
+import type { ConfigButtons } from '@obewds/vueventus/dist/types/ConfigButtons'
 ```
 
 ### Module Code
@@ -156,13 +156,13 @@ import { ConfigButtons } from '@obewds/vueventus/dist/types/ConfigButtons'
 To import the compiled library version of the ConfigColorMode Type:
 
 ```javascript
-import { ConfigColorMode } from '@obewds/vueventus'
+import type { ConfigColorMode } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { ConfigColorMode } from '@obewds/vueventus/dist/types/ConfigColorMode'
+import type { ConfigColorMode } from '@obewds/vueventus/dist/types/ConfigColorMode'
 ```
 
 ### Module Code
@@ -182,13 +182,13 @@ import { ConfigColorMode } from '@obewds/vueventus/dist/types/ConfigColorMode'
 To import the compiled library version of the ConfigDefaults Type:
 
 ```javascript
-import { ConfigDefaults } from '@obewds/vueventus'
+import type { ConfigDefaults } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { ConfigDefaults } from '@obewds/vueventus/dist/types/ConfigDefaults'
+import type { ConfigDefaults } from '@obewds/vueventus/dist/types/ConfigDefaults'
 ```
 
 ### Module Code
@@ -208,13 +208,13 @@ import { ConfigDefaults } from '@obewds/vueventus/dist/types/ConfigDefaults'
 To import the compiled library version of the ConfigGrounds Type:
 
 ```javascript
-import { ConfigGrounds } from '@obewds/vueventus'
+import type { ConfigGrounds } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { ConfigGrounds } from '@obewds/vueventus/dist/types/ConfigGrounds'
+import type { ConfigGrounds } from '@obewds/vueventus/dist/types/ConfigGrounds'
 ```
 
 ### Module Code
@@ -234,13 +234,13 @@ import { ConfigGrounds } from '@obewds/vueventus/dist/types/ConfigGrounds'
 To import the compiled library version of the ConfigInputs Type:
 
 ```javascript
-import { ConfigInputs } from '@obewds/vueventus'
+import type { ConfigInputs } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { ConfigInputs } from '@obewds/vueventus/dist/types/ConfigInputs'
+import type { ConfigInputs } from '@obewds/vueventus/dist/types/ConfigInputs'
 ```
 
 ### Module Code
@@ -260,18 +260,43 @@ import { ConfigInputs } from '@obewds/vueventus/dist/types/ConfigInputs'
 To import the compiled library version of the ConfigText Type:
 
 ```javascript
-import { ConfigText } from '@obewds/vueventus'
+import type { ConfigText } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { ConfigText } from '@obewds/vueventus/dist/types/ConfigText'
+import type { ConfigText } from '@obewds/vueventus/dist/types/ConfigText'
 ```
 
 ### Module Code
 
 <<< @/../src/types/ConfigText.ts
+
+
+
+
+
+
+
+
+## ConfigTextareas
+
+To import the compiled library version of the ConfigText Type:
+
+```javascript
+import type { ConfigTextareas } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import type { ConfigTextareas } from '@obewds/vueventus/dist/types/ConfigTextareas'
+```
+
+### Module Code
+
+<<< @/../src/types/ConfigTextareas.ts
 
 
 
@@ -286,13 +311,13 @@ import { ConfigText } from '@obewds/vueventus/dist/types/ConfigText'
 To import the compiled library version of the ConfigTransitions Type:
 
 ```javascript
-import { ConfigTransitions } from '@obewds/vueventus'
+import type { ConfigTransitions } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { ConfigTransitions } from '@obewds/vueventus/dist/types/ConfigTransitions'
+import type { ConfigTransitions } from '@obewds/vueventus/dist/types/ConfigTransitions'
 ```
 
 ### Module Code
@@ -312,13 +337,13 @@ import { ConfigTransitions } from '@obewds/vueventus/dist/types/ConfigTransition
 To import the compiled library version of the ConfigVv Type:
 
 ```javascript
-import { ConfigVv } from '@obewds/vueventus'
+import type { ConfigVv } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { ConfigVv } from '@obewds/vueventus/dist/types/ConfigVv'
+import type { ConfigVv } from '@obewds/vueventus/dist/types/ConfigVv'
 ```
 
 ### Module Code
@@ -338,13 +363,13 @@ import { ConfigVv } from '@obewds/vueventus/dist/types/ConfigVv'
 To import the compiled library version of the DefaultConfigPalette Type:
 
 ```javascript
-import { DefaultConfigPalette } from '@obewds/vueventus'
+import type { DefaultConfigPalette } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { DefaultConfigPalette } from '@obewds/vueventus/dist/types/DefaultConfigPalette'
+import type { DefaultConfigPalette } from '@obewds/vueventus/dist/types/DefaultConfigPalette'
 ```
 
 ### Module Code
@@ -359,18 +384,74 @@ import { DefaultConfigPalette } from '@obewds/vueventus/dist/types/DefaultConfig
 
 
 
-## EmptyPalette
 
-To import the compiled library version of the EmptyPalette Type:
+## DefaultValidationPalette
+
+To import the compiled library version of the DefaultValidationPalette Type:
 
 ```javascript
-import { EmptyPalette } from '@obewds/vueventus'
+import type { DefaultValidationPalette } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { EmptyPalette } from '@obewds/vueventus/dist/types/EmptyPalette'
+import type { DefaultValidationPalette } from '@obewds/vueventus/dist/types/DefaultValidationPalette'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultValidationPalette.ts
+
+
+
+
+
+
+
+
+
+
+
+## DefaultValidationPaletteColors
+
+To import the compiled library version of the DefaultValidationPaletteColors Type:
+
+```javascript
+import type { DefaultValidationPaletteColors } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import type { DefaultValidationPaletteColors } from '@obewds/vueventus/dist/types/DefaultValidationPaletteColors'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultValidationPaletteColors.ts
+
+
+
+
+
+
+
+
+
+
+## EmptyPalette
+
+To import the compiled library version of the EmptyPalette Type:
+
+```javascript
+import type { EmptyPalette } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import type { EmptyPalette } from '@obewds/vueventus/dist/types/EmptyPalette'
 ```
 
 ### Module Code
@@ -390,13 +471,13 @@ import { EmptyPalette } from '@obewds/vueventus/dist/types/EmptyPalette'
 To import the compiled library version of the InputsSizes Type:
 
 ```javascript
-import { InputsSizes } from '@obewds/vueventus'
+import type { InputsSizes } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { InputsSizes } from '@obewds/vueventus/dist/types/InputsSizes'
+import type { InputsSizes } from '@obewds/vueventus/dist/types/InputsSizes'
 ```
 
 ### Module Code
@@ -416,13 +497,13 @@ import { InputsSizes } from '@obewds/vueventus/dist/types/InputsSizes'
 To import the compiled library version of the TextSizes Type:
 
 ```javascript
-import { TextSizes } from '@obewds/vueventus'
+import type { TextSizes } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { TextSizes } from '@obewds/vueventus/dist/types/TextSizes'
+import type { TextSizes } from '@obewds/vueventus/dist/types/TextSizes'
 ```
 
 ### Module Code
@@ -437,18 +518,71 @@ import { TextSizes } from '@obewds/vueventus/dist/types/TextSizes'
 
 
 
-## TransitionsCustomOptions
+## TextareasRowSizes
 
-To import the compiled library version of the TransitionsCustomOptions Type:
+To import the compiled library version of the TextareasRowSizes Type:
 
 ```javascript
-import { TransitionsCustomOptions } from '@obewds/vueventus'
+import type { TextareasRowSizes } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { TransitionsCustomOptions } from '@obewds/vueventus/dist/types/TransitionsCustomOptions'
+import type { TextareasRowSizes } from '@obewds/vueventus/dist/types/TextareasRowSizes'
+```
+
+### Module Code
+
+<<< @/../src/types/TextareasRowSizes.ts
+
+
+
+
+
+
+
+
+
+
+## TextareasSizes
+
+To import the compiled library version of the TextareasSizes Type:
+
+```javascript
+import type { TextareasSizes } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import type { TextareasSizes } from '@obewds/vueventus/dist/types/TextareasSizes'
+```
+
+### Module Code
+
+<<< @/../src/types/TextareasSizes.ts
+
+
+
+
+
+
+
+
+
+## TransitionsCustomOptions
+
+To import the compiled library version of the TransitionsCustomOptions Type:
+
+```javascript
+import type { TransitionsCustomOptions } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import type { TransitionsCustomOptions } from '@obewds/vueventus/dist/types/TransitionsCustomOptions'
 ```
 
 ### Module Code
@@ -468,13 +602,13 @@ import { TransitionsCustomOptions } from '@obewds/vueventus/dist/types/Transitio
 To import the compiled library version of the TransitionsDurations Type:
 
 ```javascript
-import { TransitionsDurations } from '@obewds/vueventus'
+import type { TransitionsDurations } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { TransitionsDurations } from '@obewds/vueventus/dist/types/TransitionsDurations'
+import type { TransitionsDurations } from '@obewds/vueventus/dist/types/TransitionsDurations'
 ```
 
 ### Module Code
@@ -494,13 +628,13 @@ import { TransitionsDurations } from '@obewds/vueventus/dist/types/TransitionsDu
 To import the compiled library version of the TransitionsEasings Type:
 
 ```javascript
-import { TransitionsEasings } from '@obewds/vueventus'
+import type { TransitionsEasings } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { TransitionsEasings } from '@obewds/vueventus/dist/types/TransitionsEasings'
+import type { TransitionsEasings } from '@obewds/vueventus/dist/types/TransitionsEasings'
 ```
 
 ### Module Code
@@ -520,13 +654,13 @@ import { TransitionsEasings } from '@obewds/vueventus/dist/types/TransitionsEasi
 To import the compiled library version of the TransitionsTransitions Type:
 
 ```javascript
-import { TransitionsTransitions } from '@obewds/vueventus'
+import type { TransitionsTransitions } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { TransitionsTransitions } from '@obewds/vueventus/dist/types/TransitionsTransitions'
+import type { TransitionsTransitions } from '@obewds/vueventus/dist/types/TransitionsTransitions'
 ```
 
 ### Module Code
@@ -546,13 +680,13 @@ import { TransitionsTransitions } from '@obewds/vueventus/dist/types/Transitions
 To import the compiled library version of the VvAnchorProps Type:
 
 ```javascript
-import { VvAnchorProps } from '@obewds/vueventus'
+import type { VvAnchorProps } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { VvAnchorProps } from '@obewds/vueventus/dist/types/VvAnchorProps'
+import type { VvAnchorProps } from '@obewds/vueventus/dist/types/VvAnchorProps'
 ```
 
 ### Module Code
@@ -572,13 +706,13 @@ import { VvAnchorProps } from '@obewds/vueventus/dist/types/VvAnchorProps'
 To import the compiled library version of the VvButtonProps Type:
 
 ```javascript
-import { VvButtonProps } from '@obewds/vueventus'
+import type { VvButtonProps } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { VvButtonProps } from '@obewds/vueventus/dist/types/VvButtonProps'
+import type { VvButtonProps } from '@obewds/vueventus/dist/types/VvButtonProps'
 ```
 
 ### Module Code
@@ -598,13 +732,13 @@ import { VvButtonProps } from '@obewds/vueventus/dist/types/VvButtonProps'
 To import the compiled library version of the VvColorModeButtonProps Type:
 
 ```javascript
-import { VvColorModeButtonProps } from '@obewds/vueventus'
+import type { VvColorModeButtonProps } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { VvColorModeButtonProps } from '@obewds/vueventus/dist/types/VvColorModeButtonProps'
+import type { VvColorModeButtonProps } from '@obewds/vueventus/dist/types/VvColorModeButtonProps'
 ```
 
 ### Module Code
@@ -624,13 +758,13 @@ import { VvColorModeButtonProps } from '@obewds/vueventus/dist/types/VvColorMode
 To import the compiled library version of the VvElProps Type:
 
 ```javascript
-import { VvElProps } from '@obewds/vueventus'
+import type { VvElProps } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { VvElProps } from '@obewds/vueventus/dist/types/VvElProps'
+import type { VvElProps } from '@obewds/vueventus/dist/types/VvElProps'
 ```
 
 ### Module Code
@@ -650,18 +784,46 @@ import { VvElProps } from '@obewds/vueventus/dist/types/VvElProps'
 To import the compiled library version of the VvInputProps Type:
 
 ```javascript
-import { VvInputProps } from '@obewds/vueventus'
+import type { VvInputProps } from '@obewds/vueventus'
 ```
 
 To import the {{ $frontmatter.title }} `.ts` file directly:
 
 ```javascript
-import { VvInputProps } from '@obewds/vueventus/dist/types/VvInputProps'
+import type { VvInputProps } from '@obewds/vueventus/dist/types/VvInputProps'
 ```
 
 ### Module Code
 
 <<< @/../src/types/VvInputProps.ts
+
+
+
+
+
+
+
+
+
+
+
+## VvTextareaProps
+
+To import the compiled library version of the VvTextareaProps Type:
+
+```javascript
+import type { VvTextareaProps } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import type { VvTextareaProps } from '@obewds/vueventus/dist/types/VvTextareaProps'
+```
+
+### Module Code
+
+<<< @/../src/types/VvTextareaProps.ts
 
 
 
