@@ -9,6 +9,3 @@ export interface TextareasRowSizes {
     '2xl'?: number | undefined
     [key: string]: number | undefined
 }
-
-// #TODO: Add TextareasRowSizes to docs
-// #TODO: Add TextareasRowSizes to index.ts

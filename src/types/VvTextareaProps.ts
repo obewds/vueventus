@@ -9,6 +9,3 @@ export interface VvTextareaProps {
     size: string
     rowSize: string
 }
-
-// #TODO: Add VvTextareaProps to docs
-// #TODO: Add VvTextareaProps to index.ts

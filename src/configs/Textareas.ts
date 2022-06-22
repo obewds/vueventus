@@ -52,5 +52,3 @@ export default <ConfigTextareas>{
         return this.rowSizes[key]
     },
 }
-
-// #TODO: Add Textareas to docs

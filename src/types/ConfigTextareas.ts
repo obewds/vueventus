@@ -29,6 +29,4 @@ export interface ConfigTextareas {
     rowSizes: TextareasRowSizes
     getRowSize: ReturnsNumberFunction
     [key: string]: any
-} 
-
-// #TODO: Add ConfigTextareas to docs
+}

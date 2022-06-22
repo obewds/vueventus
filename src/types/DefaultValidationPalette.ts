@@ -6,6 +6,3 @@ export interface DefaultValidationPalette {
     success?: string | undefined
     [key: string]: string | undefined
 }
-
-// #TODO: Add DefaultValidationPalette to docs
-// #TODO: Add DefaultValidationPalette to index.ts

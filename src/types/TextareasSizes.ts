@@ -9,5 +9,3 @@ export interface TextareasSizes {
     '2xl'?: string | undefined
     [key: string]: string | undefined
 }
-
-// #TODO: Add TextareasSizes to docs
