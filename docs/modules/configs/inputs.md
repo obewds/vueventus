@@ -152,6 +152,56 @@ Inputs.ring = ''
 
 
 
+
+
+
+
+## Inputs.rounding
+
+Type: **`String`**  
+Default: **`"{{ Inputs.rounding }}"`**
+
+The `Inputs.rounding` parameter is meant to isolate the Tailwind CSS border rounding characteristics and requirements for an application's input elements.
+
+!!!include(snippets/avoidingVueVentusAbstractsTip.md)!!!
+
+### Example
+
+```javascript
+Inputs.rounding = ''
+```
+
+
+
+
+
+
+
+
+
+
+
+## Inputs.shadow
+
+Type: **`String`**  
+Default: **`"{{ Inputs.shadow }}"`**
+
+The `Inputs.shadow` parameter is meant to isolate the Tailwind CSS border shadow characteristics and requirements for an application's input elements.
+
+!!!include(snippets/avoidingVueVentusAbstractsTip.md)!!!
+
+### Example
+
+```javascript
+Inputs.shadow = ''
+```
+
+
+
+
+
+
+
 ## Inputs.sizes
 
 Type: **`Object`**  

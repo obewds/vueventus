@@ -19,7 +19,7 @@
             <div>
                 <h3 :class="tw.h3">GroundConsole</h3>
                 <div :class="tw.flexWrap">
-                    <div v-for="color in globals.data.colors" :class="[GroundConsole[color.key], tw.pad]">
+                    <div v-for="color in globals.data.colors" :class="[String(GroundConsole[color.key]), tw.pad]">
                         {{ color.name }}
                     </div>
                 </div>

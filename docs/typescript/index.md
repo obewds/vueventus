@@ -28,7 +28,9 @@ title: Typescript Modules
 * [DefaultInputPalettes](/typescript/types#defaultinputpalettes)
 * [DefaultPaletteColors](/typescript/types#defaultpalettecolors)
 * [DefaultPalettes](/typescript/types#defaultpalettes)
+* [DefaultValidationPaletteColors](/typescript/types#defaultvalidationpalettecolors)
 * [ReturnsClassesFunction](/typescript/types#returnsclassesfunction)
+* [ReturnsNumberFunction](/typescript/types#returnsnumberfunction)
 * [TransitionsClasses](/typescript/types#transitionsclasses)
 * [TransitionsCustom](/typescript/types#transitionscustom)
 
@@ -44,22 +46,29 @@ title: Typescript Modules
 * [ConfigGrounds](/typescript/interfaces#configgrounds)
 * [ConfigInputs](/typescript/interfaces#configinputs)
 * [ConfigText](/typescript/interfaces#configtext)
+* [ConfigTextareas](/typescript/interfaces#configtextareas)
 * [ConfigTransitions](/typescript/interfaces#configtransitions)
 * [ConfigVv](/typescript/interfaces#configvv)
 * [DefaultConfigPalette](/typescript/interfaces#defaultconfigpalette)
+* [DefaultValidationPalette](/typescript/interfaces#defaultvalidationpalette)
+* [DefaultValidationPaletteColors](/typescript/interfaces#defaultvalidationpalettecolors)
 * [EmptyPalette](/typescript/interfaces#emptypalette)
 * [InputsSizes](/typescript/interfaces#inputssizes)
 * [TextSizes](/typescript/interfaces#textsizes)
+* [TextareasRowSizes](/typescript/interfaces#textareasrowsizes)
+* [TextareasSizes](/typescript/interfaces#textareassizes)
 * [TransitionsCustomOptions](/typescript/interfaces#transitionscustomoptions)
 * [TransitionsDurations](/typescript/interfaces#transitionsdurations)
 * [TransitionsEasings](/typescript/interfaces#transitionseasings)
 * [TransitionsTransitions](/typescript/interfaces#transitionstransitions)
-* [ValidationInputPaletteColors](/typescript/interfaces#validationinputpalettecolors)
 * [VvAnchorProps](/typescript/interfaces#vvanchorprops)
 * [VvButtonProps](/typescript/interfaces#vvbuttonprops)
 * [VvColorModeButtonProps](/typescript/interfaces#vvcolormodebuttonprops)
 * [VvElProps](/typescript/interfaces#vvelprops)
 * [VvInputProps](/typescript/interfaces#vvinputprops)
+* [VvTextareaProps](/typescript/interfaces#vvtextareaprops)
+
+
 
 
 

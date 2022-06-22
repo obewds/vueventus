@@ -47,13 +47,15 @@ declare const _default: {
     };
     inputs: {
         palettes: {
-            validation: import("../index.js").ValidationInputPaletteColors;
+            validation: import("../index.js").DefaultValidationPalette;
         };
         border: string | undefined;
         display: string | undefined;
         outline: string | undefined;
         placeholder: string | undefined;
         ring: string | undefined;
+        rounding: string | undefined;
+        shadow: string | undefined;
         text: string | undefined;
         transition: string | undefined;
         base: import("../index.js").BaseFunction;
@@ -101,6 +103,26 @@ declare const _default: {
         sizes: import("../index.js").TextSizes;
         getSizeClasses: import("../index.js").ReturnsClassesFunction;
         classes: import("../index.js").ReturnsClassesFunction;
+    };
+    textareas: {
+        palettes: {
+            validation: import("../index.js").DefaultValidationPalette;
+        };
+        border: string | undefined;
+        display: string | undefined;
+        outline: string | undefined;
+        placeholder: string | undefined;
+        ring: string | undefined;
+        rounding: string | undefined;
+        shadow: string | undefined;
+        text: string | undefined;
+        transition: string | undefined;
+        base: import("../index.js").BaseFunction;
+        getSizeClasses: import("../index.js").ReturnsClassesFunction;
+        classes: import("../index.js").ReturnsClassesFunction;
+        sizes: import("../index.js").TextareasSizes;
+        rowSizes: import("../index.js").TextareasRowSizes;
+        getRowSize: import("../index.js").ReturnsNumberFunction;
     };
     transitions: {
         [x: string]: any;

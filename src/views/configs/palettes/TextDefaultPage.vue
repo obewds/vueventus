@@ -19,7 +19,7 @@
             <div>
                 <h3 :class="tw.h3">TextDefault</h3>
                 <div :class="tw.flexWrap">
-                    <div v-for="color in globals.data.colors" :class="[TextDefault[color.key]]">
+                    <div v-for="color in globals.data.colors" :class="[String(TextDefault[color.key])]">
                         {{ color.name }}
                     </div>
                 </div>

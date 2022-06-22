@@ -19,7 +19,7 @@
             <div>
                 <h3 :class="tw.h3">VvConfig</h3>
                 <div :class="tw.flexWrap">
-                    <div :class="[VvConfig.buttons.classes(), VvConfig.buttons.palettes.solid.primary, tw.pad]">
+                    <div :class="[VvConfig.buttons.classes(), String(VvConfig.buttons.palettes.solid.primary), tw.pad]">
                         VvConfig.buttons.classes()
                     </div>
                 </div>

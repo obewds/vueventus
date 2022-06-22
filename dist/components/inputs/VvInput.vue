@@ -8,7 +8,7 @@
 
     export default defineComponent({
 
-        name: 'VvEl',
+        name: 'VvInput',
 
         props: {
             color: {

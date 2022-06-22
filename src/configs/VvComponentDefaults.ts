@@ -26,6 +26,7 @@ export default <ConfigDefaults>{
         mode: 'light',
         palette: 'outline',
         size: 'xs',
+        type: 'button',
     },
     "VvEl": {
         borderPalette: 'default',
@@ -41,5 +42,11 @@ export default <ConfigDefaults>{
         palette: 'validation',
         size: 'md',
         type: 'text',
+    },
+    "VvTextarea": {
+        color: 'default',
+        palette: 'validation',
+        size: 'md',
+        rowSize: 'md',
     },
 }

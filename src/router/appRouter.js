@@ -8,6 +8,7 @@ import AnchorsPage from '@/views/configs/AnchorsPage.vue'
 import ButtonsPage from '@/views/configs/ButtonsPage.vue'
 import InputsPage from '@/views/configs/InputsPage.vue'
 import TextPage from '@/views/configs/TextPage.vue'
+import TextareasPage from '@/views/configs/TextareasPage.vue'
 import TransitionsPage from '@/views/configs/TransitionsPage.vue'
 import VvConfigPage from '@/views/configs/VvConfigPage.vue'
 
@@ -20,8 +21,8 @@ import GroundConsolePage from '@/views/configs/palettes/GroundConsolePage.vue'
 import GroundDefaultPage from '@/views/configs/palettes/GroundDefaultPage.vue'
 import GroundMonochromaticPage from '@/views/configs/palettes/GroundMonochromaticPage.vue'
 import GroundPastelPage from '@/views/configs/palettes/GroundPastelPage.vue'
-import InputValidationPage from '@/views/configs/palettes/InputValidationPage.vue'
 import TextDefaultPage from '@/views/configs/palettes/TextDefaultPage.vue'
+import ValidationDefaultPage from '@/views/configs/palettes/ValidationDefaultPage.vue'
 
 // anchor component pages
 import VvAnchorPage from '@/views/components/anchors/VvAnchorPage.vue'
@@ -39,6 +40,9 @@ import VvInputPage from '@/views/components/inputs/VvInputPage.vue'
 // logo component pages
 import VueVentusLogoTextPage from '@/views/components/logos/VueVentusLogoTextPage.vue'
 import VueVentusSpinningMarkPage from '@/views/components/logos/VueVentusSpinningMarkPage.vue'
+
+// textarea component pages
+import VvTextareaPage from '@/views/components/textareas/VvTextareaPage.vue'
 
 
 const router = createRouter({
@@ -74,6 +78,10 @@ const router = createRouter({
             name: 'Text Config Module',
             component: TextPage,
             path: '/configs/text'
+        },{
+            name: 'Textareas Config Module',
+            component: TextareasPage,
+            path: '/configs/textareas'
         },{
             name: 'Transitions Config Module',
             component: TransitionsPage,
@@ -121,8 +129,8 @@ const router = createRouter({
             component: GroundPastelPage,
             path: '/configs/palettes/ground-pastel'
         },{
-            name: 'InputValidation Palette Config Module',
-            component: InputValidationPage,
+            name: 'ValidationDefault Palette Config Module',
+            component: ValidationDefaultPage,
             path: '/configs/palettes/input-validation'
         },{
             name: 'TextDefault Palette Config Module',
@@ -186,6 +194,16 @@ const router = createRouter({
             name: 'VueVentusSpinningMark Component',
             component: VueVentusSpinningMarkPage,
             path: '/components/logos/vueventus-spinning-mark'
+        },
+        
+        //
+        // textarea component pages
+        //
+
+        {
+            name: 'VvTextarea Component',
+            component: VvTextareaPage,
+            path: '/components/textareas/vv-textarea'
         },
 
     ],

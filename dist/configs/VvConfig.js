@@ -3,6 +3,7 @@ import Anchors from './Anchors.js';
 import Buttons from './Buttons.js';
 import Inputs from './Inputs.js';
 import Text from './Text.js';
+import Textareas from './Textareas.js';
 import Transitions from './Transitions.js';
 import AnchorDefault from './palettes/AnchorDefault.js';
 import BorderDefault from './palettes/BorderDefault.js';
@@ -12,8 +13,8 @@ import GroundConsole from './palettes/GroundConsole.js';
 import GroundDefault from './palettes/GroundDefault.js';
 import GroundMonochromatic from './palettes/GroundMonochromatic.js';
 import GroundPastel from './palettes/GroundPastel.js';
-import InputValidation from './palettes/InputValidation.js';
 import TextDefault from './palettes/TextDefault.js';
+import ValidationDefault from './palettes/ValidationDefault.js';
 import VvComponentDefaults from './VvComponentDefaults';
 export default {
     //
@@ -40,7 +41,7 @@ export default {
     inputs: {
         ...Inputs,
         palettes: {
-            validation: InputValidation,
+            validation: ValidationDefault,
         },
     },
     colorMode: {
@@ -73,6 +74,12 @@ export default {
             default: TextDefault,
         },
     },
+    textareas: {
+        ...Textareas,
+        palettes: {
+            validation: ValidationDefault,
+        },
+    },
     transitions: {
         ...Transitions,
     },
@@ -80,46 +87,5 @@ export default {
     // Component Prop Defaults
     //
     defaults: VvComponentDefaults,
-    /*{
-        "VvAnchor": {
-            button: false,
-            buttonBlock: false,
-            buttonFab: false,
-            buttonSize: 'md',
-            color: 'default',
-            external: false,
-            href: '#',
-            palette: 'default',
-        },
-        "VvButton": {
-            block: false,
-            color: 'primary',
-            fab: false,
-            palette: 'solid',
-            size: 'md',
-            type: 'button',
-        },
-        "VvColorModeButton": {
-            color: 'default',
-            mode: 'light',
-            palette: 'outline',
-            size: 'xs',
-        },
-        "VvEl": {
-            borderPalette: 'default',
-            borderColor: '',
-            groundPalette: 'default',
-            groundColor: 'default',
-            tag: 'div',
-            textPalette: 'default',
-            textColor: 'default',
-        },
-        "VvInput": {
-            color: 'default',
-            palette: 'validation',
-            size: 'md',
-            type: 'text',
-        },
-    },*/
 };
 //# sourceMappingURL=VvConfig.js.map

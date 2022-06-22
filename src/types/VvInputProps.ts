@@ -1,12 +1,12 @@
 // ./src/types/VvInputProps.ts
 
-import { DefaultInputPalettes } from '../types/DefaultInputPalettes'
-import { ValidationInputPaletteColors } from '../types/ValidationInputPaletteColors'
+import { DefaultValidationPaletteColors } from '../types/DefaultValidationPaletteColors'
+import { DefaultValidationPalette } from '../types/DefaultValidationPalette'
 import ValidInputTypes from '../validators/ValidInputTypes'
 
 export interface VvInputProps {
-    color: ValidationInputPaletteColors | string
-    palette: DefaultInputPalettes | string
+    color: DefaultValidationPaletteColors | string
+    palette: DefaultValidationPalette | string
     size: string
     type: ValidInputTypes
 }

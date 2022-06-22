@@ -8,7 +8,7 @@
 
     export default defineComponent({
 
-        name: 'VvAnchor',
+        name: 'VvButton',
 
         props: {
             block: {

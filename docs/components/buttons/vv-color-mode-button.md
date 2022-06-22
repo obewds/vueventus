@@ -422,6 +422,38 @@ The {{ $frontmatter.title }} `titleLight` prop sets the component instance title
 
 
 
+
+
+
+## Prop: type
+
+Type: **`String`**  
+Valid Values: [ValidButtonTypes Module](/components/prop-validators#validbuttontypes)  
+Default: **`"{{ VvConfig.defaults.VvColorModeButton.type }}"`**
+
+The {{ $frontmatter.title }} `type` prop sets the button HTML `type` attribute to a value that should be present in the [ValidButtonTypes Module](/components/prop-validators#validbuttontypes) to be a valid value for this component.
+
+### Syntax
+
+```html
+<VvColorModeButton type="submit"/>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvColorModeButton type="submit"/>
+</div>
+
+
+
+
+
+
+
+
+
+
 ## Slot: None
 
 ::: danger NO SLOT AVAILABLE

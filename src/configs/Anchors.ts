@@ -17,7 +17,7 @@ export default <ConfigAnchors>{
             this.focus,
             this.text,
             this.transition,
-        ].join(' ').trim()
+        ].join(' ').replace(/\s+/g,' ').trim()
     },
     sizes: Text.sizes,
     getSizeClasses: function (sizesKey) {
@@ -29,6 +29,6 @@ export default <ConfigAnchors>{
         return [
             this.base(),
             this.getSizeClasses(sizes),
-        ].join(' ').trim()
+        ].join(' ').replace(/\s+/g,' ').trim()
     },
 }

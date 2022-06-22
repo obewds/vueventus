@@ -20,7 +20,7 @@ export default <ConfigButtons>{
             this.focus,
             this.text,
             this.transition,
-        ].join(' ').trim()
+        ].join(' ').replace(/\s+/g,' ').trim()
     },
     sizes: {
         '4xs': 'px-1 py-px text-xxs',
@@ -44,7 +44,7 @@ export default <ConfigButtons>{
         return [
             this.base(),
             this.getSizeClasses(sizes),
-        ].join(' ').trim()
+        ].join(' ').replace(/\s+/g,' ').trim()
     },
     blockDisplay: 'block w-full flex flex-col items-center justify-center',
     blockBase: function () {
@@ -56,7 +56,7 @@ export default <ConfigButtons>{
             this.focus,
             this.text,
             this.transition,
-        ].join(' ').trim()
+        ].join(' ').replace(/\s+/g,' ').trim()
     },
     blockSizes: {
         '4xs': 'px-1 py-1 text-2xs',
@@ -80,7 +80,7 @@ export default <ConfigButtons>{
         return [
             this.blockBase(),
             this.getBlockSizeClasses(sizes),
-        ].join(' ').trim()
+        ].join(' ').replace(/\s+/g,' ').trim()
     },
     fabDisplay: 'inline-flex items-center items-center justify-center',
     fabBase: function () {
@@ -92,7 +92,7 @@ export default <ConfigButtons>{
             this.focus,
             this.text,
             this.transition,
-        ].join(' ').trim()
+        ].join(' ').replace(/\s+/g,' ').trim()
     },
     fabSizes: {
         '4xs': 'w-6 h-6 text-xxs',
@@ -116,6 +116,6 @@ export default <ConfigButtons>{
         return [
             this.fabBase(),
             this.getFabSizeClasses(sizes),
-        ].join(' ').trim()
+        ].join(' ').replace(/\s+/g,' ').trim()
     },
 }

@@ -21,7 +21,7 @@ export default <ConfigText>{
             this.spacing,
             this.weight,
             this.wordBreak,
-        ].join(' ').trim()
+        ].join(' ').replace(/\s+/g,' ').trim()
     },
     sizes: {
         '5xs': 'text-5xs',
@@ -54,6 +54,6 @@ export default <ConfigText>{
         return [
             this.base(),
             this.getSizeClasses(sizes),
-        ].join(' ').trim()
+        ].join(' ').replace(/\s+/g,' ').trim()
     },
 }

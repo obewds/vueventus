@@ -154,6 +154,7 @@ function sidebarModules() {
                 { text: 'Buttons Config', link: '/modules/configs/buttons' },
                 { text: 'Inputs Config', link: '/modules/configs/inputs' },
                 { text: 'Text Config', link: '/modules/configs/text' },
+                { text: 'Textareas Config', link: '/modules/configs/textareas' },
                 { text: 'Transitions Config', link: '/modules/configs/transitions' },
                 { text: 'VvConfig', link: '/modules/configs/vv-config' },
                 { text: 'App Specific Config', link: '/modules/configs/app-specific-config' },
@@ -171,8 +172,8 @@ function sidebarModules() {
                 { text: 'GroundDefault Palette', link: '/modules/palettes/ground-default' },
                 { text: 'GroundMonochromatic Palette', link: '/modules/palettes/ground-monochromatic' },
                 { text: 'GroundPastel Palette', link: '/modules/palettes/ground-pastel' },
-                { text: 'InputValidation Palette', link: '/modules/palettes/input-validation' },
                 { text: 'TextDefault Palette', link: '/modules/palettes/text-default' },
+                { text: 'ValidationDefault Palette', link: '/modules/palettes/validation-default' },
             ]
         },{
             text: 'Helper Modules',
@@ -236,6 +237,12 @@ function sidebarComponents() {
             items: [
                 { text: 'VueVentusLogoText', link: '/components/logos/vueventus-logo-text' },
                 { text: 'VueVentusSpinningMark', link: '/components/logos/vueventus-spinning-mark' },
+            ]
+        },{
+            text: 'Textarea Components',
+            collapsible: true,
+            items: [
+                { text: 'VvTextarea', link: '/components/textareas/vv-textarea' },
             ]
         }
     ]

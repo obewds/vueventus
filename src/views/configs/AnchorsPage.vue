@@ -22,7 +22,7 @@
             <div>
                 <h3 :class="tw.h3">Anchors</h3>
                 <div :class="tw.flexWrap">
-                    <div :class="[vv.anchors.classes(), vv.anchors.palettes.default.primary, tw.pad]">
+                    <div :class="[String(vv?.anchors.classes()), String(vv?.anchors.palettes.default.primary), tw.pad]">
                         Anchors.classes()
                     </div>
                 </div>

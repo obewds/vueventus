@@ -1,10 +1,10 @@
 // ./src/types/ConfigInputs.ts
 
 import { BaseFunction } from './BaseFunction'
+import { DefaultValidationPalette } from './DefaultValidationPalette'
 import { EmptyPalette } from './EmptyPalette'
 import { InputsSizes } from './InputsSizes'
 import { ReturnsClassesFunction } from './ReturnsClassesFunction'
-import { ValidationInputPaletteColors } from '../types/ValidationInputPaletteColors'
 
 export interface ConfigInputs {
     border: string | undefined
@@ -12,6 +12,8 @@ export interface ConfigInputs {
     outline: string | undefined
     placeholder: string | undefined
     ring: string | undefined
+    rounding: string | undefined
+    shadow: string | undefined
     text: string | undefined
     transition: string | undefined
     base: BaseFunction
@@ -19,8 +21,8 @@ export interface ConfigInputs {
     getSizeClasses: ReturnsClassesFunction
     classes: ReturnsClassesFunction
     palettes: {
-        validation: ValidationInputPaletteColors,
+        validation: DefaultValidationPalette
         [key: string]: EmptyPalette | undefined
-    },
+    }
     [key: string]: any
 }

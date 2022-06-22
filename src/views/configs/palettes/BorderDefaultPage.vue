@@ -19,7 +19,7 @@
             <div>
                 <h3 :class="tw.h3">BorderDefault</h3>
                 <div :class="tw.flexWrap">
-                    <div v-for="color in globals.data.colors" :class="[BorderDefault[color.key], tw.border, tw.pad]">
+                    <div v-for="color in globals.data.colors" :class="[String(BorderDefault[color.key]), tw.border, tw.pad]">
                         {{ color.name }}
                     </div>
                 </div>

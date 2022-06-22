@@ -23,6 +23,7 @@ export default {
         mode: 'light',
         palette: 'outline',
         size: 'xs',
+        type: 'button',
     },
     "VvEl": {
         borderPalette: 'default',
@@ -38,6 +39,12 @@ export default {
         palette: 'validation',
         size: 'md',
         type: 'text',
+    },
+    "VvTextarea": {
+        color: 'default',
+        palette: 'validation',
+        size: 'md',
+        rowSize: 'md',
     },
 };
 //# sourceMappingURL=VvComponentDefaults.js.map

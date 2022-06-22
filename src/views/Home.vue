@@ -109,6 +109,22 @@
 
 
 
+        <div :class="tw.subhead">
+            VUE TEXTAREA COMPONENTS
+        </div>
+
+        <div :class="[tw.grid, 'grid-cols-1']">
+
+            <DevViewLinkCard icon="component" to="/components/textareas/vv-textarea">
+                VvTextarea
+            </DevViewLinkCard>
+
+        </div>
+
+
+
+
+
 
         <div :class="tw.subhead">
             CONFIG MODULES
@@ -130,6 +146,10 @@
 
             <DevViewLinkCard icon="config" to="/configs/text" :link-classes="tw.gridCardLinkModule">
                 Text
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="config" to="/configs/textareas" :link-classes="tw.gridCardLinkModule">
+                Textareas
             </DevViewLinkCard>
 
             <DevViewLinkCard icon="config" to="/configs/transitions" :link-classes="tw.gridCardLinkModule">
@@ -184,7 +204,7 @@
             </DevViewLinkCard>
 
             <DevViewLinkCard icon="palette" to="/configs/palettes/input-validation" :link-classes="tw.gridCardLinkPalette">
-                InputValidation
+                ValidationDefault
             </DevViewLinkCard>
 
             <DevViewLinkCard icon="palette" to="/configs/palettes/text-default" :link-classes="tw.gridCardLinkPalette">
