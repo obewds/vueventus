@@ -26,6 +26,7 @@ export default <ConfigDefaults>{
         mode: 'light',
         palette: 'outline',
         size: 'xs',
+        type: 'button',
     },
     "VvEl": {
         borderPalette: 'default',
