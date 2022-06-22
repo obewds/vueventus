@@ -1,3 +1,4 @@
+import ValidButtonTypes from '../../validators/ValidButtonTypes';
 import ValidColorModes from '../../validators/ValidColorModes';
 declare const _default: import("vue").DefineComponent<{
     mode: {
@@ -48,6 +49,11 @@ declare const _default: import("vue").DefineComponent<{
     titleLight: {
         type: StringConstructor;
         default: string;
+    };
+    type: {
+        type: StringConstructor;
+        default: "button" | "submit" | "reset";
+        validator: (prop: ValidButtonTypes) => boolean;
     };
 }, {
     mode: import("vue").Ref<string>;
@@ -105,9 +111,15 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
+    type: {
+        type: StringConstructor;
+        default: "button" | "submit" | "reset";
+        validator: (prop: ValidButtonTypes) => boolean;
+    };
 }>>, {
     color: string;
     palette: string;
+    type: string;
     size: string;
     mode: string;
     groundDark: string;

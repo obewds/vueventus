@@ -2,11 +2,11 @@ import ValidInputTypes from '../../validators/ValidInputTypes';
 declare const _default: import("vue").DefineComponent<{
     color: {
         type: StringConstructor;
-        default: string | import("../..").ValidationInputPaletteColors;
+        default: string | import("../..").DefaultValidationPaletteColors;
     };
     palette: {
         type: StringConstructor;
-        default: string | import("../..").DefaultInputPalettes;
+        default: string | import("../..").DefaultValidationPalette;
     };
     size: {
         type: StringConstructor;
@@ -22,11 +22,11 @@ declare const _default: import("vue").DefineComponent<{
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     color: {
         type: StringConstructor;
-        default: string | import("../..").ValidationInputPaletteColors;
+        default: string | import("../..").DefaultValidationPaletteColors;
     };
     palette: {
         type: StringConstructor;
-        default: string | import("../..").DefaultInputPalettes;
+        default: string | import("../..").DefaultValidationPalette;
     };
     size: {
         type: StringConstructor;

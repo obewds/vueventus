@@ -48,13 +48,15 @@ export default function (appTwConfig: typeof VvConfig): {
     };
     inputs: {
         palettes: {
-            validation: import("..").ValidationInputPaletteColors;
+            validation: import("..").DefaultValidationPalette;
         };
         border: string | undefined;
         display: string | undefined;
         outline: string | undefined;
         placeholder: string | undefined;
         ring: string | undefined;
+        rounding: string | undefined;
+        shadow: string | undefined;
         text: string | undefined;
         transition: string | undefined;
         base: import("..").BaseFunction;
@@ -102,6 +104,26 @@ export default function (appTwConfig: typeof VvConfig): {
         sizes: import("..").TextSizes;
         getSizeClasses: import("..").ReturnsClassesFunction;
         classes: import("..").ReturnsClassesFunction;
+    };
+    textareas: {
+        palettes: {
+            validation: import("..").DefaultValidationPalette;
+        };
+        border: string | undefined;
+        display: string | undefined;
+        outline: string | undefined;
+        placeholder: string | undefined;
+        ring: string | undefined;
+        rounding: string | undefined;
+        shadow: string | undefined;
+        text: string | undefined;
+        transition: string | undefined;
+        base: import("..").BaseFunction;
+        getSizeClasses: import("..").ReturnsClassesFunction;
+        classes: import("..").ReturnsClassesFunction;
+        sizes: import("..").TextareasSizes;
+        rowSizes: import("..").TextareasRowSizes;
+        getRowSize: import("..").ReturnsNumberFunction;
     };
     transitions: {
         [x: string]: any;

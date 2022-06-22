@@ -3,11 +3,13 @@ import { VvButtonProps } from '../types/VvButtonProps';
 import { VvColorModeButtonProps } from '../types/VvColorModeButtonProps';
 import { VvElProps } from '../types/VvElProps';
 import { VvInputProps } from '../types/VvInputProps';
+import { VvTextareaProps } from '../types/VvTextareaProps';
 export interface ConfigDefaults {
     VvAnchor: VvAnchorProps;
     VvButton: VvButtonProps;
     VvColorModeButton: VvColorModeButtonProps;
     VvEl: VvElProps;
     VvInput: VvInputProps;
+    VvTextarea: VvTextareaProps;
     [key: string]: any;
 }

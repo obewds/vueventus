@@ -435,7 +435,7 @@ The {{ $frontmatter.title }} `type` prop sets the button HTML `type` attribute t
 
 ### Syntax
 
-```HTML
+```html
 <VvColorModeButton type="submit"/>
 ```
 

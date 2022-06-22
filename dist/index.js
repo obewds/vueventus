@@ -3,6 +3,7 @@ export { default as Anchors } from './configs/Anchors';
 export { default as Buttons } from './configs/Buttons';
 export { default as Inputs } from './configs/Inputs';
 export { default as Text } from './configs/Text';
+export { default as Textareas } from './configs/Textareas';
 export { default as Transitions } from './configs/Transitions';
 export { default as VvConfig } from './configs/VvConfig';
 // .src/configs/palettes
@@ -14,8 +15,8 @@ export { default as GroundConsole } from './configs/palettes/GroundConsole';
 export { default as GroundDefault } from './configs/palettes/GroundDefault';
 export { default as GroundMonochromatic } from './configs/palettes/GroundMonochromatic';
 export { default as GroundPastel } from './configs/palettes/GroundPastel';
-export { default as InputValidation } from './configs/palettes/InputValidation';
 export { default as TextDefault } from './configs/palettes/TextDefault';
+export { default as ValidationDefault } from './configs/palettes/ValidationDefault';
 // .src/helpers
 export { default as camelCaseToTitleCase } from './helpers/camelCaseToTitleCase';
 export { default as digitsOnly } from './helpers/digitsOnly';
@@ -52,4 +53,6 @@ export { default as VvInput } from './components/inputs/VvInput.vue';
 // .src/components/logos
 export { default as VueVentusLogoText } from './components/logos/VueVentusLogoText.vue';
 export { default as VueVentusSpinningMark } from './components/logos/VueVentusSpinningMark.vue';
+// .src/components/textareas
+export { default as VvTextarea } from './components/textareas/VvTextarea.vue';
 //# sourceMappingURL=index.js.map

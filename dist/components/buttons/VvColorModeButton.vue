@@ -3,6 +3,7 @@
 <script lang="ts">
 
     import { computed, defineComponent, onMounted, ref } from 'vue'
+    import ValidButtonTypes from '../../validators/ValidButtonTypes'
     import ValidColorModes from '../../validators/ValidColorModes'
     import VvButton from './VvButton.vue'
     import VvConfig from '../../configs/VvConfig.js'
@@ -15,8 +16,6 @@
             VvButton
         },
 
-        // #TODO: add prop for button type (validated) so this compo can be wrapped in a form
-        //        to persist user/ip's w/ color mode pref of user
         props: {
             mode: {
                 type: String,
@@ -66,6 +65,11 @@
             titleLight: {
                 type: String,
                 default: VvConfig.colorMode.light.title,
+            },
+            type: {
+                type: String,
+                default: VvConfig.defaults.VvColorModeButton.type,
+                validator: (prop: ValidButtonTypes) => (ValidButtonTypes).includes(prop),
             },
         },
 

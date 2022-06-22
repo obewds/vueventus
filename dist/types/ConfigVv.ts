@@ -7,6 +7,7 @@ import { ConfigColorMode } from './ConfigColorMode'
 import { ConfigGrounds } from './ConfigGrounds'
 import { ConfigInputs } from './ConfigInputs'
 import { ConfigText } from './ConfigText'
+import { ConfigTextareas } from './ConfigTextareas'
 import { ConfigTransitions } from './ConfigTransitions'
 
 export interface ConfigVv {
@@ -17,6 +18,7 @@ export interface ConfigVv {
     colorMode: ConfigColorMode
     grounds: ConfigGrounds
     text: ConfigText
+    textareas: ConfigTextareas
     transitions: ConfigTransitions
     [key: string | number ]: any
 }
