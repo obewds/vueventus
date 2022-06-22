@@ -148,6 +148,10 @@
                 Text
             </DevViewLinkCard>
 
+            <DevViewLinkCard icon="config" to="/configs/textareas" :link-classes="tw.gridCardLinkModule">
+                Textareas
+            </DevViewLinkCard>
+
             <DevViewLinkCard icon="config" to="/configs/transitions" :link-classes="tw.gridCardLinkModule">
                 Transitions
             </DevViewLinkCard>
