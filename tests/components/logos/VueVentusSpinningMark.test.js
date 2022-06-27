@@ -40,3 +40,17 @@ test('VueVentusSpinningMark.vue component returns the expected output when enabl
     expect(wrapper.html()).toContain('animate-')
     
 })
+
+
+
+test('VueVentusSpinningMark.vue component returns the expected output when enable class fills is true', async () => {
+
+    const wrapper = mount(VueVentusSpinningMark, {
+        props: {
+            enableClassFills: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('class="fill-')
+    
+})
