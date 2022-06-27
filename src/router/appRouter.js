@@ -37,6 +37,9 @@ import VvElPage from '@/views/components/elements/VvElPage.vue'
 // input component pages
 import VvInputPage from '@/views/components/inputs/VvInputPage.vue'
 
+// list component pages
+import VvListItemPage from '@/views/components/lists/VvListItemPage.vue'
+
 // logo component pages
 import VueVentusLogoTextPage from '@/views/components/logos/VueVentusLogoTextPage.vue'
 import VueVentusSpinningMarkPage from '@/views/components/logos/VueVentusSpinningMarkPage.vue'
@@ -194,6 +197,16 @@ const router = createRouter({
             name: 'VueVentusSpinningMark Component',
             component: VueVentusSpinningMarkPage,
             path: '/components/logos/vueventus-spinning-mark'
+        },
+        
+        //
+        // list component pages
+        //
+
+        {
+            name: 'VvListItem Component',
+            component: VvListItemPage,
+            path: '/components/lists/vv-list-item'
         },
         
         //
