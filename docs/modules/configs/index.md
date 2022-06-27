@@ -20,10 +20,12 @@ title: Config Modules
 
 * [Anchors Config](/modules/configs/anchors)
 * [Buttons Config](/modules/configs/buttons)
+* [ColorModes Config](/modules/configs/color-modes)
 * [Inputs Config](/modules/configs/inputs)
 * [Text Config](/modules/configs/text)
 * [Textareas Config](/modules/configs/textareas)
 * [Transitions Config](/modules/configs/transitions)
+* [VvComponentDefaults](/modules/configs/vv-component-defaults)
 * [VvConfig](/modules/configs/vv-config)
 * [App Specific Config](/modules/configs/app-specific-config)
 

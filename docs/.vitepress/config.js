@@ -152,10 +152,12 @@ function sidebarModules() {
                 { text: 'Config Modules', link: '/modules/configs/' },
                 { text: 'Anchors Config', link: '/modules/configs/anchors' },
                 { text: 'Buttons Config', link: '/modules/configs/buttons' },
+                { text: 'ColorModes Config', link: '/modules/configs/color-modes' },
                 { text: 'Inputs Config', link: '/modules/configs/inputs' },
                 { text: 'Text Config', link: '/modules/configs/text' },
                 { text: 'Textareas Config', link: '/modules/configs/textareas' },
                 { text: 'Transitions Config', link: '/modules/configs/transitions' },
+                { text: 'VvComponentDefaults', link: '/modules/configs/vv-component-defaults' },
                 { text: 'VvConfig', link: '/modules/configs/vv-config' },
                 { text: 'App Specific Config', link: '/modules/configs/app-specific-config' },
             ]
@@ -230,6 +232,12 @@ function sidebarComponents() {
             collapsible: true,
             items: [
                 { text: 'VvInput', link: '/components/inputs/vv-input' },
+            ]
+        },{
+            text: 'List Components',
+            collapsible: true,
+            items: [
+                { text: 'VvListItem', link: '/components/lists/vv-list-item' },
             ]
         },{
             text: 'Logo Components',
