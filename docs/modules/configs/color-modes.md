@@ -136,14 +136,6 @@ ColorModes.dark.title = ''
 
 
 
-<!--- #TODO write docs for ColorModes.ts config module --->
-
-
-
-
-
-
-
 
 
 

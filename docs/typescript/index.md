@@ -36,6 +36,9 @@ title: Typescript Modules
 
 ## Typescript Interfaces
 
+<!-- #TODO: link to section for VvListItemProps.ts -->
+
+
 * [ButtonsSizes](/typescript/interfaces#buttonssizes)
 * [ColorMode](/typescript/interfaces#colormode)
 * [ConfigAnchors](/typescript/interfaces#configanchors)
@@ -66,6 +69,7 @@ title: Typescript Modules
 * [VvColorModeButtonProps](/typescript/interfaces#vvcolormodebuttonprops)
 * [VvElProps](/typescript/interfaces#vvelprops)
 * [VvInputProps](/typescript/interfaces#vvinputprops)
+* [VvListItemProps](/typescript/interfaces#vvlistitemprops)
 * [VvTextareaProps](/typescript/interfaces#vvtextareaprops)
 
 
