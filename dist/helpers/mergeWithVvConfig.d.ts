@@ -29,6 +29,8 @@ export default function (appTwConfig: typeof VvConfig): {
         disabled: string | undefined;
         display: string | undefined;
         focus: string | undefined;
+        rounding: string | undefined;
+        shadow: string | undefined;
         text: string | undefined;
         transition: string | undefined;
         base: import("..").BaseFunction;
@@ -65,20 +67,9 @@ export default function (appTwConfig: typeof VvConfig): {
         classes: import("..").ReturnsClassesFunction;
     };
     colorMode: {
-        dark: {
-            bg: string;
-            ground: string;
-            hex: string;
-            text: string;
-            title: string;
-        };
-        light: {
-            bg: string;
-            ground: string;
-            hex: string;
-            text: string;
-            title: string;
-        };
+        [x: string]: import("..").ColorMode;
+        dark: import("..").ColorMode;
+        light: import("..").ColorMode;
     };
     grounds: {
         palettes: {

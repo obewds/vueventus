@@ -12,6 +12,8 @@ export interface ConfigButtons {
     disabled: string | undefined
     display: string | undefined
     focus: string | undefined
+    rounding: string | undefined
+    shadow: string | undefined
     text: string | undefined
     transition: string | undefined
     base: BaseFunction

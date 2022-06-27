@@ -88,6 +88,22 @@
 
 
 
+        <div :class="tw.subhead">
+            VUE LIST COMPONENTS
+        </div>
+
+        <div :class="[tw.grid, 'grid-cols-1']">
+
+            <DevViewLinkCard icon="component" to="/components/lists/vv-list-item">
+                VvListItem
+            </DevViewLinkCard>
+
+        </div>
+
+
+
+
+
 
         <div :class="tw.subhead">
             VUE LOGO COMPONENTS

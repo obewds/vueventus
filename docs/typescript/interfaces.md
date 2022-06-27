@@ -807,6 +807,34 @@ import type { VvInputProps } from '@obewds/vueventus/dist/types/VvInputProps'
 
 
 
+## VvListItemProps
+
+To import the compiled library version of the VvListItemProps Type:
+
+```javascript
+import type { VvListItemProps } from '@obewds/vueventus'
+```
+
+To import the {{ $frontmatter.title }} `.ts` file directly:
+
+```javascript
+import type { VvListItemProps } from '@obewds/vueventus/dist/types/VvListItemProps'
+```
+
+### Module Code
+
+<<< @/../src/types/VvListItemProps.ts
+
+
+
+
+
+
+
+
+
+
+
 ## VvTextareaProps
 
 To import the compiled library version of the VvTextareaProps Type:

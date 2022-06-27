@@ -1,6 +1,7 @@
 // .src/configs
 export { default as Anchors } from './configs/Anchors';
 export { default as Buttons } from './configs/Buttons';
+export { default as ColorModes } from './configs/ColorModes';
 export { default as Inputs } from './configs/Inputs';
 export { default as Text } from './configs/Text';
 export { default as Textareas } from './configs/Textareas';
@@ -50,6 +51,8 @@ export { default as VvColorModeButton } from './components/buttons/VvColorModeBu
 export { default as VvEl } from './components/elements/VvEl.vue';
 // .src/components/inputs
 export { default as VvInput } from './components/inputs/VvInput.vue';
+// .src/components/lists
+export { default as VvListItem } from './components/lists/VvListItem.vue';
 // .src/components/logos
 export { default as VueVentusLogoText } from './components/logos/VueVentusLogoText.vue';
 export { default as VueVentusSpinningMark } from './components/logos/VueVentusSpinningMark.vue';

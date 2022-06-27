@@ -100,6 +100,41 @@ The {{ $frontmatter.title }} `enableAnimation` prop determines if the component 
 
 
 
+
+
+
+## Prop: enableClassFills
+
+Type: **`Boolean`**  
+Default: **`true`**
+
+The {{ $frontmatter.title }} `enableClassFills` prop determines if the component applies optional Tailwind CSS classes to determine the output `<svg>` element fill colors instead of the fill color code props.
+
+### Syntax
+
+```html
+<VueVentusSpinningMark
+    class="w-16"
+    :enable-class-fills="false"
+/>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VueVentusSpinningMark
+        class="w-16"
+        :enable-class-fills="false"
+    />
+</div>
+
+
+
+
+
+
+
+
 ## Prop: fillOne
 
 Type: **`String`**  
@@ -132,6 +167,44 @@ The {{ $frontmatter.title }} `fillOne` prop sets the color code for two of the f
 
 
 
+
+
+
+
+## Prop: fillOneClasses
+
+Type: **`String`**  
+Default: **`"fill-emerald-500"`**
+
+The {{ $frontmatter.title }} `fillOneClasses` prop sets the color class value for two of the four mark shapes.
+
+### Syntax
+
+```html
+<VueVentusSpinningMark
+    :enable-class-fills="true"
+    fill-one-classes="fill-emerald-500"
+    fill-two-classes="fill-cyan-500"
+    class="w-16"
+/>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VueVentusSpinningMark
+        :enable-class-fills="true"
+        fill-one-classes="fill-emerald-500"
+        fill-two-classes="fill-cyan-500"
+        class="w-16"
+    />
+</div>
+
+
+
+
+
+
 ## Prop: fillTwo
 
 Type: **`String`**  
@@ -155,6 +228,44 @@ The {{ $frontmatter.title }} `fillTwo` prop sets the color code for the other tw
     <VueVentusSpinningMark
         fill-one="#666"
         fill-two="#999"
+        class="w-16"
+    />
+</div>
+
+
+
+
+
+
+
+
+
+
+## Prop: fillTwoClasses
+
+Type: **`String`**  
+Default: **`"fill-cyan-500"`**
+
+The {{ $frontmatter.title }} `fillTwoClasses` prop sets the color class value for the other two of the four mark shapes.
+
+### Syntax
+
+```html
+<VueVentusSpinningMark
+    :enable-class-fills="true"
+    fill-one-classes="fill-emerald-500"
+    fill-two-classes="fill-cyan-500"
+    class="w-16"
+/>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VueVentusSpinningMark
+        :enable-class-fills="true"
+        fill-one-classes="fill-emerald-500"
+        fill-two-classes="fill-cyan-500"
         class="w-16"
     />
 </div>

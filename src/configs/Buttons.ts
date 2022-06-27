@@ -9,6 +9,8 @@ export default <ConfigButtons>{
     disabled: 'disabled:opacity-25',
     display: 'inline-flex items-center',
     focus: 'focus:outline-none focus:ring focus:ring-opacity-50',
+    rounding: '',
+    shadow: '',
     text: 'font-semibold uppercase tracking-widest',
     transition: Transitions.classes('all', 'inOut', '300'),
     base: function () {
@@ -18,6 +20,8 @@ export default <ConfigButtons>{
             this.disabled,
             this.display,
             this.focus,
+            this.rounding,
+            this.shadow,
             this.text,
             this.transition,
         ].join(' ').replace(/\s+/g,' ').trim()
@@ -54,6 +58,8 @@ export default <ConfigButtons>{
             this.disabled,
             this.blockDisplay,
             this.focus,
+            this.rounding,
+            this.shadow,
             this.text,
             this.transition,
         ].join(' ').replace(/\s+/g,' ').trim()
@@ -90,6 +96,8 @@ export default <ConfigButtons>{
             this.disabled,
             this.fabDisplay,
             this.focus,
+            this.rounding,
+            this.shadow,
             this.text,
             this.transition,
         ].join(' ').replace(/\s+/g,' ').trim()

@@ -60,6 +60,47 @@ Here's the script that needs to be added to an app's main/base HTML:
 </html>
 ```
 
+Additionally and for completeness when installing of the {{ $frontmatter.title }}, after adding the script above to a code base there's still one more important step to do.
+
+It's generally a good idea to go ahead and add an additional `localStorage` check within Vue, so Vue and the application both match what the script above adds to `localStorage` on page load, like this:
+
+```html
+<script setup lang="ts">
+
+    // ./src/App.vue
+
+    import { VvColorModeButton } from '@obewds/vueventus'
+
+    const colorMode = localStorage && localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') : 'light'
+
+</script>
+
+<template>
+
+    <main>
+
+        <aside class="fixed bottom-0 right-0 text-right z-40">
+
+            <nav class="relative bottom-0 pb-3 pr-4">
+
+                <div class="flex flex-col justify-end space-y-3">
+
+                    <VvColorModeButton :mode="(colorMode as string)"/>
+
+                </div>
+
+            </nav>
+
+        </aside>
+
+    </main>
+
+</template>
+```
+
+
+
+
 
 
 

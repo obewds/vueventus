@@ -40,6 +40,13 @@ export default {
         size: 'md',
         type: 'text',
     },
+    "VvListItem": {
+        color: 'default',
+        enableColoredSymbols: true,
+        palette: 'default',
+        symbolColor: 'primary',
+        symbolPalette: 'default',
+    },
     "VvTextarea": {
         color: 'default',
         palette: 'validation',
