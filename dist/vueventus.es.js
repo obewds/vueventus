@@ -200,6 +200,8 @@ var Buttons = {
   disabled: "disabled:opacity-25",
   display: "inline-flex items-center",
   focus: "focus:outline-none focus:ring focus:ring-opacity-50",
+  rounding: "",
+  shadow: "",
   text: "font-semibold uppercase tracking-widest",
   transition: Transitions.classes("all", "inOut", "300"),
   base: function() {
@@ -209,6 +211,8 @@ var Buttons = {
       this.disabled,
       this.display,
       this.focus,
+      this.rounding,
+      this.shadow,
       this.text,
       this.transition
     ].join(" ").replace(/\s+/g, " ").trim();
@@ -245,6 +249,8 @@ var Buttons = {
       this.disabled,
       this.blockDisplay,
       this.focus,
+      this.rounding,
+      this.shadow,
       this.text,
       this.transition
     ].join(" ").replace(/\s+/g, " ").trim();
@@ -281,6 +287,8 @@ var Buttons = {
       this.disabled,
       this.fabDisplay,
       this.focus,
+      this.rounding,
+      this.shadow,
       this.text,
       this.transition
     ].join(" ").replace(/\s+/g, " ").trim();
@@ -308,6 +316,20 @@ var Buttons = {
       this.fabBase(),
       this.getFabSizeClasses(sizes)
     ].join(" ").replace(/\s+/g, " ").trim();
+  }
+};
+var ColorModes = {
+  dark: {
+    ground: "bg-gray-900",
+    hex: "#242426",
+    text: "text-gray-100",
+    title: "Enable Dark Mode"
+  },
+  light: {
+    ground: "bg-gray-100",
+    hex: "#e1e1e3",
+    text: "text-gray-900",
+    title: "Enable Light Mode"
   }
 };
 var Inputs = {
@@ -459,7 +481,7 @@ var GroundPastel = {
   success: "text-black bg-green-300 dark:bg-green-400"
 };
 var TextDefault = {
-  "default": "",
+  "default": "dark:text-gray-100 text-gray-900",
   error: "text-rose-500 dark:text-rose-300",
   primary: "text-blue-500 dark:text-blue-300",
   secondary: "text-violet-500 dark:text-violet-300",
@@ -511,6 +533,13 @@ var VvComponentDefaults = {
     size: "md",
     type: "text"
   },
+  "VvListItem": {
+    color: "default",
+    enableColoredSymbols: true,
+    palette: "default",
+    symbolColor: "primary",
+    symbolPalette: "default"
+  },
   "VvTextarea": {
     color: "default",
     palette: "validation",
@@ -540,22 +569,7 @@ var VvConfig = {
       validation: ValidationDefault
     }
   }),
-  colorMode: {
-    dark: {
-      bg: "bg-gray-900",
-      ground: "bg-gray-900",
-      hex: "#242426",
-      text: "text-gray-100",
-      title: "Enable Dark Mode"
-    },
-    light: {
-      bg: "bg-gray-100",
-      ground: "bg-gray-100",
-      hex: "#e1e1e3",
-      text: "text-gray-900",
-      title: "Enable Light Mode"
-    }
-  },
+  colorMode: __spreadValues({}, ColorModes),
   grounds: {
     palettes: {
       console: GroundConsole,
@@ -924,7 +938,7 @@ var _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$7 = defineComponent({
+const _sfc_main$8 = defineComponent({
   name: "VvAnchor",
   props: {
     button: {
@@ -1006,7 +1020,7 @@ const _sfc_main$7 = defineComponent({
 });
 const _hoisted_1$6 = ["href"];
 const _hoisted_2$3 = ["href"];
-function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
   return _ctx.external ? (openBlock(), createElementBlock("a", {
     key: 0,
     href: _ctx.href,
@@ -1023,8 +1037,8 @@ function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
     renderSlot(_ctx.$slots, "default")
   ], 10, _hoisted_2$3));
 }
-var VvAnchor = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7]]);
-const _sfc_main$6 = defineComponent({
+var VvAnchor = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$8]]);
+const _sfc_main$7 = defineComponent({
   name: "VvButton",
   props: {
     block: {
@@ -1090,7 +1104,7 @@ const _sfc_main$6 = defineComponent({
   }
 });
 const _hoisted_1$5 = ["type"];
-function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("button", {
     type: _ctx.btnType,
     class: normalizeClass(_ctx.classes)
@@ -1098,8 +1112,8 @@ function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
     renderSlot(_ctx.$slots, "default")
   ], 10, _hoisted_1$5);
 }
-var VvButton = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$6]]);
-const _sfc_main$5 = defineComponent({
+var VvButton = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7]]);
+const _sfc_main$6 = defineComponent({
   name: "VvColorModeButton",
   components: {
     VvButton
@@ -1230,7 +1244,7 @@ const _hoisted_5 = /* @__PURE__ */ createElementVNode("path", {
 const _hoisted_6 = [
   _hoisted_5
 ];
-function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_VvButton = resolveComponent("VvButton");
   return openBlock(), createBlock(_component_VvButton, {
     title: _ctx.title,
@@ -1249,8 +1263,8 @@ function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
   }, 8, ["title", "color", "palette", "size"]);
 }
-var VvColorModeButton = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$5]]);
-const _sfc_main$4 = defineComponent({
+var VvColorModeButton = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$6]]);
+const _sfc_main$5 = defineComponent({
   name: "VvEl",
   props: {
     borderPalette: {
@@ -1301,7 +1315,7 @@ const _sfc_main$4 = defineComponent({
     return { classes };
   }
 });
-function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createBlock(resolveDynamicComponent(_ctx.tag), {
     class: normalizeClass(_ctx.classes)
   }, {
@@ -1311,8 +1325,8 @@ function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
     _: 3
   }, 8, ["class"]);
 }
-var VvEl = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$4]]);
-const _sfc_main$3 = defineComponent({
+var VvEl = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$5]]);
+const _sfc_main$4 = defineComponent({
   name: "VvInput",
   props: {
     color: {
@@ -1353,13 +1367,72 @@ const _sfc_main$3 = defineComponent({
   }
 });
 const _hoisted_1$3 = ["type"];
-function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("input", {
     type: _ctx.type,
     class: normalizeClass(_ctx.classes)
   }, null, 10, _hoisted_1$3);
 }
-var VvInput = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3]]);
+var VvInput = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$4]]);
+const _sfc_main$3 = defineComponent({
+  name: "VvListItem",
+  props: {
+    color: {
+      type: String,
+      default: VvConfig.defaults.VvListItem.color
+    },
+    enableColoredSymbols: {
+      type: Boolean,
+      default: VvConfig.defaults.VvListItem.enableColoredSymbols
+    },
+    palette: {
+      type: String,
+      default: VvConfig.defaults.VvListItem.palette
+    },
+    symbolColor: {
+      type: String,
+      default: VvConfig.defaults.VvListItem.symbolColor
+    },
+    symbolPalette: {
+      type: String,
+      default: VvConfig.defaults.VvListItem.symbolPalette
+    }
+  },
+  setup(props) {
+    const vv = Object.keys(inject("vv", {})).length > 0 ? inject("vv") : VvConfig;
+    let baseClasses = vv == null ? void 0 : vv.text.base();
+    let classes = computed(() => {
+      var _a, _b, _c;
+      let output = [baseClasses];
+      if ((_c = (_b = (_a = vv == null ? void 0 : vv.text) == null ? void 0 : _a.palettes) == null ? void 0 : _b[props.palette]) == null ? void 0 : _c[props.color]) {
+        output.push(vv.text.palettes[props.palette][props.color]);
+      }
+      return output.join(" ").trim();
+    });
+    let symbolClasses = computed(() => {
+      var _a, _b, _c;
+      let output = [];
+      if ((_c = (_b = (_a = vv == null ? void 0 : vv.text) == null ? void 0 : _a.palettes) == null ? void 0 : _b[props.symbolPalette]) == null ? void 0 : _c[props.symbolColor]) {
+        output.push(vv.text.palettes[props.symbolPalette][props.symbolColor]);
+      }
+      return output.join(" ").trim();
+    });
+    return { classes, symbolClasses };
+  }
+});
+function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("li", {
+    class: normalizeClass(_ctx.enableColoredSymbols === true ? _ctx.symbolClasses : _ctx.classes)
+  }, [
+    _ctx.enableColoredSymbols === true ? (openBlock(), createElementBlock("span", {
+      key: 0,
+      class: normalizeClass([_ctx.classes])
+    }, [
+      renderSlot(_ctx.$slots, "default")
+    ], 2)) : renderSlot(_ctx.$slots, "default", { key: 1 })
+  ], 2);
+}
+var VvListItem = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3]]);
 const _sfc_main$2 = defineComponent({
   name: "VueVentusLogoText",
   props: {
@@ -1393,13 +1466,25 @@ const _sfc_main$1 = defineComponent({
       type: Boolean,
       default: true
     },
+    enableClassFills: {
+      type: Boolean,
+      default: false
+    },
     fillOne: {
       type: String,
       default: "#41b883"
     },
+    fillOneClasses: {
+      type: String,
+      default: "fill-emerald-500"
+    },
     fillTwo: {
       type: String,
       default: "#2298bd"
+    },
+    fillTwoClasses: {
+      type: String,
+      default: "fill-cyan-500"
     }
   },
   setup(props) {
@@ -1420,14 +1505,16 @@ function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
     "xml:space": "preserve"
   }, [
     createElementVNode("path", {
-      fill: _ctx.fillOne,
+      fill: _ctx.enableClassFills ? "" : _ctx.fillOne,
+      class: normalizeClass(_ctx.enableClassFills ? _ctx.fillOneClasses : ""),
       d: "M210.3 237.6c0-61.4 19.2-118.5 51.8-165.4C88.8 152.1-84.2 466.7 81 657c134.5 134.8 363 48.8 386.2-131.2-66.9-7.6-126.8-37.9-172-83.1-52.4-52.4-84.9-125-84.9-205.1zM919.7 336c-134.5-134.8-363-48.8-386.2 131.2 66.9 7.6 126.8 37.9 172 83.1 52.5 52.5 85 125 85 205.1 0 61.4-19.2 118.5-51.8 165.4 173.2-79.9 346.3-394.6 181-584.8z"
-    }, null, 8, _hoisted_1$1),
+    }, null, 10, _hoisted_1$1),
     createElementVNode("g", null, [
       createElementVNode("path", {
-        fill: _ctx.fillTwo,
+        fill: _ctx.enableClassFills ? "" : _ctx.fillTwo,
+        class: normalizeClass(_ctx.enableClassFills ? _ctx.fillTwoClasses : ""),
         d: "M529.7 529.6C505.2 745.2 253.8 858.5 76.1 734.7c38.9 115.6 205.6 246 371.4 255.6 161.6 9.4 309.9-110.9 268.4-282.5-21.1-87.5-88.6-165.6-186.2-178.2zM339.8 77.1C205 211.6 291 440.2 471 463.4c7.6-66.9 37.9-126.8 83.1-172 52.5-52.5 125-85 205.1-85 61.4 0 118.5 19.2 165.4 51.8C844.8 84.9 530.1-88.1 339.8 77.1z"
-      }, null, 8, _hoisted_2)
+      }, null, 10, _hoisted_2)
     ])
   ], 2);
 }
@@ -1485,4 +1572,4 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 10, _hoisted_1);
 }
 var VvTextarea = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
-export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, Inputs, Text, TextDefault, Textareas, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, ValidationDefault, VueVentusLogoText, VueVentusSpinningMark, VvAnchor, VvButton, VvColorModeButton, VvConfig, VvEl, VvInput, VvTextarea, camelCaseToTitleCase, digitsOnly, formatBytes, formatMediaTime, formatNumber, mergeWithVvConfig, randomString, slugifyString, stringToCamelCase, stringToFilename, uniqueArray };
+export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, ColorModes, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, Inputs, Text, TextDefault, Textareas, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, ValidationDefault, VueVentusLogoText, VueVentusSpinningMark, VvAnchor, VvButton, VvColorModeButton, VvConfig, VvEl, VvInput, VvListItem, VvTextarea, camelCaseToTitleCase, digitsOnly, formatBytes, formatMediaTime, formatNumber, mergeWithVvConfig, randomString, slugifyString, stringToCamelCase, stringToFilename, uniqueArray };

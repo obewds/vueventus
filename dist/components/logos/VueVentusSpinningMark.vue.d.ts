@@ -7,11 +7,23 @@ declare const _default: import("vue").DefineComponent<{
         type: BooleanConstructor;
         default: boolean;
     };
+    enableClassFills: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     fillOne: {
         type: StringConstructor;
         default: string;
     };
+    fillOneClasses: {
+        type: StringConstructor;
+        default: string;
+    };
     fillTwo: {
+        type: StringConstructor;
+        default: string;
+    };
+    fillTwoClasses: {
         type: StringConstructor;
         default: string;
     };
@@ -26,7 +38,15 @@ declare const _default: import("vue").DefineComponent<{
         type: BooleanConstructor;
         default: boolean;
     };
+    enableClassFills: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     fillOne: {
+        type: StringConstructor;
+        default: string;
+    };
+    fillOneClasses: {
         type: StringConstructor;
         default: string;
     };
@@ -34,10 +54,17 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
+    fillTwoClasses: {
+        type: StringConstructor;
+        default: string;
+    };
 }>>, {
     animationClass: string;
     enableAnimation: boolean;
+    enableClassFills: boolean;
     fillOne: string;
+    fillOneClasses: string;
     fillTwo: string;
+    fillTwoClasses: string;
 }>;
 export default _default;

@@ -28,6 +28,8 @@ declare const _default: {
         disabled: string | undefined;
         display: string | undefined;
         focus: string | undefined;
+        rounding: string | undefined;
+        shadow: string | undefined;
         text: string | undefined;
         transition: string | undefined;
         base: import("../index.js").BaseFunction;
@@ -64,20 +66,9 @@ declare const _default: {
         classes: import("../index.js").ReturnsClassesFunction;
     };
     colorMode: {
-        dark: {
-            bg: string;
-            ground: string;
-            hex: string;
-            text: string;
-            title: string;
-        };
-        light: {
-            bg: string;
-            ground: string;
-            hex: string;
-            text: string;
-            title: string;
-        };
+        [x: string]: import("../index.js").ColorMode;
+        dark: import("../index.js").ColorMode;
+        light: import("../index.js").ColorMode;
     };
     grounds: {
         palettes: {

@@ -1,0 +1,1 @@
+{"version":3,"file":"ColorModes.js","sourceRoot":"","sources":["../../src/configs/ColorModes.ts"],"names":[],"mappings":"AAAA,8BAA8B;AAI9B,eAAgC;IAC5B,IAAI,EAAE;QACF,MAAM,EAAE,aAAa;QACrB,GAAG,EAAE,SAAS;QACd,IAAI,EAAE,eAAe;QACrB,KAAK,EAAE,kBAAkB;KAC5B;IACD,KAAK,EAAE;QACH,MAAM,EAAE,aAAa;QACrB,GAAG,EAAE,SAAS;QACd,IAAI,EAAE,eAAe;QACrB,KAAK,EAAE,mBAAmB;KAC7B;CACJ,CAAA"}
