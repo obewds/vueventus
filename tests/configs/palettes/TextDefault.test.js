@@ -14,7 +14,7 @@ test('TextDefault component returns a truthy value', async () => {
 
 test('TextDefault component returns an object with the standard five default color names', async () => {
 
-    expect(TextDefault['default']).toBe('')
+    expect(TextDefault['default']).toBeTruthy()
     expect(TextDefault['error']).toBeTruthy()
     expect(TextDefault['primary']).toBeTruthy()
     expect(TextDefault['secondary']).toBeTruthy()

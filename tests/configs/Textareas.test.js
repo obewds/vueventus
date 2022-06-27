@@ -49,12 +49,6 @@ test('Textareas.classes() method returns expected values', async () => {
 
 
 test('Textareas.getRowSize() method returns expected values', async () => {
-
-    console.log("Textareas.getRowSize(''):")
-    console.log(Textareas.getRowSize(''))
-
-    console.log("VvConfig.textareas.rowSizes['md']:")
-    console.log(VvConfig.textareas.rowSizes['md'])
     
     expect(Textareas.getRowSize('')).toBe(VvConfig.textareas.rowSizes['md'])
     expect(Textareas.getRowSize('2xl')).toBe(VvConfig.textareas.rowSizes['2xl'])
