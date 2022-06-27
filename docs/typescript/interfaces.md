@@ -20,7 +20,6 @@ These are the VueVentus {{ $frontmatter.title }} Modules are used throughout Vue
 
 
 
-
 ## ButtonsSizes
 
 To import the compiled library version of the ButtonsSizes Type:
