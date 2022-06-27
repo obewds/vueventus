@@ -52,7 +52,7 @@
     "vitepress": "^1.0.0-alpha.2",
     "vitest": "^0.15.1",
     "vue-router": "^4.0.16",
-    "vue-tsc": "^0.38.1"
+    "vue-tsc": "^0.38.2"
   },
   "sideEffects": false,
   "main": "./dist/vueventus.umd.js",
