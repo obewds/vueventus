@@ -1,6 +1,6 @@
 // ./src/configs/VvComponentDefaults.ts
 
-import { ConfigDefaults } from '../types/ConfigDefaults'
+import type { ConfigDefaults } from '../types/ConfigDefaults'
 
 export default <ConfigDefaults>{
     "VvAnchor": {
@@ -42,6 +42,13 @@ export default <ConfigDefaults>{
         palette: 'validation',
         size: 'md',
         type: 'text',
+    },
+    "VvListItem": {
+        color: 'default',
+        enableColoredSymbols: true,
+        palette: 'default',
+        symbolColor: 'primary',
+        symbolPalette: 'default',
     },
     "VvTextarea": {
         color: 'default',

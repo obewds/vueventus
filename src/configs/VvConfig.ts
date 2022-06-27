@@ -2,6 +2,7 @@
 
 import Anchors from './Anchors.js'
 import Buttons from './Buttons.js'
+import ColorModes from './ColorModes.js'
 import Inputs from './Inputs.js'
 import Text from './Text.js'
 import Textareas from './Textareas.js'
@@ -49,20 +50,7 @@ export default {
         },
     },
     colorMode: {
-        dark: {
-            bg: 'bg-gray-900',
-            ground: 'bg-gray-900',
-            hex: '#242426',
-            text: 'text-gray-100',
-            title: 'Enable Dark Mode',
-        },
-        light: {
-            bg: 'bg-gray-100',
-            ground: 'bg-gray-100',
-            hex: '#e1e1e3',
-            text: 'text-gray-900',
-            title: 'Enable Light Mode',
-        },
+        ...ColorModes,
     },
     grounds: {
         palettes: {
