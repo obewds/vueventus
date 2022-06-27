@@ -294,6 +294,51 @@ Buttons.focus = ''
 
 
 
+
+
+## Buttons.rounding
+
+Type: **`String`**  
+Default: **`"{{ Buttons.rounding }}"`**
+
+The `Buttons.rounding` parameter is meant to isolate the CSS border radius orientated characteristics and requirements for an application's button elements.
+
+!!!include(snippets/avoidingVueVentusAbstractsTip.md)!!!
+
+### Example
+
+```javascript
+Buttons.rounding = ''
+```
+
+
+
+
+
+
+
+
+## Buttons.shadow
+
+Type: **`String`**  
+Default: **`"{{ Buttons.shadow }}"`**
+
+The `Buttons.shadow` parameter is meant to isolate the Tailwind CSS drop-shadow orientated characteristics and requirements for an application's button elements.
+
+!!!include(snippets/avoidingVueVentusAbstractsTip.md)!!!
+
+### Example
+
+```javascript
+Buttons.shadow = ''
+```
+
+
+
+
+
+
+
 ## Buttons.sizes
 
 Type: **`Object`**  
