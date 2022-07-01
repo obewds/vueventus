@@ -1,5 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-const vvPath = './src/data/'
+const vvPath = './node_modules/@obewds/vueventus/dist/data/'
 
 module.exports = {
 

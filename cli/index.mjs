@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
+import child_process from 'child_process'
+import { createSpinner } from 'nanospinner'
 import fs from 'fs-extra'
 import gradient from 'gradient-string'
 import inquirer from 'inquirer'
-import { createSpinner } from 'nanospinner'
-
-// import child_process from 'child_process'
-// child_process.execSync( 'npm install chalk-animation --save-dev', { stdio: 'inherit' } )
+import merge from 'deepmerge'
+import rimraf from 'rimraf'
 
 //
 // Use these values for local development/tests
@@ -21,6 +21,7 @@ const sourceStubs = './node_modules/@obewds/vueventus/cli/stubs/'
 const outputKey = 'userPath'
 
 const sleep = ( ms = 1000 ) => new Promise( ( r ) => setTimeout( r, ms ) )
+const ifErrorCheck = function ( error ) { if (error) { console.error(error); return; } }
 
 const vueventus = gradient('lightGreen', 'cyan')('VueVentus')
 
@@ -34,13 +35,15 @@ const srcDir = 'src/'
 
 const npmInstall = 'npm install'
 const installPre = npmInstall + ' --save-dev '
+
+
 const install = {
-    vite: [
-        'npm create vite@latest', // follow prompts
-    ],
-    vue: [
-        'npm init vue@latest', // follow prompts
-    ],
+    // vite: [
+    //     'npm create vite@latest', // follow prompts
+    // ],
+    // vue: [
+    //     'npm init vue@latest', // follow prompts
+    // ],
     tw: [
         installPre + 'tailwindcss postcss autoprefixer',
         'npx tailwindcss init -p',
@@ -76,6 +79,7 @@ const install = {
 
 
 let userOptions = {
+    name: '',
     stack: '',
     files: [],
     deps: [],
@@ -221,6 +225,28 @@ console.log(`
 
 
 
+async function setProjectName () {
+    
+    const answers = await inquirer.prompt({
+        name: 'projectName',
+        type: 'input',
+        message: 'What is the name of your new ' + vueventus + ' project?\n',
+        choices: stackChoices,
+    })
+
+    userOptions.name = answers.projectName
+
+    return userOptions.name
+}
+
+await setProjectName()
+
+console.log(' ')
+
+
+
+
+
 async function chooseStack () {
     
     const answers = await inquirer.prompt({
@@ -316,6 +342,130 @@ console.log(' ')
 
 
 
+async function installDeps () {
+
+    //
+    // Setup and start spinner
+    //
+
+    const spinner = createSpinner('Installing ' + vueventus + ' deps...').start()
+    let consoleLogs = []
+
+    //
+    // Install deps
+    //
+
+    // if the user chose the Vue/TWCSS/VITE/TS stack
+    if (userOptions.stack === stackChoices[0]) {
+
+        //
+        // install vite
+        //
+
+        child_process.execSync(`npm create vite@latest ${userOptions.name} -- --template vue-ts`, { stdio: 'inherit' } )
+
+        // open the current package file and collect the data
+        let currentRawPkg = fs.readFile('./package.json', 'utf8', (err, data) => {
+            ifErrorCheck(err)
+            return data
+        })
+        let currentPkg = JSON.parse(currentRawPkg)
+
+        // open the vite generated package file and collect the data
+        let vitePkgPath = `${userOptions.name}/package.json`
+        let viteRawPkg = fs.readFile(vitePkgPath, 'utf8', (err, data) => {
+            ifErrorCheck(err)
+            return data
+        })
+        let vitePkg = JSON.parse(viteRawPkg)
+
+        // merge the current and vite packages data
+        let newPkg = merge(currentPkg, vitePkg)
+
+        console.log('newPkg')
+        console.log(newPkg)
+
+        // write the new merged package data to the current package file
+        fs.writeFileSync('./package.json', JSON.stringify(newPkg), { flag: 'r+' })
+
+        // delete the vite generated package file
+        // try {
+        //     fs.unlinkSync(vitePkgPath) // file removed
+        // } catch(err) {
+        //     console.error(err)
+        // }
+        // (this is now handled below with rimraf)
+
+        // copy each vite generated folder and file from
+        // the vite generated directory back up into the root directory
+        let fsSet = { overwrite: true }
+        fs.moveSync(srcPath + '.vscode', rootPath, fsSet)
+        fs.moveSync(srcPath + 'public', rootPath, fsSet)
+        fs.moveSync(srcPath + 'src', rootPath, fsSet)
+        fs.moveSync(srcPath + '.gitignore', rootPath, fsSet)
+        fs.moveSync(srcPath + 'index.html', rootPath, fsSet)
+        fs.moveSync(srcPath + 'README.md', rootPath + 'README-VITE.md', fsSet)
+        fs.moveSync(srcPath + 'tsconfig.json', rootPath, fsSet)
+        fs.moveSync(srcPath + 'tsconfig.node.json', rootPath, fsSet)
+        fs.moveSync(srcPath + 'vite.config.ts', rootPath, fsSet)
+
+        // and finally delete the vite generated folder
+        rimraf.sync(userOptions.name)
+
+        // add vite install console message to consoleLogs
+        consoleLogs.push(console.log(`The ${vueventus} CLI installed/moved all Vite vue-ts files to root and merged package data successfully!`))
+
+        //
+        // install tailwind css
+        //
+
+        for (let i=0; i < install.tw.length; i++) {
+            child_process.execSync(install.tw[i], { stdio: 'inherit' } )
+        }
+
+        // add vite install console message to consoleLogs
+        consoleLogs.push(console.log(`The ${vueventus} CLI installed and initialized tailwind css successfully!`))
+
+        //
+        // install types
+        //
+
+        for (let i=0; i < install.types.length; i++) {
+            child_process.execSync(install.types[i], { stdio: 'inherit' } )
+        }
+
+        // add types install console message to consoleLogs
+        consoleLogs.push(console.log(`The ${vueventus} CLI installed node types successfully!`))
+
+
+    }
+    
+
+
+
+
+
+
+
+    await sleep()
+
+    spinner.success({
+        text: vueventus + ' deps installed successfully!',
+    })
+
+}
+
+await installDeps()
+
+console.log(' ')
+
+
+
+
+
+
+
+
 async function installFiles () {
 
     //
@@ -343,9 +493,9 @@ async function installFiles () {
 
             if (userOptions.files[y] === stack[x].name) {
 
-                // console.log(sourceStubs + userOptions.files[y] + ' => ' + stack[x][outputKey] + userOptions.files[y])
+                console.log(sourceStubs + userOptions.files[y] + ' => ' + stack[x][outputKey] + userOptions.files[y])
 
-                fs.copySync(sourceStubs + userOptions.files[y], stack[x][outputKey] + userOptions.files[y])
+                // fs.copySync(sourceStubs + userOptions.files[y], stack[x][outputKey] + userOptions.files[y])
 
             }
 
@@ -367,9 +517,9 @@ async function installFiles () {
 
                 if (userOptions.files[i] === depFiles[depFileKeys[j]][k].name) {
 
-                    // console.log(sourceStubs + userOptions.files[i] + ' => to => ' + depFiles[depFileKeys[j]][k][outputKey] + userOptions.files[i])
+                    console.log(sourceStubs + userOptions.files[i] + ' => to => ' + depFiles[depFileKeys[j]][k][outputKey] + userOptions.files[i])
 
-                    fs.copySync(sourceStubs + userOptions.files[i], depFiles[depFileKeys[j]][k][outputKey] + userOptions.files[i])
+                    // fs.copySync(sourceStubs + userOptions.files[i], depFiles[depFileKeys[j]][k][outputKey] + userOptions.files[i])
 
                 }
 
