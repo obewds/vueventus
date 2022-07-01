@@ -22,5 +22,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# package dev and sensitive files
+# package dev files
+cli-test
 coverage
