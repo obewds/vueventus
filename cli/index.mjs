@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import chalk from 'chalk'
 import fs from 'fs-extra'
 import gradient from 'gradient-string'
 import inquirer from 'inquirer'
