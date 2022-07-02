@@ -1,12 +1,16 @@
 #!/usr/bin/env node
 
 import child_process from 'child_process'
+import { createRequire } from 'module'
 import { createSpinner } from 'nanospinner'
 import fs from 'fs-extra'
 import gradient from 'gradient-string'
 import inquirer from 'inquirer'
 import merge from 'deepmerge'
 import rimraf from 'rimraf'
+
+
+
 
 //
 // Use these values for local development/tests
@@ -20,10 +24,15 @@ import rimraf from 'rimraf'
 const sourceStubs = './node_modules/@obewds/vueventus/cli/stubs/'
 const outputKey = 'userPath'
 
+
+
+
+const require = createRequire(import.meta.url)
 const sleep = ( ms = 1000 ) => new Promise( ( r ) => setTimeout( r, ms ) )
 const ifErrorCheck = function ( error ) { if (error) { console.error(error); return; } }
-
 const vueventus = gradient('lightGreen', 'cyan')('VueVentus')
+
+const cwd = process.env.INIT_CWD
 
 const rootPath = './'
 const testPath = rootPath + 'cli-test/'
@@ -66,6 +75,9 @@ const install = {
     faPro: [
         installPre + '@fortawesome/pro-duotone-svg-icons @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/pro-thin-svg-icons',
     ],
+    gsap: [
+        installPre + 'gsap',
+    ],
     headless: [
         installPre + '@headlessui/vue',
     ],
@@ -85,6 +97,53 @@ let userOptions = {
     deps: [],
     depFiles: [],
     destination: './cli-test',
+}
+
+const vv = {
+    stacks: {
+        vueTwViteTs: {
+            id: 0,
+            name: 'Vue 3, Tailwind CSS, Vite & Typescript',
+            files: {
+                appVvTs: {
+                    name: 'app.vv.ts',
+                    checked: true,
+                    path: '/src/',
+                },
+                appColorsJson: {
+                    name: 'app.colors.json',
+                    checked: true,
+                    path: '/src/',
+                },
+                tailwindConfigJs: {
+                    name: 'tailwind.config.js',
+                    checked: true,
+                    path: '/',
+                },
+                tailwindCss: {
+                    name: 'tailwind.css',
+                    checked: true,
+                    path: '/src/css/',
+                },
+            },
+            deps: {
+                faFree: {
+                    name: 'fontawesome.ts',
+                    checked: true,
+                    path: '/src/',
+                    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons --save-dev',
+                },
+                faPro: {
+                    name: 'fontawesome.ts',
+                    checked: true,
+                    path: '/src/',
+                    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/pro-duotone-svg-icons @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/pro-thin-svg-icons --save-dev',
+                },
+            },
+        },
+        // vueTwVite: {},
+        // vueTwNuxtViteTs: {},
+    },
 }
 
 
@@ -151,7 +210,8 @@ const stackFiles = {
 }
 
 const depChoices = [
-    'FontAwesome',
+    'FontAwesome Free',
+    'FontAwesome Pro',
     'GSAP',
     'Headless UI',
     'Heroicons',
@@ -161,7 +221,20 @@ const depChoices = [
 
 
 const depFiles = {
-    'FontAwesome': [
+    'FontAwesome Free': [
+        {
+            name: 'fontawesome.ts',
+            checked: true,
+            userPath: srcPath,
+            testPath: testPath + srcDir,
+        },{
+            name: 'VvFa.vue',
+            checked: true,
+            userPath: srcPath + compoDir,
+            testPath: testPath + srcDir + compoDir,
+        },
+    ],
+    'FontAwesome Pro': [
         {
             name: 'fontawesome.ts',
             checked: true,
@@ -352,7 +425,7 @@ async function installDeps () {
     let consoleLogs = []
 
     //
-    // Install deps
+    // Install stack
     //
 
     // if the user chose the Vue/TWCSS/VITE/TS stack
@@ -365,55 +438,35 @@ async function installDeps () {
         child_process.execSync(`npm create vite@latest ${userOptions.name} -- --template vue-ts`, { stdio: 'inherit' } )
 
         // open the current package file and collect the data
-        let currentRawPkg = fs.readFile('./package.json', 'utf8', (err, data) => {
-            ifErrorCheck(err)
-            return data
-        })
-        let currentPkg = JSON.parse(currentRawPkg)
+        let currentPkg = require(cwd + '/package.json')
 
         // open the vite generated package file and collect the data
-        let vitePkgPath = `${userOptions.name}/package.json`
-        let viteRawPkg = fs.readFile(vitePkgPath, 'utf8', (err, data) => {
-            ifErrorCheck(err)
-            return data
-        })
-        let vitePkg = JSON.parse(viteRawPkg)
+        let vitePkg = require(cwd + '/' + userOptions.name + '/package.json')
 
         // merge the current and vite packages data
-        let newPkg = merge(currentPkg, vitePkg)
-
-        console.log('newPkg')
-        console.log(newPkg)
+        let newPkg = merge(vitePkg, currentPkg)
 
         // write the new merged package data to the current package file
-        fs.writeFileSync('./package.json', JSON.stringify(newPkg), { flag: 'r+' })
-
-        // delete the vite generated package file
-        // try {
-        //     fs.unlinkSync(vitePkgPath) // file removed
-        // } catch(err) {
-        //     console.error(err)
-        // }
-        // (this is now handled below with rimraf)
+        fs.writeFileSync(cwd + '/package.json', JSON.stringify(newPkg, null, 2), { flag: 'r+' })
 
         // copy each vite generated folder and file from
         // the vite generated directory back up into the root directory
         let fsSet = { overwrite: true }
-        fs.moveSync(srcPath + '.vscode', rootPath, fsSet)
-        fs.moveSync(srcPath + 'public', rootPath, fsSet)
-        fs.moveSync(srcPath + 'src', rootPath, fsSet)
-        fs.moveSync(srcPath + '.gitignore', rootPath, fsSet)
-        fs.moveSync(srcPath + 'index.html', rootPath, fsSet)
-        fs.moveSync(srcPath + 'README.md', rootPath + 'README-VITE.md', fsSet)
-        fs.moveSync(srcPath + 'tsconfig.json', rootPath, fsSet)
-        fs.moveSync(srcPath + 'tsconfig.node.json', rootPath, fsSet)
-        fs.moveSync(srcPath + 'vite.config.ts', rootPath, fsSet)
+        fs.moveSync(cwd + '/' + userOptions.name + '/.vscode', cwd + '/.vscode', fsSet)
+        fs.moveSync(cwd + '/' + userOptions.name + '/public', cwd + '/public', fsSet)
+        fs.moveSync(cwd + '/' + userOptions.name + '/src', cwd + '/src', fsSet)
+        fs.moveSync(cwd + '/' + userOptions.name + '/.gitignore', cwd + '/.gitignore', fsSet)
+        fs.moveSync(cwd + '/' + userOptions.name + '/index.html', cwd + '/index.html', fsSet)
+        fs.moveSync(cwd + '/' + userOptions.name + '/README.md', cwd + '/README-VITE.md', fsSet)
+        fs.moveSync(cwd + '/' + userOptions.name + '/tsconfig.json', cwd + '/tsconfig.json', fsSet)
+        fs.moveSync(cwd + '/' + userOptions.name + '/tsconfig.node.json', cwd + '/tsconfig.node.json', fsSet)
+        fs.moveSync(cwd + '/' + userOptions.name + '/vite.config.ts', cwd + '/vite.config.ts', fsSet)
 
         // and finally delete the vite generated folder
-        rimraf.sync(userOptions.name)
+        rimraf.sync(cwd + '/' + userOptions.name)
 
         // add vite install console message to consoleLogs
-        consoleLogs.push(console.log(`The ${vueventus} CLI installed/moved all Vite vue-ts files to root and merged package data successfully!`))
+        console.log(`The ${vueventus} CLI installed/moved all Vite:vue-ts files to root and merged package data successfully!`)
 
         //
         // install tailwind css
@@ -424,7 +477,7 @@ async function installDeps () {
         }
 
         // add vite install console message to consoleLogs
-        consoleLogs.push(console.log(`The ${vueventus} CLI installed and initialized tailwind css successfully!`))
+        console.log(`The ${vueventus} CLI installed and initialized tailwind css successfully!`)
 
         //
         // install types
@@ -435,12 +488,40 @@ async function installDeps () {
         }
 
         // add types install console message to consoleLogs
-        consoleLogs.push(console.log(`The ${vueventus} CLI installed node types successfully!`))
-
+        console.log(`The ${vueventus} CLI installed node types successfully!`)
 
     }
-    
 
+    //
+    // Install optional deps
+    //
+
+    // #TODO: handle fontawesome deps
+
+    // if the user chose the optional FontAwesome Free dep
+    // if (userOptions.deps.includes(depChoices[0])) {}
+
+    // if the user chose the optional FontAwesome Pro dep
+    // if (userOptions.deps.includes(depChoices[1])) {}
+
+
+    // if the user chose the optional GSAP dep
+    if (userOptions.deps.includes(depChoices[2])) {
+
+        for (let i=0; i < install.gsap.length; i++) {
+            child_process.execSync(install.gsap[i], { stdio: 'inherit' } )
+        }
+
+        // add dep base file(s)
+        fs.copySync(sourceStubs + 'gsap.ts', cwd + '/src/gsap.ts')
+
+        // add optional GSAP files if the user also selected them
+        let gsapFiles = userOptions.depFiles.filter((item) => item.name === 'VvScrollUp.vue')
+        if (gsapFiles.length > 0) {
+            fs.copySync(sourceStubs + 'VvScrollUp.vue', cwd + '/src/components/VvScrollUp.vue')
+        }
+
+    }
 
 
 
