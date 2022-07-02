@@ -373,7 +373,11 @@ async function installDepsAndFiles () {
         fs.moveSync(cwd + '/' + userOptions.name + '/README.md', cwd + '/README-VITE.md', fsSet)
         fs.moveSync(cwd + '/' + userOptions.name + '/tsconfig.json', cwd + '/tsconfig.json', fsSet)
         fs.moveSync(cwd + '/' + userOptions.name + '/tsconfig.node.json', cwd + '/tsconfig.node.json', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/vite.config.ts', cwd + '/vite.config.ts', fsSet)
+        if ( userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.prism.name ) ) {
+            fs.copySync(sourceStubs + 'vite.config.prism.ts', cwd + '/vite.config.ts')
+        } else {
+            fs.copySync(sourceStubs + 'vite.config.ts', cwd + '/vite.config.ts')
+        }
 
         // and finally delete the vite generated folder
         rimraf.sync(cwd + '/' + userOptions.name)
