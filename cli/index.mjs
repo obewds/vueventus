@@ -57,6 +57,7 @@ const vv = {
             },
             deps: {
                 fontawesome: {
+                    checked: true,
                     name: 'FontAwesome Free',
                     install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons --save-dev',
                     files: {
@@ -73,6 +74,7 @@ const vv = {
                     },
                 },
                 gsap: {
+                    checked: true,
                     name: 'GSAP',
                     install: 'npm install gsap --save-dev',
                     files: {
@@ -89,14 +91,17 @@ const vv = {
                     },
                 },
                 headless: {
+                    checked: true,
                     name: 'Headless UI',
                     install: 'npm install @headlessui/vue --save-dev',
                 },
                 heroicons: {
+                    checked: true,
                     name: 'Heroicons',
                     install: 'npm install @heroicons/vue --save-dev',
                 },
                 prism: {
+                    checked: true,
                     name: 'Prism.js',
                     install: 'npm install prismjs vite-plugin-prismjs @types/prismjs --save-dev',
                     files: {
@@ -108,6 +113,7 @@ const vv = {
                     },
                 },
                 vitest: {
+                    checked: true,
                     name: 'Vitest',
                     install: 'npm install vitest @vue/test-utils happy-dom c8 --save-dev',
                     files: {
@@ -209,12 +215,25 @@ async function chooseDeps () {
         type: 'checkbox',
         message: 'Which ' + vueventus + ' deps would you like to install?\n',
         choices: [
-            vv.stacks.vueTwViteTs.deps.fontawesome.name,
-            vv.stacks.vueTwViteTs.deps.gsap.name,
-            vv.stacks.vueTwViteTs.deps.headless.name,
-            vv.stacks.vueTwViteTs.deps.heroicons.name,
-            vv.stacks.vueTwViteTs.deps.prism.name,
-            vv.stacks.vueTwViteTs.deps.vitest.name,
+            {
+                name: vv.stacks.vueTwViteTs.deps.fontawesome.name,
+                checked: vv.stacks.vueTwViteTs.deps.fontawesome.checked,
+            },{
+                name: vv.stacks.vueTwViteTs.deps.gsap.name,
+                checked: vv.stacks.vueTwViteTs.deps.gsap.checked,
+            },{
+                name: vv.stacks.vueTwViteTs.deps.headless.name,
+                checked: vv.stacks.vueTwViteTs.deps.headless.checked,
+            },{
+                name: vv.stacks.vueTwViteTs.deps.heroicons.name,
+                checked: vv.stacks.vueTwViteTs.deps.heroicons.checked,
+            },{
+                name: vv.stacks.vueTwViteTs.deps.prism.name,
+                checked: vv.stacks.vueTwViteTs.deps.prism.checked,
+            },{
+                name: vv.stacks.vueTwViteTs.deps.vitest.name,
+                checked: vv.stacks.vueTwViteTs.deps.vitest.checked,
+            },
         ],
     })
 
@@ -406,6 +425,8 @@ async function installDepsAndFiles () {
             fs.copySync(sourceStubs + 'VvFa.vue', cwd + '/src/components/VvFa.vue')
         }
 
+        console.log(`The ${vueventus} CLI installed/added the fontawesome dep/files successfully!`)
+
     }
 
 
@@ -421,6 +442,8 @@ async function installDepsAndFiles () {
             fs.copySync(sourceStubs + 'VvScrollUp.vue', cwd + '/src/components/VvScrollUp.vue')
         }
 
+        console.log(`The ${vueventus} CLI installed/added the gsap dep/files successfully!`)
+
     }
 
 
@@ -429,6 +452,8 @@ async function installDepsAndFiles () {
 
         child_process.execSync(vv.stacks.vueTwViteTs.deps.headless.install, { stdio: 'inherit' } )
 
+        console.log(`The ${vueventus} CLI installed/added the headless ui dep successfully!`)
+
     }
 
 
@@ -436,6 +461,8 @@ async function installDepsAndFiles () {
     if ( userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.heroicons.name ) ) {
 
         child_process.execSync(vv.stacks.vueTwViteTs.deps.heroicons.install, { stdio: 'inherit' } )
+
+        console.log(`The ${vueventus} CLI installed/added the heroicons ui dep successfully!`)
 
     }
 
@@ -450,6 +477,8 @@ async function installDepsAndFiles () {
             fs.copySync(sourceStubs + 'VvPrism.vue', cwd + '/src/components/VvPrism.vue')
         }
 
+        console.log(`The ${vueventus} CLI installed/added the prism.js dep/files successfully!`)
+
     }
 
 
@@ -459,6 +488,8 @@ async function installDepsAndFiles () {
         child_process.execSync(vv.stacks.vueTwViteTs.deps.vitest.install, { stdio: 'inherit' } )
 
         fs.copySync(sourceStubs + 'vitest.config.ts', cwd + '/vitest.config.ts')
+
+        console.log(`The ${vueventus} CLI installed/added the vitest dep/files successfully!`)
 
     }
 
