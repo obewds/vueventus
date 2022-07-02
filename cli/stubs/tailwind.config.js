@@ -26,7 +26,8 @@ module.exports = {
             transitionDuration: require(vvPath + 'extend.transitionDuration.json'),
             width: require(vvPath + 'extend.width.json'),
         },
-        colors: require(vvPath + 'app.color.data.json'),
+        // colors: require(vvPath + 'app.color.data.json'), // VueVentus Default Color Codes
+        colors: require('./src/app.colors.json'),
         fontSize: require(vvPath + 'theme.fontSize.json'),
         listStyleType: require(vvPath + 'theme.listStyleType.json'),
         opacity: require(vvPath + 'theme.opacity.json'),
