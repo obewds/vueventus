@@ -56,28 +56,12 @@ const vv = {
                 },
             },
             deps: {
-                faFree: {
+                fontawesome: {
                     name: 'FontAwesome Free',
-                    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons --save-dev',
+                    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons --save-dev',
                     files: {
                         fontAwesomeTs: {
                             name: 'fontAwesome.ts',
-                            checked: true,
-                            path: '/src/',
-                        },
-                        vvFa: {
-                            name: 'VvFa.vue',
-                            checked: true,
-                            path: '/src/components/',
-                        },
-                    },
-                },
-                faPro: {
-                    name: 'FontAwesome Pro',
-                    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/pro-duotone-svg-icons @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/pro-thin-svg-icons --save-dev',
-                    files: {
-                        fontAwesomeProTs: {
-                            name: 'fontAwesomePro.ts',
                             checked: true,
                             path: '/src/',
                         },
@@ -225,8 +209,7 @@ async function chooseDeps () {
         type: 'checkbox',
         message: 'Which ' + vueventus + ' deps would you like to install?\n',
         choices: [
-            vv.stacks.vueTwViteTs.deps.faFree.name,
-            vv.stacks.vueTwViteTs.deps.faPro.name,
+            vv.stacks.vueTwViteTs.deps.fontawesome.name,
             vv.stacks.vueTwViteTs.deps.gsap.name,
             vv.stacks.vueTwViteTs.deps.headless.name,
             vv.stacks.vueTwViteTs.deps.heroicons.name,
@@ -279,33 +262,33 @@ async function selectInstallFiles () {
 
         // set the depFileChoices array values
         depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.faFree.name,
-            checked: vv.stacks.vueTwViteTs.deps.faFree.checked,
-        })
-        depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.faPro.name,
-            checked: vv.stacks.vueTwViteTs.deps.faPro.checked,
+            name: vv.stacks.vueTwViteTs.deps.fontawesome.files.vvFa.name,
+            checked: vv.stacks.vueTwViteTs.deps.fontawesome.files.vvFa.checked,
         })
         depFileChoices.push({
             name: vv.stacks.vueTwViteTs.deps.gsap.files.vvScrollUp.name,
             checked: vv.stacks.vueTwViteTs.deps.gsap.files.vvScrollUp.checked,
         })
+        // depFileChoices.push({
+        //     name: vv.stacks.vueTwViteTs.deps.headless.name,
+        //     checked: vv.stacks.vueTwViteTs.deps.headless.checked,
+        // })
+        // depFileChoices.push({
+        //     name: vv.stacks.vueTwViteTs.deps.heroicons.name,
+        //     checked: vv.stacks.vueTwViteTs.deps.heroicons.checked,
+        // })
         depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.headless.name,
-            checked: vv.stacks.vueTwViteTs.deps.headless.checked,
+            name: vv.stacks.vueTwViteTs.deps.prism.files.vvPrism.name,
+            checked: vv.stacks.vueTwViteTs.deps.prism.files.vvPrism.checked,
         })
-        depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.heroicons.name,
-            checked: vv.stacks.vueTwViteTs.deps.heroicons.checked,
-        })
-        depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.prism.name,
-            checked: vv.stacks.vueTwViteTs.deps.prism.checked,
-        })
-        depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.vitest.name,
-            checked: vv.stacks.vueTwViteTs.deps.vitest.checked,
-        })
+        // depFileChoices.push({
+        //     name: vv.stacks.vueTwViteTs.deps.prism.name,
+        //     checked: vv.stacks.vueTwViteTs.deps.prism.checked,
+        // })
+        // depFileChoices.push({
+        //     name: vv.stacks.vueTwViteTs.deps.vitest.name,
+        //     checked: vv.stacks.vueTwViteTs.deps.vitest.checked,
+        // })
 
     }
 
@@ -412,35 +395,14 @@ async function installDepsAndFiles () {
     //
 
     // if the user chose the optional FontAwesome Free dep
-    if ( userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.faFree.name ) ) {
+    if ( userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.fontawesome.name ) ) {
 
-        // check for Pro dep selected - and if so bypass this block and handle in Pro dep install block
-        if ( !userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.faPro.name ) ) {
+        child_process.execSync(vv.stacks.vueTwViteTs.deps.fontawesome.install, { stdio: 'inherit' } )
 
-            child_process.execSync(vv.stacks.vueTwViteTs.deps.faFree.install, { stdio: 'inherit' } )
-
-            fs.copySync(sourceStubs + 'fontAwesome.ts', cwd + '/src/fontAwesome.ts')
-
-            // add optional FontAwesome Free files if the user also selected them
-            if ( userOptions.depFiles.includes( vv.stacks.vueTwViteTs.deps.faFree.files.vvFa.name ) ) {
-                fs.copySync(sourceStubs + 'VvFa.vue', cwd + '/src/components/VvFa.vue')
-            }
-
-        }
-
-    }
-    
-
-    // if the user chose the optional FontAwesome Pro dep
-    if ( userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.faPro.name ) ) {
-
-        child_process.execSync(vv.stacks.vueTwViteTs.deps.faFree.install, { stdio: 'inherit' } )
-        child_process.execSync(vv.stacks.vueTwViteTs.deps.faPro.install, { stdio: 'inherit' } )
-
-        fs.copySync(sourceStubs + 'fontAwesomePro.ts', cwd + '/src/fontAwesomePro.ts')
+        fs.copySync(sourceStubs + 'fontAwesome.ts', cwd + '/src/fontAwesome.ts')
 
         // add optional FontAwesome Free files if the user also selected them
-        if ( userOptions.depFiles.includes( vv.stacks.vueTwViteTs.deps.faPro.files.vvFa.name ) ) {
+        if ( userOptions.depFiles.includes( vv.stacks.vueTwViteTs.deps.fontawesome.files.vvFa.name ) ) {
             fs.copySync(sourceStubs + 'VvFa.vue', cwd + '/src/components/VvFa.vue')
         }
 
