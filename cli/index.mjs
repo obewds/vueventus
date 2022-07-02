@@ -260,10 +260,6 @@ console.log(' ')
 
 
 
-// #TODO: Consider removing this interaction entirely
-//        as the selection of the dep in the prior step
-//        in addition to the stack chosen (which is 1 
-//        choice right now)...
 
 async function chooseFiles () {
     
@@ -376,7 +372,6 @@ async function installDepsAndFiles () {
         fs.moveSync(cwd + '/' + userOptions.name + '/public', cwd + '/public', fsSet)
         fs.moveSync(cwd + '/' + userOptions.name + '/src', cwd + '/src', fsSet)
         fs.moveSync(cwd + '/' + userOptions.name + '/.gitignore', cwd + '/.gitignore', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/index.html', cwd + '/index.html', fsSet)
         fs.moveSync(cwd + '/' + userOptions.name + '/README.md', cwd + '/README-VITE.md', fsSet)
         fs.moveSync(cwd + '/' + userOptions.name + '/tsconfig.json', cwd + '/tsconfig.json', fsSet)
         //
@@ -393,6 +388,13 @@ async function installDepsAndFiles () {
         //        in the CLI's output  tsconfig.json file
         //
         fs.moveSync(cwd + '/' + userOptions.name + '/tsconfig.node.json', cwd + '/tsconfig.node.json', fsSet)
+        
+        if ( userOptions.files.includes( stack.deps.gsap.files.vvScrollUp.name ) ) {
+            fs.copySync(sourceStubs + 'index.html', cwd + '/index.html')
+        } else {
+            fs.moveSync(cwd + '/' + userOptions.name + '/index.html', cwd + '/index.html', fsSet)
+        }
+
         if ( userOptions.deps.includes( stack.deps.prism.name ) ) {
             fs.copySync(sourceStubs + 'vite.config.prism.ts', cwd + '/vite.config.ts')
         } else {
