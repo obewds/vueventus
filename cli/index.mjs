@@ -12,36 +12,13 @@ import rimraf from 'rimraf'
 
 
 
-//
-// Use these values for local development/tests
-//
-// const sourceStubs = './cli/stubs/'
-// const outputKey = 'testPath'
-
-//
-// Make sure these values are used instead and always before publishing the package
-//
-const sourceStubs = './node_modules/@obewds/vueventus/cli/stubs/'
-const outputKey = 'userPath'
-
-
-
-
 const require = createRequire(import.meta.url)
 const sleep = ( ms = 1000 ) => new Promise( ( r ) => setTimeout( r, ms ) )
 // const ifErrorCheck = function ( error ) { if (error) { console.error(error); return; } }
 const vueventus = gradient('lightGreen', 'cyan')('VueVentus')
 
 const cwd = process.env.INIT_CWD
-
-const rootPath = './'
-const testPath = rootPath + 'cli-test/'
-const srcPath = rootPath + 'src/'
-
-// const cssDir = 'css/'
-const compoDir = 'components/'
-const srcDir = 'src/'
-
+const sourceStubs = './node_modules/@obewds/vueventus/cli/stubs/'
 
 let userOptions = {
     name: '',
@@ -173,68 +150,6 @@ const vv = {
 }
 
 
-const depFiles = {
-    'FontAwesome Free': [
-        {
-            name: 'fontAwesome.ts',
-            checked: true,
-            userPath: srcPath,
-            testPath: testPath + srcDir,
-        },{
-            name: 'VvFa.vue',
-            checked: true,
-            userPath: srcPath + compoDir,
-            testPath: testPath + srcDir + compoDir,
-        },
-    ],
-    'FontAwesome Pro': [
-        {
-            name: 'fontAwesomePro.ts',
-            checked: true,
-            userPath: srcPath,
-            testPath: testPath + srcDir,
-        },{
-            name: 'VvFa.vue',
-            checked: true,
-            userPath: srcPath + compoDir,
-            testPath: testPath + srcDir + compoDir,
-        },
-    ],
-    'GSAP': [
-        {
-            name: 'gsap.ts',
-            checked: true,
-            userPath: srcPath,
-            testPath: testPath + srcDir,
-        },{
-            name: 'VvScrollUp.vue',
-            userPath: srcPath + compoDir,
-            testPath: testPath + srcDir + compoDir,
-        },
-    ],
-    'Headless UI': [],
-    'Heroicons': [],
-    'Prism.js': [
-        {
-            name: 'VvPrism.vue',
-            checked: true,
-            userPath: srcPath + compoDir,
-            testPath: testPath + srcDir + compoDir,
-        },
-    ],
-    'Vitest': [
-        {
-            name: 'vitest.config.ts',
-            checked: true,
-            userPath: srcPath,
-            testPath: testPath + srcDir,
-        },
-    ],
-}
-
-
-
-
 
 
 
@@ -246,6 +161,7 @@ console.log(`
 
 
 `)
+
 
 
 
@@ -267,6 +183,7 @@ async function setProjectName () {
 await setProjectName()
 
 console.log(' ')
+
 
 
 
@@ -494,8 +411,6 @@ async function installDepsAndFiles () {
     // Install optional deps
     //
 
-    // #TODO: handle fontawesome deps
-
     // if the user chose the optional FontAwesome Free dep
     if ( userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.faFree.name ) ) {
 
@@ -601,101 +516,3 @@ async function installDepsAndFiles () {
 await installDepsAndFiles()
 
 console.log(' ')
-
-
-
-
-
-
-
-/*
-async function installFiles () {
-
-    //
-    // Setup and start spinner
-    //
-
-    const spinner = createSpinner('Installing ' + vueventus + ' files...').start()
-
-    //
-    // Handle stack files
-    //
-
-    let stack = []
-
-    // if the stack is vueTwViteTs
-    if ( userOptions.stack === vv.stacks.vueTwViteTs.name ) {
-
-        stack.push({
-            name: vv.stacks.vueTwViteTs.files.appVvTs.name,
-            checked: vv.stacks.vueTwViteTs.files.appVvTs.checked,
-        })
-        stack.push({
-            name: vv.stacks.vueTwViteTs.files.appColorsJson.name,
-            checked: vv.stacks.vueTwViteTs.files.appColorsJson.checked,
-        })
-        stack.push({
-            name: vv.stacks.vueTwViteTs.files.tailwindConfigJs.name,
-            checked: vv.stacks.vueTwViteTs.files.tailwindConfigJs.checked,
-        })
-        stack.push({
-            name: vv.stacks.vueTwViteTs.files.tailwindCss.name,
-            checked: vv.stacks.vueTwViteTs.files.tailwindCss.checked,
-        })
-
-    }
-    
-    for (let x=0; x < stack.length; x++) {
-
-        for (let y=0; y < userOptions.files.length; y++) {
-
-            if (userOptions.files[y] === stack[x].name) {
-
-                console.log(sourceStubs + userOptions.files[y] + ' => ' + stack[x][outputKey] + userOptions.files[y])
-
-                // fs.copySync(sourceStubs + userOptions.files[y], stack[x][outputKey] + userOptions.files[y])
-
-            }
-
-        }
-
-    }
-
-    //
-    // Handle deps files
-    //
-    
-    for (let i=0; i < userOptions.files.length; i++) {
-
-        const depFileKeys = Object.keys(depFiles)
-
-        for (let j=0; j < depFileKeys.length; j++) {
-
-            for (let k=0; k < depFiles[depFileKeys[j]].length; k++) {
-
-                if (userOptions.files[i] === depFiles[depFileKeys[j]][k].name) {
-
-                    console.log(sourceStubs + userOptions.files[i] + ' => to => ' + depFiles[depFileKeys[j]][k][outputKey] + userOptions.files[i])
-
-                    // fs.copySync(sourceStubs + userOptions.files[i], depFiles[depFileKeys[j]][k][outputKey] + userOptions.files[i])
-
-                }
-
-            }
-
-        }
-
-    }
-
-    await sleep()
-
-    spinner.success({
-        text: vueventus + ' files installed successfully!',
-    })
-
-}
-
-await installFiles()
-
-console.log(' ')
-*/
