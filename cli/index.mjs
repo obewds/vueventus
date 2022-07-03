@@ -1,12 +1,9 @@
 #!/usr/bin/env node
 
-import child_process from 'child_process'
-import { createRequire } from 'module'
 import { createSpinner } from 'nanospinner'
 import fs from 'fs-extra'
 import gradient from 'gradient-string'
 import inquirer from 'inquirer'
-import merge from 'deepmerge'
 import rimraf from 'rimraf'
 
 import mergeJson from './helpers/mergeJson.mjs'
@@ -16,7 +13,6 @@ import writeJson from './helpers/writeJson.mjs'
 
 
 
-const require = createRequire(import.meta.url)
 const vueventus = gradient('lightGreen', 'cyan')('VueVentus')
 // const sleep = ( ms = 1000 ) => new Promise( ( r ) => setTimeout( r, ms ) )
 
@@ -304,6 +300,14 @@ async function chooseFiles () {
             name: vv.stacks.vueTwViteTs.deps.prism.files.vvPrism.name,
             checked: vv.stacks.vueTwViteTs.deps.prism.files.vvPrism.checked,
         })
+        depFileChoices.push({
+            name: vv.stacks.vueTwViteTs.deps.vitest.files.helloVueVentusTestJs.name,
+            checked: vv.stacks.vueTwViteTs.deps.vitest.files.helloVueVentusTestJs.checked,
+        })
+        depFileChoices.push({
+            name: vv.stacks.vueTwViteTs.deps.vitest.files.helloVueVentusVue.name,
+            checked: vv.stacks.vueTwViteTs.deps.vitest.files.helloVueVentusVue.checked,
+        })
 
     }
 
@@ -552,8 +556,8 @@ async function installDepsAndFiles () {
             run(stack.deps.vitest.install)
 
             fs.copySync(
-                sourceStubs + stack.deps.vitest.name,
-                cwd + stack.deps.vitest.path + stack.deps.vitest.name
+                sourceStubs + stack.deps.vitest.files.vitestConfigTs.name,
+                cwd + stack.deps.vitest.files.vitestConfigTs.path + stack.deps.vitest.files.vitestConfigTs.name
             )
 
             // #TODO: Need to add npm scripts for vitest to the project
