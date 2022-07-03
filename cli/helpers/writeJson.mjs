@@ -1,4 +1,4 @@
-// ./cli/helpers/writeJson.js
+// ./cli/helpers/writeJson.mjs
 
 import fs from 'fs-extra'
 

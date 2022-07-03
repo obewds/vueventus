@@ -1,4 +1,4 @@
-// ./cli/helpers/moveFile.js
+// ./cli/helpers/moveFile.mjs
 
 import fs from 'fs-extra'
 

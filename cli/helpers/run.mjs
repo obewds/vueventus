@@ -1,4 +1,4 @@
-// ./cli/helpers/install.js
+// ./cli/helpers/run.mjs
 
 import child_process from 'child_process'
 

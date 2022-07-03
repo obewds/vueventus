@@ -1,8 +1,8 @@
-// ./cli/helpers/mergeJson.js
+// ./cli/helpers/mergeJson.mjs
 
 
 import merge from 'deepmerge'
-import require from './require.js'
+import require from './require'
 
 export default function (toMergePath, mergeTargetPath) {
 

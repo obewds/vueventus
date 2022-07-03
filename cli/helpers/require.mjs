@@ -1,4 +1,4 @@
-// ./cli/helpers/require.js
+// ./cli/helpers/require.mjs
 
 import { createRequire } from 'module'
 
