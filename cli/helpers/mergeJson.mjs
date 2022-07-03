@@ -2,7 +2,7 @@
 
 
 import merge from 'deepmerge'
-import require from './require'
+import require from './require.mjs'
 
 export default function (toMergePath, mergeTargetPath) {
 
