@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import child_process from 'child_process'
-import { createRequire } from 'module'
 import { createSpinner } from 'nanospinner'
 import fs from 'fs-extra'
 import gradient from 'gradient-string'
@@ -11,14 +9,14 @@ import rimraf from 'rimraf'
 
 import mergeJson from './helpers/mergeJson.mjs'
 import moveFile from './helpers/moveFile.mjs'
+import require from './helpers/require.mjs'
 import run from './helpers/run.mjs'
 import writeJson from './helpers/writeJson.mjs'
 
 
 
-const require = createRequire(import.meta.url)
 const vueventus = gradient('lightGreen', 'cyan')('VueVentus')
-// const sleep = ( ms = 1000 ) => new Promise( ( r ) => setTimeout( r, ms ) )
+const sleep = ( ms = 1000 ) => new Promise( ( r ) => setTimeout( r, ms ) )
 
 const cwd = process.env.INIT_CWD
 const sourceStubs = './node_modules/@obewds/vueventus/cli/stubs/'
@@ -61,6 +59,7 @@ const vv = {
                     checked: true,
                     name: 'FontAwesome Free',
                     install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons --save-dev',
+                    packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/free-solid-svg-icons', '@fortawesome/free-regular-svg-icons'],
                     files: {
                         fontAwesomeTs: {
                             name: 'fontAwesome.ts',
@@ -78,6 +77,7 @@ const vv = {
                     checked: true,
                     name: 'GSAP',
                     install: 'npm install gsap --save-dev',
+                    packages: ['gsap'],
                     files: {
                         gsapTs: {
                             name: 'gsap.ts',
@@ -95,16 +95,19 @@ const vv = {
                     checked: true,
                     name: 'Headless UI',
                     install: 'npm install @headlessui/vue --save-dev',
+                    packages: ['@headlessui/vue'],
                 },
                 heroicons: {
                     checked: true,
                     name: 'Heroicons',
                     install: 'npm install @heroicons/vue --save-dev',
+                    packages: ['@heroicons/vue'],
                 },
                 prism: {
                     checked: true,
                     name: 'Prism.js',
                     install: 'npm install prismjs vite-plugin-prismjs @types/prismjs --save-dev',
+                    packages: ['prismjs', 'vite-plugin-prismjs', '@types/prismjs'],
                     files: {
                         vvPrism: {
                             name: 'VvPrism.vue',
@@ -117,6 +120,7 @@ const vv = {
                     checked: true,
                     name: 'Vitest',
                     install: 'npm install vitest @vue/test-utils happy-dom c8 --save-dev',
+                    packages: ['vitest', '@vue/test-utils', 'happy-dom', 'c8'],
                     files: {
                         vitestConfigTs: {
                             name: 'vitest.config.ts',
@@ -304,6 +308,14 @@ async function chooseFiles () {
             name: vv.stacks.vueTwViteTs.deps.prism.files.vvPrism.name,
             checked: vv.stacks.vueTwViteTs.deps.prism.files.vvPrism.checked,
         })
+        depFileChoices.push({
+            name: vv.stacks.vueTwViteTs.deps.vitest.files.helloVueVentusTestJs.name,
+            checked: vv.stacks.vueTwViteTs.deps.vitest.files.helloVueVentusTestJs.checked,
+        })
+        depFileChoices.push({
+            name: vv.stacks.vueTwViteTs.deps.vitest.files.helloVueVentusVue.name,
+            checked: vv.stacks.vueTwViteTs.deps.vitest.files.helloVueVentusVue.checked,
+        })
 
     }
 
@@ -339,8 +351,6 @@ async function installDepsAndFiles () {
     //
 
     const spinner = createSpinner('Installing ' + vueventus + ' deps and files...').start()
-
-    let consoleLogs = []
 
     //
     // Install stack
@@ -401,7 +411,6 @@ async function installDepsAndFiles () {
         // and finally delete the vite generated folder
         rimraf.sync(cwd + '/' + userOptions.name)
 
-        // add vite install console message to consoleLogs
         console.log(`\nThe ${vueventus} CLI installed/moved all ${stack.name} deps/files to root and merged all package.json data successfully into the root package.json file!\n`)
 
         //
@@ -465,10 +474,14 @@ async function installDepsAndFiles () {
         // START Install vite optional deps
         //
 
+        let optionalPkgs = []
+
         // if the user chose the optional FontAwesome Free dep
         if ( userOptions.deps.includes( stack.deps.fontawesome.name ) ) {
 
             run(stack.deps.fontawesome.install)
+
+            optionalPkgs = [...optionalPkgs, ...stack.deps.fontawesome.packages]
 
             fs.copySync(
                 sourceStubs + stack.deps.fontawesome.files.fontAwesomeTs.name,
@@ -493,6 +506,8 @@ async function installDepsAndFiles () {
 
             run(stack.deps.gsap.install)
 
+            optionalPkgs = [...optionalPkgs, ...stack.deps.gsap.packages]
+
             fs.copySync(sourceStubs + 'gsap.ts', cwd + '/src/gsap.ts')
 
             // add optional GSAP files if the user also selected them
@@ -513,6 +528,8 @@ async function installDepsAndFiles () {
 
             run(stack.deps.headless.install)
 
+            optionalPkgs = [...optionalPkgs, ...stack.deps.headless.packages]
+
             console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.headless.name} dep successfully!\n`)
 
         }
@@ -523,6 +540,8 @@ async function installDepsAndFiles () {
 
             run(stack.deps.heroicons.install)
 
+            optionalPkgs = [...optionalPkgs, ...stack.deps.heroicons.packages]
+
             console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.heroicons.name} dep successfully!\n`)
 
         }
@@ -532,6 +551,8 @@ async function installDepsAndFiles () {
         if ( userOptions.deps.includes( stack.deps.prism.name ) ) {
 
             run(stack.deps.prism.install)
+
+            optionalPkgs = [...optionalPkgs, ...stack.deps.prism.packages]
 
             // add optional Prism.js files if the user also selected them
             if ( userOptions.files.includes( stack.deps.prism.files.vvPrism.name ) ) {
@@ -549,17 +570,22 @@ async function installDepsAndFiles () {
         // if the user chose the optional Vitest dep
         if ( userOptions.deps.includes( stack.deps.vitest.name ) ) {
 
-            run(stack.deps.vitest.install)
-
-            fs.copySync(
-                sourceStubs + stack.deps.vitest.name,
-                cwd + stack.deps.vitest.path + stack.deps.vitest.name
-            )
+            run(`npm pkg set scripts.test="vitest --dom"`)
+            run(`npm pkg set scripts.coverage="vitest run --dom --coverage"`)
 
             // #TODO: Need to add npm scripts for vitest to the project
             //        package.json file once Vitest is installed!
             //        "test": "vitest --dom",
             //        "coverage": "vitest run --dom --coverage"
+
+            run(stack.deps.vitest.install)
+
+            optionalPkgs = [...optionalPkgs, ...stack.deps.vitest.packages]
+
+            fs.copySync(
+                sourceStubs + stack.deps.vitest.files.vitestConfigTs.name,
+                cwd + stack.deps.vitest.files.vitestConfigTs.path + stack.deps.vitest.files.vitestConfigTs.name
+            )
 
             // add optional Vitest files if the user also selected them
             if ( userOptions.files.includes( stack.deps.vitest.files.helloVueVentusTestJs.name ) || userOptions.files.includes( stack.deps.vitest.files.helloVueVentusVue.name ) ) {
@@ -573,9 +599,59 @@ async function installDepsAndFiles () {
                 )
             }
 
+            // add vitest commands to project package.json
+            // const vitestCommands = {
+            //     "scripts": { "test": "vitest --dom", "coverage": "vitest run --dom --coverage" }
+            // }
+            // let tempVitestPkg = require(cwd + '/package.json')
+            // console.log('tempVitestPkg:')
+            // console.log(tempVitestPkg)
+            // check the current package file for a default scripts.test prop
+            // which may have backslashes that can cause an error when
+            // adding in vitest replacement strings programmatically in node
+            // if (tempVitestPkg.scripts.test) {
+            //     delete tempVitestPkg.scripts.test
+            // }
+            // tempVitestPkg.scripts.test = "vitest --dom"
+            // tempVitestPkg.scripts.coverage = "vitest run --dom --coverage"
+            // console.log('UPDATED tempVitestPkg:')
+            // console.log(tempVitestPkg)
+
+            // wait for 5 seconds before trying to open and edit the project json file
+            //setTimeout(() => {
+            //    let tempVitestPkg = require(cwd + '/package.json')
+            //    // check the current package file for a default scripts.test prop
+            //    // which may have backslashes that can cause an error when
+            //    // adding in vitest replacement strings programmatically in node
+            //    if (tempVitestPkg.scripts.test) {
+            //        delete tempVitestPkg.scripts.test
+            //    }
+            //    tempVitestPkg.scripts.test = "vitest --dom"
+            //    tempVitestPkg.scripts.coverage = "vitest run --dom --coverage"
+            //    writeJson(cwd + '/package.json', tempVitestPkg)
+            //}, 5000)
+            
+
+            // sleep() // wait a second for the package to fully parse
+            // setTimeout(() => {
+            //     writeJson(cwd + '/package.json', tempVitestPkg)
+            // }, 1000)
+            //
+            // const updatedPkg = merge(tempVitestPkg, vitestCommands)
+            // fs.writeFileSync(cwd + '/package.json', JSON.stringify(tempVitestPkg, null, 2), { flag: 'r+' })
+
+            // merge the current and vitest packages data
+            // let newVitestPkg = mergeJson(sourceStubs + 'vitest.scripts.json', cwd + '/package.json')
+
+            // write the new merged package data to the current package file
+            // writeJson(cwd + '/package.json', newVitestPkg)
+
             console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.vitest.name} dep/files successfully!\n`)
 
         }
+
+        console.log('optionalPkgs:')
+        console.log(optionalPkgs)
 
         //
         // END Install vite optional deps

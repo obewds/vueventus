@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "test": "vitest --dom",
+    "coverage": "vitest run --dom --coverage"
+  }
+}  

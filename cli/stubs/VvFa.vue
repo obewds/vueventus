@@ -20,7 +20,7 @@
             },
             icon: {
                 type: String,
-                default: 'home',
+                default: 'house',
             },
             size: {
                 type: String,

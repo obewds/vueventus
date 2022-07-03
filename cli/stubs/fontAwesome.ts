@@ -3,8 +3,8 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 //
-import { faHome as FaSolidHome } from '@fortawesome/free-solid-svg-icons'
-import { faHome as FaREgularHome } from '@fortawesome/free-regular-svg-icons'
+import { faHouse as FaSolidHouse } from '@fortawesome/free-solid-svg-icons'
+import { faHouse as FaRegularHouse } from '@fortawesome/free-solid-svg-icons'
 
 // Default app guide brand icon imports
 import { faVuejs } from '@fortawesome/free-brands-svg-icons'
@@ -26,8 +26,8 @@ import { faVuejs } from '@fortawesome/free-brands-svg-icons'
 
 // 
 library.add(
-    FaSolidHome,
-    FaREgularHome,
+    FaSolidHouse,
+    FaRegularHouse,
 
     faVuejs,
     // faApple,
