@@ -1,5 +1,6 @@
 // ./vitest.config.ts
 
+import { configDefaults } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
 
 export default {
@@ -9,5 +10,6 @@ export default {
     test: {
         globals: true,
         environment: 'happy-dom',
+        exclude: [...configDefaults.exclude, './cli/stubs/HelloVueVentus.test.js'],
     },
 }
