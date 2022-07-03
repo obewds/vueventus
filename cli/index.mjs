@@ -9,6 +9,10 @@ import inquirer from 'inquirer'
 import merge from 'deepmerge'
 import rimraf from 'rimraf'
 
+import mergeJson from './helpers/mergeJson.js'
+import moveFile from './helpers/moveFile.js'
+import run from './helpers/run.js'
+import writeJson from './helpers/writeJson.js'
 
 
 
@@ -351,29 +355,22 @@ async function installDepsAndFiles () {
         // START install vite
         //
 
-        child_process.execSync(`npm create vite@latest ${userOptions.name} -- --template vue-ts`, { stdio: 'inherit' } )
-
-        // open the current package file and collect the data
-        let currentPkg = require(cwd + '/package.json')
-
-        // open the vite generated package file and collect the data
-        let vitePkg = require(cwd + '/' + userOptions.name + '/package.json')
+        run(`npm create vite@latest ${userOptions.name} -- --template vue-ts`)
 
         // merge the current and vite packages data
-        let newPkg = merge(vitePkg, currentPkg)
+        let newPkg = mergeJson(cwd + '/' + userOptions.name + '/package.json', cwd + '/package.json')
 
         // write the new merged package data to the current package file
-        fs.writeFileSync(cwd + '/package.json', JSON.stringify(newPkg, null, 2), { flag: 'r+' })
+        writeJson(cwd + '/package.json', newPkg)
 
         // copy each vite generated folder and file from
         // the vite generated directory back up into the root directory
-        let fsSet = { overwrite: true }
-        fs.moveSync(cwd + '/' + userOptions.name + '/.vscode', cwd + '/.vscode', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/public', cwd + '/public', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/src', cwd + '/src', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/.gitignore', cwd + '/.gitignore', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/README.md', cwd + '/README-VITE.md', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/tsconfig.json', cwd + '/tsconfig.json', fsSet)
+        moveFile(cwd + '/' + userOptions.name + '/.vscode', cwd + '/.vscode')
+        moveFile(cwd + '/' + userOptions.name + '/public', cwd + '/public')
+        moveFile(cwd + '/' + userOptions.name + '/src', cwd + '/src')
+        moveFile(cwd + '/' + userOptions.name + '/.gitignore', cwd + '/.gitignore')
+        moveFile(cwd + '/' + userOptions.name + '/README.md', cwd + '/README-VITE.md')
+        moveFile(cwd + '/' + userOptions.name + '/tsconfig.json', cwd + '/tsconfig.json')
         //
         // #TODO: add scripting to open the default vite generated tsconfig.json file
         //        and add the following data
@@ -387,12 +384,12 @@ async function installDepsAndFiles () {
         // #TODO: then add a final script to save the modified data (with pretty printing set to 2) 
         //        in the CLI's output  tsconfig.json file
         //
-        fs.moveSync(cwd + '/' + userOptions.name + '/tsconfig.node.json', cwd + '/tsconfig.node.json', fsSet)
+        moveFile(cwd + '/' + userOptions.name + '/tsconfig.node.json', cwd + '/tsconfig.node.json')
         
         if ( userOptions.files.includes( stack.deps.gsap.files.vvScrollUp.name ) ) {
             fs.copySync(sourceStubs + 'index.html', cwd + '/index.html')
         } else {
-            fs.moveSync(cwd + '/' + userOptions.name + '/index.html', cwd + '/index.html', fsSet)
+            moveFile(cwd + '/' + userOptions.name + '/index.html', cwd + '/index.html')
         }
 
         if ( userOptions.deps.includes( stack.deps.prism.name ) ) {
@@ -411,8 +408,8 @@ async function installDepsAndFiles () {
         // install tailwind css
         //
         
-        child_process.execSync('npm install tailwindcss postcss autoprefixer --save-dev', { stdio: 'inherit' } )
-        child_process.execSync('npx tailwindcss init -p', { stdio: 'inherit' } )
+        run('npm install tailwindcss postcss autoprefixer --save-dev')
+        run('npx tailwindcss init -p')
 
         console.log(`\nThe ${vueventus} CLI installed and initialized tailwind css successfully!\n`)
 
@@ -420,7 +417,7 @@ async function installDepsAndFiles () {
         // install types
         //
 
-        child_process.execSync('npm install @types/node --save-dev', { stdio: 'inherit' } )
+        run('npm install @types/node --save-dev')
 
         console.log(`\nThe ${vueventus} CLI installed node types successfully!\n`)
 
@@ -469,9 +466,9 @@ async function installDepsAndFiles () {
         //
 
         // if the user chose the optional FontAwesome Free dep
-        if ( userOptions.deps.includes(  ) ) {
+        if ( userOptions.deps.includes( stack.deps.fontawesome.name ) ) {
 
-            child_process.execSync(stack.deps.fontawesome.install, { stdio: 'inherit' } )
+            run(stack.deps.fontawesome.install)
 
             fs.copySync(
                 sourceStubs + stack.deps.fontawesome.files.fontAwesomeTs.name,
@@ -494,7 +491,7 @@ async function installDepsAndFiles () {
         // if the user chose the optional GSAP dep
         if ( userOptions.deps.includes( stack.deps.gsap.name ) ) {
 
-            child_process.execSync(stack.deps.gsap.install, { stdio: 'inherit' } )
+            run(stack.deps.gsap.install)
 
             fs.copySync(sourceStubs + 'gsap.ts', cwd + '/src/gsap.ts')
 
@@ -514,7 +511,7 @@ async function installDepsAndFiles () {
         // if the user chose the optional Headless UI dep
         if ( userOptions.deps.includes( stack.deps.headless.name ) ) {
 
-            child_process.execSync(stack.deps.headless.install, { stdio: 'inherit' } )
+            run(stack.deps.headless.install)
 
             console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.headless.name} dep successfully!\n`)
 
@@ -524,7 +521,7 @@ async function installDepsAndFiles () {
         // if the user chose the optional Heroicons dep
         if ( userOptions.deps.includes( stack.deps.heroicons.name ) ) {
 
-            child_process.execSync(stack.deps.heroicons.install, { stdio: 'inherit' } )
+            run(stack.deps.heroicons.install)
 
             console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.heroicons.name} dep successfully!\n`)
 
@@ -534,7 +531,7 @@ async function installDepsAndFiles () {
         // if the user chose the optional Prism.js dep
         if ( userOptions.deps.includes( stack.deps.prism.name ) ) {
 
-            child_process.execSync(stack.deps.prism.install, { stdio: 'inherit' } )
+            run(stack.deps.prism.install)
 
             // add optional Prism.js files if the user also selected them
             if ( userOptions.files.includes( stack.deps.prism.files.vvPrism.name ) ) {
@@ -552,7 +549,7 @@ async function installDepsAndFiles () {
         // if the user chose the optional Vitest dep
         if ( userOptions.deps.includes( stack.deps.vitest.name ) ) {
 
-            child_process.execSync(stack.deps.vitest.install, { stdio: 'inherit' } )
+            run(stack.deps.vitest.install)
 
             fs.copySync(
                 sourceStubs + stack.deps.vitest.name,
@@ -561,6 +558,8 @@ async function installDepsAndFiles () {
 
             // #TODO: Need to add npm scripts for vitest to the project
             //        package.json file once Vitest is installed!
+            //        "test": "vitest --dom",
+            //        "coverage": "vitest run --dom --coverage"
 
             // add optional Vitest files if the user also selected them
             if ( userOptions.files.includes( stack.deps.vitest.files.helloVueVentusTestJs.name ) || userOptions.files.includes( stack.deps.vitest.files.helloVueVentusVue.name ) ) {
