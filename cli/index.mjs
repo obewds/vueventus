@@ -9,13 +9,16 @@ import inquirer from 'inquirer'
 import merge from 'deepmerge'
 import rimraf from 'rimraf'
 
+import mergeJson from './helpers/mergeJson.js'
+import moveFile from './helpers/moveFile.js'
+import run from './helpers/run.js'
+import writeJson from './helpers/writeJson.js'
 
 
 
 const require = createRequire(import.meta.url)
-const sleep = ( ms = 1000 ) => new Promise( ( r ) => setTimeout( r, ms ) )
-// const ifErrorCheck = function ( error ) { if (error) { console.error(error); return; } }
 const vueventus = gradient('lightGreen', 'cyan')('VueVentus')
+// const sleep = ( ms = 1000 ) => new Promise( ( r ) => setTimeout( r, ms ) )
 
 const cwd = process.env.INIT_CWD
 const sourceStubs = './node_modules/@obewds/vueventus/cli/stubs/'
@@ -23,10 +26,8 @@ const sourceStubs = './node_modules/@obewds/vueventus/cli/stubs/'
 let userOptions = {
     name: '',
     stack: '',
-    files: [],
     deps: [],
-    depFiles: [],
-    //destination: './cli-test',
+    files: [],
 }
 
 const vv = {
@@ -56,9 +57,10 @@ const vv = {
                 },
             },
             deps: {
-                faFree: {
+                fontawesome: {
+                    checked: true,
                     name: 'FontAwesome Free',
-                    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons --save-dev',
+                    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons --save-dev',
                     files: {
                         fontAwesomeTs: {
                             name: 'fontAwesome.ts',
@@ -72,23 +74,8 @@ const vv = {
                         },
                     },
                 },
-                faPro: {
-                    name: 'FontAwesome Pro',
-                    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/pro-duotone-svg-icons @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/pro-thin-svg-icons --save-dev',
-                    files: {
-                        fontAwesomeProTs: {
-                            name: 'fontAwesomePro.ts',
-                            checked: true,
-                            path: '/src/',
-                        },
-                        vvFa: {
-                            name: 'VvFa.vue',
-                            checked: true,
-                            path: '/src/components/',
-                        },
-                    },
-                },
                 gsap: {
+                    checked: true,
                     name: 'GSAP',
                     install: 'npm install gsap --save-dev',
                     files: {
@@ -105,14 +92,17 @@ const vv = {
                     },
                 },
                 headless: {
+                    checked: true,
                     name: 'Headless UI',
                     install: 'npm install @headlessui/vue --save-dev',
                 },
                 heroicons: {
+                    checked: true,
                     name: 'Heroicons',
                     install: 'npm install @heroicons/vue --save-dev',
                 },
                 prism: {
+                    checked: true,
                     name: 'Prism.js',
                     install: 'npm install prismjs vite-plugin-prismjs @types/prismjs --save-dev',
                     files: {
@@ -124,6 +114,7 @@ const vv = {
                     },
                 },
                 vitest: {
+                    checked: true,
                     name: 'Vitest',
                     install: 'npm install vitest @vue/test-utils happy-dom c8 --save-dev',
                     files: {
@@ -131,6 +122,16 @@ const vv = {
                             name: 'vitest.config.ts',
                             checked: true,
                             path: '/',
+                        },
+                        helloVueVentusTestJs: {
+                            name: 'HelloVueVentus.test.js',
+                            checked: true,
+                            path: '/tests/components/',
+                        },
+                        helloVueVentusVue: {
+                            name: 'HelloVueVentus.vue',
+                            checked: true,
+                            path: '/src/components/',
                         },
                     },
                 },
@@ -220,18 +221,32 @@ console.log(' ')
 
 async function chooseDeps () {
     
+    const stack = vv.stacks.vueTwViteTs
+    
     const answers = await inquirer.prompt({
         name: 'userDeps',
         type: 'checkbox',
         message: 'Which ' + vueventus + ' deps would you like to install?\n',
         choices: [
-            vv.stacks.vueTwViteTs.deps.faFree.name,
-            vv.stacks.vueTwViteTs.deps.faPro.name,
-            vv.stacks.vueTwViteTs.deps.gsap.name,
-            vv.stacks.vueTwViteTs.deps.headless.name,
-            vv.stacks.vueTwViteTs.deps.heroicons.name,
-            vv.stacks.vueTwViteTs.deps.prism.name,
-            vv.stacks.vueTwViteTs.deps.vitest.name,
+            {
+                name: stack.deps.fontawesome.name,
+                checked: stack.deps.fontawesome.checked,
+            },{
+                name: stack.deps.gsap.name,
+                checked: stack.deps.gsap.checked,
+            },{
+                name: stack.deps.headless.name,
+                checked: stack.deps.headless.checked,
+            },{
+                name: stack.deps.heroicons.name,
+                checked: stack.deps.heroicons.checked,
+            },{
+                name: stack.deps.prism.name,
+                checked: stack.deps.prism.checked,
+            },{
+                name: stack.deps.vitest.name,
+                checked: stack.deps.vitest.checked,
+            },
         ],
     })
 
@@ -250,8 +265,7 @@ console.log(' ')
 
 
 
-
-async function selectInstallFiles () {
+async function chooseFiles () {
     
     let stackFileChoices = []
     let depFileChoices = []
@@ -279,32 +293,16 @@ async function selectInstallFiles () {
 
         // set the depFileChoices array values
         depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.faFree.name,
-            checked: vv.stacks.vueTwViteTs.deps.faFree.checked,
-        })
-        depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.faPro.name,
-            checked: vv.stacks.vueTwViteTs.deps.faPro.checked,
+            name: vv.stacks.vueTwViteTs.deps.fontawesome.files.vvFa.name,
+            checked: vv.stacks.vueTwViteTs.deps.fontawesome.files.vvFa.checked,
         })
         depFileChoices.push({
             name: vv.stacks.vueTwViteTs.deps.gsap.files.vvScrollUp.name,
             checked: vv.stacks.vueTwViteTs.deps.gsap.files.vvScrollUp.checked,
         })
         depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.headless.name,
-            checked: vv.stacks.vueTwViteTs.deps.headless.checked,
-        })
-        depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.heroicons.name,
-            checked: vv.stacks.vueTwViteTs.deps.heroicons.checked,
-        })
-        depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.prism.name,
-            checked: vv.stacks.vueTwViteTs.deps.prism.checked,
-        })
-        depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.vitest.name,
-            checked: vv.stacks.vueTwViteTs.deps.vitest.checked,
+            name: vv.stacks.vueTwViteTs.deps.prism.files.vvPrism.name,
+            checked: vv.stacks.vueTwViteTs.deps.prism.files.vvPrism.checked,
         })
 
     }
@@ -323,7 +321,7 @@ async function selectInstallFiles () {
     return userOptions.files
 }
 
-await selectInstallFiles()
+await chooseFiles()
 
 console.log(' ')
 
@@ -340,7 +338,7 @@ async function installDepsAndFiles () {
     // Setup and start spinner
     //
 
-    const spinner = createSpinner('Installing ' + vueventus + ' deps...').start()
+    const spinner = createSpinner('Installing ' + vueventus + ' deps and files...').start()
 
     let consoleLogs = []
 
@@ -351,159 +349,239 @@ async function installDepsAndFiles () {
     // if the user chose the Vue/TWCSS/VITE/TS stack
     if (userOptions.stack === vv.stacks.vueTwViteTs.name) {
 
+        const stack = vv.stacks.vueTwViteTs
+        
         //
-        // install vite
+        // START install vite
         //
 
-        child_process.execSync(`npm create vite@latest ${userOptions.name} -- --template vue-ts`, { stdio: 'inherit' } )
-
-        // open the current package file and collect the data
-        let currentPkg = require(cwd + '/package.json')
-
-        // open the vite generated package file and collect the data
-        let vitePkg = require(cwd + '/' + userOptions.name + '/package.json')
+        run(`npm create vite@latest ${userOptions.name} -- --template vue-ts`)
 
         // merge the current and vite packages data
-        let newPkg = merge(vitePkg, currentPkg)
+        let newPkg = mergeJson(cwd + '/' + userOptions.name + '/package.json', cwd + '/package.json')
 
         // write the new merged package data to the current package file
-        fs.writeFileSync(cwd + '/package.json', JSON.stringify(newPkg, null, 2), { flag: 'r+' })
+        writeJson(cwd + '/package.json', newPkg)
 
         // copy each vite generated folder and file from
         // the vite generated directory back up into the root directory
-        let fsSet = { overwrite: true }
-        fs.moveSync(cwd + '/' + userOptions.name + '/.vscode', cwd + '/.vscode', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/public', cwd + '/public', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/src', cwd + '/src', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/.gitignore', cwd + '/.gitignore', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/index.html', cwd + '/index.html', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/README.md', cwd + '/README-VITE.md', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/tsconfig.json', cwd + '/tsconfig.json', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/tsconfig.node.json', cwd + '/tsconfig.node.json', fsSet)
-        fs.moveSync(cwd + '/' + userOptions.name + '/vite.config.ts', cwd + '/vite.config.ts', fsSet)
+        moveFile(cwd + '/' + userOptions.name + '/.vscode', cwd + '/.vscode')
+        moveFile(cwd + '/' + userOptions.name + '/public', cwd + '/public')
+        moveFile(cwd + '/' + userOptions.name + '/src', cwd + '/src')
+        moveFile(cwd + '/' + userOptions.name + '/.gitignore', cwd + '/.gitignore')
+        moveFile(cwd + '/' + userOptions.name + '/README.md', cwd + '/README-VITE.md')
+        moveFile(cwd + '/' + userOptions.name + '/tsconfig.json', cwd + '/tsconfig.json')
+        //
+        // #TODO: add scripting to open the default vite generated tsconfig.json file
+        //        and add the following data
+        //
+        // "allowJs": true,
+        // "types": ["node", "vite/client"],
+        // "paths": {
+        //   "@/": ["/src"]
+        // }
+        //
+        // #TODO: then add a final script to save the modified data (with pretty printing set to 2) 
+        //        in the CLI's output  tsconfig.json file
+        //
+        moveFile(cwd + '/' + userOptions.name + '/tsconfig.node.json', cwd + '/tsconfig.node.json')
+        
+        if ( userOptions.files.includes( stack.deps.gsap.files.vvScrollUp.name ) ) {
+            fs.copySync(sourceStubs + 'index.html', cwd + '/index.html')
+        } else {
+            moveFile(cwd + '/' + userOptions.name + '/index.html', cwd + '/index.html')
+        }
+
+        if ( userOptions.deps.includes( stack.deps.prism.name ) ) {
+            fs.copySync(sourceStubs + 'vite.config.prism.ts', cwd + '/vite.config.ts')
+        } else {
+            fs.copySync(sourceStubs + 'vite.config.ts', cwd + '/vite.config.ts')
+        }
 
         // and finally delete the vite generated folder
         rimraf.sync(cwd + '/' + userOptions.name)
 
         // add vite install console message to consoleLogs
-        console.log(`The ${vueventus} CLI installed/moved all Vite:vue-ts files to root and merged package data successfully!`)
+        console.log(`\nThe ${vueventus} CLI installed/moved all ${stack.name} deps/files to root and merged all package.json data successfully into the root package.json file!\n`)
 
         //
         // install tailwind css
         //
         
-        child_process.execSync('npm install tailwindcss postcss autoprefixer --save-dev', { stdio: 'inherit' } )
-        child_process.execSync('npx tailwindcss init -p', { stdio: 'inherit' } )
+        run('npm install tailwindcss postcss autoprefixer --save-dev')
+        run('npx tailwindcss init -p')
 
-        console.log(`The ${vueventus} CLI installed and initialized tailwind css successfully!`)
+        console.log(`\nThe ${vueventus} CLI installed and initialized tailwind css successfully!\n`)
 
         //
         // install types
         //
 
-        child_process.execSync('npm install @types/node --save-dev', { stdio: 'inherit' } )
+        run('npm install @types/node --save-dev')
 
-        console.log(`The ${vueventus} CLI installed node types successfully!`)
+        console.log(`\nThe ${vueventus} CLI installed node types successfully!\n`)
 
-    }
+        //
+        // install stack VueVentus files
+        //
 
-    //
-    // Install optional deps
-    //
+        if ( userOptions.files.includes( stack.files.appVvTs.name ) ) {
+            fs.copySync(
+                sourceStubs + stack.files.appVvTs.name,
+                cwd + stack.files.appVvTs.path + stack.files.appVvTs.name
+            )
+        }
 
-    // if the user chose the optional FontAwesome Free dep
-    if ( userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.faFree.name ) ) {
+        if ( userOptions.files.includes( stack.files.appColorsJson.name ) ) {
+            fs.copySync(
+                sourceStubs + stack.files.appColorsJson.name,
+                cwd + stack.files.appColorsJson.path + stack.files.appColorsJson.name
+            )
+        }
 
-        // check for Pro dep selected - and if so bypass this block and handle in Pro dep install block
-        if ( !userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.faPro.name ) ) {
+        if ( userOptions.files.includes( stack.files.tailwindConfigJs.name ) ) {
+            fs.copySync(
+                sourceStubs + stack.files.tailwindConfigJs.name,
+                cwd + stack.files.tailwindConfigJs.path + stack.files.tailwindConfigJs.name
+            )
+        }
 
-            child_process.execSync(vv.stacks.vueTwViteTs.deps.faFree.install, { stdio: 'inherit' } )
+        if ( userOptions.files.includes( stack.files.tailwindCss.name ) ) {
+            fs.copySync(
+                sourceStubs + stack.files.tailwindCss.name,
+                cwd + stack.files.tailwindCss.path + stack.files.tailwindCss.name
+            )
+        }
 
-            fs.copySync(sourceStubs + 'fontAwesome.ts', cwd + '/src/fontAwesome.ts')
+        console.log(`\nThe ${vueventus} CLI installed the VueVentus files for your stack successfully!\n`)
+
+        //
+        // END of install vite
+        //
+
+
+
+        //
+        // START Install vite optional deps
+        //
+
+        // if the user chose the optional FontAwesome Free dep
+        if ( userOptions.deps.includes( stack.deps.fontawesome.name ) ) {
+
+            run(stack.deps.fontawesome.install)
+
+            fs.copySync(
+                sourceStubs + stack.deps.fontawesome.files.fontAwesomeTs.name,
+                cwd + stack.deps.fontawesome.files.fontAwesomeTs.path + stack.deps.fontawesome.files.fontAwesomeTs.name
+            )
 
             // add optional FontAwesome Free files if the user also selected them
-            if ( userOptions.depFiles.includes( vv.stacks.vueTwViteTs.deps.faFree.files.vvFa.name ) ) {
-                fs.copySync(sourceStubs + 'VvFa.vue', cwd + '/src/components/VvFa.vue')
+            if ( userOptions.files.includes( stack.deps.fontawesome.files.vvFa.name ) ) {
+                fs.copySync(
+                    sourceStubs + stack.deps.fontawesome.files.vvFa.name,
+                    cwd + stack.deps.fontawesome.files.vvFa.path + stack.deps.fontawesome.files.vvFa.name
+                )
             }
 
+            console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.fontawesome.name} dep/files successfully!\n`)
+
         }
 
-    }
-    
 
-    // if the user chose the optional FontAwesome Pro dep
-    if ( userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.faPro.name ) ) {
+        // if the user chose the optional GSAP dep
+        if ( userOptions.deps.includes( stack.deps.gsap.name ) ) {
 
-        child_process.execSync(vv.stacks.vueTwViteTs.deps.faFree.install, { stdio: 'inherit' } )
-        child_process.execSync(vv.stacks.vueTwViteTs.deps.faPro.install, { stdio: 'inherit' } )
+            run(stack.deps.gsap.install)
 
-        fs.copySync(sourceStubs + 'fontAwesomePro.ts', cwd + '/src/fontAwesomePro.ts')
+            fs.copySync(sourceStubs + 'gsap.ts', cwd + '/src/gsap.ts')
 
-        // add optional FontAwesome Free files if the user also selected them
-        if ( userOptions.depFiles.includes( vv.stacks.vueTwViteTs.deps.faPro.files.vvFa.name ) ) {
-            fs.copySync(sourceStubs + 'VvFa.vue', cwd + '/src/components/VvFa.vue')
+            // add optional GSAP files if the user also selected them
+            if ( userOptions.files.includes( stack.deps.gsap.files.vvScrollUp.name ) ) {
+                fs.copySync(
+                    sourceStubs + stack.deps.gsap.files.vvScrollUp.name,
+                    cwd + stack.deps.gsap.files.vvScrollUp.path + stack.deps.gsap.files.vvScrollUp.name
+                )
+            }
+
+            console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.gsap.name} dep/files successfully!\n`)
+
         }
 
-    }
 
+        // if the user chose the optional Headless UI dep
+        if ( userOptions.deps.includes( stack.deps.headless.name ) ) {
 
-    // if the user chose the optional GSAP dep
-    if ( userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.gsap.name ) ) {
+            run(stack.deps.headless.install)
 
-        child_process.execSync(vv.stacks.vueTwViteTs.deps.gsap.install, { stdio: 'inherit' } )
+            console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.headless.name} dep successfully!\n`)
 
-        fs.copySync(sourceStubs + 'gsap.ts', cwd + '/src/gsap.ts')
-
-        // add optional GSAP files if the user also selected them
-        if ( userOptions.depFiles.includes( vv.stacks.vueTwViteTs.deps.gsap.files.vvScrollUp.name ) ) {
-            fs.copySync(sourceStubs + 'VvScrollUp.vue', cwd + '/src/components/VvScrollUp.vue')
         }
 
-    }
 
+        // if the user chose the optional Heroicons dep
+        if ( userOptions.deps.includes( stack.deps.heroicons.name ) ) {
 
-    // if the user chose the optional Headless UI dep
-    if ( userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.headless.name ) ) {
+            run(stack.deps.heroicons.install)
 
-        child_process.execSync(vv.stacks.vueTwViteTs.deps.headless.install, { stdio: 'inherit' } )
+            console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.heroicons.name} dep successfully!\n`)
 
-    }
-
-
-    // if the user chose the optional Heroicons dep
-    if ( userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.heroicons.name ) ) {
-
-        child_process.execSync(vv.stacks.vueTwViteTs.deps.heroicons.install, { stdio: 'inherit' } )
-
-    }
-
-
-    // if the user chose the optional Prism.js dep
-    if ( userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.prism.name ) ) {
-
-        child_process.execSync(vv.stacks.vueTwViteTs.deps.prism.install, { stdio: 'inherit' } )
-
-        // add optional Prism.js files if the user also selected them
-        if ( userOptions.depFiles.includes( vv.stacks.vueTwViteTs.deps.prism.files.vvPrism.name ) ) {
-            fs.copySync(sourceStubs + 'VvPrism.vue', cwd + '/src/components/VvPrism.vue')
         }
 
+
+        // if the user chose the optional Prism.js dep
+        if ( userOptions.deps.includes( stack.deps.prism.name ) ) {
+
+            run(stack.deps.prism.install)
+
+            // add optional Prism.js files if the user also selected them
+            if ( userOptions.files.includes( stack.deps.prism.files.vvPrism.name ) ) {
+                fs.copySync(
+                    sourceStubs + stack.deps.prism.files.vvPrism.name,
+                    cwd + stack.deps.prism.files.vvPrism.path + stack.deps.prism.files.vvPrism.name,
+                )
+            }
+
+            console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.prism.name}  dep/files successfully!\n`)
+
+        }
+
+
+        // if the user chose the optional Vitest dep
+        if ( userOptions.deps.includes( stack.deps.vitest.name ) ) {
+
+            run(stack.deps.vitest.install)
+
+            fs.copySync(
+                sourceStubs + stack.deps.vitest.name,
+                cwd + stack.deps.vitest.path + stack.deps.vitest.name
+            )
+
+            // #TODO: Need to add npm scripts for vitest to the project
+            //        package.json file once Vitest is installed!
+            //        "test": "vitest --dom",
+            //        "coverage": "vitest run --dom --coverage"
+
+            // add optional Vitest files if the user also selected them
+            if ( userOptions.files.includes( stack.deps.vitest.files.helloVueVentusTestJs.name ) || userOptions.files.includes( stack.deps.vitest.files.helloVueVentusVue.name ) ) {
+                fs.copySync(
+                    sourceStubs + stack.deps.vitest.files.helloVueVentusVue.name,
+                    cwd + stack.deps.vitest.files.helloVueVentusVue.path + stack.deps.vitest.files.helloVueVentusVue.name
+                )
+                fs.copySync(
+                    sourceStubs + stack.deps.vitest.files.helloVueVentusTestJs.name,
+                    cwd + stack.deps.vitest.files.helloVueVentusTestJs.path + stack.deps.vitest.files.helloVueVentusTestJs.name
+                )
+            }
+
+            console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.vitest.name} dep/files successfully!\n`)
+
+        }
+
+        //
+        // END Install vite optional deps
+        //
+
     }
-
-
-    // if the user chose the optional Vitest dep
-    if ( userOptions.deps.includes( vv.stacks.vueTwViteTs.deps.vitest.name ) ) {
-
-        child_process.execSync(vv.stacks.vueTwViteTs.deps.vitest.install, { stdio: 'inherit' } )
-
-        fs.copySync(sourceStubs + 'vitest.config.ts', cwd + '/vitest.config.ts')
-
-    }
-
-
-
-
-
 
     // await sleep()
 
