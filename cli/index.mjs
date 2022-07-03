@@ -380,7 +380,16 @@ async function installDepsAndFiles () {
         moveFile(cwd + '/' + userOptions.name + '/src', cwd + '/src')
         moveFile(cwd + '/' + userOptions.name + '/.gitignore', cwd + '/.gitignore')
         moveFile(cwd + '/' + userOptions.name + '/README.md', cwd + '/README-VITE.md')
-        moveFile(cwd + '/' + userOptions.name + '/tsconfig.json', cwd + '/tsconfig.json')
+        moveFile(cwd + '/' + userOptions.name + '/tsconfig.node.json', cwd + '/tsconfig.node.json')
+
+        // moveFile(cwd + '/' + userOptions.name + '/tsconfig.json', cwd + '/tsconfig.json')
+        
+        // merge the stub and vite tsconfig files data
+        let newTsConfig = mergeJson(cwd + '/' + userOptions.name + '/tsconfig.json', sourceStubs + '/tsconfig.json')
+
+        // write the new merged package data to the current package file
+        writeJson(cwd + '/tsconfig.json', newTsConfig)
+
         //
         // #TODO: add scripting to open the default vite generated tsconfig.json file
         //        and add the following data
@@ -394,7 +403,6 @@ async function installDepsAndFiles () {
         // #TODO: then add a final script to save the modified data (with pretty printing set to 2) 
         //        in the CLI's output  tsconfig.json file
         //
-        moveFile(cwd + '/' + userOptions.name + '/tsconfig.node.json', cwd + '/tsconfig.node.json')
         
         if ( userOptions.files.includes( stack.deps.gsap.files.vvScrollUp.name ) ) {
             fs.copySync(sourceStubs + 'index.html', cwd + '/index.html')
@@ -573,11 +581,6 @@ async function installDepsAndFiles () {
             run(`npm pkg set scripts.test="vitest --dom"`)
             run(`npm pkg set scripts.coverage="vitest run --dom --coverage"`)
 
-            // #TODO: Need to add npm scripts for vitest to the project
-            //        package.json file once Vitest is installed!
-            //        "test": "vitest --dom",
-            //        "coverage": "vitest run --dom --coverage"
-
             run(stack.deps.vitest.install)
 
             optionalPkgs = [...optionalPkgs, ...stack.deps.vitest.packages]
@@ -599,58 +602,11 @@ async function installDepsAndFiles () {
                 )
             }
 
-            // add vitest commands to project package.json
-            // const vitestCommands = {
-            //     "scripts": { "test": "vitest --dom", "coverage": "vitest run --dom --coverage" }
-            // }
-            // let tempVitestPkg = require(cwd + '/package.json')
-            // console.log('tempVitestPkg:')
-            // console.log(tempVitestPkg)
-            // check the current package file for a default scripts.test prop
-            // which may have backslashes that can cause an error when
-            // adding in vitest replacement strings programmatically in node
-            // if (tempVitestPkg.scripts.test) {
-            //     delete tempVitestPkg.scripts.test
-            // }
-            // tempVitestPkg.scripts.test = "vitest --dom"
-            // tempVitestPkg.scripts.coverage = "vitest run --dom --coverage"
-            // console.log('UPDATED tempVitestPkg:')
-            // console.log(tempVitestPkg)
-
-            // wait for 5 seconds before trying to open and edit the project json file
-            //setTimeout(() => {
-            //    let tempVitestPkg = require(cwd + '/package.json')
-            //    // check the current package file for a default scripts.test prop
-            //    // which may have backslashes that can cause an error when
-            //    // adding in vitest replacement strings programmatically in node
-            //    if (tempVitestPkg.scripts.test) {
-            //        delete tempVitestPkg.scripts.test
-            //    }
-            //    tempVitestPkg.scripts.test = "vitest --dom"
-            //    tempVitestPkg.scripts.coverage = "vitest run --dom --coverage"
-            //    writeJson(cwd + '/package.json', tempVitestPkg)
-            //}, 5000)
-            
-
-            // sleep() // wait a second for the package to fully parse
-            // setTimeout(() => {
-            //     writeJson(cwd + '/package.json', tempVitestPkg)
-            // }, 1000)
-            //
-            // const updatedPkg = merge(tempVitestPkg, vitestCommands)
-            // fs.writeFileSync(cwd + '/package.json', JSON.stringify(tempVitestPkg, null, 2), { flag: 'r+' })
-
-            // merge the current and vitest packages data
-            // let newVitestPkg = mergeJson(sourceStubs + 'vitest.scripts.json', cwd + '/package.json')
-
-            // write the new merged package data to the current package file
-            // writeJson(cwd + '/package.json', newVitestPkg)
-
             console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.vitest.name} dep/files successfully!\n`)
 
         }
 
-        console.log('optionalPkgs:')
+        console.log(`${vueventus} CLI installed the following packages:`)
         console.log(optionalPkgs)
 
         //
