@@ -3,11 +3,11 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 //
-import { faHome as FaDuotoneHome } from '@fortawesome/pro-duotone-svg-icons'
-import { faHome as FaLightHome } from '@fortawesome/pro-light-svg-icons'
-import { faHome as FaRegularHome } from '@fortawesome/pro-regular-svg-icons'
-import { faHome as FaSolidHome } from '@fortawesome/pro-solid-svg-icons'
-import { faHome as FaThinHome } from '@fortawesome/pro-thin-svg-icons'
+import { faHouse as FaDuotoneHouse } from '@fortawesome/pro-duotone-svg-icons'
+import { faHouse as FaLightHouse } from '@fortawesome/pro-light-svg-icons'
+import { faHouse as FaRegularHouse} from '@fortawesome/pro-regular-svg-icons'
+import { faHouse as FaSolidHouse } from '@fortawesome/pro-solid-svg-icons'
+import { faHouse as FaThinHouse } from '@fortawesome/pro-thin-svg-icons'
 
 
 // Default app guide brand icon imports
@@ -30,11 +30,11 @@ import { faVuejs } from '@fortawesome/free-brands-svg-icons'
 
 // 
 library.add(
-    FaDuotoneHome,
-    FaLightHome,
-    FaRegularHome,
-    FaSolidHome,
-    FaThinHome,
+    FaDuotoneHouse,
+    FaLightHouse,
+    FaRegularHouse,
+    FaSolidHouse,
+    FaThinHouse,
 
     faVuejs,
     // faApple,
