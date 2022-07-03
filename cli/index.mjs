@@ -9,10 +9,10 @@ import inquirer from 'inquirer'
 import merge from 'deepmerge'
 import rimraf from 'rimraf'
 
-import mergeJson from './helpers/mergeJson'
-import moveFile from './helpers/moveFile'
-import run from './helpers/run'
-import writeJson from './helpers/writeJson'
+import mergeJson from './helpers/mergeJson.mjs'
+import moveFile from './helpers/moveFile.mjs'
+import run from './helpers/run.mjs'
+import writeJson from './helpers/writeJson.mjs'
 
 
 
