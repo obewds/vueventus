@@ -89,7 +89,7 @@ module.exports = {
 
         socialLinks: [
             { icon: 'github', link: 'https://github.com/obewds/vueventus' },
-            { icon: 'twitter', link: 'https://mobile.twitter.com/obewds' },
+            { icon: 'twitter', link: 'https://mobile.twitter.com/vueventus' },
         ],
 
         // sidebarDepth: 2,
