@@ -16,45 +16,21 @@
     
         <div class="max-w-2xl grid grid-cols-5 items-center gap-8 px-8 pb-10 mx-auto">
 
-            <img alt="Vue logo" src="./assets/logo.png"/>
-            <img alt="Vue logo" src="./assets/logo.png"/>
-            <img alt="Vue logo" src="./assets/logo.png"/>
-            <img alt="Vue logo" src="./assets/logo.png"/>
-            <VueVentusSpinningMark :enable-animation="true"/>
+            <img alt="Vue logo" src="./assets/logo-vue.svg"/>
+            <img alt="Vue logo" src="./assets/logo-tailwindcss.svg"/>
+            <VueVentusSpinningMark/>
+            <img alt="Vue logo" src="./assets/logo-vite.svg"/>
+            <img alt="Vue logo" src="./assets/logo-typescript.svg"/>
 
         </div>
         
-        <HelloWorld msg="Hello Vue 3 + TypeScript + Vite + VueVentus"/>
+        <HelloWorld msg="Hello Vue 3 + Tailwind CSS + VueVentus + Vite + TypeScript"/>
 
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-
-        Hello scrollbar!
+        <div class="pt-96">
+            <div class="pt-96">
+                Hello scrollbar!
+            </div>
+        </div>
 
         <aside class="fixed bottom-0 right-0 text-right z-40">
             <nav class="relative bottom-0 pb-3 pr-4">

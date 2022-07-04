@@ -2,6 +2,8 @@
 
     import { ref } from 'vue'
     import { VvAnchor, VvButton, VvEl } from '@obewds/vueventus'
+    import VvPrism from './VvPrism.vue'
+    import appVv from '../app.vv'
 
     defineProps<{ msg: string }>()
 
@@ -32,5 +34,19 @@
     <p>
         Edit <VvEl tag="span" ground-palette="monochromatic" ground-color="success" class="px-2 rounded">components/HelloWorld.vue</VvEl> to test hot module replacement.
     </p>
+
+    <div class="max-w-4xl pt-12 text-left mx-auto">
+    
+        <p class="text-lg font-bold pb-1">Current <VvEl tag="span" ground-palette="monochromatic" ground-color="success" class="px-2 rounded">./src/app.vv.ts</VvEl> Configuration Values:</p>
+    
+        <VvPrism>
+            <pre>
+                <code class="line-numbers language-javascript">
+                    {{ appVv }}
+                </code>
+            </pre>
+        </VvPrism>
+    
+    </div>
 
 </template>
