@@ -29,6 +29,7 @@ You'll find lots of information and insight here covering how to use the VueVent
 
 But first, you'll need to choose your path for installation:
 
+* [The VueVentus CLI](/guides/install-vv-cli)
 * [Install with Vite.js](/guides/install-vite)
 * [Install with Vue CLI](/guides/install-vue-cli)
 * [Install with Nuxt.js 3](/guides/install-nuxt)

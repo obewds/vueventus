@@ -9,6 +9,8 @@ module.exports = {
         "./index.html",
         "./src/**/*.{vue,js,ts,jsx,tsx}",
         "./docs/**/*.{md,html,js,vue}",
+        // Include VueVentus default TWCSS classes (for prototyping):
+        "./node_modules/@obewds/vueventus/**/*.{vue,js,ts,jsx,tsx,json}",
     ],
 
     theme: {
