@@ -4,6 +4,13 @@ hero:
   name: VueVentus
   text: Aesthetically Flexible Components
   tagline: A component library and styling management system for modern Vue.js, Tailwind CSS, and Typescript apps
+  image:
+    light:
+      src: /images/vue-ventus-mark-and-favicon.png
+      alt: VueVentus
+    dark:
+      src: /images/vue-ventus-mark-and-favicon.png
+      alt: VueVentus
   actions:
     - theme: brand
       text: Get Started
