@@ -17,25 +17,19 @@
         <div class="max-w-2xl grid grid-cols-5 items-center gap-8 px-8 pb-10 mx-auto">
 
             <img alt="Vue logo" src="./assets/logo-vue.svg"/>
-            <img alt="Vue logo" src="./assets/logo-tailwindcss.svg"/>
+            <img alt="Tailwind CSS logo" src="./assets/logo-tailwindcss.svg"/>
             <VueVentusSpinningMark/>
-            <img alt="Vue logo" src="./assets/logo-vite.svg"/>
-            <img alt="Vue logo" src="./assets/logo-typescript.svg"/>
+            <img alt="Vite.js logo" src="./assets/logo-vite.svg"/>
+            <img alt="Typescript logo" src="./assets/logo-typescript.svg"/>
 
         </div>
         
         <HelloWorld msg="Hello Vue 3 + Tailwind CSS + VueVentus + Vite + TypeScript"/>
 
-        <div class="pt-96">
-            <div class="pt-96">
-                Hello scrollbar!
-            </div>
-        </div>
-
         <aside class="fixed bottom-0 right-0 text-right z-40">
             <nav class="relative bottom-0 pb-3 pr-4">
                 <div class="flex flex-col justify-end space-y-3">
-                    <VvScrollUp :is-visible="true"/>
+                    <VvScrollUp/>
                     <VvColorModeButton palette="solid" color="primary" :mode="(colorMode as string)"/>
                 </div>
             </nav>

@@ -46,7 +46,7 @@
                 })
             })
 
-            return [ isVisible ]
+            return { isVisible }
 
         },
 
