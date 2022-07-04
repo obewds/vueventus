@@ -4,22 +4,21 @@ import { createSpinner } from 'nanospinner'
 import fs from 'fs-extra'
 import gradient from 'gradient-string'
 import inquirer from 'inquirer'
-import merge from 'deepmerge'
 import rimraf from 'rimraf'
 
 import mergeJson from './helpers/mergeJson.mjs'
 import moveFile from './helpers/moveFile.mjs'
-import require from './helpers/require.mjs'
 import run from './helpers/run.mjs'
 import writeJson from './helpers/writeJson.mjs'
 
 
 
 const vueventus = gradient('lightGreen', 'cyan')('VueVentus')
-const sleep = ( ms = 1000 ) => new Promise( ( r ) => setTimeout( r, ms ) )
+//const sleep = ( ms = 1000 ) => new Promise( ( r ) => setTimeout( r, ms ) )
 
 const cwd = process.env.INIT_CWD
-const sourceStubs = './node_modules/@obewds/vueventus/cli/stubs/'
+//const sourceStubs = './node_modules/@obewds/vueventus/cli/stubs/'
+const stubs = cwd + '/node_modules/@obewds/vueventus/cli/stubs/'
 
 let userOptions = {
     name: '',
@@ -356,6 +355,8 @@ async function installDepsAndFiles () {
     // Install stack
     //
 
+    let installedPkgs = []
+
     // if the user chose the Vue/TWCSS/VITE/TS stack
     if (userOptions.stack === vv.stacks.vueTwViteTs.name) {
 
@@ -366,6 +367,8 @@ async function installDepsAndFiles () {
         //
 
         run(`npm create vite@latest ${userOptions.name} -- --template vue-ts`)
+
+        installedPkgs.push('vite@latest')
 
         // merge the current and vite packages data
         let newPkg = mergeJson(cwd + '/' + userOptions.name + '/package.json', cwd + '/package.json')
@@ -380,44 +383,37 @@ async function installDepsAndFiles () {
         moveFile(cwd + '/' + userOptions.name + '/src', cwd + '/src')
         moveFile(cwd + '/' + userOptions.name + '/.gitignore', cwd + '/.gitignore')
         moveFile(cwd + '/' + userOptions.name + '/README.md', cwd + '/README-VITE.md')
+        moveFile(cwd + '/' + userOptions.name + '/tsconfig.json', cwd + '/tsconfig.json')
         moveFile(cwd + '/' + userOptions.name + '/tsconfig.node.json', cwd + '/tsconfig.node.json')
-
-        // moveFile(cwd + '/' + userOptions.name + '/tsconfig.json', cwd + '/tsconfig.json')
-        
-        // merge the stub and vite tsconfig files data
-        let newTsConfig = mergeJson(cwd + '/' + userOptions.name + '/tsconfig.json', sourceStubs + '/tsconfig.json')
-
-        // write the new merged package data to the current package file
-        writeJson(cwd + '/tsconfig.json', newTsConfig)
-
-        //
-        // #TODO: add scripting to open the default vite generated tsconfig.json file
-        //        and add the following data
-        //
-        // "allowJs": true,
-        // "types": ["node", "vite/client"],
-        // "paths": {
-        //   "@/": ["/src"]
-        // }
-        //
-        // #TODO: then add a final script to save the modified data (with pretty printing set to 2) 
-        //        in the CLI's output  tsconfig.json file
-        //
+        moveFile(stubs + 'logo-obe.svg', cwd + '/src/assets/logo-obe.svg')
+        moveFile(stubs + 'logo-tailwindcss.svg', cwd + '/src/assets/logo-tailwindcss.svg')
+        moveFile(stubs + 'logo-typescript.svg', cwd + '/src/assets/logo-typescript.svg')
+        moveFile(stubs + 'logo-vite.svg', cwd + '/src/assets/logo-vite.svg')
+        moveFile(stubs + 'logo-vue.svg', cwd + '/src/assets/logo-vue.svg')
+        moveFile(stubs + 'main.ts', cwd + '/src/main.ts')
+        moveFile(stubs + 'App.vue', cwd + '/src/App.vue')
+        moveFile(stubs + 'HelloWorld.vue', cwd + '/src/components/HelloWorld.vue')
         
         if ( userOptions.files.includes( stack.deps.gsap.files.vvScrollUp.name ) ) {
-            fs.copySync(sourceStubs + 'index.html', cwd + '/index.html')
+            fs.copySync(stubs + 'index.html', cwd + '/index.html')
         } else {
             moveFile(cwd + '/' + userOptions.name + '/index.html', cwd + '/index.html')
         }
 
         if ( userOptions.deps.includes( stack.deps.prism.name ) ) {
-            fs.copySync(sourceStubs + 'vite.config.prism.ts', cwd + '/vite.config.ts')
+            fs.copySync(stubs + 'vite.config.prism.ts', cwd + '/vite.config.ts')
         } else {
-            fs.copySync(sourceStubs + 'vite.config.ts', cwd + '/vite.config.ts')
+            fs.copySync(stubs + 'vite.config.ts', cwd + '/vite.config.ts')
         }
 
         // and finally delete the vite generated folder
         rimraf.sync(cwd + '/' + userOptions.name)
+        
+        // merge the stub and vite tsconfig files data
+        let newTsConfig = mergeJson(cwd + '/tsconfig.json', stubs + 'tsconfig.json')
+
+        // write the new merged package data to the current package file
+        writeJson(cwd + '/tsconfig.json', newTsConfig)
 
         console.log(`\nThe ${vueventus} CLI installed/moved all ${stack.name} deps/files to root and merged all package.json data successfully into the root package.json file!\n`)
 
@@ -428,7 +424,9 @@ async function installDepsAndFiles () {
         run('npm install tailwindcss postcss autoprefixer --save-dev')
         run('npx tailwindcss init -p')
 
-        console.log(`\nThe ${vueventus} CLI installed and initialized tailwind css successfully!\n`)
+        installedPkgs.push('tailwindcss', 'postcss', 'autoprefixer')
+
+        console.log(`\nThe ${vueventus} CLI installed and initialized Tailwind CSS successfully!\n`)
 
         //
         // install types
@@ -436,7 +434,9 @@ async function installDepsAndFiles () {
 
         run('npm install @types/node --save-dev')
 
-        console.log(`\nThe ${vueventus} CLI installed node types successfully!\n`)
+        installedPkgs.push('@types/node')
+
+        console.log(`\nThe ${vueventus} CLI installed @types/node successfully!\n`)
 
         //
         // install stack VueVentus files
@@ -444,33 +444,33 @@ async function installDepsAndFiles () {
 
         if ( userOptions.files.includes( stack.files.appVvTs.name ) ) {
             fs.copySync(
-                sourceStubs + stack.files.appVvTs.name,
+                stubs + stack.files.appVvTs.name,
                 cwd + stack.files.appVvTs.path + stack.files.appVvTs.name
             )
         }
 
         if ( userOptions.files.includes( stack.files.appColorsJson.name ) ) {
             fs.copySync(
-                sourceStubs + stack.files.appColorsJson.name,
+                stubs + stack.files.appColorsJson.name,
                 cwd + stack.files.appColorsJson.path + stack.files.appColorsJson.name
             )
         }
 
         if ( userOptions.files.includes( stack.files.tailwindConfigJs.name ) ) {
             fs.copySync(
-                sourceStubs + stack.files.tailwindConfigJs.name,
+                stubs + stack.files.tailwindConfigJs.name,
                 cwd + stack.files.tailwindConfigJs.path + stack.files.tailwindConfigJs.name
             )
         }
 
         if ( userOptions.files.includes( stack.files.tailwindCss.name ) ) {
             fs.copySync(
-                sourceStubs + stack.files.tailwindCss.name,
+                stubs + stack.files.tailwindCss.name,
                 cwd + stack.files.tailwindCss.path + stack.files.tailwindCss.name
             )
         }
 
-        console.log(`\nThe ${vueventus} CLI installed the VueVentus files for your stack successfully!\n`)
+        console.log(`\nThe ${vueventus} CLI installed VueVentus package files for your stack successfully!\n`)
 
         //
         // END of install vite
@@ -482,24 +482,22 @@ async function installDepsAndFiles () {
         // START Install vite optional deps
         //
 
-        let optionalPkgs = []
-
         // if the user chose the optional FontAwesome Free dep
         if ( userOptions.deps.includes( stack.deps.fontawesome.name ) ) {
 
             run(stack.deps.fontawesome.install)
 
-            optionalPkgs = [...optionalPkgs, ...stack.deps.fontawesome.packages]
+            installedPkgs = [...installedPkgs, ...stack.deps.fontawesome.packages]
 
             fs.copySync(
-                sourceStubs + stack.deps.fontawesome.files.fontAwesomeTs.name,
+                stubs + stack.deps.fontawesome.files.fontAwesomeTs.name,
                 cwd + stack.deps.fontawesome.files.fontAwesomeTs.path + stack.deps.fontawesome.files.fontAwesomeTs.name
             )
 
             // add optional FontAwesome Free files if the user also selected them
             if ( userOptions.files.includes( stack.deps.fontawesome.files.vvFa.name ) ) {
                 fs.copySync(
-                    sourceStubs + stack.deps.fontawesome.files.vvFa.name,
+                    stubs + stack.deps.fontawesome.files.vvFa.name,
                     cwd + stack.deps.fontawesome.files.vvFa.path + stack.deps.fontawesome.files.vvFa.name
                 )
             }
@@ -514,14 +512,14 @@ async function installDepsAndFiles () {
 
             run(stack.deps.gsap.install)
 
-            optionalPkgs = [...optionalPkgs, ...stack.deps.gsap.packages]
+            installedPkgs = [...installedPkgs, ...stack.deps.gsap.packages]
 
-            fs.copySync(sourceStubs + 'gsap.ts', cwd + '/src/gsap.ts')
+            fs.copySync(stubs + 'gsap.ts', cwd + '/src/gsap.ts')
 
             // add optional GSAP files if the user also selected them
             if ( userOptions.files.includes( stack.deps.gsap.files.vvScrollUp.name ) ) {
                 fs.copySync(
-                    sourceStubs + stack.deps.gsap.files.vvScrollUp.name,
+                    stubs + stack.deps.gsap.files.vvScrollUp.name,
                     cwd + stack.deps.gsap.files.vvScrollUp.path + stack.deps.gsap.files.vvScrollUp.name
                 )
             }
@@ -536,7 +534,7 @@ async function installDepsAndFiles () {
 
             run(stack.deps.headless.install)
 
-            optionalPkgs = [...optionalPkgs, ...stack.deps.headless.packages]
+            installedPkgs = [...installedPkgs, ...stack.deps.headless.packages]
 
             console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.headless.name} dep successfully!\n`)
 
@@ -548,7 +546,7 @@ async function installDepsAndFiles () {
 
             run(stack.deps.heroicons.install)
 
-            optionalPkgs = [...optionalPkgs, ...stack.deps.heroicons.packages]
+            installedPkgs = [...installedPkgs, ...stack.deps.heroicons.packages]
 
             console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.heroicons.name} dep successfully!\n`)
 
@@ -560,17 +558,17 @@ async function installDepsAndFiles () {
 
             run(stack.deps.prism.install)
 
-            optionalPkgs = [...optionalPkgs, ...stack.deps.prism.packages]
+            installedPkgs = [...installedPkgs, ...stack.deps.prism.packages]
 
             // add optional Prism.js files if the user also selected them
             if ( userOptions.files.includes( stack.deps.prism.files.vvPrism.name ) ) {
                 fs.copySync(
-                    sourceStubs + stack.deps.prism.files.vvPrism.name,
+                    stubs + stack.deps.prism.files.vvPrism.name,
                     cwd + stack.deps.prism.files.vvPrism.path + stack.deps.prism.files.vvPrism.name,
                 )
             }
 
-            console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.prism.name}  dep/files successfully!\n`)
+            console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.prism.name} dep/files successfully!\n`)
 
         }
 
@@ -583,21 +581,21 @@ async function installDepsAndFiles () {
 
             run(stack.deps.vitest.install)
 
-            optionalPkgs = [...optionalPkgs, ...stack.deps.vitest.packages]
+            installedPkgs = [...installedPkgs, ...stack.deps.vitest.packages]
 
             fs.copySync(
-                sourceStubs + stack.deps.vitest.files.vitestConfigTs.name,
+                stubs + stack.deps.vitest.files.vitestConfigTs.name,
                 cwd + stack.deps.vitest.files.vitestConfigTs.path + stack.deps.vitest.files.vitestConfigTs.name
             )
 
             // add optional Vitest files if the user also selected them
             if ( userOptions.files.includes( stack.deps.vitest.files.helloVueVentusTestJs.name ) || userOptions.files.includes( stack.deps.vitest.files.helloVueVentusVue.name ) ) {
                 fs.copySync(
-                    sourceStubs + stack.deps.vitest.files.helloVueVentusVue.name,
+                    stubs + stack.deps.vitest.files.helloVueVentusVue.name,
                     cwd + stack.deps.vitest.files.helloVueVentusVue.path + stack.deps.vitest.files.helloVueVentusVue.name
                 )
                 fs.copySync(
-                    sourceStubs + stack.deps.vitest.files.helloVueVentusTestJs.name,
+                    stubs + stack.deps.vitest.files.helloVueVentusTestJs.name,
                     cwd + stack.deps.vitest.files.helloVueVentusTestJs.path + stack.deps.vitest.files.helloVueVentusTestJs.name
                 )
             }
@@ -606,16 +604,14 @@ async function installDepsAndFiles () {
 
         }
 
-        console.log(`${vueventus} CLI installed the following packages:`)
-        console.log(optionalPkgs)
-
         //
         // END Install vite optional deps
         //
 
     }
 
-    // await sleep()
+    console.log(`${vueventus} CLI installed the following packages:`)
+    console.log(installedPkgs)
 
     spinner.success({
         text: vueventus + ' deps installed successfully!',
