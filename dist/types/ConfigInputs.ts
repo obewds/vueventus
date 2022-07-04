@@ -22,7 +22,7 @@ export interface ConfigInputs {
     classes: ReturnsClassesFunction
     palettes: {
         validation: DefaultValidationPalette
-        [key: string]: EmptyPalette | undefined
+        [key: string]: EmptyPalette | DefaultValidationPalette
     }
     [key: string]: any
 }

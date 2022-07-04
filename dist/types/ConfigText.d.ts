@@ -17,8 +17,8 @@ export interface ConfigText {
     getSizeClasses: ReturnsClassesFunction;
     classes: ReturnsClassesFunction;
     palettes: {
-        default?: DefaultConfigPalette;
-        [key: string]: EmptyPalette | undefined;
+        default: DefaultConfigPalette;
+        [key: string]: EmptyPalette | DefaultConfigPalette;
     };
     [key: string]: any;
 }
