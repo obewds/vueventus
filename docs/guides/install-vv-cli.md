@@ -58,8 +58,6 @@ Optionally, you'll also be able to pick and install amazing Vite/Vue/Tailwind CS
 
 Each of the deps packages install pre-configured files (ready to tweak to taste) that are already integrated into Vite using modern plugins. Some deps come with ready-to-use components and even a test or two to speed up writing future tests with the Vitest suite.
 
-
-
 ::: info CLI On-Going
 The plan/hope for the CLI aspect of VueVentus, is to keep massaging the "Vue 3, Tailwind CSS, Vite & Typescript" stack's implementation via the CLI, and get the code refactored with all of the options working perfectly regardless of what's included/excluded. For now it's best to just use it all tbh.
 
