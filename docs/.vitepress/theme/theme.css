@@ -5,11 +5,37 @@
     transition-duration: 300ms;
 }
 
-.image-container .img-src {
-    padding: 40px;
+/*
+.image .image-container img {
+    background:-moz-radial-gradient(circle at 50% 50%, rgba(65, 184, 131, 0.25) 0%, rgba(34, 152, 189, 0.12) 50%, rgba(3, 169, 244, 0) 100%);
+    background:-webkit-radial-gradient(circle at 50% 50%, rgba(65, 184, 131, 0.25) 0%, rgba(34, 152, 189, 0.12) 50%, rgba(3, 169, 244, 0) 100%);
+    background:-o-radial-gradient(circle at 50% 50%, rgba(65, 184, 131, 0.25) 0%, rgba(34, 152, 189, 0.12) 50%, rgba(3, 169, 244, 0) 100%);
+    background:-ms-radial-gradient(circle at 50% 50%, rgba(65, 184, 131, 0.25) 0%, rgba(34, 152, 189, 0.12) 50%, rgba(3, 169, 244, 0) 100%);
+    background:radial-gradient(circle at 50% 50%, rgba(65, 184, 131, 0.25) 0%, rgba(34, 152, 189, 0.12) 50%, rgba(3, 169, 244, 0) 100%);
+}
+*/
+
+.image .image-container img {
+    max-width: 260px;
 }
 
-.image-container,
+@media only screen and (max-width: 960px) {
+
+    .image .image-container img {
+        max-width: 200px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .image .image-container img {
+        max-width: 120px;
+    }
+
+}
+
+.image .image-container,
 .title .logo {
     -webkit-animation: rotating 4s linear infinite;
     -moz-animation: rotating 4s linear infinite;
