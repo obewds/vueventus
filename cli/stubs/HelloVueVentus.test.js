@@ -1,7 +1,7 @@
 // ./tests/HelloVueVentus.test.js
 
 import { mount } from '@vue/test-utils'
-import HelloVueVentus from '../src/components/HelloVueVentus.vue'
+import HelloVueVentus from '../../src/components/HelloVueVentus.vue'
 
 test('HelloVueVentus.vue component mounts successfully', async () => {
     expect(HelloVueVentus).toBeTruthy()
