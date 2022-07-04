@@ -9,7 +9,7 @@
 
     export default defineComponent({
 
-        name: 'VvPrism',
+        name: 'VvScrollUp',
 
         components: {
             TransitionChild,
@@ -52,7 +52,7 @@
 
         methods: {
 
-            scrollToTop (event) {
+            scrollToTop (event: Event) {
                 // GSAP ScrollToPlugin
                 gsap.to(window, {
                     duration: 0.3,
