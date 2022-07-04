@@ -28,9 +28,9 @@ export interface ConfigButtons {
     getFabSizeClasses: ReturnsClassesFunction;
     fabClasses: ReturnsClassesFunction;
     palettes: {
-        solid?: DefaultConfigPalette;
-        outline?: DefaultConfigPalette;
-        [key: string]: EmptyPalette | undefined;
+        solid: DefaultConfigPalette;
+        outline: DefaultConfigPalette;
+        [key: string]: EmptyPalette | DefaultConfigPalette;
     };
     [key: string]: any;
 }

@@ -23,7 +23,7 @@ export interface ConfigTextareas {
     classes: ReturnsClassesFunction
     palettes: {
         validation: DefaultValidationPalette
-        [key: string]: EmptyPalette | undefined
+        [key: string]: EmptyPalette | DefaultValidationPalette
     }
     sizes: TextareasSizes
     rowSizes: TextareasRowSizes
