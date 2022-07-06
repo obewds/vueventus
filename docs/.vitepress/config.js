@@ -186,8 +186,9 @@ function sidebarModules() {
                 { text: 'GroundDefault Palette', link: '/modules/palettes/ground-default' },
                 { text: 'GroundMonochromatic Palette', link: '/modules/palettes/ground-monochromatic' },
                 { text: 'GroundPastel Palette', link: '/modules/palettes/ground-pastel' },
+                { text: 'InputDefault Palette', link: '/modules/palettes/input-default' },
+                { text: 'InputUnderlined Palette', link: '/modules/palettes/input-underlined' },
                 { text: 'TextDefault Palette', link: '/modules/palettes/text-default' },
-                { text: 'ValidationDefault Palette', link: '/modules/palettes/validation-default' },
             ]
         },{
             text: 'Helper Modules',
