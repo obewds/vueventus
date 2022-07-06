@@ -17,11 +17,22 @@
 
         <div :class="tw.cardFlex">
             <div>
-                <h3 :class="tw.h3">VvInput Colors</h3>
+                <h3 :class="tw.h3">VvInput Default Palette Colors</h3>
                 <div :class="tw.flexWrap">
                     <VvInput color="default" placeholder="default Color"/>
                     <VvInput color="error" placeholder="error Color"/>
                     <VvInput color="success" placeholder="success Color"/>
+                </div>
+            </div>
+        </div>
+
+        <div :class="tw.cardFlex">
+            <div>
+                <h3 :class="tw.h3">VvInput Underlined Palette Colors</h3>
+                <div :class="tw.flexWrap">
+                    <VvInput color="default" palette="underlined" placeholder="default Color"/>
+                    <VvInput color="error" palette="underlined" placeholder="error Color"/>
+                    <VvInput color="success" palette="underlined" placeholder="success Color"/>
                 </div>
             </div>
         </div>
