@@ -1,6 +1,6 @@
 // ./src/configs/palettes/BorderDefault.ts
 
-import { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
 
 export default <DefaultConfigPalette>{
     '': '',

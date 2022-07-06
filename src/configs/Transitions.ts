@@ -1,6 +1,6 @@
 // ./src/configs/Transitions.ts
 
-import { ConfigTransitions } from '../types/ConfigTransitions'
+import type { ConfigTransitions } from '../types/ConfigTransitions'
 
 export default <ConfigTransitions>{
     durations: {

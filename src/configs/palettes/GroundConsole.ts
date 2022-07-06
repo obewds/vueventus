@@ -1,6 +1,6 @@
 // ./src/configs/palettes/GroundConsole.ts
 
-import { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
 
 export default <DefaultConfigPalette>{
     'default': 'text-gray-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80',

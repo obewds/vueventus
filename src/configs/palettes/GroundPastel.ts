@@ -1,6 +1,6 @@
 // ./src/configs/palettes/GroundPastel.ts
 
-import { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
 
 export default <DefaultConfigPalette>{
     'default': 'text-black bg-gray-100 dark:bg-gray-200',

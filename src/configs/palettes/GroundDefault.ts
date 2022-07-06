@@ -1,6 +1,6 @@
 // ./src/configs/palettes/GroundDefault.ts
 
-import { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
 
 export default <DefaultConfigPalette>{
     'default': '',
