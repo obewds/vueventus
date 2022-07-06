@@ -26,8 +26,7 @@ export default function (optsObj) {
         gsapLine = "import './gsap'"
     }
 
-const output = `
-// ${opts.path}
+const output = `// ${opts.path}
 
 import { createApp } from 'vue'
 import App from './App.vue'
