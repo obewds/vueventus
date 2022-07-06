@@ -1,7 +1,6 @@
 // ./src/configs/palettes/TextDefault.ts
 
-import { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
-import ColorModes from '../ColorModes'
+import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
 
 export default <DefaultConfigPalette>{
     'default': 'dark:text-gray-100 text-gray-900',

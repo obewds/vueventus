@@ -1,6 +1,6 @@
 // ./src/configs/Anchors.ts
 
-import { ConfigAnchors } from '../types/ConfigAnchors'
+import type { ConfigAnchors } from '../types/ConfigAnchors'
 import Text from './Text.js'
 import Transitions from './Transitions.js'
 

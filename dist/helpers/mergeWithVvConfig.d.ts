@@ -50,7 +50,8 @@ export default function (appTwConfig: typeof VvConfig): {
     };
     inputs: {
         palettes: {
-            validation: import("..").DefaultValidationPalette;
+            default: import("..").DefaultValidationPalette;
+            underlined: import("..").DefaultValidationPalette;
         };
         border: string | undefined;
         display: string | undefined;
@@ -98,7 +99,8 @@ export default function (appTwConfig: typeof VvConfig): {
     };
     textareas: {
         palettes: {
-            validation: import("..").DefaultValidationPalette;
+            default: import("..").DefaultValidationPalette;
+            underlined: import("..").DefaultValidationPalette;
         };
         border: string | undefined;
         display: string | undefined;

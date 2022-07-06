@@ -23,19 +23,19 @@
                 <h3 :class="tw.h3">Textareas Colors</h3>
                 <div :class="tw.flexWrap + ' pb-3'">
                     <textarea
-                        :class="[String(vv?.textareas.classes()), String(vv?.textareas.palettes.validation.default)]"
+                        :class="[String(vv?.textareas.classes()), String(vv?.textareas.palettes.default.default)]"
                         placeholder="Default Color"
                     />
                 </div>
                 <div :class="tw.flexWrap + ' pb-3'">
                     <textarea
-                        :class="[String(vv?.textareas.classes()), String(vv?.textareas.palettes.validation.error)]"
+                        :class="[String(vv?.textareas.classes()), String(vv?.textareas.palettes.default.error)]"
                         placeholder="Error Color"
                     />
                 </div>
                 <div :class="tw.flexWrap">
                     <textarea
-                        :class="[String(vv?.textareas.classes()), String(vv?.textareas.palettes.validation.success)]"
+                        :class="[String(vv?.textareas.classes()), String(vv?.textareas.palettes.default.success)]"
                         placeholder="Success Color"
                     />
                 </div>
@@ -47,37 +47,37 @@
                 <h3 :class="tw.h3">Textareas Sizes</h3>
                 <div :class="tw.flexWrap + ' pb-3'">
                     <textarea
-                        :class="[String(vv?.textareas.classes('xs')), String(vv?.textareas.palettes.validation.default)]"
+                        :class="[String(vv?.textareas.classes('xs')), String(vv?.textareas.palettes.default.default)]"
                         placeholder="'xs' Size"
                     />
                 </div>
                 <div :class="tw.flexWrap + ' pb-3'">
                     <textarea
-                        :class="[String(vv?.textareas.classes('sm')), String(vv?.textareas.palettes.validation.default)]"
+                        :class="[String(vv?.textareas.classes('sm')), String(vv?.textareas.palettes.default.default)]"
                         placeholder="'sm' Size"
                     />
                 </div>
                 <div :class="tw.flexWrap + ' pb-3'">
                     <textarea
-                        :class="[String(vv?.textareas.classes()), String(vv?.textareas.palettes.validation.default)]"
+                        :class="[String(vv?.textareas.classes()), String(vv?.textareas.palettes.default.default)]"
                         placeholder="'md' Size"
                     />
                 </div>
                 <div :class="tw.flexWrap + ' pb-3'">
                     <textarea
-                        :class="[String(vv?.textareas.classes('lg')), String(vv?.textareas.palettes.validation.default)]"
+                        :class="[String(vv?.textareas.classes('lg')), String(vv?.textareas.palettes.default.default)]"
                         placeholder="'lg' Size"
                     />
                 </div>
                 <div :class="tw.flexWrap + ' pb-3'">
                     <textarea
-                        :class="[String(vv?.textareas.classes('xl')), String(vv?.textareas.palettes.validation.default)]"
+                        :class="[String(vv?.textareas.classes('xl')), String(vv?.textareas.palettes.default.default)]"
                         placeholder="'xl' Size"
                     />
                 </div>
                 <div :class="tw.flexWrap">
                     <textarea
-                        :class="[String(vv?.textareas.classes('2xl')), String(vv?.textareas.palettes.validation.default)]"
+                        :class="[String(vv?.textareas.classes('2xl')), String(vv?.textareas.palettes.default.default)]"
                         placeholder="'2xl' Size"
                     />
                 </div>
@@ -89,42 +89,42 @@
                 <h3 :class="tw.h3">Textareas Row Sizes</h3>
                 <div :class="tw.flexWrap + ' pb-3'">
                     <textarea
-                        :class="[String(vv?.textareas.palettes.validation.default), String(vv?.textareas.classes())]"
+                        :class="[String(vv?.textareas.palettes.default.default), String(vv?.textareas.classes())]"
                         :rows="vv?.textareas.getRowSize('xs')"
                         placeholder="'xs' Row Size"
                     />
                 </div>
                 <div :class="tw.flexWrap + ' pb-3'">
                     <textarea
-                        :class="[String(vv?.textareas.palettes.validation.default), String(vv?.textareas.classes())]"
+                        :class="[String(vv?.textareas.palettes.default.default), String(vv?.textareas.classes())]"
                         :rows="vv?.textareas.getRowSize('sm')"
                         placeholder="'sm' Row Size"
                     />
                 </div>
                 <div :class="tw.flexWrap + ' pb-3'">
                     <textarea
-                        :class="[String(vv?.textareas.palettes.validation.default), String(vv?.textareas.classes())]"
+                        :class="[String(vv?.textareas.palettes.default.default), String(vv?.textareas.classes())]"
                         :rows="vv?.textareas.getRowSize('md')"
                         placeholder="'md' Row Size"
                     />
                 </div>
                 <div :class="tw.flexWrap + ' pb-3'">
                     <textarea
-                        :class="[String(vv?.textareas.palettes.validation.default), String(vv?.textareas.classes())]"
+                        :class="[String(vv?.textareas.palettes.default.default), String(vv?.textareas.classes())]"
                         :rows="vv?.textareas.getRowSize('lg')"
                         placeholder="'lg' Row Size"
                     />
                 </div>
                 <div :class="tw.flexWrap + ' pb-3'">
                     <textarea
-                        :class="[String(vv?.textareas.palettes.validation.default), String(vv?.textareas.classes())]"
+                        :class="[String(vv?.textareas.palettes.default.default), String(vv?.textareas.classes())]"
                         :rows="vv?.textareas.getRowSize('xl')"
                         placeholder="'xl' Row Size"
                     />
                 </div>
                 <div :class="tw.flexWrap">
                     <textarea
-                        :class="[String(vv?.textareas.palettes.validation.default), String(vv?.textareas.classes())]"
+                        :class="[String(vv?.textareas.palettes.default.default), String(vv?.textareas.classes())]"
                         :rows="vv?.textareas.getRowSize('2xl')"
                         placeholder="'2xl' Row Size"
                     />

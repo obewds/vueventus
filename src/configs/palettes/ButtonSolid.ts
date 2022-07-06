@@ -1,6 +1,6 @@
 // ./src/configs/palettes/ButtonSolid.ts
 
-import { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
 
 export default <DefaultConfigPalette>{
     'default': 'text-gray-800 hover:text-black bg-gray-100 hover:bg-gray-200 active:bg-gray-300 border-gray-900 focus:border-black focus:ring-gray-400',

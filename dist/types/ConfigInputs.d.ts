@@ -18,7 +18,8 @@ export interface ConfigInputs {
     getSizeClasses: ReturnsClassesFunction;
     classes: ReturnsClassesFunction;
     palettes: {
-        validation: DefaultValidationPalette;
+        default: DefaultValidationPalette;
+        underlined: DefaultValidationPalette;
         [key: string]: EmptyPalette | DefaultValidationPalette;
     };
     [key: string]: any;

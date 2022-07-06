@@ -1,6 +1,6 @@
 // ./src/configs/palettes/AnchorDefault.ts
 
-import { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
 
 export default <DefaultConfigPalette>{
     'default': 'text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-200',

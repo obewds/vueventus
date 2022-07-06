@@ -6,8 +6,6 @@ import appGlobals from './globals'
 import appVv from './app.vv'
 import './css/tailwind.css'
 
-// import mergeWithVvConfig from './helpers/mergeWithVvConfig.js'
-// app.provide('vv', mergeWithVvConfig(appVv))
 
 const app = createApp(App)
 

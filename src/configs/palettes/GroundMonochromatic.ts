@@ -1,6 +1,6 @@
 // ./src/configs/palettes/GroundMonochromatic.ts
 
-import { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
 
 export default <DefaultConfigPalette>{
     'default': 'text-gray-800 bg-gray-200 dark:bg-gray-800 dark:text-gray-200',

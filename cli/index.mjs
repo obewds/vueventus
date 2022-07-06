@@ -6,6 +6,7 @@ import gradient from 'gradient-string'
 import inquirer from 'inquirer'
 import rimraf from 'rimraf'
 
+import generateMainFileCode from './helpers/generateMainFileCode.mjs'
 import mergeJson from './helpers/mergeJson.mjs'
 import moveFile from './helpers/moveFile.mjs'
 import run from './helpers/run.mjs'
@@ -23,6 +24,7 @@ const stubs = cwd + '/node_modules/@obewds/vueventus/cli/stubs/'
 let userOptions = {
     name: '',
     stack: '',
+    faProLicense: '',
     deps: [],
     files: [],
 }
@@ -62,6 +64,24 @@ const vv = {
                     files: {
                         fontAwesomeTs: {
                             name: 'fontAwesome.ts',
+                            checked: true,
+                            path: '/src/',
+                        },
+                        vvFa: {
+                            name: 'VvFa.vue',
+                            checked: true,
+                            path: '/src/components/',
+                        },
+                    },
+                },
+                faPro: {
+                    checked: false,
+                    name: 'FontAwesome Pro (License Required)',
+                    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/pro-duotone-svg-icons @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/pro-thin-svg-icons --save-dev',
+                    packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/pro-solid-svg-icons', '@fortawesome/pro-regular-svg-icons', '@fortawesome/pro-duotone-svg-icons', '@fortawesome/pro-light-svg-icons', '@fortawesome/pro-thin-svg-icons'],
+                    files: {
+                        fontAwesomeProTs: {
+                            name: 'fontAwesomePro.ts',
                             checked: true,
                             path: '/src/',
                         },
@@ -235,6 +255,9 @@ async function chooseDeps () {
                 name: stack.deps.fontawesome.name,
                 checked: stack.deps.fontawesome.checked,
             },{
+                name: stack.deps.faPro.name,
+                checked: stack.deps.faPro.checked,
+            },{
                 name: stack.deps.gsap.name,
                 checked: stack.deps.gsap.checked,
             },{
@@ -276,44 +299,55 @@ async function chooseFiles () {
     // if the stack is vueTwViteTs
     if ( userOptions.stack === vv.stacks.vueTwViteTs.name ) {
 
+        const stack = vv.stacks.vueTwViteTs
+
         // set the stackFileChoices array values
         stackFileChoices.push({
-            name: vv.stacks.vueTwViteTs.files.appVvTs.name,
-            checked: vv.stacks.vueTwViteTs.files.appVvTs.checked,
+            name: stack.files.appVvTs.name,
+            checked: stack.files.appVvTs.checked,
         })
         stackFileChoices.push({
-            name: vv.stacks.vueTwViteTs.files.appColorsJson.name,
-            checked: vv.stacks.vueTwViteTs.files.appColorsJson.checked,
+            name: stack.files.appColorsJson.name,
+            checked: stack.files.appColorsJson.checked,
         })
         stackFileChoices.push({
-            name: vv.stacks.vueTwViteTs.files.tailwindConfigJs.name,
-            checked: vv.stacks.vueTwViteTs.files.tailwindConfigJs.checked,
+            name: stack.files.tailwindConfigJs.name,
+            checked: stack.files.tailwindConfigJs.checked,
         })
         stackFileChoices.push({
-            name: vv.stacks.vueTwViteTs.files.tailwindCss.name,
-            checked: vv.stacks.vueTwViteTs.files.tailwindCss.checked,
+            name: stack.files.tailwindCss.name,
+            checked: stack.files.tailwindCss.checked,
         })
 
         // set the depFileChoices array values
+        if (userOptions.deps.includes(stack.deps.fontawesome.name) || userOptions.deps.includes(stack.deps.faPro.name)) {
+            if (userOptions.deps.includes(stack.deps.faPro.name)) {
+                depFileChoices.push({
+                    name: stack.deps.faPro.files.vvFa.name,
+                    checked: stack.deps.faPro.files.vvFa.checked,
+                })
+            } else {
+                depFileChoices.push({
+                    name: stack.deps.fontawesome.files.vvFa.name,
+                    checked: stack.deps.fontawesome.files.vvFa.checked,
+                })
+            }
+        }
         depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.fontawesome.files.vvFa.name,
-            checked: vv.stacks.vueTwViteTs.deps.fontawesome.files.vvFa.checked,
+            name: stack.deps.gsap.files.vvScrollUp.name,
+            checked: stack.deps.gsap.files.vvScrollUp.checked,
         })
         depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.gsap.files.vvScrollUp.name,
-            checked: vv.stacks.vueTwViteTs.deps.gsap.files.vvScrollUp.checked,
+            name: stack.deps.prism.files.vvPrism.name,
+            checked: stack.deps.prism.files.vvPrism.checked,
         })
         depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.prism.files.vvPrism.name,
-            checked: vv.stacks.vueTwViteTs.deps.prism.files.vvPrism.checked,
+            name: stack.deps.vitest.files.helloVueVentusTestJs.name,
+            checked: stack.deps.vitest.files.helloVueVentusTestJs.checked,
         })
         depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.vitest.files.helloVueVentusTestJs.name,
-            checked: vv.stacks.vueTwViteTs.deps.vitest.files.helloVueVentusTestJs.checked,
-        })
-        depFileChoices.push({
-            name: vv.stacks.vueTwViteTs.deps.vitest.files.helloVueVentusVue.name,
-            checked: vv.stacks.vueTwViteTs.deps.vitest.files.helloVueVentusVue.checked,
+            name: stack.deps.vitest.files.helloVueVentusVue.name,
+            checked: stack.deps.vitest.files.helloVueVentusVue.checked,
         })
 
     }
@@ -335,6 +369,7 @@ async function chooseFiles () {
 await chooseFiles()
 
 console.log(' ')
+
 
 
 
@@ -390,9 +425,39 @@ async function installDepsAndFiles () {
         moveFile(stubs + 'logo-typescript.svg', cwd + '/src/assets/logo-typescript.svg')
         moveFile(stubs + 'logo-vite.svg', cwd + '/src/assets/logo-vite.svg')
         moveFile(stubs + 'logo-vue.svg', cwd + '/src/assets/logo-vue.svg')
-        moveFile(stubs + 'main.ts', cwd + '/src/main.ts')
         moveFile(stubs + 'App.vue', cwd + '/src/App.vue')
         moveFile(stubs + 'HelloWorld.vue', cwd + '/src/components/HelloWorld.vue')
+
+
+
+
+        // moveFile(stubs + 'main.ts', cwd + '/src/main.ts')
+        let mainFileSettings = {
+            faFree: false,
+            faPro: false,
+            gsap: false,
+        }
+        if (userOptions.deps.includes(stack.deps.fontawesome.name) || userOptions.deps.includes(stack.deps.faPro.name)) {
+            if (userOptions.deps.includes(stack.deps.fontawesome.name)) {
+                mainFileSettings.faFree = true
+            }
+            if (userOptions.deps.includes(stack.deps.faPro.name)) {
+                mainFileSettings.faFree = false
+                mainFileSettings.faPro = true
+            }
+        }
+        if (userOptions.deps.includes(stack.deps.gsap.name)) {
+            mainFileSettings.gsap = true
+        }
+        const mainTsCode = generateMainFileCode(mainFileSettings)
+        fs.writeFile(cwd + '/src/main.ts', mainTsCode)
+
+
+
+
+
+
+
         
         if ( userOptions.files.includes( stack.deps.gsap.files.vvScrollUp.name ) ) {
             fs.copySync(stubs + 'index.html', cwd + '/index.html')
@@ -410,7 +475,7 @@ async function installDepsAndFiles () {
         rimraf.sync(cwd + '/' + userOptions.name)
         
         // merge the stub and vite tsconfig files data
-        let newTsConfig = mergeJson(cwd + '/tsconfig.json', stubs + 'tsconfig.json')
+        let newTsConfig = mergeJson(cwd + '/tsconfig.json', stubs + 'vv.tsconfig.json')
 
         // write the new merged package data to the current package file
         writeJson(cwd + '/tsconfig.json', newTsConfig)
@@ -483,26 +548,100 @@ async function installDepsAndFiles () {
         //
 
         // if the user chose the optional FontAwesome Free dep
-        if ( userOptions.deps.includes( stack.deps.fontawesome.name ) ) {
+        if (userOptions.deps.includes(stack.deps.fontawesome.name) || userOptions.deps.includes(stack.deps.faPro.name)) {
 
-            run(stack.deps.fontawesome.install)
+            if (userOptions.deps.includes(stack.deps.faPro.name)) {
 
-            installedPkgs = [...installedPkgs, ...stack.deps.fontawesome.packages]
+                //
+                // install the pro font awesome dep
+                //
 
-            fs.copySync(
-                stubs + stack.deps.fontawesome.files.fontAwesomeTs.name,
-                cwd + stack.deps.fontawesome.files.fontAwesomeTs.path + stack.deps.fontawesome.files.fontAwesomeTs.name
-            )
+                async function setFaProLicense () {
+    
+                    const answers = await inquirer.prompt({
+                        name: 'faProLicense',
+                        type: 'input',
+                        message: 'What is your FontAwesome Pro license authorization token (required to download artwork via a project .npmrc file which will be created for you)?\n',
+                    })
+                
+                    userOptions.faProLicense = answers.faProLicense
+                
+                    return userOptions.faProLicense
+                }
+                
+                await setFaProLicense()
+                
+                console.log(' ')
 
-            // add optional FontAwesome Free files if the user also selected them
-            if ( userOptions.files.includes( stack.deps.fontawesome.files.vvFa.name ) ) {
+                // create faPro .npmrc file - adding in the user supplied
+
+                if (userOptions.faProLicense !== '') {
+                    
+const npmrcCode = `
+@fortawesome:registry=https://npm.fontawesome.com/
+//npm.fontawesome.com/:_authToken=${userOptions.faProLicense}
+`
+                    fs.writeFile(cwd + '/.npmrc', npmrcCode)
+
+                    //
+                    console.log(`\nThe ${vueventus} CLI is pausing to give your system time to write the .npmrc file with your authorization token for your FontAwesome Pro packages and installations!\n`)
+
+                    setTimeout(() => {
+                        
+                        //
+                        // now install the pro font awesome dep
+                        //
+                        
+                        run(stack.deps.faPro.install)
+
+                        installedPkgs = [...installedPkgs, ...stack.deps.faPro.packages]
+
+                        fs.copySync(
+                            stubs + stack.deps.faPro.files.fontAwesomeProTs.name,
+                            cwd + stack.deps.faPro.files.fontAwesomeProTs.path + stack.deps.faPro.files.fontAwesomeProTs.name
+                        )
+
+                        // add optional FontAwesome Free files if the user also selected them
+                        if ( userOptions.files.includes( stack.deps.faPro.files.vvFa.name ) ) {
+                            fs.copySync(
+                                stubs + stack.deps.faPro.files.vvFa.name,
+                                cwd + stack.deps.faPro.files.vvFa.path + stack.deps.faPro.files.vvFa.name
+                            )
+                        }
+
+                        console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.faPro.name} dep/files successfully!\n`)
+                    
+                    }, 3000)
+
+                }
+
+
+            } else {
+
+                //
+                // else install the free font awesome dep
+                //
+                
+                run(stack.deps.fontawesome.install)
+
+                installedPkgs = [...installedPkgs, ...stack.deps.fontawesome.packages]
+
                 fs.copySync(
-                    stubs + stack.deps.fontawesome.files.vvFa.name,
-                    cwd + stack.deps.fontawesome.files.vvFa.path + stack.deps.fontawesome.files.vvFa.name
+                    stubs + stack.deps.fontawesome.files.fontAwesomeTs.name,
+                    cwd + stack.deps.fontawesome.files.fontAwesomeTs.path + stack.deps.fontawesome.files.fontAwesomeTs.name
                 )
-            }
 
-            console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.fontawesome.name} dep/files successfully!\n`)
+                // add optional FontAwesome Free files if the user also selected them
+                if ( userOptions.files.includes( stack.deps.fontawesome.files.vvFa.name ) ) {
+                    fs.copySync(
+                        stubs + stack.deps.fontawesome.files.vvFa.name,
+                        cwd + stack.deps.fontawesome.files.vvFa.path + stack.deps.fontawesome.files.vvFa.name
+                    )
+                }
+
+                console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.fontawesome.name} dep/files successfully!\n`)
+
+            }
 
         }
 

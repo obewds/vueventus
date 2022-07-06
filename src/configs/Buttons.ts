@@ -1,6 +1,6 @@
 // ./src/configs/Buttons.ts
 
-import { ConfigButtons } from '../types/ConfigButtons'
+import type { ConfigButtons } from '../types/ConfigButtons'
 import Transitions from './Transitions.js'
 
 export default <ConfigButtons>{

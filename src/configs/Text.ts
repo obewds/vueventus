@@ -1,6 +1,6 @@
 // ./src/configs/Text.ts
 
-import { ConfigText } from '../types/ConfigText'
+import type { ConfigText } from '../types/ConfigText'
 
 export default <ConfigText>{
     align: '',

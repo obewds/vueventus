@@ -356,12 +356,12 @@ var Inputs = {
     ].join(" ").replace(/\s+/g, " ").trim();
   },
   sizes: {
-    "xs": "px-2 py-1.5 text-sm rounded",
-    "sm": "px-3 py-2 text-base rounded",
-    "md": "px-3 py-2 text-lg rounded-md",
-    "lg": "px-4 py-3 text-xl rounded-md",
-    "xl": "px-4 py-3 text-2xl rounded-lg",
-    "2xl": "px-5 py-4 text-3xl rounded-lg"
+    "xs": "px-2 py-1.5 text-sm",
+    "sm": "px-3 py-2 text-base",
+    "md": "px-3 py-2 text-lg",
+    "lg": "px-4 py-3 text-xl",
+    "xl": "px-4 py-3 text-2xl",
+    "2xl": "px-5 py-4 text-3xl"
   },
   getSizeClasses: function(sizesKey) {
     const key = sizesKey && this.sizes[sizesKey] ? sizesKey : "md";
@@ -480,17 +480,22 @@ var GroundPastel = {
   secondary: "text-black bg-violet-200 dark:bg-violet-300",
   success: "text-black bg-green-300 dark:bg-green-400"
 };
+var InputDefault = {
+  "default": "focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-400 dark:focus:border-blue-400 border-gray-300 dark:border-gray-600 bg-gray-50 focus:bg-white dark:bg-gray-800 dark:focus:bg-gray-700 placeholder:text-gray-400 placeholder:dark:text-gray-300 selection:bg-blue-600 dark:selection:bg-blue-500 selection:text-white",
+  error: "text-rose-700 dark:text-rose-200 focus:ring-rose-500 focus:border-rose-500 dark:focus:ring-rose-400 dark:focus:border-rose-400 border-rose-300 dark:border-rose-600 bg-rose-100 focus:bg-rose-50 dark:bg-rose-800 dark:focus:bg-rose-700 placeholder:text-rose-400 placeholder:dark:text-rose-300 selection:bg-rose-600 dark:selection:bg-rose-500 selection:text-white",
+  success: "text-green-700 dark:text-green-200 focus:ring-green-500 focus:border-green-500 dark:focus:ring-green-400 dark:focus:border-green-400 border-green-300 dark:border-green-600 bg-green-100 focus:bg-green-50 dark:bg-green-800 dark:focus:bg-green-700 placeholder:text-green-600 placeholder:dark:text-green-400 selection:bg-green-600 dark:selection:bg-green-500 selection:text-white"
+};
+var InputUnderlined = {
+  "default": "focus:ring-0 border-x-0 border-t-0 border-b-2 focus:border-b-blue-500 focus:border-x-gray-700 dark:focus:border-b-blue-400 border-b-gray-300 dark:border-b-gray-600 bg-gray-50 focus:bg-white dark:bg-gray-800 dark:focus:bg-gray-700 selection:bg-blue-600 dark:selection:bg-blue-500 selection:text-white",
+  error: "focus:ring-0 border-x-0 border-t-0 border-b-2 text-rose-700 dark:text-rose-200 focus:border-b-rose-500 focus:border-x-gray-700 dark:focus:border-b-rose-400 border-b-rose-300 dark:border-b-rose-700 bg-gray-50 focus:bg-white dark:bg-gray-800 dark:focus:bg-gray-700 placeholder:text-rose-400 placeholder:dark:text-rose-400 selection:bg-rose-600 dark:selection:bg-rose-500 selection:text-white",
+  success: "focus:ring-0 border-x-0 border-t-0 border-b-2 text-green-700 dark:text-green-200 focus:border-b-green-500 focus:border-x-gray-700 dark:focus:border-b-green-400 border-b-green-300 dark:border-b-green-700 bg-gray-50 focus:bg-white dark:bg-gray-800 dark:focus:bg-gray-700 placeholder:text-green-500 placeholder:dark:text-green-500 selection:bg-green-600 dark:selection:bg-green-500 selection:text-white"
+};
 var TextDefault = {
   "default": "dark:text-gray-100 text-gray-900",
   error: "text-rose-500 dark:text-rose-300",
   primary: "text-blue-500 dark:text-blue-300",
   secondary: "text-violet-500 dark:text-violet-300",
   success: "text-green-600 dark:text-green-300"
-};
-var ValidationDefault = {
-  "default": "focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-400 dark:focus:border-blue-400 border-gray-300 dark:border-gray-600 bg-gray-50 focus:bg-white dark:bg-gray-800 dark:focus:bg-gray-700 placeholder:text-gray-400 placeholder:dark:text-gray-300 selection:bg-blue-600 dark:selection:bg-blue-500 selection:text-white",
-  error: "text-rose-700 dark:text-rose-200 focus:ring-rose-500 focus:border-rose-500 dark:focus:ring-rose-400 dark:focus:border-rose-400 border-rose-300 dark:border-rose-600 bg-rose-100 focus:bg-rose-50 dark:bg-rose-800 dark:focus:bg-rose-700 placeholder:text-rose-400 placeholder:dark:text-rose-300 selection:bg-rose-600 dark:selection:bg-rose-500 selection:text-white",
-  success: "text-green-700 dark:text-green-200 focus:ring-green-500 focus:border-green-500 dark:focus:ring-green-400 dark:focus:border-green-400 border-green-300 dark:border-green-600 bg-green-100 focus:bg-green-50 dark:bg-green-800 dark:focus:bg-green-700 placeholder:text-green-600 placeholder:dark:text-green-400 selection:bg-green-600 dark:selection:bg-green-500 selection:text-white"
 };
 var VvComponentDefaults = {
   "VvAnchor": {
@@ -529,7 +534,7 @@ var VvComponentDefaults = {
   },
   "VvInput": {
     color: "default",
-    palette: "validation",
+    palette: "default",
     size: "md",
     type: "text"
   },
@@ -542,7 +547,7 @@ var VvComponentDefaults = {
   },
   "VvTextarea": {
     color: "default",
-    palette: "validation",
+    palette: "default",
     size: "md",
     rowSize: "md"
   }
@@ -566,7 +571,8 @@ var VvConfig = {
   }),
   inputs: __spreadProps(__spreadValues({}, Inputs), {
     palettes: {
-      validation: ValidationDefault
+      default: InputDefault,
+      underlined: InputUnderlined
     }
   }),
   colorMode: __spreadValues({}, ColorModes),
@@ -585,7 +591,8 @@ var VvConfig = {
   }),
   textareas: __spreadProps(__spreadValues({}, Textareas), {
     palettes: {
-      validation: ValidationDefault
+      default: InputDefault,
+      underlined: InputUnderlined
     }
   }),
   transitions: __spreadValues({}, Transitions),
@@ -1572,4 +1579,4 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 10, _hoisted_1);
 }
 var VvTextarea = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
-export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, ColorModes, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, Inputs, Text, TextDefault, Textareas, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, ValidationDefault, VueVentusLogoText, VueVentusSpinningMark, VvAnchor, VvButton, VvColorModeButton, VvConfig, VvEl, VvInput, VvListItem, VvTextarea, camelCaseToTitleCase, digitsOnly, formatBytes, formatMediaTime, formatNumber, mergeWithVvConfig, randomString, slugifyString, stringToCamelCase, stringToFilename, uniqueArray };
+export { AnchorDefault, Anchors, BorderDefault, ButtonOutline, ButtonSolid, Buttons, ColorModes, GroundConsole, GroundDefault, GroundMonochromatic, GroundPastel, InputDefault, InputUnderlined, Inputs, Text, TextDefault, Textareas, Transitions, ValidAudioSourceTypes, ValidButtonTypes, ValidColorModes, ValidDirections, ValidElementTags, ValidFontAwesomeFamilies, ValidFontAwesomeSizes, ValidHeadingLevels, ValidImageSourceTypes, ValidInputTypes, ValidVideoSourceTypes, VueVentusLogoText, VueVentusSpinningMark, VvAnchor, VvButton, VvColorModeButton, VvConfig, VvEl, VvInput, VvListItem, VvTextarea, camelCaseToTitleCase, digitsOnly, formatBytes, formatMediaTime, formatNumber, mergeWithVvConfig, randomString, slugifyString, stringToCamelCase, stringToFilename, uniqueArray };

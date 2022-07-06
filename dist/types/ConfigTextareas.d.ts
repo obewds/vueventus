@@ -19,7 +19,8 @@ export interface ConfigTextareas {
     getSizeClasses: ReturnsClassesFunction;
     classes: ReturnsClassesFunction;
     palettes: {
-        validation: DefaultValidationPalette;
+        default: DefaultValidationPalette;
+        underlined: DefaultValidationPalette;
         [key: string]: EmptyPalette | DefaultValidationPalette;
     };
     sizes: TextareasSizes;
