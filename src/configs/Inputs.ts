@@ -1,6 +1,6 @@
 // ./src/configs/Inputs.ts
 
-import { ConfigInputs } from '../types/ConfigInputs'
+import type { ConfigInputs } from '../types/ConfigInputs'
 import Transitions from './Transitions.js'
 
 export default <ConfigInputs>{
@@ -27,12 +27,12 @@ export default <ConfigInputs>{
         ].join(' ').replace(/\s+/g,' ').trim()
     },
     sizes: {
-        'xs': 'px-2 py-1.5 text-sm rounded',
-        'sm': 'px-3 py-2 text-base rounded',
-        'md': 'px-3 py-2 text-lg rounded-md',
-        'lg': 'px-4 py-3 text-xl rounded-md',
-        'xl': 'px-4 py-3 text-2xl rounded-lg',
-        '2xl': 'px-5 py-4 text-3xl rounded-lg',
+        'xs': 'px-2 py-1.5 text-sm',
+        'sm': 'px-3 py-2 text-base',
+        'md': 'px-3 py-2 text-lg',
+        'lg': 'px-4 py-3 text-xl',
+        'xl': 'px-4 py-3 text-2xl',
+        '2xl': 'px-5 py-4 text-3xl',
     },
     getSizeClasses: function (sizesKey) {
         const key = sizesKey && this.sizes[sizesKey] ? sizesKey : 'md'
