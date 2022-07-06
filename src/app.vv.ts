@@ -1,8 +1,9 @@
 // ./src/app.vv.ts
 
-import VvConfig from '../src/configs/VvConfig'
+import type { ConfigVv } from './types/ConfigVv'
+import VvConfig from './configs/VvConfig'
 
-let appVv: {[key: string]: any} = VvConfig
+let appVv: ConfigVv = VvConfig
 
 appVv.test = {
     name: 'test',
@@ -79,10 +80,16 @@ appVv.grounds.palettes.pastel = {
     success: 'text-black bg-lime-300 dark:bg-lime-400',
 }
 
-appVv.inputs.palettes.validation = {
+appVv.inputs.palettes.default = {
     'default': 'focus:ring-lightBlue-500 focus:border-lightBlue-500 dark:focus:ring-lightBlue-400 dark:focus:border-lightBlue-400 border-gray-300 dark:border-gray-600 bg-gray-50 focus:bg-white dark:bg-gray-800 dark:focus:bg-gray-700 selection:bg-lightBlue-600 dark:selection:bg-lightBlue-500 selection:text-white',
     error: 'text-pink-700 dark:text-pink-200 focus:ring-pink-500 focus:border-pink-500 dark:focus:ring-pink-400 dark:focus:border-pink-400 border-pink-300 dark:border-pink-600 bg-pink-100 focus:bg-pink-50 dark:bg-pink-800 dark:focus:bg-pink-700 placeholder:text-pink-400 placeholder:dark:text-pink-500 selection:bg-pink-600 dark:selection:bg-pink-500 selection:text-white',
     success: 'text-lime-700 dark:text-lime-200 focus:ring-lime-500 focus:border-lime-500 dark:focus:ring-lime-400 dark:focus:border-lime-400 border-lime-300 dark:border-lime-600 bg-lime-100 focus:bg-lime-50 dark:bg-lime-800 dark:focus:bg-lime-700 placeholder:text-lime-400 placeholder:dark:text-lime-500 selection:bg-lime-600 dark:selection:bg-lime-500 selection:text-white',
+}
+
+appVv.inputs.palettes.underlined = {
+    'default': 'focus:ring-0 border-x-0 border-t-0 border-b-2 focus:border-b-lightBlue-500 focus:border-x-gray-700 dark:focus:border-b-lightBlue-400 border-b-gray-300 dark:border-b-gray-600 bg-gray-50 focus:bg-white dark:bg-gray-800 dark:focus:bg-gray-700 selection:bg-lightBlue-600 dark:selection:bg-lightBlue-500 selection:text-white',
+    error: 'focus:ring-0 border-x-0 border-t-0 border-b-2 text-pink-700 dark:text-pink-200 focus:border-b-pink-500 focus:border-x-gray-700 dark:focus:border-b-pink-400 border-b-pink-300 dark:border-b-pink-700 bg-gray-50 focus:bg-white dark:bg-gray-800 dark:focus:bg-gray-700 placeholder:text-pink-400 placeholder:dark:text-pink-400 selection:bg-pink-600 dark:selection:bg-pink-500 selection:text-white',
+    success: 'focus:ring-0 border-x-0 border-t-0 border-b-2 text-lime-700 dark:text-lime-200 focus:border-b-lime-500 focus:border-x-gray-700 dark:focus:border-b-lime-400 border-b-lime-300 dark:border-b-lime-700 bg-gray-50 focus:bg-white dark:bg-gray-800 dark:focus:bg-gray-700 placeholder:text-lime-500 placeholder:dark:text-lime-500 selection:bg-lime-600 dark:selection:bg-lime-500 selection:text-white',
 }
 
 appVv.text.palettes.default = {
