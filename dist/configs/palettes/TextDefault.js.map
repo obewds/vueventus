@@ -1,1 +1,1 @@
-{"version":3,"file":"TextDefault.js","sourceRoot":"","sources":["../../../src/configs/palettes/TextDefault.ts"],"names":[],"mappings":"AAAA,wCAAwC;AAKxC,eAAqC;IACjC,SAAS,EAAE,kCAAkC;IAC7C,KAAK,EAAE,kCAAkC;IACzC,OAAO,EAAE,kCAAkC;IAC3C,SAAS,EAAE,sCAAsC;IACjD,OAAO,EAAE,oCAAoC;CAChD,CAAA"}
+{"version":3,"file":"TextDefault.js","sourceRoot":"","sources":["../../../src/configs/palettes/TextDefault.ts"],"names":[],"mappings":"AAAA,wCAAwC;AAIxC,eAAqC;IACjC,SAAS,EAAE,kCAAkC;IAC7C,KAAK,EAAE,kCAAkC;IACzC,OAAO,EAAE,kCAAkC;IAC3C,SAAS,EAAE,sCAAsC;IACjD,OAAO,EAAE,oCAAoC;CAChD,CAAA"}

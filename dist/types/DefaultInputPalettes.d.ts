@@ -1,1 +1,1 @@
-export declare type DefaultInputPalettes = Array<'validation' | string>;
+export declare type DefaultInputPalettes = Array<'default' | 'underlined' | string>;

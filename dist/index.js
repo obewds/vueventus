@@ -16,8 +16,9 @@ export { default as GroundConsole } from './configs/palettes/GroundConsole';
 export { default as GroundDefault } from './configs/palettes/GroundDefault';
 export { default as GroundMonochromatic } from './configs/palettes/GroundMonochromatic';
 export { default as GroundPastel } from './configs/palettes/GroundPastel';
+export { default as InputDefault } from './configs/palettes/InputDefault';
+export { default as InputUnderlined } from './configs/palettes/InputUnderlined';
 export { default as TextDefault } from './configs/palettes/TextDefault';
-export { default as ValidationDefault } from './configs/palettes/ValidationDefault';
 // .src/helpers
 export { default as camelCaseToTitleCase } from './helpers/camelCaseToTitleCase';
 export { default as digitsOnly } from './helpers/digitsOnly';

@@ -49,7 +49,8 @@ declare const _default: {
     };
     inputs: {
         palettes: {
-            validation: import("../index.js").DefaultValidationPalette;
+            default: import("../index.js").DefaultValidationPalette;
+            underlined: import("../index.js").DefaultValidationPalette;
         };
         border: string | undefined;
         display: string | undefined;
@@ -97,7 +98,8 @@ declare const _default: {
     };
     textareas: {
         palettes: {
-            validation: import("../index.js").DefaultValidationPalette;
+            default: import("../index.js").DefaultValidationPalette;
+            underlined: import("../index.js").DefaultValidationPalette;
         };
         border: string | undefined;
         display: string | undefined;

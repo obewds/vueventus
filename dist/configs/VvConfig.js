@@ -14,8 +14,9 @@ import GroundConsole from './palettes/GroundConsole.js';
 import GroundDefault from './palettes/GroundDefault.js';
 import GroundMonochromatic from './palettes/GroundMonochromatic.js';
 import GroundPastel from './palettes/GroundPastel.js';
+import InputDefault from './palettes/InputDefault.js';
+import InputUnderlined from './palettes/InputUnderlined.js';
 import TextDefault from './palettes/TextDefault.js';
-import ValidationDefault from './palettes/ValidationDefault.js';
 import VvComponentDefaults from './VvComponentDefaults';
 export default {
     //
@@ -42,7 +43,8 @@ export default {
     inputs: {
         ...Inputs,
         palettes: {
-            validation: ValidationDefault,
+            default: InputDefault,
+            underlined: InputUnderlined,
         },
     },
     colorMode: {
@@ -65,7 +67,8 @@ export default {
     textareas: {
         ...Textareas,
         palettes: {
-            validation: ValidationDefault,
+            default: InputDefault,
+            underlined: InputUnderlined,
         },
     },
     transitions: {

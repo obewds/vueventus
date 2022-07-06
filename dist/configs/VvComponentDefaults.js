@@ -36,7 +36,7 @@ export default {
     },
     "VvInput": {
         color: 'default',
-        palette: 'validation',
+        palette: 'default',
         size: 'md',
         type: 'text',
     },
@@ -49,7 +49,7 @@ export default {
     },
     "VvTextarea": {
         color: 'default',
-        palette: 'validation',
+        palette: 'default',
         size: 'md',
         rowSize: 'md',
     },
