@@ -82,17 +82,17 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance palette 
 ### Syntax
 
 ```html
-<VvInput palette="validation" color="default" class="mb-2"/>
-<VvInput palette="validation" color="error" class="mb-2"/>
-<VvInput palette="validation" color="success" class="mb-2"/>
+<VvInput palette="default" color="default" class="mb-2"/>
+<VvInput palette="default" color="error" class="mb-2"/>
+<VvInput palette="default" color="success" class="mb-2"/>
 ```
 
 ### Result
 
 <div class="w-full pt-4">
-    <VvInput palette="validation" color="default" class="mb-2"/>
-    <VvInput palette="validation" color="error" class="mb-2"/>
-    <VvInput palette="validation" color="success" class="mb-2"/>
+    <VvInput palette="default" color="default" class="mb-2"/>
+    <VvInput palette="default" color="error" class="mb-2"/>
+    <VvInput palette="default" color="success" class="mb-2"/>
 </div>
 
 
