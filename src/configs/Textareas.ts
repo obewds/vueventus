@@ -1,6 +1,6 @@
 // ./src/configs/Textareas.ts
 
-import { ConfigTextareas } from '../types/ConfigTextareas'
+import type { ConfigTextareas } from '../types/ConfigTextareas'
 import Inputs from './Inputs'
 import Transitions from './Transitions.js'
 
