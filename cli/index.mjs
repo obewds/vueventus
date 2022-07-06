@@ -384,7 +384,7 @@ async function installDepsAndFiles () {
     // Setup and start spinner
     //
 
-    const spinner = createSpinner('Installing ' + vueventus + ' deps and files...').start()
+    // const spinner = createSpinner('Installing ' + vueventus + ' deps and files...').start()
 
     //
     // Install stack
@@ -420,13 +420,14 @@ async function installDepsAndFiles () {
         moveFile(cwd + '/' + userOptions.name + '/README.md', cwd + '/README-VITE.md')
         moveFile(cwd + '/' + userOptions.name + '/tsconfig.json', cwd + '/tsconfig.json')
         moveFile(cwd + '/' + userOptions.name + '/tsconfig.node.json', cwd + '/tsconfig.node.json')
-        moveFile(stubs + 'logo-obe.svg', cwd + '/src/assets/logo-obe.svg')
-        moveFile(stubs + 'logo-tailwindcss.svg', cwd + '/src/assets/logo-tailwindcss.svg')
-        moveFile(stubs + 'logo-typescript.svg', cwd + '/src/assets/logo-typescript.svg')
-        moveFile(stubs + 'logo-vite.svg', cwd + '/src/assets/logo-vite.svg')
-        moveFile(stubs + 'logo-vue.svg', cwd + '/src/assets/logo-vue.svg')
-        moveFile(stubs + 'App.vue', cwd + '/src/App.vue')
-        moveFile(stubs + 'HelloWorld.vue', cwd + '/src/components/HelloWorld.vue')
+
+        fs.copySync(stubs + 'logo-obe.svg', cwd + '/src/assets/logo-obe.svg')
+        fs.copySync(stubs + 'logo-tailwindcss.svg', cwd + '/src/assets/logo-tailwindcss.svg')
+        fs.copySync(stubs + 'logo-typescript.svg', cwd + '/src/assets/logo-typescript.svg')
+        fs.copySync(stubs + 'logo-vite.svg', cwd + '/src/assets/logo-vite.svg')
+        fs.copySync(stubs + 'logo-vue.svg', cwd + '/src/assets/logo-vue.svg')
+        fs.copySync(stubs + 'App.vue', cwd + '/src/App.vue')
+        fs.copySync(stubs + 'HelloWorld.vue', cwd + '/src/components/HelloWorld.vue')
 
 
 
@@ -450,7 +451,7 @@ async function installDepsAndFiles () {
             mainFileSettings.gsap = true
         }
         const mainTsCode = generateMainFileCode(mainFileSettings)
-        fs.writeFile(cwd + '/src/main.ts', mainTsCode)
+        fs.writeFileSync(cwd + '/src/main.ts', mainTsCode, { flag: 'w+' })
 
 
 
@@ -564,7 +565,7 @@ async function installDepsAndFiles () {
                         message: 'What is your FontAwesome Pro license authorization token (required to download artwork via a project .npmrc file which will be created for you)?\n',
                     })
                 
-                    userOptions.faProLicense = answers.faProLicense
+                    userOptions.faProLicense = (answers.faProLicense).trim()
                 
                     return userOptions.faProLicense
                 }
@@ -577,41 +578,38 @@ async function installDepsAndFiles () {
 
                 if (userOptions.faProLicense !== '') {
                     
-const npmrcCode = `
-@fortawesome:registry=https://npm.fontawesome.com/
-//npm.fontawesome.com/:_authToken=${userOptions.faProLicense}
-`
-                    fs.writeFile(cwd + '/.npmrc', npmrcCode)
+                    const npmrcCode = `@fortawesome:registry=https://npm.fontawesome.com/\n` + `//npm.fontawesome.com/:_authToken=${userOptions.faProLicense}\n`
 
+                    fs.writeFileSync(cwd + '/.npmrc', npmrcCode, { flag: 'a+' })
+
+                    // add .npmrc to project .gitignore file
+
+                    const gitignoreNpmrcCode = `\n.npmrc\n`
+
+                    fs.writeFileSync(cwd + '/.gitignore', gitignoreNpmrcCode, { flag: 'a+' })
+                        
                     //
-                    console.log(`\nThe ${vueventus} CLI is pausing to give your system time to write the .npmrc file with your authorization token for your FontAwesome Pro packages and installations!\n`)
-
-                    setTimeout(() => {
-                        
-                        //
-                        // now install the pro font awesome dep
-                        //
-                        
-                        run(stack.deps.faPro.install)
-
-                        installedPkgs = [...installedPkgs, ...stack.deps.faPro.packages]
-
-                        fs.copySync(
-                            stubs + stack.deps.faPro.files.fontAwesomeProTs.name,
-                            cwd + stack.deps.faPro.files.fontAwesomeProTs.path + stack.deps.faPro.files.fontAwesomeProTs.name
-                        )
-
-                        // add optional FontAwesome Free files if the user also selected them
-                        if ( userOptions.files.includes( stack.deps.faPro.files.vvFa.name ) ) {
-                            fs.copySync(
-                                stubs + stack.deps.faPro.files.vvFa.name,
-                                cwd + stack.deps.faPro.files.vvFa.path + stack.deps.faPro.files.vvFa.name
-                            )
-                        }
-
-                        console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.faPro.name} dep/files successfully!\n`)
+                    // now install the pro font awesome dep
+                    //
                     
-                    }, 3000)
+                    run(stack.deps.faPro.install)
+
+                    installedPkgs = [...installedPkgs, ...stack.deps.faPro.packages]
+
+                    fs.copySync(
+                        stubs + stack.deps.faPro.files.fontAwesomeProTs.name,
+                        cwd + stack.deps.faPro.files.fontAwesomeProTs.path + stack.deps.faPro.files.fontAwesomeProTs.name
+                    )
+
+                    // add optional FontAwesome Free files if the user also selected them
+                    if ( userOptions.files.includes( stack.deps.faPro.files.vvFa.name ) ) {
+                        fs.copySync(
+                            stubs + stack.deps.faPro.files.vvFa.name,
+                            cwd + stack.deps.faPro.files.vvFa.path + stack.deps.faPro.files.vvFa.name
+                        )
+                    }
+
+                    console.log(`\nThe ${vueventus} CLI installed/added the ${stack.deps.faPro.name} dep/files successfully!\n`)
 
                 }
 
@@ -752,9 +750,19 @@ const npmrcCode = `
     console.log(`${vueventus} CLI installed the following packages:`)
     console.log(installedPkgs)
 
-    spinner.success({
-        text: vueventus + ' deps installed successfully!',
-    })
+    // spinner.success({
+    //     text: vueventus + ' deps installed successfully!',
+    // })
+
+    console.log(`\nYour ${vueventus} CLI installation is complete!\n`)
+    console.log(`Here's a few commands to get started:`)
+    console.log(`
+        npm run dev
+        npm run build
+        npm run test
+        npm run coverage
+    `)
+    console.log(`${gradient('lightGreen', 'cyan')('Happy Coding!')}\n`)
 
 }
 
