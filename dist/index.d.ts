@@ -45,6 +45,7 @@ export { default as VvColorModeButton } from './components/buttons/VvColorModeBu
 export { default as VvEl } from './components/elements/VvEl.vue';
 export { default as VvInput } from './components/inputs/VvInput.vue';
 export { default as VvListItem } from './components/lists/VvListItem.vue';
+export { default as ObeKnockoutMark } from './components/logos/ObeKnockoutMark.vue';
 export { default as VueVentusLogoText } from './components/logos/VueVentusLogoText.vue';
 export { default as VueVentusSpinningMark } from './components/logos/VueVentusSpinningMark.vue';
 export { default as VvTextarea } from './components/textareas/VvTextarea.vue';

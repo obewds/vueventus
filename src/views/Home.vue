@@ -109,7 +109,11 @@
             VUE LOGO COMPONENTS
         </div>
 
-        <div :class="[tw.grid, 'grid-cols-1 sm:grid-cols-2']">
+        <div :class="[tw.grid, 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3']">
+
+            <DevViewLinkCard icon="component" to="/components/logos/obe-knockout-mark">
+                ObeKnockoutMark
+            </DevViewLinkCard>
 
             <DevViewLinkCard icon="component" to="/components/logos/vueventus-logo-text">
                 VueVentusLogoText

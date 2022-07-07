@@ -55,6 +55,7 @@ export { default as VvInput } from './components/inputs/VvInput.vue';
 // .src/components/lists
 export { default as VvListItem } from './components/lists/VvListItem.vue';
 // .src/components/logos
+export { default as ObeKnockoutMark } from './components/logos/ObeKnockoutMark.vue';
 export { default as VueVentusLogoText } from './components/logos/VueVentusLogoText.vue';
 export { default as VueVentusSpinningMark } from './components/logos/VueVentusSpinningMark.vue';
 // .src/components/textareas
