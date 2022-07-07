@@ -256,6 +256,7 @@ function sidebarComponents() {
             text: 'Logo Components',
             collapsible: true,
             items: [
+                { text: 'ObeKnockoutMark', link: '/components/logos/obe-knockout-mark' },
                 { text: 'VueVentusLogoText', link: '/components/logos/vueventus-logo-text' },
                 { text: 'VueVentusSpinningMark', link: '/components/logos/vueventus-spinning-mark' },
             ]
