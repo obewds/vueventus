@@ -41,7 +41,7 @@ import ObeKnockoutMark from '@obewds/vueventus/dist/components/logos/ObeKnockout
 Type: **`String`**  
 Default: **`"fill-lightBlue-400"`**
 
-The {{ $frontmatter.title }} `class` prop sets the component instance SVGs CSS classes.
+The {{ $frontmatter.title }} `blueFill` prop sets the component instance SVG fill color for the blue mark shape(s).
 
 ### Syntax
 
@@ -65,7 +65,7 @@ The {{ $frontmatter.title }} `class` prop sets the component instance SVGs CSS c
 Type: **`String`**  
 Default: **`"fill-green-400"`**
 
-The {{ $frontmatter.title }} `class` prop sets the component instance SVGs CSS classes.
+The {{ $frontmatter.title }} `greenFill` prop sets the component instance SVG fill color for the green mark shape(s).
 
 ### Syntax
 
@@ -89,7 +89,7 @@ The {{ $frontmatter.title }} `class` prop sets the component instance SVGs CSS c
 Type: **`String`**  
 Default: **`"fill-orange-400"`**
 
-The {{ $frontmatter.title }} `class` prop sets the component instance SVGs CSS classes.
+The {{ $frontmatter.title }} `orangeFill` prop sets the component instance SVG fill color for the orange mark shape(s).
 
 ### Syntax
 
@@ -113,7 +113,7 @@ The {{ $frontmatter.title }} `class` prop sets the component instance SVGs CSS c
 Type: **`String`**  
 Default: **`"fill-red-400"`**
 
-The {{ $frontmatter.title }} `class` prop sets the component instance SVGs CSS classes.
+The {{ $frontmatter.title }} `redFill` prop sets the component instance SVG fill color for the red mark shape(s).
 
 ### Syntax
 
@@ -137,7 +137,7 @@ The {{ $frontmatter.title }} `class` prop sets the component instance SVGs CSS c
 Type: **`String`**  
 Default: **`"fill-yellow-400"`**
 
-The {{ $frontmatter.title }} `class` prop sets the component instance SVGs CSS classes.
+The {{ $frontmatter.title }} `yellowFill` prop sets the component instance SVG fill color for the yellow mark shape(s).
 
 ### Syntax
 
