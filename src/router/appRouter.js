@@ -42,6 +42,7 @@ import VvInputPage from '@/views/components/inputs/VvInputPage.vue'
 import VvListItemPage from '@/views/components/lists/VvListItemPage.vue'
 
 // logo component pages
+import ObeKnockoutMarkPage from '@/views/components/logos/ObeKnockoutMarkPage.vue'
 import VueVentusLogoTextPage from '@/views/components/logos/VueVentusLogoTextPage.vue'
 import VueVentusSpinningMarkPage from '@/views/components/logos/VueVentusSpinningMarkPage.vue'
 
@@ -195,6 +196,10 @@ const router = createRouter({
         //
 
         {
+            name: 'ObeKnockoutMark Component',
+            component: ObeKnockoutMarkPage,
+            path: '/components/logos/obe-knockout-mark'
+        },{
             name: 'VueVentusLogoText Component',
             component: VueVentusLogoTextPage,
             path: '/components/logos/vueventus-logo-text'
