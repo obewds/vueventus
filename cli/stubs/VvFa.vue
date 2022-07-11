@@ -16,7 +16,7 @@
             family: {
                 type: String,
                 default: 'fas',
-                validator: (prop: String) => (ValidFontAwesomeFamilies).includes(prop),
+                validator: (prop: ValidFontAwesomeFamilies) => (ValidFontAwesomeFamilies).includes(prop),
             },
             icon: {
                 type: String,
@@ -25,7 +25,7 @@
             size: {
                 type: String,
                 default: '1x',
-                validator: (prop: String) => (ValidFontAwesomeSizes).includes(prop),
+                validator: (prop: ValidFontAwesomeSizes) => (ValidFontAwesomeSizes).includes(prop),
             },
         },
 
