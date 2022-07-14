@@ -2,6 +2,22 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 
+
+const fileNameResolver = function (formatString: string): string {
+    if (formatString === 'es' || formatString === 'esm') {
+        return 'vueventus.js'
+    }
+    if (formatString === 'cjs' || formatString === 'commonjs') {
+        return 'vueventus.cjs'
+    }
+    if (formatString === 'umd') {
+        return `vueventus.${formatString}.js`
+    }
+    if (formatString === 'iife') {
+        return `vueventus.${formatString}.js`
+    }
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
@@ -22,6 +38,7 @@ export default defineConfig({
             name: 'VueVentus',
             formats: ['es','cjs','umd','iife'],
             fileName: (format) => `vueventus.${format}.js`,
+            // fileName: (format) => fileNameResolver(format),
         },
         rollupOptions: {
             external: ['vue'],
