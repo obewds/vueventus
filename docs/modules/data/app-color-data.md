@@ -47,16 +47,16 @@ Once you have your JSON color palette data, create a file with a descriptive nam
 Assuming our JSON color palettes file is called `my-app-colors.json`, we should now have a `./my-app-colors.json` file in the root directory.
 
 ::: tip AFTER THE GETTING STARTED GUIDE
-Now we can use our `./my-app-colors.json` file in our project's `./tailwind.config.js` file, instead of pulling our colors from the VueVentus package like we did in the Getting Started guide.
+Now we can use our `./my-app-colors.json` file in our project's `./tailwind.config.cjs` file, instead of pulling our colors from the VueVentus package like we did in the Getting Started guide.
 :::
 
-Let's open up our `./tailwind.config.js` file and change the following line:
+Let's open up our `./tailwind.config.cjs` file and change the following line:
 
 ```javascript
 const appColors = require('./my-app-colors.json')
 ```
 
-And of course this means we'll also need to change the variable reference for the one we just replaced deeper in the `./tailwind.config.js` file like so: 
+And of course this means we'll also need to change the variable reference for the one we just replaced deeper in the `./tailwind.config.cjs` file like so: 
 
 ```javascript
 module.exports = {

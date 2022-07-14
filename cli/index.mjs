@@ -45,7 +45,7 @@ const vv = {
                     path: '/src/',
                 },
                 tailwindConfigJs: {
-                    name: 'tailwind.config.js',
+                    name: 'tailwind.config.cjs',
                     checked: true,
                     path: '/',
                 },
