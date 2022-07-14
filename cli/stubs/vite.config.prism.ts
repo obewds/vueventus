@@ -4,13 +4,13 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
-import prismjs from 'vite-plugin-prismjs'
+import { prismjsPlugin } from 'vite-plugin-prismjs'
 
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
         vue(),
-        prismjs({
+        prismjsPlugin({
             languages: ["bash", "css", "javascript", "json", "markup", "markdown", "nginx", "php", "scss", "sql", "typescript", "yaml"],
             plugins: ["line-numbers", "normalize-whitespace", "copy-to-clipboard"],
             theme: "okaidia",
