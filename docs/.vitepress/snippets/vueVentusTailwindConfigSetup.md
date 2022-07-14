@@ -8,10 +8,10 @@ To manage and maintain this, VueVentus uses JSON formatted data files as modules
 Feel free to read more about the [Tailwind Data Modules](/modules/data/) used below before proceeding. Or continue to follow the docs from here and you will get to them soon enough!
 :::
 
-Go ahead and open up your app's `./tailwind.config.js` file, and add the following variables and `require()` methods:
+Go ahead and open up your app's `./tailwind.config.cjs` file, and add the following variables and `require()` methods:
 
 ```javascript
-// ./tailwind.config.js
+// ./tailwind.config.cjs
 
 const defaultTheme = require('tailwindcss/defaultTheme')
 const vvPath = './node_modules/@obewds/vueventus/dist/data/'

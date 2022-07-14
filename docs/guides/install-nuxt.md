@@ -77,10 +77,10 @@ npm install -D tailwindcss postcss autoprefixer @nuxtjs/tailwindcss
 npx tailwindcss init
 ```
 
-Next up, open up the generated `./tailwind.config.js` file now in the project root directory, and add the following code to include Vite/Vue files into Tailwind's parser:
+Next up, open up the generated `./tailwind.config.cjs` file now in the project root directory, and add the following code to include Vite/Vue files into Tailwind's parser:
 
 ```javascript
-// ./tailwind.config.js
+// ./tailwind.config.cjs
 module.exports = {
     content: [
         "./components/**/*.{js,vue,ts}",
