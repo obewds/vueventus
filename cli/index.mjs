@@ -411,8 +411,7 @@ async function installDepsAndFiles () {
         // write the new merged package data to the current package file
         writeJson(cwd + '/package.json', newPkg)
 
-        // copy each vite generated folder and file from
-        // the vite generated directory back up into the root directory
+        // copy each vite generated folder and file from the vite generated directory back up into the root directory
         moveFile(cwd + '/' + userOptions.name + '/.vscode', cwd + '/.vscode')
         moveFile(cwd + '/' + userOptions.name + '/public', cwd + '/public')
         moveFile(cwd + '/' + userOptions.name + '/src', cwd + '/src')
@@ -421,6 +420,7 @@ async function installDepsAndFiles () {
         moveFile(cwd + '/' + userOptions.name + '/tsconfig.json', cwd + '/tsconfig.json')
         moveFile(cwd + '/' + userOptions.name + '/tsconfig.node.json', cwd + '/tsconfig.node.json')
 
+        // copy the VueVentus starter files from the cli stubs files
         fs.copySync(stubs + 'logo-obe.svg', cwd + '/src/assets/logo-obe.svg')
         fs.copySync(stubs + 'logo-tailwindcss.svg', cwd + '/src/assets/logo-tailwindcss.svg')
         fs.copySync(stubs + 'logo-typescript.svg', cwd + '/src/assets/logo-typescript.svg')
@@ -428,6 +428,9 @@ async function installDepsAndFiles () {
         fs.copySync(stubs + 'logo-vue.svg', cwd + '/src/assets/logo-vue.svg')
         fs.copySync(stubs + 'App.vue', cwd + '/src/App.vue')
         fs.copySync(stubs + 'HelloWorld.vue', cwd + '/src/components/HelloWorld.vue')
+
+        // copy the VueVentus starter end user app component files from the cli stubs files
+        fs.copySync(stubs + 'vv', cwd + '/src/components/vv')
 
 
 

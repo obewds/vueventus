@@ -108,16 +108,16 @@ It's generally a good idea to go ahead and add an additional `localStorage` chec
 
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+Import the CLI installation version of the {{ $frontmatter.title }} into your project with:
+
+```javascript
+import VvColorModeButton from '@/components/vv/buttons/VvColorModeButton.vue'
+```
+
+To import the prototyping/compiled lib version of the {{ $frontmatter.title }}, use:
 
 ```javascript
 import { VvColorModeButton } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} SFC directly:
-
-```javascript
-import VvColorModeButton from '@obewds/vueventus/dist/components/buttons/VvColorModeButton.vue'
 ```
 
 

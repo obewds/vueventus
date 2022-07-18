@@ -23,16 +23,16 @@ The {{ $frontmatter.title }} provides a set of props and config module based set
 
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+Import the CLI installation version of the {{ $frontmatter.title }} into your project with:
+
+```javascript
+import VvTextarea from '@/components/vv/textareas/VvTextarea.vue'
+```
+
+To import the prototyping/compiled lib version of the {{ $frontmatter.title }}, use:
 
 ```javascript
 import { VvTextarea } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} SFC directly:
-
-```javascript
-import VvTextarea from '@obewds/vueventus/dist/components/textareas/VvTextarea.vue'
 ```
 
 

@@ -23,16 +23,16 @@ The {{ $frontmatter.title }} provides palette and color control of list item tex
 
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+Import the CLI installation version of the {{ $frontmatter.title }} into your project with:
+
+```javascript
+import VvListItem from '@/components/vv/lists/VvListItem.vue'
+```
+
+To import the prototyping/compiled lib version of the {{ $frontmatter.title }}, use:
 
 ```javascript
 import { VvListItem } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} SFC directly:
-
-```javascript
-import VvListItem from '@obewds/vueventus/dist/components/lists/VvListItem.vue'
 ```
 
 

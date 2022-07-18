@@ -19,16 +19,16 @@ The {{ $frontmatter.title }} provides a variety of props and config module based
 
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+Import the CLI installation version of the {{ $frontmatter.title }} into your project with:
+
+```javascript
+import VvButton from '@/components/vv/buttons/VvButton.vue'
+```
+
+To import the prototyping/compiled lib version of the {{ $frontmatter.title }}, use:
 
 ```javascript
 import { VvButton } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} SFC directly:
-
-```javascript
-import VvButton from '@obewds/vueventus/dist/components/buttons/VvButton.vue'
 ```
 
 
