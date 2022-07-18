@@ -19,16 +19,16 @@ The {{ $frontmatter.title }} provides a set of props and config module based set
 
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+Import the CLI installation version of the {{ $frontmatter.title }} into your project with:
+
+```javascript
+import VvInput from '@/components/vv/inputs/VvInput.vue'
+```
+
+To import the prototyping/compiled lib version of the {{ $frontmatter.title }}, use:
 
 ```javascript
 import { VvInput } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} SFC directly:
-
-```javascript
-import VvInput from '@obewds/vueventus/dist/components/inputs/VvInput.vue'
 ```
 
 
