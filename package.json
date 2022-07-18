@@ -55,7 +55,7 @@
     "vitepress": "^1.0.0-alpha.4",
     "vitest": "^0.18.0",
     "vue-router": "^4.1.2",
-    "vue-tsc": "^0.38.5"
+    "vue-tsc": "^0.38.8"
   },
   "sideEffects": false,
   "main": "./dist/vueventus.umd.js",
