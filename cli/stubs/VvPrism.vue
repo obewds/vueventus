@@ -1,4 +1,4 @@
-<!-- ./src/components/VvPrism.vue -->
+<!-- ./src/components/vv/elements/VvPrism.vue -->
 
 <script lang="ts">
 

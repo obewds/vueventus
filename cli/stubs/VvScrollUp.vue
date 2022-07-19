@@ -1,4 +1,4 @@
-<!-- ./src/components/VvScrollUp.vue -->
+<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
 
 <script lang="ts">
 
