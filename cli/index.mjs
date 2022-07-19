@@ -70,7 +70,7 @@ const vv = {
                         vvFa: {
                             name: 'VvFa.vue',
                             checked: true,
-                            path: '/src/components/',
+                            path: '/src/components/vv/elements/',
                         },
                     },
                 },
@@ -88,7 +88,7 @@ const vv = {
                         vvFa: {
                             name: 'VvFa.vue',
                             checked: true,
-                            path: '/src/components/',
+                            path: '/src/components/vv/elements/',
                         },
                     },
                 },
@@ -106,7 +106,7 @@ const vv = {
                         vvScrollUp: {
                             name: 'VvScrollUp.vue',
                             checked: true,
-                            path: '/src/components/',
+                            path: '/src/components/vv/buttons/',
                         },
                     },
                 },
@@ -131,7 +131,7 @@ const vv = {
                         vvPrism: {
                             name: 'VvPrism.vue',
                             checked: true,
-                            path: '/src/components/',
+                            path: '/src/components/vv/elements/',
                         },
                     },
                 },
