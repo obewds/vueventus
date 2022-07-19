@@ -4,7 +4,7 @@
     // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
     import { VueVentusSpinningMark, VvColorModeButton } from '@obewds/vueventus'
     import HelloWorld from './components/HelloWorld.vue'
-    import VvScrollUp from './components/VvScrollUp.vue'
+    import VvScrollUp from './components/vv/buttons/VvScrollUp.vue'
 
     const colorMode = localStorage && localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') : 'light'
 
