@@ -9,7 +9,7 @@
     import VvInput from './vv/inputs/VvInput.vue'
     import VvListItem from './vv/lists/VvListItem.vue'
     import VvTextarea from './vv/textareas/VvTextarea.vue'
-    import VvPrism from './VvPrism.vue'
+    import VvPrism from './vv/elements/VvPrism.vue'
 
     defineProps<{ msg: string }>()
 
