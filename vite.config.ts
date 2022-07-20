@@ -4,16 +4,13 @@ import vue from '@vitejs/plugin-vue'
 
 
 const fileNameResolver = function (formatString: string): string {
-    if (formatString === 'es' || formatString === 'esm') {
-        return 'vueventus.js'
+    if (formatString === 'es') {
+        return `vueventus.mjs`
     }
-    if (formatString === 'cjs' || formatString === 'commonjs') {
-        return 'vueventus.cjs'
+    if (formatString === 'cjs') {
+        return `vueventus.cjs`
     }
-    if (formatString === 'umd') {
-        return `vueventus.${formatString}.js`
-    }
-    if (formatString === 'iife') {
+    if (formatString === 'umd' || formatString === 'iife') {
         return `vueventus.${formatString}.js`
     }
 }
@@ -37,8 +34,8 @@ export default defineConfig({
             entry: resolve(__dirname, 'src/index.ts'),
             name: 'VueVentus',
             formats: ['es','cjs','umd','iife'],
-            fileName: (format) => `vueventus.${format}.js`,
-            // fileName: (format) => fileNameResolver(format),
+            // fileName: (format) => `vueventus.${format}.js`,
+            fileName: (format) => fileNameResolver(format),
         },
         rollupOptions: {
             external: ['vue'],
