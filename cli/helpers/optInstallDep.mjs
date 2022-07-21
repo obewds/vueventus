@@ -1,4 +1,4 @@
-// ./cli/helpers/optionallyInstallDep.mjs
+// ./cli/helpers/optInstallDep.mjs
 
 import run from './run.mjs'
 import vvBrand from './vvBrand.mjs'
