@@ -10,6 +10,6 @@ export default {
     test: {
         globals: true,
         environment: 'happy-dom',
-        exclude: [...configDefaults.exclude, './cli/stubs/HelloVueVentus.test.js'],
+        exclude: [...configDefaults.exclude, './cli/stubs/vue-ts/HelloVueVentus.test.js'],
     },
 }

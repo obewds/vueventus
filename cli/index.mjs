@@ -5,22 +5,19 @@ import gradient from 'gradient-string'
 import inquirer from 'inquirer'
 import rimraf from 'rimraf'
 
-import generateMainFileCode from './helpers/generateMainFileCode.mjs'
-import mergeJson from './helpers/mergeJson.mjs'
-import moveFile from './helpers/moveFile.mjs'
-import run from './helpers/run.mjs'
-import writeJson from './helpers/writeJson.mjs'
-
-
 import copySyncSvgsToAssets from './helpers/copySyncSvgsToAssets.mjs'
 import cwd from './helpers/cwd.mjs'
+import generateMainFileCode from './helpers/generateMainFileCode.mjs'
 import installNodeTypes from './helpers/installNodeTypes.mjs'
 import installTailwindCss from './helpers/installTailwindCss.mjs'
+import mergeJson from './helpers/mergeJson.mjs'
+import moveFile from './helpers/moveFile.mjs'
 import moveViteTsFilesToRoot from './helpers/moveViteTsFilesToRoot.mjs'
 import optionallyInstallDep from './helpers/optionallyInstallDep.mjs'
+import run from './helpers/run.mjs'
 import stubsPath from './helpers/stubsPath.mjs'
 import vvBrand from './helpers/vvBrand.mjs'
-
+import writeJson from './helpers/writeJson.mjs'
 
 // const sleep = ( ms = 1000 ) => new Promise( ( r ) => setTimeout( r, ms ) )
 
@@ -231,11 +228,6 @@ async function chooseStack () {
         type: 'list',
         message: 'Which ' + vvBrand + ' stack are you installing?\n',
         choices: choices,
-        // choices: [
-        //     vv.stacks.vueTwViteTs.name,
-        //     // vv.stacks.vueTwVite.name,
-        //     // vv.stacks.vueTwNuxtViteTs.name,
-        // ],
     })
 
     userOptions.stack = answers.userStack
@@ -379,7 +371,6 @@ console.log(' ')
 
 
 
-// new as of Jul 21
 async function installDepsAndFiles () {
 
     //
@@ -392,7 +383,6 @@ async function installDepsAndFiles () {
     if (userOptions.stack === vv.stacks.vueTwViteTs.name) {
 
         const stack = vv.stacks.vueTwViteTs
-        // new as of Jul 21
         const stackStubs = stubsPath + 'vue-ts/'
         
         //
