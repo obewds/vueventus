@@ -6,13 +6,10 @@ import inquirer from 'inquirer'
 import rimraf from 'rimraf'
 
 import cliData from './helpers/cliData.mjs'
-import copySyncSvgsToAssets from './helpers/copySyncSvgsToAssets.mjs'
 import cwd from './helpers/cwd.mjs'
-import installNodeTypes from './helpers/installNodeTypes.mjs'
-import installTailwindCss from './helpers/installTailwindCss.mjs'
+import gradientText from './helpers/gradientText.mjs'
+import installViteTs from './helpers/installViteTs.mjs'
 import mergeJson from './helpers/mergeJson.mjs'
-import moveFile from './helpers/moveFile.mjs'
-import moveViteTsFilesToRoot from './helpers/moveViteTsFilesToRoot.mjs'
 import optInstallDep from './helpers/optInstallDep.mjs'
 import optInstallFaFreeTs from './helpers/optInstallFaFreeTs.mjs'
 import optInstallFaProTs from './helpers/optInstallFaProTs.mjs'
@@ -23,6 +20,7 @@ import run from './helpers/run.mjs'
 import stubsPath from './helpers/stubsPath.mjs'
 import vvBrand from './helpers/vvBrand.mjs'
 import writeFileMainTs from './helpers/writeFileMainTs.mjs'
+import writeFileMainTsSsg from './helpers/writeFileMainTsSsg.mjs'
 import writeJson from './helpers/writeJson.mjs'
 
 // const sleep = ( ms = 1000 ) => new Promise( ( r ) => setTimeout( r, ms ) )
@@ -38,6 +36,8 @@ let userOptions = {
     files: [],
 }
 
+
+
 // show cli start message
 console.log(`
 
@@ -46,9 +46,6 @@ console.log(`
 
 
 `)
-
-
-
 
 
 
@@ -66,9 +63,6 @@ async function setProjectName () {
 userOptions.name = await setProjectName()
 
 console.log(' ')
-
-
-
 
 
 
@@ -96,20 +90,16 @@ console.log(' ')
 
 
 
-
-
-
-
-
-
 async function chooseDeps () {
 
     let stack = {}
     let choices = []
 
-    // if the stack is vueTwViteTs
+    // set the stack
     if ( userOptions.stack === cli.stacks.vueTwViteTs.name ) {
         stack = cli.stacks.vueTwViteTs
+    } else if ( userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name ) {
+        stack = cli.stacks.vueTwViteSsgMdTs
     }
 
     const depKeys = Object.keys(stack.deps)
@@ -136,20 +126,17 @@ console.log(' ')
 
 
 
-
-
-
-
-
 async function chooseFiles () {
 
     let stack = {}
     let stackFiles = []
     let depFiles = []
 
-    // if the stack is vueTwViteTs
+    // set the stack
     if ( userOptions.stack === cli.stacks.vueTwViteTs.name ) {
         stack = cli.stacks.vueTwViteTs
+    } else if ( userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name ) {
+        stack = cli.stacks.vueTwViteSsgMdTs
     }
 
     const fileKeys = Object.keys(stack.files)
@@ -213,31 +200,34 @@ console.log(' ')
 
 
 
-
-
-
-
-
-
 async function installDepsAndFiles () {
 
     let stack = {}
+    let stackStubs = stubsPath
     let installedPkgs = []
+
 
     // if the user chose the Vue/TWCSS/VITE/TS stack
     if (userOptions.stack === cli.stacks.vueTwViteTs.name) {
 
         stack = cli.stacks.vueTwViteTs
+        stackStubs += 'vue-ts/'
+    
+    } else if (userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name) {
 
-        const stackStubs = stubsPath + 'vue-ts/'
+        stack = cli.stacks.vueTwViteSsgMdTs
+        stackStubs += 'vite-ssg/'
+    
+    }
+
+
+    if (userOptions.stack === cli.stacks.vueTwViteTs.name || userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name) {
         
         //
         // START install vite-ts
         //
 
-        run(`npm create vite@latest ${userOptions.name} -- --template vue-ts`)
-
-        installedPkgs.push('vite@latest')
+        installViteTs(userOptions, stack, stackStubs, installedPkgs)
 
         // merge the current and vite packages data & write the new merged package data to the current package file
         writeJson(
@@ -245,95 +235,66 @@ async function installDepsAndFiles () {
             mergeJson(cwd + '/' + userOptions.name + '/package.json', cwd + '/package.json')
         )
 
-        // copy each vite generated folder and file from the vite generated directory back up into the root directory
-        moveViteTsFilesToRoot(userOptions.name)
-
-        // copy the VueVentus starter SVG files into project
-        copySyncSvgsToAssets()
-
-        // copy the VueVentus starter files from the cli stubs files
-        fs.copySync(stackStubs + 'App.vue', cwd + '/src/App.vue')
-        fs.copySync(stackStubs + 'HelloWorld.vue', cwd + '/src/components/HelloWorld.vue')
-
-        // copy the VueVentus starter end user app component files from the cli stubs files
-        fs.copySync(stackStubs + 'vv', cwd + '/src/components/vv')
-
-        // handle main.ts app file
-        writeFileMainTs(userOptions, stack.deps.fontawesome, stack.deps.faPro, stack.deps.gsap)
-        
-        // conditionally add either the vv cli version with dark/light mode code or the vite generated index.html file
-        if ( userOptions.files.includes( stack.deps.gsap.files.vvScrollUp.name ) ) {
-            fs.copySync(stackStubs + 'index.html', cwd + '/index.html')
-        } else {
-            moveFile(cwd + '/' + userOptions.name + '/index.html', cwd + '/index.html')
-        }
-
-        // conditionally add either the vite config file with prismjs config/plugin code or without it
-        if ( userOptions.deps.includes( stack.deps.prism.name ) ) {
-            fs.copySync(stackStubs + 'vite.config.prism.ts', cwd + '/vite.config.ts')
-        } else {
-            fs.copySync(stackStubs + 'vite.config.ts', cwd + '/vite.config.ts')
-        }
-
-        // delete the vite generated folder
-        rimraf.sync(cwd + '/' + userOptions.name)
-
         // merge the stub and vite tsconfig files data & write the new merged package data to the current package file
         writeJson(
             cwd + '/tsconfig.json',
             mergeJson(cwd + '/tsconfig.json', stackStubs + 'vv.tsconfig.json')
         )
 
-        console.log(`\nThe ${vvBrand} CLI installed/moved all ${stack.name} deps/files to root and merged all package.json data successfully into the root package.json file!\n`)
-        
-        
-        
-        //
-        // install tailwind css
-        //
+        // 
 
-        installTailwindCss(installedPkgs)
+        if (userOptions.stack === cli.stacks.vueTwViteTs.name ) {
 
-        
-        
-        //
-        // install types
-        //
+            // handle main.ts app file
+            writeFileMainTs(userOptions, stack.deps.fontawesome, stack.deps.faPro, stack.deps.gsap)
 
-        installNodeTypes(installedPkgs)
-        
-        
-        
-        //
-        // install stack VueVentus tailwind files
-        //
+        }
 
-        const vvStackFileKeys = ['appVvTs', 'appColorsJson', 'tailwindConfigJs', 'tailwindCss']
-
-        vvStackFileKeys.forEach( (key) => {
-            if ( userOptions.files.includes( stack.files[key].name ) ) {
-                fs.copySync(
-                    stackStubs + stack.files[key].name,
-                    cwd + stack.files[key].path + stack.files[key].name
-                )
-            } 
-        })
-
-        console.log(`\nThe ${vvBrand} CLI installed VueVentus package files for your stack successfully!\n`)
-
+        // 
         
-        
-        
+        if (userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name ) {
+
+            run(`npm install vite-ssg vue-router @vueuse/head unplugin-vue-components vite-plugin-pages vite-plugin-prismjs vite-plugin-vue-markdown --save-dev`)
+
+            run(`npm pkg set scripts.dev="vite --open"`)
+            run(`npm pkg set scripts.build="vite-ssg build"`)
+            run(`npm pkg set scripts.preview="vite preview --open"`)
+
+            installedPkgs = [...installedPkgs, ...['vite-ssg', 'vue-router', '@vueuse/head', 'unplugin-vue-components', 'vite-plugin-pages', 'vite-plugin-prismjs', 'vite-plugin-vue-markdown']]
+
+            // handle main.ts app file
+            writeFileMainTsSsg(userOptions, stack.deps.fontawesome, stack.deps.faPro, stack.deps.gsap)
+
+            // copy the Vite-SSG starter app page files from the cli stubs files
+            fs.copySync(stackStubs + 'pages', cwd + '/src/pages')
+
+            run(`npm install --save-dev pinia @nuxt/devalue`)
+
+            installedPkgs = [...installedPkgs, ...['pinia', '@nuxt/devalue']]
+
+            // copy the Vite-SSG starter pinia store file from the cli stubs files
+            fs.copySync(stackStubs + 'store', cwd + '/src/store')
+
+            // copy the Vite-SSG starter components from the cli stubs files
+            fs.copySync(stackStubs + 'MousePos.vue', cwd + '/src/components/MousePos.vue')
+            fs.copySync(stackStubs + 'Counter.vue', cwd + '/src/components/Counter.vue')
+
+            if ( userOptions.deps.includes( stack.deps.gsap.name ) ) {
+                fs.writeFileSync(cwd + '/src/vite-env.d.ts', `\ndeclare module 'gsap/ScrollToPlugin.js';\ndeclare module 'gsap/ScrollTrigger.js';\n`, { flag: 'a+' })
+            }
+
+        }
+
+        // 
+
+        // delete the vite generated folder
+        rimraf.sync(cwd + '/' + userOptions.name)
+
+        console.log(`\nThe ${vvBrand} CLI installed Vite, Vue, Tailwind, and VueVentus package files for your stack successfully!\n`)
+
         //
         // END of install vite
         //
-
-
-
-        /////////////////////////////////////////////////
-        /////////////////////////////////////////////////
-
-
 
         //
         // START Install vite optional deps
@@ -344,10 +305,7 @@ async function installDepsAndFiles () {
 
             if (userOptions.deps.includes(stack.deps.faPro.name)) {
 
-                //
                 // install the pro font awesome dep
-                //
-
                 async function setFaProLicense () {
     
                     const answers = await inquirer.prompt({
@@ -364,20 +322,14 @@ async function installDepsAndFiles () {
                 console.log(' ')
 
                 // create faPro .npmrc file - adding in the user supplied
-
                 if (userOptions.faProLicense !== '') {
-                    
-                    const npmrcCode = `\n@fortawesome:registry=https://npm.fontawesome.com/\n` + `//npm.fontawesome.com/:_authToken=${userOptions.faProLicense}\n`
 
-                    fs.writeFileSync(cwd + '/.npmrc', npmrcCode, { flag: 'a+' })
+                    fs.writeFileSync(cwd + '/.npmrc', `\n@fortawesome:registry=https://npm.fontawesome.com/\n` + `//npm.fontawesome.com/:_authToken=${userOptions.faProLicense}\n`, { flag: 'a+' })
 
                     // add .npmrc to project .gitignore file
                     fs.writeFileSync(cwd + '/.gitignore', `\n.npmrc\n`, { flag: 'a+' })
                         
-                    //
                     // now install the pro font awesome dep
-                    //
-
                     installedPkgs = [...installedPkgs, ...optInstallFaProTs(userOptions, stackStubs, stack.deps.faPro)]
 
                 }
@@ -385,48 +337,40 @@ async function installDepsAndFiles () {
 
             } else {
 
-                //
                 // else install the free font awesome dep
-                //
-               
                 installedPkgs = [...installedPkgs, ...optInstallFaFreeTs(userOptions, stackStubs, stack.deps.fontawesome)]
 
             }
 
         }
 
-
         // if the user chose the optional GSAP dep
         installedPkgs = [...installedPkgs, ...optInstallGsapTs(userOptions, stackStubs, stack.deps.gsap)]
-
 
         // if the user chose the optional Headless UI dep
         installedPkgs = [...installedPkgs, ...optInstallDep(userOptions, stack.deps.headless)]
 
-
         // if the user chose the optional Heroicons dep
         installedPkgs = [...installedPkgs, ...optInstallDep(userOptions, stack.deps.heroicons)]
-
 
         // if the user chose the optional Prism.js dep
         installedPkgs = [...installedPkgs, ...optInstallPrismjs(userOptions, stackStubs, stack.deps.prism)]
 
-
         // if the user chose the optional Vitest dep
         installedPkgs = [...installedPkgs, ...optInstallVitest(userOptions, stackStubs, stack.deps.vitest)]
-
 
         //
         // END Install vite optional deps
         //
-
+    
     }
+
 
     console.log(`${vvBrand} CLI installed the following packages:`)
     console.log(installedPkgs)
 
     console.log(`\nYour ${vvBrand} CLI installation is complete!`)
-    console.log(`\nYour ${stack.name} stack is ready for your awesome ideas!`)
+    console.log(`\nYour ${gradientText(stack.name)} stack is ready for your awesome ideas!`)
     console.log(`\nHere's a few commands to get started:`)
     console.log(`
         npm run dev

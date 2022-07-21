@@ -1,5 +1,5 @@
 // ./cli/helpers/vvBrand.mjs
 
-import gradient from 'gradient-string'
+import gradientText from './gradientText.mjs'
 
-export default gradient('lightGreen', 'cyan')('VueVentus')
+export default gradientText('VueVentus')
