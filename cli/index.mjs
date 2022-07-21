@@ -5,22 +5,28 @@ import gradient from 'gradient-string'
 import inquirer from 'inquirer'
 import rimraf from 'rimraf'
 
+import cliData from './helpers/cliData.mjs'
 import copySyncSvgsToAssets from './helpers/copySyncSvgsToAssets.mjs'
 import cwd from './helpers/cwd.mjs'
-import generateMainFileCode from './helpers/generateMainFileCode.mjs'
 import installNodeTypes from './helpers/installNodeTypes.mjs'
 import installTailwindCss from './helpers/installTailwindCss.mjs'
 import mergeJson from './helpers/mergeJson.mjs'
 import moveFile from './helpers/moveFile.mjs'
 import moveViteTsFilesToRoot from './helpers/moveViteTsFilesToRoot.mjs'
-import optionallyInstallDep from './helpers/optionallyInstallDep.mjs'
+import optInstallDep from './helpers/optInstallDep.mjs'
+import optInstallFaFreeTs from './helpers/optInstallFaFreeTs.mjs'
+import optInstallGsapTs from './helpers/optInstallGsapTs.mjs'
 import run from './helpers/run.mjs'
 import stubsPath from './helpers/stubsPath.mjs'
 import vvBrand from './helpers/vvBrand.mjs'
+import writeFileMainTs from './helpers/writeFileMainTs.mjs'
 import writeJson from './helpers/writeJson.mjs'
 
 // const sleep = ( ms = 1000 ) => new Promise( ( r ) => setTimeout( r, ms ) )
 
+const cli = cliData
+
+// user object to store cli user interaction results
 let userOptions = {
     name: '',
     stack: '',
@@ -29,157 +35,7 @@ let userOptions = {
     files: [],
 }
 
-const vv = {
-    stacks: {
-        vueTwViteTs: {
-            name: 'Vue 3, Tailwind CSS, Vite & Typescript',
-            files: {
-                appVvTs: {
-                    name: 'app.vv.ts',
-                    checked: true,
-                    path: '/src/',
-                },
-                appColorsJson: {
-                    name: 'app.colors.json',
-                    checked: true,
-                    path: '/src/',
-                },
-                tailwindConfigJs: {
-                    name: 'tailwind.config.cjs',
-                    checked: true,
-                    path: '/',
-                },
-                tailwindCss: {
-                    name: 'tailwind.css',
-                    checked: true,
-                    path: '/src/css/',
-                },
-            },
-            deps: {
-                fontawesome: {
-                    checked: true,
-                    name: 'FontAwesome Free',
-                    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons --save-dev',
-                    packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/free-solid-svg-icons', '@fortawesome/free-regular-svg-icons'],
-                    files: {
-                        fontAwesomeTs: {
-                            name: 'fontAwesome.ts',
-                            checked: true,
-                            path: '/src/',
-                        },
-                        vvFa: {
-                            name: 'VvFa.vue',
-                            checked: true,
-                            path: '/src/components/vv/elements/',
-                        },
-                    },
-                },
-                faPro: {
-                    checked: false,
-                    name: 'FontAwesome Pro (License Required)',
-                    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/pro-duotone-svg-icons @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/pro-thin-svg-icons --save-dev',
-                    packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/pro-solid-svg-icons', '@fortawesome/pro-regular-svg-icons', '@fortawesome/pro-duotone-svg-icons', '@fortawesome/pro-light-svg-icons', '@fortawesome/pro-thin-svg-icons'],
-                    files: {
-                        fontAwesomeProTs: {
-                            name: 'fontAwesomePro.ts',
-                            checked: true,
-                            path: '/src/',
-                        },
-                        vvFa: {
-                            name: 'VvFa.vue',
-                            checked: true,
-                            path: '/src/components/vv/elements/',
-                        },
-                    },
-                },
-                gsap: {
-                    checked: true,
-                    name: 'GSAP',
-                    install: 'npm install gsap --save-dev',
-                    packages: ['gsap'],
-                    files: {
-                        gsapTs: {
-                            name: 'gsap.ts',
-                            checked: true,
-                            path: '/src/',
-                        },
-                        vvScrollUp: {
-                            name: 'VvScrollUp.vue',
-                            checked: true,
-                            path: '/src/components/vv/buttons/',
-                        },
-                    },
-                },
-                headless: {
-                    checked: true,
-                    name: 'Headless UI',
-                    install: 'npm install @headlessui/vue --save-dev',
-                    packages: ['@headlessui/vue'],
-                },
-                heroicons: {
-                    checked: true,
-                    name: 'Heroicons',
-                    install: 'npm install @heroicons/vue --save-dev',
-                    packages: ['@heroicons/vue'],
-                },
-                prism: {
-                    checked: true,
-                    name: 'Prism.js',
-                    install: 'npm install prismjs vite-plugin-prismjs @types/prismjs --save-dev',
-                    packages: ['prismjs', 'vite-plugin-prismjs', '@types/prismjs'],
-                    files: {
-                        vvPrism: {
-                            name: 'VvPrism.vue',
-                            checked: true,
-                            path: '/src/components/vv/elements/',
-                        },
-                    },
-                },
-                vitest: {
-                    checked: true,
-                    name: 'Vitest',
-                    install: 'npm install vitest @vue/test-utils happy-dom c8 --save-dev',
-                    packages: ['vitest', '@vue/test-utils', 'happy-dom', 'c8'],
-                    files: {
-                        vitestConfigTs: {
-                            name: 'vitest.config.ts',
-                            checked: true,
-                            path: '/',
-                        },
-                        helloVueVentusTestJs: {
-                            name: 'HelloVueVentus.test.js',
-                            checked: true,
-                            path: '/tests/components/',
-                        },
-                        helloVueVentusVue: {
-                            name: 'HelloVueVentus.vue',
-                            checked: true,
-                            path: '/src/components/',
-                        },
-                    },
-                },
-            },
-        },
-        /*
-        vueTwVite: {
-            name: 'Vue 3, Tailwind CSS & Vite',
-            files: {},
-            deps: {},
-        },
-        vueTwNuxtViteTs: {
-            name: 'Vue 3, Tailwind CSS, Nuxt 3 & Typescript',
-            files: {},
-            deps: {},
-        },
-        */
-    },
-}
-
-
-
-
-
-
+// show cli start message
 console.log(`
 
 
@@ -201,12 +57,10 @@ async function setProjectName () {
         message: 'What is the name of your new ' + vvBrand + ' project?\n',
     })
 
-    userOptions.name = answers.projectName
-
-    return userOptions.name
+    return answers.projectName
 }
 
-await setProjectName()
+userOptions.name = await setProjectName()
 
 console.log(' ')
 
@@ -219,9 +73,9 @@ async function chooseStack () {
 
     let choices = []
 
-    const stackKeys = Object.keys(vv.stacks)
+    const stackKeys = Object.keys(cli.stacks)
 
-    stackKeys.forEach( (stack) => choices.push(vv.stacks[stack].name) )
+    stackKeys.forEach( (stack) => choices.push(cli.stacks[stack].name) )
     
     const answers = await inquirer.prompt({
         name: 'userStack',
@@ -230,12 +84,10 @@ async function chooseStack () {
         choices: choices,
     })
 
-    userOptions.stack = answers.userStack
-
-    return userOptions.stack
+    return answers.userStack
 }
 
-await chooseStack()
+userOptions.stack = await chooseStack()
 
 console.log(' ')
 
@@ -253,10 +105,8 @@ async function chooseDeps () {
     let choices = []
 
     // if the stack is vueTwViteTs
-    if ( userOptions.stack === vv.stacks.vueTwViteTs.name ) {
-
-        stack = vv.stacks.vueTwViteTs
-
+    if ( userOptions.stack === cli.stacks.vueTwViteTs.name ) {
+        stack = cli.stacks.vueTwViteTs
     }
 
     const depKeys = Object.keys(stack.deps)
@@ -273,13 +123,11 @@ async function chooseDeps () {
         choices: choices,
     })
 
-    userOptions.deps = answers.userDeps
-
-    return userOptions.deps
+    return answers.userDeps
 
 }
 
-await chooseDeps()
+userOptions.deps = await chooseDeps()
 
 console.log(' ')
 
@@ -297,10 +145,8 @@ async function chooseFiles () {
     let depFiles = []
 
     // if the stack is vueTwViteTs
-    if ( userOptions.stack === vv.stacks.vueTwViteTs.name ) {
-
-        stack = vv.stacks.vueTwViteTs
-
+    if ( userOptions.stack === cli.stacks.vueTwViteTs.name ) {
+        stack = cli.stacks.vueTwViteTs
     }
 
     const fileKeys = Object.keys(stack.files)
@@ -354,12 +200,11 @@ async function chooseFiles () {
         choices: [...stackFiles, ...depFiles],
     })
 
-    userOptions.files = answers.userFiles
+    return answers.userFiles
 
-    return userOptions.files
 }
 
-await chooseFiles()
+userOptions.files = await chooseFiles()
 
 console.log(' ')
 
@@ -373,16 +218,14 @@ console.log(' ')
 
 async function installDepsAndFiles () {
 
-    //
-    // Install stack
-    //
-
+    let stack = {}
     let installedPkgs = []
 
     // if the user chose the Vue/TWCSS/VITE/TS stack
-    if (userOptions.stack === vv.stacks.vueTwViteTs.name) {
+    if (userOptions.stack === cli.stacks.vueTwViteTs.name) {
 
-        const stack = vv.stacks.vueTwViteTs
+        stack = cli.stacks.vueTwViteTs
+
         const stackStubs = stubsPath + 'vue-ts/'
         
         //
@@ -412,50 +255,24 @@ async function installDepsAndFiles () {
         // copy the VueVentus starter end user app component files from the cli stubs files
         fs.copySync(stackStubs + 'vv', cwd + '/src/components/vv')
 
-
-
-
         // handle main.ts app file
-        let mainFileSettings = {
-            faFree: false,
-            faPro: false,
-            gsap: false,
-        }
-        if (userOptions.deps.includes(stack.deps.fontawesome.name) || userOptions.deps.includes(stack.deps.faPro.name)) {
-            if (userOptions.deps.includes(stack.deps.fontawesome.name)) {
-                mainFileSettings.faFree = true
-            }
-            if (userOptions.deps.includes(stack.deps.faPro.name)) {
-                mainFileSettings.faFree = false
-                mainFileSettings.faPro = true
-            }
-        }
-        if (userOptions.deps.includes(stack.deps.gsap.name)) {
-            mainFileSettings.gsap = true
-        }
-        const mainTsCode = generateMainFileCode(mainFileSettings)
-        fs.writeFileSync(cwd + '/src/main.ts', mainTsCode, { flag: 'w+' })
-
-
-
-
-
-
-
+        writeFileMainTs(userOptions, stack.deps.fontawesome, stack.deps.faPro, stack.deps.gsap)
         
+        // conditionally add either the vv cli version with dark/light mode code or the vite generated index.html file
         if ( userOptions.files.includes( stack.deps.gsap.files.vvScrollUp.name ) ) {
             fs.copySync(stackStubs + 'index.html', cwd + '/index.html')
         } else {
             moveFile(cwd + '/' + userOptions.name + '/index.html', cwd + '/index.html')
         }
 
+        // conditionally add either the vite config file with prismjs config/plugin code or without it
         if ( userOptions.deps.includes( stack.deps.prism.name ) ) {
             fs.copySync(stackStubs + 'vite.config.prism.ts', cwd + '/vite.config.ts')
         } else {
             fs.copySync(stackStubs + 'vite.config.ts', cwd + '/vite.config.ts')
         }
 
-        // and finally delete the vite generated folder
+        // delete the vite generated folder
         rimraf.sync(cwd + '/' + userOptions.name)
 
         // merge the stub and vite tsconfig files data & write the new merged package data to the current package file
@@ -465,21 +282,27 @@ async function installDepsAndFiles () {
         )
 
         console.log(`\nThe ${vvBrand} CLI installed/moved all ${stack.name} deps/files to root and merged all package.json data successfully into the root package.json file!\n`)
-
+        
+        
+        
         //
         // install tailwind css
         //
 
         installTailwindCss(installedPkgs)
 
+        
+        
         //
         // install types
         //
 
         installNodeTypes(installedPkgs)
-
+        
+        
+        
         //
-        // install stack VueVentus files
+        // install stack VueVentus tailwind files
         //
 
         const vvStackFileKeys = ['appVvTs', 'appColorsJson', 'tailwindConfigJs', 'tailwindCss']
@@ -495,9 +318,17 @@ async function installDepsAndFiles () {
 
         console.log(`\nThe ${vvBrand} CLI installed VueVentus package files for your stack successfully!\n`)
 
+        
+        
+        
         //
         // END of install vite
         //
+
+
+
+        /////////////////////////////////////////////////
+        /////////////////////////////////////////////////
 
 
 
@@ -522,12 +353,10 @@ async function installDepsAndFiles () {
                         message: 'What is your FontAwesome Pro license authorization token (required to download artwork via a project .npmrc file which will be created for you)?\n',
                     })
                 
-                    userOptions.faProLicense = (answers.faProLicense).trim()
-                
-                    return userOptions.faProLicense
+                    return (answers.faProLicense).trim()
                 }
                 
-                await setFaProLicense()
+                userOptions.faProLicense = await setFaProLicense()
                 
                 console.log(' ')
 
@@ -576,25 +405,8 @@ async function installDepsAndFiles () {
                 //
                 // else install the free font awesome dep
                 //
-                
-                run(stack.deps.fontawesome.install)
-
-                installedPkgs = [...installedPkgs, ...stack.deps.fontawesome.packages]
-
-                fs.copySync(
-                    stackStubs + stack.deps.fontawesome.files.fontAwesomeTs.name,
-                    cwd + stack.deps.fontawesome.files.fontAwesomeTs.path + stack.deps.fontawesome.files.fontAwesomeTs.name
-                )
-
-                // add optional FontAwesome Free files if the user also selected them
-                if ( userOptions.files.includes( stack.deps.fontawesome.files.vvFa.name ) ) {
-                    fs.copySync(
-                        stackStubs + stack.deps.fontawesome.files.vvFa.name,
-                        cwd + stack.deps.fontawesome.files.vvFa.path + stack.deps.fontawesome.files.vvFa.name
-                    )
-                }
-
-                console.log(`\nThe ${vvBrand} CLI installed/added the ${stack.deps.fontawesome.name} dep/files successfully!\n`)
+               
+                installedPkgs = [...installedPkgs, ...optInstallFaFreeTs(userOptions, stackStubs, stack.deps.fontawesome)]
 
             }
 
@@ -602,34 +414,15 @@ async function installDepsAndFiles () {
 
 
         // if the user chose the optional GSAP dep
-        if ( userOptions.deps.includes( stack.deps.gsap.name ) ) {
-
-            run(stack.deps.gsap.install)
-
-            installedPkgs = [...installedPkgs, ...stack.deps.gsap.packages]
-
-            fs.copySync(stackStubs + 'gsap.ts', cwd + '/src/gsap.ts')
-
-            // add optional GSAP files if the user also selected them
-            if ( userOptions.files.includes( stack.deps.gsap.files.vvScrollUp.name ) ) {
-                fs.copySync(
-                    stackStubs + stack.deps.gsap.files.vvScrollUp.name,
-                    cwd + stack.deps.gsap.files.vvScrollUp.path + stack.deps.gsap.files.vvScrollUp.name
-                )
-            }
-
-            console.log(`\nThe ${vvBrand} CLI installed/added the ${stack.deps.gsap.name} dep/files successfully!\n`)
-
-        }
+        installedPkgs = [...installedPkgs, ...optInstallGsapTs(userOptions, stackStubs, stack.deps.gsap)]
 
 
         // if the user chose the optional Headless UI dep
-        installedPkgs = [...installedPkgs, ...optionallyInstallDep(userOptions, stack.deps.headless)]
-        
+        installedPkgs = [...installedPkgs, ...optInstallDep(userOptions, stack.deps.headless)]
 
 
         // if the user chose the optional Heroicons dep
-        installedPkgs = [...installedPkgs, ...optionallyInstallDep(userOptions, stack.deps.heroicons)]
+        installedPkgs = [...installedPkgs, ...optInstallDep(userOptions, stack.deps.heroicons)]
 
 
         // if the user chose the optional Prism.js dep
