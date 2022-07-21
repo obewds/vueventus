@@ -15,7 +15,10 @@ import moveFile from './helpers/moveFile.mjs'
 import moveViteTsFilesToRoot from './helpers/moveViteTsFilesToRoot.mjs'
 import optInstallDep from './helpers/optInstallDep.mjs'
 import optInstallFaFreeTs from './helpers/optInstallFaFreeTs.mjs'
+import optInstallFaProTs from './helpers/optInstallFaProTs.mjs'
 import optInstallGsapTs from './helpers/optInstallGsapTs.mjs'
+import optInstallPrismjs from './helpers/optInstallPrismjs.mjs'
+import optInstallVitest from './helpers/optInstallVitest.mjs'
 import run from './helpers/run.mjs'
 import stubsPath from './helpers/stubsPath.mjs'
 import vvBrand from './helpers/vvBrand.mjs'
@@ -364,38 +367,18 @@ async function installDepsAndFiles () {
 
                 if (userOptions.faProLicense !== '') {
                     
-                    const npmrcCode = `@fortawesome:registry=https://npm.fontawesome.com/\n` + `//npm.fontawesome.com/:_authToken=${userOptions.faProLicense}\n`
+                    const npmrcCode = `\n@fortawesome:registry=https://npm.fontawesome.com/\n` + `//npm.fontawesome.com/:_authToken=${userOptions.faProLicense}\n`
 
                     fs.writeFileSync(cwd + '/.npmrc', npmrcCode, { flag: 'a+' })
 
                     // add .npmrc to project .gitignore file
-
-                    const gitignoreNpmrcCode = `\n.npmrc\n`
-
-                    fs.writeFileSync(cwd + '/.gitignore', gitignoreNpmrcCode, { flag: 'a+' })
+                    fs.writeFileSync(cwd + '/.gitignore', `\n.npmrc\n`, { flag: 'a+' })
                         
                     //
                     // now install the pro font awesome dep
                     //
-                    
-                    run(stack.deps.faPro.install)
 
-                    installedPkgs = [...installedPkgs, ...stack.deps.faPro.packages]
-
-                    fs.copySync(
-                        stackStubs + stack.deps.faPro.files.fontAwesomeProTs.name,
-                        cwd + stack.deps.faPro.files.fontAwesomeProTs.path + stack.deps.faPro.files.fontAwesomeProTs.name
-                    )
-
-                    // add optional FontAwesome Free files if the user also selected them
-                    if ( userOptions.files.includes( stack.deps.faPro.files.vvFa.name ) ) {
-                        fs.copySync(
-                            stackStubs + stack.deps.faPro.files.vvFa.name,
-                            cwd + stack.deps.faPro.files.vvFa.path + stack.deps.faPro.files.vvFa.name
-                        )
-                    }
-
-                    console.log(`\nThe ${vvBrand} CLI installed/added the ${stack.deps.faPro.name} dep/files successfully!\n`)
+                    installedPkgs = [...installedPkgs, ...optInstallFaProTs(userOptions, stackStubs, stack.deps.faPro)]
 
                 }
 
@@ -426,55 +409,12 @@ async function installDepsAndFiles () {
 
 
         // if the user chose the optional Prism.js dep
-        if ( userOptions.deps.includes( stack.deps.prism.name ) ) {
-
-            run(stack.deps.prism.install)
-
-            installedPkgs = [...installedPkgs, ...stack.deps.prism.packages]
-
-            // add optional Prism.js files if the user also selected them
-            if ( userOptions.files.includes( stack.deps.prism.files.vvPrism.name ) ) {
-                fs.copySync(
-                    stackStubs + stack.deps.prism.files.vvPrism.name,
-                    cwd + stack.deps.prism.files.vvPrism.path + stack.deps.prism.files.vvPrism.name,
-                )
-            }
-
-            console.log(`\nThe ${vvBrand} CLI installed/added the ${stack.deps.prism.name} dep/files successfully!\n`)
-
-        }
+        installedPkgs = [...installedPkgs, ...optInstallPrismjs(userOptions, stackStubs, stack.deps.prism)]
 
 
         // if the user chose the optional Vitest dep
-        if ( userOptions.deps.includes( stack.deps.vitest.name ) ) {
+        installedPkgs = [...installedPkgs, ...optInstallVitest(userOptions, stackStubs, stack.deps.vitest)]
 
-            run(`npm pkg set scripts.test="vitest --dom"`)
-            run(`npm pkg set scripts.coverage="vitest run --dom --coverage"`)
-
-            run(stack.deps.vitest.install)
-
-            installedPkgs = [...installedPkgs, ...stack.deps.vitest.packages]
-
-            fs.copySync(
-                stackStubs + stack.deps.vitest.files.vitestConfigTs.name,
-                cwd + stack.deps.vitest.files.vitestConfigTs.path + stack.deps.vitest.files.vitestConfigTs.name
-            )
-
-            // add optional Vitest files if the user also selected them
-            if ( userOptions.files.includes( stack.deps.vitest.files.helloVueVentusTestJs.name ) || userOptions.files.includes( stack.deps.vitest.files.helloVueVentusVue.name ) ) {
-                fs.copySync(
-                    stackStubs + stack.deps.vitest.files.helloVueVentusVue.name,
-                    cwd + stack.deps.vitest.files.helloVueVentusVue.path + stack.deps.vitest.files.helloVueVentusVue.name
-                )
-                fs.copySync(
-                    stackStubs + stack.deps.vitest.files.helloVueVentusTestJs.name,
-                    cwd + stack.deps.vitest.files.helloVueVentusTestJs.path + stack.deps.vitest.files.helloVueVentusTestJs.name
-                )
-            }
-
-            console.log(`\nThe ${vvBrand} CLI installed/added the ${stack.deps.vitest.name} dep/files successfully!\n`)
-
-        }
 
         //
         // END Install vite optional deps
@@ -485,15 +425,16 @@ async function installDepsAndFiles () {
     console.log(`${vvBrand} CLI installed the following packages:`)
     console.log(installedPkgs)
 
-    console.log(`\nYour ${vvBrand} CLI installation is complete!\n`)
-    console.log(`Here's a few commands to get started:`)
+    console.log(`\nYour ${vvBrand} CLI installation is complete!`)
+    console.log(`\nYour ${stack.name} stack is ready for your awesome ideas!`)
+    console.log(`\nHere's a few commands to get started:`)
     console.log(`
         npm run dev
         npm run build
         npm run test
         npm run coverage
     `)
-    console.log(`${gradient('lightGreen', 'cyan')('Happy Coding!')}\n`)
+    console.log(`${gradient('lightGreen', 'cyan')('Happy Hacking!')}\n`)
 
 }
 
