@@ -1,6 +1,5 @@
 // ./cli/helpers/optInstallVitest.mjs
 
-// added thu jul 21
 import fs from 'fs-extra'
 import cwd from './cwd.mjs'
 import run from './run.mjs'
