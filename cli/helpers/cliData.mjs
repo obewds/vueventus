@@ -11,6 +11,11 @@ let baseViteTypescriptFiles = {
         checked: true,
         path: '/src/',
     },
+    postCssConfigCjs: {
+        name: 'postcss.config.cjs',
+        checked: true,
+        path: '/',
+    },
     tailwindConfigCjs: {
         name: 'tailwind.config.cjs',
         checked: true,
