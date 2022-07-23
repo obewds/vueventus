@@ -7,6 +7,7 @@ export default function (optsObj) {
         faFree: optsObj && optsObj.faFree ? optsObj.faFree : false,
         faPro: optsObj && optsObj.faPro ? optsObj.faPro : false,
         gsap: optsObj && optsObj.gsap ? optsObj.gsap : false,
+        prismThemeVarsCss: optsObj && optsObj.prismThemeVarsCss ? optsObj.prismThemeVarsCss : false,
     }
 
     let fontAwesomeLine = ''
@@ -26,6 +27,12 @@ export default function (optsObj) {
         gsapLine = "import './gsap'"
     }
 
+    let prismThemeVarsLine = ''
+
+    if (opts.prismThemeVarsCss === true) {
+        prismThemeVarsLine = "import './css/prism-theme-vars.css'"
+    }
+
 const output = `// ${opts.path}
 
 import { createApp } from 'vue'
@@ -34,6 +41,7 @@ import appVv from './app.vv'
 import './css/tailwind.css'
 ${gsapLine}
 ${fontAwesomeLine}
+${prismThemeVarsLine}
 
 
 const app = createApp(App)
