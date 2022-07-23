@@ -98,13 +98,18 @@ let baseViteTypescriptDeps = {
     prism: {
         checked: true,
         name: 'Prism.js',
-        install: 'npm install prismjs vite-plugin-prismjs @types/prismjs --save-dev',
-        packages: ['prismjs', 'vite-plugin-prismjs', '@types/prismjs'],
+        install: 'npm install prismjs vite-plugin-prismjs @types/prismjs prism-theme-vars --save-dev',
+        packages: ['prismjs', 'vite-plugin-prismjs', '@types/prismjs', 'prism-theme-vars'],
         files: {
             vvPrism: {
                 name: 'VvPrism.vue',
                 checked: true,
                 path: '/src/components/vv/elements/',
+            },
+            prismThemeVarsCss: {
+                name: 'prism-theme-vars.css',
+                checked: true,
+                path: '/src/css/',
             },
         },
     },
