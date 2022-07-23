@@ -246,7 +246,7 @@ async function installDepsAndFiles () {
         if (userOptions.stack === cli.stacks.vueTwViteTs.name ) {
 
             // handle main.ts app file
-            writeFileMainTs(userOptions, stack.deps.fontawesome, stack.deps.faPro, stack.deps.gsap)
+            writeFileMainTs(userOptions, stack.deps.fontawesome, stack.deps.faPro, stack.deps.gsap, stack.deps.prism)
 
         }
 
@@ -263,7 +263,7 @@ async function installDepsAndFiles () {
             installedPkgs = [...installedPkgs, ...['vite-ssg', 'vue-router', '@vueuse/head', 'unplugin-vue-components', 'vite-plugin-pages', 'vite-plugin-prismjs', 'vite-plugin-vue-markdown']]
 
             // handle main.ts app file
-            writeFileMainTsSsg(userOptions, stack.deps.fontawesome, stack.deps.faPro, stack.deps.gsap)
+            writeFileMainTsSsg(userOptions, stack.deps.fontawesome, stack.deps.faPro, stack.deps.gsap, stack.deps.prism)
 
             // copy the Vite-SSG starter app page files from the cli stubs files
             fs.copySync(stackStubs + 'pages', cwd + '/src/pages')
