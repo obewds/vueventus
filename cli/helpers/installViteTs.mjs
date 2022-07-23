@@ -65,6 +65,9 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
 
     // install tailwind.css file
     if ( userOpts.files.includes( stackObj.files.tailwindCss.name ) ) {
+        if ( !fs.existsSync( cwd + '/src/css' ) ) {
+            fs.mkdirSync( cwd + '/src/css' )
+        }
         fs.writeFileSync(cwd + stackObj.files.tailwindCss.path + stackObj.files.tailwindCss.name, generateTailwindCssFile(), { flag: 'w+' })
     }
 
@@ -101,28 +104,5 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     
     // install types
     installNodeTypes(installPkgsArr)
-    
-    
-    // install stack files
-    /*const vvStackFileKeys = Object.keys(stackObj.files)
-
-    
-    vvStackFileKeys.forEach( (key) => {
-
-        if ( userOpts.files.includes( stackObj.files[key].name ) ) {
-
-            // conditional to skip files generated above
-            if ( stackObj.files[key].name !== stackObj.files.tailwindCss.name && stackObj.files[key].name !== stackObj.files.postCssConfigCjs.name && stackObj.files[key].name !== stackObj.files.appVvTs.name && stackObj.files[key].name !== stackObj.files.appColorsJson.name ) {
-
-                fs.copySync(
-                    stackStubPath + stackObj.files[key].name,
-                    cwd + stackObj.files[key].path + stackObj.files[key].name
-                )
-
-            }
-
-        } 
-
-    })*/
     
 }
