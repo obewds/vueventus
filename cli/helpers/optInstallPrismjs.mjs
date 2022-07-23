@@ -29,7 +29,7 @@ export default function (userOpts, stackStubsString, prismDepObject) {
         prismFiles.forEach( (file) => {
             if ( userOpts.files.includes( prismDepObject.files[file].name ) ) {
                 // conditional to skip file(s) generated above
-                if ( prismDepObject.files[key].name !== prismDepObject.files.prismThemeVarsCss.name ) {
+                if ( prismDepObject.files[file].name !== prismDepObject.files.prismThemeVarsCss.name ) {
                     fs.copySync(
                         stackStubsString + prismDepObject.files[file].name,
                         cwd + prismDepObject.files[file].path + prismDepObject.files[file].name,
