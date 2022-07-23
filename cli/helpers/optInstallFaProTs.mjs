@@ -9,8 +9,6 @@ export default function (userOptionsObject, stackStubsString, faProDepObject) {
 
     run(faProDepObject.install)
 
-    installedPkgs = [...installedPkgs, ...faProDepObject.packages]
-
     fs.copySync(
         stackStubsString + faProDepObject.files.fontAwesomeProTs.name,
         cwd + faProDepObject.files.fontAwesomeProTs.path + faProDepObject.files.fontAwesomeProTs.name
