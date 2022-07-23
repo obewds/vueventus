@@ -26,8 +26,8 @@ const config: UserConfig = {
             include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         }),
         prismjsPlugin({
-            languages: ["bash", "css", "javascript", "json", "markup", "markdown", "nginx", "php", "scss", "sql", "typescript", "yaml"],
-            plugins: ["line-numbers", "normalize-whitespace", "copy-to-clipboard"],
+            languages: ["bash", "css", "javascript", "json", "markup", "markdown", "nginx", "php", "scss", "sql", "typescript", "yaml", "python", "apacheconf"],
+            plugins: ["line-numbers", "normalize-whitespace", "copy-to-clipboard", "autolinker", "line-highlight"],
             theme: "okaidia",
             css: true,
         }),
