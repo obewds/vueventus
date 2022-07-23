@@ -2,7 +2,7 @@
 
 export default function () {
 
-const output = `// ./src/css/prism-theme-vars.css
+const output = `/* ./src/css/prism-theme-vars.css */
 
 @import "prism-theme-vars/base.css";
 
