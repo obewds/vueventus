@@ -15,10 +15,9 @@ module.exports = {
 
     content: [
         "./index.html",
-        "./src/**/*.{vue,js,ts,jsx,tsx}",
         ${line}
         // Include VueVentus default TWCSS classes (for prototyping):
-        "./node_modules/@obewds/vueventus/**/*.{vue,js,ts,jsx,tsx,json}",
+        "./node_modules/@obewds/vueventus/**/*.{vue,js,ts,jsx,tsx,json}", 
     ],
 
     theme: {
