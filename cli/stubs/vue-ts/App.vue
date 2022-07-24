@@ -18,7 +18,10 @@
 
             <img alt="Vue logo" src="./assets/logo-vue.svg"/>
             <img alt="Tailwind CSS logo" src="./assets/logo-tailwindcss.svg"/>
-            <VueVentusSpinningMark/>
+            <div>
+                <!-- div wrapper is needed so Safari contains the flex size of an svg/img child correctly -->
+                <VueVentusSpinningMark animation-class="animate-spin-reverse-4s"/>
+            </div>
             <img alt="Vite.js logo" src="./assets/logo-vite.svg"/>
             <img alt="Typescript logo" src="./assets/logo-typescript.svg"/>
 
