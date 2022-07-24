@@ -6,11 +6,11 @@
 
 export default function () {
 
-    const output = `
-    
-    `
-    
-    return output
-    
-    }
+const output = `
+
+`
+
+return output
+
+}
     

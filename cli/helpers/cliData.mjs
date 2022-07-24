@@ -111,6 +111,11 @@ let baseViteTypescriptDeps = {
                 checked: true,
                 path: '/src/css/',
             },
+            VvPrismVars: {
+                name: 'VvPrismVars.vue',
+                checked: true,
+                path: '/src/components/vv/elements/',
+            },
         },
     },
     vitest: {
