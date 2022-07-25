@@ -65,10 +65,15 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
 
     // install tailwind.css file
     if ( userOpts.files.includes( stackObj.files.tailwindCss.name ) ) {
-        if ( !fs.existsSync( cwd + '/src/css' ) ) {
-            fs.mkdirSync( cwd + '/src/css' )
-        }
+
+        // if ( !fs.existsSync( cwd + '/src/css' ) ) {
+        //     fs.mkdirSync( cwd + '/src/css' )
+        // }
+
+        checkOrMakeDirSync(cwd + '/src/css')
+
         fs.writeFileSync(cwd + stackObj.files.tailwindCss.path + stackObj.files.tailwindCss.name, generateTailwindCssFile(), { flag: 'w+' })
+
     }
 
 
