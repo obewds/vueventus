@@ -1,5 +1,4 @@
 // ./cli/helpers/cliData.mjs
-// updated on sun jul 24
 
 // TODO finish abstracting duped stack files into methods, then update these file object values to match those changes
 
