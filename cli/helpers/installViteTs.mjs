@@ -5,6 +5,7 @@ import copySyncSvgsToAssets from './copySyncSvgsToAssets.mjs'
 import cwd from './cwd.mjs'
 import generateAppColorsJsonFile from './generateAppColorsJsonFile.mjs'
 import generateAppVvTsFile from './generateAppVvTsFile.mjs'
+import generateIndexHtmlFile from './generateIndexHtmlFile.mjs'
 import generatePostcssConfigCjsFile from './generatePostcssConfigCjsFile.mjs'
 import generateTailwindConfigCjsFile from './generateTailwindConfigCjsFile.mjs'
 import generateTailwindCssFile from './generateTailwindCssFile.mjs'
@@ -42,9 +43,14 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     
     // conditionally add either the vv cli version with dark/light mode code or the vite generated index.html file
     if ( userOpts.files.includes( stackObj.deps.gsap.files.vvScrollUp.name ) ) {
-        fs.copySync(stackStubPath + 'index.html', cwd + '/index.html')
+
+        // fs.copySync(stackStubPath + 'index.html', cwd + '/index.html')
+        fs.writeFileSync(cwd + '/index.html', generateIndexHtmlFile(), { flag: 'w+' })
+
     } else {
+
         moveFile(cwd + '/' + userOpts.name + '/index.html', cwd + '/index.html')
+
     }
 
     
