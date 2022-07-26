@@ -357,7 +357,7 @@ async function installDepsAndFiles () {
         installedPkgs = [...installedPkgs, ...optInstallPrismjs(userOptions, stackStubs, stack.deps.prism)]
 
         // if the user chose the optional Vitest dep
-        installedPkgs = [...installedPkgs, ...optInstallVitest(userOptions, stackStubs, stack.deps.vitest)]
+        installedPkgs = [...installedPkgs, ...optInstallVitest(userOptions, stack.deps.vitest)]
 
         //
         // END Install vite optional deps
