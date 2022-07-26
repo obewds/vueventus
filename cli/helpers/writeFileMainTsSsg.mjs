@@ -1,8 +1,10 @@
 // ./cli/helpers/writeFileMainTsSsg.mjs
 
 import fs from 'fs-extra'
+
+import mainTsFileSsg from '../generators/mainTsFileSsg.mjs'
+
 import cwd from './cwd.mjs'
-import generateMainFileCodeSsg from './generateMainFileCodeSsg.mjs'
 
 export default function (userOptionsObject, stackDepFaObj, stackDepFaProObj, stackDepGsapObj, stackDepPrismObj) {
     
@@ -34,6 +36,6 @@ export default function (userOptionsObject, stackDepFaObj, stackDepFaProObj, sta
         settings.prismThemeVarsCss = true
     }
 
-    fs.writeFileSync(cwd + '/src/main.ts', generateMainFileCodeSsg(settings), { flag: 'w+' })
+    fs.writeFileSync(cwd + '/src/main.ts', mainTsFileSsg(settings), { flag: 'w+' })
 
 }

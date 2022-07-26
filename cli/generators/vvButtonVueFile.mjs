@@ -1,4 +1,4 @@
-// ./cli/helpers/generateVvButtonVueFile.mjs
+// ./cli/generators/vvButtonVueFile.mjs
 
 export default function () {
 

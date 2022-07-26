@@ -2,22 +2,23 @@
 
 import fs from 'fs-extra'
 
+import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
+import appVvTsFile from '../generators/appVvTsFile.mjs'
+import indexHtmlFile from '../generators/indexHtmlFile.mjs'
+import postcssConfigCjsFile from '../generators/postcssConfigCjsFile.mjs'
+import tailwindConfigCjsFile from '../generators/tailwindConfigCjsFile.mjs'
+import tailwindCssFile from '../generators/tailwindCssFile.mjs'
+import vvAnchorVueFile from '../generators/vvAnchorVueFile.mjs'
+import vvButtonVueFile from '../generators/vvButtonVueFile.mjs'
+import vvColorModeButtonVueFile from './vvColorModeButtonVueFile.mjs'
+import vvElVueFile from './vvElVueFile.mjs'
+import vvInputVueFile from './vvInputVueFile.mjs'
+import vvListItemVueFile from './vvListItemVueFile.mjs'
+import vvTextareaVueFile from './vvTextareaVueFile.mjs'
+
 import checkOrMakeDirSync from './checkOrMakeDirSync.mjs'
 import copySyncSvgsToAssets from './copySyncSvgsToAssets.mjs'
 import cwd from './cwd.mjs'
-import generateAppColorsJsonFile from './generateAppColorsJsonFile.mjs'
-import generateAppVvTsFile from './generateAppVvTsFile.mjs'
-import generateIndexHtmlFile from './generateIndexHtmlFile.mjs'
-import generatePostcssConfigCjsFile from './generatePostcssConfigCjsFile.mjs'
-import generateTailwindConfigCjsFile from './generateTailwindConfigCjsFile.mjs'
-import generateTailwindCssFile from './generateTailwindCssFile.mjs'
-import generateVvAnchorVueFile from './generateVvAnchorVueFile.mjs'
-import generateVvButtonVueFile from './generateVvButtonVueFile.mjs'
-import generateVvColorModeButtonVueFile from './generateVvColorModeButtonVueFile.mjs'
-import generateVvElVueFile from './generateVvElVueFile.mjs'
-import generateVvInputVueFile from './generateVvInputVueFile.mjs'
-import generateVvListItemVueFile from './generateVvListItemVueFile.mjs'
-import generateVvTextareaVueFile from './generateVvTextareaVueFile.mjs'
 import installNodeTypes from './installNodeTypes.mjs'
 import installTailwindCss from './installTailwindCss.mjs'
 import moveViteTsFilesToRoot from './moveViteTsFilesToRoot.mjs'
@@ -53,22 +54,25 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
 
     
     // copy the VueVentus starter end user app component files from the cli stubs files
-    checkOrMakeDirSync(cwd + '/src/components')
-    checkOrMakeDirSync(cwd + '/src/components/vv')
-    checkOrMakeDirSync(cwd + '/src/components/vv/anchors')
-    checkOrMakeDirSync(cwd + '/src/components/vv/buttons')
-    checkOrMakeDirSync(cwd + '/src/components/vv/elements')
-    checkOrMakeDirSync(cwd + '/src/components/vv/inputs')
-    checkOrMakeDirSync(cwd + '/src/components/vv/lists')
-    checkOrMakeDirSync(cwd + '/src/components/vv/textareas')
+    const compos = cwd + '/src/components'
+    const composVv = compos + '/vv'
+
+    checkOrMakeDirSync(compos)
+    checkOrMakeDirSync(composVv)
+    checkOrMakeDirSync(composVv + '/anchors')
+    checkOrMakeDirSync(composVv + '/buttons')
+    checkOrMakeDirSync(composVv + '/elements')
+    checkOrMakeDirSync(composVv + '/inputs')
+    checkOrMakeDirSync(composVv + '/lists')
+    checkOrMakeDirSync(composVv + '/textareas')
     
-    fs.writeFileSync(cwd + '/src/components/vv/anchors/VvAnchor.vue', generateVvAnchorVueFile(), { flag: 'w+' })
-    fs.writeFileSync(cwd + '/src/components/vv/buttons/VvButton.vue', generateVvButtonVueFile(), { flag: 'w+' })
-    fs.writeFileSync(cwd + '/src/components/vv/buttons/VvColorModeButton.vue', generateVvColorModeButtonVueFile(), { flag: 'w+' })
-    fs.writeFileSync(cwd + '/src/components/vv/elements/VvEl.vue', generateVvElVueFile(), { flag: 'w+' })
-    fs.writeFileSync(cwd + '/src/components/vv/inputs/VvInputs.vue', generateVvInputVueFile(), { flag: 'w+' })
-    fs.writeFileSync(cwd + '/src/components/vv/lists/VvListItem.vue', generateVvListItemVueFile(), { flag: 'w+' })
-    fs.writeFileSync(cwd + '/src/components/vv/textareas/VvTextarea.vue', generateVvTextareaVueFile(), { flag: 'w+' })
+    fs.writeFileSync(composVv + '/anchors/VvAnchor.vue', vvAnchorVueFile(), { flag: 'w+' })
+    fs.writeFileSync(composVv + '/buttons/VvButton.vue', vvButtonVueFile(), { flag: 'w+' })
+    fs.writeFileSync(composVv + '/buttons/VvColorModeButton.vue', vvColorModeButtonVueFile(), { flag: 'w+' })
+    fs.writeFileSync(composVv + '/elements/VvEl.vue', vvElVueFile(), { flag: 'w+' })
+    fs.writeFileSync(composVv + '/inputs/VvInputs.vue', vvInputVueFile(), { flag: 'w+' })
+    fs.writeFileSync(composVv + '/lists/VvListItem.vue', vvListItemVueFile(), { flag: 'w+' })
+    fs.writeFileSync(composVv + '/textareas/VvTextarea.vue', vvTextareaVueFile(), { flag: 'w+' })
 
 
 
@@ -88,7 +92,7 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     // conditionally add either the vv cli version with dark/light mode code or the vite generated index.html file
     if ( userOpts.files.includes( stackObj.deps.gsap.files.vvScrollUp.name ) ) {
 
-        fs.writeFileSync(cwd + '/index.html', generateIndexHtmlFile(), { flag: 'w+' })
+        fs.writeFileSync(cwd + '/index.html', indexHtmlFile(), { flag: 'w+' })
 
     } else {
 
@@ -121,26 +125,26 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
 
         checkOrMakeDirSync(cwd + '/src/css')
 
-        fs.writeFileSync(cwd + stackObj.files.tailwindCss.path + stackObj.files.tailwindCss.name, generateTailwindCssFile(), { flag: 'w+' })
+        fs.writeFileSync(cwd + stackObj.files.tailwindCss.path + stackObj.files.tailwindCss.name, tailwindCssFile(), { flag: 'w+' })
 
     }
 
 
     // install postcss.config.cjs file
     if ( userOpts.files.includes( stackObj.files.postCssConfigCjs.name ) ) {
-        fs.writeFileSync(cwd + stackObj.files.postCssConfigCjs.path + stackObj.files.postCssConfigCjs.name, generatePostcssConfigCjsFile(), { flag: 'w+' })
+        fs.writeFileSync(cwd + stackObj.files.postCssConfigCjs.path + stackObj.files.postCssConfigCjs.name, postcssConfigCjsFile(), { flag: 'w+' })
     }
 
 
     // install app.vv.ts file
     if ( userOpts.files.includes( stackObj.files.appVvTs.name ) ) {
-        fs.writeFileSync(cwd + stackObj.files.appVvTs.path + stackObj.files.appVvTs.name, generateAppVvTsFile(), { flag: 'w+' })
+        fs.writeFileSync(cwd + stackObj.files.appVvTs.path + stackObj.files.appVvTs.name, appVvTsFile(), { flag: 'w+' })
     }
 
 
     // install app.colors.json file
     if ( userOpts.files.includes( stackObj.files.appColorsJson.name ) ) {
-        fs.writeFileSync(cwd + stackObj.files.appColorsJson.path + stackObj.files.appColorsJson.name, generateAppColorsJsonFile(), { flag: 'w+' })
+        fs.writeFileSync(cwd + stackObj.files.appColorsJson.path + stackObj.files.appColorsJson.name, appColorsJsonFile(), { flag: 'w+' })
     }
 
 
@@ -149,7 +153,7 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
 
     // install tailwind.config.cjs file
     if ( userOpts.files.includes( stackObj.files.tailwindConfigCjs.name ) ) {
-        fs.writeFileSync(cwd + stackObj.files.tailwindConfigCjs.path + stackObj.files.tailwindConfigCjs.name, generateTailwindConfigCjsFile(isStackSsg), { flag: 'w+' })
+        fs.writeFileSync(cwd + stackObj.files.tailwindConfigCjs.path + stackObj.files.tailwindConfigCjs.name, tailwindConfigCjsFile(isStackSsg), { flag: 'w+' })
     }
 
 

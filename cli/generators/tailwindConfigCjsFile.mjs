@@ -1,4 +1,4 @@
-// ./cli/helpers/generateTailwindConfigCjsFile.mjs
+// ./cli/generators/tailwindConfigCjsFile.mjs
 
 export default function (isSsgBool = false) {
 

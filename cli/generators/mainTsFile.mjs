@@ -1,4 +1,4 @@
-// ./cli/helpers/generateMainFileCode.mjs
+// ./cli/generators/mainTsFile.mjs
 
 export default function (optsObj) {
 

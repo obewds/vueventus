@@ -1,4 +1,4 @@
-// ./cli/helpers/generateAppColorsJsonFile.mjs
+// ./cli/generators/appColorsJsonFile.mjs
 
 export default function () {
 

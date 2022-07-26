@@ -1,4 +1,4 @@
-// ./cli/helpers/generatePrismThemeVarsCssFile.mjs
+// ./cli/generators/prismThemeVarsCssFile.mjs
 
 export default function () {
 

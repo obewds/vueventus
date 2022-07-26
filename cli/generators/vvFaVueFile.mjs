@@ -1,4 +1,4 @@
-// ./cli/helpers/generateVvFaVueFile.mjs
+// ./cli/generators/vvFaVueFile.mjs
 
 // TODO: integrate this module into cli build
 // TODO: delete original stubs/vite-ssg and stubs/vue-ts VvFa.vue files

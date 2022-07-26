@@ -1,4 +1,4 @@
-// ./cli/helpers/generateVvListItemVueFile.mjs
+// ./cli/generators/vvListItemVueFile.mjs
 
 export default function () {
 

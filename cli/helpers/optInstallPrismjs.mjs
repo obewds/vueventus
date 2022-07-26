@@ -2,9 +2,10 @@
 
 import fs from 'fs-extra'
 
+import prismThemeVarsCssFile from '../generators/prismThemeVarsCssFile.mjs'
+
 import checkOrMakeDirSync from './checkOrMakeDirSync.mjs'
 import cwd from './cwd.mjs'
-import generatePrismThemeVarsCssFile from './generatePrismThemeVarsCssFile.mjs'
 import run from './run.mjs'
 import vvBrand from './vvBrand.mjs'
 
@@ -25,7 +26,7 @@ export default function (userOpts, stackStubsString, prismDepObject) {
 
             checkOrMakeDirSync(cwd + '/src/css')
 
-            fs.writeFileSync(cwd + prismDepObject.files.prismThemeVarsCss.path + prismDepObject.files.prismThemeVarsCss.name, generatePrismThemeVarsCssFile(), { flag: 'w+' })
+            fs.writeFileSync(cwd + prismDepObject.files.prismThemeVarsCss.path + prismDepObject.files.prismThemeVarsCss.name, prismThemeVarsCssFile(), { flag: 'w+' })
 
         }
 

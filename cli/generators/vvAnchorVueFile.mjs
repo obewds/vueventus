@@ -1,4 +1,4 @@
-// ./cli/helpers/generateVvAnchorVueFile.mjs
+// ./cli/generators/vvAnchorVueFile.mjs
 
 export default function () {
 

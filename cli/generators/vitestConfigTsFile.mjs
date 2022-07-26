@@ -1,4 +1,4 @@
-// ./cli/helpers/generateVitestConfigTsFile.mjs
+// ./cli/generators/vitestConfigTsFile.mjs
 
 export default function () {
 

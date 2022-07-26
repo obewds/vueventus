@@ -1,4 +1,4 @@
-// ./cli/helpers/generateHelloVueVentusVueFile.mjs
+// ./cli/generators/helloVueVentusVueFile.mjs
 
 export default function () {
 

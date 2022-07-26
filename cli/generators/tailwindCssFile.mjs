@@ -1,4 +1,4 @@
-// ./cli/helpers/generateTailwindCssFile.mjs
+// ./cli/generators/tailwindCssFile.mjs
 
 export default function () {
 

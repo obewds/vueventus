@@ -1,37 +1,36 @@
-// ./cli/helpers/generateVvInputVueFile.mjs
+// ./cli/generators/vvTextareaVueFile.mjs
 
 export default function () {
 
-const output = `<!-- ./src/components/vv/inputs/VvInput.vue -->
+const output = `<!-- ./src/components/vv/textareas/VvTextarea.vue -->
 
 
 <script lang="ts">
 
     import { defineComponent } from 'vue'
-    import { ValidInputTypes, VvInput } from '@obewds/vueventus'
+    import { VvTextarea } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
     export default defineComponent({
 
-        components: { VvInput },
+        components: { VvTextarea },
 
         props: {
             color: {
                 type: String,
-                default: appVv.defaults.VvInput.color,
+                default: appVv.defaults.VvTextarea.color,
             },
             palette: {
                 type: String,
-                default: appVv.defaults.VvInput.palette,
+                default: appVv.defaults.VvTextarea.palette,
             },
             size: {
                 type: String,
-                default: appVv.defaults.VvInput.size,
+                default: appVv.defaults.VvTextarea.size,
             },
-            type: {
+            rowSize: {
                 type: String,
-                default: appVv.defaults.VvInput.type,
-                validator: (prop: ValidInputTypes) => (ValidInputTypes).includes(prop),
+                default: appVv.defaults.VvTextarea.rowSize,
             },
         },
 
@@ -41,12 +40,14 @@ const output = `<!-- ./src/components/vv/inputs/VvInput.vue -->
 
 
 <template>
-    <VvInput
+
+    <VvTextarea
         :color="color"
         :palette="palette"
         :size="size"
-        :type="type"
+        :row-size="rowSize"
     />
+
 </template>
 
 `

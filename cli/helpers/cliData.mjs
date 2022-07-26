@@ -9,7 +9,7 @@ let baseViteTypescriptFiles = {
         path: '/src/',
         isMethod: true,
         isFile: false,
-        src: 'generateAppVvTsFile',
+        src: 'appVvTsFile',
     },
     appColorsJson: {
         name: 'app.colors.json',
@@ -17,7 +17,7 @@ let baseViteTypescriptFiles = {
         path: '/src/',
         isMethod: true,
         isFile: false,
-        src: 'generateAppColorsJsonFile',
+        src: 'appColorsJsonFile',
     },
     postCssConfigCjs: {
         name: 'postcss.config.cjs',
@@ -25,7 +25,7 @@ let baseViteTypescriptFiles = {
         path: '/',
         isMethod: true,
         isFile: false,
-        src: 'generatePostcssConfigCjsFile',
+        src: 'postcssConfigCjsFile',
     },
     tailwindConfigCjs: {
         name: 'tailwind.config.cjs',
@@ -33,7 +33,7 @@ let baseViteTypescriptFiles = {
         path: '/',
         isMethod: true,
         isFile: false,
-        src: 'generateTailwindConfigCjsFile',
+        src: 'tailwindConfigCjsFile',
     },
     tailwindCss: {
         name: 'tailwind.css',
@@ -41,7 +41,7 @@ let baseViteTypescriptFiles = {
         path: '/src/css/',
         isMethod: true,
         isFile: false,
-        src: 'generateTailwindCssFile',
+        src: 'tailwindCssFile',
     },
 }
 
@@ -150,7 +150,7 @@ let baseViteTypescriptDeps = {
                 path: '/src/css/',
                 isMethod: true,
                 isFile: false,
-                src: 'generatePrismThemeVarsCssFile',
+                src: 'prismThemeVarsCssFile',
             },
             VvPrismVars: {
                 name: 'VvPrismVars.vue',

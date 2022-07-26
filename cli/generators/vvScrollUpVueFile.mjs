@@ -1,4 +1,4 @@
-// ./cli/helpers/generateVvScrollUpVueFile.mjs
+// ./cli/generators/vvScrollUpVueFile.mjs
 
 // TODO: integrate this module into cli build
 // TODO: delete original stubs/vite-ssg and stubs/vue-ts VvScrollUp.vue files

@@ -1,4 +1,4 @@
-// ./cli/helpers/generateVvElVueFile.mjs
+// ./cli/generators/vvElVueFile.mjs
 
 export default function () {
 

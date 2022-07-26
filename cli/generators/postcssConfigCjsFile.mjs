@@ -1,4 +1,4 @@
-// ./cli/helpers/generatePostcssConfigCjsFile.mjs
+// ./cli/generators/postcssConfigCjsFile.mjs
 
 export default function () {
 

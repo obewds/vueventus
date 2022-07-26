@@ -1,4 +1,4 @@
-// ./cli/helpers/generateIndexHtmlFile.mjs
+// ./cli/generators/indexHtmlFile.mjs
 
 export default function () {
 

@@ -1,4 +1,4 @@
-// ./cli/helpers/generateAppVvTsFile.mjs
+// ./cli/generators/appVvTsFile.mjs
 
 export default function () {
 

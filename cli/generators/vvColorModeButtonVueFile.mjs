@@ -1,4 +1,4 @@
-// ./cli/helpers/generateVvColorModeButtonVueFile.mjs
+// ./cli/generators/vvColorModeButtonVueFile.mjs
 
 export default function () {
 
