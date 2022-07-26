@@ -1,6 +1,8 @@
 // ./cli/helpers/optInstallPrismjs.mjs
 
 import fs from 'fs-extra'
+
+import checkOrMakeDirSync from './checkOrMakeDirSync.mjs'
 import cwd from './cwd.mjs'
 import generatePrismThemeVarsCssFile from './generatePrismThemeVarsCssFile.mjs'
 import run from './run.mjs'
