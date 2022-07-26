@@ -1,6 +1,5 @@
 // ./cli/helpers/generateHelloVueVentusTestJsFile.mjs
 
-// TODO: integrate this module into cli build
 // TODO: delete original stubs/vite-ssg and stubs/vue-ts HelloVueVentus.test.js files
 
 export default function () {

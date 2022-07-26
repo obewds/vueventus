@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// updated on sun jul 24
 
 import inquirer from 'inquirer'
 import vvBrand from './helpers/vvBrand.mjs'

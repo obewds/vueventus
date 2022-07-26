@@ -16,10 +16,15 @@ export default function (userOpts, stackStubsString, prismDepObject) {
 
         // install prism-theme-vars.css file
         if ( userOpts.files.includes( prismDepObject.files.prismThemeVarsCss.name ) ) {
-            if ( !fs.existsSync( cwd + '/src/css' ) ) {
-                fs.mkdirSync( cwd + '/src/css' )
-            }
+
+            // if ( !fs.existsSync( cwd + '/src/css' ) ) {
+            //     fs.mkdirSync( cwd + '/src/css' )
+            // }
+
+            checkOrMakeDirSync(cwd + '/src/css')
+
             fs.writeFileSync(cwd + prismDepObject.files.prismThemeVarsCss.path + prismDepObject.files.prismThemeVarsCss.name, generatePrismThemeVarsCssFile(), { flag: 'w+' })
+
         }
 
 
