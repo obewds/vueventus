@@ -1,7 +1,5 @@
 // ./cli/helpers/generateHelloVueVentusVueFile.mjs
 
-// TODO: delete original stubs/vite-ssg and stubs/vue-ts HelloVueVentus.vue files
-
 export default function () {
 
 const output = `<!-- ./src/components/HelloVueVentus.vue -->

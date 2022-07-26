@@ -46,7 +46,6 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     // conditionally add either the vv cli version with dark/light mode code or the vite generated index.html file
     if ( userOpts.files.includes( stackObj.deps.gsap.files.vvScrollUp.name ) ) {
 
-        // fs.copySync(stackStubPath + 'index.html', cwd + '/index.html')
         fs.writeFileSync(cwd + '/index.html', generateIndexHtmlFile(), { flag: 'w+' })
 
     } else {
