@@ -1,6 +1,5 @@
 // ./cli/helpers/generateVitestConfigTsFile.mjs
 
-// TODO: integrate this module into cli build
 // TODO: delete original stubs/vite-ssg and stubs/vue-ts vitest.config.ts files
 
 export default function () {

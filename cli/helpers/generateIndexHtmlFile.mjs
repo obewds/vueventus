@@ -1,6 +1,5 @@
 // ./cli/helpers/generateIndexHtmlFile.mjs
 
-// TODO: integrate this module into cli build
 // TODO: delete original stubs/vite-ssg and stubs/vue-ts index.html files
 
 export default function () {
