@@ -1,4 +1,4 @@
-// ./cli/helpers/optInstallVitest.mjs
+// ./cli/installers/addVitest.mjs
 
 import fs from 'fs-extra'
 
@@ -6,10 +6,10 @@ import helloVueVentusTestJsFile from '../generators/helloVueVentusTestJsFile.mjs
 import helloVueVentusVueFile from '../generators/helloVueVentusVueFile.mjs'
 import vitestConfigTsFile from '../generators/vitestConfigTsFile.mjs'
 
-import checkOrMakeDirSync from './checkOrMakeDirSync.mjs'
-import cwd from './cwd.mjs'
-import run from './run.mjs'
-import vvBrand from './vvBrand.mjs'
+import checkOrMakeDirSync from '../helpers/checkOrMakeDirSync.mjs'
+import cwd from '../helpers/cwd.mjs'
+import run from '../helpers/run.mjs'
+import vvBrand from '../helpers/vvBrand.mjs'
 
 export default function (userOptionsObject, vitestDepObject) {
 

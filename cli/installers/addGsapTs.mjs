@@ -1,9 +1,10 @@
-// ./cli/helpers/optInstallGsapTs.mjs
+// ./cli/installers/addGsapTs.mjs
 
 import fs from 'fs-extra'
-import cwd from './cwd.mjs'
-import run from './run.mjs'
-import vvBrand from './vvBrand.mjs'
+
+import cwd from '../helpers/cwd.mjs'
+import run from '../helpers/run.mjs'
+import vvBrand from '../helpers/vvBrand.mjs'
 
 export default function (userOptionsObject, stackStubsString, gsapDepObject) {
 

@@ -1,6 +1,9 @@
-// ./cli/helpers/installViteTs.mjs
+// ./cli/installers/addViteTs.mjs
 
 import fs from 'fs-extra'
+
+import addNodeTypes from './addNodeTypes.mjs'
+import addTailwindCss from '../installers/addTailwindCss.mjs'
 
 import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
 import appVvTsFile from '../generators/appVvTsFile.mjs'
@@ -10,20 +13,18 @@ import tailwindConfigCjsFile from '../generators/tailwindConfigCjsFile.mjs'
 import tailwindCssFile from '../generators/tailwindCssFile.mjs'
 import vvAnchorVueFile from '../generators/vvAnchorVueFile.mjs'
 import vvButtonVueFile from '../generators/vvButtonVueFile.mjs'
-import vvColorModeButtonVueFile from './vvColorModeButtonVueFile.mjs'
-import vvElVueFile from './vvElVueFile.mjs'
-import vvInputVueFile from './vvInputVueFile.mjs'
-import vvListItemVueFile from './vvListItemVueFile.mjs'
-import vvTextareaVueFile from './vvTextareaVueFile.mjs'
+import vvColorModeButtonVueFile from '../generators/vvColorModeButtonVueFile.mjs'
+import vvElVueFile from '../generators/vvElVueFile.mjs'
+import vvInputVueFile from '../generators/vvInputVueFile.mjs'
+import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
+import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
 
-import checkOrMakeDirSync from './checkOrMakeDirSync.mjs'
-import copySyncSvgsToAssets from './copySyncSvgsToAssets.mjs'
-import cwd from './cwd.mjs'
-import installNodeTypes from './installNodeTypes.mjs'
-import installTailwindCss from './installTailwindCss.mjs'
-import moveViteTsFilesToRoot from './moveViteTsFilesToRoot.mjs'
-import run from './run.mjs'
-import vvBrand from './vvBrand.mjs'
+import checkOrMakeDirSync from '../helpers/checkOrMakeDirSync.mjs'
+import copySyncSvgsToAssets from '../helpers/copySyncSvgsToAssets.mjs'
+import cwd from '../helpers/cwd.mjs'
+import moveViteTsFilesToRoot from '../helpers/moveViteTsFilesToRoot.mjs'
+import run from '../helpers/run.mjs'
+import vvBrand from '../helpers/vvBrand.mjs'
 
 export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     
@@ -117,7 +118,7 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     
     
     // install tailwind css
-    installTailwindCss(installPkgsArr)
+    addTailwindCss(installPkgsArr)
 
 
     // install tailwind.css file
@@ -161,6 +162,6 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     
     
     // install types
-    installNodeTypes(installPkgsArr)
+    addNodeTypes(installPkgsArr)
     
 }

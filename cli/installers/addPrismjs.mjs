@@ -1,13 +1,13 @@
-// ./cli/helpers/optInstallPrismjs.mjs
+// ./cli/installers/addPrismjs.mjs
 
 import fs from 'fs-extra'
 
 import prismThemeVarsCssFile from '../generators/prismThemeVarsCssFile.mjs'
 
-import checkOrMakeDirSync from './checkOrMakeDirSync.mjs'
-import cwd from './cwd.mjs'
-import run from './run.mjs'
-import vvBrand from './vvBrand.mjs'
+import checkOrMakeDirSync from '../helpers/checkOrMakeDirSync.mjs'
+import cwd from '../helpers/cwd.mjs'
+import run from '../helpers/run.mjs'
+import vvBrand from '../helpers/vvBrand.mjs'
 
 export default function (userOpts, stackStubsString, prismDepObject) {
 

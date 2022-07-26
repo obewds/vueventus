@@ -1,7 +1,7 @@
-// ./cli/helpers/installTailwindCss.mjs
+// ./cli/installers/addTailwindCss.mjs
 
-import run from './run.mjs'
-import vvBrand from './vvBrand.mjs'
+import run from '../helpers/run.mjs'
+import vvBrand from '../helpers/vvBrand.mjs'
 
 export default function (installedPkgsArray) {
 
