@@ -47,12 +47,6 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     fs.copySync(stackStubPath + 'App.vue', cwd + '/src/App.vue')
     fs.copySync(stackStubPath + 'HelloWorld.vue', cwd + '/src/components/HelloWorld.vue')
 
-
-
-
-
-
-
     
     // copy the VueVentus starter end user app component files from the cli stubs files
     const compos = cwd + '/src/components'
@@ -71,23 +65,9 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     fs.writeFileSync(composVv + '/buttons/VvButton.vue', vvButtonVueFile(), { flag: 'w+' })
     fs.writeFileSync(composVv + '/buttons/VvColorModeButton.vue', vvColorModeButtonVueFile(), { flag: 'w+' })
     fs.writeFileSync(composVv + '/elements/VvEl.vue', vvElVueFile(), { flag: 'w+' })
-    fs.writeFileSync(composVv + '/inputs/VvInputs.vue', vvInputVueFile(), { flag: 'w+' })
+    fs.writeFileSync(composVv + '/inputs/VvInput.vue', vvInputVueFile(), { flag: 'w+' })
     fs.writeFileSync(composVv + '/lists/VvListItem.vue', vvListItemVueFile(), { flag: 'w+' })
     fs.writeFileSync(composVv + '/textareas/VvTextarea.vue', vvTextareaVueFile(), { flag: 'w+' })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         
     
     // conditionally add either the vv cli version with dark/light mode code or the vite generated index.html file

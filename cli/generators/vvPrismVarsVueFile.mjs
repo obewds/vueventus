@@ -1,7 +1,5 @@
 // ./cli/generators/vvPrismVarsVueFile.mjs
 
-// TODO: delete original stubs/vite-ssg and stubs/vue-ts VvPrism.vue files
-
 export default function () {
 
 const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->

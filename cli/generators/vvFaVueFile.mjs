@@ -1,7 +1,5 @@
 // ./cli/generators/vvFaVueFile.mjs
 
-// TODO: delete original stubs/vite-ssg and stubs/vue-ts VvFa.vue files
-
 export default function () {
 
 const output = `<!-- ./src/components/vv/elements/VvFa.vue -->
