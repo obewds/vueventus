@@ -6,16 +6,19 @@ import inquirer from 'inquirer'
 import rimraf from 'rimraf'
 
 import cliData from './helpers/cliData.mjs'
-import cwd from './helpers/cwd.mjs'
+import getVvTsConfig from './helpers/getVvTsConfig.mjs'
+import gradientText from './helpers/gradientText.mjs'
 import gradientText from './helpers/gradientText.mjs'
 import installViteTs from './helpers/installViteTs.mjs'
 import mergeJson from './helpers/mergeJson.mjs'
+import merge from 'deepmerge'
 import optInstallDep from './helpers/optInstallDep.mjs'
 import optInstallFaFreeTs from './helpers/optInstallFaFreeTs.mjs'
 import optInstallFaProTs from './helpers/optInstallFaProTs.mjs'
 import optInstallGsapTs from './helpers/optInstallGsapTs.mjs'
 import optInstallPrismjs from './helpers/optInstallPrismjs.mjs'
 import optInstallVitest from './helpers/optInstallVitest.mjs'
+import require from './require.mjs'
 import run from './helpers/run.mjs'
 import stubsPath from './helpers/stubsPath.mjs'
 import vvBrand from './helpers/vvBrand.mjs'
@@ -236,9 +239,15 @@ async function installDepsAndFiles () {
         )
 
         // merge the stub and vite tsconfig files data & write the new merged package data to the current package file
+        // writeJson(
+        //     cwd + '/tsconfig.json',
+        //     mergeJson(cwd + '/tsconfig.json', stackStubs + 'vv.tsconfig.json')
+        // )
+        const currentTsconfig = require(cwd + '/tsconfig.json')
+        const vvTsconfig = getVvTsConfig()
         writeJson(
             cwd + '/tsconfig.json',
-            mergeJson(cwd + '/tsconfig.json', stackStubs + 'vv.tsconfig.json')
+            merge(currentTsconfig, vvTsconfig)
         )
 
         // 
@@ -357,7 +366,7 @@ async function installDepsAndFiles () {
         installedPkgs = [...installedPkgs, ...optInstallPrismjs(userOptions, stackStubs, stack.deps.prism)]
 
         // if the user chose the optional Vitest dep
-        installedPkgs = [...installedPkgs, ...optInstallVitest(userOptions, stackStubs, stack.deps.vitest)]
+        installedPkgs = [...installedPkgs, ...optInstallVitest(userOptions, stack.deps.vitest)]
 
         //
         // END Install vite optional deps

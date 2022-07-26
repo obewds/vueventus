@@ -10,7 +10,7 @@ import generateVitestConfigTsFile from './generateVitestConfigTsFile.mjs'
 import run from './run.mjs'
 import vvBrand from './vvBrand.mjs'
 
-export default function (userOptionsObject, stackStubsString, vitestDepObject) {
+export default function (userOptionsObject, vitestDepObject) {
 
     if ( userOptionsObject.deps.includes( vitestDepObject.name ) ) {
 
@@ -19,34 +19,11 @@ export default function (userOptionsObject, stackStubsString, vitestDepObject) {
 
         run(vitestDepObject.install)
 
-        // fs.copySync(
-        //     stackStubsString + vitestDepObject.files.vitestConfigTs.name,
-        //     cwd + vitestDepObject.files.vitestConfigTs.path + vitestDepObject.files.vitestConfigTs.name
-        // )
-
+        // install vitest.config.ts file
         fs.writeFileSync(cwd + vitestDepObject.files.vitestConfigTs.path + vitestDepObject.files.vitestConfigTs.name, generateVitestConfigTsFile(), { flag: 'w+' })
-
-        // add optional Vitest files if the user also selected them
-        // if ( userOptionsObject.files.includes( vitestDepObject.files.helloVueVentusTestJs.name ) || userOptionsObject.files.includes( vitestDepObject.files.helloVueVentusVue.name ) ) {
-            
-            // fs.copySync(
-            //     stackStubsString + vitestDepObject.files.helloVueVentusVue.name,
-            //     cwd + vitestDepObject.files.helloVueVentusVue.path + vitestDepObject.files.helloVueVentusVue.name
-            // )
-
-            // fs.copySync(
-            //     stackStubsString + vitestDepObject.files.helloVueVentusTestJs.name,
-            //     cwd + vitestDepObject.files.helloVueVentusTestJs.path + vitestDepObject.files.helloVueVentusTestJs.name
-            // )
-
-        // }
 
         // install HelloVueVentus.vue file
         if ( userOptionsObject.files.includes( vitestDepObject.files.helloVueVentusVue.name )) {
-
-            // if ( !fs.existsSync( cwd + '/src/components' ) ) {
-            //     fs.mkdirSync( cwd + '/src/components' )
-            // }
 
             checkOrMakeDirSync(cwd + '/src/components')
 
@@ -57,10 +34,7 @@ export default function (userOptionsObject, stackStubsString, vitestDepObject) {
         // install HelloVueVentus.test.js file
         if ( userOptionsObject.files.includes( vitestDepObject.files.helloVueVentusTestJs.name )) {
 
-            // if ( !fs.existsSync( cwd + '/tests/components' ) ) {
-            //     fs.mkdirSync( cwd + '/tests/components' )
-            // }
-
+            checkOrMakeDirSync(cwd + '/tests')
             checkOrMakeDirSync(cwd + '/tests/components')
 
             fs.writeFileSync(cwd + vitestDepObject.files.helloVueVentusTestJs.path + vitestDepObject.files.helloVueVentusTestJs.name, generateHelloVueVentusTestJsFile(), { flag: 'w+' })

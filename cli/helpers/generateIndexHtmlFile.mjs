@@ -1,7 +1,5 @@
 // ./cli/helpers/generateIndexHtmlFile.mjs
 
-// TODO: delete original stubs/vite-ssg and stubs/vue-ts index.html files
-
 export default function () {
 
 const output = `<!DOCTYPE html>

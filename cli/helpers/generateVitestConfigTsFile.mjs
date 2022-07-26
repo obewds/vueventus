@@ -1,7 +1,5 @@
 // ./cli/helpers/generateVitestConfigTsFile.mjs
 
-// TODO: delete original stubs/vite-ssg and stubs/vue-ts vitest.config.ts files
-
 export default function () {
 
 const output = `// ./vitest.config.ts
