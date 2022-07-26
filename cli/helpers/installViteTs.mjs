@@ -57,9 +57,13 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     
     // conditionally add either the vite config file with prismjs config/plugin code or without it
     if ( userOpts.deps.includes( stackObj.deps.prism.name ) ) {
+
         fs.copySync(stackStubPath + 'vite.config.prism.ts', cwd + '/vite.config.ts')
+
     } else {
+
         fs.copySync(stackStubPath + 'vite.config.ts', cwd + '/vite.config.ts')
+        
     }
 
     
@@ -72,10 +76,6 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
 
     // install tailwind.css file
     if ( userOpts.files.includes( stackObj.files.tailwindCss.name ) ) {
-
-        // if ( !fs.existsSync( cwd + '/src/css' ) ) {
-        //     fs.mkdirSync( cwd + '/src/css' )
-        // }
 
         checkOrMakeDirSync(cwd + '/src/css')
 
