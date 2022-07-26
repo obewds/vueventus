@@ -1,7 +1,5 @@
 // ./cli/helpers/generateVvAnchorVueFile.mjs
 
-// TODO: delete original stubs/vite-ssg and stubs/vue-ts VvScrollUp.vue files
-
 export default function () {
 
 const output = `<!-- ./src/components/vv/anchors/VvAnchor.vue -->

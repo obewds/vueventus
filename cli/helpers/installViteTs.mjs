@@ -53,8 +53,6 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
 
     
     // copy the VueVentus starter end user app component files from the cli stubs files
-    // fs.copySync(stackStubPath + 'vv', cwd + '/src/components/vv')
-
     checkOrMakeDirSync(cwd + '/src/components')
     checkOrMakeDirSync(cwd + '/src/components/vv')
     checkOrMakeDirSync(cwd + '/src/components/vv/anchors')

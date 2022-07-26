@@ -1,8 +1,5 @@
 // ./cli/helpers/generateVvListItemVueFile.mjs
 
-
-// TODO: delete original stubs/vite-ssg and stubs/vue-ts VvScrollUp.vue files
-
 export default function () {
 
 const output = `<!-- ./src/components/vv/lists/VvListItem.vue -->
