@@ -17,7 +17,7 @@ import generateVvColorModeButtonVueFile from './generateVvColorModeButtonVueFile
 import generateVvElVueFile from './generateVvElVueFile.mjs'
 import generateVvInputVueFile from './generateVvInputVueFile.mjs'
 import generateVvListItemVueFile from './generateVvListItemVueFile.mjs'
-import generateVvListItemVueFile from './generateVvTextareaVueFile.mjs'
+import generateVvTextareaVueFile from './generateVvTextareaVueFile.mjs'
 import installNodeTypes from './installNodeTypes.mjs'
 import installTailwindCss from './installTailwindCss.mjs'
 import moveViteTsFilesToRoot from './moveViteTsFilesToRoot.mjs'
