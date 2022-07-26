@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "allowJs": true,
-    "types": ["node", "vite/client", "vite-plugin-pages/client"],
-    "paths": {
-      "@/": ["/src"]
-    }
-  }
-}

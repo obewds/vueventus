@@ -239,15 +239,9 @@ async function installDepsAndFiles () {
         )
 
         // merge the stub and vite tsconfig files data & write the new merged package data to the current package file
-        // writeJson(
-        //     cwd + '/tsconfig.json',
-        //     mergeJson(cwd + '/tsconfig.json', stackStubs + 'vv.tsconfig.json')
-        // )
-        const currentTsconfig = require(cwd + '/tsconfig.json')
-        const vvTsconfig = getVvTsConfig()
         writeJson(
             cwd + '/tsconfig.json',
-            merge(currentTsconfig, vvTsconfig)
+            merge(require(cwd + '/tsconfig.json'), getVvTsConfig())
         )
 
         // 
