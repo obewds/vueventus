@@ -11,6 +11,13 @@ import generateIndexHtmlFile from './generateIndexHtmlFile.mjs'
 import generatePostcssConfigCjsFile from './generatePostcssConfigCjsFile.mjs'
 import generateTailwindConfigCjsFile from './generateTailwindConfigCjsFile.mjs'
 import generateTailwindCssFile from './generateTailwindCssFile.mjs'
+import generateVvAnchorVueFile from './generateVvAnchorVueFile.mjs'
+import generateVvButtonVueFile from './generateVvButtonVueFile.mjs'
+import generateVvColorModeButtonVueFile from './generateVvColorModeButtonVueFile.mjs'
+import generateVvElVueFile from './generateVvElVueFile.mjs'
+import generateVvInputVueFile from './generateVvInputVueFile.mjs'
+import generateVvListItemVueFile from './generateVvListItemVueFile.mjs'
+import generateVvListItemVueFile from './generateVvTextareaVueFile.mjs'
 import installNodeTypes from './installNodeTypes.mjs'
 import installTailwindCss from './installTailwindCss.mjs'
 import moveViteTsFilesToRoot from './moveViteTsFilesToRoot.mjs'
@@ -38,9 +45,46 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     fs.copySync(stackStubPath + 'App.vue', cwd + '/src/App.vue')
     fs.copySync(stackStubPath + 'HelloWorld.vue', cwd + '/src/components/HelloWorld.vue')
 
+
+
+
+
+
+
     
     // copy the VueVentus starter end user app component files from the cli stubs files
-    fs.copySync(stackStubPath + 'vv', cwd + '/src/components/vv')
+    // fs.copySync(stackStubPath + 'vv', cwd + '/src/components/vv')
+
+    checkOrMakeDirSync(cwd + '/src/components')
+    checkOrMakeDirSync(cwd + '/src/components/vv')
+    checkOrMakeDirSync(cwd + '/src/components/vv/anchors')
+    checkOrMakeDirSync(cwd + '/src/components/vv/buttons')
+    checkOrMakeDirSync(cwd + '/src/components/vv/elements')
+    checkOrMakeDirSync(cwd + '/src/components/vv/inputs')
+    checkOrMakeDirSync(cwd + '/src/components/vv/lists')
+    checkOrMakeDirSync(cwd + '/src/components/vv/textareas')
+    
+    fs.writeFileSync(cwd + '/src/components/vv/anchors/VvAnchor.vue', generateVvAnchorVueFile(), { flag: 'w+' })
+    fs.writeFileSync(cwd + '/src/components/vv/buttons/VvButton.vue', generateVvButtonVueFile(), { flag: 'w+' })
+    fs.writeFileSync(cwd + '/src/components/vv/buttons/VvColorModeButton.vue', generateVvColorModeButtonVueFile(), { flag: 'w+' })
+    fs.writeFileSync(cwd + '/src/components/vv/elements/VvEl.vue', generateVvElVueFile(), { flag: 'w+' })
+    fs.writeFileSync(cwd + '/src/components/vv/inputs/VvInputs.vue', generateVvInputVueFile(), { flag: 'w+' })
+    fs.writeFileSync(cwd + '/src/components/vv/lists/VvListItem.vue', generateVvListItemVueFile(), { flag: 'w+' })
+    fs.writeFileSync(cwd + '/src/components/vv/textareas/VvTextarea.vue', generateVvTextareaVueFile(), { flag: 'w+' })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
     
     // conditionally add either the vv cli version with dark/light mode code or the vite generated index.html file
