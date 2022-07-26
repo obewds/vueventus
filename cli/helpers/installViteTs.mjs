@@ -1,6 +1,8 @@
 // ./cli/helpers/installViteTs.mjs
 
 import fs from 'fs-extra'
+
+import checkOrMakeDirSync from './checkOrMakeDirSync.mjs'
 import copySyncSvgsToAssets from './copySyncSvgsToAssets.mjs'
 import cwd from './cwd.mjs'
 import generateAppColorsJsonFile from './generateAppColorsJsonFile.mjs'
