@@ -1,6 +1,6 @@
 // ./cli/helpers/generateVvElVueFile.mjs
 
-// TODO: integrate this module into cli build
+
 // TODO: delete original stubs/vite-ssg and stubs/vue-ts VvScrollUp.vue files
 
 export default function () {

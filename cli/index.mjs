@@ -3,22 +3,22 @@
 import fs from 'fs-extra'
 import gradient from 'gradient-string'
 import inquirer from 'inquirer'
+import merge from 'deepmerge'
 import rimraf from 'rimraf'
 
 import cliData from './helpers/cliData.mjs'
+import cwd from './helpers/cwd.mjs'
 import getVvTsConfig from './helpers/getVvTsConfig.mjs'
-import gradientText from './helpers/gradientText.mjs'
 import gradientText from './helpers/gradientText.mjs'
 import installViteTs from './helpers/installViteTs.mjs'
 import mergeJson from './helpers/mergeJson.mjs'
-import merge from 'deepmerge'
 import optInstallDep from './helpers/optInstallDep.mjs'
 import optInstallFaFreeTs from './helpers/optInstallFaFreeTs.mjs'
 import optInstallFaProTs from './helpers/optInstallFaProTs.mjs'
 import optInstallGsapTs from './helpers/optInstallGsapTs.mjs'
 import optInstallPrismjs from './helpers/optInstallPrismjs.mjs'
 import optInstallVitest from './helpers/optInstallVitest.mjs'
-import require from './require.mjs'
+import require from './helpers/require.mjs'
 import run from './helpers/run.mjs'
 import stubsPath from './helpers/stubsPath.mjs'
 import vvBrand from './helpers/vvBrand.mjs'
@@ -239,15 +239,9 @@ async function installDepsAndFiles () {
         )
 
         // merge the stub and vite tsconfig files data & write the new merged package data to the current package file
-        // writeJson(
-        //     cwd + '/tsconfig.json',
-        //     mergeJson(cwd + '/tsconfig.json', stackStubs + 'vv.tsconfig.json')
-        // )
-        const currentTsconfig = require(cwd + '/tsconfig.json')
-        const vvTsconfig = getVvTsConfig()
         writeJson(
             cwd + '/tsconfig.json',
-            merge(currentTsconfig, vvTsconfig)
+            merge(require(cwd + '/tsconfig.json'), getVvTsConfig())
         )
 
         // 
