@@ -6,18 +6,19 @@ import inquirer from 'inquirer'
 import merge from 'deepmerge'
 import rimraf from 'rimraf'
 
+import addDep from './installers/addDep.mjs'
+import addViteTs from './installers/addViteTs.mjs'
+import addFaFreeTs from './installers/addFaFreeTs.mjs'
+import addFaProTs from './installers/addFaProTs.mjs'
+import addGsapTs from './installers/addGsapTs.mjs'
+import addPrismjs from './installers/addPrismjs.mjs'
+import addVitest from './installers/addVitest.mjs'
+
 import cliData from './helpers/cliData.mjs'
 import cwd from './helpers/cwd.mjs'
 import getVvTsConfig from './helpers/getVvTsConfig.mjs'
 import gradientText from './helpers/gradientText.mjs'
-import installViteTs from './helpers/installViteTs.mjs'
 import mergeJson from './helpers/mergeJson.mjs'
-import optInstallDep from './helpers/optInstallDep.mjs'
-import optInstallFaFreeTs from './helpers/optInstallFaFreeTs.mjs'
-import optInstallFaProTs from './helpers/optInstallFaProTs.mjs'
-import optInstallGsapTs from './helpers/optInstallGsapTs.mjs'
-import optInstallPrismjs from './helpers/optInstallPrismjs.mjs'
-import optInstallVitest from './helpers/optInstallVitest.mjs'
 import require from './helpers/require.mjs'
 import run from './helpers/run.mjs'
 import stubsPath from './helpers/stubsPath.mjs'
@@ -230,7 +231,7 @@ async function installDepsAndFiles () {
         // START install vite-ts
         //
 
-        installViteTs(userOptions, stack, stackStubs, installedPkgs)
+        addViteTs(userOptions, stack, stackStubs, installedPkgs)
 
         // merge the current and vite packages data & write the new merged package data to the current package file
         writeJson(
@@ -333,7 +334,7 @@ async function installDepsAndFiles () {
                     fs.writeFileSync(cwd + '/.gitignore', `\n.npmrc\n`, { flag: 'a+' })
                         
                     // now install the pro font awesome dep
-                    installedPkgs = [...installedPkgs, ...optInstallFaProTs(userOptions, stackStubs, stack.deps.faPro)]
+                    installedPkgs = [...installedPkgs, ...addFaProTs(userOptions, stackStubs, stack.deps.faPro)]
 
                 }
 
@@ -341,26 +342,26 @@ async function installDepsAndFiles () {
             } else {
 
                 // else install the free font awesome dep
-                installedPkgs = [...installedPkgs, ...optInstallFaFreeTs(userOptions, stackStubs, stack.deps.fontawesome)]
+                installedPkgs = [...installedPkgs, ...addFaFreeTs(userOptions, stackStubs, stack.deps.fontawesome)]
 
             }
 
         }
 
         // if the user chose the optional GSAP dep
-        installedPkgs = [...installedPkgs, ...optInstallGsapTs(userOptions, stackStubs, stack.deps.gsap)]
+        installedPkgs = [...installedPkgs, ...addGsapTs(userOptions, stackStubs, stack.deps.gsap)]
 
         // if the user chose the optional Headless UI dep
-        installedPkgs = [...installedPkgs, ...optInstallDep(userOptions, stack.deps.headless)]
+        installedPkgs = [...installedPkgs, ...addDep(userOptions, stack.deps.headless)]
 
         // if the user chose the optional Heroicons dep
-        installedPkgs = [...installedPkgs, ...optInstallDep(userOptions, stack.deps.heroicons)]
+        installedPkgs = [...installedPkgs, ...addDep(userOptions, stack.deps.heroicons)]
 
         // if the user chose the optional Prism.js dep
-        installedPkgs = [...installedPkgs, ...optInstallPrismjs(userOptions, stackStubs, stack.deps.prism)]
+        installedPkgs = [...installedPkgs, ...addPrismjs(userOptions, stackStubs, stack.deps.prism)]
 
         // if the user chose the optional Vitest dep
-        installedPkgs = [...installedPkgs, ...optInstallVitest(userOptions, stack.deps.vitest)]
+        installedPkgs = [...installedPkgs, ...addVitest(userOptions, stack.deps.vitest)]
 
         //
         // END Install vite optional deps
