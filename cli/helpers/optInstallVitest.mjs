@@ -61,6 +61,7 @@ export default function (userOptionsObject, stackStubsString, vitestDepObject) {
             //     fs.mkdirSync( cwd + '/tests/components' )
             // }
 
+            checkOrMakeDirSync(cwd + '/tests')
             checkOrMakeDirSync(cwd + '/tests/components')
 
             fs.writeFileSync(cwd + vitestDepObject.files.helloVueVentusTestJs.path + vitestDepObject.files.helloVueVentusTestJs.name, generateHelloVueVentusTestJsFile(), { flag: 'w+' })
