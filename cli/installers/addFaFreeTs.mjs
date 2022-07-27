@@ -2,23 +2,23 @@
 
 import fs from 'fs-extra'
 
+import fontAwesomeTsFile from '../generators/fontAwesomeTsFile.mjs'
 import vvFaVueFile from '../generators/vvFaVueFile.mjs'
 
 import cwd from '../helpers/cwd.mjs'
 import run from '../helpers/run.mjs'
 import vvBrand from '../helpers/vvBrand.mjs'
 
-// TODO: need to figure out how to best eliminate use of stackStubsString here
-export default function (userOptionsObject, stackStubsString, faFreeDepObject) {
+export default function (userOptionsObject, faFreeDepObject) {
 
     run(faFreeDepObject.install)
 
-    fs.copySync(
-        stackStubsString + faFreeDepObject.files.fontAwesomeTs.name,
-        cwd + faFreeDepObject.files.fontAwesomeTs.path + faFreeDepObject.files.fontAwesomeTs.name
-    )
+    // add FontAwesome Free base file if the user also selected it
+    if ( userOptionsObject.files.includes( faFreeDepObject.files.fontAwesomeTs.name ) ) {
+        fs.outputFileSync(cwd + faFreeDepObject.files.fontAwesomeTs.path + faFreeDepObject.files.fontAwesomeTs.name, fontAwesomeTsFile(), { flag: 'w+' })
+    }
 
-    // add optional FontAwesome Free files if the user also selected them
+    // add FontAwesome Free component file if the user also selected it
     if ( userOptionsObject.files.includes( faFreeDepObject.files.vvFa.name ) ) {
         fs.outputFileSync(cwd + faFreeDepObject.files.vvFa.path + faFreeDepObject.files.vvFa.name, vvFaVueFile(), { flag: 'w+' })
     }
