@@ -53,15 +53,15 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
 
     
     // copy the VueVentus starter end user app component files from the cli stubs files
-    const composVv = cwd + '/src/components/vv'
+    const composVv = cwd + '/src/components/vv/'
     
-    fs.outputFileSync(composVv + '/anchors/VvAnchor.vue', vvAnchorVueFile(), { flag: 'w+' })
-    fs.outputFileSync(composVv + '/buttons/VvButton.vue', vvButtonVueFile(), { flag: 'w+' })
-    fs.outputFileSync(composVv + '/buttons/VvColorModeButton.vue', vvColorModeButtonVueFile(), { flag: 'w+' })
-    fs.outputFileSync(composVv + '/elements/VvEl.vue', vvElVueFile(), { flag: 'w+' })
-    fs.outputFileSync(composVv + '/inputs/VvInput.vue', vvInputVueFile(), { flag: 'w+' })
-    fs.outputFileSync(composVv + '/lists/VvListItem.vue', vvListItemVueFile(), { flag: 'w+' })
-    fs.outputFileSync(composVv + '/textareas/VvTextarea.vue', vvTextareaVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'anchors/VvAnchor.vue', vvAnchorVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'buttons/VvButton.vue', vvButtonVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'buttons/VvColorModeButton.vue', vvColorModeButtonVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'elements/VvEl.vue', vvElVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'inputs/VvInput.vue', vvInputVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'lists/VvListItem.vue', vvListItemVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'textareas/VvTextarea.vue', vvTextareaVueFile(), { flag: 'w+' })
         
     
     // conditionally add either the vv cli version with dark/light mode code or the vite generated index.html file

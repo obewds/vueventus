@@ -1,9 +1,16 @@
 // ./cli/helpers/cliData.mjs
 
+import aMdFile from '../generators/aMdFile.mjs'
+import bMdFile from '../generators/bMdFile.mjs'
+import bVueFile from '../generators/bVueFile.mjs'
 import appVvTsFile from '../generators/appVvTsFile.mjs'
 import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
+import counterVueFile from '../generators/counterVueFile.mjs'
 import helloVueVentusTestJsFile from '../generators/helloVueVentusTestJsFile.mjs'
 import helloVueVentusVueFile from '../generators/helloVueVentusVueFile.mjs'
+import indexMdFile from '../generators/indexMdFile.mjs'
+import mousePosVueFile from '../generators/mousePosVueFile.mjs'
+import piniaRootTsFile from '../generators/piniaRootTsFile.mjs'
 import postcssConfigCjsFile from '../generators/postcssConfigCjsFile.mjs'
 import prismThemeVarsCssFile from '../generators/prismThemeVarsCssFile.mjs'
 import tailwindCssFile from '../generators/tailwindCssFile.mjs'
@@ -19,6 +26,7 @@ import vvPrismVueFile from '../generators/vvPrismVueFile.mjs'
 import vvPrismVarsVueFile from '../generators/vvPrismVarsVueFile.mjs'
 import vvScrollUpVueFile from '../generators/vvScrollUpVueFile.mjs'
 import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
+
 
 let baseViteTypescriptFiles = {
     appVvTs: {
@@ -60,6 +68,65 @@ let baseViteTypescriptFiles = {
         isMethod: true,
         isFile: false,
         src: tailwindCssFile(),
+    },
+}
+
+let baseVvSsgOnlyTsFiles = {
+    aMd: {
+        name: 'a.md',
+        checked: true,
+        path: '/src/pages/',
+        isMethod: true,
+        isFile: false,
+        src: aMdFile(),
+    },
+    bMd: {
+        name: 'b.md',
+        checked: true,
+        path: '/src/pages/',
+        isMethod: true,
+        isFile: false,
+        src: bMdFile(),
+    },
+    bVue: {
+        name: 'b.vue',
+        checked: true,
+        path: '/src/pages/nested/deep/',
+        isMethod: true,
+        isFile: false,
+        src: bVueFile(),
+    },
+    counterVue: {
+        name: 'Counter.vue',
+        checked: true,
+        path: '/src/components/',
+        isMethod: true,
+        isFile: false,
+        src: counterVueFile(),
+    },
+    indexMd: {
+        name: 'index.md',
+        checked: true,
+        path: '/src/pages/',
+        isMethod: true,
+        isFile: false,
+        src: indexMdFile(),
+    },
+    mousePosVue: {
+        name: 'MousePos.vue',
+        checked: true,
+        path: '/src/components/',
+        isMethod: true,
+        isFile: false,
+        src: mousePosVueFile(),
+    },
+    piniaRootTs: {
+        name: 'root.ts',
+        checked: true,
+        path: '/src/store/',
+        isMethod: true,
+        isFile: false,
+        src: piniaRootTsFile(),
     },
 }
 
@@ -133,6 +200,7 @@ let baseViteTypescriptDeps = {
                 name: 'fontAwesome.ts',
                 checked: true,
                 path: '/src/',
+                // TODO: this will need to flip and change as the fontAwesomePro.ts file is changed to a generation method
                 isMethod: false,
                 isFile: true,
                 src: 'fontAwesome.ts',
@@ -157,6 +225,7 @@ let baseViteTypescriptDeps = {
                 name: 'fontAwesomePro.ts',
                 checked: true,
                 path: '/src/',
+                // TODO: this will need to flip and change as the fontAwesomePro.ts file is changed to a generation method
                 isMethod: false,
                 isFile: true,
                 src: 'fontAwesomePro.ts',
@@ -181,6 +250,7 @@ let baseViteTypescriptDeps = {
                 name: 'gsap.ts',
                 checked: true,
                 path: '/src/',
+                // TODO: this will need to flip and change as the gsap.ts file is changed to a generation method
                 isMethod: false,
                 isFile: true,
                 src: 'gsap.ts',
@@ -284,8 +354,8 @@ export default {
             compos: { ...baseVvTsCompos },
         },
         vueTwViteSsgMdTs: {
-            name: 'Vite-SSG, Vue 3, Tailwind CSS, Markdown & Typescript',
-            files: { ...baseViteTypescriptFiles },
+            name: 'Vite-SSG, Vue 3, Tailwind CSS, Pinia, Markdown & Typescript',
+            files: { ...baseViteTypescriptFiles, ...baseVvSsgOnlyTsFiles },
             deps: { ...baseViteTypescriptDeps },
             compos: { ...baseVvTsCompos },
         },
