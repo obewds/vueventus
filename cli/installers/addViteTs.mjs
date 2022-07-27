@@ -53,7 +53,7 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
 
     
     // copy the VueVentus starter end user app component files from the cli stubs files
-    const composVv = compos + '/src/components/vv'
+    const composVv = cwd + '/src/components/vv'
     
     fs.outputFileSync(composVv + '/anchors/VvAnchor.vue', vvAnchorVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + '/buttons/VvButton.vue', vvButtonVueFile(), { flag: 'w+' })
