@@ -1,5 +1,25 @@
 // ./cli/helpers/cliData.mjs
 
+import appVvTsFile from '../generators/appVvTsFile.mjs'
+import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
+import helloVueVentusTestJsFile from '../generators/helloVueVentusTestJsFile.mjs'
+import helloVueVentusVueFile from '../generators/helloVueVentusVueFile.mjs'
+import postcssConfigCjsFile from '../generators/postcssConfigCjsFile.mjs'
+import prismThemeVarsCssFile from '../generators/prismThemeVarsCssFile.mjs'
+import tailwindCssFile from '../generators/tailwindCssFile.mjs'
+import vitestConfigTsFile from '../generators/vitestConfigTsFile.mjs'
+import vvAnchorVueFile from '../generators/vvAnchorVueFile.mjs'
+import vvButtonVueFile from '../generators/vvButtonVueFile.mjs'
+import vvColorModeButtonVueFile from '../generators/vvColorModeButtonVueFile.mjs'
+import vvElVueFile from '../generators/vvElVueFile.mjs'
+import vvFaVueFile from '../generators/vvFaVueFile.mjs'
+import vvInputVueFile from '../generators/vvInputVueFile.mjs'
+import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
+import vvPrismVueFile from '../generators/vvPrismVueFile.mjs'
+import vvPrismVarsVueFile from '../generators/vvPrismVarsVueFile.mjs'
+import vvScrollUpVueFile from '../generators/vvScrollUpVueFile.mjs'
+import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
+
 let baseViteTypescriptFiles = {
     appVvTs: {
         name: 'app.vv.ts',
@@ -7,7 +27,7 @@ let baseViteTypescriptFiles = {
         path: '/src/',
         isMethod: true,
         isFile: false,
-        src: 'appVvTsFile',
+        src: appVvTsFile(),
     },
     appColorsJson: {
         name: 'app.colors.json',
@@ -15,7 +35,7 @@ let baseViteTypescriptFiles = {
         path: '/src/',
         isMethod: true,
         isFile: false,
-        src: 'appColorsJsonFile',
+        src: appColorsJsonFile(),
     },
     postCssConfigCjs: {
         name: 'postcss.config.cjs',
@@ -23,7 +43,7 @@ let baseViteTypescriptFiles = {
         path: '/',
         isMethod: true,
         isFile: false,
-        src: 'postcssConfigCjsFile',
+        src: postcssConfigCjsFile(),
     },
     tailwindConfigCjs: {
         name: 'tailwind.config.cjs',
@@ -39,7 +59,66 @@ let baseViteTypescriptFiles = {
         path: '/src/css/',
         isMethod: true,
         isFile: false,
-        src: 'tailwindCssFile',
+        src: tailwindCssFile(),
+    },
+}
+
+let baseVvTsCompos = {
+    vvAnchorVue: {
+        name: 'VvAnchor.vue',
+        checked: true,
+        path: '/src/components/vv/anchors/',
+        isMethod: true,
+        isFile: false,
+        src: vvAnchorVueFile(),
+    },
+    vvButtonVue: {
+        name: 'VvButton.vue',
+        checked: true,
+        path: '/src/components/vv/buttons/',
+        isMethod: true,
+        isFile: false,
+        src: vvButtonVueFile(),
+    },
+    vvColorModeButtonVue: {
+        name: 'VvColorModeButton.vue',
+        checked: true,
+        path: '/src/components/vv/buttons/',
+        isMethod: true,
+        isFile: false,
+        src: vvColorModeButtonVueFile(),
+    },
+    vvElVue: {
+        name: 'VvEl.vue',
+        checked: true,
+        path: '/src/components/vv/elements/',
+        isMethod: true,
+        isFile: false,
+        src: vvElVueFile(),
+    },
+    vvInputVue: {
+        name: 'VvInput.vue',
+        checked: true,
+        path: '/src/components/vv/inputs/',
+        isMethod: true,
+        isFile: false,
+        src: vvInputVueFile(),
+    },
+    vvListItemVue: {
+        name: 'VvListItem.vue',
+        checked: true,
+        path: '/src/components/vv/lists/',
+        isMethod: true,
+        isFile: false,
+        src: vvListItemVueFile(),
+    },
+    vvTextareaVue: {
+        name: 'VvListItem.vue',
+        checked: true,
+        path: '/src/components/vv/textareas/',
+        isMethod: true,
+        isFile: false,
+        src: vvTextareaVueFile(),
     },
 }
 
@@ -64,7 +143,7 @@ let baseViteTypescriptDeps = {
                 path: '/src/components/vv/elements/',
                 isMethod: true,
                 isFile: false,
-                src: 'vvFaVueFile',
+                src: vvFaVueFile(),
             },
         },
     },
@@ -88,7 +167,7 @@ let baseViteTypescriptDeps = {
                 path: '/src/components/vv/elements/',
                 isMethod: true,
                 isFile: false,
-                src: 'vvFaVueFile',
+                src: vvFaVueFile(),
             },
         },
     },
@@ -112,7 +191,7 @@ let baseViteTypescriptDeps = {
                 path: '/src/components/vv/buttons/',
                 isMethod: true,
                 isFile: false,
-                src: 'vvScrollUpVueFile',
+                src: vvScrollUpVueFile(),
             },
         },
     },
@@ -121,12 +200,14 @@ let baseViteTypescriptDeps = {
         name: 'Headless UI',
         install: 'npm install @headlessui/vue --save-dev',
         packages: ['@headlessui/vue'],
+        files: {},
     },
     heroicons: {
         checked: true,
         name: 'Heroicons',
         install: 'npm install @heroicons/vue --save-dev',
         packages: ['@heroicons/vue'],
+        files: {},
     },
     prism: {
         checked: true,
@@ -140,7 +221,7 @@ let baseViteTypescriptDeps = {
                 path: '/src/components/vv/elements/',
                 isMethod: true,
                 isFile: false,
-                src: 'vvPrismVueFile',
+                src: vvPrismVueFile(),
             },
             prismThemeVarsCss: {
                 name: 'prism-theme-vars.css',
@@ -148,7 +229,7 @@ let baseViteTypescriptDeps = {
                 path: '/src/css/',
                 isMethod: true,
                 isFile: false,
-                src: 'prismThemeVarsCssFile',
+                src: prismThemeVarsCssFile(),
             },
             VvPrismVars: {
                 name: 'VvPrismVars.vue',
@@ -156,7 +237,7 @@ let baseViteTypescriptDeps = {
                 path: '/src/components/vv/elements/',
                 isMethod: true,
                 isFile: false,
-                src: 'vvPrismVarsVueFile',
+                src: vvPrismVarsVueFile(),
             },
         },
     },
@@ -172,7 +253,7 @@ let baseViteTypescriptDeps = {
                 path: '/',
                 isMethod: true,
                 isFile: false,
-                src: 'vitestConfigTsFile',
+                src: vitestConfigTsFile(),
             },
             helloVueVentusTestJs: {
                 name: 'HelloVueVentus.test.js',
@@ -180,7 +261,7 @@ let baseViteTypescriptDeps = {
                 path: '/tests/components/',
                 isMethod: true,
                 isFile: false,
-                src: 'helloVueVentusTestJsFile',
+                src: helloVueVentusTestJsFile(),
             },
             helloVueVentusVue: {
                 name: 'HelloVueVentus.vue',
@@ -188,7 +269,7 @@ let baseViteTypescriptDeps = {
                 path: '/src/components/',
                 isMethod: true,
                 isFile: false,
-                src: 'helloVueVentusVueFile',
+                src: helloVueVentusVueFile(),
             },
         },
     },
@@ -200,11 +281,13 @@ export default {
             name: 'Vue 3, Tailwind CSS, Vite & Typescript',
             files: { ...baseViteTypescriptFiles },
             deps: { ...baseViteTypescriptDeps },
+            compos: { ...baseVvTsCompos },
         },
         vueTwViteSsgMdTs: {
             name: 'Vite-SSG, Vue 3, Tailwind CSS, Markdown & Typescript',
             files: { ...baseViteTypescriptFiles },
             deps: { ...baseViteTypescriptDeps },
+            compos: { ...baseVvTsCompos },
         },
         // vueTwVite: { name: 'Vue 3, Tailwind CSS & Vite', files: {}, deps: {} },
         // vueTwNuxtViteTs: { name: 'Vue 3, Tailwind CSS, Nuxt 3 & Typescript', files: {}, deps: {} },
