@@ -27,13 +27,14 @@ const output = `<!-- ./src/App.vue -->
 
     <div class="text-center px-6 pt-20">
     
-        <div class="max-w-2xl grid grid-cols-5 items-center gap-8 px-8 pb-10 mx-auto">
+        <div class="max-w-2xl grid grid-cols-6 items-center gap-6 px-6 pb-10 mx-auto">
 
             <img alt="Vue logo" src="./assets/logo-vue.svg"/>
             <img alt="Tailwind CSS logo" src="./assets/logo-tailwindcss.svg"/>
+            <img alt="Pinia logo" src="./assets/logo-pinia.svg"/>
             <div>
                 <!-- div wrapper is needed so Safari contains the flex size of an svg/img child correctly -->
-                <VueVentusSpinningMark animation-class="animate-spin-reverse-4s"/>
+                <VueVentusSpinningMark :enable-animation="false"/>
             </div>
             <img alt="Vite.js logo" src="./assets/logo-vite.svg"/>
             <img alt="Typescript logo" src="./assets/logo-typescript.svg"/>
