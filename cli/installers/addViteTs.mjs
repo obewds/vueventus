@@ -69,7 +69,7 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
         fs.outputFileSync(cwd + '/src/App.vue', appVueFile(), { flag: 'w+' })
 
         // generate the HelloWorld.vue file
-        fs.outputFileSync(cwd + '/src/HelloWorld.vue', helloWorldVueFile(), { flag: 'w+' })
+        fs.outputFileSync(cwd + '/src/components/HelloWorld.vue', helloWorldVueFile(), { flag: 'w+' })
 
     }
     
@@ -81,7 +81,7 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
         fs.outputFileSync(cwd + '/src/App.vue', appVueSsgFile(), { flag: 'w+' })
 
         // generate the SSG HelloWorld.vue file
-        fs.outputFileSync(cwd + '/src/HelloWorld.vue', helloWorldVueSsgFile(), { flag: 'w+' })
+        fs.outputFileSync(cwd + '/src/components/HelloWorld.vue', helloWorldVueSsgFile(), { flag: 'w+' })
 
     }
 
