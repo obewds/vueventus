@@ -20,11 +20,7 @@ export default function (userOptionsObject, stackStubsString, faFreeDepObject) {
 
     // add optional FontAwesome Free files if the user also selected them
     if ( userOptionsObject.files.includes( faFreeDepObject.files.vvFa.name ) ) {
-        // fs.copySync(
-        //     stackStubsString + faFreeDepObject.files.vvFa.name,
-        //     cwd + faFreeDepObject.files.vvFa.path + faFreeDepObject.files.vvFa.name
-        // )
-        fs.writeFileSync(cwd + faFreeDepObject.files.vvFa.path + faFreeDepObject.files.vvFa.name, vvFaVueFile(), { flag: 'w+' })
+        fs.outputFileSync(cwd + faFreeDepObject.files.vvFa.path + faFreeDepObject.files.vvFa.name, vvFaVueFile(), { flag: 'w+' })
     }
 
     console.log(`\nThe ${vvBrand} CLI installed/added the ${faFreeDepObject.name} dep/files successfully!\n`)

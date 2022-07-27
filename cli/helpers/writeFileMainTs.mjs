@@ -36,6 +36,6 @@ export default function (userOptionsObject, stackDepFaObj, stackDepFaProObj, sta
         settings.prismThemeVarsCss = true
     }
 
-    fs.writeFileSync(cwd + '/src/main.ts', mainTsFile(settings), { flag: 'w+' })
+    fs.outputFileSync(cwd + '/src/main.ts', mainTsFile(settings), { flag: 'w+' })
 
 }

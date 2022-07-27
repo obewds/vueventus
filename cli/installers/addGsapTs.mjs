@@ -20,12 +20,7 @@ export default function (userOptionsObject, stackStubsString, gsapDepObject) {
         // add optional GSAP files if the user also selected them
         if ( userOptionsObject.files.includes( gsapDepObject.files.vvScrollUp.name ) ) {
 
-            // fs.copySync(
-            //     stackStubsString + gsapDepObject.files.vvScrollUp.name,
-            //     cwd + gsapDepObject.files.vvScrollUp.path + gsapDepObject.files.vvScrollUp.name
-            // )
-
-            fs.writeFileSync(cwd + gsapDepObject.files.vvScrollUp.path + gsapDepObject.files.vvScrollUp.name, vvScrollUpVueFile(), { flag: 'w+' })
+            fs.outputFileSync(cwd + gsapDepObject.files.vvScrollUp.path + gsapDepObject.files.vvScrollUp.name, vvScrollUpVueFile(), { flag: 'w+' })
             
         }
 
