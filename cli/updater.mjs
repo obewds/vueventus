@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 // ./cli/updater.mjs
 
+import fs from 'fs-extra'
 import inquirer from 'inquirer'
-import vvBrand from './helpers/vvBrand.mjs'
 
 import cliData from './helpers/cliData.mjs'
 import cwd from './helpers/cwd.mjs'
 import gradientText from './helpers/gradientText.mjs'
+import vvBrand from './helpers/vvBrand.mjs'
 
 
 let userOptions = {
@@ -244,14 +245,16 @@ console.log(' ')
 if (userOptions.confirmation === true) {
 
     if (userOptions.installFile.isFile) {
+
         console.log(`\n${gradientText('[ Install the file via a file system copy ]')}\n`)
+        
     }
 
     if (userOptions.installFile.isMethod) {
 
-        console.log(`\n${gradientText('[ Install the file via a method() ]')}\n`)
+        fs.outputFileSync(cwd + userOptions.installFile.path + userOptions.installFile.name, userOptions.installFile.src, { flag: 'w+' })
 
-        // fs.outputFileSync(cwd + userOptions.installFile.path + userOptions.installFile.name, userOptions.installFile.src, { flag: 'w+' })
+        console.log(`\n${gradientText(userOptions.installFile.path + userOptions.installFile.name) + ' was installed successfully!'}\n`)
 
     }
 

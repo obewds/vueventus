@@ -19,7 +19,6 @@ import vvInputVueFile from '../generators/vvInputVueFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
 import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
 
-import checkOrMakeDirSync from '../helpers/checkOrMakeDirSync.mjs'
 import copySyncSvgsToAssets from '../helpers/copySyncSvgsToAssets.mjs'
 import cwd from '../helpers/cwd.mjs'
 import moveViteTsFilesToRoot from '../helpers/moveViteTsFilesToRoot.mjs'
@@ -54,17 +53,7 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
 
     
     // copy the VueVentus starter end user app component files from the cli stubs files
-    const composVv = compos + '/src/components/vv'
-    // const compos = cwd + '/src/components'
-    // const composVv = compos + '/vv'
-    // checkOrMakeDirSync(compos)
-    // checkOrMakeDirSync(composVv)
-    // checkOrMakeDirSync(composVv + '/anchors')
-    // checkOrMakeDirSync(composVv + '/buttons')
-    // checkOrMakeDirSync(composVv + '/elements')
-    // checkOrMakeDirSync(composVv + '/inputs')
-    // checkOrMakeDirSync(composVv + '/lists')
-    // checkOrMakeDirSync(composVv + '/textareas')
+    const composVv = cwd + '/src/components/vv'
     
     fs.outputFileSync(composVv + '/anchors/VvAnchor.vue', vvAnchorVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + '/buttons/VvButton.vue', vvButtonVueFile(), { flag: 'w+' })
@@ -112,8 +101,6 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
 
     // install tailwind.css file
     if ( userOpts.files.includes( stackObj.files.tailwindCss.name ) ) {
-
-        // checkOrMakeDirSync(cwd + '/src/css')
 
         fs.outputFileSync(cwd + stackObj.files.tailwindCss.path + stackObj.files.tailwindCss.name, tailwindCssFile(), { flag: 'w+' })
 
