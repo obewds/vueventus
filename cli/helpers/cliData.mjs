@@ -6,6 +6,9 @@ import bVueFile from '../generators/bVueFile.mjs'
 import appVvTsFile from '../generators/appVvTsFile.mjs'
 import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
 import counterVueFile from '../generators/counterVueFile.mjs'
+import fontAwesomeProTsFile from '../generators/fontAwesomeProTsFile.mjs'
+import fontAwesomeTsFile from '../generators/fontAwesomeTsFile.mjs'
+import gsapTsFile from '../generators/gsapTsFile.mjs'
 import helloVueVentusTestJsFile from '../generators/helloVueVentusTestJsFile.mjs'
 import helloVueVentusVueFile from '../generators/helloVueVentusVueFile.mjs'
 import indexMdFile from '../generators/indexMdFile.mjs'
@@ -200,10 +203,9 @@ let baseViteTypescriptDeps = {
                 name: 'fontAwesome.ts',
                 checked: true,
                 path: '/src/',
-                // TODO: this will need to flip and change as the fontAwesomePro.ts file is changed to a generation method
-                isMethod: false,
-                isFile: true,
-                src: 'fontAwesome.ts',
+                isMethod: true,
+                isFile: false,
+                src: fontAwesomeTsFile(),
             },
             vvFa: {
                 name: 'VvFa.vue',
@@ -225,10 +227,9 @@ let baseViteTypescriptDeps = {
                 name: 'fontAwesomePro.ts',
                 checked: true,
                 path: '/src/',
-                // TODO: this will need to flip and change as the fontAwesomePro.ts file is changed to a generation method
-                isMethod: false,
-                isFile: true,
-                src: 'fontAwesomePro.ts',
+                isMethod: true,
+                isFile: false,
+                src: fontAwesomeProTsFile(),
             },
             vvFa: {
                 name: 'VvFa.vue',
@@ -250,10 +251,9 @@ let baseViteTypescriptDeps = {
                 name: 'gsap.ts',
                 checked: true,
                 path: '/src/',
-                // TODO: this will need to flip and change as the gsap.ts file is changed to a generation method
-                isMethod: false,
-                isFile: true,
-                src: 'gsap.ts',
+                isMethod: true,
+                isFile: false,
+                src: gsapTsFile(),
             },
             vvScrollUp: {
                 name: 'VvScrollUp.vue',

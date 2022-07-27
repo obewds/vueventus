@@ -62,7 +62,7 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     fs.outputFileSync(composVv + 'inputs/VvInput.vue', vvInputVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'lists/VvListItem.vue', vvListItemVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'textareas/VvTextarea.vue', vvTextareaVueFile(), { flag: 'w+' })
-        
+    
     
     // conditionally add either the vv cli version with dark/light mode code or the vite generated index.html file
     if ( userOpts.files.includes( stackObj.deps.gsap.files.vvScrollUp.name ) ) {

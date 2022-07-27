@@ -2,20 +2,25 @@
 
 import fs from 'fs-extra'
 
+import gsapTsFile from '../generators/gsapTsFile.mjs'
 import vvScrollUpVueFile from '../generators/vvScrollUpVueFile.mjs'
 
 import cwd from '../helpers/cwd.mjs'
 import run from '../helpers/run.mjs'
 import vvBrand from '../helpers/vvBrand.mjs'
 
-// TODO: need to figure out how to best eliminate use of stackStubsString here
-export default function (userOptionsObject, stackStubsString, gsapDepObject) {
+export default function (userOptionsObject, gsapDepObject) {
 
     if ( userOptionsObject.deps.includes( gsapDepObject.name ) ) {
 
         run(gsapDepObject.install)
 
-        fs.copySync(stackStubsString + 'gsap.ts', cwd + '/src/gsap.ts')
+        // add  GSAP base file if the user selected it
+        if ( userOptionsObject.files.includes( gsapDepObject.files.gsapTs.name ) ) {
+
+            fs.outputFileSync(cwd + gsapDepObject.files.gsapTs.path + gsapDepObject.files.gsapTs.name, gsapTsFile(), { flag: 'w+' })
+            
+        }
 
         // add optional GSAP files if the user also selected them
         if ( userOptionsObject.files.includes( gsapDepObject.files.vvScrollUp.name ) ) {

@@ -10,7 +10,7 @@ import cwd from '../helpers/cwd.mjs'
 import run from '../helpers/run.mjs'
 import vvBrand from '../helpers/vvBrand.mjs'
 
-export default function (userOpts, stackStubsString, prismDepObject) {
+export default function (userOpts, prismDepObject) {
 
     if ( userOpts.deps.includes( prismDepObject.name ) ) {
 

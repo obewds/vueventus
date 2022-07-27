@@ -15,13 +15,13 @@ import addGsapTs from './installers/addGsapTs.mjs'
 import addPrismjs from './installers/addPrismjs.mjs'
 import addVitest from './installers/addVitest.mjs'
 
-import aMdFile from '../generators/aMdFile.mjs'
-import bMdFile from '../generators/bMdFile.mjs'
-import bVueFile from '../generators/bVueFile.mjs'
-import counterVueFile from '../generators/counterVueFile.mjs'
-import indexMdFile from '../generators/indexMdFile.mjs'
-import mousePosVueFile from '../generators/mousePosVueFile.mjs'
-import piniaRootTsFile from '../generators/piniaRootTsFile.mjs'
+import aMdFile from './generators/aMdFile.mjs'
+import bMdFile from './generators/bMdFile.mjs'
+import bVueFile from './generators/bVueFile.mjs'
+import counterVueFile from './generators/counterVueFile.mjs'
+import indexMdFile from './generators/indexMdFile.mjs'
+import mousePosVueFile from './generators/mousePosVueFile.mjs'
+import piniaRootTsFile from './generators/piniaRootTsFile.mjs'
 
 import cliData from './helpers/cliData.mjs'
 import cwd from './helpers/cwd.mjs'
@@ -285,7 +285,7 @@ async function installDepsAndFiles () {
             fs.outputFileSync(cwd + '/src/pages/index.md', indexMdFile(), { flag: 'w+' })
             fs.outputFileSync(cwd + '/src/pages/a.md', aMdFile(), { flag: 'w+' })
             fs.outputFileSync(cwd + '/src/pages/b.vue', bVueFile(), { flag: 'w+' })
-            fs.outputFileSync(cwd + '/src/pages/nested/deep/b.vue', bMdFile(), { flag: 'w+' })
+            fs.outputFileSync(cwd + '/src/pages/nested/deep/b.md', bMdFile(), { flag: 'w+' })
 
             run(`npm install --save-dev pinia @nuxt/devalue`)
 
@@ -300,13 +300,14 @@ async function installDepsAndFiles () {
             // generate the Counter.vue file
             fs.outputFileSync(cwd + '/src/components/Counter.vue', counterVueFile(), { flag: 'w+' })
 
-            if ( userOptions.deps.includes( stack.deps.gsap.name ) ) {
-                fs.outputFileSync(cwd + '/src/vite-env.d.ts', `\ndeclare module 'gsap/ScrollToPlugin.js';\ndeclare module 'gsap/ScrollTrigger.js';\n`, { flag: 'a+' })
-            }
-
         }
 
         // 
+
+        // if gsap is enabled then add gsap type declarations to the vite-env.d.ts file
+        if ( userOptions.deps.includes( stack.deps.gsap.name ) ) {
+            fs.outputFileSync(cwd + '/src/vite-env.d.ts', `\ndeclare module 'gsap/ScrollToPlugin.js';\ndeclare module 'gsap/ScrollTrigger.js';\n`, { flag: 'a+' })
+        }
 
         // delete the vite generated folder
         rimraf.sync(cwd + '/' + userOptions.name)
@@ -351,8 +352,7 @@ async function installDepsAndFiles () {
                     fs.outputFileSync(cwd + '/.gitignore', `\n.npmrc\n`, { flag: 'a+' })
                         
                     // now install the pro font awesome dep
-                    // TODO: need to figure out how to best eliminate use of stackStubs in addFaProTs()
-                    installedPkgs = [...installedPkgs, ...addFaProTs(userOptions, stackStubs, stack.deps.faPro)]
+                    installedPkgs = [...installedPkgs, ...addFaProTs(userOptions, stack.deps.faPro)]
 
                 }
 
@@ -360,16 +360,14 @@ async function installDepsAndFiles () {
             } else {
 
                 // else install the free font awesome dep
-                // TODO: need to figure out how to best eliminate use of stackStubs in addFaFreeTs()
-                installedPkgs = [...installedPkgs, ...addFaFreeTs(userOptions, stackStubs, stack.deps.fontawesome)]
+                installedPkgs = [...installedPkgs, ...addFaFreeTs(userOptions, stack.deps.fontawesome)]
 
             }
 
         }
 
         // if the user chose the optional GSAP dep
-        // TODO: need to figure out how to best eliminate use of stackStubs in addGsapTs()
-        installedPkgs = [...installedPkgs, ...addGsapTs(userOptions, stackStubs, stack.deps.gsap)]
+        installedPkgs = [...installedPkgs, ...addGsapTs(userOptions, stack.deps.gsap)]
 
         // if the user chose the optional Headless UI dep
         installedPkgs = [...installedPkgs, ...addDep(userOptions, stack.deps.headless)]
@@ -378,8 +376,7 @@ async function installDepsAndFiles () {
         installedPkgs = [...installedPkgs, ...addDep(userOptions, stack.deps.heroicons)]
 
         // if the user chose the optional Prism.js dep
-        // TODO: need to figure out how to best eliminate use of stackStubs in addGsapTs()
-        installedPkgs = [...installedPkgs, ...addPrismjs(userOptions, stackStubs, stack.deps.prism)]
+        installedPkgs = [...installedPkgs, ...addPrismjs(userOptions, stack.deps.prism)]
 
         // if the user chose the optional Vitest dep
         installedPkgs = [...installedPkgs, ...addVitest(userOptions, stack.deps.vitest)]

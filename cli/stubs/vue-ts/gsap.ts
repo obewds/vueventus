@@ -1,5 +1,6 @@
 // ./src/gsap.ts
 // https://greensock.com/docs/v3/Installation?checked=core#modules
+// TODO: Delete this file once generation method version is confirmed to work
 
 import { gsap } from 'gsap'
 
