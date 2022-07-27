@@ -8,9 +8,9 @@ export default function (isSSR = false) {
     types.push("vite-plugin-pages/client")
   }
 
-  const output = {
-  "compilerOptions": {
-    "allowJs": true,
+  return {
+    "compilerOptions": {
+      "allowJs": true,
       "types": types,
       "paths": {
         "@/": ["/src"]
@@ -18,7 +18,4 @@ export default function (isSSR = false) {
     }
   }
 
-  return output
-
 }
-    
