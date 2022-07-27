@@ -200,23 +200,13 @@ installerFilesKeys.forEach( (file) => {
 // console.log('Destination: ' + userOptions.installFile.path + userOptions.installFile.name)
 // console.log(' ')
 
-let confirmMsg = ''
-
-if (userOptions.installFile.isMethod) {
-    confirmMsg += `Are you sure you want to write a new file: ${gradientText('.' + userOptions.installFile.path + userOptions.installFile.name)}?\n`
-}
-
-if (userOptions.installFile.isFile) {
-    confirmMsg += `Are you sure you want to copy a new file: ${gradientText('.' + userOptions.installFile.path + userOptions.installFile.name)}?\n`
-}
-
 
 async function confirmFileToInstall () {
     
     const answers = await inquirer.prompt({
         name: 'confirmFile',
         type: 'confirm',
-        message: confirmMsg,
+        message: `Are you sure you want to write a new file: ${gradientText('.' + userOptions.installFile.path + userOptions.installFile.name)}?\n`,
         default: false,
     })
 
@@ -244,19 +234,9 @@ console.log(' ')
 
 if (userOptions.confirmation === true) {
 
-    if (userOptions.installFile.isFile) {
+    fs.outputFileSync(cwd + userOptions.installFile.path + userOptions.installFile.name, userOptions.installFile.src, { flag: 'w+' })
 
-        console.log(`\n${gradientText('[ Install the file via a file system copy ]')}\n`)
-        
-    }
-
-    if (userOptions.installFile.isMethod) {
-
-        fs.outputFileSync(cwd + userOptions.installFile.path + userOptions.installFile.name, userOptions.installFile.src, { flag: 'w+' })
-
-        console.log(`\n${gradientText(userOptions.installFile.path + userOptions.installFile.name) + ' was installed successfully!'}\n`)
-
-    }
+    console.log(`\n${gradientText(userOptions.installFile.path + userOptions.installFile.name) + ' was installed successfully!'}\n`)
 
 }
 

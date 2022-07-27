@@ -25,12 +25,12 @@ import piniaRootTsFile from './generators/piniaRootTsFile.mjs'
 
 import cliData from './helpers/cliData.mjs'
 import cwd from './helpers/cwd.mjs'
-import getVvTsConfig from './helpers/getVvTsConfig.mjs'
+import getTsconfigJsonObj from './helpers/getTsconfigJsonObj.mjs'
+import getTsconfigJsonSsgObj from './helpers/getTsconfigJsonSsgObj.mjs'
 import gradientText from './helpers/gradientText.mjs'
 import mergeJson from './helpers/mergeJson.mjs'
 import require from './helpers/require.mjs'
 import run from './helpers/run.mjs'
-import stubsPath from './helpers/stubsPath.mjs'
 import vvBrand from './helpers/vvBrand.mjs'
 import writeFileMainTs from './helpers/writeFileMainTs.mjs'
 import writeFileMainTsSsg from './helpers/writeFileMainTsSsg.mjs'
@@ -218,7 +218,6 @@ console.log(' ')
 async function installDepsAndFiles () {
 
     let stack = {}
-    let stackStubs = stubsPath
     let installedPkgs = []
 
 
@@ -226,12 +225,10 @@ async function installDepsAndFiles () {
     if (userOptions.stack === cli.stacks.vueTwViteTs.name) {
 
         stack = cli.stacks.vueTwViteTs
-        stackStubs += 'vue-ts/'
     
     } else if (userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name) {
 
         stack = cli.stacks.vueTwViteSsgMdTs
-        stackStubs += 'vite-ssg/'
     
     }
 
@@ -242,8 +239,7 @@ async function installDepsAndFiles () {
         // START install vite-ts
         //
 
-        // TODO: need to figure out how to best eliminate use of stackStubs in addViteTs()
-        addViteTs(userOptions, stack, stackStubs, installedPkgs)
+        addViteTs(userOptions, stack, installedPkgs)
 
         // merge the current and vite packages data & write the new merged package data to the current package file
         writeJson(
@@ -251,13 +247,18 @@ async function installDepsAndFiles () {
             mergeJson(cwd + '/' + userOptions.name + '/package.json', cwd + '/package.json')
         )
 
-        // merge the stub and vite tsconfig files data & write the new merged package data to the current package file
+        // get the current tsconfig.json data
         const currentTsConfig = require(cwd + '/tsconfig.json')
-        const libTsConfig = getVvTsConfig()
-        writeJson(
-            cwd + '/tsconfig.json',
-            merge(currentTsConfig, libTsConfig)
-        )
+
+        // handle the vue-ts tsconfig.json file
+        if (userOptions.stack === cli.stacks.vueTwViteTs.name ) {
+            fs.outputFileSync(cwd + '/tsconfig.json', JSON.stringify(merge(currentTsConfig, getTsconfigJsonObj()), null, 2), { flag: 'w+' })
+        }
+        
+        // handle the vite-ssg tsconfig.json file
+        if (userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name ) {
+            fs.outputFileSync(cwd + '/tsconfig.json', JSON.stringify(merge(currentTsConfig, getTsconfigJsonSsgObj()), null, 2), { flag: 'w+' })
+        }
 
         // 
 

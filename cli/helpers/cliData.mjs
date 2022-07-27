@@ -1,24 +1,38 @@
 // ./cli/helpers/cliData.mjs
 
+import aMdFile from '../generators/aMdFile.mjs'
+import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
 import appVueFile from '../generators/appVueFile.mjs'
 import appVueSsgFile from '../generators/appVueSsgFile.mjs'
-import aMdFile from '../generators/aMdFile.mjs'
+import appVvTsFile from '../generators/appVvTsFile.mjs'
 import bMdFile from '../generators/bMdFile.mjs'
 import bVueFile from '../generators/bVueFile.mjs'
-import appVvTsFile from '../generators/appVvTsFile.mjs'
-import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
 import counterVueFile from '../generators/counterVueFile.mjs'
 import fontAwesomeProTsFile from '../generators/fontAwesomeProTsFile.mjs'
 import fontAwesomeTsFile from '../generators/fontAwesomeTsFile.mjs'
 import gsapTsFile from '../generators/gsapTsFile.mjs'
 import helloVueVentusTestJsFile from '../generators/helloVueVentusTestJsFile.mjs'
 import helloVueVentusVueFile from '../generators/helloVueVentusVueFile.mjs'
+import helloWorldVueFile from '../generators/helloWorldVueFile.mjs'
+import helloWorldVueSsgFile from '../generators/helloWorldVueSsgFile.mjs'
+import indexHtmlFile from '../generators/indexHtmlFile.mjs'
 import indexMdFile from '../generators/indexMdFile.mjs'
+// TODO: Figure out how to handle main.ts files with the vv-updater utility
+import mainTsFile from '../generators/mainTsFile.mjs'
+import mainTsFileSsg from '../generators/mainTsFileSsg.mjs'
 import mousePosVueFile from '../generators/mousePosVueFile.mjs'
 import piniaRootTsFile from '../generators/piniaRootTsFile.mjs'
 import postcssConfigCjsFile from '../generators/postcssConfigCjsFile.mjs'
 import prismThemeVarsCssFile from '../generators/prismThemeVarsCssFile.mjs'
+import tailwindConfigCjsFile from '../generators/tailwindConfigCjsFile.mjs'
 import tailwindCssFile from '../generators/tailwindCssFile.mjs'
+import tsconfigJsonFile from '../generators/tsconfigJsonFile.mjs'
+import tsconfigJsonSsgFile from '../generators/tsconfigJsonSsgFile.mjs'
+// TODO: Figure out how to handle vite.config.ts files with the vv-updater utility
+import viteConfigPrismTsFile from '../generators/viteConfigPrismTsFile.mjs'
+import viteConfigTsFile from '../generators/viteConfigTsFile.mjs'
+import viteConfigPrismTsSsgFile from '../generators/viteConfigPrismTsSsgFile.mjs'
+import viteConfigTsSsgFile from '../generators/viteConfigTsSsgFile.mjs'
 import vitestConfigTsFile from '../generators/vitestConfigTsFile.mjs'
 import vvAnchorVueFile from '../generators/vvAnchorVueFile.mjs'
 import vvButtonVueFile from '../generators/vvButtonVueFile.mjs'
@@ -27,8 +41,8 @@ import vvElVueFile from '../generators/vvElVueFile.mjs'
 import vvFaVueFile from '../generators/vvFaVueFile.mjs'
 import vvInputVueFile from '../generators/vvInputVueFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
-import vvPrismVueFile from '../generators/vvPrismVueFile.mjs'
 import vvPrismVarsVueFile from '../generators/vvPrismVarsVueFile.mjs'
+import vvPrismVueFile from '../generators/vvPrismVueFile.mjs'
 import vvScrollUpVueFile from '../generators/vvScrollUpVueFile.mjs'
 import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
 
@@ -38,40 +52,30 @@ let baseViteTypescriptFiles = {
         name: 'app.vv.ts',
         checked: true,
         path: '/src/',
-        isMethod: true,
-        isFile: false,
         src: appVvTsFile(),
     },
     appColorsJson: {
         name: 'app.colors.json',
         checked: true,
         path: '/src/',
-        isMethod: true,
-        isFile: false,
         src: appColorsJsonFile(),
+    },
+    indexHtml: {
+        name: 'index.html',
+        checked: true,
+        path: '/',
+        src: indexHtmlFile(),
     },
     postCssConfigCjs: {
         name: 'postcss.config.cjs',
         checked: true,
         path: '/',
-        isMethod: true,
-        isFile: false,
         src: postcssConfigCjsFile(),
-    },
-    tailwindConfigCjs: {
-        name: 'tailwind.config.cjs',
-        checked: true,
-        path: '/',
-        isMethod: true,
-        isFile: false,
-        src: 'tailwindConfigCjsFile',
     },
     tailwindCss: {
         name: 'tailwind.css',
         checked: true,
         path: '/src/css/',
-        isMethod: true,
-        isFile: false,
         src: tailwindCssFile(),
     },
 }
@@ -81,9 +85,25 @@ let baseVueTsOnlyFiles = {
         name: 'App.vue',
         checked: true,
         path: '/src/',
-        isMethod: true,
-        isFile: false,
         src: appVueFile(),
+    },
+    helloWorldVue: {
+        name: 'HelloWorld.vue',
+        checked: true,
+        path: '/src/components/',
+        src: helloWorldVueFile(),
+    },
+    tailwindConfigCjs: {
+        name: 'tailwind.config.cjs',
+        checked: true,
+        path: '/',
+        src: tailwindConfigCjsFile(false),
+    },
+    tsconfigJson: {
+        name: 'tsconfig.json',
+        checked: true,
+        path: '/',
+        src: tsconfigJsonFile(false),
     },
 }
 
@@ -92,65 +112,67 @@ let baseVvSsgOnlyTsFiles = {
         name: 'App.vue',
         checked: true,
         path: '/src/',
-        isMethod: true,
-        isFile: false,
         src: appVueSsgFile(),
     },
     aMd: {
         name: 'a.md',
         checked: true,
         path: '/src/pages/',
-        isMethod: true,
-        isFile: false,
         src: aMdFile(),
     },
     bMd: {
         name: 'b.md',
         checked: true,
         path: '/src/pages/',
-        isMethod: true,
-        isFile: false,
         src: bMdFile(),
     },
     bVue: {
         name: 'b.vue',
         checked: true,
         path: '/src/pages/nested/deep/',
-        isMethod: true,
-        isFile: false,
         src: bVueFile(),
     },
     counterVue: {
         name: 'Counter.vue',
         checked: true,
         path: '/src/components/',
-        isMethod: true,
-        isFile: false,
         src: counterVueFile(),
+    },
+    helloWorldVueSsg: {
+        name: 'HelloWorld.vue',
+        checked: true,
+        path: '/src/components/',
+        src: helloWorldVueSsgFile(),
     },
     indexMd: {
         name: 'index.md',
         checked: true,
         path: '/src/pages/',
-        isMethod: true,
-        isFile: false,
         src: indexMdFile(),
     },
     mousePosVue: {
         name: 'MousePos.vue',
         checked: true,
         path: '/src/components/',
-        isMethod: true,
-        isFile: false,
         src: mousePosVueFile(),
     },
     piniaRootTs: {
         name: 'root.ts',
         checked: true,
         path: '/src/store/',
-        isMethod: true,
-        isFile: false,
         src: piniaRootTsFile(),
+    },
+    tailwindConfigCjs: {
+        name: 'tailwind.config.cjs',
+        checked: true,
+        path: '/',
+        src: tailwindConfigCjsFile(true),
+    },
+    tsconfigJson: {
+        name: 'tsconfig.json',
+        checked: true,
+        path: '/',
+        src: tsconfigJsonSsgFile(false),
     },
 }
 
@@ -159,56 +181,42 @@ let baseVvTsCompos = {
         name: 'VvAnchor.vue',
         checked: true,
         path: '/src/components/vv/anchors/',
-        isMethod: true,
-        isFile: false,
         src: vvAnchorVueFile(),
     },
     vvButtonVue: {
         name: 'VvButton.vue',
         checked: true,
         path: '/src/components/vv/buttons/',
-        isMethod: true,
-        isFile: false,
         src: vvButtonVueFile(),
     },
     vvColorModeButtonVue: {
         name: 'VvColorModeButton.vue',
         checked: true,
         path: '/src/components/vv/buttons/',
-        isMethod: true,
-        isFile: false,
         src: vvColorModeButtonVueFile(),
     },
     vvElVue: {
         name: 'VvEl.vue',
         checked: true,
         path: '/src/components/vv/elements/',
-        isMethod: true,
-        isFile: false,
         src: vvElVueFile(),
     },
     vvInputVue: {
         name: 'VvInput.vue',
         checked: true,
         path: '/src/components/vv/inputs/',
-        isMethod: true,
-        isFile: false,
         src: vvInputVueFile(),
     },
     vvListItemVue: {
         name: 'VvListItem.vue',
         checked: true,
         path: '/src/components/vv/lists/',
-        isMethod: true,
-        isFile: false,
         src: vvListItemVueFile(),
     },
     vvTextareaVue: {
         name: 'VvListItem.vue',
         checked: true,
         path: '/src/components/vv/textareas/',
-        isMethod: true,
-        isFile: false,
         src: vvTextareaVueFile(),
     },
 }
@@ -224,16 +232,12 @@ let baseViteTypescriptDeps = {
                 name: 'fontAwesome.ts',
                 checked: true,
                 path: '/src/',
-                isMethod: true,
-                isFile: false,
                 src: fontAwesomeTsFile(),
             },
             vvFa: {
                 name: 'VvFa.vue',
                 checked: true,
                 path: '/src/components/vv/elements/',
-                isMethod: true,
-                isFile: false,
                 src: vvFaVueFile(),
             },
         },
@@ -248,16 +252,12 @@ let baseViteTypescriptDeps = {
                 name: 'fontAwesomePro.ts',
                 checked: true,
                 path: '/src/',
-                isMethod: true,
-                isFile: false,
                 src: fontAwesomeProTsFile(),
             },
             vvFa: {
                 name: 'VvFa.vue',
                 checked: true,
                 path: '/src/components/vv/elements/',
-                isMethod: true,
-                isFile: false,
                 src: vvFaVueFile(),
             },
         },
@@ -272,16 +272,12 @@ let baseViteTypescriptDeps = {
                 name: 'gsap.ts',
                 checked: true,
                 path: '/src/',
-                isMethod: true,
-                isFile: false,
                 src: gsapTsFile(),
             },
             vvScrollUp: {
                 name: 'VvScrollUp.vue',
                 checked: true,
                 path: '/src/components/vv/buttons/',
-                isMethod: true,
-                isFile: false,
                 src: vvScrollUpVueFile(),
             },
         },
@@ -310,24 +306,18 @@ let baseViteTypescriptDeps = {
                 name: 'VvPrism.vue',
                 checked: true,
                 path: '/src/components/vv/elements/',
-                isMethod: true,
-                isFile: false,
                 src: vvPrismVueFile(),
             },
             prismThemeVarsCss: {
                 name: 'prism-theme-vars.css',
                 checked: true,
                 path: '/src/css/',
-                isMethod: true,
-                isFile: false,
                 src: prismThemeVarsCssFile(),
             },
             VvPrismVars: {
                 name: 'VvPrismVars.vue',
                 checked: true,
                 path: '/src/components/vv/elements/',
-                isMethod: true,
-                isFile: false,
                 src: vvPrismVarsVueFile(),
             },
         },
@@ -342,24 +332,18 @@ let baseViteTypescriptDeps = {
                 name: 'vitest.config.ts',
                 checked: true,
                 path: '/',
-                isMethod: true,
-                isFile: false,
                 src: vitestConfigTsFile(),
             },
             helloVueVentusTestJs: {
                 name: 'HelloVueVentus.test.js',
                 checked: true,
                 path: '/tests/components/',
-                isMethod: true,
-                isFile: false,
                 src: helloVueVentusTestJsFile(),
             },
             helloVueVentusVue: {
                 name: 'HelloVueVentus.vue',
                 checked: true,
                 path: '/src/components/',
-                isMethod: true,
-                isFile: false,
                 src: helloVueVentusVueFile(),
             },
         },

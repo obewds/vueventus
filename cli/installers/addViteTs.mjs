@@ -34,8 +34,8 @@ import moveViteTsFilesToRoot from '../helpers/moveViteTsFilesToRoot.mjs'
 import run from '../helpers/run.mjs'
 import vvBrand from '../helpers/vvBrand.mjs'
 
-// TODO: need to figure out how to best eliminate use of stackStubsString here
-export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
+
+export default function (userOpts, stackObj, installPkgsArr) {
     
     
     run(`npm create vite@latest ${userOpts.name} -- --template vue-ts`)
@@ -50,16 +50,6 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     
     // copy the VueVentus starter SVG files into project
     copySyncSvgsToAssets()
-
-    
-    // copy the VueVentus starter files from the cli stubs files
-    // TODO: create generate method for the vue-ts stack App.vue file
-    // TODO: create generate method for the vite-ssg stack App.vue file
-    // fs.copySync(stackStubPath + 'App.vue', cwd + '/src/App.vue')
-
-    // TODO: create generate method for the vue-ts stack HelloWorld.vue file
-    // TODO: create generate method for the vite-ssg stack HelloWorld.vue file
-    // fs.copySync(stackStubPath + 'HelloWorld.vue', cwd + '/src/components/HelloWorld.vue')
     
 
     // if the stack is vue-ts
@@ -112,10 +102,6 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     // conditionally add either the vite config file with prismjs config/plugin code or without it
     if ( userOpts.deps.includes( stackObj.deps.prism.name ) ) {
 
-        // TODO: create generate method for the vue-ts stack vite.config.prism.ts file
-        // TODO: create generate method for the vite-ssg stack vite.config.prism.ts file
-        // fs.copySync(stackStubPath + 'vite.config.prism.ts', cwd + '/vite.config.ts')
-
         // if the stack is vue-ts
         if ( userOpts.stack === cliData.stacks.vueTwViteTs.name ) {
             fs.outputFileSync(cwd + '/vite.config.ts', viteConfigPrismTsFile(), { flag: 'w+' })
@@ -127,10 +113,6 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
         }
 
     } else {
-
-        // TODO: create generate method for the vue-ts stack vite.config.ts file
-        // TODO: create generate method for the vite-ssg stack vite.config.ts file
-        // fs.copySync(stackStubPath + 'vite.config.ts', cwd + '/vite.config.ts')
 
         // if the stack is vue-ts
         if ( userOpts.stack === cliData.stacks.vueTwViteTs.name ) {
