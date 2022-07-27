@@ -1,4 +1,5 @@
 // ./src/fontAwesomePro.ts
+// TODO: Delete this file once generation method version is confirmed to work
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 
