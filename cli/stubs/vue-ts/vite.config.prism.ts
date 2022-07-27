@@ -1,5 +1,7 @@
 // ./vite.config.ts
 
+// TODO: delete this file if its generator method works as expected
+
 // import the resolve method
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'

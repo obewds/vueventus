@@ -1,5 +1,7 @@
 // ./cli/helpers/cliData.mjs
 
+import appVueFile from '../generators/appVueFile.mjs'
+import appVueSsgFile from '../generators/appVueSsgFile.mjs'
 import aMdFile from '../generators/aMdFile.mjs'
 import bMdFile from '../generators/bMdFile.mjs'
 import bVueFile from '../generators/bVueFile.mjs'
@@ -74,7 +76,26 @@ let baseViteTypescriptFiles = {
     },
 }
 
+let baseVueTsOnlyFiles = {
+    appVue: {
+        name: 'App.vue',
+        checked: true,
+        path: '/src/',
+        isMethod: true,
+        isFile: false,
+        src: appVueFile(),
+    },
+}
+
 let baseVvSsgOnlyTsFiles = {
+    appVue: {
+        name: 'App.vue',
+        checked: true,
+        path: '/src/',
+        isMethod: true,
+        isFile: false,
+        src: appVueSsgFile(),
+    },
     aMd: {
         name: 'a.md',
         checked: true,
@@ -349,7 +370,7 @@ export default {
     stacks: {
         vueTwViteTs: {
             name: 'Vue 3, Tailwind CSS, Vite & Typescript',
-            files: { ...baseViteTypescriptFiles },
+            files: { ...baseViteTypescriptFiles, ...baseVueTsOnlyFiles },
             deps: { ...baseViteTypescriptDeps },
             compos: { ...baseVvTsCompos },
         },

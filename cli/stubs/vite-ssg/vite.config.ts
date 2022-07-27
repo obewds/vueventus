@@ -1,5 +1,7 @@
 // ./vite.config.ts
 
+// TODO: delete this file if its generator method works as expected
+
 import type { UserConfig } from 'vite'
 import Markdown from 'vite-plugin-vue-markdown'
 import Pages from 'vite-plugin-pages'

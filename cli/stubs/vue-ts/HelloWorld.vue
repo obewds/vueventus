@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+    // TODO: delete this file if its generator method works as expected
+
     import { ref } from 'vue'
     import appVv from '../app.vv'
     import VvAnchor from './vv/anchors/VvAnchor.vue'
