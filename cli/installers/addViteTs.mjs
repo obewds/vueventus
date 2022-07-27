@@ -6,11 +6,18 @@ import addNodeTypes from './addNodeTypes.mjs'
 import addTailwindCss from './addTailwindCss.mjs'
 
 import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
+import appVueFile from '../generators/appVueFile.mjs'
+import appVueSsgFile from '../generators/appVueSsgFile.mjs'
 import appVvTsFile from '../generators/appVvTsFile.mjs'
+import helloWorldVueFile from '../generators/helloWorldVueFile.mjs'
 import indexHtmlFile from '../generators/indexHtmlFile.mjs'
 import postcssConfigCjsFile from '../generators/postcssConfigCjsFile.mjs'
 import tailwindConfigCjsFile from '../generators/tailwindConfigCjsFile.mjs'
 import tailwindCssFile from '../generators/tailwindCssFile.mjs'
+import viteConfigPrismTsFile from '../generators/viteConfigPrismTsFile.mjs'
+import viteConfigPrismTsSsgFile from '../generators/viteConfigPrismTsSsgFile.mjs'
+import viteConfigTsFile from '../generators/viteConfigTsFile.mjs'
+import viteConfigTsSsgFile from '../generators/viteConfigTsSsgFile.mjs'
 import vvAnchorVueFile from '../generators/vvAnchorVueFile.mjs'
 import vvButtonVueFile from '../generators/vvButtonVueFile.mjs'
 import vvColorModeButtonVueFile from '../generators/vvColorModeButtonVueFile.mjs'
@@ -19,6 +26,7 @@ import vvInputVueFile from '../generators/vvInputVueFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
 import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
 
+import cliData from '../helpers/cliData.mjs'
 import copySyncSvgsToAssets from '../helpers/copySyncSvgsToAssets.mjs'
 import cwd from '../helpers/cwd.mjs'
 import moveViteTsFilesToRoot from '../helpers/moveViteTsFilesToRoot.mjs'
@@ -46,15 +54,39 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
     // copy the VueVentus starter files from the cli stubs files
     // TODO: create generate method for the vue-ts stack App.vue file
     // TODO: create generate method for the vite-ssg stack App.vue file
-    fs.copySync(stackStubPath + 'App.vue', cwd + '/src/App.vue')
+    // fs.copySync(stackStubPath + 'App.vue', cwd + '/src/App.vue')
+
     // TODO: create generate method for the vue-ts stack HelloWorld.vue file
     // TODO: create generate method for the vite-ssg stack HelloWorld.vue file
-    fs.copySync(stackStubPath + 'HelloWorld.vue', cwd + '/src/components/HelloWorld.vue')
+    // fs.copySync(stackStubPath + 'HelloWorld.vue', cwd + '/src/components/HelloWorld.vue')
+    
+
+    // if the stack is vue-ts
+    if ( userOpts.stack === cliData.stacks.vueTwViteTs.name ) {
+            
+        // generate the App.vue file
+        fs.outputFileSync(cwd + '/src/App.vue', appVueFile(), { flag: 'w+' })
+
+        // generate the HelloWorld.vue file
+        fs.outputFileSync(cwd + '/src/HelloWorld.vue', helloWorldVueFile(), { flag: 'w+' })
+
+    }
+    
+    
+    // if the stack is vite-ssg
+    if ( userOpts.stack === cliData.stacks.vueTwViteSsgMdTs.name ) {
+
+        // generate the SSG App.vue file
+        fs.outputFileSync(cwd + '/src/App.vue', appVueSsgFile(), { flag: 'w+' })
+
+        // generate the SSG HelloWorld.vue file
+        fs.outputFileSync(cwd + '/src/HelloWorld.vue', helloWorldVueSsgFile(), { flag: 'w+' })
+
+    }
 
     
     // copy the VueVentus starter end user app component files from the cli stubs files
     const composVv = cwd + '/src/components/vv/'
-    
     fs.outputFileSync(composVv + 'anchors/VvAnchor.vue', vvAnchorVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'buttons/VvButton.vue', vvButtonVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'buttons/VvColorModeButton.vue', vvColorModeButtonVueFile(), { flag: 'w+' })
@@ -81,13 +113,33 @@ export default function (userOpts, stackObj, stackStubPath, installPkgsArr) {
 
         // TODO: create generate method for the vue-ts stack vite.config.prism.ts file
         // TODO: create generate method for the vite-ssg stack vite.config.prism.ts file
-        fs.copySync(stackStubPath + 'vite.config.prism.ts', cwd + '/vite.config.ts')
+        // fs.copySync(stackStubPath + 'vite.config.prism.ts', cwd + '/vite.config.ts')
+
+        // if the stack is vue-ts
+        if ( userOpts.stack === cliData.stacks.vueTwViteTs.name ) {
+            fs.outputFileSync(cwd + '/vite.config.ts', viteConfigPrismTsFile(), { flag: 'w+' })
+        }
+
+        // if the stack is vite-ssg
+        if ( userOpts.stack === cliData.stacks.vueTwViteSsgMdTs.name ) {
+            fs.outputFileSync(cwd + '/vite.config.ts', viteConfigPrismTsSsgFile(), { flag: 'w+' })
+        }
 
     } else {
 
         // TODO: create generate method for the vue-ts stack vite.config.ts file
         // TODO: create generate method for the vite-ssg stack vite.config.ts file
-        fs.copySync(stackStubPath + 'vite.config.ts', cwd + '/vite.config.ts')
+        // fs.copySync(stackStubPath + 'vite.config.ts', cwd + '/vite.config.ts')
+
+        // if the stack is vue-ts
+        if ( userOpts.stack === cliData.stacks.vueTwViteTs.name ) {
+            fs.outputFileSync(cwd + '/vite.config.ts', viteConfigTsFile(), { flag: 'w+' })
+        }
+
+        // if the stack is vite-ssg
+        if ( userOpts.stack === cliData.stacks.vueTwViteSsgMdTs.name ) {
+            fs.outputFileSync(cwd + '/vite.config.ts', viteConfigTsSsgFile(), { flag: 'w+' })
+        }
         
     }
 
