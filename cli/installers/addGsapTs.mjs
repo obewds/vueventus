@@ -8,6 +8,7 @@ import cwd from '../helpers/cwd.mjs'
 import run from '../helpers/run.mjs'
 import vvBrand from '../helpers/vvBrand.mjs'
 
+// TODO: need to figure out how to best eliminate use of stackStubsString here
 export default function (userOptionsObject, stackStubsString, gsapDepObject) {
 
     if ( userOptionsObject.deps.includes( gsapDepObject.name ) ) {

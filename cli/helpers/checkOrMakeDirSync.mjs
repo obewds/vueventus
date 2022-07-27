@@ -1,4 +1,5 @@
 // ./cli/helpers/checkOrMakeDirSync.mjs
+// TODO: Delete this method if it is no longer being used by cli scripts
 
 import fs from 'fs-extra'
 
