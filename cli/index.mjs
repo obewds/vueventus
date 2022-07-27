@@ -15,13 +15,13 @@ import addGsapTs from './installers/addGsapTs.mjs'
 import addPrismjs from './installers/addPrismjs.mjs'
 import addVitest from './installers/addVitest.mjs'
 
-import aMdFile from '../generators/aMdFile.mjs'
-import bMdFile from '../generators/bMdFile.mjs'
-import bVueFile from '../generators/bVueFile.mjs'
-import counterVueFile from '../generators/counterVueFile.mjs'
-import indexMdFile from '../generators/indexMdFile.mjs'
-import mousePosVueFile from '../generators/mousePosVueFile.mjs'
-import piniaRootTsFile from '../generators/piniaRootTsFile.mjs'
+import aMdFile from './generators/aMdFile.mjs'
+import bMdFile from './generators/bMdFile.mjs'
+import bVueFile from './generators/bVueFile.mjs'
+import counterVueFile from './generators/counterVueFile.mjs'
+import indexMdFile from './generators/indexMdFile.mjs'
+import mousePosVueFile from './generators/mousePosVueFile.mjs'
+import piniaRootTsFile from './generators/piniaRootTsFile.mjs'
 
 import cliData from './helpers/cliData.mjs'
 import cwd from './helpers/cwd.mjs'
@@ -285,7 +285,7 @@ async function installDepsAndFiles () {
             fs.outputFileSync(cwd + '/src/pages/index.md', indexMdFile(), { flag: 'w+' })
             fs.outputFileSync(cwd + '/src/pages/a.md', aMdFile(), { flag: 'w+' })
             fs.outputFileSync(cwd + '/src/pages/b.vue', bVueFile(), { flag: 'w+' })
-            fs.outputFileSync(cwd + '/src/pages/nested/deep/b.vue', bMdFile(), { flag: 'w+' })
+            fs.outputFileSync(cwd + '/src/pages/nested/deep/b.md', bMdFile(), { flag: 'w+' })
 
             run(`npm install --save-dev pinia @nuxt/devalue`)
 
