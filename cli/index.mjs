@@ -31,7 +31,6 @@ import gradientText from './helpers/gradientText.mjs'
 import mergeJson from './helpers/mergeJson.mjs'
 import require from './helpers/require.mjs'
 import run from './helpers/run.mjs'
-import stubsPath from './helpers/stubsPath.mjs'
 import vvBrand from './helpers/vvBrand.mjs'
 import writeFileMainTs from './helpers/writeFileMainTs.mjs'
 import writeFileMainTsSsg from './helpers/writeFileMainTsSsg.mjs'
@@ -219,7 +218,6 @@ console.log(' ')
 async function installDepsAndFiles () {
 
     let stack = {}
-    let stackStubs = stubsPath
     let installedPkgs = []
 
 
@@ -227,12 +225,10 @@ async function installDepsAndFiles () {
     if (userOptions.stack === cli.stacks.vueTwViteTs.name) {
 
         stack = cli.stacks.vueTwViteTs
-        stackStubs += 'vue-ts/'
     
     } else if (userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name) {
 
         stack = cli.stacks.vueTwViteSsgMdTs
-        stackStubs += 'vite-ssg/'
     
     }
 
