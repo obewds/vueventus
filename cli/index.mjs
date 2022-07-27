@@ -15,6 +15,14 @@ import addGsapTs from './installers/addGsapTs.mjs'
 import addPrismjs from './installers/addPrismjs.mjs'
 import addVitest from './installers/addVitest.mjs'
 
+import aMdFile from '../generators/aMdFile.mjs'
+import bMdFile from '../generators/bMdFile.mjs'
+import bVueFile from '../generators/bVueFile.mjs'
+import counterVueFile from '../generators/counterVueFile.mjs'
+import indexMdFile from '../generators/indexMdFile.mjs'
+import mousePosVueFile from '../generators/mousePosVueFile.mjs'
+import piniaRootTsFile from '../generators/piniaRootTsFile.mjs'
+
 import cliData from './helpers/cliData.mjs'
 import cwd from './helpers/cwd.mjs'
 import getVvTsConfig from './helpers/getVvTsConfig.mjs'
@@ -273,23 +281,24 @@ async function installDepsAndFiles () {
             // handle main.ts app file
             writeFileMainTsSsg(userOptions, stack.deps.fontawesome, stack.deps.faPro, stack.deps.gsap, stack.deps.prism)
 
-            // copy the Vite-SSG starter app page files from the cli stubs files
-            // TODO: create generate method for the vite-ssg stack pages/ file(s)
-            fs.copySync(stackStubs + 'pages', cwd + '/src/pages')
+            // generate the ssg .md/.vue pages files and directory structure
+            fs.outputFileSync(cwd + '/src/pages/index.md', indexMdFile(), { flag: 'w+' })
+            fs.outputFileSync(cwd + '/src/pages/a.md', aMdFile(), { flag: 'w+' })
+            fs.outputFileSync(cwd + '/src/pages/b.vue', bVueFile(), { flag: 'w+' })
+            fs.outputFileSync(cwd + '/src/pages/nested/deep/b.vue', bMdFile(), { flag: 'w+' })
 
             run(`npm install --save-dev pinia @nuxt/devalue`)
 
             installedPkgs = [...installedPkgs, ...['pinia', '@nuxt/devalue']]
 
-            // copy the Vite-SSG starter pinia store file from the cli stubs files
-            // TODO: create generate method for the vite-ssg stack store/ file(s)
-            fs.copySync(stackStubs + 'store', cwd + '/src/store')
+            // generate the pinia root store file
+            fs.outputFileSync(cwd + '/src/store/root.ts', piniaRootTsFile(), { flag: 'w+' })
 
-            // copy the Vite-SSG starter components from the cli stubs files
-            // TODO: create generate method for the vite-ssg stack MousePos.vue file
-            fs.copySync(stackStubs + 'MousePos.vue', cwd + '/src/components/MousePos.vue')
-            // TODO: create generate method for the vite-ssg stack Counter.vue file
-            fs.copySync(stackStubs + 'Counter.vue', cwd + '/src/components/Counter.vue')
+            // generate the MousePos.vue file
+            fs.outputFileSync(cwd + '/src/components/MousePos.vue', mousePosVueFile(), { flag: 'w+' })
+            
+            // generate the Counter.vue file
+            fs.outputFileSync(cwd + '/src/components/Counter.vue', counterVueFile(), { flag: 'w+' })
 
             if ( userOptions.deps.includes( stack.deps.gsap.name ) ) {
                 fs.outputFileSync(cwd + '/src/vite-env.d.ts', `\ndeclare module 'gsap/ScrollToPlugin.js';\ndeclare module 'gsap/ScrollTrigger.js';\n`, { flag: 'a+' })
