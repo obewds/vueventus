@@ -214,7 +214,7 @@ let baseVvTsCompos = {
         src: vvListItemVueFile(),
     },
     vvTextareaVue: {
-        name: 'vvTextarea.vue',
+        name: 'VvTextarea.vue',
         checked: true,
         path: '/src/components/vv/textareas/',
         src: vvTextareaVueFile(),
