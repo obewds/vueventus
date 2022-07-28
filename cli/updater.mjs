@@ -38,7 +38,7 @@ console.log(`
 
     ${gradientText('Welcome to the VueVentus vv-update CLI utility!')}
     ${gradientText('-----------------------------------------------')}
-    Use this utility to install/update individual VueVentus files.
+    A utility to install/update individual VueVentus files.
 
 
 `)
@@ -102,29 +102,11 @@ userStackFiles.forEach( (file) => {
     installerFileNames.push(userOptions.stack.files[file].name)
 })
 
-// console.log(`installerFilesData:`)
-// console.log(installerFilesData)
-// console.log(' ')
-// console.log(`installerFileNames:`)
-// console.log(installerFileNames)
-
 const userStackDeps = Object.keys(userOptions.stack.deps)
 
-// console.log('userStackDeps:')
-// console.log(userStackDeps)
-
-// console.log('userOptions:')
-// console.log(userOptions)
-
 userStackDeps.forEach( (dep) => {
-
-    // console.log('userOptions.stack.deps[dep]:')
-    // console.log(userOptions.stack.deps[dep])
     
     const depFiles = Object.keys(userOptions.stack.deps[dep].files)
-
-    // console.log('depFiles:')
-    // console.log(depFiles)
 
     depFiles.forEach( (file) => {
     
@@ -159,8 +141,8 @@ async function selectFileToInstall () {
     const answers = await inquirer.prompt({
         name: 'userStack',
         type: 'list',
-        message: 'Which ' + vvBrand + ' ' + userOptions.stackName + ' stack file would you like to install/update?\n',
-        choices: installerFileNames,
+        message: `Which ${gradientText(userOptions.stackName)} stack file would you like to install/update?\n`,
+        choices: installerFileNames.sort(),
     })
 
     return answers.userStack
@@ -181,8 +163,6 @@ console.log(' ')
 
 
 const installerFilesKeys = Object.keys(installerFilesData)
-// console.log(`installerFilesKeys:`)
-// console.log(installerFilesKeys)
 
 installerFilesKeys.forEach( (file) => {
     if ( installerFilesData[file].name === userOptions.installFileName ) {
@@ -190,23 +170,12 @@ installerFilesKeys.forEach( (file) => {
     }
 })
 
-// console.log(`userOptions.installFileName:`)
-// console.log(userOptions.installFileName)
-// console.log(`userOptions.installFile:`)
-// console.log(userOptions.installFile)
-
-// console.log('userOptions.installFile:')
-// console.log(userOptions.installFile)
-// console.log('Destination: ' + userOptions.installFile.path + userOptions.installFile.name)
-// console.log(' ')
-
-
 async function confirmFileToInstall () {
     
     const answers = await inquirer.prompt({
         name: 'confirmFile',
         type: 'confirm',
-        message: `Are you sure you want to write a new file: ${gradientText('.' + userOptions.installFile.path + userOptions.installFile.name)}?\n`,
+        message: `Are you sure you want to install a new ${gradientText('.' + userOptions.installFile.path + userOptions.installFile.name)} file?\n`,
         default: false,
     })
 
@@ -236,26 +205,10 @@ if (userOptions.confirmation === true) {
 
     fs.outputFileSync(cwd + userOptions.installFile.path + userOptions.installFile.name, userOptions.installFile.src, { flag: 'w+' })
 
-    console.log(`\n${gradientText(userOptions.installFile.path + userOptions.installFile.name) + ' was installed successfully!'}\n`)
+    console.log(`\n${gradientText('.' + userOptions.installFile.path + userOptions.installFile.name) + ' was installed successfully!'}\n`)
 
 }
 
 if (userOptions.confirmation === false) {
     console.log(`\n${gradientText('No files were installed/updated.')}\n`)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// TODO: Finish installer tool!
-
-// console.log(`The ${vvBrand} CLI vv-installer has completed!`)
-// console.log(' ')
