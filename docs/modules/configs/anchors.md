@@ -191,9 +191,6 @@ The `Anchors.base()` method returns a joined `String` of the atomic classes with
 
 ### Example
 
-```javascript
-const anchorsBase = Anchors.base()
-```
 ```html
 <!-- ./src/components/SomeComponent.vue -->
 
@@ -218,7 +215,6 @@ const anchorsBase = Anchors.base()
 
 
 
-<!-- TODO: change all Anchors.xxx examples to appVv.anchors.xxx syntax like in new ColorModes config docs page -->
 ## Anchors.classes()
 
 Returns: **`String`**  
@@ -236,15 +232,32 @@ However, the `Anchors.classes()` method also returns `Anchors.getSizeClasses()` 
 
 The applicable values for the `sizesKey` argument are set via the [Text Config Module Text.sizes](/modules/configs/text#text-sizes) property names/keys and atomic class values.
 
-### Examples
+### Example
 
-```javascript
-const anchorsClasses = Anchors.classes() // default is 'md'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+
+    const appLinkColor = appVv.anchors.palettes.default.success
+    
+</script>
+
+<template>
+
+    <a href="#" :class="[appVv.anchors.classes(), appLinkColor]">
+        Regular Success Anchor
+    </a>
+
+    <a href="#" :class="[appVv.anchors.classes('lg'), appLinkColor]">
+        Large Success Anchor
+    </a>
+
+</template>
 ```
 
-```javascript
-const anchorsClasses = Anchors.classes('lg')
-```
 
 
 
@@ -266,15 +279,33 @@ The `Anchors.getSizeClasses()` method returns text size related classes based on
 
 The applicable values for the `sizesKey` argument are set via the [Text Config Module Text.sizes](/modules/configs/text#text-sizes) property names/keys and atomic class values.
 
-### Examples
+### Example
 
-```javascript
-const anchorsSizeClasses = Anchors.getSizeClasses() // default is 'md'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+
+    const color = appVv.anchors.palettes.default.success
+    const transition = appVv.anchors.transition
+    
+</script>
+
+<template>
+
+    <a href="#" :class="[appVv.anchors.getSizeClasses(), color, transition]">
+        Regular Success Anchor
+    </a>
+
+    <a href="#" :class="[appVv.anchors.getSizeClasses('lg'), color, transition]">
+        Large Success Anchor
+    </a>
+
+</template>
 ```
 
-```javascript
-const anchorsSizeClasses = Anchors.getSizeClasses('sm')
-```
 
 
 
