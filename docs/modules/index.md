@@ -5,6 +5,7 @@ title: Component Modules
 <script setup>
     import DocsAnimatedLogoSection from '../../src/views/compos/DocsAnimatedLogoSection.vue'
     import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+    import SvgDiagramVueVentusFlow from '../../src/views/compos/SvgDiagramVueVentusFlow.vue'
 </script>
 
 
@@ -28,6 +29,15 @@ title: Component Modules
 * [Helper Modules](/modules/helpers/)
 
 
+
+
+
+
+
+
+!!!include(snippets/theVueVentusFlow.md)!!!
+
+<SvgDiagramVueVentusFlow class="w-full"/>
 
 
 

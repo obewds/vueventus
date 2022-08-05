@@ -4,6 +4,7 @@ title: Config Modules
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+    import SvgDiagramVueVentusFlow from '../../../src/views/compos/SvgDiagramVueVentusFlow.vue'
 </script>
 
 
@@ -34,6 +35,17 @@ title: Config Modules
 ::: info ABOUT CONFIG MODULES
 {{ $frontmatter.title }} are like the Tailwind CSS `@apply` directive, but are instead managed outside of the CSS scope. {{ $frontmatter.title }} rely on the Tailwind purge process, which allows JavaScript and JSON atomic classes data to be used throughout the JavaScript stack in a fully DRY way.
 :::
+
+
+
+
+
+
+
+
+!!!include(snippets/theVueVentusFlow.md)!!!
+
+<SvgDiagramVueVentusFlow class="w-full"/>
 
 
 

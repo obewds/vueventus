@@ -5,6 +5,7 @@ title: Vue Components
 <script setup>
     import DocsAnimatedLogoSection from '../../src/views/compos/DocsAnimatedLogoSection.vue'
     import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+    import SvgDiagramVueVentusFlow from '../../src/views/compos/SvgDiagramVueVentusFlow.vue'
 </script>
 
 
@@ -108,6 +109,17 @@ VueVentus brand `<svg>` element based {{ $frontmatter.title }}. These components
 HTML `<input>` element based {{ $frontmatter.title }}.
 
 * [VvTextarea](/components/textareas/vv-textarea)
+
+
+
+
+
+
+
+
+!!!include(snippets/theVueVentusFlow.md)!!!
+
+<SvgDiagramVueVentusFlow class="w-full"/>
 
 
 
