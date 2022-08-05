@@ -43,6 +43,7 @@ import Inputs from '@obewds/vueventus/dist/configs/Inputs.js'
 
 
 
+<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.border
 
 Type: **`String`**  
@@ -66,6 +67,7 @@ Inputs.border = ''
 
 
 
+<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.display
 
 Type: **`String`**  
@@ -87,6 +89,7 @@ Inputs.display = ''
 
 
 
+<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.outline
 
 Type: **`String`**  
@@ -108,6 +111,7 @@ Inputs.outline = ''
 
 
 
+<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.placeholder
 
 Type: **`String`**  
@@ -133,6 +137,7 @@ Inputs.placeholder = ''
 
 
 
+<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.ring
 
 Type: **`String`**  
@@ -158,6 +163,7 @@ Inputs.ring = ''
 
 
 
+<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.rounding
 
 Type: **`String`**  
@@ -183,6 +189,7 @@ Inputs.rounding = ''
 
 
 
+<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.shadow
 
 Type: **`String`**  
@@ -204,6 +211,7 @@ Inputs.shadow = ''
 
 
 
+<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.sizes
 
 Type: **`Object`**  
@@ -251,6 +259,7 @@ Inputs.sizes['2xl'] = ''
 
 
 
+<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.text
 
 Type: **`String`**  
@@ -272,6 +281,7 @@ Inputs.text = ''
 
 
 
+<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.transition
 
 Type: **`String`**  
@@ -294,6 +304,7 @@ Inputs.transition = ''
 
 
 
+<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.base()
 
 Returns: **`String`**  
@@ -313,6 +324,7 @@ const inputsBase = Inputs.base()
 
 
 
+<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.classes()
 
 Returns: **`String`**  
@@ -346,6 +358,7 @@ const inputsClasses = Inputs.classes('lg')
 
 
 
+<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.getSizeClasses()
 
 Returns: **`String`**  

@@ -43,6 +43,7 @@ import Textareas from '@obewds/vueventus/dist/configs/Textareas.js'
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.border
 
 Type: **`String`**  
@@ -66,6 +67,7 @@ Textareas.border = ''
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.display
 
 Type: **`String`**  
@@ -87,6 +89,7 @@ Textareas.display = ''
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.outline
 
 Type: **`String`**  
@@ -108,6 +111,7 @@ Textareas.outline = ''
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.placeholder
 
 Type: **`String`**  
@@ -133,6 +137,7 @@ Textareas.placeholder = ''
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.ring
 
 Type: **`String`**  
@@ -158,6 +163,7 @@ Textareas.ring = ''
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.rounding
 
 Type: **`String`**  
@@ -179,6 +185,7 @@ Textareas.rounding = ''
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.rowSizes
 
 Type: **`Object`**  
@@ -224,6 +231,7 @@ Textareas.sizes['2xl'] = 8
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.shadow
 
 Type: **`String`**  
@@ -245,6 +253,7 @@ Textareas.shadow = ''
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.sizes
 
 Type: **`Object`**  
@@ -292,6 +301,7 @@ Textareas.sizes['2xl'] = ''
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.text
 
 Type: **`String`**  
@@ -313,6 +323,7 @@ Textareas.text = ''
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.transition
 
 Type: **`String`**  
@@ -335,6 +346,7 @@ Textareas.transition = ''
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.base()
 
 Returns: **`String`**  
@@ -354,6 +366,7 @@ const inputsBase = Textareas.base()
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.classes()
 
 Returns: **`String`**  
@@ -387,6 +400,7 @@ const inputsClasses = Textareas.classes('lg')
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.getSizeClasses()
 
 Returns: **`String`**  
@@ -418,6 +432,7 @@ const inputsSizeClasses = Textareas.getSizeClasses('sm')
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.getRowSize()
 
 Returns: **`String`**  
