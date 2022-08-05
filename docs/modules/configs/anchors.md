@@ -21,19 +21,42 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 
 
+
+
+
+## app.vv Use
+
+You'll usually work with the {{ $frontmatter.title }} after it's already been merged into the VueVentus VvConfig data.
+
+Here's what that generally looks like in practice in a real world app context:
+
+```javascript
+// ./src/app.vv.ts
+
+import { VvConfig } from '@obewds/vueventus'
+import type { ConfigVv } from '@obewds/vueventus'
+
+let appVv: ConfigVv = VvConfig
+
+appVv.anchors.someProperty = 'some-value'
+```
+
+
+
+
+
+
+
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+However, if you need to import the compiled library version of the {{ $frontmatter.title }}, you can use:
 
 ```javascript
 import { Anchors } from '@obewds/vueventus'
 ```
 
-To import the {{ $frontmatter.title }} directly:
 
-```javascript
-import Anchors from '@obewds/vueventus/dist/configs/Anchors.js'
-```
 
 
 
@@ -52,7 +75,8 @@ The `Anchors.cursor` parameter is meant to isolate the CSS cursor focused charac
 ### Example
 
 ```javascript
-Anchors.cursor = ''
+// ./src/app.vv.ts
+appVv.anchors.cursor = '...'
 ```
 
 
@@ -72,7 +96,8 @@ The `Anchors.display` parameter is meant to isolate the CSS display/block level 
 ### Example
 
 ```javascript
-Anchors.display = ''
+// ./src/app.vv.ts
+appVv.anchors.display = '...'
 ```
 
 
@@ -92,7 +117,8 @@ The `Anchors.focus` parameter is meant to isolate the CSS focus orientated chara
 ### Example
 
 ```javascript
-Anchors.focus = ''
+// ./src/app.vv.ts
+appVv.anchors.focus = '...'
 ```
 
 
@@ -123,7 +149,8 @@ The `Anchors.text` parameter is meant to isolate the text specific atomic classe
 ### Example
 
 ```javascript
-Anchors.text = ''
+// ./src/app.vv.ts
+appVv.anchors.text = '...'
 ```
 
 
@@ -143,7 +170,8 @@ The `Anchors.transition` parameter is meant to isolate the transition/animation 
 ### Example
 
 ```javascript
-Anchors.transition = ''
+// ./src/app.vv.ts
+appVv.anchors.transition = '...'
 ```
 
 
@@ -166,12 +194,31 @@ The `Anchors.base()` method returns a joined `String` of the atomic classes with
 ```javascript
 const anchorsBase = Anchors.base()
 ```
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <a href="#" :class="[appVv.anchors.base(), String(appVv.anchors.palettes.default.success)]">
+        Base anchor + default success color classes
+    </a>
+
+</template>
+```
 
 
 
 
 
 
+
+<!-- TODO: change all Anchors.xxx examples to appVv.anchors.xxx syntax like in new ColorModes config docs page -->
 ## Anchors.classes()
 
 Returns: **`String`**  
