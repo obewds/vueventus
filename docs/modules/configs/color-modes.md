@@ -288,4 +288,16 @@ The `ColorModes.base()` method returns a joined `String` of the atomic classes w
 
 
 
+
+
+
+## Module Code
+
+<<< @/../src/configs/ColorModes.ts
+
+
+
+
+
+
 <DocsPackageVersion/>
