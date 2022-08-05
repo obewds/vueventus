@@ -44,16 +44,16 @@ The TWCSS Colors Tool allows you to copy the raw JSON data or download a file
 Once you have your JSON color palette data, create a file with a descriptive name in your project's root directory and paste your data in it (or copy the file into your root if you downloaded a file)
 
 
-Assuming our JSON color palettes file is called `my-app-colors.json`, we should now have a `./my-app-colors.json` file in the root directory.
+Assuming our JSON color palettes file is called `app.colors.json`, we should now have a `./app.colors.json` file in the root directory.
 
 ::: tip AFTER THE GETTING STARTED GUIDE
-Now we can use our `./my-app-colors.json` file in our project's `./tailwind.config.cjs` file, instead of pulling our colors from the VueVentus package like we did in the Getting Started guide.
+Now we can use our `./app.colors.json` file in our project's `./tailwind.config.cjs` file, instead of pulling our colors from the VueVentus package like we did in the Getting Started guide.
 :::
 
 Let's open up our `./tailwind.config.cjs` file and change the following line:
 
 ```javascript
-const appColors = require('./my-app-colors.json')
+const appColors = require('./app.colors.json')
 ```
 
 And of course this means we'll also need to change the variable reference for the one we just replaced deeper in the `./tailwind.config.cjs` file like so: 
@@ -80,7 +80,7 @@ Additionally, we can also access this data within our application and with our c
 Here's what that looks like for the default naming conventions the [TWCSS Colors Tool](https://tailwind.mattmct.com/) provides:
 
 ```javascript
-import appColors from './my-app-colors.json'
+import appColors from './app.colors.json'
 
 const red = appColors.red['400']
 const coolGray = appColors.coolGray['600']
