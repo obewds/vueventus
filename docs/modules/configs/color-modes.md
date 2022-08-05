@@ -26,7 +26,7 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 ## app.vv Use
 
-You'll usually work with the {{ $frontmatter.title }} after it's already been merged into the VueVentus VvConfig data.
+You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
 
 Here's what that generally looks like in practice in a real world app context:
 
@@ -39,6 +39,10 @@ import type { ConfigVv } from '@obewds/vueventus'
 let appVv: ConfigVv = VvConfig
 
 appVv.colorModes.someProperty = 'some-value'
+
+// ...
+
+export default appVv
 ```
 
 
