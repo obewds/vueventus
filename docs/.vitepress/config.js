@@ -162,6 +162,8 @@ function sidebarModules() {
             collapsible: true,
             items: [
                 { text: 'Config Modules', link: '/modules/configs/' },
+                { text: 'app.vv File', link: '/modules/configs/app-vv' },
+                { text: 'VvConfig', link: '/modules/configs/vv-config' },
                 { text: 'Anchors Config', link: '/modules/configs/anchors' },
                 { text: 'Buttons Config', link: '/modules/configs/buttons' },
                 { text: 'ColorModes Config', link: '/modules/configs/color-modes' },
@@ -170,8 +172,6 @@ function sidebarModules() {
                 { text: 'Textareas Config', link: '/modules/configs/textareas' },
                 { text: 'Transitions Config', link: '/modules/configs/transitions' },
                 { text: 'VvComponentDefaults', link: '/modules/configs/vv-component-defaults' },
-                { text: 'VvConfig', link: '/modules/configs/vv-config' },
-                { text: 'App Specific Config', link: '/modules/configs/app-specific-config' },
             ]
         },{
             text: 'Palette Modules',
