@@ -21,6 +21,7 @@ The {{ $frontmatter.title }} is the backbone of VueVentus in a prototypal sense.
 
 
 
+<!-- TODO: change this import block to match new approach in ColorModes Config docs page -->
 ## Import
 
 To import the compiled library version of the {{ $frontmatter.title }}:

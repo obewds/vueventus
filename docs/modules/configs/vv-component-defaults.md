@@ -21,6 +21,7 @@ The {{ $frontmatter.title }} are the VueVentus Vue component prop defaults, but 
 
 
 
+<!-- TODO: change this import block to match new approach in ColorModes Config docs page -->
 ## Import
 
 To import the compiled library version of the {{ $frontmatter.title }}:

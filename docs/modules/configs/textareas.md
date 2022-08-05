@@ -21,6 +21,8 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 
 
+<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
+<!-- TODO: change this import block to match new approach in ColorModes Config docs page -->
 ## Import
 
 To import the compiled library version of the {{ $frontmatter.title }}:
