@@ -19,6 +19,8 @@ title: Config Modules
 
 
 
+* [app.vv File](/modules/configs/app-vv)
+* [VvConfig](/modules/configs/vv-config)
 * [Anchors Config](/modules/configs/anchors)
 * [Buttons Config](/modules/configs/buttons)
 * [ColorModes Config](/modules/configs/color-modes)
@@ -27,8 +29,6 @@ title: Config Modules
 * [Textareas Config](/modules/configs/textareas)
 * [Transitions Config](/modules/configs/transitions)
 * [VvComponentDefaults](/modules/configs/vv-component-defaults)
-* [VvConfig](/modules/configs/vv-config)
-* [App Specific Config](/modules/configs/app-specific-config)
 
 
 
