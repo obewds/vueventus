@@ -15,4 +15,12 @@ export default <ConfigColorMode>{
         text: 'text-gray-900',
         title: 'Enable Light Mode',
     },
+    base: function () {
+        return [
+            this.light.ground,
+            this.light.text,
+            this.dark.ground,
+            this.dark.text,
+        ].join(' ').replace(/\s+/g,' ').trim()
+    },
 }
