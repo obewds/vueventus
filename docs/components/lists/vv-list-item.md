@@ -45,7 +45,7 @@ import { VvListItem } from '@obewds/vueventus'
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvListItem.color }}"`**
 
-The {{ $frontmatter.title }} `color` prop sets the component instance border color in combination with the `palette` prop.
+The {{ $frontmatter.title }} `color` prop sets the component instance text color in combination with the `palette` prop.
 
 ### Syntax
 
@@ -56,6 +56,7 @@ The {{ $frontmatter.title }} `color` prop sets the component instance border col
     <VvListItem color="primary">primary List Item</VvListItem>
     <VvListItem color="secondary">secondary List Item</VvListItem>
     <VvListItem color="success">success List Item</VvListItem>
+    <VvListItem color="neutral">neutral List Item</VvListItem>
 </ul>
 ```
 
@@ -68,6 +69,7 @@ The {{ $frontmatter.title }} `color` prop sets the component instance border col
         <VvListItem color="primary">primary List Item</VvListItem>
         <VvListItem color="secondary">secondary List Item</VvListItem>
         <VvListItem color="success">success List Item</VvListItem>
+        <VvListItem color="neutral">neutral List Item</VvListItem>
     </ul>
 </div>
 
@@ -92,6 +94,7 @@ The {{ $frontmatter.title }} `enableColoredSymbols` prop enables the component t
     <VvListItem :enable-colored-symbols="true" symbol-color="primary">primary List Item</VvListItem>
     <VvListItem :enable-colored-symbols="true" symbol-color="secondary">secondary List Item</VvListItem>
     <VvListItem :enable-colored-symbols="true" symbol-color="success">success List Item</VvListItem>
+    <VvListItem :enable-colored-symbols="true" symbol-color="neutral">neutral List Item</VvListItem>
 </ul>
 ```
 
@@ -104,6 +107,7 @@ The {{ $frontmatter.title }} `enableColoredSymbols` prop enables the component t
         <VvListItem :enable-colored-symbols="true" symbol-color="primary">primary List Item</VvListItem>
         <VvListItem :enable-colored-symbols="true" symbol-color="secondary">secondary List Item</VvListItem>
         <VvListItem :enable-colored-symbols="true" symbol-color="success">success List Item</VvListItem>
+        <VvListItem :enable-colored-symbols="true" symbol-color="neutral">neutral List Item</VvListItem>
     </ul>
 </div>
 
@@ -117,7 +121,7 @@ The {{ $frontmatter.title }} `enableColoredSymbols` prop enables the component t
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvListItem.palette }}"`**
 
-The {{ $frontmatter.title }} `palette` prop sets the component instance border color in combination with the `color` prop.
+The {{ $frontmatter.title }} `palette` prop sets the component instance text color in combination with the `color` prop.
 
 ### Syntax
 
@@ -156,6 +160,7 @@ The {{ $frontmatter.title }} `symbolColor` prop sets the component instance symb
     <VvListItem :enable-colored-symbols="true" symbol-color="primary">primary List Item</VvListItem>
     <VvListItem :enable-colored-symbols="true" symbol-color="secondary">secondary List Item</VvListItem>
     <VvListItem :enable-colored-symbols="true" symbol-color="success">success List Item</VvListItem>
+    <VvListItem :enable-colored-symbols="true" symbol-color="neutral">neutral List Item</VvListItem>
 </ul>
 ```
 
@@ -168,6 +173,7 @@ The {{ $frontmatter.title }} `symbolColor` prop sets the component instance symb
         <VvListItem :enable-colored-symbols="true" symbol-color="primary">primary List Item</VvListItem>
         <VvListItem :enable-colored-symbols="true" symbol-color="secondary">secondary List Item</VvListItem>
         <VvListItem :enable-colored-symbols="true" symbol-color="success">success List Item</VvListItem>
+        <VvListItem :enable-colored-symbols="true" symbol-color="neutral">neutral List Item</VvListItem>
     </ul>
 </div>
 
@@ -181,7 +187,7 @@ The {{ $frontmatter.title }} `symbolColor` prop sets the component instance symb
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvListItem.symbolPalette }}"`**
 
-The {{ $frontmatter.title }} `symbolPalette` prop sets the component instance border color in combination with the `symbolColor` prop.
+The {{ $frontmatter.title }} `symbolPalette` prop sets the component instance symbol color in combination with the `symbolColor` prop.
 
 ### Syntax
 
