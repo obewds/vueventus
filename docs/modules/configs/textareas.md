@@ -21,21 +21,44 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
-<!-- TODO: change this import block to match new approach in ColorModes Config docs page -->
+
+
+## app.vv Use
+
+You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
+
+Here's what that generally looks like in practice in a real world app context:
+
+```javascript
+// ./src/app.vv.ts
+
+import { VvConfig } from '@obewds/vueventus'
+import type { ConfigVv } from '@obewds/vueventus'
+
+let appVv: ConfigVv = VvConfig
+
+appVv.textareas.someProperty = 'some-value'
+
+// ...
+
+export default appVv
+```
+
+
+
+
+
+
+
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+However, if you need to import the compiled library version of the {{ $frontmatter.title }}, you can use:
 
 ```javascript
 import { Textareas } from '@obewds/vueventus'
 ```
 
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import Textareas from '@obewds/vueventus/dist/configs/Textareas.js'
-```
 
 
 
@@ -43,7 +66,6 @@ import Textareas from '@obewds/vueventus/dist/configs/Textareas.js'
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.border
 
 Type: **`String`**  
@@ -56,7 +78,8 @@ The `Textareas.border` parameter is meant to isolate the border specific atomic 
 ### Example
 
 ```javascript
-Textareas.border = ''
+// ./src/app.vv.ts
+appVv.textareas.border = '...'
 ```
 
 
@@ -67,7 +90,7 @@ Textareas.border = ''
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
+
 ## Textareas.display
 
 Type: **`String`**  
@@ -80,7 +103,8 @@ The `Textareas.display` parameter is meant to isolate the CSS display/block leve
 ### Example
 
 ```javascript
-Textareas.display = ''
+// ./src/app.vv.ts
+appVv.textareas.display = '...'
 ```
 
 
@@ -89,7 +113,7 @@ Textareas.display = ''
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
+
 ## Textareas.outline
 
 Type: **`String`**  
@@ -102,7 +126,8 @@ The `Textareas.outline` parameter is meant to isolate the outline specific atomi
 ### Example
 
 ```javascript
-Textareas.outline = ''
+// ./src/app.vv.ts
+appVv.textareas.outline = '...'
 ```
 
 
@@ -111,7 +136,7 @@ Textareas.outline = ''
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
+
 ## Textareas.placeholder
 
 Type: **`String`**  
@@ -124,7 +149,8 @@ The `Textareas.placeholder` parameter is meant to isolate the placeholder specif
 ### Example
 
 ```javascript
-Textareas.placeholder = ''
+// ./src/app.vv.ts
+appVv.textareas.placeholder = '...'
 ```
 
 
@@ -137,7 +163,7 @@ Textareas.placeholder = ''
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
+
 ## Textareas.ring
 
 Type: **`String`**  
@@ -150,7 +176,8 @@ The `Textareas.ring` parameter is meant to isolate the Tailwind CSS ring visuali
 ### Example
 
 ```javascript
-Textareas.ring = ''
+// ./src/app.vv.ts
+appVv.textareas.ring = '...'
 ```
 
 
@@ -163,7 +190,7 @@ Textareas.ring = ''
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
+
 ## Textareas.rounding
 
 Type: **`String`**  
@@ -176,7 +203,8 @@ The `Textareas.rounding` parameter is meant to isolate the Tailwind CSS border r
 ### Example
 
 ```javascript
-Textareas.rounding = ''
+// ./src/app.vv.ts
+appVv.textareas.rounding = '...'
 ```
 
 
@@ -185,7 +213,7 @@ Textareas.rounding = ''
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
+
 ## Textareas.rowSizes
 
 Type: **`Object`**  
@@ -202,23 +230,25 @@ Type: **`Object`**
 ### Examples
 
 ```javascript
-Textareas.sizes = {
-    'xs': 1,
-    'sm': 2,
-    'md': 3,
-    'lg': 4,
-    'xl': 6,
+// ./src/app.vv.ts
+appVv.textareas.rowSizes = {
+     'xs': 1,
+     'sm': 2,
+     'md': 3,
+     'lg': 4,
+     'xl': 6,
     '2xl': 8,
 }
 ```
 
 ```javascript
-Textareas.sizes['xs'] = 1
-Textareas.sizes['sm'] = 2
-Textareas.sizes['md'] = 3
-Textareas.sizes['lg'] = 4
-Textareas.sizes['xl'] = 6
-Textareas.sizes['2xl'] = 8
+// ./src/app.vv.ts
+appVv.textareas.rowSizes['xs']  = 1
+appVv.textareas.rowSizes['sm']  = 2
+appVv.textareas.rowSizes['md']  = 3
+appVv.textareas.rowSizes['lg']  = 4
+appVv.textareas.rowSizes['xl']  = 6
+appVv.textareas.rowSizes['2xl'] = 8
 ```
 
 
@@ -231,7 +261,6 @@ Textareas.sizes['2xl'] = 8
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.shadow
 
 Type: **`String`**  
@@ -244,7 +273,8 @@ The `Textareas.shadow` parameter is meant to isolate the Tailwind CSS border sha
 ### Example
 
 ```javascript
-Textareas.shadow = ''
+// ./src/app.vv.ts
+appVv.textareas.shadow = '...'
 ```
 
 
@@ -253,7 +283,7 @@ Textareas.shadow = ''
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
+
 ## Textareas.sizes
 
 Type: **`Object`**  
@@ -270,23 +300,25 @@ Type: **`Object`**
 ### Examples
 
 ```javascript
-Textareas.sizes = {
-    'xs': '',
-    'sm': '',
-    'md': '',
-    'lg': '',
-    'xl': '',
+// ./src/app.vv.ts
+appVv.textareas.sizes = {
+     'xs': '',
+     'sm': '',
+     'md': '',
+     'lg': '',
+     'xl': '',
     '2xl': '',
 }
 ```
 
 ```javascript
-Textareas.sizes['xs'] = ''
-Textareas.sizes['sm'] = ''
-Textareas.sizes['md'] = ''
-Textareas.sizes['lg'] = ''
-Textareas.sizes['xl'] = ''
-Textareas.sizes['2xl'] = ''
+// ./src/app.vv.ts
+appVv.textareas.sizes['xs']  = ''
+appVv.textareas.sizes['sm']  = ''
+appVv.textareas.sizes['md']  = ''
+appVv.textareas.sizes['lg']  = ''
+appVv.textareas.sizes['xl']  = ''
+appVv.textareas.sizes['2xl'] = ''
 ```
 
 
@@ -301,7 +333,7 @@ Textareas.sizes['2xl'] = ''
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
+
 ## Textareas.text
 
 Type: **`String`**  
@@ -314,7 +346,8 @@ The `Textareas.text` parameter is meant to isolate the text orientated character
 ### Example
 
 ```javascript
-Textareas.text = ''
+// ./src/app.vv.ts
+appVv.textareas.text = '...'
 ```
 
 
@@ -323,7 +356,7 @@ Textareas.text = ''
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
+
 ## Textareas.transition
 
 Type: **`String`**  
@@ -334,7 +367,8 @@ The `Textareas.transition` parameter is meant to isolate the transition/animatio
 ### Example
 
 ```javascript
-Textareas.transition = ''
+// ./src/app.vv.ts
+appVv.textareas.transition = '...'
 ```
 
 

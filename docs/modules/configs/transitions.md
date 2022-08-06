@@ -21,28 +21,51 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 
 
-<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
-<!-- TODO: change this import block to match new approach in ColorModes Config docs page -->
+
+
+
+## app.vv Use
+
+You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
+
+Here's what that generally looks like in practice in a real world app context:
+
+```javascript
+// ./src/app.vv.ts
+
+import { VvConfig } from '@obewds/vueventus'
+import type { ConfigVv } from '@obewds/vueventus'
+
+let appVv: ConfigVv = VvConfig
+
+appVv.transitions.someProperty = 'some-value'
+
+// ...
+
+export default appVv
+```
+
+
+
+
+
+
+
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+However, if you need to import the compiled library version of the {{ $frontmatter.title }}, you can use:
 
 ```javascript
 import { Transitions } from '@obewds/vueventus'
 ```
 
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import Transitions from '@obewds/vueventus/dist/configs/Transitions.js'
-```
 
 
 
 
 
 
-<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
 ## Transitions.durations
 
 Type: **`Object`**  
@@ -88,79 +111,81 @@ Type: **`Object`**
 ### Examples
 
 ```javascript
-Transitions.durations = {
+// ./src/app.vv.ts
+appVv.transitions.durations = {
     '1200': '',
     '1150': '',
     '1100': '',
     '1050': '',
     '1000': '',
-    '950': '',
-    '900': '',
-    '850': '',
-    '800': '',
-    '750': '',
-    '700': '',
-    '650': '',
-    '600': '',
-    '550': '',
-    '500': '',
-    '475': '',
-    '450': '',
-    '425': '',
-    '400': '',
-    '375': '',
-    '350': '',
-    '325': '',
-    '300': '',
-    '275': '',
-    '250': '',
-    '225': '',
-    '200': '',
-    '175': '',
-    '150': '',
-    '125': '',
-    '100': '',
-    '75': '',
-    '50': '',
-    '25': '',
+     '950': '',
+     '900': '',
+     '850': '',
+     '800': '',
+     '750': '',
+     '700': '',
+     '650': '',
+     '600': '',
+     '550': '',
+     '500': '',
+     '475': '',
+     '450': '',
+     '425': '',
+     '400': '',
+     '375': '',
+     '350': '',
+     '325': '',
+     '300': '',
+     '275': '',
+     '250': '',
+     '225': '',
+     '200': '',
+     '175': '',
+     '150': '',
+     '125': '',
+     '100': '',
+      '75': '',
+      '50': '',
+      '25': '',
 }
 ```
 
 ```javascript
-Transitions.durations['1200'] = ''
-Transitions.durations['1150'] = ''
-Transitions.durations['1100'] = ''
-Transitions.durations['1050'] = ''
-Transitions.durations['1000'] = ''
-Transitions.durations['950'] = ''
-Transitions.durations['900'] = ''
-Transitions.durations['850'] = ''
-Transitions.durations['800'] = ''
-Transitions.durations['750'] = ''
-Transitions.durations['700'] = ''
-Transitions.durations['650'] = ''
-Transitions.durations['600'] = ''
-Transitions.durations['550'] = ''
-Transitions.durations['500'] = ''
-Transitions.durations['475'] = ''
-Transitions.durations['450'] = ''
-Transitions.durations['425'] = ''
-Transitions.durations['400'] = ''
-Transitions.durations['375'] = ''
-Transitions.durations['350'] = ''
-Transitions.durations['325'] = ''
-Transitions.durations['300'] = ''
-Transitions.durations['275'] = ''
-Transitions.durations['250'] = ''
-Transitions.durations['225'] = ''
-Transitions.durations['200'] = ''
-Transitions.durations['175'] = ''
-Transitions.durations['150'] = ''
-Transitions.durations['125'] = ''
-Transitions.durations['100'] = ''
-Transitions.durations['75'] = ''
-Transitions.durations['50'] = ''
-Transitions.durations['25'] = ''
+// ./src/app.vv.ts
+appVv.transitions.durations['1200'] = ''
+appVv.transitions.durations['1150'] = ''
+appVv.transitions.durations['1100'] = ''
+appVv.transitions.durations['1050'] = ''
+appVv.transitions.durations['1000'] = ''
+appVv.transitions.durations['950']  = ''
+appVv.transitions.durations['900']  = ''
+appVv.transitions.durations['850']  = ''
+appVv.transitions.durations['800']  = ''
+appVv.transitions.durations['750']  = ''
+appVv.transitions.durations['700']  = ''
+appVv.transitions.durations['650']  = ''
+appVv.transitions.durations['600']  = ''
+appVv.transitions.durations['550']  = ''
+appVv.transitions.durations['500']  = ''
+appVv.transitions.durations['475']  = ''
+appVv.transitions.durations['450']  = ''
+appVv.transitions.durations['425']  = ''
+appVv.transitions.durations['400']  = ''
+appVv.transitions.durations['375']  = ''
+appVv.transitions.durations['350']  = ''
+appVv.transitions.durations['325']  = ''
+appVv.transitions.durations['300']  = ''
+appVv.transitions.durations['275']  = ''
+appVv.transitions.durations['250']  = ''
+appVv.transitions.durations['225']  = ''
+appVv.transitions.durations['200']  = ''
+appVv.transitions.durations['175']  = ''
+appVv.transitions.durations['150']  = ''
+appVv.transitions.durations['125']  = ''
+appVv.transitions.durations['100']  = ''
+appVv.transitions.durations['75']   = ''
+appVv.transitions.durations['50']   = ''
+appVv.transitions.durations['25']   = ''
 ```
 
 
@@ -171,7 +196,7 @@ Transitions.durations['25'] = ''
 
 
 
-<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
+
 ## Transitions.easings
 
 Type: **`Object`**  
@@ -186,19 +211,21 @@ Type: **`Object`**
 ### Examples
 
 ```javascript
-Transitions.easings = {
+// ./src/app.vv.ts
+appVv.transitions.easings = {
     'linear': '',
-    'in': '',
-    'out': '',
-    'inOut': '',
+        'in': '',
+       'out': '',
+     'inOut': '',
 }
 ```
 
 ```javascript
-Transitions.easings.linear = ''
-Transitions.easings.in = ''
-Transitions.easings.out = ''
-Transitions.easings.inOut = ''
+// ./src/app.vv.ts
+appVv.transitions.easings.linear = ''
+appVv.transitions.easings.in     = ''
+appVv.transitions.easings.out    = ''
+appVv.transitions.easings.inOut  = ''
 ```
 
 
@@ -206,7 +233,7 @@ Transitions.easings.inOut = ''
 
 
 
-<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
+
 ## Transitions.transitions
 
 Type: **`Object`**  
@@ -224,25 +251,27 @@ Type: **`Object`**
 ### Examples
 
 ```javascript
-Transitions.transitions = {
-    'default': '',
-    'all': '',
-    'colors': '',
-    'none': '',
-    'opacity': '',
-    'shadow': '',
+// ./src/app.vv.ts
+appVv.transitions.transitions = {
+      'default': '',
+          'all': '',
+       'colors': '',
+         'none': '',
+      'opacity': '',
+       'shadow': '',
     'transform': '',
 }
 ```
 
 ```javascript
-Transitions.transitions.default = ''
-Transitions.transitions.all = ''
-Transitions.transitions.colors = ''
-Transitions.transitions.none = ''
-Transitions.transitions.opacity = ''
-Transitions.transitions.shadow = ''
-Transitions.transitions.transform = ''
+// ./src/app.vv.ts
+appVv.transitions.transitions.default   = ''
+appVv.transitions.transitions.all       = ''
+appVv.transitions.transitions.colors    = ''
+appVv.transitions.transitions.none      = ''
+appVv.transitions.transitions.opacity   = ''
+appVv.transitions.transitions.shadow    = ''
+appVv.transitions.transitions.transform = ''
 ```
 
 

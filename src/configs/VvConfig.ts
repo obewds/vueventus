@@ -52,9 +52,9 @@ export default {
         },
     },
     // TODO: need to phase out colorMode (singular is inconsistent)
-    colorMode: {
-        ...ColorModes,
-    },
+    // colorMode: {
+    //     ...ColorModes,
+    // },
     colorModes: {
         ...ColorModes,
     },
