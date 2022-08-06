@@ -19,6 +19,7 @@ A validation focused palette of a variety of color class types for use with form
 
 
 
+<!-- TODO: remove example import xxxxx from @obewds/vueventus/dist/... -->
 ## Import
 
 To import the compiled library version of the {{ $frontmatter.title }}:

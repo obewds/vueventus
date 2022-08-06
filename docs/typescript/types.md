@@ -21,6 +21,7 @@ These are the VueVentus {{ $frontmatter.title }} Modules are used throughout Vue
 
 
 
+<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## BaseFunction
 
 To import the compiled library version of the BaseFunction Type:
@@ -47,6 +48,7 @@ import type { BaseFunction } from '@obewds/vueventus/dist/types/BaseFunction'
 
 
 
+<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## DefaultInputPalettes
 
 To import the compiled library version of the DefaultInputPalettes Type:
@@ -73,6 +75,7 @@ import type { DefaultInputPalettes } from '@obewds/vueventus/dist/types/DefaultI
 
 
 
+<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## DefaultPaletteColors
 
 To import the compiled library version of the DefaultPaletteColors Type:
@@ -99,6 +102,7 @@ import type { DefaultPaletteColors } from '@obewds/vueventus/dist/types/DefaultP
 
 
 
+<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## DefaultPalettes
 
 To import the compiled library version of the DefaultPalettes Type:
@@ -126,6 +130,7 @@ import type { DefaultPalettes } from '@obewds/vueventus/dist/types/DefaultPalett
 
 
 
+<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## DefaultValidationPaletteColors
 
 To import the compiled library version of the DefaultValidationPaletteColors Type:
@@ -152,6 +157,7 @@ import type { DefaultValidationPaletteColors } from '@obewds/vueventus/dist/type
 
 
 
+<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## ReturnsClassesFunction
 
 To import the compiled library version of the ReturnsClassesFunction Type:
@@ -179,6 +185,7 @@ import type { ReturnsClassesFunction } from '@obewds/vueventus/dist/types/Return
 
 
 
+<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## ReturnsNumberFunction
 
 To import the compiled library version of the ReturnsNumberFunction Type:
@@ -205,6 +212,7 @@ import type { ReturnsNumberFunction } from '@obewds/vueventus/dist/types/Returns
 
 
 
+<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## TransitionsClasses
 
 To import the compiled library version of the TransitionsClasses Type:
@@ -231,6 +239,7 @@ import type { TransitionsClasses } from '@obewds/vueventus/dist/types/Transition
 
 
 
+<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## TransitionsCustom
 
 To import the compiled library version of the TransitionsCustom Type:
