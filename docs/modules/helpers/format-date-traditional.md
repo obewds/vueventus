@@ -22,6 +22,7 @@ Lastly, the method's third optional property currently accepts one of three stri
 
 
 
+<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
 ## Import
 
 To import the {{ $frontmatter.title }} helper method:

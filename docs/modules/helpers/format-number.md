@@ -19,6 +19,7 @@ The {{ $frontmatter.title }} module provides a helper function that returns it's
 
 
 
+<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
 ## Import
 
 To import the {{ $frontmatter.title }} helper method:
