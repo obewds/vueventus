@@ -24,21 +24,44 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 
 
-<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
-<!-- TODO: change this import block to match new approach in ColorModes Config docs page -->
+
+
+## app.vv Use
+
+You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
+
+Here's what that generally looks like in practice in a real world app context:
+
+```javascript
+// ./src/app.vv.ts
+
+import { VvConfig } from '@obewds/vueventus'
+import type { ConfigVv } from '@obewds/vueventus'
+
+let appVv: ConfigVv = VvConfig
+
+appVv.text.someProperty = 'some-value'
+
+// ...
+
+export default appVv
+```
+
+
+
+
+
+
+
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+However, if you need to import the compiled library version of the {{ $frontmatter.title }}, you can use:
 
 ```javascript
 import { Text } from '@obewds/vueventus'
 ```
 
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import Text from '@obewds/vueventus/dist/configs/Text.js'
-```
 
 
 
@@ -48,7 +71,6 @@ import Text from '@obewds/vueventus/dist/configs/Text.js'
 
 
 
-<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.align
 
 Type: **`String`**  
@@ -61,7 +83,8 @@ The `Text.align` parameter is meant to isolate CSS text alignment characteristic
 ### Example
 
 ```javascript
-Text.align = ''
+// ./src/app.vv.ts
+appVv.text.align = '...'
 ```
 
 
@@ -69,7 +92,7 @@ Text.align = ''
 
 
 
-<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
+
 ## Text.decoration
 
 Type: **`String`**  
@@ -82,7 +105,8 @@ The `Text.decoration` parameter is meant to isolate CSS text decoration characte
 ### Example
 
 ```javascript
-Text.decoration = ''
+// ./src/app.vv.ts
+appVv.text.decoration = '...'
 ```
 
 
@@ -90,7 +114,7 @@ Text.decoration = ''
 
 
 
-<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
+
 ## Text.family
 
 Type: **`String`**  
@@ -103,7 +127,8 @@ The `Text.family` parameter is meant to isolate CSS text family characteristics 
 ### Example
 
 ```javascript
-Text.family = ''
+// ./src/app.vv.ts
+appVv.text.family = '...'
 ```
 
 
@@ -111,7 +136,7 @@ Text.family = ''
 
 
 
-<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
+
 ## Text.lineHeight
 
 Type: **`String`**  
@@ -124,7 +149,8 @@ The `Text.lineHeight` parameter is meant to isolate CSS text line height charact
 ### Example
 
 ```javascript
-Text.lineHeight = ''
+// ./src/app.vv.ts
+appVv.text.lineHeight = '...'
 ```
 
 
@@ -132,7 +158,7 @@ Text.lineHeight = ''
 
 
 
-<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
+
 ## Text.sizes
 
 Type: **`Object`**  
@@ -163,24 +189,25 @@ Type: **`Object`**
 ### Examples
 
 ```javascript
-Text.sizes = {
-    '5xs': '',
-    '4xs': '',
-    '3xs': '',
-    '2xs': '',
-    'xs': '',
-    'sm': '',
-    'md': '',
-    'lg': '',
-    'xl': '',
-    '2xl': '',
-    '3xl': '',
-    '4xl': '',
-    '5xl': '',
-    '6xl': '',
-    '7xl': '',
-    '8xl': '',
-    '9xl': '',
+// ./src/app.vv.ts
+appVv.text.sizes = {
+     '5xs': '',
+     '4xs': '',
+     '3xs': '',
+     '2xs': '',
+      'xs': '',
+      'sm': '',
+      'md': '',
+      'lg': '',
+      'xl': '',
+     '2xl': '',
+     '3xl': '',
+     '4xl': '',
+     '5xl': '',
+     '6xl': '',
+     '7xl': '',
+     '8xl': '',
+     '9xl': '',
     '10xl': '',
     '11xl': '',
     '12xl': '',
@@ -188,26 +215,27 @@ Text.sizes = {
 ```
 
 ```javascript
-Text.sizes['5xs'] = ''
-Text.sizes['4xs'] = ''
-Text.sizes['3xs'] = ''
-Text.sizes['2xs'] = ''
-Text.sizes['xs'] = ''
-Text.sizes['sm'] = ''
-Text.sizes['md'] = ''
-Text.sizes['lg'] = ''
-Text.sizes['xl'] = ''
-Text.sizes['2xl'] = ''
-Text.sizes['3xl'] = ''
-Text.sizes['4xl'] = ''
-Text.sizes['5xl'] = ''
-Text.sizes['6xl'] = ''
-Text.sizes['7xl'] = ''
-Text.sizes['8xl'] = ''
-Text.sizes['9xl'] = ''
-Text.sizes['10xl'] = ''
-Text.sizes['11xl'] = ''
-Text.sizes['12xl'] = ''
+// ./src/app.vv.ts
+appVv.text.sizes['5xs']  = ''
+appVv.text.sizes['4xs']  = ''
+appVv.text.sizes['3xs']  = ''
+appVv.text.sizes['2xs']  = ''
+appVv.text.sizes['xs']   = ''
+appVv.text.sizes['sm']   = ''
+appVv.text.sizes['md']   = ''
+appVv.text.sizes['lg']   = ''
+appVv.text.sizes['xl']   = ''
+appVv.text.sizes['2xl']  = ''
+appVv.text.sizes['3xl']  = ''
+appVv.text.sizes['4xl']  = ''
+appVv.text.sizes['5xl']  = ''
+appVv.text.sizes['6xl']  = ''
+appVv.text.sizes['7xl']  = ''
+appVv.text.sizes['8xl']  = ''
+appVv.text.sizes['9xl']  = ''
+appVv.text.sizes['10xl'] = ''
+appVv.text.sizes['11xl'] = ''
+appVv.text.sizes['12xl'] = ''
 ```
 
 
@@ -219,7 +247,7 @@ Text.sizes['12xl'] = ''
 
 
 
-<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
+
 ## Text.smoothing
 
 Type: **`String`**  
@@ -230,7 +258,8 @@ The `Text.smoothing` parameter is meant to isolate CSS text smoothing/aliasing c
 ### Example
 
 ```javascript
-Text.smoothing = ''
+// ./src/app.vv.ts
+appVv.text.smoothing = '...'
 ```
 
 
@@ -238,7 +267,7 @@ Text.smoothing = ''
 
 
 
-<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
+
 ## Text.spacing
 
 Type: **`String`**  
@@ -249,7 +278,8 @@ The `Text.spacing` parameter is meant to isolate CSS text spacing characteristic
 ### Example
 
 ```javascript
-Text.spacing = ''
+// ./src/app.vv.ts
+appVv.text.spacing = '...'
 ```
 
 
@@ -257,7 +287,7 @@ Text.spacing = ''
 
 
 
-<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
+
 ## Text.weight
 
 Type: **`String`**  
@@ -268,7 +298,8 @@ The `Text.weight` parameter is meant to isolate CSS text weight characteristics 
 ### Example
 
 ```javascript
-Text.weight = ''
+// ./src/app.vv.ts
+appVv.text.weight = '...'
 ```
 
 
@@ -276,7 +307,7 @@ Text.weight = ''
 
 
 
-<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
+
 ## Text.wordBreak
 
 Type: **`String`**  
@@ -287,7 +318,8 @@ The `Text.wordBreak` parameter is meant to isolate CSS text flow word line break
 ### Example
 
 ```javascript
-Text.wordBreak = ''
+// ./src/app.vv.ts
+appVv.text.wordBreak = '...'
 ```
 
 
