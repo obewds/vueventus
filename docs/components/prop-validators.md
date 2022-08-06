@@ -20,6 +20,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
+<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
 ## ValidAudioSourceTypes
 
 ### Use example
@@ -49,6 +50,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
+<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
 ## ValidButtonTypes
 
 ### Use example
@@ -77,6 +79,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
+<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
 ## ValidColorModes
 
 ### Use example
@@ -105,6 +108,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
+<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
 ## ValidDirections
 
 ### Use example
@@ -133,6 +137,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
+<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
 ## ValidElementTags
 
 ### Use example
@@ -161,6 +166,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
+<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
 ## ValidFontAwesomeFamilies
 
 ### Use example
@@ -189,6 +195,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
+<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
 ## ValidFontAwesomeSizes
 
 ### Use example
@@ -217,6 +224,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
+<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
 ## ValidHeadingLevels
 
 ### Use example
@@ -245,6 +253,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
+<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
 ## ValidImageSourceTypes
 
 ### Use example
@@ -273,6 +282,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
+<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
 ## ValidInputTypes
 
 ### Use example
@@ -301,6 +311,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
+<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
 ## ValidVideoSourceTypes
 
 ### Use example

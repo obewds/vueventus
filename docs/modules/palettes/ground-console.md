@@ -19,6 +19,7 @@ A console themed palette of ground colors with properties/values with the keys o
 
 
 
+<!-- TODO: remove example import xxxxx from @obewds/vueventus/dist/... -->
 ## Import
 
 To import the compiled library version of the {{ $frontmatter.title }}:

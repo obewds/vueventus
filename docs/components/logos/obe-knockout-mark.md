@@ -17,6 +17,7 @@ The {{ $frontmatter.title }} provides an `<svg>` component of the OBE (Online Bu
 
 
 
+<!-- TODO: remove example import xxxxx from @obewds/vueventus/dist/... -->
 ## Import
 
 To import the compiled library version of the {{ $frontmatter.title }}:
