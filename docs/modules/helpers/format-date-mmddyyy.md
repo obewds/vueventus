@@ -11,5 +11,40 @@ title: formatDateMMDDYYYY() Helper Method
 
 # {{ $frontmatter.title }}
 
-<!-- TODO: write docs for helper method (use tests for reference) -->
-Documentation coming soon!
+The {{ $frontmatter.title }} module provides a helper function that converts a passed JavaScript Date object and an optional string separator, and returns a numerical 2 digit month, 2 digit day, and 4 digit year string with each number separated by a `/` character by default.
+
+
+
+
+
+
+## Import
+
+To import the {{ $frontmatter.title }} helper method:
+
+```javascript
+import { formatDateMMDDYYYY } from '@obewds/vueventus'
+```
+
+
+
+
+
+
+## Use Examples
+
+```javascript
+console.log( formatDateMMDDYYYY( new Date('January 10, 2020') ) )
+// returns (string): '01/10/2020'
+
+console.log( formatDateMMDDYYYY( new Date('December 9, 2020'), '-' ) )
+// returns (string): '12-09-2020'
+```
+
+
+
+
+
+
+<DocsPackageVersion/>
+
