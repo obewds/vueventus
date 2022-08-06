@@ -44,3 +44,21 @@ test('VvInput.vue component can successfully inject() a parent component provide
     expect(wrapper.html()).toContain('input')
     
 })
+
+
+
+test('VvInput.vue component emits the update:modelValue value as expected', async () => {
+
+    const wrapper = mount(VvInput)
+
+    const input = wrapper.find('input')
+  
+    await input.setValue('test')
+
+    const updateModelValue = wrapper.emitted('update:modelValue')
+
+    expect(wrapper.emitted()).toHaveProperty('update:modelValue')
+    expect(updateModelValue).toHaveLength(1)
+    expect(updateModelValue[0]).toEqual(['test'])
+    
+})
