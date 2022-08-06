@@ -44,3 +44,21 @@ test('VvTextarea.vue component can successfully inject() a parent component prov
     expect(wrapper.html()).toContain('textarea')
     
 })
+
+
+
+test('VvTextarea.vue component emits the update:modelValue value as expected', async () => {
+
+    const wrapper = mount(VvTextarea)
+
+    const textarea = wrapper.find('textarea')
+  
+    await textarea.setValue('test')
+
+    const updateModelValue = wrapper.emitted('update:modelValue')
+
+    expect(wrapper.emitted()).toHaveProperty('update:modelValue')
+    expect(updateModelValue).toHaveLength(1)
+    expect(updateModelValue[0]).toEqual(['test'])
+    
+})
