@@ -22,16 +22,10 @@ This helper function is essentially a function tailored specifically for a numbe
 
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }} helper method:
 
 ```javascript
 import { digitsOnly } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import digitsOnly from '@obewds/vueventus/dist/helpers/digitsOnly.js'
 ```
 
 

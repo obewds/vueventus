@@ -21,16 +21,10 @@ The {{ $frontmatter.title }} module provides a helper function that returns it's
 
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }} helper method:
 
 ```javascript
 import { formatNumber } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import formatNumber from '@obewds/vueventus/dist/helpers/formatNumber.js'
 ```
 
 

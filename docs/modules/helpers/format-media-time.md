@@ -20,16 +20,10 @@ The {{ $frontmatter.title }} module provides a helper function that returns a st
 
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }} helper method:
 
 ```javascript
 import { formatMediaTime } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import formatMediaTime from '@obewds/vueventus/dist/helpers/formatMediaTime.js'
 ```
 
 
