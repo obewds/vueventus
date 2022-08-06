@@ -31,7 +31,7 @@ import { formatMediaTime } from '@obewds/vueventus'
 
 
 
-## Use Example
+## Use Examples
 
 ```javascript
 console.log( formatMediaTime(2.123) )
