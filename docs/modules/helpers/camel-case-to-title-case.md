@@ -20,16 +20,10 @@ The {{ $frontmatter.title }} module provides a helper function that converts a p
 
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }} helper method:
 
 ```javascript
 import { camelCaseToTitleCase } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import camelCaseToTitleCase from '@obewds/vueventus/dist/helpers/camelCaseToTitleCase.js'
 ```
 
 

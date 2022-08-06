@@ -21,20 +21,42 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
-<!-- TODO: change this import block to match new approach in ColorModes Config docs page -->
+
+
+## app.vv Use
+
+You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
+
+Here's what that generally looks like in practice in a real world app context:
+
+```javascript
+// ./src/app.vv.ts
+
+import { VvConfig } from '@obewds/vueventus'
+import type { ConfigVv } from '@obewds/vueventus'
+
+let appVv: ConfigVv = VvConfig
+
+appVv.inputs.someProperty = 'some-value'
+
+// ...
+
+export default appVv
+```
+
+
+
+
+
+
+
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+However, if you need to import the compiled library version of the {{ $frontmatter.title }}, you can use:
 
 ```javascript
-import { Inputs } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import Inputs from '@obewds/vueventus/dist/configs/Inputs.js'
+import { Anchors } from '@obewds/vueventus'
 ```
 
 
@@ -43,7 +65,9 @@ import Inputs from '@obewds/vueventus/dist/configs/Inputs.js'
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
+
+
+
 ## Inputs.border
 
 Type: **`String`**  
@@ -56,7 +80,8 @@ The `Inputs.border` parameter is meant to isolate the border specific atomic cla
 ### Example
 
 ```javascript
-Inputs.border = ''
+// ./src/app.vv.ts
+appVv.inputs.border = '...'
 ```
 
 
@@ -67,7 +92,7 @@ Inputs.border = ''
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
+
 ## Inputs.display
 
 Type: **`String`**  
@@ -80,7 +105,8 @@ The `Inputs.display` parameter is meant to isolate the CSS display/block level c
 ### Example
 
 ```javascript
-Inputs.display = ''
+// ./src/app.vv.ts
+appVv.inputs.display = '...'
 ```
 
 
@@ -89,7 +115,7 @@ Inputs.display = ''
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
+
 ## Inputs.outline
 
 Type: **`String`**  
@@ -102,7 +128,8 @@ The `Inputs.outline` parameter is meant to isolate the outline specific atomic c
 ### Example
 
 ```javascript
-Inputs.outline = ''
+// ./src/app.vv.ts
+appVv.inputs.outline = '...'
 ```
 
 
@@ -111,7 +138,7 @@ Inputs.outline = ''
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
+
 ## Inputs.placeholder
 
 Type: **`String`**  
@@ -124,7 +151,8 @@ The `Inputs.placeholder` parameter is meant to isolate the placeholder specific 
 ### Example
 
 ```javascript
-Inputs.placeholder = ''
+// ./src/app.vv.ts
+appVv.inputs.placeholder = '...'
 ```
 
 
@@ -137,7 +165,7 @@ Inputs.placeholder = ''
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
+
 ## Inputs.ring
 
 Type: **`String`**  
@@ -150,7 +178,8 @@ The `Inputs.ring` parameter is meant to isolate the Tailwind CSS ring visualizat
 ### Example
 
 ```javascript
-Inputs.ring = ''
+// ./src/app.vv.ts
+appVv.inputs.ring = '...'
 ```
 
 
@@ -163,7 +192,7 @@ Inputs.ring = ''
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
+
 ## Inputs.rounding
 
 Type: **`String`**  
@@ -176,7 +205,8 @@ The `Inputs.rounding` parameter is meant to isolate the Tailwind CSS border roun
 ### Example
 
 ```javascript
-Inputs.rounding = ''
+// ./src/app.vv.ts
+appVv.inputs.rounding = '...'
 ```
 
 
@@ -189,7 +219,7 @@ Inputs.rounding = ''
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
+
 ## Inputs.shadow
 
 Type: **`String`**  
@@ -202,7 +232,8 @@ The `Inputs.shadow` parameter is meant to isolate the Tailwind CSS border shadow
 ### Example
 
 ```javascript
-Inputs.shadow = ''
+// ./src/app.vv.ts
+appVv.inputs.shadow = '...'
 ```
 
 
@@ -211,7 +242,7 @@ Inputs.shadow = ''
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
+
 ## Inputs.sizes
 
 Type: **`Object`**  
@@ -228,23 +259,25 @@ Type: **`Object`**
 ### Examples
 
 ```javascript
-Inputs.sizes = {
-    'xs': '',
-    'sm': '',
-    'md': '',
-    'lg': '',
-    'xl': '',
+// ./src/app.vv.ts
+appVv.inputs.sizes = {
+     'xs': '',
+     'sm': '',
+     'md': '',
+     'lg': '',
+     'xl': '',
     '2xl': '',
 }
 ```
 
 ```javascript
-Inputs.sizes['xs'] = ''
-Inputs.sizes['sm'] = ''
-Inputs.sizes['md'] = ''
-Inputs.sizes['lg'] = ''
-Inputs.sizes['xl'] = ''
-Inputs.sizes['2xl'] = ''
+// ./src/app.vv.ts
+appVv.inputs.sizes['xs']  = ''
+appVv.inputs.sizes['sm']  = ''
+appVv.inputs.sizes['md']  = ''
+appVv.inputs.sizes['lg']  = ''
+appVv.inputs.sizes['xl']  = ''
+appVv.inputs.sizes['2xl'] = ''
 ```
 
 
@@ -259,7 +292,7 @@ Inputs.sizes['2xl'] = ''
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
+
 ## Inputs.text
 
 Type: **`String`**  
@@ -272,7 +305,8 @@ The `Inputs.text` parameter is meant to isolate the text orientated characterist
 ### Example
 
 ```javascript
-Inputs.text = ''
+// ./src/app.vv.ts
+appVv.inputs.text = '...'
 ```
 
 
@@ -281,7 +315,7 @@ Inputs.text = ''
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
+
 ## Inputs.transition
 
 Type: **`String`**  
@@ -292,7 +326,8 @@ The `Inputs.transition` parameter is meant to isolate the transition/animation c
 ### Example
 
 ```javascript
-Inputs.transition = ''
+// ./src/app.vv.ts
+appVv.inputs.transition = '...'
 ```
 
 

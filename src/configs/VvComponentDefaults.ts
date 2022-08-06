@@ -44,7 +44,7 @@ export default <ConfigDefaults>{
         type: 'text',
     },
     "VvListItem": {
-        color: 'default',
+        color: 'neutral',
         enableColoredSymbols: true,
         palette: 'default',
         symbolColor: 'primary',

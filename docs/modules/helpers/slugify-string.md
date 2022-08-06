@@ -21,16 +21,10 @@ The {{ $frontmatter.title }} module provides a helper function that takes a stri
 
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }} helper method:
 
 ```javascript
 import { slugifyString } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import slugifyString from '@obewds/vueventus/dist/helpers/slugifyString.js'
 ```
 
 

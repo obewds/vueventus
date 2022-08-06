@@ -21,16 +21,10 @@ The {{ $frontmatter.title }} module provides a helper function that takes an arr
 
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }} helper method:
 
 ```javascript
 import { uniqueArray } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import uniqueArray from '@obewds/vueventus/dist/helpers/uniqueArray.js'
 ```
 
 
