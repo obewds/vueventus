@@ -515,7 +515,7 @@ The `Buttons.base()` method returns a joined `String` of the atomic classes with
 
 
 
-<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
+
 ## Buttons.blockBase()
 
 Returns: **`String`**  
@@ -525,8 +525,22 @@ The `Buttons.blockBase()` method returns a joined `String` of the atomic classes
 
 ### Example
 
-```javascript
-const buttonsBlockBase = Buttons.blockBase()
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <button type="button" :class="appVv.buttons.blockBase()">
+        Base Block-Level Button
+    </button>
+
+</template>
 ```
 
 
@@ -534,7 +548,7 @@ const buttonsBlockBase = Buttons.blockBase()
 
 
 
-<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
+
 ## Buttons.blockClasses()
 
 Returns: **`String`**  
@@ -554,20 +568,34 @@ The applicable values for the `sizesKey` argument are set via the [Buttons.block
 
 ### Examples
 
-```javascript
-const mdButtonBlockClasses = Buttons.blockClasses() // default is 'md'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <button type="button" :class="appVv.buttons.blockClasses()">
+        Default Sized Block Button
+    </button>
+
+    <button type="button" :class="appVv.buttons.blockClasses('lg')">
+        Large Sized Block Button
+    </button>
+
+</template>
 ```
 
-```javascript
-const lgButtonBlockClasses = Buttons.blockClasses('lg')
-```
 
 
 
 
 
 
-<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
 ## Buttons.classes()
 
 Returns: **`String`**  
@@ -587,20 +615,34 @@ The applicable values for the `sizesKey` argument are set via the [Buttons.sizes
 
 ### Examples
 
-```javascript
-const buttonsClasses = Buttons.classes() // default is 'md'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <button type="button" :class="appVv.buttons.classes()">
+        Default Sized Button
+    </button>
+
+    <button type="button" :class="appVv.buttons.classes('lg')">
+        Large Sized Button
+    </button>
+
+</template>
 ```
 
-```javascript
-const buttonsClasses = Buttons.classes('lg')
-```
 
 
 
 
 
 
-<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
 ## Buttons.fabBase()
 
 Returns: **`String`**  
@@ -610,8 +652,21 @@ The `Buttons.fabBase()` method returns a joined `String` of the atomic classes w
 
 ### Example
 
-```javascript
-const buttonsFabBase = Buttons.fabBase()
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <!-- Base Fab Button -->
+    <button type="button" :class="appVv.buttons.fabBase()"/>
+
+</template>
 ```
 
 
@@ -619,7 +674,7 @@ const buttonsFabBase = Buttons.fabBase()
 
 
 
-<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
+
 ## Buttons.fabClasses()
 
 Returns: **`String`**  
@@ -639,20 +694,32 @@ The applicable values for the `sizesKey` argument are set via the [Buttons.fabSi
 
 ### Examples
 
-```javascript
-const mdButtonFabClasses = Buttons.fabClasses() // default is 'md'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <!-- Default Fab Button -->
+    <button type="button" :class="appVv.buttons.fabClasses()"/>
+
+    <!-- Large Fab Button -->
+    <button type="button" :class="appVv.buttons.fabClasses('lg')"/>
+
+</template>
 ```
 
-```javascript
-const lgButtonFabClasses = Buttons.fabClasses('lg')
-```
 
 
 
 
 
 
-<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
 ## Buttons.getBlockSizeClasses()
 
 Returns: **`String`**  
@@ -670,20 +737,34 @@ The applicable values for the `sizesKey` argument are set via the [Buttons.block
 
 ### Examples
 
-```javascript
-const mdBlockButtons = Buttons.getBlockSizeClasses() // default is 'md'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <button type="button" :class="appVv.buttons.getBlockSizeClasses()">
+        Default Sized Block Button
+    </button>
+
+    <button type="button" :class="appVv.buttons.getBlockSizeClasses('sm')">
+        Small Sized Block Button
+    </button>
+
+</template>
 ```
 
-```javascript
-const smBlockButtons = Buttons.getBlockSizeClasses('sm')
-```
 
 
 
 
 
 
-<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
 ## Buttons.getFabSizeClasses()
 
 Returns: **`String`**  
@@ -701,20 +782,32 @@ The applicable values for the `sizesKey` argument are set via the [Buttons.fabSi
 
 ### Examples
 
-```javascript
-const mdFabButtons = Buttons.getFabSizeClasses() // default is 'md'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <!-- Default Sized Fab Button -->
+    <button type="button" :class="appVv.buttons.getFabSizeClasses()"/>
+
+    <!-- Small Sized Fab Button -->
+    <button type="button" :class="appVv.buttons.getFabSizeClasses('sm')"/>
+
+</template>
 ```
 
-```javascript
-const smFabButtons = Buttons.getFabSizeClasses('sm')
-```
 
 
 
 
 
 
-<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
 ## Buttons.getSizeClasses()
 
 Returns: **`String`**  
@@ -732,12 +825,26 @@ The applicable values for the `sizesKey` argument are set via the [Buttons.sizes
 
 ### Examples
 
-```javascript
-const mdButtons = Buttons.getSizeClasses() // default is 'md'
-```
+```html
+<!-- ./src/components/SomeComponent.vue -->
 
-```javascript
-const smButtons = Buttons.getSizeClasses('sm')
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <button type="button" :class="appVv.buttons.getSizeClasses()">
+        Default Sized Button
+    </button>
+
+    <button type="button" :class="appVv.buttons.getSizeClasses('sm')">
+        Small Sized Button
+    </button>
+
+</template>
 ```
 
 

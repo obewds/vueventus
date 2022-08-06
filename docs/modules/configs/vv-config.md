@@ -25,19 +25,40 @@ The VvConfig file basically works as a blueprint to work from, so you can define
 
 
 
-<!-- TODO: change this import block to match new approach in ColorModes Config docs page -->
+
+
+## app.vv Use
+
+You'll usually work with the {{ $frontmatter.title }} as the starting point for your app.vv file.
+
+Here's what that generally looks like in practice in a real world app context:
+
+```javascript
+// ./src/app.vv.ts
+
+import { VvConfig } from '@obewds/vueventus'
+import type { ConfigVv } from '@obewds/vueventus'
+
+let appVv: ConfigVv = VvConfig
+
+// ...
+
+export default appVv
+```
+
+
+
+
+
+
+
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+However, if you need to import the compiled library version of the {{ $frontmatter.title }}, you can use:
 
 ```javascript
 import { VvConfig } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import VvConfig from '@obewds/vueventus/dist/configs/VvConfig.js'
 ```
 
 
