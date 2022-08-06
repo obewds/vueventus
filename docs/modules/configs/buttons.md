@@ -18,18 +18,41 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 
 
+
+
+## app.vv Use
+
+You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
+
+Here's what that generally looks like in practice in a real world app context:
+
+```javascript
+// ./src/app.vv.ts
+
+import { VvConfig } from '@obewds/vueventus'
+import type { ConfigVv } from '@obewds/vueventus'
+
+let appVv: ConfigVv = VvConfig
+
+appVv.buttons.someProperty = 'some-value'
+
+// ...
+
+export default appVv
+```
+
+
+
+
+
+
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+However, if you need to import the compiled library version of the {{ $frontmatter.title }}, you can use:
 
 ```javascript
 import { Buttons } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import Buttons from '@obewds/vueventus/dist/configs/Buttons.js'
 ```
 
 
@@ -49,7 +72,8 @@ The `Buttons.blockDisplay` parameter is meant to isolate the CSS block level dis
 ### Example
 
 ```javascript
-Buttons.blockDisplay = ''
+// ./src/app.vv.ts
+appVv.buttons.blockDisplay = '...'
 ```
 
 
@@ -80,33 +104,34 @@ Type: **`Object`**
 ### Examples
 
 ```javascript
-Buttons.blockSizes = {
-    '4xs': '',
-    '3xs': '',
-    '2xs': '',
-    'xs': '',
-    'sm': '',
-    'md': '',
-    'lg': '',
-    'xl': '',
-    '2xl': '',
-    '3xl': '',
-    '4xl': '',
+// ./src/app.vv.ts
+appVv.buttons.blockSizes = {
+    '4xs': '...',
+    '3xs': '...',
+    '2xs': '...',
+     'xs': '...',
+     'sm': '...',
+     'md': '...',
+     'lg': '...',
+     'xl': '...',
+    '2xl': '...',
+    '3xl': '...',
+    '4xl': '...',
 }
 ```
 
 ```javascript
-Buttons.blockSizes['4xs'] = ''
-Buttons.blockSizes['3xs'] = ''
-Buttons.blockSizes['2xs'] = ''
-Buttons.blockSizes['xs'] = ''
-Buttons.blockSizes['sm'] = ''
-Buttons.blockSizes['md'] = ''
-Buttons.blockSizes['lg'] = ''
-Buttons.blockSizes['xl'] = ''
-Buttons.blockSizes['2xl'] = ''
-Buttons.blockSizes['3xl'] = ''
-Buttons.blockSizes['4xl'] = ''
+appVv.buttons.blockSizes['4xs'] = '...'
+appVv.buttons.blockSizes['3xs'] = '...'
+appVv.buttons.blockSizes['2xs'] = '...'
+appVv.buttons.blockSizes['xs']  = '...'
+appVv.buttons.blockSizes['sm']  = '...'
+appVv.buttons.blockSizes['md']  = '...'
+appVv.buttons.blockSizes['lg']  = '...'
+appVv.buttons.blockSizes['xl']  = '...'
+appVv.buttons.blockSizes['2xl'] = '...'
+appVv.buttons.blockSizes['3xl'] = '...'
+appVv.buttons.blockSizes['4xl'] = '...'
 ```
 
 
@@ -126,8 +151,11 @@ The `Buttons.border` parameter is meant to isolate the border related characteri
 ### Example
 
 ```javascript
-Buttons.border = ''
+// ./src/app.vv.ts
+appVv.buttons.border = '...'
 ```
+
+
 
 
 
@@ -146,8 +174,10 @@ The `Buttons.cursor` parameter is meant to isolate the CSS cursor orientated cha
 ### Example
 
 ```javascript
-Buttons.cursor = ''
+// ./src/app.vv.ts
+appVv.buttons.cursor = '...'
 ```
+
 
 
 
@@ -166,7 +196,8 @@ The `Buttons.disabled` parameter is meant to isolate the disabled characteristic
 ### Example
 
 ```javascript
-Buttons.disabled = ''
+// ./src/app.vv.ts
+appVv.buttons.disabled = '...'
 ```
 
 
@@ -186,7 +217,8 @@ The `Buttons.display` parameter is meant to isolate the CSS display/block level 
 ### Example
 
 ```javascript
-Buttons.display = ''
+// ./src/app.vv.ts
+appVv.buttons.display = '...'
 ```
 
 
@@ -206,7 +238,8 @@ The `Buttons.fabDisplay` parameter is meant to isolate the CSS display/block lev
 ### Example
 
 ```javascript
-Buttons.fabDisplay = ''
+// ./src/app.vv.ts
+appVv.buttons.fabDisplay = '...'
 ```
 
 
@@ -237,33 +270,34 @@ Type: **`Object`**
 ### Examples
 
 ```javascript
-Buttons.fabSizes = {
-    '4xs': '',
-    '3xs': '',
-    '2xs': '',
-    'xs': '',
-    'sm': '',
-    'md': '',
-    'lg': '',
-    'xl': '',
-    '2xl': '',
-    '3xl': '',
-    '4xl': '',
+// ./src/app.vv.ts
+appVv.buttons.fabSizes = {
+    '4xs': '...',
+    '3xs': '...',
+    '2xs': '...',
+     'xs': '...',
+     'sm': '...',
+     'md': '...',
+     'lg': '...',
+     'xl': '...',
+    '2xl': '...',
+    '3xl': '...',
+    '4xl': '...',
 }
 ```
 
 ```javascript
-Buttons.fabSizes['4xs'] = ''
-Buttons.fabSizes['3xs'] = ''
-Buttons.fabSizes['2xs'] = ''
-Buttons.fabSizes['xs'] = ''
-Buttons.fabSizes['sm'] = ''
-Buttons.fabSizes['md'] = ''
-Buttons.fabSizes['lg'] = ''
-Buttons.fabSizes['xl'] = ''
-Buttons.fabSizes['2xl'] = ''
-Buttons.fabSizes['3xl'] = ''
-Buttons.fabSizes['4xl'] = ''
+appVv.buttons.fabSizes['4xs'] = '...'
+appVv.buttons.fabSizes['3xs'] = '...'
+appVv.buttons.fabSizes['2xs'] = '...'
+appVv.buttons.fabSizes['xs']  = '...'
+appVv.buttons.fabSizes['sm']  = '...'
+appVv.buttons.fabSizes['md']  = '...'
+appVv.buttons.fabSizes['lg']  = '...'
+appVv.buttons.fabSizes['xl']  = '...'
+appVv.buttons.fabSizes['2xl'] = '...'
+appVv.buttons.fabSizes['3xl'] = '...'
+appVv.buttons.fabSizes['4xl'] = '...'
 ```
 
 
@@ -286,7 +320,8 @@ The `Buttons.focus` parameter is meant to isolate the CSS focus orientated chara
 ### Example
 
 ```javascript
-Buttons.focus = ''
+// ./src/app.vv.ts
+appVv.buttons.focus = '...'
 ```
 
 
@@ -308,7 +343,8 @@ The `Buttons.rounding` parameter is meant to isolate the CSS border radius orien
 ### Example
 
 ```javascript
-Buttons.rounding = ''
+// ./src/app.vv.ts
+appVv.buttons.rounding = '...'
 ```
 
 
@@ -330,7 +366,8 @@ The `Buttons.shadow` parameter is meant to isolate the Tailwind CSS drop-shadow 
 ### Example
 
 ```javascript
-Buttons.shadow = ''
+// ./src/app.vv.ts
+appVv.buttons.shadow = '...'
 ```
 
 
@@ -360,33 +397,34 @@ Type: **`Object`**
 ### Examples
 
 ```javascript
-Buttons.sizes = {
-    '4xs': '',
-    '3xs': '',
-    '2xs': '',
-    'xs': '',
-    'sm': '',
-    'md': '',
-    'lg': '',
-    'xl': '',
-    '2xl': '',
-    '3xl': '',
-    '4xl': '',
+// ./src/app.vv.ts
+appVv.buttons.sizes = {
+    '4xs': '...',
+    '3xs': '...',
+    '2xs': '...',
+     'xs': '...',
+     'sm': '...',
+     'md': '...',
+     'lg': '...',
+     'xl': '...',
+    '2xl': '...',
+    '3xl': '...',
+    '4xl': '...',
 }
 ```
 
 ```javascript
-Buttons.sizes['4xs'] = ''
-Buttons.sizes['3xs'] = ''
-Buttons.sizes['2xs'] = ''
-Buttons.sizes['xs'] = ''
-Buttons.sizes['sm'] = ''
-Buttons.sizes['md'] = ''
-Buttons.sizes['lg'] = ''
-Buttons.sizes['xl'] = ''
-Buttons.sizes['2xl'] = ''
-Buttons.sizes['3xl'] = ''
-Buttons.sizes['4xl'] = ''
+appVv.buttons.sizes['4xs'] = '...'
+appVv.buttons.sizes['3xs'] = '...'
+appVv.buttons.sizes['2xs'] = '...'
+appVv.buttons.sizes['xs']  = '...'
+appVv.buttons.sizes['sm']  = '...'
+appVv.buttons.sizes['md']  = '...'
+appVv.buttons.sizes['lg']  = '...'
+appVv.buttons.sizes['xl']  = '...'
+appVv.buttons.sizes['2xl'] = '...'
+appVv.buttons.sizes['3xl'] = '...'
+appVv.buttons.sizes['4xl'] = '...'
 ```
 
 
@@ -408,7 +446,8 @@ The `Buttons.text` parameter is meant to isolate the text specific atomic classe
 ### Example
 
 ```javascript
-Buttons.text = ''
+// ./src/app.vv.ts
+appVv.buttons.text = '...'
 ```
 
 
@@ -428,7 +467,8 @@ The `Buttons.transition` parameter is meant to isolate the transition/animation 
 ### Example
 
 ```javascript
-Buttons.transition = ''
+// ./src/app.vv.ts
+appVv.buttons.transition = '...'
 ```
 
 
@@ -449,8 +489,22 @@ The `Buttons.base()` method returns a joined `String` of the atomic classes with
 
 ### Example
 
-```javascript
-const buttonsBase = Buttons.base()
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <button type="button" :class="[appVv.buttons.base(), String(appVv.buttons.palettes.solid.primary)]">
+        Solid Primary Btn
+    </button>
+
+</template>
 ```
 
 
@@ -458,6 +512,7 @@ const buttonsBase = Buttons.base()
 
 
 
+<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
 ## Buttons.blockBase()
 
 Returns: **`String`**  
@@ -476,6 +531,7 @@ const buttonsBlockBase = Buttons.blockBase()
 
 
 
+<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
 ## Buttons.blockClasses()
 
 Returns: **`String`**  
@@ -508,6 +564,7 @@ const lgButtonBlockClasses = Buttons.blockClasses('lg')
 
 
 
+<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
 ## Buttons.classes()
 
 Returns: **`String`**  
@@ -540,6 +597,7 @@ const buttonsClasses = Buttons.classes('lg')
 
 
 
+<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
 ## Buttons.fabBase()
 
 Returns: **`String`**  
@@ -558,6 +616,7 @@ const buttonsFabBase = Buttons.fabBase()
 
 
 
+<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
 ## Buttons.fabClasses()
 
 Returns: **`String`**  
@@ -590,6 +649,7 @@ const lgButtonFabClasses = Buttons.fabClasses('lg')
 
 
 
+<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
 ## Buttons.getBlockSizeClasses()
 
 Returns: **`String`**  
@@ -620,6 +680,7 @@ const smBlockButtons = Buttons.getBlockSizeClasses('sm')
 
 
 
+<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
 ## Buttons.getFabSizeClasses()
 
 Returns: **`String`**  
@@ -650,6 +711,7 @@ const smFabButtons = Buttons.getFabSizeClasses('sm')
 
 
 
+<!-- TODO: change all Buttons.xxx examples to appVv.buttons.xxx syntax like in new ColorModes config docs page -->
 ## Buttons.getSizeClasses()
 
 Returns: **`String`**  

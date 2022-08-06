@@ -24,3 +24,12 @@ test('ColorModes component returns a truthy value for "cursor", "disabled", "dis
     expect(ColorModes.light.title).toBeTruthy()
 
 })
+
+
+test('ColorModes component returns a truthy value for the "base()" method', async () => {
+
+    const base = ColorModes.base()
+    
+    expect(base).toBeTruthy()
+
+})

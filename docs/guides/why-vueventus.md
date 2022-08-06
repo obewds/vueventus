@@ -5,6 +5,7 @@ title: Why VueVentus
 <script setup>
     import DocsAnimatedLogoSection from '../../src/views/compos/DocsAnimatedLogoSection.vue'
     import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+    import SvgDiagramVueVentusFlow from '../../src/views/compos/SvgDiagramVueVentusFlow.vue'
 </script>
 
 
@@ -97,6 +98,19 @@ Over time, VueVentus defaults should be replaced as needed by a custom configura
 
 In most cases, an app's custom configs are merged with VueVentus defaults at app start. In the case of Vue.js v3, the merged config data should then use the `provide()`/`inject()` pattern to pass the merged data down to app layouts, components and modules.
 :::
+
+
+
+
+
+
+
+
+
+
+!!!include(snippets/theVueVentusFlow.md)!!!
+
+<SvgDiagramVueVentusFlow class="w-full"/>
 
 
 

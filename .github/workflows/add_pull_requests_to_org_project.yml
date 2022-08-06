@@ -14,4 +14,4 @@ jobs:
       - uses: actions/add-to-project@main
         with:
           project-url: https://github.com/orgs/obewds/projects/1
-          github-token: ${{ secrets.ADD_TO_PROJECT_ACCESS_TOKEN }}
+          github-token: ${{ secrets.OBEWDS_ORG_VUEVENTUS_PERSONAL_ACCESS_TOKEN }}

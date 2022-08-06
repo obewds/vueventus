@@ -22,6 +22,7 @@ VueVentus {{ $frontmatter.title }} are simple and static JSON object data files 
 
 
 
+<!-- TODO: Add import example in CJS style for config.tailwind.cjs files -->
 ## theme.fontSize.json
 
 The `theme.fontSize.json` data module overrides a Tailwind config object's `theme.fontSize` values with the data below:
@@ -32,6 +33,7 @@ The `theme.fontSize.json` data module overrides a Tailwind config object's `them
 
 
 
+<!-- TODO: Add import example in CJS style for config.tailwind.cjs files -->
 ## theme.listStyleType.json
 
 The `theme.listStyleType.json` data module overrides a Tailwind config object's `theme.listStyleType` values with the data below:
@@ -42,6 +44,7 @@ The `theme.listStyleType.json` data module overrides a Tailwind config object's 
 
 
 
+<!-- TODO: Add import example in CJS style for config.tailwind.cjs files -->
 ## theme.opacity.json
 
 The `theme.opacity.json` data module overrides a Tailwind config object's `theme.opacity` values with the data below:
@@ -52,6 +55,7 @@ The `theme.opacity.json` data module overrides a Tailwind config object's `theme
 
 
 
+<!-- TODO: Add import example in CJS style for config.tailwind.cjs files -->
 ## theme.screens.json
 
 The `theme.screens.json` data module overrides a Tailwind config object's `theme.screens` values with the data below:

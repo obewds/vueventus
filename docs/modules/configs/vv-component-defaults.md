@@ -14,13 +14,14 @@ title: VvComponentDefaults Module
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} are the VueVentus Vue component prop defaults, but abstracted so they can be overridden by an app specific config file.
+The {{ $frontmatter.title }} are the VueVentus Vue component prop defaults, but abstracted so they can be overridden by an app.vv file.
 
 
 
 
 
 
+<!-- TODO: change this import block to match new approach in ColorModes Config docs page -->
 ## Import
 
 To import the compiled library version of the {{ $frontmatter.title }}:

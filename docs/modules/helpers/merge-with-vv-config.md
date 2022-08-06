@@ -49,7 +49,7 @@ import './index.css' // (Tailwind CSS file)
 // import the mergeWithVvConfig() method
 import { mergeWithVvConfig } from '@obewds/vueventus'
 
-// import an app specific config file
+// import your VueVentus app.vv file
 import appVv from './app.vv.js'
 
 const app = createApp(App)

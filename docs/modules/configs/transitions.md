@@ -21,6 +21,8 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 
 
+<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
+<!-- TODO: change this import block to match new approach in ColorModes Config docs page -->
 ## Import
 
 To import the compiled library version of the {{ $frontmatter.title }}:
@@ -40,6 +42,7 @@ import Transitions from '@obewds/vueventus/dist/configs/Transitions.js'
 
 
 
+<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
 ## Transitions.durations
 
 Type: **`Object`**  
@@ -168,6 +171,7 @@ Transitions.durations['25'] = ''
 
 
 
+<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
 ## Transitions.easings
 
 Type: **`Object`**  
@@ -202,6 +206,7 @@ Transitions.easings.inOut = ''
 
 
 
+<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
 ## Transitions.transitions
 
 Type: **`Object`**  
@@ -247,6 +252,7 @@ Transitions.transitions.transform = ''
 
 
 
+<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
 ## Transitions.classes()
 
 Returns: **`String`**  
@@ -283,6 +289,7 @@ const transition = Transitions.classes('colors', 'linear', '1000')
 
 
 
+<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
 ## Transitions.custom()
 
 Returns: **`String`**  
@@ -323,6 +330,7 @@ const transition = Transitions.custom({
 
 
 
+<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
 ## Transitions.getDurationClasses()
 
 Returns: **`String`**  
@@ -353,6 +361,7 @@ const duration = Transitions.getDurationClasses('1000')
 
 
 
+<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
 ## Transitions.getEasingClasses()
 
 Returns: **`String`**  
@@ -383,6 +392,7 @@ const easing = Transitions.getEasingClasses('in')
 
 
 
+<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
 ## Transitions.getTransitionClasses()
 
 Returns: **`String`**  

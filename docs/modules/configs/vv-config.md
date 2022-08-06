@@ -14,13 +14,18 @@ title: VvConfig Module
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} is the backbone of VueVentus in a prototypal sense. However, it should and will also be used as a blueprint to define your app's brand and color palettes at the global level, as well!
+The {{ $frontmatter.title }} is the backbone of VueVentus in a prototypal sense, and it's used in conjunction with your app's `./src/app.vv.ts` file to define your app's global design states.
+
+::: tip
+The VvConfig file basically works as a blueprint to work from, so you can define your app's global visual styling classes and color palettes at a global level as you override the VvConfig defaults in your app's app.vv file!
+:::
 
 
 
 
 
 
+<!-- TODO: change this import block to match new approach in ColorModes Config docs page -->
 ## Import
 
 To import the compiled library version of the {{ $frontmatter.title }}:

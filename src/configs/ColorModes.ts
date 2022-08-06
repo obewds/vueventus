@@ -4,9 +4,9 @@ import type { ConfigColorMode } from '../types/ConfigColorMode'
 
 export default <ConfigColorMode>{
     dark: {
-        ground: 'bg-gray-900',
+        ground: 'dark:bg-gray-900',
         hex: '#242426',
-        text: 'text-gray-100',
+        text: 'dark:text-gray-100',
         title: 'Enable Dark Mode',
     },
     light: {
@@ -14,5 +14,13 @@ export default <ConfigColorMode>{
         hex: '#e1e1e3',
         text: 'text-gray-900',
         title: 'Enable Light Mode',
+    },
+    base: function () {
+        return [
+            this.light.ground,
+            this.light.text,
+            this.dark.ground,
+            this.dark.text,
+        ].join(' ').replace(/\s+/g,' ').trim()
     },
 }

@@ -9,8 +9,9 @@ const output = `<!-- ./src/App.vue -->
     // This starter template is using Vue 3 <script setup> SFCs
     // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
     
-    import { VueVentusSpinningMark, VvColorModeButton } from '@obewds/vueventus'
+    import { VueVentusSpinningMark } from '@obewds/vueventus'
     import HelloWorld from './components/HelloWorld.vue'
+    import VvColorModeButton from './components/vv/buttons/VvColorModeButton.vue'
     import VvScrollUp from './components/vv/buttons/VvScrollUp.vue'
 
     const colorMode = localStorage && localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') : 'light'

@@ -24,18 +24,38 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 
 
+## app.vv Use
+
+You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
+
+Here's what that generally looks like in practice in a real world app context:
+
+```javascript
+// ./src/app.vv.ts
+
+import { VvConfig } from '@obewds/vueventus'
+import type { ConfigVv } from '@obewds/vueventus'
+
+let appVv: ConfigVv = VvConfig
+
+appVv.colorModes.someProperty = 'some-value'
+
+// ...
+
+export default appVv
+```
+
+
+
+
+
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+However, if you need to import the compiled library version of the {{ $frontmatter.title }}, you can use:
 
 ```javascript
 import { ColorModes } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import ColorModes from '@obewds/vueventus/dist/configs/ColorModes.js'
 ```
 
 
@@ -58,7 +78,8 @@ The `ColorModes.dark.ground` parameter is meant to isolate the CSS ground (backg
 ### Example
 
 ```javascript
-ColorModes.dark.ground = ''
+// ./src/app.vv.ts
+appVv.colorModes.dark.ground = '...'
 ```
 
 
@@ -81,7 +102,8 @@ The `ColorModes.dark.hex` parameter is meant to isolate the CSS ground (backgrou
 ### Example
 
 ```javascript
-ColorModes.dark.hex = ''
+// ./src/app.vv.ts
+appVv.colorModes.dark.hex = '...'
 ```
 
 
@@ -104,7 +126,8 @@ The `ColorModes.dark.text` parameter is meant to isolate the CSS text color clas
 ### Example
 
 ```javascript
-ColorModes.dark.text = ''
+// ./src/app.vv.ts
+appVv.colorModes.dark.text = '...'
 ```
 
 
@@ -127,7 +150,8 @@ The `ColorModes.dark.title` parameter is meant to describe the color mode state 
 ### Example
 
 ```javascript
-ColorModes.dark.title = ''
+// ./src/app.vv.ts
+appVv.colorModes.dark.title = '...'
 ```
 
 
@@ -150,7 +174,8 @@ The `ColorModes.light.ground` parameter is meant to isolate the CSS ground (back
 ### Example
 
 ```javascript
-ColorModes.light.ground = ''
+// ./src/app.vv.ts
+appVv.colorModes.light.ground = '...'
 ```
 
 
@@ -173,7 +198,8 @@ The `ColorModes.light.hex` parameter is meant to isolate the CSS ground (backgro
 ### Example
 
 ```javascript
-ColorModes.light.hex = ''
+// ./src/app.vv.ts
+appVv.colorModes.light.hex = '...'
 ```
 
 
@@ -196,7 +222,8 @@ The `ColorModes.light.text` parameter is meant to isolate the CSS text color cla
 ### Example
 
 ```javascript
-ColorModes.light.text = ''
+// ./src/app.vv.ts
+appVv.colorModes.light.text = '...'
 ```
 
 
@@ -219,8 +246,58 @@ The `ColorModes.light.title` parameter is meant to describe the color mode state
 ### Example
 
 ```javascript
-ColorModes.light.title = ''
+// ./src/app.vv.ts
+appVv.colorModes.light.title = '...'
 ```
+
+
+
+
+
+
+
+
+
+## ColorModes.base()
+
+Returns: **`String`**  
+Default: **`"{{ ColorModes.base() }}"`**
+
+The `ColorModes.base()` method returns a joined `String` of the atomic classes within the various base properties of the {{ $frontmatter.title }} object.
+
+### Example
+
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+
+    const someVar = appVv.colorModes.base()
+    
+</script>
+
+<template>
+
+    <div :class="someVar">
+        This div now has all of the base color mode classes!
+    </div>
+
+</template>
+```
+
+
+
+
+
+
+
+
+
+## Module Code
+
+<<< @/../src/configs/ColorModes.ts
 
 
 

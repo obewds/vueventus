@@ -21,19 +21,46 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 
 
+
+
+
+## app.vv Use
+
+You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
+
+Here's what that generally looks like in practice in a real world app context:
+
+```javascript
+// ./src/app.vv.ts
+
+import { VvConfig } from '@obewds/vueventus'
+import type { ConfigVv } from '@obewds/vueventus'
+
+let appVv: ConfigVv = VvConfig
+
+appVv.anchors.someProperty = 'some-value'
+
+// ...
+
+export default appVv
+```
+
+
+
+
+
+
+
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+However, if you need to import the compiled library version of the {{ $frontmatter.title }}, you can use:
 
 ```javascript
 import { Anchors } from '@obewds/vueventus'
 ```
 
-To import the {{ $frontmatter.title }} directly:
 
-```javascript
-import Anchors from '@obewds/vueventus/dist/configs/Anchors.js'
-```
 
 
 
@@ -52,7 +79,8 @@ The `Anchors.cursor` parameter is meant to isolate the CSS cursor focused charac
 ### Example
 
 ```javascript
-Anchors.cursor = ''
+// ./src/app.vv.ts
+appVv.anchors.cursor = '...'
 ```
 
 
@@ -72,7 +100,8 @@ The `Anchors.display` parameter is meant to isolate the CSS display/block level 
 ### Example
 
 ```javascript
-Anchors.display = ''
+// ./src/app.vv.ts
+appVv.anchors.display = '...'
 ```
 
 
@@ -92,7 +121,8 @@ The `Anchors.focus` parameter is meant to isolate the CSS focus orientated chara
 ### Example
 
 ```javascript
-Anchors.focus = ''
+// ./src/app.vv.ts
+appVv.anchors.focus = '...'
 ```
 
 
@@ -123,7 +153,8 @@ The `Anchors.text` parameter is meant to isolate the text specific atomic classe
 ### Example
 
 ```javascript
-Anchors.text = ''
+// ./src/app.vv.ts
+appVv.anchors.text = '...'
 ```
 
 
@@ -143,7 +174,8 @@ The `Anchors.transition` parameter is meant to isolate the transition/animation 
 ### Example
 
 ```javascript
-Anchors.transition = ''
+// ./src/app.vv.ts
+appVv.anchors.transition = '...'
 ```
 
 
@@ -163,9 +195,24 @@ The `Anchors.base()` method returns a joined `String` of the atomic classes with
 
 ### Example
 
-```javascript
-const anchorsBase = Anchors.base()
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <a href="#" :class="[appVv.anchors.base(), String(appVv.anchors.palettes.default.success)]">
+        Base anchor + default success color classes
+    </a>
+
+</template>
 ```
+
 
 
 
@@ -189,15 +236,32 @@ However, the `Anchors.classes()` method also returns `Anchors.getSizeClasses()` 
 
 The applicable values for the `sizesKey` argument are set via the [Text Config Module Text.sizes](/modules/configs/text#text-sizes) property names/keys and atomic class values.
 
-### Examples
+### Example
 
-```javascript
-const anchorsClasses = Anchors.classes() // default is 'md'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+
+    const appLinkColor = appVv.anchors.palettes.default.success
+    
+</script>
+
+<template>
+
+    <a href="#" :class="[appVv.anchors.classes(), appLinkColor]">
+        Regular Success Anchor
+    </a>
+
+    <a href="#" :class="[appVv.anchors.classes('lg'), appLinkColor]">
+        Large Success Anchor
+    </a>
+
+</template>
 ```
 
-```javascript
-const anchorsClasses = Anchors.classes('lg')
-```
 
 
 
@@ -219,15 +283,33 @@ The `Anchors.getSizeClasses()` method returns text size related classes based on
 
 The applicable values for the `sizesKey` argument are set via the [Text Config Module Text.sizes](/modules/configs/text#text-sizes) property names/keys and atomic class values.
 
-### Examples
+### Example
 
-```javascript
-const anchorsSizeClasses = Anchors.getSizeClasses() // default is 'md'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+
+    const color = appVv.anchors.palettes.default.success
+    const transition = appVv.anchors.transition
+    
+</script>
+
+<template>
+
+    <a href="#" :class="[appVv.anchors.getSizeClasses(), color, transition]">
+        Regular Success Anchor
+    </a>
+
+    <a href="#" :class="[appVv.anchors.getSizeClasses('lg'), color, transition]">
+        Large Success Anchor
+    </a>
+
+</template>
 ```
 
-```javascript
-const anchorsSizeClasses = Anchors.getSizeClasses('sm')
-```
 
 
 

@@ -24,6 +24,8 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 
 
+<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
+<!-- TODO: change this import block to match new approach in ColorModes Config docs page -->
 ## Import
 
 To import the compiled library version of the {{ $frontmatter.title }}:
@@ -46,6 +48,7 @@ import Text from '@obewds/vueventus/dist/configs/Text.js'
 
 
 
+<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.align
 
 Type: **`String`**  
@@ -66,6 +69,7 @@ Text.align = ''
 
 
 
+<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.decoration
 
 Type: **`String`**  
@@ -86,6 +90,7 @@ Text.decoration = ''
 
 
 
+<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.family
 
 Type: **`String`**  
@@ -106,6 +111,7 @@ Text.family = ''
 
 
 
+<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.lineHeight
 
 Type: **`String`**  
@@ -126,6 +132,7 @@ Text.lineHeight = ''
 
 
 
+<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.sizes
 
 Type: **`Object`**  
@@ -212,6 +219,7 @@ Text.sizes['12xl'] = ''
 
 
 
+<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.smoothing
 
 Type: **`String`**  
@@ -230,6 +238,7 @@ Text.smoothing = ''
 
 
 
+<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.spacing
 
 Type: **`String`**  
@@ -248,6 +257,7 @@ Text.spacing = ''
 
 
 
+<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.weight
 
 Type: **`String`**  
@@ -266,6 +276,7 @@ Text.weight = ''
 
 
 
+<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.wordBreak
 
 Type: **`String`**  
@@ -284,6 +295,7 @@ Text.wordBreak = ''
 
 
 
+<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.base()
 
 Returns: **`String`**  
@@ -302,6 +314,7 @@ const textBase = Text.base()
 
 
 
+<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.classes()
 
 Returns: **`String`**  
@@ -335,6 +348,7 @@ const textClasses = Text.classes('lg')
 
 
 
+<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.getSizeClasses()
 
 Returns: **`String`**  

@@ -25,7 +25,7 @@ VueVentus {{ $frontmatter.title }} are simple and static JSON object data files 
 
 
 
-
+<!-- TODO: Add import example in CJS style for config.tailwind.cjs files -->
 ## extend.animation.json
 
 The `extend.animation.json` data module extends a Tailwind config object's `theme.extend.animation` values with the data below:
@@ -41,6 +41,7 @@ The `extend.animation.json` data module extends a Tailwind config object's `them
 
 
 
+<!-- TODO: Add import example in CJS style for config.tailwind.cjs files -->
 ## extend.keyframes.json
 
 The `extend.keyframes.json` data module extends a Tailwind config object's `theme.extend.keyframes` values with the data below:
@@ -55,6 +56,7 @@ The `extend.keyframes.json` data module extends a Tailwind config object's `them
 
 
 
+<!-- TODO: Add import example in CJS style for config.tailwind.cjs files -->
 ## extend.maxWidth.json
 
 The `extend.maxWidth.json` data module extends a Tailwind config object's `theme.extend.maxWidth` values with the data below:
@@ -65,6 +67,7 @@ The `extend.maxWidth.json` data module extends a Tailwind config object's `theme
 
 
 
+<!-- TODO: Add import example in CJS style for config.tailwind.cjs files -->
 ## extend.rotate.json
 
 The `extend.rotate.json` data module extends a Tailwind config object's `theme.extend.rotate` values with the data below:
@@ -75,6 +78,7 @@ The `extend.rotate.json` data module extends a Tailwind config object's `theme.e
 
 
 
+<!-- TODO: Add import example in CJS style for config.tailwind.cjs files -->
 ## extend.scale.json
 
 The `extend.scale.json` data module extends a Tailwind config object's `theme.extend.scale` values with the data below:
@@ -85,6 +89,7 @@ The `extend.scale.json` data module extends a Tailwind config object's `theme.ex
 
 
 
+<!-- TODO: Add import example in CJS style for config.tailwind.cjs files -->
 ## extend.transitionDuration.json
 
 The `extend.transitionDuration.json` data module extends a Tailwind config object's `theme.extend.transitionDuration` values with the data below:
@@ -95,6 +100,7 @@ The `extend.transitionDuration.json` data module extends a Tailwind config objec
 
 
 
+<!-- TODO: Add import example in CJS style for config.tailwind.cjs files -->
 ## extend.width.json
 
 The `extend.width.json` data module extends a Tailwind config object's `theme.extend.width` values with the data below:

@@ -5,6 +5,7 @@ title: Getting Started
 <script setup>
     import DocsAnimatedLogoSection from '../../src/views/compos/DocsAnimatedLogoSection.vue'
     import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+    import SvgDiagramVueVentusFlow from '../../src/views/compos/SvgDiagramVueVentusFlow.vue'
 </script>
 
 
@@ -38,6 +39,19 @@ But first, you'll need to choose your path for installation:
 ::: tip 
 VueVentus is now fully written in Typescript and with Vue SFC Composition API syntax!
 :::
+
+
+
+
+
+
+
+
+
+
+!!!include(snippets/theVueVentusFlow.md)!!!
+
+<SvgDiagramVueVentusFlow class="w-full"/>
 
 
 
