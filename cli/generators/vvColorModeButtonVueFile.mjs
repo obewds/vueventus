@@ -35,35 +35,35 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
             },
             groundDark: {
                 type: String,
-                default: appVv.colorMode.dark.ground,
+                default: appVv.colorModes.dark.ground,
             },
             groundDarkHex: {
                 type: String,
-                default: appVv.colorMode.dark.hex,
+                default: appVv.colorModes.dark.hex,
             },
             groundLight: {
                 type: String,
-                default: appVv.colorMode.light.ground,
+                default: appVv.colorModes.light.ground,
             },
             groundLightHex: {
                 type: String,
-                default: appVv.colorMode.light.hex,
+                default: appVv.colorModes.light.hex,
             },
             textDark: {
                 type: String,
-                default: appVv.colorMode.dark.text,
+                default: appVv.colorModes.dark.text,
             },
             textLight: {
                 type: String,
-                default: appVv.colorMode.light.text,
+                default: appVv.colorModes.light.text,
             },
             titleDark: {
                 type: String,
-                default: appVv.colorMode.dark.title,
+                default: appVv.colorModes.dark.title,
             },
             titleLight: {
                 type: String,
-                default: appVv.colorMode.light.title,
+                default: appVv.colorModes.light.title,
             },
             type: {
                 type: String,

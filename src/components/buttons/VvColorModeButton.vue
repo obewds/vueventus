@@ -36,35 +36,35 @@
             },
             groundDark: {
                 type: String,
-                default: VvConfig.colorMode.dark.ground,
+                default: VvConfig.colorModes.dark.ground,
             },
             groundDarkHex: {
                 type: String,
-                default: VvConfig.colorMode.dark.hex,
+                default: VvConfig.colorModes.dark.hex,
             },
             groundLight: {
                 type: String,
-                default: VvConfig.colorMode.light.ground,
+                default: VvConfig.colorModes.light.ground,
             },
             groundLightHex: {
                 type: String,
-                default: VvConfig.colorMode.light.hex,
+                default: VvConfig.colorModes.light.hex,
             },
             textDark: {
                 type: String,
-                default: VvConfig.colorMode.dark.text,
+                default: VvConfig.colorModes.dark.text,
             },
             textLight: {
                 type: String,
-                default: VvConfig.colorMode.light.text,
+                default: VvConfig.colorModes.light.text,
             },
             titleDark: {
                 type: String,
-                default: VvConfig.colorMode.dark.title,
+                default: VvConfig.colorModes.dark.title,
             },
             titleLight: {
                 type: String,
-                default: VvConfig.colorMode.light.title,
+                default: VvConfig.colorModes.light.title,
             },
             type: {
                 type: String,
