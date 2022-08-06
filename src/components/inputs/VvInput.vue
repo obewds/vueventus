@@ -10,6 +10,8 @@
 
         name: 'VvInput',
 
+        emits: ['update:modelValue'],
+
         props: {
             color: {
                 type: String,
@@ -27,6 +29,10 @@
                 type: String,
                 default: VvConfig.defaults.VvInput.type,
                 validator: (prop: ValidInputTypes) => (ValidInputTypes).includes(prop),
+            },
+            modelValue: {
+                type: String,
+                default: '',
             },
         },
 
@@ -54,7 +60,9 @@
 
             })
 
-            return { classes }
+            const handleInputChange = (event: Event) => (event.target as HTMLInputElement).value
+
+            return { classes, handleInputChange }
 
         },
 
@@ -64,5 +72,10 @@
 
 
 <template>
-    <input :type="type" :class="classes">
+    <input
+        :type="type"
+        :class="classes"
+        :value="modelValue"
+        @input="$emit('update:modelValue', handleInputChange($event as any))"
+    >
 </template>
