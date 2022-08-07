@@ -22,7 +22,7 @@ The {{ $frontmatter.title }} module provides a helper function that generates a 
 
 ## Import
 
-To import the {{ $frontmatter.title }} helper method:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { randomString } from '@obewds/vueventus'

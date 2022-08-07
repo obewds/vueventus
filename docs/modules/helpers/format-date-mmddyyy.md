@@ -21,7 +21,7 @@ The {{ $frontmatter.title }} module provides a helper function that converts a p
 
 ## Import
 
-To import the {{ $frontmatter.title }} helper method:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { formatDateMMDDYYYY } from '@obewds/vueventus'

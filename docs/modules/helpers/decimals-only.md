@@ -23,7 +23,7 @@ This helper function is essentially a function tailored specifically for decimal
 
 ## Import
 
-To import the {{ $frontmatter.title }} helper method:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { decimalsOnly } from '@obewds/vueventus'

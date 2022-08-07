@@ -22,7 +22,7 @@ The {{ $frontmatter.title }} module provides a helper function that returns a ra
 
 ## Import
 
-To import the {{ $frontmatter.title }} helper method:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { getRandomInt } from '@obewds/vueventus'

@@ -23,7 +23,7 @@ This helper function is essentially a function tailored specifically for number 
 
 ## Import
 
-To import the {{ $frontmatter.title }} helper method:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { digitsOnly } from '@obewds/vueventus'
