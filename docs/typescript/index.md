@@ -5,6 +5,7 @@ title: Typescript Modules
 <script setup>
     import DocsAnimatedLogoSection from '../../src/views/compos/DocsAnimatedLogoSection.vue'
     import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
+    import SvgDiagramVueVentusFlow from '../../src/views/compos/SvgDiagramVueVentusFlow.vue'
 </script>
 
 
@@ -68,6 +69,17 @@ title: Typescript Modules
 * [VvInputProps](/typescript/interfaces#vvinputprops)
 * [VvListItemProps](/typescript/interfaces#vvlistitemprops)
 * [VvTextareaProps](/typescript/interfaces#vvtextareaprops)
+
+
+
+
+
+
+
+
+!!!include(snippets/theVueVentusFlow.md)!!!
+
+<SvgDiagramVueVentusFlow class="w-full"/>
 
 
 
