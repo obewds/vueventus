@@ -17,15 +17,10 @@ The {{ $frontmatter.title }} provides a variety of props and config module based
 
 
 
+
 ## Import
 
-Import the CLI installation version of the {{ $frontmatter.title }} into your project with:
-
-```javascript
-import VvButton from '@/components/vv/buttons/VvButton.vue'
-```
-
-To import the prototyping/compiled lib version of the {{ $frontmatter.title }}, use:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { VvButton } from '@obewds/vueventus'

@@ -25,15 +25,10 @@ The {{ $frontmatter.title }} provides a variety of props and config module based
 
 
 
+
 ## Import
 
-Import the CLI installation version of the {{ $frontmatter.title }} into your project with:
-
-```javascript
-import VvAnchor from '@/components/vv/anchors/VvAnchor.vue'
-```
-
-To import the prototyping/compiled lib version of the {{ $frontmatter.title }}, use:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { VvAnchor } from '@obewds/vueventus'

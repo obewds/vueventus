@@ -195,7 +195,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
-<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
+
 ## ValidFontAwesomeSizes
 
 ### Use example
@@ -203,7 +203,7 @@ These modules are used to allow a single source of truth between library compone
 ```html
 <script setup lang="ts">
 
-    import ValidFontAwesomeSizes from '@obewds/vueventus/dist/validators/ValidFontAwesomeSizes.js'
+    import { ValidFontAwesomeSizes } from '@obewds/vueventus'
 
     const props = defineProps({
         faSize: {
@@ -224,7 +224,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
-<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
+
 ## ValidHeadingLevels
 
 ### Use example
@@ -232,7 +232,7 @@ These modules are used to allow a single source of truth between library compone
 ```html
 <script setup lang="ts">
 
-    import ValidHeadingLevels from '@obewds/vueventus/dist/validators/ValidHeadingLevels.js'
+    import { ValidHeadingLevels } from '@obewds/vueventus'
 
     const props = defineProps({
         headingLevel: {
@@ -253,7 +253,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
-<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
+
 ## ValidImageSourceTypes
 
 ### Use example
@@ -261,7 +261,7 @@ These modules are used to allow a single source of truth between library compone
 ```html
 <script setup lang="ts">
 
-    import ValidImageSourceTypes from '@obewds/vueventus/dist/validators/ValidImageSourceTypes.js'
+    import { ValidImageSourceTypes } from '@obewds/vueventus'
 
     const props = defineProps({
         headingLevel: {
@@ -282,7 +282,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
-<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
+
 ## ValidInputTypes
 
 ### Use example
@@ -290,7 +290,7 @@ These modules are used to allow a single source of truth between library compone
 ```html
 <script setup lang="ts">
 
-    import ValidInputTypes from '@obewds/vueventus/dist/validators/ValidInputTypes.js'
+    import { ValidInputTypes } from '@obewds/vueventus'
 
     const props = defineProps({
         headingLevel: {
@@ -311,7 +311,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
-<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
+
 ## ValidVideoSourceTypes
 
 ### Use example
@@ -319,7 +319,7 @@ These modules are used to allow a single source of truth between library compone
 ```html
 <script setup lang="ts">
 
-    import ValidVideoSourceTypes from '@obewds/vueventus/dist/validators/ValidVideoSourceTypes.js'
+    import { ValidVideoSourceTypes } from '@obewds/vueventus'
 
     const props = defineProps({
         headingLevel: {

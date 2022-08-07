@@ -19,19 +19,13 @@ A validation focused palette of a variety of color class types for use with form
 
 
 
-<!-- TODO: remove example import xxxxx from @obewds/vueventus/dist/... -->
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { InputUnderlined } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import InputUnderlined from '@obewds/vueventus/dist/configs/palettes/InputUnderlined.js'
 ```
 
 
@@ -52,7 +46,7 @@ const success = InputUnderlined.success
 
 
 
-## Module
+## Module Code
 
 <<< @/../src/configs/palettes/InputUnderlined.ts
 

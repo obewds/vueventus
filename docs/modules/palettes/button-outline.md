@@ -22,19 +22,13 @@ An outline themed palette of button colors with properties/values with the keys 
 
 
 
-<!-- TODO: remove example import xxxxx from @obewds/vueventus/dist/... -->
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { ButtonOutline } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import ButtonOutline from '@obewds/vueventus/dist/configs/palettes/ButtonOutline.js'
 ```
 
 
@@ -57,7 +51,7 @@ const buttonSuccess = ButtonOutline.success
 
 
 
-## Module
+## Module Code
 
 <<< @/../src/configs/palettes/ButtonOutline.ts
 

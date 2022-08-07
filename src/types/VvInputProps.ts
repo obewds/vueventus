@@ -1,8 +1,8 @@
 // ./src/types/VvInputProps.ts
 
-import { DefaultValidationPaletteColors } from '../types/DefaultValidationPaletteColors'
-import { DefaultValidationPalette } from '../types/DefaultValidationPalette'
-import ValidInputTypes from '../validators/ValidInputTypes'
+import type { DefaultValidationPaletteColors } from '../types/DefaultValidationPaletteColors'
+import type { DefaultValidationPalette } from '../types/DefaultValidationPalette'
+import ValidInputTypes from '../validators/ValidInputTypes' // TODO should this be a type import?
 
 export interface VvInputProps {
     color: DefaultValidationPaletteColors | string

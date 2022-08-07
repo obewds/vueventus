@@ -106,15 +106,10 @@ It's generally a good idea to go ahead and add an additional `localStorage` chec
 
 
 
+
 ## Import
 
-Import the CLI installation version of the {{ $frontmatter.title }} into your project with:
-
-```javascript
-import VvColorModeButton from '@/components/vv/buttons/VvColorModeButton.vue'
-```
-
-To import the prototyping/compiled lib version of the {{ $frontmatter.title }}, use:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { VvColorModeButton } from '@obewds/vueventus'

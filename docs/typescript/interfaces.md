@@ -20,19 +20,13 @@ These are the VueVentus {{ $frontmatter.title }} Modules are used throughout Vue
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ButtonsSizes
 
-To import the compiled library version of the ButtonsSizes Type:
+### Import
 
 ```javascript
 import type { ButtonsSizes } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ButtonsSizes } from '@obewds/vueventus/dist/types/ButtonsSizes'
 ```
 
 ### Module Code
@@ -47,19 +41,13 @@ import type { ButtonsSizes } from '@obewds/vueventus/dist/types/ButtonsSizes'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ColorMode
 
-To import the compiled library version of the ColorMode Type:
+### Import
 
 ```javascript
 import type { ColorMode } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ColorMode } from '@obewds/vueventus/dist/types/ColorMode'
 ```
 
 ### Module Code
@@ -74,19 +62,13 @@ import type { ColorMode } from '@obewds/vueventus/dist/types/ColorMode'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ConfigAnchors
 
-To import the compiled library version of the ConfigAnchors Type:
+### Import
 
 ```javascript
 import type { ConfigAnchors } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ConfigAnchors } from '@obewds/vueventus/dist/types/ConfigAnchors'
 ```
 
 ### Module Code
@@ -101,19 +83,13 @@ import type { ConfigAnchors } from '@obewds/vueventus/dist/types/ConfigAnchors'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ConfigBorders
 
-To import the compiled library version of the ConfigBorders Type:
+### Import
 
 ```javascript
 import type { ConfigBorders } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ConfigBorders } from '@obewds/vueventus/dist/types/ConfigBorders'
 ```
 
 ### Module Code
@@ -128,19 +104,13 @@ import type { ConfigBorders } from '@obewds/vueventus/dist/types/ConfigBorders'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ConfigButtons
 
-To import the compiled library version of the ConfigButtons Type:
+### Import
 
 ```javascript
 import type { ConfigButtons } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ConfigButtons } from '@obewds/vueventus/dist/types/ConfigButtons'
 ```
 
 ### Module Code
@@ -155,19 +125,13 @@ import type { ConfigButtons } from '@obewds/vueventus/dist/types/ConfigButtons'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ConfigColorMode
 
-To import the compiled library version of the ConfigColorMode Type:
+### Import
 
 ```javascript
 import type { ConfigColorMode } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ConfigColorMode } from '@obewds/vueventus/dist/types/ConfigColorMode'
 ```
 
 ### Module Code
@@ -182,19 +146,13 @@ import type { ConfigColorMode } from '@obewds/vueventus/dist/types/ConfigColorMo
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ConfigDefaults
 
-To import the compiled library version of the ConfigDefaults Type:
+### Import
 
 ```javascript
 import type { ConfigDefaults } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ConfigDefaults } from '@obewds/vueventus/dist/types/ConfigDefaults'
 ```
 
 ### Module Code
@@ -209,19 +167,13 @@ import type { ConfigDefaults } from '@obewds/vueventus/dist/types/ConfigDefaults
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ConfigGrounds
 
-To import the compiled library version of the ConfigGrounds Type:
+### Import
 
 ```javascript
 import type { ConfigGrounds } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ConfigGrounds } from '@obewds/vueventus/dist/types/ConfigGrounds'
 ```
 
 ### Module Code
@@ -236,19 +188,13 @@ import type { ConfigGrounds } from '@obewds/vueventus/dist/types/ConfigGrounds'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ConfigInputs
 
-To import the compiled library version of the ConfigInputs Type:
+### Import
 
 ```javascript
 import type { ConfigInputs } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ConfigInputs } from '@obewds/vueventus/dist/types/ConfigInputs'
 ```
 
 ### Module Code
@@ -263,19 +209,13 @@ import type { ConfigInputs } from '@obewds/vueventus/dist/types/ConfigInputs'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ConfigText
 
-To import the compiled library version of the ConfigText Type:
+### Import
 
 ```javascript
 import type { ConfigText } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ConfigText } from '@obewds/vueventus/dist/types/ConfigText'
 ```
 
 ### Module Code
@@ -289,19 +229,13 @@ import type { ConfigText } from '@obewds/vueventus/dist/types/ConfigText'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ConfigTextareas
 
-To import the compiled library version of the ConfigText Type:
+### Import
 
 ```javascript
 import type { ConfigTextareas } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ConfigTextareas } from '@obewds/vueventus/dist/types/ConfigTextareas'
 ```
 
 ### Module Code
@@ -316,19 +250,13 @@ import type { ConfigTextareas } from '@obewds/vueventus/dist/types/ConfigTextare
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ConfigTransitions
 
-To import the compiled library version of the ConfigTransitions Type:
+### Import
 
 ```javascript
 import type { ConfigTransitions } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ConfigTransitions } from '@obewds/vueventus/dist/types/ConfigTransitions'
 ```
 
 ### Module Code
@@ -343,19 +271,13 @@ import type { ConfigTransitions } from '@obewds/vueventus/dist/types/ConfigTrans
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ConfigVv
 
-To import the compiled library version of the ConfigVv Type:
+### Import
 
 ```javascript
 import type { ConfigVv } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ConfigVv } from '@obewds/vueventus/dist/types/ConfigVv'
 ```
 
 ### Module Code
@@ -370,19 +292,13 @@ import type { ConfigVv } from '@obewds/vueventus/dist/types/ConfigVv'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## DefaultConfigPalette
 
-To import the compiled library version of the DefaultConfigPalette Type:
+### Import
 
 ```javascript
 import type { DefaultConfigPalette } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { DefaultConfigPalette } from '@obewds/vueventus/dist/types/DefaultConfigPalette'
 ```
 
 ### Module Code
@@ -398,19 +314,13 @@ import type { DefaultConfigPalette } from '@obewds/vueventus/dist/types/DefaultC
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## DefaultValidationPalette
 
-To import the compiled library version of the DefaultValidationPalette Type:
+### Import
 
 ```javascript
 import type { DefaultValidationPalette } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { DefaultValidationPalette } from '@obewds/vueventus/dist/types/DefaultValidationPalette'
 ```
 
 ### Module Code
@@ -427,19 +337,13 @@ import type { DefaultValidationPalette } from '@obewds/vueventus/dist/types/Defa
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## DefaultValidationPaletteColors
 
-To import the compiled library version of the DefaultValidationPaletteColors Type:
+### Import
 
 ```javascript
 import type { DefaultValidationPaletteColors } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { DefaultValidationPaletteColors } from '@obewds/vueventus/dist/types/DefaultValidationPaletteColors'
 ```
 
 ### Module Code
@@ -455,19 +359,13 @@ import type { DefaultValidationPaletteColors } from '@obewds/vueventus/dist/type
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## EmptyPalette
 
-To import the compiled library version of the EmptyPalette Type:
+### Import
 
 ```javascript
 import type { EmptyPalette } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { EmptyPalette } from '@obewds/vueventus/dist/types/EmptyPalette'
 ```
 
 ### Module Code
@@ -482,19 +380,13 @@ import type { EmptyPalette } from '@obewds/vueventus/dist/types/EmptyPalette'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## InputsSizes
 
-To import the compiled library version of the InputsSizes Type:
+### Import
 
 ```javascript
 import type { InputsSizes } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { InputsSizes } from '@obewds/vueventus/dist/types/InputsSizes'
 ```
 
 ### Module Code
@@ -509,19 +401,13 @@ import type { InputsSizes } from '@obewds/vueventus/dist/types/InputsSizes'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## TextSizes
 
-To import the compiled library version of the TextSizes Type:
+### Import
 
 ```javascript
 import type { TextSizes } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { TextSizes } from '@obewds/vueventus/dist/types/TextSizes'
 ```
 
 ### Module Code
@@ -536,19 +422,13 @@ import type { TextSizes } from '@obewds/vueventus/dist/types/TextSizes'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## TextareasRowSizes
 
-To import the compiled library version of the TextareasRowSizes Type:
+### Import
 
 ```javascript
 import type { TextareasRowSizes } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { TextareasRowSizes } from '@obewds/vueventus/dist/types/TextareasRowSizes'
 ```
 
 ### Module Code
@@ -564,19 +444,13 @@ import type { TextareasRowSizes } from '@obewds/vueventus/dist/types/TextareasRo
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## TextareasSizes
 
-To import the compiled library version of the TextareasSizes Type:
+### Import
 
 ```javascript
 import type { TextareasSizes } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { TextareasSizes } from '@obewds/vueventus/dist/types/TextareasSizes'
 ```
 
 ### Module Code
@@ -591,19 +465,12 @@ import type { TextareasSizes } from '@obewds/vueventus/dist/types/TextareasSizes
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## TransitionsCustomOptions
 
-To import the compiled library version of the TransitionsCustomOptions Type:
+### Import
 
 ```javascript
 import type { TransitionsCustomOptions } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { TransitionsCustomOptions } from '@obewds/vueventus/dist/types/TransitionsCustomOptions'
 ```
 
 ### Module Code
@@ -618,19 +485,13 @@ import type { TransitionsCustomOptions } from '@obewds/vueventus/dist/types/Tran
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## TransitionsDurations
 
-To import the compiled library version of the TransitionsDurations Type:
+### Import
 
 ```javascript
 import type { TransitionsDurations } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { TransitionsDurations } from '@obewds/vueventus/dist/types/TransitionsDurations'
 ```
 
 ### Module Code
@@ -645,19 +506,13 @@ import type { TransitionsDurations } from '@obewds/vueventus/dist/types/Transiti
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## TransitionsEasings
 
-To import the compiled library version of the TransitionsEasings Type:
+### Import
 
 ```javascript
 import type { TransitionsEasings } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { TransitionsEasings } from '@obewds/vueventus/dist/types/TransitionsEasings'
 ```
 
 ### Module Code
@@ -672,19 +527,13 @@ import type { TransitionsEasings } from '@obewds/vueventus/dist/types/Transition
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## TransitionsTransitions
 
-To import the compiled library version of the TransitionsTransitions Type:
+### Import
 
 ```javascript
 import type { TransitionsTransitions } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { TransitionsTransitions } from '@obewds/vueventus/dist/types/TransitionsTransitions'
 ```
 
 ### Module Code
@@ -699,19 +548,13 @@ import type { TransitionsTransitions } from '@obewds/vueventus/dist/types/Transi
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## VvAnchorProps
 
-To import the compiled library version of the VvAnchorProps Type:
+### Import
 
 ```javascript
 import type { VvAnchorProps } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { VvAnchorProps } from '@obewds/vueventus/dist/types/VvAnchorProps'
 ```
 
 ### Module Code
@@ -726,19 +569,13 @@ import type { VvAnchorProps } from '@obewds/vueventus/dist/types/VvAnchorProps'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## VvButtonProps
 
-To import the compiled library version of the VvButtonProps Type:
+### Import
 
 ```javascript
 import type { VvButtonProps } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { VvButtonProps } from '@obewds/vueventus/dist/types/VvButtonProps'
 ```
 
 ### Module Code
@@ -753,19 +590,13 @@ import type { VvButtonProps } from '@obewds/vueventus/dist/types/VvButtonProps'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## VvColorModeButtonProps
 
-To import the compiled library version of the VvColorModeButtonProps Type:
+### Import
 
 ```javascript
 import type { VvColorModeButtonProps } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { VvColorModeButtonProps } from '@obewds/vueventus/dist/types/VvColorModeButtonProps'
 ```
 
 ### Module Code
@@ -780,19 +611,13 @@ import type { VvColorModeButtonProps } from '@obewds/vueventus/dist/types/VvColo
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## VvElProps
 
-To import the compiled library version of the VvElProps Type:
+### Import
 
 ```javascript
 import type { VvElProps } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { VvElProps } from '@obewds/vueventus/dist/types/VvElProps'
 ```
 
 ### Module Code
@@ -807,19 +632,13 @@ import type { VvElProps } from '@obewds/vueventus/dist/types/VvElProps'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## VvInputProps
 
-To import the compiled library version of the VvInputProps Type:
+### Import
 
 ```javascript
 import type { VvInputProps } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { VvInputProps } from '@obewds/vueventus/dist/types/VvInputProps'
 ```
 
 ### Module Code
@@ -836,19 +655,13 @@ import type { VvInputProps } from '@obewds/vueventus/dist/types/VvInputProps'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## VvListItemProps
 
-To import the compiled library version of the VvListItemProps Type:
+### Import
 
 ```javascript
 import type { VvListItemProps } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { VvListItemProps } from '@obewds/vueventus/dist/types/VvListItemProps'
 ```
 
 ### Module Code
@@ -865,19 +678,13 @@ import type { VvListItemProps } from '@obewds/vueventus/dist/types/VvListItemPro
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## VvTextareaProps
 
-To import the compiled library version of the VvTextareaProps Type:
+### Import
 
 ```javascript
 import type { VvTextareaProps } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { VvTextareaProps } from '@obewds/vueventus/dist/types/VvTextareaProps'
 ```
 
 ### Module Code

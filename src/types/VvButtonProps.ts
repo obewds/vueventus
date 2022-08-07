@@ -1,8 +1,8 @@
 // ./src/types/VvButtonProps.ts
 
-import { DefaultPaletteColors } from './DefaultPaletteColors'
-import { DefaultPalettes } from './DefaultPalettes'
-import ValidButtonTypes from '../validators/ValidButtonTypes'
+import type { DefaultPaletteColors } from './DefaultPaletteColors'
+import type { DefaultPalettes } from './DefaultPalettes'
+import ValidButtonTypes from '../validators/ValidButtonTypes' // TODO should this be a type import?
 
 export interface VvButtonProps {
     block: boolean
