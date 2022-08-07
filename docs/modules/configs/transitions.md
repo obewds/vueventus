@@ -281,7 +281,7 @@ appVv.transitions.transitions.transform = ''
 
 
 
-<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
+
 ## Transitions.classes()
 
 Returns: **`String`**  
@@ -305,20 +305,34 @@ The applicable values for the `durationsKey` argument are set via the [Transitio
 
 ### Examples
 
-```javascript
-const transition = Transitions.classes() // defaults are 'default', 'inOut', '300'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <button :class="appVv.transitions.classes()">
+        Default Transition
+    </button>
+
+    <button :class="appVv.transitions.classes('colors', 'linear', '1000')">
+        Linear Color Transition
+    </button>
+
+</template>
 ```
 
-```javascript
-const transition = Transitions.classes('colors', 'linear', '1000')
-```
 
 
 
 
 
 
-<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
 ## Transitions.custom()
 
 Returns: **`String`**  
@@ -343,23 +357,37 @@ The applicable values for the `object.durations` settings object property are se
 
 ### Examples
 
-```javascript
-const transition = Transitions.custom() // defaults are 'default', 'inOut', '300'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <button :class="appVv.transitions.custom()">
+        Default Transition
+    </button>
+
+    <button :class="appVv.transitions.custom({
+        transitions: 'colors',
+        easings: 'linear',
+        durations: '1000'
+    })">
+        Linear Color Transition
+    </button>
+
+</template>
 ```
 
-```javascript
-const transition = Transitions.custom({
-    transitions: 'colors',
-    easings: 'linear',
-    durations: '1000'
-})
-```
 
 
 
 
 
-<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
 ## Transitions.getDurationClasses()
 
 Returns: **`String`**  
@@ -377,20 +405,34 @@ The applicable values for the `durationsKey` argument are set via the [Transitio
 
 ### Examples
 
-```javascript
-const duration = Transitions.getDurationClasses() // default is '300'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <button :class="appVv.transitions.getDurationClasses()">
+        300ms Default Duration
+    </button>
+
+    <button :class="appVv.transitions.getDurationClasses('1000')">
+       1000ms Duration
+    </button>
+
+</template>
 ```
 
-```javascript
-const duration = Transitions.getDurationClasses('1000')
-```
 
 
 
 
 
 
-<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
 ## Transitions.getEasingClasses()
 
 Returns: **`String`**  
@@ -408,20 +450,34 @@ The applicable values for the `easingsKey` argument are set via the [Transitions
 
 ### Examples
 
-```javascript
-const easing = Transitions.getEasingClasses() // default is 'inOut'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <button :class="appVv.transitions.getEasingClasses()">
+        Ease-In-Out Default Easing
+    </button>
+
+    <button :class="appVv.transitions.getEasingClasses('in')">
+       Ease-In Easing
+    </button>
+
+</template>
 ```
 
-```javascript
-const easing = Transitions.getEasingClasses('in')
-```
 
 
 
 
 
 
-<!-- TODO: change all Transitions.xxx examples to appVv.transitions.xxx syntax like in new ColorModes config docs page -->
 ## Transitions.getTransitionClasses()
 
 Returns: **`String`**  
@@ -439,12 +495,26 @@ The applicable values for the `transitionsKey` argument are set via the [Transit
 
 ### Examples
 
-```javascript
-const transition = Transitions.getTransitionClasses() // default is 'default'
-```
+```html
+<!-- ./src/components/SomeComponent.vue -->
 
-```javascript
-const transition = Transitions.getTransitionClasses('colors')
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <button :class="appVv.transitions.getTransitionClasses()">
+        Default Transition Type
+    </button>
+
+    <button :class="appVv.transitions.getTransitionClasses('colors')">
+       Transition Colors
+    </button>
+
+</template>
 ```
 
 
