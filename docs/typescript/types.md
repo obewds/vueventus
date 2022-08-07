@@ -127,6 +127,27 @@ import type { DefaultValidationPaletteColors } from '@obewds/vueventus'
 
 
 
+## MonthNamesTypesArray
+
+### Import
+
+```javascript
+import type { MonthNamesTypesArray } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/MonthNamesTypesArray.ts
+
+
+
+
+
+
+
+
+
+
 ## ReturnsClassesFunction
 
 ### Import

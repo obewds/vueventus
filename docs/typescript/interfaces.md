@@ -402,6 +402,48 @@ import type { InputsSizes } from '@obewds/vueventus'
 
 
 
+## MonthNames
+
+### Import
+
+```javascript
+import type { MonthNames } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/MonthNames.ts
+
+
+
+
+
+
+
+
+
+
+## MonthNamesTypes
+
+### Import
+
+```javascript
+import type { MonthNamesTypes } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/MonthNamesTypes.ts
+
+
+
+
+
+
+
+
+
+
 ## TextSizes
 
 ### Import
