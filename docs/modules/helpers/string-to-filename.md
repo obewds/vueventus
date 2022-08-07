@@ -57,4 +57,16 @@ console.log( stringToFilename('Test. 12345._@here.jpg') )
 
 
 
+
+
+
+## Module Code
+
+<<< @/../src/helpers/stringToFilename.ts
+
+
+
+
+
+
 <DocsPackageVersion/>
