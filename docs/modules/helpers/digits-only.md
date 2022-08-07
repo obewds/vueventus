@@ -13,14 +13,14 @@ title: digitsOnly() Helper Method
 
 The {{ $frontmatter.title }} module provides a helper function that converts the first argument into a string and then tests it for purely digit characters. If the test passes, then the digits are returned, and otherwise the second argument is returned (which should be the original number).
 
-This helper function is essentially a function tailored specifically for a number counter UI type of functionality.
+This helper function is essentially a function tailored specifically for number counter UI validation.
 
 
 
 
 
 
-<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
+
 ## Import
 
 To import the {{ $frontmatter.title }} helper method:
@@ -33,8 +33,21 @@ import { digitsOnly } from '@obewds/vueventus'
 
 
 
+## Arguments
 
-## Use Example
+Returns: **`Number`**  
+
+| Args           | Type                 | Status     | Description |
+|----------------|:--------------------:|:----------:|-------------|
+| value          | `Number` or `String` | Required   | The string or number to process |
+| originalNumber | `Number`             | Required   | A fallback number if the 1st argument value has no positive integer characters |
+
+
+
+
+
+
+## Use Examples
 
 ```javascript
 const startNumber = 10
@@ -54,6 +67,18 @@ console.log( digitsOnly('11.123', startNumber) )
 console.log( digitsOnly('abc', startNumber) )
 // returns (number): 10
 ```
+
+
+
+
+
+
+
+
+
+## Module Code
+
+<<< @/../src/helpers/digitsOnly.ts
 
 
 
