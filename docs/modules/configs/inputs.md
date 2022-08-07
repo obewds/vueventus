@@ -339,7 +339,7 @@ appVv.inputs.transition = '...'
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
+
 ## Inputs.base()
 
 Returns: **`String`**  
@@ -349,8 +349,20 @@ The `Inputs.base()` method returns a joined `String` of the atomic classes withi
 
 ### Example
 
-```javascript
-const inputsBase = Inputs.base()
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <input :class="appVv.inputs.base()"/>
+
+</template>
 ```
 
 
@@ -359,7 +371,11 @@ const inputsBase = Inputs.base()
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
+
+
+
+
+
 ## Inputs.classes()
 
 Returns: **`String`**  
@@ -379,13 +395,24 @@ The applicable values for the `sizesKey` argument are set via the [Inputs.sizes]
 
 ### Examples
 
-```javascript
-const inputsClasses = Inputs.classes() // default is 'md'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <input placeholder="Regular Sized Input" :class="appVv.inputs.classes()"/>
+
+    <input placeholder="Large Sized Input" :class="appVv.inputs.classes('lg')"/>
+
+</template>
 ```
 
-```javascript
-const inputsClasses = Inputs.classes('lg')
-```
 
 
 
@@ -393,7 +420,6 @@ const inputsClasses = Inputs.classes('lg')
 
 
 
-<!-- TODO: change all Inputs.xxx examples to appVv.inputs.xxx syntax like in new ColorModes config docs page -->
 ## Inputs.getSizeClasses()
 
 Returns: **`String`**  
@@ -411,12 +437,22 @@ The applicable values for the `sizesKey` argument are set via the [Inputs.sizes]
 
 ### Examples
 
-```javascript
-const inputsSizeClasses = Inputs.getSizeClasses() // default is 'md'
-```
+```html
+<!-- ./src/components/SomeComponent.vue -->
 
-```javascript
-const inputsSizeClasses = Inputs.getSizeClasses('sm')
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <input placeholder="Regular Sized Input" :class="appVv.inputs.getSizeClasses()"/>
+
+    <input placeholder="Large Sized Input" :class="appVv.inputs.getSizeClasses('lg')"/>
+
+</template>
 ```
 
 
