@@ -327,7 +327,7 @@ appVv.text.wordBreak = '...'
 
 
 
-<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
+
 ## Text.base()
 
 Returns: **`String`**  
@@ -337,8 +337,22 @@ The `Text.base()` method returns a joined `String` of the atomic classes within 
 
 ### Example
 
-```javascript
-const textBase = Text.base()
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <div :class="appVv.text.base()">
+        Base styled text
+    </div>
+
+</template>
 ```
 
 
@@ -346,7 +360,7 @@ const textBase = Text.base()
 
 
 
-<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
+
 ## Text.classes()
 
 Returns: **`String`**  
@@ -366,21 +380,34 @@ The applicable values for the `sizesKey` argument are set via the [Text.sizes](/
 
 ### Examples
 
+```html
+<!-- ./src/components/SomeComponent.vue -->
 
-```javascript
-const textClasses = Text.classes() // default is 'md'
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <div :class="appVv.text.classes()">
+        Regular sized text
+    </div>
+
+    <div :class="appVv.text.classes('lg')">
+        Large sized text
+    </div>
+
+</template>
 ```
 
-```javascript
-const textClasses = Text.classes('lg')
-```
 
 
 
 
 
 
-<!-- TODO: change all Text.xxx examples to appVv.text.xxx syntax like in new ColorModes config docs page -->
 ## Text.getSizeClasses()
 
 Returns: **`String`**  
@@ -398,12 +425,26 @@ The applicable values for the `sizesKey` argument are set via the [Text.sizes](/
 
 ### Examples
 
-```javascript
-const textSizeClasses = Text.getSizeClasses() // default is 'md'
-```
+```html
+<!-- ./src/components/SomeComponent.vue -->
 
-```javascript
-const textSizeClasses = Text.getSizeClasses('sm')
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <div :class="appVv.text.getSizeClasses()">
+        Regular sized text
+    </div>
+
+    <div :class="appVv.text.getSizeClasses('sm')">
+        Small sized text
+    </div>
+
+</template>
 ```
 
 

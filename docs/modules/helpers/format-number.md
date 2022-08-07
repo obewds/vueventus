@@ -19,7 +19,7 @@ The {{ $frontmatter.title }} module provides a helper function that returns it's
 
 
 
-<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
+
 ## Import
 
 To import the {{ $frontmatter.title }} helper method:
@@ -27,6 +27,21 @@ To import the {{ $frontmatter.title }} helper method:
 ```javascript
 import { formatNumber } from '@obewds/vueventus'
 ```
+
+
+
+
+
+
+
+
+## Arguments
+
+Returns: **`String`**  
+
+| Args   | Type     | Status   | Description |
+|--------|:--------:|:--------:|-------------|
+| number | `Number` | Required | A number to format as a human readable number string (with thousandths separators etc.) |
 
 
 

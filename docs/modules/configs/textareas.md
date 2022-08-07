@@ -380,7 +380,7 @@ appVv.textareas.transition = '...'
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
+
 ## Textareas.base()
 
 Returns: **`String`**  
@@ -390,8 +390,20 @@ The `Textareas.base()` method returns a joined `String` of the atomic classes wi
 
 ### Example
 
-```javascript
-const inputsBase = Textareas.base()
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <textarea :class="appVv.textareas.base()"/>
+
+</template>
 ```
 
 
@@ -400,7 +412,7 @@ const inputsBase = Textareas.base()
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
+
 ## Textareas.classes()
 
 Returns: **`String`**  
@@ -420,13 +432,24 @@ The applicable values for the `sizesKey` argument are set via the [Textareas.siz
 
 ### Examples
 
-```javascript
-const inputsClasses = Textareas.classes() // default is 'md'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <textarea placeholder="Regular size" :class="appVv.textareas.classes()"/>
+
+    <textarea placeholder="Large size" :class="appVv.textareas.classes('lg')"/>
+
+</template>
 ```
 
-```javascript
-const inputsClasses = Textareas.classes('lg')
-```
 
 
 
@@ -434,7 +457,6 @@ const inputsClasses = Textareas.classes('lg')
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.getSizeClasses()
 
 Returns: **`String`**  
@@ -452,13 +474,24 @@ The applicable values for the `sizesKey` argument are set via the [Textareas.siz
 
 ### Examples
 
-```javascript
-const inputsSizeClasses = Textareas.getSizeClasses() // default is 'md'
+```html
+<!-- ./src/components/SomeComponent.vue -->
+
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <textarea placeholder="Regular size" :class="appVv.textareas.getSizeClasses()"/>
+
+    <textarea placeholder="Small size" :class="appVv.textareas.getSizeClasses('sm')"/>
+
+</template>
 ```
 
-```javascript
-const inputsSizeClasses = Textareas.getSizeClasses('sm')
-```
 
 
 
@@ -466,7 +499,6 @@ const inputsSizeClasses = Textareas.getSizeClasses('sm')
 
 
 
-<!-- TODO: change all Textareas.xxx examples to appVv.textareas.xxx syntax like in new ColorModes config docs page -->
 ## Textareas.getRowSize()
 
 Returns: **`String`**  
@@ -484,12 +516,22 @@ The applicable values for the `sizesKey` argument are set via the [Textareas.row
 
 ### Examples
 
-```javascript
-const inputsSizeClasses = Textareas.getRowSize() // default key is 'md' = 4
-```
+```html
+<!-- ./src/components/SomeComponent.vue -->
 
-```javascript
-const inputsSizeClasses = Textareas.getRowSize('sm')
+<script setup lang="ts">
+
+    import appVv from '../app.vv'
+    
+</script>
+
+<template>
+
+    <textarea placeholder="Regular Row Size" :class="appVv.textareas.getRowSize()"/>
+
+    <textarea placeholder="Small Row Size" :class="appVv.textareas.getRowSize('sm')"/>
+
+</template>
 ```
 
 

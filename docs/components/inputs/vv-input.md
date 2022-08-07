@@ -30,7 +30,45 @@ import { VvInput } from '@obewds/vueventus'
 
 
 
-<!-- TODO: Add documentation/example for new component emit functionality -->
+
+
+
+
+
+
+## Emits: update:modelValue
+
+Emits: **`update:modelValue`**  
+
+The {{ $frontmatter.title }} emits a standard Vue key of `update:modelValue` upon input event changes of the component's generated input value attribute.
+
+::: tip
+This means when using the {{ $frontmatter.title }} downstream in an end application, you can safely use Vue's `v-model` binding to two-way bind a reactive value through your downstream component and into (and back from) the {{ $frontmatter.title }} instance.
+:::
+
+### Example
+
+```html
+<!-- ./src/components/AppInput.vue -->
+
+<script setup lang="ts">
+
+    import { ref } from 'vue'
+    import { VvInput } from '@obewds/vueventus'
+
+    const someValue = ref('')
+
+</script>
+
+<template>
+
+    <VvInput v-model="someValue"/>
+
+</template>
+```
+
+
+
 
 
 

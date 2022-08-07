@@ -22,7 +22,7 @@ Lastly, the method's third optional property currently accepts one of three stri
 
 
 
-<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
+
 ## Import
 
 To import the {{ $frontmatter.title }} helper method:
@@ -30,6 +30,21 @@ To import the {{ $frontmatter.title }} helper method:
 ```javascript
 import { formatDateTraditional } from '@obewds/vueventus'
 ```
+
+
+
+
+
+
+## Arguments
+
+Returns: **`String`**  
+
+| Args     | Type          | Status     | Description |
+|----------|:-------------:|:----------:|-------------|
+| date     | `Date object` | Required   | A JavaScript Date object set to the desired date |
+| format   | `String`      | Optional   | Expects a string with a value of either `"short"` or `"long"` and sets either short or long form verbiage for the output traditional date string |
+| language | `String`      | Optional   | Expects a string with a value of either `"english"`, `"french"` or `"spanish"` and sets the langue of the output traditional date string's month value |
 
 
 

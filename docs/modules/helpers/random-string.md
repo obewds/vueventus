@@ -19,7 +19,7 @@ The {{ $frontmatter.title }} module provides a helper function that generates a 
 
 
 
-<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
+
 ## Import
 
 To import the {{ $frontmatter.title }} helper method:
@@ -27,6 +27,22 @@ To import the {{ $frontmatter.title }} helper method:
 ```javascript
 import { randomString } from '@obewds/vueventus'
 ```
+
+
+
+
+
+
+
+
+
+## Arguments
+
+Returns: **`String`**  
+
+| Args   | Type     | Status   | Description |
+|--------|:--------:|:--------:|-------------|
+| length | `Number` | Optional | Desired length of the output randomized string characters, where no argument will return a default value of a `10` character long randomized string |
 
 
 
