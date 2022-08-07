@@ -19,7 +19,7 @@ The {{ $frontmatter.title }} module provides a helper function that takes an arr
 
 
 
-<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
+
 ## Import
 
 To import the {{ $frontmatter.title }} helper method:
@@ -27,6 +27,29 @@ To import the {{ $frontmatter.title }} helper method:
 ```javascript
 import { uniqueArray } from '@obewds/vueventus'
 ```
+
+
+
+
+
+
+
+
+
+
+
+## Arguments
+
+Returns: **`String`**  
+
+| Args  | Type    | Status   | Description |
+|-------|:-------:|:--------:|-------------|
+| array | `Array` | Required | An array of values to reduce to only unique values and eliminate any duplicate values |
+
+
+
+
+
 
 
 

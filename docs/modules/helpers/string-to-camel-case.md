@@ -19,7 +19,7 @@ The {{ $frontmatter.title }} module provides a helper function that converts a p
 
 
 
-<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
+
 ## Import
 
 To import the {{ $frontmatter.title }} helper method:
@@ -27,6 +27,27 @@ To import the {{ $frontmatter.title }} helper method:
 ```javascript
 import { stringToCamelCase } from '@obewds/vueventus'
 ```
+
+
+
+
+
+
+
+
+
+
+
+## Arguments
+
+Returns: **`String`**  
+
+| Args | Type     | Status   | Description |
+|------|:--------:|:--------:|-------------|
+| text | `String` | Required | String to convert into camel case format |
+
+
+
 
 
 

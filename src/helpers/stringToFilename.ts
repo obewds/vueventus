@@ -1,7 +1,7 @@
 // ./src/helpers/stringToFilename.ts
 
-export default function(str: string): string {
+export default function(string: string): string {
 
-    return str.replace(/[^A-z0-9._-]/gi, '')
+    return string.replace(/[^A-z0-9._-]/gi, '')
 
 }
