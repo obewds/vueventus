@@ -12,7 +12,7 @@ export interface ConfigVv {
     borders: ConfigBorders;
     buttons: ConfigButtons;
     inputs: ConfigInputs;
-    colorMode: ConfigColorMode;
+    colorModes: ConfigColorMode;
     grounds: ConfigGrounds;
     text: ConfigText;
     textareas: ConfigTextareas;
