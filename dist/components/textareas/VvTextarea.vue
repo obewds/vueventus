@@ -9,6 +9,8 @@
 
         name: 'VvTextarea',
 
+        emits: ['update:modelValue'],
+
         props: {
             color: {
                 type: String,
@@ -25,6 +27,10 @@
             rowSize: {
                 type: String,
                 default: VvConfig.defaults.VvTextarea.rowSize,
+            },
+            modelValue: {
+                type: String,
+                default: '',
             },
         },
 
@@ -58,7 +64,9 @@
                 }
             })
 
-            return { classes, rows }
+            const handleTextareaChange = (event: Event) => (event.target as HTMLTextAreaElement).value
+
+            return { classes, rows, handleTextareaChange }
 
         },
 
@@ -69,6 +77,11 @@
 
 <template>
 
-    <textarea :class="classes" :rows="rows"/>
+    <textarea
+        :class="classes"
+        :rows="rows"
+        :value="modelValue"
+        @input="$emit('update:modelValue', handleTextareaChange($event as any))"
+    />
 
 </template>

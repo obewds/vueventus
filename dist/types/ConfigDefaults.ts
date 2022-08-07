@@ -1,12 +1,12 @@
 // ./src/types/ConfigDefaults.ts
 
-import { VvAnchorProps } from '../types/VvAnchorProps'
-import { VvButtonProps } from '../types/VvButtonProps'
-import { VvColorModeButtonProps } from '../types/VvColorModeButtonProps'
-import { VvElProps } from '../types/VvElProps'
-import { VvInputProps } from '../types/VvInputProps'
-import { VvListItemProps } from '../types/VvListItemProps'
-import { VvTextareaProps } from '../types/VvTextareaProps'
+import type { VvAnchorProps } from '../types/VvAnchorProps'
+import type { VvButtonProps } from '../types/VvButtonProps'
+import type { VvColorModeButtonProps } from '../types/VvColorModeButtonProps'
+import type { VvElProps } from '../types/VvElProps'
+import type { VvInputProps } from '../types/VvInputProps'
+import type { VvListItemProps } from '../types/VvListItemProps'
+import type { VvTextareaProps } from '../types/VvTextareaProps'
 
 
 export interface ConfigDefaults {

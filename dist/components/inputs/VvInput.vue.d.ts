@@ -17,9 +17,14 @@ declare const _default: import("vue").DefineComponent<{
         default: "number" | "search" | "time" | "text" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "tel" | "url";
         validator: (prop: ValidInputTypes) => boolean;
     };
+    modelValue: {
+        type: StringConstructor;
+        default: string;
+    };
 }, {
     classes: import("vue").ComputedRef<string>;
-}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+    handleInputChange: (event: Event) => string;
+}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "update:modelValue"[], "update:modelValue", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     color: {
         type: StringConstructor;
         default: string | import("../..").DefaultValidationPaletteColors;
@@ -37,10 +42,17 @@ declare const _default: import("vue").DefineComponent<{
         default: "number" | "search" | "time" | "text" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "tel" | "url";
         validator: (prop: ValidInputTypes) => boolean;
     };
-}>>, {
+    modelValue: {
+        type: StringConstructor;
+        default: string;
+    };
+}>> & {
+    "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
+}, {
     color: string;
     palette: string;
     type: string;
     size: string;
+    modelValue: string;
 }>;
 export default _default;

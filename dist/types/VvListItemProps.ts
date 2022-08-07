@@ -1,7 +1,7 @@
 // ./src/types/VvListItemProps.ts
 
-import { DefaultPaletteColors } from './DefaultPaletteColors'
-import { DefaultPalettes } from './DefaultPalettes'
+import type { DefaultPaletteColors } from './DefaultPaletteColors'
+import type { DefaultPalettes } from './DefaultPalettes'
 
 export interface VvListItemProps {
     palette: DefaultPalettes | string

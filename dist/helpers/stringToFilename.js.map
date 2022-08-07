@@ -1,1 +1,1 @@
-{"version":3,"file":"stringToFilename.js","sourceRoot":"","sources":["../../src/helpers/stringToFilename.ts"],"names":[],"mappings":"AAAA,oCAAoC;AAEpC,MAAM,CAAC,OAAO,WAAU,GAAW;IAE/B,OAAO,GAAG,CAAC,OAAO,CAAC,gBAAgB,EAAE,EAAE,CAAC,CAAA;AAE5C,CAAC"}
+{"version":3,"file":"stringToFilename.js","sourceRoot":"","sources":["../../src/helpers/stringToFilename.ts"],"names":[],"mappings":"AAAA,oCAAoC;AAEpC,MAAM,CAAC,OAAO,WAAU,MAAc;IAElC,OAAO,MAAM,CAAC,OAAO,CAAC,gBAAgB,EAAE,EAAE,CAAC,CAAA;AAE/C,CAAC"}

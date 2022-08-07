@@ -1,1 +1,1 @@
-export default function (currentTime: string): string;
+export default function (currentTime: string | number): string;

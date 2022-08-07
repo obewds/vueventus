@@ -66,10 +66,13 @@ declare const _default: {
         getSizeClasses: import("../index.js").ReturnsClassesFunction;
         classes: import("../index.js").ReturnsClassesFunction;
     };
-    colorMode: {
-        [x: string]: import("../index.js").ColorMode;
+    colorModes: {
+        [x: string]: any;
         dark: import("../index.js").ColorMode;
         light: import("../index.js").ColorMode;
+        base: import("../index.js").BaseFunction;
+        transition: string | undefined;
+        classes: import("../index.js").ReturnsClassesFunction;
     };
     grounds: {
         palettes: {

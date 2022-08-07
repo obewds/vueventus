@@ -1,1 +1,1 @@
-export default function (text: string, separator: string): string;
+export default function (text: string, separator?: string): string;

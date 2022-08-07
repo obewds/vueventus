@@ -1,8 +1,8 @@
-import { BaseFunction } from './BaseFunction';
-import { DefaultValidationPalette } from './DefaultValidationPalette';
-import { EmptyPalette } from './EmptyPalette';
-import { InputsSizes } from './InputsSizes';
-import { ReturnsClassesFunction } from './ReturnsClassesFunction';
+import type { BaseFunction } from './BaseFunction';
+import type { DefaultValidationPalette } from './DefaultValidationPalette';
+import type { EmptyPalette } from './EmptyPalette';
+import type { InputsSizes } from './InputsSizes';
+import type { ReturnsClassesFunction } from './ReturnsClassesFunction';
 export interface ConfigInputs {
     border: string | undefined;
     display: string | undefined;
