@@ -41,7 +41,7 @@ export default {
         type: 'text',
     },
     "VvListItem": {
-        color: 'default',
+        color: 'neutral',
         enableColoredSymbols: true,
         palette: 'default',
         symbolColor: 'primary',

@@ -19,14 +19,37 @@ The {{ $frontmatter.title }} module provides a helper function that takes a stri
 
 
 
-<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
+
 ## Import
 
-To import the {{ $frontmatter.title }} helper method:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { slugifyString } from '@obewds/vueventus'
 ```
+
+
+
+
+
+
+
+
+
+
+## Arguments
+
+Returns: **`String`**  
+
+| Args      | Type     | Status   | Description |
+|-----------|:--------:|:--------:|-------------|
+| text      | `String` | Required | String to turn into a slug (URL safe) string |
+| separator | `String` | Optional | String to use as the separator for the returned slug string |
+
+
+
+
+
 
 
 

@@ -19,14 +19,36 @@ The {{ $frontmatter.title }} module provides a helper function that takes in a s
 
 
 
-<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
+
 ## Import
 
-To import the {{ $frontmatter.title }} helper method:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { stringToFilename } from '@obewds/vueventus'
 ```
+
+
+
+
+
+
+
+
+
+
+
+## Arguments
+
+Returns: **`String`**  
+
+| Args | Type     | Status   | Description |
+|------|:--------:|:--------:|-------------|
+| text | `String` | Required | String to convert to a file name safe format |
+
+
+
+
 
 
 

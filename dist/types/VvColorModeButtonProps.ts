@@ -1,7 +1,7 @@
 // ./src/types/VvColorModeButtonProps.ts
 
-import { DefaultPaletteColors } from './DefaultPaletteColors'
-import { DefaultPalettes } from './DefaultPalettes'
+import type { DefaultPaletteColors } from './DefaultPaletteColors'
+import type { DefaultPalettes } from './DefaultPalettes'
 import ValidButtonTypes from '../validators/ValidButtonTypes'
 
 export interface VvColorModeButtonProps {

@@ -1,12 +1,12 @@
-import { ConfigAnchors } from './ConfigAnchors';
-import { ConfigBorders } from './ConfigBorders';
-import { ConfigButtons } from './ConfigButtons';
-import { ConfigColorMode } from './ConfigColorMode';
-import { ConfigGrounds } from './ConfigGrounds';
-import { ConfigInputs } from './ConfigInputs';
-import { ConfigText } from './ConfigText';
-import { ConfigTextareas } from './ConfigTextareas';
-import { ConfigTransitions } from './ConfigTransitions';
+import type { ConfigAnchors } from './ConfigAnchors';
+import type { ConfigBorders } from './ConfigBorders';
+import type { ConfigButtons } from './ConfigButtons';
+import type { ConfigColorMode } from './ConfigColorMode';
+import type { ConfigGrounds } from './ConfigGrounds';
+import type { ConfigInputs } from './ConfigInputs';
+import type { ConfigText } from './ConfigText';
+import type { ConfigTextareas } from './ConfigTextareas';
+import type { ConfigTransitions } from './ConfigTransitions';
 export interface ConfigVv {
     anchors: ConfigAnchors;
     borders: ConfigBorders;

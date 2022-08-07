@@ -36,35 +36,35 @@
             },
             groundDark: {
                 type: String,
-                default: VvConfig.colorMode.dark.ground,
+                default: VvConfig.colorModes.dark.ground,
             },
             groundDarkHex: {
                 type: String,
-                default: VvConfig.colorMode.dark.hex,
+                default: VvConfig.colorModes.dark.hex,
             },
             groundLight: {
                 type: String,
-                default: VvConfig.colorMode.light.ground,
+                default: VvConfig.colorModes.light.ground,
             },
             groundLightHex: {
                 type: String,
-                default: VvConfig.colorMode.light.hex,
+                default: VvConfig.colorModes.light.hex,
             },
             textDark: {
                 type: String,
-                default: VvConfig.colorMode.dark.text,
+                default: VvConfig.colorModes.dark.text,
             },
             textLight: {
                 type: String,
-                default: VvConfig.colorMode.light.text,
+                default: VvConfig.colorModes.light.text,
             },
             titleDark: {
                 type: String,
-                default: VvConfig.colorMode.dark.title,
+                default: VvConfig.colorModes.dark.title,
             },
             titleLight: {
                 type: String,
-                default: VvConfig.colorMode.light.title,
+                default: VvConfig.colorModes.light.title,
             },
             type: {
                 type: String,
@@ -81,30 +81,32 @@
 
             onMounted( () => {
             
-                if (document && mode.value === 'light') {
-                    document.documentElement.classList.remove(
-                        'dark',
-                        props.groundDark,
-                        props.textDark
-                    )
-                    document.documentElement.classList.add(
-                        props.groundLight,
-                        props.textLight
-                    )
-                    document.documentElement.style.backgroundColor = props.groundLightHex
-                }
+                if (typeof window !== 'undefined' && document) {
 
-                if (document && mode.value === 'dark') {
-                    document.documentElement.classList.remove(
-                        props.groundLight,
-                        props.textLight
-                    )
                     document.documentElement.classList.add(
-                        'dark',
+                        props.groundLight,
                         props.groundDark,
+                        props.textLight,
                         props.textDark
                     )
-                    document.documentElement.style.backgroundColor = props.groundDarkHex
+
+                    document.body.classList.add(
+                        props.textLight,
+                        props.textDark
+                    )
+
+                    if (mode.value === 'light') {
+
+                        document.documentElement.classList.remove( 'dark' )
+                        document.documentElement.style.backgroundColor = props.groundLightHex
+
+                    } else if (mode.value === 'dark') {
+
+                        document.documentElement.classList.add( 'dark' )
+                        document.documentElement.style.backgroundColor = props.groundDarkHex
+                        
+                    }
+
                 }
 
             })
@@ -116,33 +118,27 @@
         methods: {
 
             toggleColorMode (event: Event): void {
-                if (document && this.mode === 'light') {
-                    this.mode = 'dark'
-                    localStorage.setItem('colorMode', 'dark')
-                    document.documentElement.classList.remove(
-                        this.groundLight,
-                        this.textLight
-                    )
-                    document.documentElement.classList.add(
-                        'dark',
-                        this.groundDark,
-                        this.textDark
-                    )
-                    document.documentElement.style.backgroundColor = this.groundDarkHex
-                } else if (document && this.mode === 'dark') {
-                    this.mode = 'light'
-                    localStorage.setItem('colorMode', 'light')
-                    document.documentElement.classList.remove(
-                        'dark',
-                        this.groundDark,
-                        this.textDark
-                    )
-                    document.documentElement.classList.add(
-                        this.groundLight,
-                        this.textLight
-                    )
-                    document.documentElement.style.backgroundColor = this.groundLightHex
+
+                if (typeof window !== 'undefined' && document ) {
+                
+                    if (this.mode === 'light') {
+
+                        this.mode = 'dark'
+                        localStorage.setItem('colorMode', 'dark')
+                        document.documentElement.style.backgroundColor = this.groundDarkHex
+                        document.documentElement.classList.add( 'dark' )
+                        
+                    } else if (this.mode === 'dark') {
+
+                        this.mode = 'light'
+                        localStorage.setItem('colorMode', 'light')
+                        document.documentElement.style.backgroundColor = this.groundLightHex
+                        document.documentElement.classList.remove( 'dark' )
+
+                    }
+                
                 }
+
             }
 
         },

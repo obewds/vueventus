@@ -67,10 +67,13 @@ export default function (appTwConfig: typeof VvConfig): {
         getSizeClasses: import("..").ReturnsClassesFunction;
         classes: import("..").ReturnsClassesFunction;
     };
-    colorMode: {
-        [x: string]: import("..").ColorMode;
+    colorModes: {
+        [x: string]: any;
         dark: import("..").ColorMode;
         light: import("..").ColorMode;
+        base: import("..").BaseFunction;
+        transition: string | undefined;
+        classes: import("..").ReturnsClassesFunction;
     };
     grounds: {
         palettes: {

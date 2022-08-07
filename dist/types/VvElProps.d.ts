@@ -1,5 +1,5 @@
-import { DefaultPaletteColors } from './DefaultPaletteColors';
-import { DefaultPalettes } from './DefaultPalettes';
+import type { DefaultPaletteColors } from './DefaultPaletteColors';
+import type { DefaultPalettes } from './DefaultPalettes';
 import ValidElementTags from '../validators/ValidElementTags';
 export interface VvElProps {
     borderPalette: DefaultPalettes | string;

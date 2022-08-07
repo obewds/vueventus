@@ -15,10 +15,15 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
+    modelValue: {
+        type: StringConstructor;
+        default: string;
+    };
 }, {
     classes: import("vue").ComputedRef<string>;
     rows: import("vue").ComputedRef<number | undefined>;
-}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+    handleTextareaChange: (event: Event) => string;
+}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "update:modelValue"[], "update:modelValue", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     color: {
         type: StringConstructor;
         default: string | import("../../index.js").DefaultValidationPaletteColors;
@@ -35,10 +40,17 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-}>>, {
+    modelValue: {
+        type: StringConstructor;
+        default: string;
+    };
+}>> & {
+    "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
+}, {
     color: string;
     palette: string;
     size: string;
+    modelValue: string;
     rowSize: string;
 }>;
 export default _default;

@@ -1,6 +1,6 @@
 // ./src/helpers/formatMediaTime.ts
 export default function (currentTime) {
-    let sec_num = parseInt(currentTime, 10);
+    let sec_num = parseInt(String(currentTime), 10);
     let days = Math.floor(parseInt(String(Number(sec_num) / (24 * 3600))));
     sec_num = sec_num % (24 * 3600);
     let hours = Math.floor(parseInt(String(Number(sec_num) / 3600)));

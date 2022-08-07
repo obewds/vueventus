@@ -1,11 +1,11 @@
 // ./src/types/ConfigTransitions.ts
 
-import { ReturnsClassesFunction } from './ReturnsClassesFunction'
-import { TransitionsClasses } from './TransitionsClasses'
-import { TransitionsCustom } from './TransitionsCustom'
-import { TransitionsDurations } from './TransitionsDurations'
-import { TransitionsEasings } from './TransitionsEasings'
-import { TransitionsTransitions } from './TransitionsTransitions'
+import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
+import type { TransitionsClasses } from './TransitionsClasses'
+import type { TransitionsCustom } from './TransitionsCustom'
+import type { TransitionsDurations } from './TransitionsDurations'
+import type { TransitionsEasings } from './TransitionsEasings'
+import type { TransitionsTransitions } from './TransitionsTransitions'
 
 export interface ConfigTransitions {
     durations: TransitionsDurations

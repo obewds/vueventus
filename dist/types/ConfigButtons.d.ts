@@ -1,8 +1,8 @@
-import { BaseFunction } from './BaseFunction';
-import { DefaultConfigPalette } from '../types/DefaultConfigPalette';
-import { EmptyPalette } from './EmptyPalette';
-import { ReturnsClassesFunction } from './ReturnsClassesFunction';
-import { ButtonsSizes } from './ButtonsSizes';
+import type { BaseFunction } from './BaseFunction';
+import type { DefaultConfigPalette } from '../types/DefaultConfigPalette';
+import type { EmptyPalette } from './EmptyPalette';
+import type { ReturnsClassesFunction } from './ReturnsClassesFunction';
+import type { ButtonsSizes } from './ButtonsSizes';
 export interface ConfigButtons {
     border: string | undefined;
     cursor: string | undefined;

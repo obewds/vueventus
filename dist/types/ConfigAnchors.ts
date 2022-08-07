@@ -1,10 +1,10 @@
 // ./src/types/ConfigAnchors.ts
 
-import { DefaultConfigPalette } from '../types/DefaultConfigPalette'
-import { BaseFunction } from './BaseFunction'
-import { EmptyPalette } from './EmptyPalette'
-import { ReturnsClassesFunction } from './ReturnsClassesFunction'
-import { TextSizes } from './TextSizes'
+import type { DefaultConfigPalette } from '../types/DefaultConfigPalette'
+import type { BaseFunction } from './BaseFunction'
+import type { EmptyPalette } from './EmptyPalette'
+import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
+import type { TextSizes } from './TextSizes'
 
 export interface ConfigAnchors {
     cursor: string | undefined

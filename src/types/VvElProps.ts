@@ -2,7 +2,7 @@
 
 import type { DefaultPaletteColors } from './DefaultPaletteColors'
 import type { DefaultPalettes } from './DefaultPalettes'
-import ValidElementTags from '../validators/ValidElementTags' // TODO should this be a type import?
+import ValidElementTags from '../validators/ValidElementTags'
 
 export interface VvElProps {
     borderPalette: DefaultPalettes | string

@@ -2,7 +2,7 @@
 
 import type { DefaultPaletteColors } from './DefaultPaletteColors'
 import type { DefaultPalettes } from './DefaultPalettes'
-import ValidButtonTypes from '../validators/ValidButtonTypes' // TODO should this be a type import?
+import ValidButtonTypes from '../validators/ValidButtonTypes'
 
 export interface VvButtonProps {
     block: boolean

@@ -25,7 +25,7 @@ Lastly, the method's third optional property currently accepts one of three stri
 
 ## Import
 
-To import the {{ $frontmatter.title }} helper method:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { formatDateTraditional } from '@obewds/vueventus'
