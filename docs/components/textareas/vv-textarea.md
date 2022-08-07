@@ -21,16 +21,10 @@ The {{ $frontmatter.title }} provides a set of props and config module based set
 
 
 
-<!-- TODO: replace ''@/components/vv/...' imports with { xxx } from '@obewds/vueventus' imports -->
+
 ## Import
 
-Import the CLI installation version of the {{ $frontmatter.title }} into your project with:
-
-```javascript
-import VvTextarea from '@/components/vv/textareas/VvTextarea.vue'
-```
-
-To import the prototyping/compiled lib version of the {{ $frontmatter.title }}, use:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { VvTextarea } from '@obewds/vueventus'

@@ -19,19 +19,13 @@ A console themed palette of ground colors with properties/values with the keys o
 
 
 
-<!-- TODO: remove example import xxxxx from @obewds/vueventus/dist/... -->
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { GroundConsole } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import GroundConsole from '@obewds/vueventus/dist/configs/palettes/GroundConsole.js'
 ```
 
 
@@ -54,7 +48,7 @@ const bgSuccess = GroundConsole.success
 
 
 
-## Module
+## Module Code
 
 <<< @/../src/configs/palettes/GroundConsole.ts
 

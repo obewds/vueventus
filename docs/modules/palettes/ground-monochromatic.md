@@ -19,19 +19,13 @@ A monochromatic themed palette of ground colors with properties/values with the 
 
 
 
-<!-- TODO: remove example import xxxxx from @obewds/vueventus/dist/... -->
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { GroundMonochromatic } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import GroundMonochromatic from '@obewds/vueventus/dist/configs/palettes/GroundMonochromatic.js'
 ```
 
 
@@ -54,7 +48,7 @@ const bgSuccess = GroundMonochromatic.success
 
 
 
-## Module
+## Module Code
 
 <<< @/../src/configs/palettes/GroundMonochromatic.ts
 

@@ -19,19 +19,13 @@ A validation focused palette of a variety of color class types for use with form
 
 
 
-<!-- TODO: remove example import xxxxx from @obewds/vueventus/dist/... -->
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { InputDefault } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import InputDefault from '@obewds/vueventus/dist/configs/palettes/InputDefault.js'
 ```
 
 
@@ -52,7 +46,7 @@ const success = InputDefault.success
 
 
 
-## Module
+## Module Code
 
 <<< @/../src/configs/palettes/InputDefault.ts
 

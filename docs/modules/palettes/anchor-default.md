@@ -21,19 +21,11 @@ A default palette of anchor colors with properties/values with the keys of `defa
 
 
 
-<!-- TODO: remove example import xxxxx from @obewds/vueventus/dist/... -->
-## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+## Import
 
 ```javascript
 import { AnchorDefault } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import AnchorDefault from '@obewds/vueventus/dist/configs/palettes/AnchorDefault.js'
 ```
 
 
@@ -56,7 +48,7 @@ const anchorSuccess = AnchorDefault.success
 
 
 
-## Module
+## Module Code
 
 <<< @/../src/configs/palettes/AnchorDefault.ts
 

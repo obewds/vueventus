@@ -19,19 +19,13 @@ A default palette of text colors with properties/values with the keys of `defaul
 
 
 
-<!-- TODO: remove example import xxxxx from @obewds/vueventus/dist/... -->
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { TextDefault } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import TextDefault from '@obewds/vueventus/dist/configs/palettes/TextDefault.js'
 ```
 
 
@@ -54,7 +48,7 @@ const borderSuccess = BorderDefault.success
 
 
 
-## Module
+## Module Code
 
 <<< @/../src/configs/palettes/BorderDefault.ts
 

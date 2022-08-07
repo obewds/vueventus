@@ -19,19 +19,13 @@ A pastel themed palette of ground colors with properties/values with the keys of
 
 
 
-<!-- TODO: remove example import xxxxx from @obewds/vueventus/dist/... -->
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { GroundPastel } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import GroundPastel from '@obewds/vueventus/dist/configs/palettes/GroundPastel.js'
 ```
 
 
@@ -54,7 +48,7 @@ const bgSuccess = GroundPastel.success
 
 
 
-## Module
+## Module Code
 
 <<< @/../src/configs/palettes/GroundPastel.ts
 

@@ -19,19 +19,13 @@ A default palette of ground colors with properties/values with the keys of `defa
 
 
 
-<!-- TODO: remove example import xxxxx from @obewds/vueventus/dist/... -->
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { GroundDefault } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} directly:
-
-```javascript
-import GroundDefault from '@obewds/vueventus/dist/configs/palettes/GroundDefault.js'
 ```
 
 
@@ -54,7 +48,7 @@ const bgSuccess = GroundDefault.success
 
 
 
-## Module
+## Module Code
 
 <<< @/../src/configs/palettes/GroundDefault.ts
 
