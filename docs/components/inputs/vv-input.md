@@ -30,7 +30,7 @@ import { VvInput } from '@obewds/vueventus'
 
 
 
-
+<!-- TODO: Add documentation/example for new component emit functionality -->
 
 
 
