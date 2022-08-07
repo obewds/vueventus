@@ -20,7 +20,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
-<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
+
 ## ValidAudioSourceTypes
 
 ### Use example
@@ -28,7 +28,7 @@ These modules are used to allow a single source of truth between library compone
 ```html
 <script setup lang="ts">
 
-    import ValidAudioSourceTypes from '@obewds/vueventus/dist/validators/ValidAudioSourceTypes.js'
+    import { ValidAudioSourceTypes } from '@obewds/vueventus'
 
     const props = defineProps({
         audioSource: {
@@ -50,7 +50,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
-<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
+
 ## ValidButtonTypes
 
 ### Use example
@@ -58,7 +58,7 @@ These modules are used to allow a single source of truth between library compone
 ```html
 <script setup lang="ts">
 
-    import ValidButtonTypes from '@obewds/vueventus/dist/validators/ValidButtonTypes.js'
+    import { ValidButtonTypes } from '@obewds/vueventus'
 
     const props = defineProps({
         buttonType: {
@@ -79,7 +79,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
-<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
+
 ## ValidColorModes
 
 ### Use example
@@ -87,7 +87,7 @@ These modules are used to allow a single source of truth between library compone
 ```html
 <script setup lang="ts">
 
-    import ValidColorModes from '@obewds/vueventus/dist/validators/ValidColorModes.js'
+    import { ValidColorModes } from '@obewds/vueventus'
 
     const props = defineProps({
         colorMode: {
@@ -108,7 +108,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
-<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
+
 ## ValidDirections
 
 ### Use example
@@ -116,7 +116,7 @@ These modules are used to allow a single source of truth between library compone
 ```html
 <script setup lang="ts">
 
-    import ValidDirections from '@obewds/vueventus/dist/validators/ValidDirections.js'
+    import { ValidDirections } from '@obewds/vueventus'
 
     const props = defineProps({
         direction: {
@@ -137,7 +137,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
-<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
+
 ## ValidElementTags
 
 ### Use example
@@ -145,7 +145,7 @@ These modules are used to allow a single source of truth between library compone
 ```html
 <script setup lang="ts">
 
-    import ValidElementTags from '@obewds/vueventus/dist/validators/ValidElementTags.js'
+    import { ValidElementTags } from '@obewds/vueventus'
 
     const props = defineProps({
         tag: {
@@ -166,7 +166,7 @@ These modules are used to allow a single source of truth between library compone
 
 
 
-<!-- TODO: replace example import with { xxxxx } '@obewds/vueventus' syntax -->
+
 ## ValidFontAwesomeFamilies
 
 ### Use example
@@ -174,7 +174,7 @@ These modules are used to allow a single source of truth between library compone
 ```html
 <script setup lang="ts">
 
-    import ValidFontAwesomeFamilies from '@obewds/vueventus/dist/validators/ValidFontAwesomeFamilies.js'
+    import { ValidFontAwesomeFamilies } from '@obewds/vueventus'
 
     const props = defineProps({
         faFamily: {
