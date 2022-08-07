@@ -20,6 +20,7 @@ This helper function is essentially a function tailored specifically for a numbe
 
 
 
+<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
 ## Import
 
 To import the {{ $frontmatter.title }} helper method:
