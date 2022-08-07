@@ -11,9 +11,49 @@ title: randomHex() Helper Method
 
 # {{ $frontmatter.title }}
 
-<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
-<!-- TODO: write docs for helper method (use tests for reference) -->
-Documentation coming soon!
+The {{ $frontmatter.title }} module returns a randomized and formatted full length hex code.
+
+
+
+
+
+
+
+
+## Import
+
+To import the {{ $frontmatter.title }}:
+
+```javascript
+import { randomHex } from '@obewds/vueventus'
+```
+
+
+
+
+
+
+
+
+## Arguments
+
+Returns: **`String`**  
+
+The {{ $frontmatter.title }} does not have any arguments.
+
+
+
+
+
+
+## Use Example
+
+```javascript
+console.log( randomHex() )
+// returns (string): "#d0a1fc", "#8d0340" etc.
+```
+
+
 
 
 
@@ -26,3 +66,10 @@ Documentation coming soon!
 ## Module Code
 
 <<< @/../src/helpers/randomHex.ts
+
+
+
+
+
+
+<DocsPackageVersion/>
