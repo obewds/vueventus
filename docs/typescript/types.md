@@ -11,7 +11,7 @@ title: Typescript Types
 
 # {{ $frontmatter.title }}
 
-These are the VueVentus {{ $frontmatter.title }} Modules are used throughout VueVentus components and modules for type-checking.
+{{ $frontmatter.title }} modules are used for type-checking throughout VueVentus components and modules.
 
 
 
@@ -21,19 +21,13 @@ These are the VueVentus {{ $frontmatter.title }} Modules are used throughout Vue
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## BaseFunction
 
-To import the compiled library version of the BaseFunction Type:
+### Import
 
 ```javascript
 import type { BaseFunction } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { BaseFunction } from '@obewds/vueventus/dist/types/BaseFunction'
 ```
 
 ### Module Code
@@ -48,19 +42,13 @@ import type { BaseFunction } from '@obewds/vueventus/dist/types/BaseFunction'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## DefaultInputPalettes
 
-To import the compiled library version of the DefaultInputPalettes Type:
+### Import
 
 ```javascript
 import type { DefaultInputPalettes } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { DefaultInputPalettes } from '@obewds/vueventus/dist/types/DefaultInputPalettes'
 ```
 
 ### Module Code
@@ -75,19 +63,13 @@ import type { DefaultInputPalettes } from '@obewds/vueventus/dist/types/DefaultI
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## DefaultPaletteColors
 
-To import the compiled library version of the DefaultPaletteColors Type:
+### Import
 
 ```javascript
 import type { DefaultPaletteColors } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { DefaultPaletteColors } from '@obewds/vueventus/dist/types/DefaultPaletteColors'
 ```
 
 ### Module Code
@@ -105,16 +87,10 @@ import type { DefaultPaletteColors } from '@obewds/vueventus/dist/types/DefaultP
 <!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## DefaultPalettes
 
-To import the compiled library version of the DefaultPalettes Type:
+### Import
 
 ```javascript
 import type { DefaultPalettes } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { DefaultPalettes } from '@obewds/vueventus/dist/types/DefaultPalettes'
 ```
 
 ### Module Code
@@ -133,16 +109,10 @@ import type { DefaultPalettes } from '@obewds/vueventus/dist/types/DefaultPalett
 <!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## DefaultValidationPaletteColors
 
-To import the compiled library version of the DefaultValidationPaletteColors Type:
+### Import
 
 ```javascript
 import type { DefaultValidationPaletteColors } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { DefaultValidationPaletteColors } from '@obewds/vueventus/dist/types/DefaultValidationPaletteColors'
 ```
 
 ### Module Code
@@ -160,16 +130,10 @@ import type { DefaultValidationPaletteColors } from '@obewds/vueventus/dist/type
 <!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## ReturnsClassesFunction
 
-To import the compiled library version of the ReturnsClassesFunction Type:
+### Import
 
 ```javascript
 import type { ReturnsClassesFunction } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ReturnsClassesFunction } from '@obewds/vueventus/dist/types/ReturnsClassesFunction'
 ```
 
 ### Module Code
@@ -188,16 +152,10 @@ import type { ReturnsClassesFunction } from '@obewds/vueventus/dist/types/Return
 <!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## ReturnsNumberFunction
 
-To import the compiled library version of the ReturnsNumberFunction Type:
+### Import
 
 ```javascript
 import type { ReturnsNumberFunction } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { ReturnsNumberFunction } from '@obewds/vueventus/dist/types/ReturnsNumberFunction'
 ```
 
 ### Module Code
@@ -215,16 +173,10 @@ import type { ReturnsNumberFunction } from '@obewds/vueventus/dist/types/Returns
 <!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## TransitionsClasses
 
-To import the compiled library version of the TransitionsClasses Type:
+### Import
 
 ```javascript
 import type { TransitionsClasses } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { TransitionsClasses } from '@obewds/vueventus/dist/types/TransitionsClasses'
 ```
 
 ### Module Code
@@ -242,16 +194,10 @@ import type { TransitionsClasses } from '@obewds/vueventus/dist/types/Transition
 <!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
 ## TransitionsCustom
 
-To import the compiled library version of the TransitionsCustom Type:
+### Import
 
 ```javascript
 import type { TransitionsCustom } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} `.ts` file directly:
-
-```javascript
-import type { TransitionsCustom } from '@obewds/vueventus/dist/types/TransitionsCustom'
 ```
 
 ### Module Code
