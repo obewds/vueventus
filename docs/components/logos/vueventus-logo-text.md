@@ -17,19 +17,13 @@ The {{ $frontmatter.title }} provides an `<svg>` component of the VueVentus logo
 
 
 
-<!-- TODO: remove example import xxxxx from @obewds/vueventus/dist/... -->
+
 ## Import
 
-To import the compiled library version of the {{ $frontmatter.title }}:
+To import the {{ $frontmatter.title }}:
 
 ```javascript
 import { VueVentusLogoText } from '@obewds/vueventus'
-```
-
-To import the {{ $frontmatter.title }} SFC directly:
-
-```javascript
-import VueVentusLogoText from '@obewds/vueventus/dist/components/logos/VueVentusLogoText.vue'
 ```
 
 
