@@ -23,6 +23,7 @@ export { default as TextDefault } from './configs/palettes/TextDefault'
 
 // .src/helpers
 export { default as camelCaseToTitleCase } from './helpers/camelCaseToTitleCase'
+export { default as decimalsOnly } from './helpers/decimalsOnly'
 export { default as digitsOnly } from './helpers/digitsOnly'
 export { default as formatBytes } from './helpers/formatBytes'
 export { default as formatDateMMDDYYYY } from './helpers/formatDateMMDDYYYY'
