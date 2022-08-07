@@ -106,6 +106,7 @@ It's generally a good idea to go ahead and add an additional `localStorage` chec
 
 
 
+<!-- TODO: replace ''@/components/vv/...' imports with { xxx } from '@obewds/vueventus' imports -->
 ## Import
 
 Import the CLI installation version of the {{ $frontmatter.title }} into your project with:

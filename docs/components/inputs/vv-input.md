@@ -17,6 +17,7 @@ The {{ $frontmatter.title }} provides a set of props and config module based set
 
 
 
+<!-- TODO: replace ''@/components/vv/...' imports with { xxx } from '@obewds/vueventus' imports -->
 ## Import
 
 Import the CLI installation version of the {{ $frontmatter.title }} into your project with:

@@ -21,6 +21,7 @@ The {{ $frontmatter.title }} provides palette and color control of list item tex
 
 
 
+<!-- TODO: replace ''@/components/vv/...' imports with { xxx } from '@obewds/vueventus' imports -->
 ## Import
 
 Import the CLI installation version of the {{ $frontmatter.title }} into your project with:

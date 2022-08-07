@@ -5,7 +5,7 @@ title: App Color Data
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
 </script>
-
+<!-- this page and navigation to it should all change to "app.colors.json File" -->
 
 
 
@@ -14,7 +14,7 @@ title: App Color Data
 
 # {{ $frontmatter.title }}
 
-For prototyping, VueVentus comes with a default color palette that tweaks Tailwind CSS's default color palette slightly for dark/light mode accessibility reasons. However, this file is only meant for prototyping! A production application would want to control many if not all of the visual characteristics VueVentus provides generically.
+For prototyping, VueVentus comes with a color palette that tweaks Tailwind CSS's default color palette slightly for dark/light mode accessibility reasons. However, this file is only meant for prototyping! A production application would want to control many if not all of the visual characteristics VueVentus provides generically.
 
 
 
