@@ -73,5 +73,11 @@ console.log(
 
 
 
+## Module Code
+
+<<< @/../src/helpers/formatDateTraditional.ts
+
+
+
 
 <DocsPackageVersion/>

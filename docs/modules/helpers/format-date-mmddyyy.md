@@ -18,7 +18,7 @@ The {{ $frontmatter.title }} module provides a helper function that converts a p
 
 
 
-<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
+
 ## Import
 
 To import the {{ $frontmatter.title }} helper method:
@@ -26,6 +26,19 @@ To import the {{ $frontmatter.title }} helper method:
 ```javascript
 import { formatDateMMDDYYYY } from '@obewds/vueventus'
 ```
+
+
+
+
+
+## Arguments
+
+Returns: **`String`**  
+
+| Args      | Type          | Status     | Description |
+|-----------|:-------------:|:----------:|-------------|
+| date      | `Date object` | Required   | A JavaScript Date object set to the desired date |
+| separator | `String`      | Optional   | A character or string to use as a separator for the output date values |
 
 
 
@@ -41,6 +54,18 @@ console.log( formatDateMMDDYYYY( new Date('January 10, 2020') ) )
 console.log( formatDateMMDDYYYY( new Date('December 9, 2020'), '-' ) )
 // returns (string): '12-09-2020'
 ```
+
+
+
+
+
+
+
+
+
+## Module Code
+
+<<< @/../src/helpers/formatDateMMDDYYYY.ts
 
 
 

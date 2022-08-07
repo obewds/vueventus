@@ -51,4 +51,17 @@ console.log( formatNumber(123456.1234) )
 
 
 
+
+
+
+## Module Code
+
+<<< @/../src/helpers/formatNumber.ts
+
+
+
+
+
+
+
 <DocsPackageVersion/>

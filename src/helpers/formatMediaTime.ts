@@ -1,8 +1,8 @@
 // ./src/helpers/formatMediaTime.ts
 
-export default function (currentTime: string): string {
+export default function (currentTime: string|number): string {
 
-    let sec_num = parseInt(currentTime, 10)
+    let sec_num = parseInt(String(currentTime), 10)
 
     let days = Math.floor(
         parseInt(

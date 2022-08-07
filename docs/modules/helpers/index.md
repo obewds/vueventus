@@ -17,6 +17,7 @@ title: Helper Method Modules
 {{ $frontmatter.title }} are utility functions for use around and within VueVentus.
 
 * [camelCaseToTitleCase()](/modules/helpers/camel-case-to-title-case)
+* [decimalsOnly()](/modules/helpers/decimals-only)
 * [digitsOnly()](/modules/helpers/digits-only)
 * [formatBytes()](/modules/helpers/format-bytes)
 * [formatDateMMDDYYYY()](/modules/helpers/format-date-mmddyyy)

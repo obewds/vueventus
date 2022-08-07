@@ -18,7 +18,7 @@ The {{ $frontmatter.title }} module provides a helper function that takes in a d
 
 
 
-<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
+
 ## Import
 
 To import the {{ $frontmatter.title }} helper method:
@@ -31,8 +31,21 @@ import { formatBytes } from '@obewds/vueventus'
 
 
 
+## Arguments
 
-## Use Example
+Returns: **`String`**  
+
+| Args     | Type      | Status     | Description |
+|----------|:---------:|:----------:|-------------|
+| bytes    | `Number`  | Required   | A number of bytes |
+| decimals | `Number`  | Required   | A number of decimal places for the output number |
+
+
+
+
+
+
+## Use Examples
 
 ```javascript
 console.log( formatBytes(0) )
@@ -40,9 +53,6 @@ console.log( formatBytes(0) )
 
 console.log( formatBytes(1000.12345, 5) )
 // returns (string): '1000.12345 Bytes'
-
-console.log( formatBytes('1000') )
-// returns (string): '1000 Bytes'
 
 console.log( formatBytes(10000) )
 // returns (string): '9.77 KB'
@@ -65,6 +75,18 @@ console.log( formatBytes(10000000000000000000000) )
 console.log( formatBytes(10000000000000000000000000) )
 // returns (string): '8.27 YB'
 ```
+
+
+
+
+
+
+
+
+
+## Module Code
+
+<<< @/../src/helpers/formatBytes.ts
 
 
 

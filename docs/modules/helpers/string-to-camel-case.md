@@ -57,4 +57,16 @@ console.log( stringToCamelCase('test-string-here') )
 
 
 
+
+
+
+## Module Code
+
+<<< @/../src/helpers/stringToCamelCase.ts
+
+
+
+
+
+
 <DocsPackageVersion/>

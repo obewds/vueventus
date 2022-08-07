@@ -51,4 +51,16 @@ console.log( slugifyString('And (&) THIS is a 3rd?!?!') )
 
 
 
+
+
+
+## Module Code
+
+<<< @/../src/helpers/slugifyString.ts
+
+
+
+
+
+
 <DocsPackageVersion/>

@@ -17,7 +17,7 @@ The {{ $frontmatter.title }} module provides a helper function that converts a p
 
 
 
-<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
+
 ## Import
 
 To import the {{ $frontmatter.title }} helper method:
@@ -30,8 +30,20 @@ import { camelCaseToTitleCase } from '@obewds/vueventus'
 
 
 
+## Argument
 
-## Use Example
+Returns: **`String`**  
+
+| Args     | Type      | Status     | Description |
+|----------|:---------:|:----------:|-------------|
+| string   | `String`  | Required   | A camel case string to be converted to title case |
+
+
+
+
+
+
+## Use Examples
 
 ```javascript
 console.log( camelCaseToTitleCase('testCamelCase') )
@@ -46,6 +58,18 @@ console.log( camelCaseToTitleCase('PascalCaseString') )
 console.log( camelCaseToTitleCase('spaced camelCase') )
 // returns (string): 'Spaced Camel Case'
 ```
+
+
+
+
+
+
+
+
+
+## Module Code
+
+<<< @/../src/helpers/camelCaseToTitleCase.ts
 
 
 

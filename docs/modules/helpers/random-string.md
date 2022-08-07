@@ -51,4 +51,16 @@ console.log( randomString(35) )
 
 
 
+
+
+
+## Module Code
+
+<<< @/../src/helpers/randomString.ts
+
+
+
+
+
+
 <DocsPackageVersion/>

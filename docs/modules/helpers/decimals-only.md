@@ -1,5 +1,5 @@
 ---
-title: digitsOnly() Helper Method
+title: decimalsOnly() Helper Method
 ---
 
 
@@ -11,9 +11,9 @@ title: digitsOnly() Helper Method
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} module provides a helper function that converts the first argument into a string and then tests it for purely digit characters. If the test passes, then the digits are returned, and otherwise the second argument is returned (which should be the original number).
+The {{ $frontmatter.title }} module provides a helper function that converts the first argument into a string and then tests it for digit and dot characters. If the test passes, then the digits/dot are returned, and otherwise the second argument is returned (which should be the original number).
 
-This helper function is essentially a function tailored specifically for number counter UI validation.
+This helper function is essentially a function tailored specifically for decimal number counter UI validation.
 
 
 
@@ -26,7 +26,7 @@ This helper function is essentially a function tailored specifically for number 
 To import the {{ $frontmatter.title }} helper method:
 
 ```javascript
-import { digitsOnly } from '@obewds/vueventus'
+import { decimalsOnly } from '@obewds/vueventus'
 ```
 
 
@@ -52,19 +52,19 @@ Returns: **`Number`**
 ```javascript
 const startNumber = 10
 
-console.log( digitsOnly(11, startNumber) )
+console.log( decimalsOnly(11, startNumber) )
 // returns (number): 11
 
-console.log( digitsOnly(9, startNumber) )
+console.log( decimalsOnly(9, startNumber) )
 // returns (number): 9
 
-console.log( digitsOnly(11.123, startNumber) )
-// returns (number): 10
+console.log( decimalsOnly(11.123, startNumber) )
+// returns (number): 11.123
 
-console.log( digitsOnly('11.123', startNumber) )
-// returns (number): 10
+console.log( decimalsOnly('11.123', startNumber) )
+// returns (number): 11.123
 
-console.log( digitsOnly('abc', startNumber) )
+console.log( decimalsOnly('abc', startNumber) )
 // returns (number): 10
 ```
 
@@ -78,7 +78,7 @@ console.log( digitsOnly('abc', startNumber) )
 
 ## Module Code
 
-<<< @/../src/helpers/digitsOnly.ts
+<<< @/../src/helpers/decimalsOnly.ts
 
 
 
