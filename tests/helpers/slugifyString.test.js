@@ -53,3 +53,12 @@ test('slugifyString() method returns an empty string if passed an empty string',
     expect( slugifyString( test ) ).toBe('')
 
 })
+
+
+test('slugifyString() method returns a dash separated string if passed a null separator value', async () => {
+
+    const test = 'test string'
+    
+    expect( slugifyString( test, null ) ).toBe('test-string')
+
+})
