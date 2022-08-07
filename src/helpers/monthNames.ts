@@ -1,17 +1,6 @@
 // ./src/helpers/monthNames.ts
 
-export type MonthNamesTypesArray = [string, string, string, string, string, string, string, string, string, string, string, string ]
-
-export interface MonthNamesTypes {
-    long: MonthNamesTypesArray
-    short: MonthNamesTypesArray
-}
-
-export interface MonthNames {
-    english: MonthNamesTypes
-    french: MonthNamesTypes
-    spanish: MonthNamesTypes
-}
+import type { MonthNames } from '../types/MonthNames'
 
 export default function () {
     return <MonthNames>{

@@ -123,6 +123,12 @@ import type { DefaultValidationPaletteColors } from './types/DefaultValidationPa
 export type { DefaultValidationPaletteColors }
 import type { InputsSizes } from './types/InputsSizes'
 export type { InputsSizes }
+import type { MonthNames } from './types/MonthNames'
+export type { MonthNames }
+import type { MonthNamesTypes } from './types/MonthNamesTypes'
+export type { MonthNamesTypes }
+import type { MonthNamesTypesArray } from './types/MonthNamesTypesArray'
+export type { MonthNamesTypesArray }
 import type { ReturnsClassesFunction } from './types/ReturnsClassesFunction'
 export type { ReturnsClassesFunction }
 import type { ReturnsNumberFunction } from './types/ReturnsNumberFunction'
