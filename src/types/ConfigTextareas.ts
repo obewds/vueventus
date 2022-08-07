@@ -1,12 +1,12 @@
 // ./src/types/ConfigTextareas.ts
 
-import { BaseFunction } from './BaseFunction'
-import { DefaultValidationPalette } from './DefaultValidationPalette'
-import { EmptyPalette } from './EmptyPalette'
-import { TextareasSizes } from './TextareasSizes'
-import { TextareasRowSizes } from './TextareasRowSizes'
-import { ReturnsClassesFunction } from './ReturnsClassesFunction'
-import { ReturnsNumberFunction } from './ReturnsNumberFunction'
+import type { BaseFunction } from './BaseFunction'
+import type { DefaultValidationPalette } from './DefaultValidationPalette'
+import type { EmptyPalette } from './EmptyPalette'
+import type { TextareasSizes } from './TextareasSizes'
+import type { TextareasRowSizes } from './TextareasRowSizes'
+import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
+import type { ReturnsNumberFunction } from './ReturnsNumberFunction'
 
 export interface ConfigTextareas {
     border: string | undefined

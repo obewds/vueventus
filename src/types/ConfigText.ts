@@ -1,10 +1,10 @@
 // ./src/types/ConfigText.ts
 
-import { BaseFunction } from './BaseFunction'
-import { DefaultConfigPalette } from '../types/DefaultConfigPalette'
-import { EmptyPalette } from './EmptyPalette'
-import { ReturnsClassesFunction } from './ReturnsClassesFunction'
-import { TextSizes } from './TextSizes'
+import type { BaseFunction } from './BaseFunction'
+import type { DefaultConfigPalette } from '../types/DefaultConfigPalette'
+import type { EmptyPalette } from './EmptyPalette'
+import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
+import type { TextSizes } from './TextSizes'
 
 export interface ConfigText {
     align: string | undefined

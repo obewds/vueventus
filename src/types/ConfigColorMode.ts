@@ -1,8 +1,8 @@
 // ./src/types/ConfigColorMode.ts
 
-import { BaseFunction } from './BaseFunction'
-import { ColorMode } from './ColorMode'
-import { ReturnsClassesFunction } from './ReturnsClassesFunction'
+import type { BaseFunction } from './BaseFunction'
+import type { ColorMode } from './ColorMode'
+import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
 
 export interface ConfigColorMode {
     dark: ColorMode

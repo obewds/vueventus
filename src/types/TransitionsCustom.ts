@@ -1,5 +1,5 @@
 // ./src/types/TransitionsCustom.ts
 
-import { TransitionsCustomOptions } from '../types/TransitionsCustomOptions'
+import type { TransitionsCustomOptions } from '../types/TransitionsCustomOptions'
 
 export type TransitionsCustom = ( settings: TransitionsCustomOptions ) => string

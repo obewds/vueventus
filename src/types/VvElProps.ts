@@ -1,8 +1,8 @@
 // ./src/types/VvElProps.ts
 
-import { DefaultPaletteColors } from './DefaultPaletteColors'
-import { DefaultPalettes } from './DefaultPalettes'
-import ValidElementTags from '../validators/ValidElementTags'
+import type { DefaultPaletteColors } from './DefaultPaletteColors'
+import type { DefaultPalettes } from './DefaultPalettes'
+import ValidElementTags from '../validators/ValidElementTags' // TODO should this be a type import?
 
 export interface VvElProps {
     borderPalette: DefaultPalettes | string

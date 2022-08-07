@@ -1,7 +1,7 @@
 // ./src/types/ConfigGrounds.ts
 
-import { DefaultConfigPalette } from '../types/DefaultConfigPalette'
-import { EmptyPalette } from './EmptyPalette'
+import type { DefaultConfigPalette } from '../types/DefaultConfigPalette'
+import type { EmptyPalette } from './EmptyPalette'
 
 export interface ConfigGrounds {
     palettes: {
