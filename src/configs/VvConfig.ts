@@ -51,10 +51,6 @@ export default {
             underlined: InputUnderlined,
         },
     },
-    // TODO: need to phase out colorMode (singular is inconsistent)
-    // colorMode: {
-    //     ...ColorModes,
-    // },
     colorModes: {
         ...ColorModes,
     },
