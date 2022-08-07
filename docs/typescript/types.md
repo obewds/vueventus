@@ -83,8 +83,7 @@ import type { DefaultPaletteColors } from '@obewds/vueventus'
 
 
 
-
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+import type {
 ## DefaultPalettes
 
 ### Import
@@ -106,7 +105,7 @@ import type { DefaultPalettes } from '@obewds/vueventus'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## DefaultValidationPaletteColors
 
 ### Import
@@ -127,7 +126,7 @@ import type { DefaultValidationPaletteColors } from '@obewds/vueventus'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ReturnsClassesFunction
 
 ### Import
@@ -149,7 +148,7 @@ import type { ReturnsClassesFunction } from '@obewds/vueventus'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## ReturnsNumberFunction
 
 ### Import
@@ -170,7 +169,7 @@ import type { ReturnsNumberFunction } from '@obewds/vueventus'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## TransitionsClasses
 
 ### Import
@@ -191,7 +190,7 @@ import type { TransitionsClasses } from '@obewds/vueventus'
 
 
 
-<!-- TODO: remove example import { xxxxx } from @obewds/vueventus/dist/... -->
+
 ## TransitionsCustom
 
 ### Import
