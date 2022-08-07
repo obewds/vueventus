@@ -196,6 +196,7 @@ function sidebarModules() {
             items: [
                 { text: 'Helper Modules', link: '/modules/helpers/' },
                 { text: 'camelCaseToTitleCase()', link: '/modules/helpers/camel-case-to-title-case' },
+                { text: 'decimalsOnly()', link: '/modules/helpers/decimals-only' },
                 { text: 'digitsOnly()', link: '/modules/helpers/digits-only' },
                 { text: 'formatBytes()', link: '/modules/helpers/format-bytes' },
                 { text: 'formatDateMMDDYYYY()', link: '/modules/helpers/format-date-mmddyyy' },
