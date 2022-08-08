@@ -20,9 +20,62 @@ A default palette of text colors with properties/values with the keys of `defaul
 
 
 
+
+## app.vv Use
+
+You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
+
+Here's what that generally looks like in practice in a real world app context:
+
+```javascript
+// ./src/app.vv.ts
+
+import { VvConfig } from '@obewds/vueventus'
+import type { ConfigVv, DefaultConfigPalette } from '@obewds/vueventus'
+
+let appVv: ConfigVv = VvConfig
+
+// ...
+
+// Override the default VvConfig text palette colors individually
+appVv.text.palettes.default.default = '...'
+appVv.text.palettes.default.error = '...'
+appVv.text.palettes.default.primary = '...'
+appVv.text.palettes.default.secondary = '...'
+appVv.text.palettes.default.success = '...'
+appVv.text.palettes.default.neutral = '...'
+
+// Add a new custom app anchor color name & value
+// to the default VvConfig text palette
+appVv.text.palettes.default.newAppColor = '...'
+
+// Add a new custom app anchor palette
+appVv.text.palettes.myCustomAppPalette = {
+    default: '...',
+    error: '...',
+    primary: '...',
+    secondary: '...',
+    success: '...',
+    neutral: '...',
+    // Add a new custom app anchor color name & value
+    anotherAppColor: '...',
+} as DefaultConfigPalette
+
+// ...
+
+export default appVv
+```
+
+
+
+
+
+
+
+
 ## Import
 
-To import the {{ $frontmatter.title }}:
+However, if you need to import the compiled library version of the {{ $frontmatter.title }}, you can use:
 
 ```javascript
 import { TextDefault } from '@obewds/vueventus'
@@ -33,15 +86,6 @@ import { TextDefault } from '@obewds/vueventus'
 
 
 
-## Use
-
-```javascript
-const borderDefault = BorderDefault.default
-const borderError = BorderDefault.error
-const borderPrimary = BorderDefault.primary
-const borderSecondary = BorderDefault.secondary
-const borderSuccess = BorderDefault.success
-```
 
 
 
@@ -50,7 +94,7 @@ const borderSuccess = BorderDefault.success
 
 ## Module Code
 
-<<< @/../src/configs/palettes/BorderDefault.ts
+<<< @/../src/configs/palettes/TextDefault.ts
 
 
 

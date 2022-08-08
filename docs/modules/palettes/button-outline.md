@@ -23,9 +23,60 @@ An outline themed palette of button colors with properties/values with the keys 
 
 
 
+
+## app.vv Use
+
+You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
+
+Here's what that generally looks like in practice in a real world app context:
+
+```javascript
+// ./src/app.vv.ts
+
+import { VvConfig } from '@obewds/vueventus'
+import type { ConfigVv, DefaultConfigPalette } from '@obewds/vueventus'
+
+let appVv: ConfigVv = VvConfig
+
+// ...
+
+// Override the outline VvConfig buttons palette colors individually
+appVv.buttons.palettes.solid.default = '...'
+appVv.buttons.palettes.solid.error = '...'
+appVv.buttons.palettes.solid.primary = '...'
+appVv.buttons.palettes.solid.secondary = '...'
+appVv.buttons.palettes.solid.success = '...'
+
+// Add a new custom app anchor color name & value
+// to the outline VvConfig buttons palette
+appVv.buttons.palettes.solid.newAppColor = '...'
+
+// Add a new custom app anchor palette
+appVv.buttons.palettes.myCustomAppPalette = {
+    default: '...',
+    error: '...',
+    primary: '...',
+    secondary: '...',
+    success: '...',
+    // Add a new custom app anchor color name & value
+    anotherAppColor: '...',
+} as DefaultConfigPalette
+
+// ...
+
+export default appVv
+```
+
+
+
+
+
+
+
+
 ## Import
 
-To import the {{ $frontmatter.title }}:
+However, if you need to import the compiled library version of the {{ $frontmatter.title }}, you can use:
 
 ```javascript
 import { ButtonOutline } from '@obewds/vueventus'
@@ -36,15 +87,7 @@ import { ButtonOutline } from '@obewds/vueventus'
 
 
 
-## Use
 
-```javascript
-const buttonDefault = ButtonOutline.default
-const buttonError = ButtonOutline.error
-const buttonPrimary = ButtonOutline.primary
-const buttonSecondary = ButtonOutline.secondary
-const buttonSuccess = ButtonOutline.success
-```
 
 
 

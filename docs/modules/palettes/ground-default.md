@@ -20,9 +20,60 @@ A default palette of ground colors with properties/values with the keys of `defa
 
 
 
+
+## app.vv Use
+
+You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
+
+Here's what that generally looks like in practice in a real world app context:
+
+```javascript
+// ./src/app.vv.ts
+
+import { VvConfig } from '@obewds/vueventus'
+import type { ConfigVv, DefaultConfigPalette } from '@obewds/vueventus'
+
+let appVv: ConfigVv = VvConfig
+
+// ...
+
+// Override the default VvConfig grounds palette colors individually
+appVv.grounds.default.default = '...'
+appVv.grounds.default.error = '...'
+appVv.grounds.default.primary = '...'
+appVv.grounds.default.secondary = '...'
+appVv.grounds.default.success = '...'
+
+// Add a new custom app anchor color name & value
+// to the default VvConfig grounds palette
+appVv.grounds.default.newAppColor = '...'
+
+// Add a new custom app anchor palette
+appVv.grounds.myCustomAppPalette = {
+    default: '...',
+    error: '...',
+    primary: '...',
+    secondary: '...',
+    success: '...',
+    // Add a new custom app anchor color name & value
+    anotherAppColor: '...',
+} as DefaultConfigPalette
+
+// ...
+
+export default appVv
+```
+
+
+
+
+
+
+
+
 ## Import
 
-To import the {{ $frontmatter.title }}:
+However, if you need to import the compiled library version of the {{ $frontmatter.title }}, you can use:
 
 ```javascript
 import { GroundDefault } from '@obewds/vueventus'
@@ -33,15 +84,12 @@ import { GroundDefault } from '@obewds/vueventus'
 
 
 
-## Use
 
-```javascript
-const bgDefault = GroundDefault.default
-const bgError = GroundDefault.error
-const bgPrimary = GroundDefault.primary
-const bgSecondary = GroundDefault.secondary
-const bgSuccess = GroundDefault.success
-```
+
+
+
+
+
 
 
 

@@ -5,7 +5,7 @@ title: App Color Data
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
 </script>
-<!-- this page and navigation to it should all change to "app.colors.json File" -->
+<!-- TODO: this page and navigation to it should all change to "app.colors.json File" -->
 
 
 
