@@ -45,10 +45,12 @@ Here's the script that needs to be added to an app's main/base HTML:
                     localStorage.setItem('colorMode', 'dark');
                     document.documentElement.classList.add('dark');
                     document.documentElement.style.backgroundColor = '#242426';
+                    document.documentElement.style.color = '#e1e1e3';
                 } else {
                     localStorage.setItem('colorMode', 'light');
                     document.documentElement.classList.remove('dark');
                     document.documentElement.style.backgroundColor = '#e1e1e3';
+                    document.documentElement.style.color = '#242426';
                 }
             }
         </script>
