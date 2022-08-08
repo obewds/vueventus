@@ -87,8 +87,6 @@ import { TextDefault } from '@obewds/vueventus'
 
 
 
-<!-- TODO: replace import and examples with appVv syntax -->
-
 
 
 
