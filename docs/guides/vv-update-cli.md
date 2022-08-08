@@ -19,15 +19,6 @@ title: vv-update CLI
 
 
 
-# {{ $frontmatter.title }}
-
-This guide will walk through how to individually install/update VueVentus files with the vv-update CLI.
-
-
-
-
-
-
 
 ## Getting Started
 
