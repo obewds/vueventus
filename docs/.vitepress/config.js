@@ -129,11 +129,10 @@ function sidebarGuides() {
         items: [
             { text: 'Why VueVentus', link: '/guides/why-vueventus' },
             { text: 'Getting Started', link: '/guides/' },
-            { text: 'The VueVentus CLI', link: '/guides/install-vv-cli' },
-            { text: 'Install with Vite.js', link: '/guides/install-vite' },
-            { text: 'Install with Vue CLI', link: '/guides/install-vue-cli' },
-            { text: 'Install with Nuxt.js 3', link: '/guides/install-nuxt' },
-            { text: 'Install with VILT Stack', link: '/guides/install-vilt-stack' },
+            { text: 'vueventus CLI', link: '/guides/vueventus-cli' },
+            { text: 'vv-update CLI', link: '/guides/vv-update-cli' },
+            { text: 'Manual Installation', link: '/guides/manual-installation' },
+            // { text: 'Install with Nuxt.js 3', link: '/guides/install-nuxt' },
             { text: 'Test Drive: VvButton', link: '/guides/test-drive-vv-button' },
         ]
     }]

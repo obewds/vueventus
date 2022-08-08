@@ -1,5 +1,5 @@
 ---
-title: Install with Vue CLI
+title: Manual Installation
 ---
 
 <script setup>
@@ -13,30 +13,26 @@ title: Install with Vue CLI
 
 # {{ $frontmatter.title }}
 
-This guide will walk through installing and setting up VueVentus along with [Vue.js](https://vuejs.org/), [Tailwind CSS](https://tailwindcss.com/), [Vitest](https://vitest.dev/), [Vue Test Utils](https://test-utils.vuejs.org/guide/), [c8](https://github.com/bcoe/c8) and [happy-dom](https://github.com/capricorn86/happy-dom).
-
-Reference Link: [Vue.js Quick Start Guide](https://vuejs.org/guide/quick-start.html#with-build-tools)
+This guide will walk through installing and setting up VueVentus along with [Vite.js](https://vitejs.dev/guide/#scaffolding-your-first-vite-project), [Vue.js](https://vuejs.org/), [Tailwind CSS](https://tailwindcss.com/), [Vitest](https://vitest.dev/), [Vue Test Utils](https://test-utils.vuejs.org/guide/), [c8](https://github.com/bcoe/c8) and [happy-dom](https://github.com/capricorn86/happy-dom).
 
 
 
 
 
 
+## Installing Vite/Vue
 
-## Installing Vue
+For this example guide, we'll use Vite.js to install both Vite and Vue.js. So navigate to the directory where you want to begin your project in the command line console and run the vite create command:
 
 ```bash
-npm init vue@latest
+npm create vite@latest
 ```
 
-1. Select `y` to install with `create-vue@latest`
-1. Enter a Project Name in the Vue CLI create-vue interface
-1. Select `no`/`yes` for everything you don't want/need
-    - VueVentus is a Vue/Typescript lib, so you'll likely want to select `Typescript`!
-    - `Vitest`, `ESLint` and `Prettier` are usually a good idea
+1. Enter a Project Name in the Vite CLI interface
+1. Select `vue` for the framework
+1. Select `vue-ts` for the variant
 1. Either `cd` into your new directory if you want to run the app from inside the generated folder, or grab the generated files and move them all into the project root directory and delete the generated directory
 1. Install the application dependencies with:
-
 
 ```bash
 npm install
@@ -67,9 +63,6 @@ npm run dev
 
 
 !!!include(snippets/vitestUnitTestExample.md)!!!
-
-
-!!!include(snippets/skipToTestDrive.md)!!!
 
 
 
