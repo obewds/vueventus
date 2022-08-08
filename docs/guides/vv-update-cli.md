@@ -74,10 +74,10 @@ Some files with the same name are different between different installation stack
 
 ## Selecting a File
 
-Once you've selected a stack, the vv-update CLI will present you a scrolling checklist of files, allowing you to select a specific file to install into the location that file would be installed in during a vueventus CLI installation of that same file (according to your chosen stack).
+Once you've selected a stack, the vv-update CLI will present you with a scrolling selection of files, allowing you to select a specific file to install into the location that file would normally be installed into during a [vueventus CLI](/guides/vueventus-cli) installation of that same file (according to your chosen stack).
 
 :::danger FILES ARE OVERWRITTEN
-Please note that the vv-update CLI doesn't care if you've worked hard on customizing a file originally written by the vueventus CLI!
+Please note that the vv-update CLI doesn't care if you've worked hard on customizing a file originally written by the [vueventus CLI](/guides/vueventus-cli)!
 
 This means the vv-update CLI will **overwrite** a file if it already exists, so **always** be sure you have versioning or the ability to undo an vv-update CLI selection to **always** have a way back out of an overwrite!
 :::
