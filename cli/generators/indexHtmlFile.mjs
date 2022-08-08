@@ -20,10 +20,12 @@ const output = `<!DOCTYPE html>
                 localStorage.setItem('colorMode', 'dark');
                 document.documentElement.classList.add('dark');
                 document.documentElement.style.backgroundColor = '#242426';
+                document.documentElement.style.color = '#f8f8f8';
             } else {
                 localStorage.setItem('colorMode', 'light');
                 document.documentElement.classList.remove('dark');
                 document.documentElement.style.backgroundColor = '#f8f8f8';
+                document.documentElement.style.color = '#242426';
             }
         </script>
 
