@@ -34,8 +34,8 @@ This guide will walk through installing and setting up a project with the vueven
 
 For now, the CLI can install the following stacks to kickoff app development:
 
-1. SPA Stack: **{{ stackNames[0] }}**
-1. SSG Stack: **{{ stackNames[1] }}**
+1. **SPA Stack:** {{ stackNames[0] }}
+1. **SSG Stack:** {{ stackNames[1] }}
 
 ### The SPA Stack
 
