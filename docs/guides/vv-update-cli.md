@@ -20,7 +20,7 @@ title: vv-update CLI
 
 # {{ $frontmatter.title }}
 
-This guide will walk through installing and setting up a project with the vueventus CLI.
+The vv-update CLI is a project maintenance tool to help an existing application bring in new file updates, syntaxes, standards, types, etc. from a recent VueVentus update, into an existing VueVentus dependent application - sometime after a prior [vueventus CLI](/guides/vueventus-cli) installation.
 
 
 
