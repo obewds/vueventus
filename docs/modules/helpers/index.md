@@ -19,6 +19,7 @@ title: Helper Method Modules
 * [camelCaseToTitleCase()](/modules/helpers/camel-case-to-title-case)
 * [decimalsOnly()](/modules/helpers/decimals-only)
 * [digitsOnly()](/modules/helpers/digits-only)
+* [forceBodyClick()](/modules/helpers/force-body-click)
 * [formatBytes()](/modules/helpers/format-bytes)
 * [formatDateMMDDYYYY()](/modules/helpers/format-date-mmddyyy)
 * [formatDateTraditional()](/modules/helpers/format-date-traditional)
@@ -35,6 +36,7 @@ title: Helper Method Modules
 * [slugifyString()](/modules/helpers/slugify-string)
 * [stringToCamelCase()](/modules/helpers/string-to-camel-case)
 * [stringToFilename()](/modules/helpers/string-to-filename)
+* [timestampToDateTimeAmPm()](/modules/helpers/timestamp-to-date-time-am-pm)
 * [uniqueArray()](/modules/helpers/unique-array)
 
 

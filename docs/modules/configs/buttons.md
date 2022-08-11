@@ -20,7 +20,7 @@ The {{ $frontmatter.title }} holds your application's default/prototypal Tailwin
 
 
 
-## app.vv Use
+## app.vv.ts Use
 
 You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
 

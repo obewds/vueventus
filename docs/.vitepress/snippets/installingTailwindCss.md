@@ -5,7 +5,7 @@ To install Tailwind CSS, we'll be using the [Vite.js Guide](https://tailwindcss.
 So from the project's root directory, run the following commands:
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer
+npm install -D tailwindcss postcss autoprefixer tailwind-scrollbar
 ```
 
 ```bash

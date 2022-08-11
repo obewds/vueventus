@@ -19,7 +19,7 @@ title: Config Modules
 
 
 
-* [app.vv File](/modules/configs/app-vv)
+* [app.vv.ts File](/modules/configs/app-vv-ts)
 * [VvConfig](/modules/configs/vv-config)
 * [Anchors Config](/modules/configs/anchors)
 * [Buttons Config](/modules/configs/buttons)

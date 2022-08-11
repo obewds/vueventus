@@ -20,8 +20,7 @@ There are currently three main types of {{ $frontmatter.title }} to use in your 
 
 * [Theme Extenders](/modules/data/theme-extenders)
 * [Theme Overrides](/modules/data/theme-overrides)
-* [App Color Data](/modules/data/app-color-data)
-
+* [app.colors.json File](/modules/data/app-colors-json)
 
 
 

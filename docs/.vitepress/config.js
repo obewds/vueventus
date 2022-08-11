@@ -154,14 +154,14 @@ function sidebarModules() {
                 { text: 'Tailwind Data Modules', link: '/modules/data/' },
                 { text: 'Theme Extenders', link: '/modules/data/theme-extenders' },
                 { text: 'Theme Overrides', link: '/modules/data/theme-overrides' },
-                { text: 'App Color Data', link: '/modules/data/app-color-data' },
+                { text: 'app.colors.json File', link: '/modules/data/app-colors-json' },
             ]
         },{
             text: 'Config Modules',
             collapsible: true,
             items: [
                 { text: 'Config Modules', link: '/modules/configs/' },
-                { text: 'app.vv File', link: '/modules/configs/app-vv' },
+                { text: 'app.vv.ts File', link: '/modules/configs/app-vv-ts' },
                 { text: 'VvConfig', link: '/modules/configs/vv-config' },
                 { text: 'Anchors Config', link: '/modules/configs/anchors' },
                 { text: 'Buttons Config', link: '/modules/configs/buttons' },
@@ -197,6 +197,7 @@ function sidebarModules() {
                 { text: 'camelCaseToTitleCase()', link: '/modules/helpers/camel-case-to-title-case' },
                 { text: 'decimalsOnly()', link: '/modules/helpers/decimals-only' },
                 { text: 'digitsOnly()', link: '/modules/helpers/digits-only' },
+                { text: 'forceBodyClick()', link: '/modules/helpers/force-body-click' },
                 { text: 'formatBytes()', link: '/modules/helpers/format-bytes' },
                 { text: 'formatDateMMDDYYYY()', link: '/modules/helpers/format-date-mmddyyy' },
                 { text: 'formatDateTraditional()', link: '/modules/helpers/format-date-traditional' },
@@ -213,6 +214,7 @@ function sidebarModules() {
                 { text: 'slugifyString()', link: '/modules/helpers/slugify-string' },
                 { text: 'stringToCamelCase()', link: '/modules/helpers/string-to-camel-case' },
                 { text: 'stringToFilename()', link: '/modules/helpers/string-to-filename' },
+                { text: 'timestampToDateTimeAmPm()', link: '/modules/helpers/timestamp-to-date-time-am-pm' },
                 { text: 'uniqueArray()', link: '/modules/helpers/unique-array' },
             ]
         },

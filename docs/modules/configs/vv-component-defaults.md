@@ -14,7 +14,7 @@ title: VvComponentDefaults Module
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} are the VueVentus Vue component prop defaults, but abstracted so they can be overridden by an app.vv file.
+The {{ $frontmatter.title }} are the VueVentus Vue component prop defaults, but abstracted so they can be overridden by an app.vv.ts file.
 
 
 
@@ -23,7 +23,7 @@ The {{ $frontmatter.title }} are the VueVentus Vue component prop defaults, but 
 
 
 
-## app.vv Use
+## app.vv.ts Use
 
 You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data. For brevity, the {{ $frontmatter.title }} is shortened to simply `defaults` when made a property of the VvConfig object.
 

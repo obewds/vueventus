@@ -21,7 +21,7 @@ A default palette of ground colors with properties/values with the keys of `defa
 
 
 
-## app.vv Use
+## app.vv.ts Use
 
 You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
 
