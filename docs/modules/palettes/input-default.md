@@ -21,7 +21,7 @@ A validation focused palette of a variety of color class types for use with form
 
 
 
-## app.vv Use
+## app.vv.ts Use
 
 You'll usually work with the {{ $frontmatter.title }} after it's already been merged into VueVentus VvConfig data.
 
