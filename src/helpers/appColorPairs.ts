@@ -5,41 +5,36 @@ import type { AppColors } from '../types/AppColors'
 import type { AppColorPairs } from '../types/AppColorPairs'
 import type { GroundTextColors } from '../types/GroundTextColors'
 
-export default function( appColorsJson: AppColors, darkText: string = '#000', lightText: string = '#fff' ): AppColorPairs {
+export default function( appColorsJson: AppColors, darkGroundText: string = '#fff', lightGroundText: string = '#000' ): AppColorPairs {
 
-    let data = appColorsJson
-    let keys: string[] = Object.keys(data)
-
+    let keys: string[] = Object.keys(appColorsJson)
     let output: AppColorPairs = {}
 
     for (let i=0; i < keys.length; i++) {
 
-        if (typeof data[keys[i]] === 'string') {
+        if (typeof appColorsJson[keys[i]] === 'string') {
 
-            const tc = tinycolor(data[keys[i]], {})
+            const tc = tinycolor(appColorsJson[keys[i]], {})
 
             output[keys[i]] = {
                 backgroundColor: tc.toHexString(false),
-                color: tc.isDark() ? lightText : darkText,
+                color: tc.isDark() ? darkGroundText : lightGroundText,
             }
 
-        } else if (typeof data[keys[i]] === 'object') {
+        } else if (typeof appColorsJson[keys[i]] === 'object') {
 
-            const famKeys: string[] = Object.keys(data[keys[i]])
-
+            const famKeys: string[] = Object.keys(appColorsJson[keys[i]])
             const familyObj: AppColorPairs = {}
 
             for (let j=0; j < famKeys.length; j++) {
                 
-                if (typeof data[keys[i]][famKeys[j]] === 'string') {
+                if (typeof appColorsJson[keys[i]][famKeys[j]] === 'string') {
 
-                    // console.log(keys[i] + '.' + famKeys[j] + ': ' +  data[keys[i]][famKeys[j]])
-
-                    const tc = tinycolor(data[keys[i]][famKeys[j]], false)
+                    const tc = tinycolor(appColorsJson[keys[i]][famKeys[j]], false)
 
                     familyObj[famKeys[j]] = <GroundTextColors>{
                         backgroundColor: tc.toHexString(true),
-                        color: tc.isDark() ? darkText : lightText,
+                        color: tc.isDark() ? darkGroundText : lightGroundText,
                     }
 
                 }
