@@ -76,11 +76,10 @@ module.exports = {
           '/typescript/': sidebarTypescript(),
         },
 
-        // editLink: {
-        //     repo: 'obewds/vueventus',
-        //     dir: 'docs',
-        //     text: 'Edit this page on GitHub',
-        // },
+        editLink: {
+            pattern: 'https://github.com/obewds/vueventus/edit/main/docs/:path',
+            text: 'Edit this page on GitHub'
+        },
 
         footer: {
             message: 'Released under the MIT License',
