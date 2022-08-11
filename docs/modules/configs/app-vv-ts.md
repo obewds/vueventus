@@ -13,7 +13,7 @@ title: app.vv.ts File
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} is essentially a hybrid of the design system level characteristics and patters within an application and colloquial language hierarchies that are designed to allow code to be human-readable.
+The {{ $frontmatter.title }} is essentially a hybrid of the design system level characteristics and patterns within an application and colloquial language hierarchies that are designed to allow code to be human-readable.
 
 :::warning REMEMBER
 The {{ $frontmatter.title }} expresses design system level characteristics through atomic classes, and VueVentus does this through Tailwind CSS classes currently!
