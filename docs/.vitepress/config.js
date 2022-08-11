@@ -193,6 +193,7 @@ function sidebarModules() {
             collapsible: true,
             items: [
                 { text: 'Helper Modules', link: '/modules/helpers/' },
+                { text: 'appColorPairs()', link: '/modules/helpers/app-color-pairs' },
                 { text: 'camelCaseToTitleCase()', link: '/modules/helpers/camel-case-to-title-case' },
                 { text: 'decimalsOnly()', link: '/modules/helpers/decimals-only' },
                 { text: 'digitsOnly()', link: '/modules/helpers/digits-only' },
