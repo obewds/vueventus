@@ -31,7 +31,7 @@ const output = `<!DOCTYPE html>
 
     </head>
 
-    <body>
+    <body class="scrollbar scrollbar-thumb-trueGray-100 scrollbar-track-trueGray-200 dark:scrollbar-thumb-trueGray-600 dark:scrollbar-track-trueGray-800">
 
         <div id="app"></div>
         

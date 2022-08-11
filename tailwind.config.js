@@ -36,7 +36,8 @@ module.exports = {
     variants: {
         extend: {
             opacity: ['disabled']
-        }
+        },
+        scrollbar: ['dark']
     },
 
     plugins: [
@@ -44,5 +45,6 @@ module.exports = {
         require('@tailwindcss/typography'),
         require('@tailwindcss/aspect-ratio'),
         require('@tailwindcss/line-clamp'),
+        require('tailwind-scrollbar'),
     ],
 }
