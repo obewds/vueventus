@@ -23,6 +23,7 @@ export { default as TextDefault } from './configs/palettes/TextDefault';
 export { default as camelCaseToTitleCase } from './helpers/camelCaseToTitleCase';
 export { default as decimalsOnly } from './helpers/decimalsOnly';
 export { default as digitsOnly } from './helpers/digitsOnly';
+export { default as forceBodyClick } from './helpers/forceBodyClick';
 export { default as formatBytes } from './helpers/formatBytes';
 export { default as formatDateMMDDYYYY } from './helpers/formatDateMMDDYYYY';
 export { default as formatDateTraditional } from './helpers/formatDateTraditional';
@@ -39,6 +40,7 @@ export { default as randomString } from './helpers/randomString';
 export { default as slugifyString } from './helpers/slugifyString';
 export { default as stringToCamelCase } from './helpers/stringToCamelCase';
 export { default as stringToFilename } from './helpers/stringToFilename';
+export { default as timestampToDateTimeAmPm } from './helpers/timestampToDateTimeAmPm';
 export { default as uniqueArray } from './helpers/uniqueArray';
 // .src/validators
 export { default as ValidAudioSourceTypes } from './validators/ValidAudioSourceTypes';
