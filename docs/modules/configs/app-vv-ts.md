@@ -102,20 +102,33 @@ This way both design and development can use the {{ $frontmatter.title }} to tru
 
 
 
-## Customizing Anchors
+## Customizing Configs Data
 
-A super simple and common example, is to remove the default visual underline from an application's `VvAnchor` (or other anchor-like elements) elements. The VueVentus library uses the underline due to it's accessibility advantages, but many designs call for underline-less hyper links.
+VueVentus provides a lot of different configs that are organized predominantly on the element level. These configs are meant to summarize and group characteristics of visual design aspects into literal/logical common language.
 
-To change this for all VueVentus elements is super simple. Simply zero out the `VvConfig` provided value for your app's anchors.text classes data like so:
+VueVentus configs give:
+
+1. Programmers terse, readable and typed chains of properties to work within the app
+1. Designers a summary of the visual language characteristics of the app - expressed through those same properties and atomic class names
+
+Let's look at a super simple and common config data point to change to illustrate this.
+
+A simple and common tweak from the VvConfig default settings, involves removing the default visual underline from an application's `VvAnchor` (and VvAnchor dependent) elements.
+
+:::tip
+The VueVentus library uses the underline due to it's accessibility advantages, but many designs call for underline-less hyper links.
+:::
+
+To change this for all VueVentus elements is a one-liner. Simply zero out the `VvConfig` provided value for your app's [anchors.text](/modules/configs/anchors#anchors-text) classes data like so:
 
 ```javascript
 // removes TWCSS underline classes from VueVentus anchor component default classes
 appVv.anchors.text = ''
 ```
 
-So our {{ $frontmatter.title }} now looks like code below, and and `VvAnchor` element or elements using your appVv.anchors config data will no longer have the default Tailwind CSS underlined classes:
+So our {{ $frontmatter.title }} now looks like code below, and any `VvAnchor` element or elements using your appVv.anchors config data will no longer have the default Tailwind CSS underlined classes:
 
-```javascript
+```javascript{8-9}
 // ./src/app.vv.ts
 
 import { VvConfig } from '@obewds/vueventus'
@@ -148,7 +161,7 @@ A super common to-do in your {{ $frontmatter.title }} is customizing application
 
 Here's an example of how to add a new anchor color palette called/keyed `bootstrap` that has color name properties that follow a Bootstrap-like vernacular:
 
-```javascript
+```javascript{1}
 appVv.anchors.palettes.bootstrap = {
     primary   : "text-blue-500 hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-200",
     secondary : "text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-200",
@@ -161,7 +174,7 @@ appVv.anchors.palettes.bootstrap = {
 
 So now our {{ $frontmatter.title }} now looks like this:
 
-```javascript
+```javascript{11-18}
 // ./src/app.vv.ts
 
 import { VvConfig } from '@obewds/vueventus'
@@ -192,18 +205,18 @@ This means downstream in a `VvAnchor` component for example, we can now call for
 </VvAnchor>
 ```
 
-It's worth noting however, that we may want to override the default `VvConfig` anchors palette called/keyed `default`, considering how similar the color names are compared to our new Bootstrap-like palette.
+It's worth noting however, that we may want to override the default `VvConfig` anchors palette called/keyed `default`, considering how similar the [AnchorsDefault](/modules/palettes/anchor-default#module-code) palette color names are compared to our new Bootstrap-like palette.
 
 To do this, we'd take a slightly different approach:
 
-```javascript
+```javascript{1}
 appVv.anchors.palettes.default = {
-    primary   : "text-blue-500 hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-200",
-    secondary : "text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-200",
-    danger    : "text-rose-500 hover:text-rose-600 dark:text-rose-300 dark:hover:text-rose-200",
-    success   : "text-green-600 hover:text-green-700 dark:text-green-300 dark:hover:text-green-200",
-    warning   : "text-amber-600 hover:text-amber-700 dark:text-amber-300 dark:hover:text-amber-200",
-    info      : "text-cyan-600 hover:text-cyan-700 dark:text-cyan-300 dark:hover:text-cyan-200",
+    primary   : "...",
+    secondary : "...",
+    danger    : "...",
+    success   : "...",
+    warning   : "...",
+    info      : "...",
 }
 ```
 
@@ -246,19 +259,19 @@ To remedy this, it would be prudent to go ahead and update the defaults for our 
 
 So we could change our code to something like this:
 
-```javascript
+```javascript{12}
 // ./src/app.vv.ts
 
 appVv.anchors.palettes.default = {
-    primary   : "text-blue-500 hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-200",
-    secondary : "text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-200",
-    danger    : "text-rose-500 hover:text-rose-600 dark:text-rose-300 dark:hover:text-rose-200",
-    success   : "text-green-600 hover:text-green-700 dark:text-green-300 dark:hover:text-green-200",
-    warning   : "text-amber-600 hover:text-amber-700 dark:text-amber-300 dark:hover:text-amber-200",
-    info      : "text-cyan-600 hover:text-cyan-700 dark:text-cyan-300 dark:hover:text-cyan-200",
+    primary   : "...",
+    secondary : "...",
+    danger    : "...",
+    success   : "...",
+    warning   : "...",
+    info      : "...",
 }
 
-appVv.defaults['VvAnchor'].color = 'info'
+appVv.defaults["VvAnchor"].color = "info"
 ```
 
 Now in a downstream `VvAnchor` component instance, our component would return an anchor with `info` classes by simply calling:
@@ -276,8 +289,6 @@ And of course we can access any of our other palette colors by using the other p
     I'm an primary link!
 </VvAnchor>
 ```
-
-<!--- #TODO write docs --->
 
 
 
