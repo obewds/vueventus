@@ -51,21 +51,6 @@ export default appVv
 
 
 
-
-
-## Import
-
-However, if you need to import the compiled library version of the {{ $frontmatter.title }}, you can use:
-
-```javascript
-import { VvConfig } from '@obewds/vueventus'
-```
-
-
-
-
-
-
 ## Module Code
 
 <<< @/../src/configs/VvConfig.ts
