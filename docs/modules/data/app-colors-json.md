@@ -1,11 +1,10 @@
 ---
-title: App Color Data
+title: app.colors.json File
 ---
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
 </script>
-<!-- TODO: this page and navigation to it should all change to "app.colors.json File" -->
 
 
 
@@ -41,19 +40,18 @@ The TWCSS Colors Tool allows you to copy the raw JSON data or download a file
 
 ## Adding Color Config to Tailwind
 
-Once you have your JSON color palette data, create a file with a descriptive name in your project's root directory and paste your data in it (or copy the file into your root if you downloaded a file)
+Once you have your JSON color palette data, add your file or create a file called `app.colors.json` in your project `./src` directory, and paste in your JSON color palette data.
 
-
-Assuming our JSON color palettes file is called `app.colors.json`, we should now have a `./app.colors.json` file in the root directory.
+You should now have a `./src/app.colors.json` file in your project containing your app's JSON color palette data!
 
 ::: tip AFTER THE GETTING STARTED GUIDE
-Now we can use our `./app.colors.json` file in our project's `./tailwind.config.cjs` file, instead of pulling our colors from the VueVentus package like we did in the Getting Started guide.
+Now we can use our `./src/app.colors.json` file in our project's `./tailwind.config.cjs` file, instead of pulling our colors from the VueVentus package like we did in the Getting Started guide.
 :::
 
 Let's open up our `./tailwind.config.cjs` file and change the following line:
 
 ```javascript
-const appColors = require('./app.colors.json')
+const appColors = require('./src/app.colors.json')
 ```
 
 And of course this means we'll also need to change the variable reference for the one we just replaced deeper in the `./tailwind.config.cjs` file like so: 
@@ -80,7 +78,7 @@ Additionally, we can also access this data within our application and with our c
 Here's what that looks like for the default naming conventions the [TWCSS Colors Tool](https://tailwind.mattmct.com/) provides:
 
 ```javascript
-import appColors from './app.colors.json'
+import appColors from './src/app.colors.json'
 
 const red = appColors.red['400']
 const coolGray = appColors.coolGray['600']
