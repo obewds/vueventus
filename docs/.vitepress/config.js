@@ -207,6 +207,7 @@ function sidebarModules() {
                 { text: 'mergeWithVvConfig()', link: '/modules/helpers/merge-with-vv-config' },
                 { text: 'monthNames()', link: '/modules/helpers/month-names' },
                 { text: 'padNumber()', link: '/modules/helpers/pad-number' },
+                { text: 'randomGroundAndTextColors()', link: '/modules/helpers/random-ground-and-text-colors' },
                 { text: 'randomHex()', link: '/modules/helpers/random-hex' },
                 { text: 'randomHexShort()', link: '/modules/helpers/random-hex-short' },
                 { text: 'randomString()', link: '/modules/helpers/random-string' },
