@@ -193,6 +193,7 @@ function sidebarModules() {
             collapsible: true,
             items: [
                 { text: 'Helper Modules', link: '/modules/helpers/' },
+                { text: 'appColorPairs()', link: '/modules/helpers/app-color-pairs' },
                 { text: 'camelCaseToTitleCase()', link: '/modules/helpers/camel-case-to-title-case' },
                 { text: 'decimalsOnly()', link: '/modules/helpers/decimals-only' },
                 { text: 'digitsOnly()', link: '/modules/helpers/digits-only' },
@@ -207,6 +208,7 @@ function sidebarModules() {
                 { text: 'mergeWithVvConfig()', link: '/modules/helpers/merge-with-vv-config' },
                 { text: 'monthNames()', link: '/modules/helpers/month-names' },
                 { text: 'padNumber()', link: '/modules/helpers/pad-number' },
+                { text: 'randomGroundAndTextColors()', link: '/modules/helpers/random-ground-and-text-colors' },
                 { text: 'randomHex()', link: '/modules/helpers/random-hex' },
                 { text: 'randomHexShort()', link: '/modules/helpers/random-hex-short' },
                 { text: 'randomString()', link: '/modules/helpers/random-string' },

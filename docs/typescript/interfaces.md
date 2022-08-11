@@ -21,6 +21,66 @@ These are the VueVentus {{ $frontmatter.title }} Modules are used throughout Vue
 
 
 
+## AppColor
+
+### Import
+
+```javascript
+import type { AppColor } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/AppColor.ts
+
+
+
+
+
+
+
+
+
+## AppColorPairs
+
+### Import
+
+```javascript
+import type { AppColorPairs } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/AppColorPairs.ts
+
+
+
+
+
+
+
+
+
+## AppColors
+
+### Import
+
+```javascript
+import type { AppColors } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/AppColors.ts
+
+
+
+
+
+
+
+
+
 ## ButtonsSizes
 
 ### Import
@@ -371,6 +431,28 @@ import type { EmptyPalette } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/EmptyPalette.ts
+
+
+
+
+
+
+
+
+
+
+
+## GroundTextColors
+
+### Import
+
+```javascript
+import type { GroundTextColors } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/GroundTextColors.ts
 
 
 

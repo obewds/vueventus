@@ -108,7 +108,7 @@ VueVentus provides a lot of different configs that are organized predominantly o
 
 VueVentus configs give:
 
-1. Programmers terse, readable and typed chains of properties to work within the app
+1. Programmers terse, readable and typed chains of properties to work with in the app
 1. Designers a summary of the visual language characteristics of the app - expressed through those same properties and atomic class names
 
 Let's look at a super simple and common config data point to change to illustrate this.

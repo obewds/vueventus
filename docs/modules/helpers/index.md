@@ -16,6 +16,7 @@ title: Helper Method Modules
 
 {{ $frontmatter.title }} are utility functions for use around and within VueVentus.
 
+* [appColorPairs()](/modules/helpers/app-color-pairs)
 * [camelCaseToTitleCase()](/modules/helpers/camel-case-to-title-case)
 * [decimalsOnly()](/modules/helpers/decimals-only)
 * [digitsOnly()](/modules/helpers/digits-only)
@@ -30,6 +31,7 @@ title: Helper Method Modules
 * [mergeWithVvConfig()](/modules/helpers/merge-with-vv-config)
 * [monthNames()](/modules/helpers/month-names)
 * [padNumber()](/modules/helpers/pad-number)
+* [randomGroundAndTextColors()](/modules/helpers/random-ground-and-text-colors)
 * [randomHex()](/modules/helpers/random-hex)
 * [randomHexShort()](/modules/helpers/random-hex-short)
 * [randomString()](/modules/helpers/random-string)

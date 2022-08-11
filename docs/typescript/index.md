@@ -38,6 +38,9 @@ title: Typescript Modules
 
 ## Typescript Interfaces
 
+* [AppColor](/typescript/interfaces#appcolor)
+* [AppColorPairs](/typescript/interfaces#appcolorpairs)
+* [AppColors](/typescript/interfaces#appcolors)
 * [ButtonsSizes](/typescript/interfaces#buttonssizes)
 * [ColorMode](/typescript/interfaces#colormode)
 * [ConfigAnchors](/typescript/interfaces#configanchors)
@@ -55,6 +58,7 @@ title: Typescript Modules
 * [DefaultValidationPalette](/typescript/interfaces#defaultvalidationpalette)
 * [DefaultValidationPaletteColors](/typescript/interfaces#defaultvalidationpalettecolors)
 * [EmptyPalette](/typescript/interfaces#emptypalette)
+* [GroundTextColors](/typescript/interfaces#groundtextcolors)
 * [InputsSizes](/typescript/interfaces#inputssizes)
 * [MonthNames](/typescript/interfaces#monthnames)
 * [MonthNamesTypes](/typescript/interfaces#monthnamestypes)
