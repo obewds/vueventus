@@ -79,7 +79,7 @@ Once you've selected a stack, the vv-update CLI will present you with a scrollin
 :::danger FILES ARE OVERWRITTEN
 Please note that the vv-update CLI doesn't care if you've worked hard on customizing a file originally written by the [vueventus CLI](/guides/vueventus-cli)!
 
-This means the vv-update CLI will **overwrite** a file if it already exists, so **always** be sure you have versioning or the ability to undo an vv-update CLI selection to **always** have a way back out of an overwrite!
+This means the vv-update CLI will **overwrite** a file if it already exists, so **always** be sure you have versioning or the ability to undo a vv-update CLI selection to **always** have a way back out of an overwrite!
 :::
 
 
