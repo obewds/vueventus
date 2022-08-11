@@ -161,7 +161,7 @@ function sidebarModules() {
             collapsible: true,
             items: [
                 { text: 'Config Modules', link: '/modules/configs/' },
-                { text: 'app.vv File', link: '/modules/configs/app-vv' },
+                { text: 'app.vv.ts File', link: '/modules/configs/app-vv-ts' },
                 { text: 'VvConfig', link: '/modules/configs/vv-config' },
                 { text: 'Anchors Config', link: '/modules/configs/anchors' },
                 { text: 'Buttons Config', link: '/modules/configs/buttons' },
