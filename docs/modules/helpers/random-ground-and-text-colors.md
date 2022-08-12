@@ -103,9 +103,9 @@ In a Vue SFC:
 
 
 ## Module Code
-
+<!-- TODO
 <<< @/../src/helpers/randomGroundAndTextColors.ts
-
+-->
 
 
 
