@@ -33,7 +33,8 @@ export default defineConfig({
         lib: {
             entry: resolve(__dirname, 'src/index.ts'),
             name: 'VueVentus',
-            formats: ['es','cjs','umd','iife'],
+            // formats: ['es','cjs','umd','iife'],
+            formats: ['es','cjs','umd'],
             // fileName: (format) => `vueventus.${format}.js`,
             fileName: (format) => fileNameResolver(format),
         },
