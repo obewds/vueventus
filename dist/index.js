@@ -20,7 +20,7 @@ export { default as InputDefault } from './configs/palettes/InputDefault';
 export { default as InputUnderlined } from './configs/palettes/InputUnderlined';
 export { default as TextDefault } from './configs/palettes/TextDefault';
 // .src/helpers
-export { default as appColorPairs } from './helpers/appColorPairs';
+// export { default as appColorPairs } from './helpers/appColorPairs'
 export { default as camelCaseToTitleCase } from './helpers/camelCaseToTitleCase';
 export { default as decimalsOnly } from './helpers/decimalsOnly';
 export { default as digitsOnly } from './helpers/digitsOnly';
@@ -35,7 +35,7 @@ export { default as hexadecimals } from './helpers/hexadecimals';
 export { default as mergeWithVvConfig } from './helpers/mergeWithVvConfig';
 export { default as monthNames } from './helpers/monthNames';
 export { default as padNumber } from './helpers/padNumber';
-export { default as randomGroundAndTextColors } from './helpers/randomGroundAndTextColors';
+// export { default as randomGroundAndTextColors } from './helpers/randomGroundAndTextColors'
 export { default as randomHex } from './helpers/randomHex';
 export { default as randomHexShort } from './helpers/randomHexShort';
 export { default as randomString } from './helpers/randomString';
