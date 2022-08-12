@@ -3,6 +3,16 @@
     import globals from '../globals'
     import DevViewLinkCard from '@/views/compos/DevViewLinkCard.vue'
 
+
+
+import { appColorPairs } from '../index'
+import appColorsJson from '../app.colors.json'
+import type { AppColorPairs } from '../index'
+
+const colors: AppColorPairs = appColorPairs(appColorsJson)
+
+
+
     const tw = globals.classes
     
 </script>
@@ -15,6 +25,12 @@
         <h1 :class="tw.h1">
             VueVentus Local Testing Site
         </h1>
+
+        <div class="w-full flex flex-col space-y-3">
+            <div :style="colors.lime['300']">Lime 300</div>
+            <div :style="colors.lime['500']">Lime 500</div>
+            <div :style="colors.lime['700']">Lime 700</div>
+        </div>
 
 
 
