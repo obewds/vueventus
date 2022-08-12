@@ -119,9 +119,9 @@ console.log(appColorsTwo.red["900"])
 
 ## Module Code
 
-<!-- TODO
+
 <<< @/../src/helpers/appColorPairs.ts
--->
+
 
 
 
