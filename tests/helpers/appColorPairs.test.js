@@ -1,11 +1,10 @@
 // ./tests/helpers/appColorPairs.test.js
 
-// import { appColorPairs } from '../../src/index'
+import { appColorPairs } from '../../src/index'
 
 
 test('appColorPairs helper module returns a truthy value', async () => {
     
-    // expect(appColorPairs).toBeTruthy()
-    expect(true).toBeTruthy()
+    expect(appColorPairs).toBeTruthy()
 
 })
