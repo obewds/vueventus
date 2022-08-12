@@ -7,34 +7,43 @@ import type { GroundTextColors } from '../types/GroundTextColors'
 
 export default function( appColorsJson: AppColors, darkGroundText: string = '#fff', lightGroundText: string = '#000' ): AppColorPairs {
 
-    let keys: string[] = Object.keys(appColorsJson)
+    let data = JSON.parse(JSON.stringify(appColorsJson))
+    let keys: string[] = Object.keys(data)
     let output: AppColorPairs = {}
 
     for (let i=0; i < keys.length; i++) {
 
-        if (typeof appColorsJson[keys[i]] === 'string') {
+        if (typeof data[keys[i]] === 'string') {
 
-            const tc = tinycolor(appColorsJson[keys[i]], {})
+            const tc = tinycolor(data[keys[i]], {})
 
-            output[keys[i]] = {
-                backgroundColor: tc.toHexString(false),
-                color: tc.isDark() ? darkGroundText : lightGroundText,
+            if (tc.isValid()) {
+
+                output[keys[i]] = {
+                    backgroundColor: tc.toHexString(false),
+                    color: tc.isDark() ? darkGroundText : lightGroundText,
+                }
+            
             }
 
-        } else if (typeof appColorsJson[keys[i]] === 'object') {
+        } else if (typeof data[keys[i]] === 'object') {
 
-            const famKeys: string[] = Object.keys(appColorsJson[keys[i]])
+            const famKeys: string[] = Object.keys(data[keys[i]])
             const familyObj: AppColorPairs = {}
 
             for (let j=0; j < famKeys.length; j++) {
-                
-                if (typeof appColorsJson[keys[i]][famKeys[j]] === 'string') {
 
-                    const tc = tinycolor(appColorsJson[keys[i]][famKeys[j]], false)
+                if (typeof data[keys[i]][famKeys[j]] === 'string') {
 
-                    familyObj[famKeys[j]] = <GroundTextColors>{
-                        backgroundColor: tc.toHexString(true),
-                        color: tc.isDark() ? darkGroundText : lightGroundText,
+                    const tc = tinycolor(data[keys[i]][famKeys[j]], false)
+
+                    if (tc.isValid()) {
+                    
+                        familyObj[famKeys[j]] = <GroundTextColors>{
+                            backgroundColor: tc.toHexString(true),
+                            color: tc.isDark() ? darkGroundText : lightGroundText,
+                        }
+
                     }
 
                 }

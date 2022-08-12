@@ -572,13 +572,13 @@ const Fe = {
     ...Q
   },
   defaults: dt
-}, b = Math.round, z = Math.min, M = Math.max, ft = (e) => typeof e == "string" && e.includes(".") && Number.parseFloat(e) === 1, te = (e) => typeof e == "string" && e.includes("%"), he = (e) => e < 1 ? b(e) : e, gt = (e) => b(100 * e) / 100, Re = (e) => (e = Number.parseFloat(e), Number.isNaN(e) || e < 0 || e > 1 ? 1 : e), q = (e) => e.a < 1 && e.a >= 0, ie = (e) => z(1, M(0, e)), ht = (e) => e.length === 1 ? `0${e}` : `${e}`, bt = "[-\\+]?\\d+%?", pt = "[-\\+]?\\d*\\.\\d+%?", T = `(?:${pt})|(?:${bt})`, O = (e) => new RegExp(T).test(e), Te = (e) => O(e.r) && O(e.g) && O(e.b), be = `[\\s|\\(]+(${T})[,|\\s]+(${T})[,|\\s]+(${T})\\s*\\)?`, pe = `[\\s|\\(]+(${T})[,|\\s]+(${T})[,|\\s]+(${T})[,|\\s]+(${T})\\s*\\)?`;
+}, b = Math.round, z = Math.min, M = Math.max, ft = (e) => typeof e == "string" && e.includes(".") && Number.parseFloat(e) === 1, te = (e) => typeof e == "string" && e.includes("%"), he = (e) => e < 1 ? b(e) : e, gt = (e) => b(100 * e) / 100, Re = (e) => (e = Number.parseFloat(e), Number.isNaN(e) || e < 0 || e > 1 ? 1 : e), U = (e) => e.a < 1 && e.a >= 0, ie = (e) => z(1, M(0, e)), ht = (e) => e.length === 1 ? `0${e}` : `${e}`, bt = "[-\\+]?\\d+%?", pt = "[-\\+]?\\d*\\.\\d+%?", T = `(?:${pt})|(?:${bt})`, O = (e) => new RegExp(T).test(e), Te = (e) => O(e.r) && O(e.g) && O(e.b), be = `[\\s|\\(]+(${T})[,|\\s]+(${T})[,|\\s]+(${T})\\s*\\)?`, pe = `[\\s|\\(]+(${T})[,|\\s]+(${T})[,|\\s]+(${T})[,|\\s]+(${T})\\s*\\)?`;
 function m(e, t) {
   ft(e) && (e = "100%");
   const r = te(e);
   return e = z(t, M(0, Number.parseFloat(e))), r && (e = Number.parseInt(e * t, 10) / 100), Math.abs(e - t) < 1e-6 ? 1 : e % t / Number.parseFloat(t);
 }
-const J = (e) => Number.parseInt(e, 16), $e = (e) => J(e) / 255, Y = (e) => e <= 1 ? `${e * 100}%` : e, E = (e) => {
+const G = (e) => Number.parseInt(e, 16), $e = (e) => G(e) / 255, Y = (e) => e <= 1 ? `${e * 100}%` : e, E = (e) => {
   const [t, r, s] = [e._r, e._g, e._b].map((o) => b(o));
   return { r: t, g: r, b: s, a: e._roundA };
 }, I = (e) => ({ r: e._r, g: e._g, b: e._b, a: e._a }), re = (e) => {
@@ -597,13 +597,13 @@ function xt(e) {
 }
 function yt(e, t, r) {
   r = r === 0 ? 0 : r || 50;
-  const s = new l(e).toRgb(), o = new l(t).toRgb(), n = r / 100, a = {
+  const s = new i(e).toRgb(), o = new i(t).toRgb(), n = r / 100, a = {
     r: (o.r - s.r) * n + s.r,
     g: (o.g - s.g) * n + s.g,
     b: (o.b - s.b) * n + s.b,
     a: (o.a - s.a) * n + s.a
   };
-  return new l(a);
+  return new i(a);
 }
 function kt(e) {
   let t, r;
@@ -613,7 +613,7 @@ function kt(e) {
   }, t = (e.level || "AA").toUpperCase(), r = (e.size || "small").toLowerCase(), t !== "AA" && t !== "AAA" && (t = "AA"), r !== "small" && r !== "large" && (r = "small"), { level: t, size: r };
 }
 function me(e, t) {
-  const r = new l(e), s = new l(t);
+  const r = new i(e), s = new i(t);
   return (Math.max(r.getLuminance(), s.getLuminance()) + 0.05) / (Math.min(r.getLuminance(), s.getLuminance()) + 0.05);
 }
 function Ee(e, t, r) {
@@ -633,55 +633,55 @@ function Ee(e, t, r) {
 }
 function Ie(e, t, r = {}) {
   const { includeFallbackColors: s, level: o, size: n } = r;
-  let a, i = null, c = 0;
+  let a, l = null, c = 0;
   for (const d of t)
-    a = me(e, d), a > c && (c = a, i = new l(d));
-  return Ee(e, i, { level: o, size: n }) || !s ? i : (r.includeFallbackColors = !1, Ie(e, ["#fff", "#000"], r));
+    a = me(e, d), a > c && (c = a, l = new i(d));
+  return Ee(e, l, { level: o, size: n }) || !s ? l : (r.includeFallbackColors = !1, Ie(e, ["#fff", "#000"], r));
 }
 function D(e, t) {
   return { monochromatic: zt, analogous: Ct, complement: wt, splitcomplement: $t, triad: vt, tetrad: St }[e](...t);
 }
 function wt(e) {
-  const t = new l(e).toHsl();
-  return t.h = (t.h + 180) % 360, new l(t);
+  const t = new i(e).toHsl();
+  return t.h = (t.h + 180) % 360, new i(t);
 }
 function vt(e) {
-  const t = new l(e).toHsl(), { h: r } = t;
+  const t = new i(e).toHsl(), { h: r } = t;
   return [
-    new l(e),
-    new l({ h: (r + 120) % 360, s: t.s, l: t.l }),
-    new l({ h: (r + 240) % 360, s: t.s, l: t.l })
+    new i(e),
+    new i({ h: (r + 120) % 360, s: t.s, l: t.l }),
+    new i({ h: (r + 240) % 360, s: t.s, l: t.l })
   ];
 }
 function St(e) {
-  const t = new l(e).toHsl(), { h: r } = t;
+  const t = new i(e).toHsl(), { h: r } = t;
   return [
-    new l(e),
-    new l({ h: (r + 90) % 360, s: t.s, l: t.l }),
-    new l({ h: (r + 180) % 360, s: t.s, l: t.l }),
-    new l({ h: (r + 270) % 360, s: t.s, l: t.l })
+    new i(e),
+    new i({ h: (r + 90) % 360, s: t.s, l: t.l }),
+    new i({ h: (r + 180) % 360, s: t.s, l: t.l }),
+    new i({ h: (r + 270) % 360, s: t.s, l: t.l })
   ];
 }
 function $t(e) {
-  const t = new l(e).toHsl(), { h: r } = t;
+  const t = new i(e).toHsl(), { h: r } = t;
   return [
-    new l(e),
-    new l({ h: (r + 72) % 360, s: t.s, l: t.l }),
-    new l({ h: (r + 216) % 360, s: t.s, l: t.l })
+    new i(e),
+    new i({ h: (r + 72) % 360, s: t.s, l: t.l }),
+    new i({ h: (r + 216) % 360, s: t.s, l: t.l })
   ];
 }
 function Ct(e, t = 6, r = 30) {
-  const s = new l(e).toHsl(), o = 360 / r, n = [new l(e)];
+  const s = new i(e).toHsl(), o = 360 / r, n = [new i(e)];
   for (s.h = (s.h - (o * t >> 1) + 720) % 360; --t; )
-    s.h = (s.h + o) % 360, n.push(new l(s));
+    s.h = (s.h + o) % 360, n.push(new i(s));
   return n;
 }
 function zt(e, t = 6) {
-  const r = new l(e).toHsv();
+  const r = new i(e).toHsv();
   let { h: s, s: o, v: n } = r;
-  const a = [], i = 1 / t;
+  const a = [], l = 1 / t;
   for (; t--; )
-    a.push(new l({ h: s, s: o, v: n })), n = (n + i) % 1;
+    a.push(new i({ h: s, s: o, v: n })), n = (n + l) % 1;
   return a;
 }
 function R(e, t) {
@@ -689,40 +689,40 @@ function R(e, t) {
   return o._r = s._r, o._g = s._g, o._b = s._b, o.setAlpha(s._a), o;
 }
 function Mt(e) {
-  const t = new l(e).toRgb();
-  return t.r = M(0, z(255, 255 - t.r)), t.g = M(0, z(255, 255 - t.g)), t.b = M(0, z(255, 255 - t.b)), new l(t);
+  const t = new i(e).toRgb();
+  return t.r = M(0, z(255, 255 - t.r)), t.g = M(0, z(255, 255 - t.g)), t.b = M(0, z(255, 255 - t.b)), new i(t);
 }
 function Vt(e, t) {
   t = t === 0 ? 0 : t || 10;
-  const r = new l(e).toHsl();
-  return r.s -= t / 100, r.s = ie(r.s), new l(r);
+  const r = new i(e).toHsl();
+  return r.s -= t / 100, r.s = ie(r.s), new i(r);
 }
 function At(e, t) {
   t = t === 0 ? 0 : t || 10;
-  const r = new l(e).toHsl();
-  return r.s += t / 100, r.s = ie(r.s), new l(r);
+  const r = new i(e).toHsl();
+  return r.s += t / 100, r.s = ie(r.s), new i(r);
 }
 function _t(e) {
-  return new l(e).desaturate(100);
+  return new i(e).desaturate(100);
 }
 function jt(e, t) {
   t = t === 0 ? 0 : t || 10;
-  const r = new l(e).toHsl();
-  return r.l += t / 100, r.l = ie(r.l), new l(r);
+  const r = new i(e).toHsl();
+  return r.l += t / 100, r.l = ie(r.l), new i(r);
 }
 function Bt(e, t) {
   t = t === 0 ? 0 : t || 10;
-  const r = new l(e).toRgb();
-  return r.r = M(0, z(255, r.r - b(255 * -(t / 100)))), r.g = M(0, z(255, r.g - b(255 * -(t / 100)))), r.b = M(0, z(255, r.b - b(255 * -(t / 100)))), new l(r);
+  const r = new i(e).toRgb();
+  return r.r = M(0, z(255, r.r - b(255 * -(t / 100)))), r.g = M(0, z(255, r.g - b(255 * -(t / 100)))), r.b = M(0, z(255, r.b - b(255 * -(t / 100)))), new i(r);
 }
 function Ft(e, t) {
   t = t === 0 ? 0 : t || 10;
-  const r = new l(e).toHsl();
-  return r.l -= t / 100, r.l = ie(r.l), new l(r);
+  const r = new i(e).toHsl();
+  return r.l -= t / 100, r.l = ie(r.l), new i(r);
 }
 function Ot(e, t) {
-  const r = new l(e).toHsl(), s = (r.h + t) % 360;
-  return r.h = s < 0 ? 360 + s : s, new l(r);
+  const r = new i(e).toHsl(), s = (r.h + t) % 360;
+  return r.h = s < 0 ? 360 + s : s, new i(r);
 }
 class Rt {
   constructor(t, r, s = {}) {
@@ -800,12 +800,12 @@ class Ht {
 }
 let Et = 0;
 const j = new Ht();
-class l {
+class i {
   constructor(t, r = {}) {
-    if (t = t || "", t instanceof l)
+    if (t = t || "", t instanceof i)
       return t;
     const s = j.findColor(t);
-    this._originalInput = t, this._r = he(s.r), this._g = he(s.g), this._b = he(s.b), this._a = s.a, this._roundA = gt(this._a), this._format = r.format || s.format, this._gradientType = r.gradientType, this._ok = s.ok, this._tc_id = l.newId(), j.set(r);
+    this._originalInput = t, this._r = he(s.r), this._g = he(s.g), this._b = he(s.b), this._a = s.a, this._roundA = gt(this._a), this._format = r.format || s.format, this._gradientType = r.gradientType, this._ok = s.ok, this._tc_id = i.newId(), j.set(r);
   }
   static newId() {
     return Et++;
@@ -814,7 +814,7 @@ class l {
     return j.add(t, r);
   }
   static equals(t, r) {
-    return !t || !r ? !1 : new l(t).toRgbString() === new l(r).toRgbString();
+    return !t || !r ? !1 : new i(t).toRgbString() === new i(r).toRgbString();
   }
   static fromRatio(t, r) {
     if (typeof t == "object") {
@@ -823,7 +823,7 @@ class l {
         Object.prototype.hasOwnProperty.call(t, o) && (o === "a" ? s[o] = t[o] : s[o] = Y(t[o]));
       t = s;
     }
-    return new l(t, r);
+    return new i(t, r);
   }
   static readability(t, r) {
     return me(t, r);
@@ -910,7 +910,7 @@ class l {
     return this._a = Re(t), this._roundA = b(100 * this._a) / 100, this;
   }
   clone() {
-    return new l(this.toString());
+    return new i(this.toString());
   }
   lighten(...t) {
     return R("lighten", [this, ...t]);
@@ -965,12 +965,12 @@ function ue(e) {
   let t, r, s, o, n;
   return (n = Ce.rgb.exec(e)) ? ([t, r, s] = n.splice(1, 3), { r: t, g: r, b: s }) : (n = Ce.rgba.exec(e)) ? ([t, r, s, o] = n.splice(1, 4), { r: t, g: r, b: s, a: o }) : !1;
 }
-const ce = l.registerFormat("rgb");
+const ce = i.registerFormat("rgb");
 ce.shouldHandleInput = (e) => typeof e == "object" && Te(e) && !te(e.r) || ue(e);
 ce.toRgb = (e) => typeof e == "object" && re(e) || re(ue(e));
 ce.toRaw = (e) => e;
 ce.toString = (e) => oe(e);
-const de = l.registerFormat("prgb");
+const de = i.registerFormat("prgb");
 de.shouldHandleInput = (e) => {
   if (typeof e == "string") {
     const t = ue(e);
@@ -981,7 +981,7 @@ de.shouldHandleInput = (e) => {
 de.toRgb = (e) => re(typeof e == "object" ? e : ue(e));
 de.toRaw = (e) => se(e);
 de.toString = (e) => oe(se(e));
-const v = l.registerFormat("hex", {
+const v = i.registerFormat("hex", {
   alias: ["hex3", "hex6"]
 }), ae = function() {
   return {
@@ -992,11 +992,11 @@ const v = l.registerFormat("hex", {
 function It(e) {
   let t;
   if (t = ae.hex3.exec(e)) {
-    const [r, s, o] = t.splice(1, 3).map((n) => `${n}${n}`).map((n) => J(n));
+    const [r, s, o] = t.splice(1, 3).map((n) => `${n}${n}`).map((n) => G(n));
     return { r, g: s, b: o, a: 1 };
   }
   if (t = ae.hex6.exec(e)) {
-    const [r, s, o] = t.splice(1, 3).map((n) => J(n));
+    const [r, s, o] = t.splice(1, 3).map((n) => G(n));
     return { r, g: s, b: o, a: 1 };
   }
   return !1;
@@ -1005,8 +1005,8 @@ const K = (e, t = v.options.shortHex) => `#${v.options.upperCaseHex ? Z(e, t).to
 v.shouldHandleInput = (e) => ae.hex6.test(e) || ae.hex3.test(e);
 v.toRgb = (e) => It(e);
 v.toRaw = (e) => e;
-v.toString = (e) => /^hex6?$/.test(v.wanted) ? K(e) : v.wanted === "hex3" ? K(e, !0) : q(e) ? v.options.alphaFormat === "hex" ? K(e) : v.print(v.options.alphaFormat, e) : K(e);
-const S = l.registerFormat("hex8", {
+v.toString = (e) => /^hex6?$/.test(v.wanted) ? K(e) : v.wanted === "hex3" ? K(e, !0) : U(e) ? v.options.alphaFormat === "hex" ? K(e) : v.print(v.options.alphaFormat, e) : K(e);
+const S = i.registerFormat("hex8", {
   alias: ["hex4"]
 }), le = function() {
   return {
@@ -1017,11 +1017,11 @@ const S = l.registerFormat("hex8", {
 function Dt(e) {
   let t;
   if (t = le.hex4.exec(e)) {
-    const r = $e(`${t[4]}${t[4]}`), [s, o, n] = t.splice(1, 3).map((a) => `${a}${a}`).map((a) => J(a));
+    const r = $e(`${t[4]}${t[4]}`), [s, o, n] = t.splice(1, 3).map((a) => `${a}${a}`).map((a) => G(a));
     return { r: s, g: o, b: n, a: r };
   }
   if (t = le.hex8.exec(e)) {
-    const r = $e(t[4]), [s, o, n] = t.splice(1, 3).map((a) => J(a));
+    const r = $e(t[4]), [s, o, n] = t.splice(1, 3).map((a) => G(a));
     return { r: s, g: o, b: n, a: r };
   }
   return !1;
@@ -1030,8 +1030,8 @@ const ee = (e, t = S.options.shortHex) => `#${S.options.upperCaseHex ? ne(e, t).
 S.shouldHandleInput = (e) => le.hex8.test(e) || le.hex4.test(e);
 S.toRgb = (e) => Dt(e);
 S.toRaw = (e) => e;
-S.toString = (e) => S.wanted === "hex4" ? ee(e, !0) : S.wanted === "hex8" ? ee(e) : q(e) ? S.options.alphaFormat === "hex" ? ee(e) : S.print(S.options.alphaFormat, e) : ee(e);
-const fe = l.registerFormat("hsl"), ze = function() {
+S.toString = (e) => S.wanted === "hex4" ? ee(e, !0) : S.wanted === "hex8" ? ee(e) : U(e) ? S.options.alphaFormat === "hex" ? ee(e) : S.print(S.options.alphaFormat, e) : ee(e);
+const fe = i.registerFormat("hsl"), ze = function() {
   return {
     hsl: new RegExp(`hsl${be}`),
     hsla: new RegExp(`hsla${pe}`)
@@ -1039,40 +1039,40 @@ const fe = l.registerFormat("hsl"), ze = function() {
 }(), Lt = (e) => O(e.h) && O(e.s) && O(e.l);
 function De(e) {
   const t = m(e.r, 255), r = m(e.g, 255), s = m(e.b, 255), o = e.a || 1, n = M(t, r, s), a = z(t, r, s);
-  let i, c;
+  let l, c;
   const d = (n + a) / 2;
   if (n === a)
-    i = 0, c = 0;
+    l = 0, c = 0;
   else {
     const f = n - a;
     switch (c = d > 0.5 ? f / (2 - n - a) : f / (n + a), n) {
       case t:
-        i = (r - s) / f + (r < s ? 6 : 0);
+        l = (r - s) / f + (r < s ? 6 : 0);
         break;
       case r:
-        i = (s - t) / f + 2;
+        l = (s - t) / f + 2;
         break;
       default:
-        i = (t - r) / f + 4;
+        l = (t - r) / f + 4;
         break;
     }
-    i /= 6;
+    l /= 6;
   }
-  return { h: i, s: c, l: d, a: o };
+  return { h: l, s: c, l: d, a: o };
 }
 function Me(e) {
   const t = m(e.h, 360), r = m(Y(e.s), 100), s = m(Y(e.l), 100), o = e.a || 1;
-  let n, a, i;
+  let n, a, l;
   function c(d, f, g) {
     return g = g < 0 ? g + 1 : g, g = g > 1 ? g - 1 : g, g < 1 / 6 ? d + (f - d) * 6 * g : g < 1 / 2 ? f : g < 2 / 3 ? d + (f - d) * (2 / 3 - g) * 6 : d;
   }
   if (r === 0)
-    n = s, a = s, i = s;
+    n = s, a = s, l = s;
   else {
     const d = s < 0.5 ? s * (1 + r) : s + r - s * r, f = 2 * s - d;
-    n = c(f, d, t + 1 / 3), a = c(f, d, t), i = c(f, d, t - 1 / 3);
+    n = c(f, d, t + 1 / 3), a = c(f, d, t), l = c(f, d, t - 1 / 3);
   }
-  return { r: n * 255, g: a * 255, b: i * 255, a: o };
+  return { r: n * 255, g: a * 255, b: l * 255, a: o };
 }
 function Le(e) {
   let t, r, s, o, n;
@@ -1090,28 +1090,28 @@ fe.shouldHandleInput = (e) => typeof e == "object" && Lt(e) || Le(e);
 fe.toRgb = (e) => typeof e == "object" && Me(e) || Me(Le(e));
 fe.toRaw = (e) => Nt(De(e));
 fe.toString = (e) => Pt(De(e));
-const ge = l.registerFormat("hsv"), Ve = function() {
+const ge = i.registerFormat("hsv"), Ve = function() {
   return {
     hsv: new RegExp(`hsv${be}`),
     hsva: new RegExp(`hsva${pe}`)
   };
-}(), Ut = (e) => O(e.h) && O(e.s) && O(e.v);
+}(), Jt = (e) => O(e.h) && O(e.s) && O(e.v);
 function Pe(e) {
-  const t = m(e.r, 255), r = m(e.g, 255), s = m(e.b, 255), o = e.a || 1, n = M(t, r, s), a = z(t, r, s), i = n - a;
+  const t = m(e.r, 255), r = m(e.g, 255), s = m(e.b, 255), o = e.a || 1, n = M(t, r, s), a = z(t, r, s), l = n - a;
   let c;
-  const d = n === 0 ? 0 : i / n, f = n;
+  const d = n === 0 ? 0 : l / n, f = n;
   if (n === a)
     c = 0;
   else {
     switch (n) {
       case t:
-        c = (r - s) / i + (r < s ? 6 : 0);
+        c = (r - s) / l + (r < s ? 6 : 0);
         break;
       case r:
-        c = (s - t) / i + 2;
+        c = (s - t) / l + 2;
         break;
       default:
-        c = (t - r) / i + 4;
+        c = (t - r) / l + 4;
         break;
     }
     c /= 6;
@@ -1119,29 +1119,29 @@ function Pe(e) {
   return { h: c, s: d, v: f, a: o };
 }
 function Ae(e) {
-  const t = m(e.h, 360) * 6, r = m(Y(e.s), 100), s = m(Y(e.v), 100), o = e.a || 1, n = Math.floor(t), a = t - n, i = s * (1 - r), c = s * (1 - a * r), d = s * (1 - (1 - a) * r), f = n % 6, g = [s, c, i, i, d, s][f], y = [d, s, s, c, i, i][f], _ = [i, i, d, s, s, c][f];
+  const t = m(e.h, 360) * 6, r = m(Y(e.s), 100), s = m(Y(e.v), 100), o = e.a || 1, n = Math.floor(t), a = t - n, l = s * (1 - r), c = s * (1 - a * r), d = s * (1 - (1 - a) * r), f = n % 6, g = [s, c, l, l, d, s][f], y = [d, s, s, c, l, l][f], _ = [l, l, d, s, s, c][f];
   return { r: g * 255, g: y * 255, b: _ * 255, a: o };
 }
 function Ne(e) {
   let t, r, s, o, n;
   return (n = Ve.hsv.exec(e)) ? ([t, r, s] = n.splice(1, 3), { h: t, s: r, v: s }) : (n = Ve.hsva.exec(e)) ? ([t, r, s, o] = n.splice(1, 4), { h: t, s: r, v: s, a: o }) : !1;
 }
-function qt(e) {
+function Ut(e) {
   let { h: t, s: r, v: s, a: o } = e;
   return t = b(t * 360), r = b(r * 100), s = b(s * 100), o === 1 ? `hsv(${t}, ${r}%, ${s}%)` : `hsva(${t}, ${r}%, ${s}%, ${o})`;
 }
-function Gt(e) {
+function qt(e) {
   let { h: t, s: r, v: s, a: o } = e;
   return t *= 360, { h: t, s: r, v: s, a: o };
 }
-ge.shouldHandleInput = (e) => typeof e == "object" && Ut(e) || Ne(e);
+ge.shouldHandleInput = (e) => typeof e == "object" && Jt(e) || Ne(e);
 ge.toRgb = (e) => typeof e == "object" && Ae(e) || Ae(Ne(e));
-ge.toRaw = (e) => Gt(Pe(e));
-ge.toString = (e) => qt(Pe(e));
-const F = l.registerFormat("name", {
+ge.toRaw = (e) => qt(Pe(e));
+ge.toString = (e) => Ut(Pe(e));
+const F = i.registerFormat("name", {
   alias: ["toName"]
 });
-function Jt(e) {
+function Gt(e) {
   const t = {};
   for (const r in e)
     Object.prototype.hasOwnProperty.call(e, r) && (t[e[r]] = r);
@@ -1299,44 +1299,44 @@ const X = {
   yellowgreen: "9acd32"
 };
 X.transparent = "00000000";
-const Yt = Jt(X);
+const Yt = Gt(X);
 F.shouldHandleInput = (e) => X[e];
 F.toRgb = (e) => F.parse(X[e]).rgba;
 F.toRaw = (e) => e;
-F.toString = (e) => e.a === 0 ? "transparent" : q(e) && F.wanted === "toName" ? !1 : q(e) && F.wanted === "name" ? `#${Z(e)}` : q(e) ? F.print(F.options.alphaFormat, e) : Yt[Z(e, !0)] || !1;
+F.toString = (e) => e.a === 0 ? "transparent" : U(e) && F.wanted === "toName" ? !1 : U(e) && F.wanted === "name" ? `#${Z(e)}` : U(e) ? F.print(F.options.alphaFormat, e) : Yt[Z(e, !0)] || !1;
 function C(e, t) {
-  return new l(e, t);
+  return new i(e, t);
 }
-C.equals = (e, t) => l.equals(e, t);
-C.registerFormat = (e, t = {}) => l.registerFormat(e, t);
-C.fromRatio = (e, t) => l.fromRatio(e, t);
-C.mix = (e, t, r) => l.mix(e, t, r);
-C.readability = (e, t) => l.readability(e, t);
-C.isReadable = (e, t, r) => l.isReadable(e, t, r);
-C.mostReadable = (e, t, r) => l.mostReadable(e, t, r);
+C.equals = (e, t) => i.equals(e, t);
+C.registerFormat = (e, t = {}) => i.registerFormat(e, t);
+C.fromRatio = (e, t) => i.fromRatio(e, t);
+C.mix = (e, t, r) => i.mix(e, t, r);
+C.readability = (e, t) => i.readability(e, t);
+C.isReadable = (e, t, r) => i.isReadable(e, t, r);
+C.mostReadable = (e, t, r) => i.mostReadable(e, t, r);
 C.names = X;
 function Wr(e, t = "#fff", r = "#000") {
-  let s = Object.keys(e), o = {};
-  for (let n = 0; n < s.length; n++)
-    if (typeof e[s[n]] == "string") {
-      const a = C(e[s[n]], {});
-      o[s[n]] = {
-        backgroundColor: a.toHexString(!1),
-        color: a.isDark() ? t : r
-      };
-    } else if (typeof e[s[n]] == "object") {
-      const a = Object.keys(e[s[n]]), i = {};
-      for (let c = 0; c < a.length; c++)
-        if (typeof e[s[n]][a[c]] == "string") {
-          const d = C(e[s[n]][a[c]], !1);
-          i[a[c]] = {
-            backgroundColor: d.toHexString(!0),
-            color: d.isDark() ? t : r
-          };
+  let s = JSON.parse(JSON.stringify(e)), o = Object.keys(s), n = {};
+  for (let a = 0; a < o.length; a++)
+    if (typeof s[o[a]] == "string") {
+      const l = C(s[o[a]], {});
+      l.isValid() && (n[o[a]] = {
+        backgroundColor: l.toHexString(!1),
+        color: l.isDark() ? t : r
+      });
+    } else if (typeof s[o[a]] == "object") {
+      const l = Object.keys(s[o[a]]), c = {};
+      for (let d = 0; d < l.length; d++)
+        if (typeof s[o[a]][l[d]] == "string") {
+          const f = C(s[o[a]][l[d]], !1);
+          f.isValid() && (c[l[d]] = {
+            backgroundColor: f.toHexString(!0),
+            color: f.isDark() ? t : r
+          });
         }
-      o[s[n]] = i;
+      n[o[a]] = c;
     }
-  return o;
+  return n;
 }
 function Qr(e) {
   return e.replace(/([A-Z])/g, " $1").replace(/\s+/g, " ").split(" ").map((o) => o.charAt(0).toUpperCase() + o.substring(1).toLowerCase()).join(" ").trim();
@@ -1358,17 +1358,17 @@ function ts(e, t = 2) {
   const r = 1024, s = t < 0 ? 0 : t, o = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"], n = Math.floor(Math.log(e) / Math.log(r));
   return parseFloat((e / Math.pow(r, n)).toFixed(s)) + " " + o[n];
 }
-function G(e, t = 2, r = "0") {
+function q(e, t = 2, r = "0") {
   return e.toString().padStart(t, r);
 }
 function rs(e, t = "/") {
   return [
-    G(e.getMonth() + 1),
-    G(e.getDate()),
+    q(e.getMonth() + 1),
+    q(e.getDate()),
     e.getFullYear()
   ].join(t);
 }
-function Ue() {
+function Je() {
   return {
     english: {
       long: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -1385,7 +1385,7 @@ function Ue() {
   };
 }
 function ss(e, t = "long", r = "english") {
-  return Ue()[r][t][e.getMonth()] + " " + e.getDate() + ", " + e.getFullYear();
+  return Je()[r][t][e.getMonth()] + " " + e.getDate() + ", " + e.getFullYear();
 }
 function os(e) {
   let t = parseInt(String(e), 10), r = Math.floor(parseInt(String(Number(t) / (24 * 3600))));
@@ -1394,8 +1394,8 @@ function os(e) {
   t %= 3600;
   let o = Math.floor(t / 60);
   t %= 60;
-  let n = Math.floor(t), a = r < 10 ? "0" + r : r, i = s < 10 ? "0" + s : s, c = o < 10 ? "0" + o : o, d = n < 10 ? "0" + n : n, f = a === "00" ? "" : a + ":";
-  return f += i === "00" ? "" : i + ":", f += c + ":" + d, f;
+  let n = Math.floor(t), a = r < 10 ? "0" + r : r, l = s < 10 ? "0" + s : s, c = o < 10 ? "0" + o : o, d = n < 10 ? "0" + n : n, f = a === "00" ? "" : a + ":";
+  return f += l === "00" ? "" : l + ":", f += c + ":" + d, f;
 }
 function ns(e) {
   return new Intl.NumberFormat().format(e);
@@ -1403,7 +1403,7 @@ function ns(e) {
 function B(e, t) {
   return e = Math.ceil(e), t = Math.floor(t), Math.floor(Math.random() * (t - e + 1) + e);
 }
-function qe() {
+function Ue() {
   return "0123456789abcdef".split("");
 }
 var Zt = function(t) {
@@ -1445,7 +1445,7 @@ function or(e) {
 function _e(e) {
   return Object.keys(e).concat(or(e));
 }
-function Ge(e, t) {
+function qe(e, t) {
   try {
     return t in e;
   } catch {
@@ -1453,14 +1453,14 @@ function Ge(e, t) {
   }
 }
 function nr(e, t) {
-  return Ge(e, t) && !(Object.hasOwnProperty.call(e, t) && Object.propertyIsEnumerable.call(e, t));
+  return qe(e, t) && !(Object.hasOwnProperty.call(e, t) && Object.propertyIsEnumerable.call(e, t));
 }
 function ar(e, t, r) {
   var s = {};
   return r.isMergeableObject(e) && _e(e).forEach(function(o) {
     s[o] = W(e[o], r);
   }), _e(t).forEach(function(o) {
-    nr(e, o) || (Ge(e, o) && r.isMergeableObject(t[o]) ? s[o] = sr(o, r)(e[o], t[o], r) : s[o] = W(t[o], r));
+    nr(e, o) || (qe(e, o) && r.isMergeableObject(t[o]) ? s[o] = sr(o, r)(e[o], t[o], r) : s[o] = W(t[o], r));
   }), s;
 }
 function P(e, t, r) {
@@ -1480,7 +1480,7 @@ function as(e) {
   return Object.keys(e).length > 0 ? ir(u, e) : u;
 }
 function ur() {
-  const e = qe(), t = 0, r = 15, s = e[B(t, r)] + e[B(t, r)], o = e[B(t, r)] + e[B(t, r)], n = e[B(t, r)] + e[B(t, r)];
+  const e = Ue(), t = 0, r = 15, s = e[B(t, r)] + e[B(t, r)], o = e[B(t, r)] + e[B(t, r)], n = e[B(t, r)] + e[B(t, r)];
   return "#" + s + o + n;
 }
 function ls(e = "#fff", t = "#000") {
@@ -1488,7 +1488,7 @@ function ls(e = "#fff", t = "#000") {
   return r.backgroundColor = "#" + String(s.toHex(!1)), r.color = o ? e : t, r;
 }
 function is() {
-  const e = qe(), t = 0, r = 15, s = e[B(t, r)], o = e[B(t, r)], n = e[B(t, r)];
+  const e = Ue(), t = 0, r = 15, s = e[B(t, r)], o = e[B(t, r)], n = e[B(t, r)];
   return "#" + s + o + n;
 }
 function us(e = 10) {
@@ -1511,8 +1511,8 @@ function fs(e) {
   return e.replace(/[^A-z0-9._-]/gi, "");
 }
 function gs(e, t = "short", r = "english", s = "AM", o = "PM") {
-  var n = new Date(Number(e) * 1e3), a = Ue(), i = a[r][t], c = n.getFullYear(), d = i[n.getMonth()], f = n.getDate(), g = n.getHours(), y = n.getMinutes(), _ = n.getSeconds(), H = g >= 12 ? o : s;
-  return g = g % 12, g = g === 0 ? 12 : g, d + " " + G(f) + ", " + c + " " + g + ":" + G(y) + ":" + G(_) + " " + H;
+  var n = new Date(Number(e) * 1e3), a = Je(), l = a[r][t], c = n.getFullYear(), d = l[n.getMonth()], f = n.getDate(), g = n.getHours(), y = n.getMinutes(), _ = n.getSeconds(), H = g >= 12 ? o : s;
+  return g = g % 12, g = g === 0 ? 12 : g, d + " " + q(f) + ", " + c + " " + g + ":" + q(y) + ":" + q(_) + " " + H;
 }
 function hs(e) {
   return e.filter((t, r, s) => s.indexOf(t) === r);
@@ -1524,7 +1524,7 @@ const bs = [
   "audio/ogg",
   "audio/x-flac",
   "audio/webm"
-], Je = [
+], Ge = [
   "button",
   "submit",
   "reset"
@@ -1715,9 +1715,9 @@ const bs = [
   setup(e) {
     const t = Object.keys(k("vv", {})).length > 0 ? k("vv") : u;
     return { classes: $(() => {
-      var o, n, a, i, c, d, f, g, y, _, H, N, U, xe, ye, ke;
+      var o, n, a, l, c, d, f, g, y, _, H, N, J, xe, ye, ke;
       let s = [];
-      return e.button === !0 ? (e.buttonBlock === !0 && e.buttonFab === !1 ? ((o = t == null ? void 0 : t.buttons) != null && o.blockBase() && s.push(t.buttons.blockBase()), e.buttonSize !== "" && ((a = (n = t == null ? void 0 : t.buttons) == null ? void 0 : n.blockSizes) == null ? void 0 : a[e.buttonSize]) && s.push(t.buttons.blockSizes[e.buttonSize])) : e.buttonBlock === !1 && e.buttonFab === !0 ? ((i = t == null ? void 0 : t.buttons) != null && i.fabBase() && s.push(t.buttons.fabBase()), e.buttonSize !== "" && ((d = (c = t == null ? void 0 : t.buttons) == null ? void 0 : c.fabSizes) == null ? void 0 : d[e.buttonSize]) && s.push(t.buttons.fabSizes[e.buttonSize])) : ((f = t == null ? void 0 : t.buttons) != null && f.base() && s.push(t.buttons.base()), e.buttonSize !== "" && ((y = (g = t == null ? void 0 : t.buttons) == null ? void 0 : g.sizes) == null ? void 0 : y[e.buttonSize]) && s.push(t.buttons.sizes[e.buttonSize])), (N = (H = (_ = t == null ? void 0 : t.buttons) == null ? void 0 : _.palettes) == null ? void 0 : H[e.palette]) != null && N[e.color] && s.push(t.buttons.palettes[e.palette][e.color])) : ((U = t == null ? void 0 : t.anchors) != null && U.base() && s.push(t.anchors.base()), (ke = (ye = (xe = t == null ? void 0 : t.anchors) == null ? void 0 : xe.palettes) == null ? void 0 : ye[e.palette]) != null && ke[e.color] && s.push(t.anchors.palettes[e.palette][e.color])), s.join(" ").trim();
+      return e.button === !0 ? (e.buttonBlock === !0 && e.buttonFab === !1 ? ((o = t == null ? void 0 : t.buttons) != null && o.blockBase() && s.push(t.buttons.blockBase()), e.buttonSize !== "" && ((a = (n = t == null ? void 0 : t.buttons) == null ? void 0 : n.blockSizes) == null ? void 0 : a[e.buttonSize]) && s.push(t.buttons.blockSizes[e.buttonSize])) : e.buttonBlock === !1 && e.buttonFab === !0 ? ((l = t == null ? void 0 : t.buttons) != null && l.fabBase() && s.push(t.buttons.fabBase()), e.buttonSize !== "" && ((d = (c = t == null ? void 0 : t.buttons) == null ? void 0 : c.fabSizes) == null ? void 0 : d[e.buttonSize]) && s.push(t.buttons.fabSizes[e.buttonSize])) : ((f = t == null ? void 0 : t.buttons) != null && f.base() && s.push(t.buttons.base()), e.buttonSize !== "" && ((y = (g = t == null ? void 0 : t.buttons) == null ? void 0 : g.sizes) == null ? void 0 : y[e.buttonSize]) && s.push(t.buttons.sizes[e.buttonSize])), (N = (H = (_ = t == null ? void 0 : t.buttons) == null ? void 0 : _.palettes) == null ? void 0 : H[e.palette]) != null && N[e.color] && s.push(t.buttons.palettes[e.palette][e.color])) : ((J = t == null ? void 0 : t.anchors) != null && J.base() && s.push(t.anchors.base()), (ke = (ye = (xe = t == null ? void 0 : t.anchors) == null ? void 0 : xe.palettes) == null ? void 0 : ye[e.palette]) != null && ke[e.color] && s.push(t.anchors.palettes[e.palette][e.color])), s.join(" ").trim();
     }) };
   }
 }), A = (e, t) => {
@@ -1769,15 +1769,15 @@ const Ss = /* @__PURE__ */ A(fr, [["render", br]]), pr = V({
     type: {
       type: String,
       default: u.defaults.VvButton.type,
-      validator: (e) => Je.includes(e)
+      validator: (e) => Ge.includes(e)
     }
   },
   setup(e) {
     const t = Object.keys(k("vv", {})).length > 0 ? k("vv") : u, r = e.type;
     let s = $(() => {
-      var n, a, i, c, d, f, g, y, _, H, N, U;
+      var n, a, l, c, d, f, g, y, _, H, N, J;
       let o = [];
-      return e.block === !0 && e.fab === !1 ? ((n = t == null ? void 0 : t.buttons) != null && n.blockBase() && o.push(t.buttons.blockBase()), e.size !== "" && ((i = (a = t == null ? void 0 : t.buttons) == null ? void 0 : a.blockSizes) == null ? void 0 : i[e.size]) && o.push(t.buttons.blockSizes[e.size])) : e.fab === !0 && e.block === !1 ? ((c = t == null ? void 0 : t.buttons) != null && c.fabBase() && o.push(t.buttons.fabBase()), e.size !== "" && ((f = (d = t == null ? void 0 : t.buttons) == null ? void 0 : d.fabSizes) == null ? void 0 : f[e.size]) && o.push(t.buttons.fabSizes[e.size])) : ((g = t == null ? void 0 : t.buttons) != null && g.base() && o.push(t.buttons.base()), e.size !== "" && ((_ = (y = t == null ? void 0 : t.buttons) == null ? void 0 : y.sizes) == null ? void 0 : _[e.size]) && o.push(t.buttons.sizes[e.size])), (U = (N = (H = t == null ? void 0 : t.buttons) == null ? void 0 : H.palettes) == null ? void 0 : N[e.palette]) != null && U[e.color] && o.push(t.buttons.palettes[e.palette][e.color]), o.join(" ").trim();
+      return e.block === !0 && e.fab === !1 ? ((n = t == null ? void 0 : t.buttons) != null && n.blockBase() && o.push(t.buttons.blockBase()), e.size !== "" && ((l = (a = t == null ? void 0 : t.buttons) == null ? void 0 : a.blockSizes) == null ? void 0 : l[e.size]) && o.push(t.buttons.blockSizes[e.size])) : e.fab === !0 && e.block === !1 ? ((c = t == null ? void 0 : t.buttons) != null && c.fabBase() && o.push(t.buttons.fabBase()), e.size !== "" && ((f = (d = t == null ? void 0 : t.buttons) == null ? void 0 : d.fabSizes) == null ? void 0 : f[e.size]) && o.push(t.buttons.fabSizes[e.size])) : ((g = t == null ? void 0 : t.buttons) != null && g.base() && o.push(t.buttons.base()), e.size !== "" && ((_ = (y = t == null ? void 0 : t.buttons) == null ? void 0 : y.sizes) == null ? void 0 : _[e.size]) && o.push(t.buttons.sizes[e.size])), (J = (N = (H = t == null ? void 0 : t.buttons) == null ? void 0 : H.palettes) == null ? void 0 : N[e.palette]) != null && J[e.color] && o.push(t.buttons.palettes[e.palette][e.color]), o.join(" ").trim();
     });
     return { btnType: r, classes: s };
   }
@@ -1848,7 +1848,7 @@ const yr = /* @__PURE__ */ A(pr, [["render", xr]]), kr = V({
     type: {
       type: String,
       default: u.defaults.VvColorModeButton.type,
-      validator: (e) => Je.includes(e)
+      validator: (e) => Ge.includes(e)
     }
   },
   setup(e) {
@@ -1895,7 +1895,7 @@ function Mr(e, t, r, s, o, n) {
   const a = We("VvButton");
   return p(), je(a, {
     title: e.title,
-    onClick: t[0] || (t[0] = (i) => e.toggleColorMode(i)),
+    onClick: t[0] || (t[0] = (l) => e.toggleColorMode(l)),
     class: "rounded-full",
     color: e.color,
     fab: !0,
@@ -1945,9 +1945,9 @@ const $s = /* @__PURE__ */ A(kr, [["render", Mr]]), Vr = V({
   setup(e) {
     const t = Object.keys(k("vv", {})).length > 0 ? k("vv") : u;
     return { classes: $(() => {
-      var o, n, a, i, c, d, f, g, y;
+      var o, n, a, l, c, d, f, g, y;
       let s = [];
-      return (a = (n = (o = t == null ? void 0 : t.borders) == null ? void 0 : o.palettes) == null ? void 0 : n[e.borderPalette]) != null && a[e.borderColor] && s.push(t.borders.palettes[e.borderPalette][e.borderColor]), (d = (c = (i = t == null ? void 0 : t.grounds) == null ? void 0 : i.palettes) == null ? void 0 : c[e.groundPalette]) != null && d[e.groundColor] && s.push(t.grounds.palettes[e.groundPalette][e.groundColor]), (y = (g = (f = t == null ? void 0 : t.text) == null ? void 0 : f.palettes) == null ? void 0 : g[e.textPalette]) != null && y[e.textColor] && s.push(t.text.palettes[e.textPalette][e.textColor]), s.join(" ").trim();
+      return (a = (n = (o = t == null ? void 0 : t.borders) == null ? void 0 : o.palettes) == null ? void 0 : n[e.borderPalette]) != null && a[e.borderColor] && s.push(t.borders.palettes[e.borderPalette][e.borderColor]), (d = (c = (l = t == null ? void 0 : t.grounds) == null ? void 0 : l.palettes) == null ? void 0 : c[e.groundPalette]) != null && d[e.groundColor] && s.push(t.grounds.palettes[e.groundPalette][e.groundColor]), (y = (g = (f = t == null ? void 0 : t.text) == null ? void 0 : f.palettes) == null ? void 0 : g[e.textPalette]) != null && y[e.textColor] && s.push(t.text.palettes[e.textPalette][e.textColor]), s.join(" ").trim();
     }) };
   }
 });
@@ -1990,9 +1990,9 @@ const Cs = /* @__PURE__ */ A(Vr, [["render", Ar]]), _r = V({
   setup(e) {
     const t = Object.keys(k("vv", {})).length > 0 ? k("vv") : u;
     return { classes: $(() => {
-      var n, a, i, c, d, f;
+      var n, a, l, c, d, f;
       let o = [];
-      return (n = t == null ? void 0 : t.inputs) != null && n.base() && o.push(t.inputs.base()), e.size !== "" && ((i = (a = t == null ? void 0 : t.inputs) == null ? void 0 : a.sizes) == null ? void 0 : i[e.size]) && o.push(t.inputs.sizes[e.size]), (f = (d = (c = t == null ? void 0 : t.inputs) == null ? void 0 : c.palettes) == null ? void 0 : d[e.palette]) != null && f[e.color] && o.push(t.inputs.palettes[e.palette][e.color]), o.join(" ").trim();
+      return (n = t == null ? void 0 : t.inputs) != null && n.base() && o.push(t.inputs.base()), e.size !== "" && ((l = (a = t == null ? void 0 : t.inputs) == null ? void 0 : a.sizes) == null ? void 0 : l[e.size]) && o.push(t.inputs.sizes[e.size]), (f = (d = (c = t == null ? void 0 : t.inputs) == null ? void 0 : c.palettes) == null ? void 0 : d[e.palette]) != null && f[e.color] && o.push(t.inputs.palettes[e.palette][e.color]), o.join(" ").trim();
     }), handleInputChange: (o) => o.target.value };
   }
 }), jr = ["type", "value"];
@@ -2031,13 +2031,13 @@ const zs = /* @__PURE__ */ A(_r, [["render", Br]]), Fr = V({
   setup(e) {
     const t = Object.keys(k("vv", {})).length > 0 ? k("vv") : u;
     let r = t == null ? void 0 : t.text.base(), s = $(() => {
-      var a, i, c;
+      var a, l, c;
       let n = [r];
-      return (c = (i = (a = t == null ? void 0 : t.text) == null ? void 0 : a.palettes) == null ? void 0 : i[e.palette]) != null && c[e.color] && n.push(t.text.palettes[e.palette][e.color]), n.join(" ").trim();
+      return (c = (l = (a = t == null ? void 0 : t.text) == null ? void 0 : a.palettes) == null ? void 0 : l[e.palette]) != null && c[e.color] && n.push(t.text.palettes[e.palette][e.color]), n.join(" ").trim();
     }), o = $(() => {
-      var a, i, c;
+      var a, l, c;
       let n = [];
-      return (c = (i = (a = t == null ? void 0 : t.text) == null ? void 0 : a.palettes) == null ? void 0 : i[e.symbolPalette]) != null && c[e.symbolColor] && n.push(t.text.palettes[e.symbolPalette][e.symbolColor]), n.join(" ").trim();
+      return (c = (l = (a = t == null ? void 0 : t.text) == null ? void 0 : a.palettes) == null ? void 0 : l[e.symbolPalette]) != null && c[e.symbolColor] && n.push(t.text.palettes[e.symbolPalette][e.symbolColor]), n.join(" ").trim();
     });
     return { classes: s, symbolClasses: o };
   }
@@ -2172,8 +2172,8 @@ const As = /* @__PURE__ */ A(Er, [["render", Lr]]), Pr = V({
   setup(e) {
     return { classes: $(() => e.enableAnimation ? e.animationClass : "") };
   }
-}), Nr = ["fill"], Ur = ["fill"];
-function qr(e, t, r, s, o, n) {
+}), Nr = ["fill"], Jr = ["fill"];
+function Ur(e, t, r, s, o, n) {
   return p(), w("svg", {
     class: h(e.classes),
     version: "1.1",
@@ -2193,11 +2193,11 @@ function qr(e, t, r, s, o, n) {
         fill: e.enableClassFills ? "" : e.fillTwo,
         class: h(e.enableClassFills ? e.fillTwoClasses : ""),
         d: "M529.7 529.6C505.2 745.2 253.8 858.5 76.1 734.7c38.9 115.6 205.6 246 371.4 255.6 161.6 9.4 309.9-110.9 268.4-282.5-21.1-87.5-88.6-165.6-186.2-178.2zM339.8 77.1C205 211.6 291 440.2 471 463.4c7.6-66.9 37.9-126.8 83.1-172 52.5-52.5 125-85 205.1-85 61.4 0 118.5 19.2 165.4 51.8C844.8 84.9 530.1-88.1 339.8 77.1z"
-      }, null, 10, Ur)
+      }, null, 10, Jr)
     ])
   ], 2);
 }
-const _s = /* @__PURE__ */ A(Pr, [["render", qr]]), Gr = V({
+const _s = /* @__PURE__ */ A(Pr, [["render", Ur]]), qr = V({
   name: "VvTextarea",
   emits: ["update:modelValue"],
   props: {
@@ -2225,9 +2225,9 @@ const _s = /* @__PURE__ */ A(Pr, [["render", qr]]), Gr = V({
   setup(e) {
     const t = Object.keys(k("vv", {})).length > 0 ? k("vv") : u;
     let r = $(() => {
-      var a, i, c, d, f, g;
+      var a, l, c, d, f, g;
       let n = [];
-      return (a = t == null ? void 0 : t.textareas) != null && a.base() && n.push(t.textareas.base()), e.size !== "" && ((c = (i = t == null ? void 0 : t.textareas) == null ? void 0 : i.sizes) == null ? void 0 : c[e.size]) && n.push(t.textareas.sizes[e.size]), (g = (f = (d = t == null ? void 0 : t.textareas) == null ? void 0 : d.palettes) == null ? void 0 : f[e.palette]) != null && g[e.color] && n.push(t.textareas.palettes[e.palette][e.color]), n.join(" ").trim();
+      return (a = t == null ? void 0 : t.textareas) != null && a.base() && n.push(t.textareas.base()), e.size !== "" && ((c = (l = t == null ? void 0 : t.textareas) == null ? void 0 : l.sizes) == null ? void 0 : c[e.size]) && n.push(t.textareas.sizes[e.size]), (g = (f = (d = t == null ? void 0 : t.textareas) == null ? void 0 : d.palettes) == null ? void 0 : f[e.palette]) != null && g[e.color] && n.push(t.textareas.palettes[e.palette][e.color]), n.join(" ").trim();
     }), s = $(() => {
       var n, a;
       if (e.rowSize !== "" && ((a = (n = t == null ? void 0 : t.textareas) == null ? void 0 : n.rowSizes) == null ? void 0 : a[e.rowSize]))
@@ -2235,16 +2235,16 @@ const _s = /* @__PURE__ */ A(Pr, [["render", qr]]), Gr = V({
     });
     return { classes: r, rows: s, handleTextareaChange: (n) => n.target.value };
   }
-}), Jr = ["rows", "value"];
+}), Gr = ["rows", "value"];
 function Yr(e, t, r, s, o, n) {
   return p(), w("textarea", {
     class: h(e.classes),
     rows: e.rows,
     value: e.modelValue,
     onInput: t[0] || (t[0] = (a) => e.$emit("update:modelValue", e.handleTextareaChange(a)))
-  }, null, 42, Jr);
+  }, null, 42, Gr);
 }
-const js = /* @__PURE__ */ A(Gr, [["render", Yr]]);
+const js = /* @__PURE__ */ A(qr, [["render", Yr]]);
 export {
   rt as AnchorDefault,
   Xe as Anchors,
@@ -2266,7 +2266,7 @@ export {
   tt as Textareas,
   Q as Transitions,
   bs as ValidAudioSourceTypes,
-  Je as ValidButtonTypes,
+  Ge as ValidButtonTypes,
   cr as ValidColorModes,
   ps as ValidDirections,
   ms as ValidElementTags,
@@ -2297,10 +2297,10 @@ export {
   os as formatMediaTime,
   ns as formatNumber,
   B as getRandomInt,
-  qe as hexadecimals,
+  Ue as hexadecimals,
   as as mergeWithVvConfig,
-  Ue as monthNames,
-  G as padNumber,
+  Je as monthNames,
+  q as padNumber,
   ls as randomGroundAndTextColors,
   ur as randomHex,
   is as randomHexShort,
