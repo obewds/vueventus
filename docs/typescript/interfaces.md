@@ -21,26 +21,6 @@ These are the VueVentus {{ $frontmatter.title }} Modules are used throughout Vue
 
 
 
-## AppColor
-
-### Import
-
-```javascript
-import type { AppColor } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/AppColor.ts
-
-
-
-
-
-
-
-
-
 ## AppColorPairs
 
 ### Import
@@ -72,6 +52,46 @@ import type { AppColors } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/AppColors.ts
+
+
+
+
+
+
+
+
+
+## AppTintShadePairs
+
+### Import
+
+```javascript
+import type { AppTintShadePairs } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/AppTintShadePairs.ts
+
+
+
+
+
+
+
+
+
+## AppTintsShades
+
+### Import
+
+```javascript
+import type { AppTintsShades } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/AppTintsShades.ts
 
 
 

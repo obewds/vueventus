@@ -40,6 +40,8 @@ title: Typescript Modules
 
 * [AppColorPairs](/typescript/interfaces#appcolorpairs)
 * [AppColors](/typescript/interfaces#appcolors)
+* [AppTintShadePairs](/typescript/interfaces#apptintshadepairs)
+* [AppTintsShades](/typescript/interfaces#apptintsshades)
 * [ButtonsSizes](/typescript/interfaces#buttonssizes)
 * [ColorMode](/typescript/interfaces#colormode)
 * [ConfigAnchors](/typescript/interfaces#configanchors)
