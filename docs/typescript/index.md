@@ -38,7 +38,6 @@ title: Typescript Modules
 
 ## Typescript Interfaces
 
-* [AppColor](/typescript/interfaces#appcolor)
 * [AppColorPairs](/typescript/interfaces#appcolorpairs)
 * [AppColors](/typescript/interfaces#appcolors)
 * [ButtonsSizes](/typescript/interfaces#buttonssizes)

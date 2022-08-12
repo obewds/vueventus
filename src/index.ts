@@ -85,7 +85,6 @@ export { default as VueVentusSpinningMark } from './components/logos/VueVentusSp
 export { default as VvTextarea } from './components/textareas/VvTextarea.vue'
 
 // .src/types
-import type { AppColor } from './types/AppColor'
 import type { AppColorPairs } from './types/AppColorPairs'
 import type { AppColors } from './types/AppColors'
 import type { BaseFunction } from './types/BaseFunction'
