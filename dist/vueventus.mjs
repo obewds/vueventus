@@ -1318,7 +1318,7 @@ C.names = X;
 function Wr(e, t = "#fff", r = "#000") {
   let s = JSON.parse(JSON.stringify(e)), o = Object.keys(s), n = {};
   for (let a = 0; a < o.length; a++)
-    if (typeof s[o[a]] == "string") {
+    if (typeof s[o[a]] == "string" || typeof s[o[a]] == "number") {
       const l = C(s[o[a]], {});
       l.isValid() && (n[o[a]] = {
         backgroundColor: l.toHexString(!1),

@@ -5,7 +5,7 @@ export default function (appColorsJson, darkGroundText = '#fff', lightGroundText
     let keys = Object.keys(data);
     let output = {};
     for (let i = 0; i < keys.length; i++) {
-        if (typeof data[keys[i]] === 'string') {
+        if (typeof data[keys[i]] === 'string' || typeof data[keys[i]] === 'number') {
             const tc = tinycolor(data[keys[i]], {});
             if (tc.isValid()) {
                 output[keys[i]] = {

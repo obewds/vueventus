@@ -8,18 +8,18 @@ import type { GroundTextColors } from '../types/GroundTextColors'
 export default function( appColorsJson: AppColors, darkGroundText: string = '#fff', lightGroundText: string = '#000' ): AppColorPairs {
 
     let data = JSON.parse(JSON.stringify(appColorsJson))
-    let keys: string[] = Object.keys(data)
+    let keys: string[]|number[] = Object.keys(data)
     let output: AppColorPairs = {}
 
     for (let i=0; i < keys.length; i++) {
 
-        if (typeof data[keys[i]] === 'string') {
+        if (typeof data[keys[i]] === 'string' || typeof data[keys[i]] === 'number') {
 
             const tc = tinycolor(data[keys[i]], {})
 
             if (tc.isValid()) {
 
-                output[keys[i]] = {
+                output[keys[i]] = <GroundTextColors>{
                     backgroundColor: tc.toHexString(false),
                     color: tc.isDark() ? darkGroundText : lightGroundText,
                 }
@@ -28,7 +28,7 @@ export default function( appColorsJson: AppColors, darkGroundText: string = '#ff
 
         } else if (typeof data[keys[i]] === 'object') {
 
-            const famKeys: string[] = Object.keys(data[keys[i]])
+            const famKeys: string[]|number[] = Object.keys(data[keys[i]])
             const familyObj: AppColorPairs = {}
 
             for (let j=0; j < famKeys.length; j++) {
