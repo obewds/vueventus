@@ -3,43 +3,44 @@
 import { tinycolor } from '@thebespokepixel/es-tinycolor'
 import type { AppColors } from '../types/AppColors'
 import type { AppColorPairs } from '../types/AppColorPairs'
+import type { AppTintShadePairs } from '../types/AppTintShadePairs'
 import type { GroundTextColors } from '../types/GroundTextColors'
 
 export default function( appColorsJson: AppColors, darkGroundText: string = '#fff', lightGroundText: string = '#000' ): AppColorPairs {
 
     let data = JSON.parse(JSON.stringify(appColorsJson))
-    let keys: string[]|number[] = Object.keys(data)
+    let colors: string[] = Object.keys(data)
     let output: AppColorPairs = {}
 
-    for (let i=0; i < keys.length; i++) {
+    for (let i=0; i < colors.length; i++) {
 
-        if (typeof data[keys[i]] === 'string' || typeof data[keys[i]] === 'number') {
+        if (typeof data[colors[i]] === 'string' || typeof data[colors[i]] === 'number') {
 
-            const tc = tinycolor(data[keys[i]], {})
+            const tc = tinycolor(data[colors[i]], {})
 
             if (tc.isValid()) {
 
-                output[keys[i]] = <GroundTextColors>{
+                output[colors[i]] = <GroundTextColors>{
                     backgroundColor: tc.toHexString(false),
                     color: tc.isDark() ? darkGroundText : lightGroundText,
                 }
             
             }
 
-        } else if (typeof data[keys[i]] === 'object') {
+        } else if (typeof data[colors[i]] === 'object') {
 
-            const famKeys: string[]|number[] = Object.keys(data[keys[i]])
-            const familyObj: AppColorPairs = {}
+            const family: string[] = Object.keys(data[colors[i]])
+            const familyObj: AppTintShadePairs = {}
 
-            for (let j=0; j < famKeys.length; j++) {
+            for (let j=0; j < family.length; j++) {
 
-                if (typeof data[keys[i]][famKeys[j]] === 'string') {
+                if (typeof data[colors[i]][family[j]] === 'string') {
 
-                    const tc = tinycolor(data[keys[i]][famKeys[j]], false)
+                    const tc = tinycolor(data[colors[i]][family[j]], false)
 
                     if (tc.isValid()) {
                     
-                        familyObj[famKeys[j]] = <GroundTextColors>{
+                        familyObj[family[j]] = <GroundTextColors>{
                             backgroundColor: tc.toHexString(true),
                             color: tc.isDark() ? darkGroundText : lightGroundText,
                         }
@@ -50,7 +51,7 @@ export default function( appColorsJson: AppColors, darkGroundText: string = '#ff
 
             }
 
-            output[keys[i]] = familyObj
+            output[colors[i]] = familyObj
 
         }
 

@@ -62,24 +62,24 @@ Returns: **`<AppColorPairs> Object`** ([AppColorPairs Interface](/typescript/int
 Default/basic use:
 
 ```javascript
-import { appColorPairs } from '@obewds/vueventus'
-import appColorsJson from '../app.colors.json' // ./src/app.colors.json
+import { appColorPairs } from '../index'
+import appColorsJson from '../app.colors.json'
 
-let colors = appColorPairs(appColorsJson)
+const colors = appColorPairs(appColorsJson)
 
-console.log(colors.black)
+console.log(colors?.black)
 // returns (type GroundTextColors):
 // { backgroundColor: "#1a1a1a", color: "#fff" }
 
-console.log(colors.white)
+console.log(colors?.white)
 // returns (type GroundTextColors):
 // { backgroundColor: "#1a1a1a", color: "#000" }
 
-console.log(colors.red["50"])
+console.log(colors?.red?.[50])
 // returns (type GroundTextColors):
 // { backgroundColor: "#f4e7e5", color: "#fff" }
 
-console.log(colors.red["900"])
+console.log(colors?.red?.[900])
 // returns (type GroundTextColors):
 // { backgroundColor: "#472c27", color: "#000" }
 ```
@@ -87,24 +87,24 @@ console.log(colors.red["900"])
 Using darkGroundText and lightGroundText arguments:
 
 ```javascript
-import { appColorPairs } from '@obewds/vueventus'
-import appColorsJson from '../app.colors.json' // ./src/app.colors.json
+import { appColorPairs } from '../index'
+import appColorsJson from '../app.colors.json'
 
-let colors = appColorPairs(appColorsData, '#111', '#f8f8f8')
+const colors = appColorPairs(appColorsData, '#111', '#f8f8f8')
 
-console.log(colors.black)
+console.log(colors?.black)
 // returns (type GroundTextColors):
 // { backgroundColor: "#1a1a1a", color: "#f8f8f8" }
 
-console.log(colors.white)
+console.log(colors?.white)
 // returns (type GroundTextColors):
 // { backgroundColor: "#f8f8f8", color: "#111" }
 
-console.log(colors.red["50"])
+console.log(colors?.red?.[50])
 // returns (type GroundTextColors):
 // { backgroundColor: "#f4e7e5", color: "#f8f8f8" }
 
-console.log(colors.red["900"])
+console.log(colors?.red?.[900])
 // returns (type GroundTextColors):
 // { backgroundColor: "#472c27", color: "#111" }
 ```
@@ -112,24 +112,24 @@ console.log(colors.red["900"])
 Using some opacity on your text colors to taste:
 
 ```javascript
-import { appColorPairs } from '@obewds/vueventus'
-import appColorsJson from '../app.colors.json' // ./src/app.colors.json
+import { appColorPairs } from '../index'
+import appColorsJson from '../app.colors.json'
 
-let colors = appColorPairs(appColorsData, 'rgba(255, 255, 255, .75)', 'rgba(0, 0, 0, .75)')
+const colors = appColorPairs(appColorsData, 'rgba(255, 255, 255, .75)', 'rgba(0, 0, 0, .75)')
 
-console.log(colors.black)
+console.log(colors?.black)
 // returns (type GroundTextColors):
 // { backgroundColor: "#1a1a1a", color: "rgba(255, 255, 255, .75)" }
 
-console.log(colors.white)
+console.log(colors?.white)
 // returns (type GroundTextColors):
 // { backgroundColor: "#f8f8f8", color: "rgba(0, 0, 0, .75)" }
 
-console.log(colors.red["50"])
+console.log(colors?.red?.[50])
 // returns (type GroundTextColors):
 // { backgroundColor: "#f4e7e5", color: "rgba(255, 255, 255, .75)" }
 
-console.log(colors.red["900"])
+console.log(colors?.red?.[900])
 // returns (type GroundTextColors):
 // { backgroundColor: "#472c27", color: "rgba(0, 0, 0, .75)" }
 ```

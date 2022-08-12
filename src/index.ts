@@ -85,9 +85,10 @@ export { default as VueVentusSpinningMark } from './components/logos/VueVentusSp
 export { default as VvTextarea } from './components/textareas/VvTextarea.vue'
 
 // .src/types
-import type { AppColor } from './types/AppColor'
 import type { AppColorPairs } from './types/AppColorPairs'
 import type { AppColors } from './types/AppColors'
+import type { AppTintShadePairs } from './types/AppTintShadePairs'
+import type { AppTintsShades } from './types/AppTintsShades'
 import type { BaseFunction } from './types/BaseFunction'
 import type { ButtonsSizes } from './types/ButtonsSizes'
 import type { ColorMode } from './types/ColorMode'
@@ -132,9 +133,10 @@ import type { VvInputProps } from './types/VvInputProps'
 import type { VvListItemProps } from './types/VvListItemProps'
 import type { VvTextareaProps } from './types/VvTextareaProps'
 
-export type { AppColor }
 export type { AppColorPairs }
 export type { AppColors }
+export type { AppTintShadePairs }
+export type { AppTintsShades }
 export type { BaseFunction }
 export type { ButtonsSizes }
 export type { ColorMode }
