@@ -21,6 +21,11 @@ export default <ConfigDefaults>{
         size: 'md',
         type: 'button',
     },
+    "VvCheckbox": {
+        color: 'default',
+        palette: 'default',
+        size: 'md',
+    },
     "VvColorModeButton": {
         color: 'default',
         mode: 'light',
@@ -49,6 +54,11 @@ export default <ConfigDefaults>{
         palette: 'default',
         symbolColor: 'primary',
         symbolPalette: 'default',
+    },
+    "VvRadio": {
+        color: 'default',
+        palette: 'default',
+        size: 'md',
     },
     "VvTextarea": {
         color: 'default',
