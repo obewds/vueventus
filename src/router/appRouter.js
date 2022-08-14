@@ -36,7 +36,9 @@ import VvColorModeButtonPage from '@/views/components/buttons/VvColorModeButtonP
 import VvElPage from '@/views/components/elements/VvElPage.vue'
 
 // input component pages
+import VvCheckboxPage from '@/views/components/inputs/VvCheckboxPage.vue'
 import VvInputPage from '@/views/components/inputs/VvInputPage.vue'
+import VvRadioPage from '@/views/components/inputs/VvRadioPage.vue'
 
 // list component pages
 import VvListItemPage from '@/views/components/lists/VvListItemPage.vue'
@@ -189,6 +191,14 @@ const router = createRouter({
             name: 'VvInput Component',
             component: VvInputPage,
             path: '/components/inputs/vv-input'
+        },{
+            name: 'VvCheckbox Component',
+            component: VvCheckboxPage,
+            path: '/components/inputs/vv-checkbox'
+        },{
+            name: 'VvRadio Component',
+            component: VvRadioPage,
+            path: '/components/inputs/vv-radio'
         },
         
         //
