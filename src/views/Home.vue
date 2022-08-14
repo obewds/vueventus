@@ -76,10 +76,18 @@
             VUE INPUT COMPONENTS
         </div>
 
-        <div :class="[tw.grid, 'grid-cols-1']">
+        <div :class="[tw.grid, 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3']">
+
+            <DevViewLinkCard icon="component" to="/components/inputs/vv-checkbox">
+                VvCheckbox
+            </DevViewLinkCard>
 
             <DevViewLinkCard icon="component" to="/components/inputs/vv-input">
                 VvInput
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="component" to="/components/inputs/vv-radio">
+                VvRadio
             </DevViewLinkCard>
 
         </div>
