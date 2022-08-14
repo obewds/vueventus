@@ -21,7 +21,7 @@ The {{ $frontmatter.title }} module provides a helper function that converts an 
 
 The pair of color values are derived by processing each original app.color.json value. The original color value becomes a `backgroundColor` property and is paired with another property named `color`, which is determined by the darkness/lightness of the `backgroundColor` value, and is set as the most contrasting light/dark overlaid text color with good accessibility-friendly contrast automatically.
 
-The {{ $frontmatter.title }} has two optional arguments. The first optional argument (the 2nd argument) lets you set the `color` value of any `backgroundColor` values that measures as **dark** colors. The second optional argument (the 3rd argument) lets you set the `color` value for any `backgroundColor` values that measure as **light** colors.
+The {{ $frontmatter.title }} has two optional arguments. The first optional argument (the 2nd argument) lets you set the `color` value of any `backgroundColor` values that measure as **dark** colors. The second optional argument (the 3rd argument) lets you set the `color` value for any `backgroundColor` values that measure as **light** colors.
 
 :::tip
 A powerful and stylish convention when using this function is to use alpha channel color codes (like RGBa) with a slight opacity (an `0.75` RGBa alpha value is nice without risking too much wash out for visually-challenged users).
