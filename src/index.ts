@@ -1,8 +1,10 @@
 // .src/configs
 export { default as Anchors } from './configs/Anchors'
 export { default as Buttons } from './configs/Buttons'
+export { default as Checkboxes } from './configs/Checkboxes'
 export { default as ColorModes } from './configs/ColorModes'
 export { default as Inputs } from './configs/Inputs'
+export { default as Radios } from './configs/Radios'
 export { default as Text } from './configs/Text'
 export { default as Textareas } from './configs/Textareas'
 export { default as Transitions } from './configs/Transitions'
@@ -13,12 +15,14 @@ export { default as AnchorDefault } from './configs/palettes/AnchorDefault'
 export { default as BorderDefault } from './configs/palettes/BorderDefault'
 export { default as ButtonOutline } from './configs/palettes/ButtonOutline'
 export { default as ButtonSolid } from './configs/palettes/ButtonSolid'
+export { default as CheckboxDefault } from './configs/palettes/CheckboxDefault'
 export { default as GroundConsole } from './configs/palettes/GroundConsole'
 export { default as GroundDefault } from './configs/palettes/GroundDefault'
 export { default as GroundMonochromatic } from './configs/palettes/GroundMonochromatic'
 export { default as GroundPastel } from './configs/palettes/GroundPastel'
 export { default as InputDefault } from './configs/palettes/InputDefault'
 export { default as InputUnderlined } from './configs/palettes/InputUnderlined'
+export { default as RadioDefault } from './configs/palettes/RadioDefault'
 export { default as TextDefault } from './configs/palettes/TextDefault'
 
 // .src/helpers
@@ -71,7 +75,9 @@ export { default as VvColorModeButton } from './components/buttons/VvColorModeBu
 export { default as VvEl } from './components/elements/VvEl.vue'
 
 // .src/components/inputs
+export { default as VvCheckbox } from './components/inputs/VvCheckbox.vue'
 export { default as VvInput } from './components/inputs/VvInput.vue'
+export { default as VvRadio } from './components/inputs/VvRadio.vue'
 
 // .src/components/lists
 export { default as VvListItem } from './components/lists/VvListItem.vue'
@@ -95,10 +101,12 @@ import type { ColorMode } from './types/ColorMode'
 import type { ConfigAnchors } from './types/ConfigAnchors'
 import type { ConfigBorders } from './types/ConfigBorders'
 import type { ConfigButtons } from './types/ConfigButtons'
+import type { ConfigCheckboxes } from './types/ConfigCheckboxes'
 import type { ConfigColorMode } from './types/ConfigColorMode'
 import type { ConfigDefaults } from './types/ConfigDefaults'
 import type { ConfigGrounds } from './types/ConfigGrounds'
 import type { ConfigInputs } from './types/ConfigInputs'
+import type { ConfigRadios } from './types/ConfigRadios'
 import type { ConfigText } from './types/ConfigText'
 import type { ConfigTextareas } from './types/ConfigTextareas'
 import type { ConfigTransitions } from './types/ConfigTransitions'
@@ -127,10 +135,12 @@ import type { TransitionsEasings } from './types/TransitionsEasings'
 import type { TransitionsTransitions } from './types/TransitionsTransitions'
 import type { VvAnchorProps } from './types/VvAnchorProps'
 import type { VvButtonProps } from './types/VvButtonProps'
+import type { VvCheckboxProps } from './types/VvCheckboxProps'
 import type { VvColorModeButtonProps } from './types/VvColorModeButtonProps'
 import type { VvElProps } from './types/VvElProps'
 import type { VvInputProps } from './types/VvInputProps'
 import type { VvListItemProps } from './types/VvListItemProps'
+import type { VvRadioProps } from './types/VvRadioProps'
 import type { VvTextareaProps } from './types/VvTextareaProps'
 
 export type { AppColorPairs }
@@ -143,10 +153,12 @@ export type { ColorMode }
 export type { ConfigAnchors }
 export type { ConfigBorders }
 export type { ConfigButtons }
+export type { ConfigCheckboxes }
 export type { ConfigColorMode }
 export type { ConfigDefaults }
 export type { ConfigGrounds }
 export type { ConfigInputs }
+export type { ConfigRadios }
 export type { ConfigText }
 export type { ConfigTextareas }
 export type { ConfigTransitions }
@@ -175,8 +187,10 @@ export type { TransitionsEasings }
 export type { TransitionsTransitions }
 export type { VvAnchorProps }
 export type { VvButtonProps }
+export type { VvCheckboxProps }
 export type { VvColorModeButtonProps }
 export type { VvElProps }
 export type { VvInputProps }
 export type { VvListItemProps }
+export type { VvRadioProps }
 export type { VvTextareaProps }
