@@ -132,7 +132,7 @@ appVv.anchors.focus = '...'
 
 ## Anchors.sizes
 
-The `Anchors.sizes` parameter object for the {{ $frontmatter.title }} is inherited directly from the [Text Config Module](/modules/configs/text#text-sizes).
+The `Anchors.sizes` parameter object for the {{ $frontmatter.title }} is inherited directly from the [Text Config Module](/modules/configs/text#textsizes).
 
 
 
@@ -234,7 +234,7 @@ However, the `Anchors.classes()` method also returns `Anchors.getSizeClasses()` 
 |------------|:---------:|:----------:|-------------|
 | sizesKey   | `String`  | Optional   | Property name/key of an Anchors.sizes object |
 
-The applicable values for the `sizesKey` argument are set via the [Text Config Module Text.sizes](/modules/configs/text#text-sizes) property names/keys and atomic class values.
+The applicable values for the `sizesKey` argument are set via the [Text Config Module Text.sizes](/modules/configs/text#textsizes) property names/keys and atomic class values.
 
 ### Example
 
@@ -281,7 +281,7 @@ The `Anchors.getSizeClasses()` method returns text size related classes based on
 |------------|:---------:|:----------:|-------------|
 | sizesKey   | `String`  | Optional   | Property name/key of an Anchors.sizes object |
 
-The applicable values for the `sizesKey` argument are set via the [Text Config Module Text.sizes](/modules/configs/text#text-sizes) property names/keys and atomic class values.
+The applicable values for the `sizesKey` argument are set via the [Text Config Module Text.sizes](/modules/configs/text#textsizes) property names/keys and atomic class values.
 
 ### Example
 
