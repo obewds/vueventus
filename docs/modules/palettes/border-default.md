@@ -40,18 +40,18 @@ let appVv: ConfigVv = VvConfig
 // ...
 
 // Override the default VvConfig borders palette colors individually
-appVv.borders.default.default = '...'
-appVv.borders.default.error = '...'
-appVv.borders.default.primary = '...'
-appVv.borders.default.secondary = '...'
-appVv.borders.default.success = '...'
+appVv.borders.palettes.default.default = '...'
+appVv.borders.palettes.default.error = '...'
+appVv.borders.palettes.default.primary = '...'
+appVv.borders.palettes.default.secondary = '...'
+appVv.borders.palettes.default.success = '...'
 
 // Add a new custom app anchor color name & value
 // to the default VvConfig borders palette
-appVv.borders.default.newAppColor = '...'
+appVv.borders.palettes.default.newAppColor = '...'
 
 // Add a new custom app anchor palette
-appVv.borders.myCustomAppPalette = {
+appVv.borders.palettes.myCustomAppPalette = {
     default: '...',
     error: '...',
     primary: '...',

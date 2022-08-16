@@ -38,18 +38,18 @@ let appVv: ConfigVv = VvConfig
 // ...
 
 // Override the default VvConfig grounds palette colors individually
-appVv.grounds.console.default = '...'
-appVv.grounds.console.error = '...'
-appVv.grounds.console.primary = '...'
-appVv.grounds.console.secondary = '...'
-appVv.grounds.console.success = '...'
+appVv.grounds.palettes.console.default = '...'
+appVv.grounds.palettes.console.error = '...'
+appVv.grounds.palettes.console.primary = '...'
+appVv.grounds.palettes.console.secondary = '...'
+appVv.grounds.palettes.console.success = '...'
 
 // Add a new custom app anchor color name & value
 // to the default VvConfig grounds palette
-appVv.grounds.console.newAppColor = '...'
+appVv.grounds.palettes.console.newAppColor = '...'
 
 // Add a new custom app anchor palette
-appVv.grounds.myCustomAppPalette = {
+appVv.grounds.palettes.myCustomAppPalette = {
     default: '...',
     error: '...',
     primary: '...',
