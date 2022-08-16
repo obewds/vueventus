@@ -376,7 +376,7 @@ However, the `Text.classes()` method also returns `Text.getSizeClasses()` method
 |------------|:---------:|:----------:|-------------|
 | sizesKey   | `String`  | Optional   | Property name/key of an Text.sizes object |
 
-The applicable values for the `sizesKey` argument are set via the [Text.sizes](/modules/configs/text#text-sizes) property names/keys and atomic class values.
+The applicable values for the `sizesKey` argument are set via the [Text.sizes](/modules/configs/text#textsizes) property names/keys and atomic class values.
 
 ### Examples
 
@@ -421,7 +421,7 @@ The `Text.getSizeClasses()` method returns text size related classes based on th
 |------------|:---------:|:----------:|-------------|
 | sizesKey   | `String`  | Optional   | Property name/key of an Text.sizes object |
 
-The applicable values for the `sizesKey` argument are set via the [Text.sizes](/modules/configs/text#text-sizes) property names/keys and atomic class values.
+The applicable values for the `sizesKey` argument are set via the [Text.sizes](/modules/configs/text#textsizes) property names/keys and atomic class values.
 
 ### Examples
 
