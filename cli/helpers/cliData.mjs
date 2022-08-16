@@ -36,6 +36,7 @@ import viteConfigTsSsgFile from '../generators/viteConfigTsSsgFile.mjs'
 import vitestConfigTsFile from '../generators/vitestConfigTsFile.mjs'
 import vvAnchorVueFile from '../generators/vvAnchorVueFile.mjs'
 import vvButtonVueFile from '../generators/vvButtonVueFile.mjs'
+import vvCheckboxVueFile from '../generators/vvCheckboxVueFile.mjs'
 import vvColorModeButtonVueFile from '../generators/vvColorModeButtonVueFile.mjs'
 import vvElVueFile from '../generators/vvElVueFile.mjs'
 import vvFaVueFile from '../generators/vvFaVueFile.mjs'
@@ -43,6 +44,7 @@ import vvInputVueFile from '../generators/vvInputVueFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
 import vvPrismVarsVueFile from '../generators/vvPrismVarsVueFile.mjs'
 import vvPrismVueFile from '../generators/vvPrismVueFile.mjs'
+import vvRadioVueFile from '../generators/vvRadioVueFile.mjs'
 import vvScrollUpVueFile from '../generators/vvScrollUpVueFile.mjs'
 import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
 
@@ -189,6 +191,12 @@ let baseVvTsCompos = {
         path: '/src/components/vv/buttons/',
         src: vvButtonVueFile(),
     },
+    vvCheckboxVue: {
+        name: 'VvCheckbox.vue',
+        checked: true,
+        path: '/src/components/vv/inputs/',
+        src: vvCheckboxVueFile(),
+    },
     vvColorModeButtonVue: {
         name: 'VvColorModeButton.vue',
         checked: true,
@@ -212,6 +220,12 @@ let baseVvTsCompos = {
         checked: true,
         path: '/src/components/vv/lists/',
         src: vvListItemVueFile(),
+    },
+    vvRadioVue: {
+        name: 'VvRadio.vue',
+        checked: true,
+        path: '/src/components/vv/inputs/',
+        src: vvRadioVueFile(),
     },
     vvTextareaVue: {
         name: 'VvTextarea.vue',
