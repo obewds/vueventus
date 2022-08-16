@@ -23,6 +23,9 @@ export default <ConfigDefaults>{
     },
     "VvCheckbox": {
         color: 'default',
+        checked: false,
+        darkCheckHex: '#242426',
+        lightCheckHex: '#e1e1e3',
         palette: 'default',
         size: 'md',
     },
@@ -44,6 +47,7 @@ export default <ConfigDefaults>{
     },
     "VvInput": {
         color: 'default',
+        checked: false,
         palette: 'default',
         size: 'md',
         type: 'text',
@@ -57,6 +61,9 @@ export default <ConfigDefaults>{
     },
     "VvRadio": {
         color: 'default',
+        checked: false,
+        darkRadioHex: '#242426',
+        lightRadioHex: '#e1e1e3',
         palette: 'default',
         size: 'md',
     },
