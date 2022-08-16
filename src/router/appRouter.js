@@ -6,7 +6,9 @@ import Test from '@/views/Test.vue'
 // config pages
 import AnchorsPage from '@/views/configs/AnchorsPage.vue'
 import ButtonsPage from '@/views/configs/ButtonsPage.vue'
+import CheckboxesPage from '@/views/configs/CheckboxesPage.vue'
 import InputsPage from '@/views/configs/InputsPage.vue'
+import RadiosPage from '@/views/configs/RadiosPage.vue'
 import TextPage from '@/views/configs/TextPage.vue'
 import TextareasPage from '@/views/configs/TextareasPage.vue'
 import TransitionsPage from '@/views/configs/TransitionsPage.vue'
@@ -78,9 +80,17 @@ const router = createRouter({
             component: ButtonsPage,
             path: '/configs/buttons'
         },{
+            name: 'Checkboxes Config Module',
+            component: CheckboxesPage,
+            path: '/configs/checkboxes'
+        },{
             name: 'Inputs Config Module',
             component: InputsPage,
             path: '/configs/inputs'
+        },{
+            name: 'Radios Config Module',
+            component: RadiosPage,
+            path: '/configs/radios'
         },{
             name: 'Text Config Module',
             component: TextPage,
