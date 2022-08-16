@@ -13,12 +13,12 @@ test('Radios component returns a truthy value', async () => {
 
 test('Radios component returns a truthy object for "display", "ring", "text" properties', async () => {
 
-    expect(Radios.border).toBeTruthy()
+    expect(Radios.baseColors).toBeTruthy()
+    expect(Radios.border).toBe('')
     expect(Radios.outline).toBe('')
     expect(Radios.ring).toBeTruthy('')
     expect(Radios.rounding).toBe('')
     expect(Radios.shadow).toBe('')
-    expect(Radios.text).toBe('')
     expect(Radios.transition).toBeTruthy()
 
 })
