@@ -69,7 +69,7 @@ The core deps for each stack are generally pretty similar, but here's a table of
 | [Typescript](https://www.typescriptlang.org/)                                        |     🟢     |     🟢    |
 | [Vitest](https://vitest.dev/)                                                        |     🟢     |     🟢    |
 | [Vue Test Utils](https://test-utils.vuejs.org/guide/)                                |     🟢     |     🟢    |
-| [c8](https://github.com/bcoe/c8)                                                     |     🟢     |     🟢    |
+| [@vitest/coverage-c8](https://www.npmjs.com/package/@vitest/coverage-c8)             |     🟢     |     🟢    |
 | [happy-dom](https://github.com/capricorn86/happy-dom)                                |     🟢     |     🟢    |
 | [@vitejs/plugin-vue](https://www.npmjs.com/package/@vitejs/plugin-vue)               |     🟢     |     🟢    |
 | [Vite-SSG](https://github.com/antfu/vite-ssg)                                        |     🔴     |     🟢    |
