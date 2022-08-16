@@ -16,6 +16,18 @@
                 type: String,
                 default: VvConfig.defaults.VvRadio.color,
             },
+            checked: {
+                type: Boolean,
+                default: VvConfig.defaults.VvRadio.checked,
+            },
+            darkRadioHex: {
+                type: String,
+                default: VvConfig.defaults.VvRadio.darkRadioHex,
+            },
+            lightRadioHex: {
+                type: String,
+                default: VvConfig.defaults.VvRadio.lightRadioHex,
+            },
             palette: {
                 type: String,
                 default: VvConfig.defaults.VvRadio.palette,
@@ -23,14 +35,6 @@
             size: {
                 type: String,
                 default: VvConfig.defaults.VvRadio.size,
-            },
-            checked: {
-                type: Boolean,
-                default: false,
-            },
-            darkCheckHex: {
-                type: String,
-                default: '434348',
             },
             value: {
                 type: String,
@@ -64,7 +68,19 @@
 
             })
 
-            let darkCheckCssUrl = `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23${props.darkCheckHex}' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")`
+            // Source: https://github.com/tailwindlabs/tailwindcss-forms/issues/27#issuecomment-820958958
+            // TIP: Fill color should start with # equivalent ("%23") immediately followed by the color hex value!
+            function radioSvgUrl (string: string): string {
+                return `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23${string}' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")`
+            }
+
+            let darkRadioCssUrl = computed( () => {
+                return radioSvgUrl( (props.darkRadioHex).replace(/#/g, '') )
+            })
+
+            let lightRadioCssUrl = computed( () => {
+                return radioSvgUrl( (props.lightRadioHex).replace(/#/g, '') )
+            })
 
             const handleRadioChange = (event: Event) => {
                 const target = event.target as HTMLInputElement
@@ -79,8 +95,9 @@
 
             return {
                 classes,
+                darkRadioCssUrl,
                 handleRadioChange,
-                darkCheckCssUrl,
+                lightRadioCssUrl,
             }
 
         },
@@ -103,15 +120,14 @@
 
 <style>
 
-/*
-Source: https://github.com/tailwindlabs/tailwindcss-forms/issues/27#issuecomment-820958958
---------------
-TIP: Fill color should start with # equivalent ("%23") immediately followed by the color hex value!
-*/
+/* Set the svg (and thus color) of the TailwindCSS radio dot geometry */
 
-/* Set the svg (and thus color) of the TailwindCSS radio dot icon */
+[type="radio"]:checked {
+    background-image: v-bind('lightRadioCssUrl');
+}
+
 .dark [type="radio"]:checked {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23434348' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+    background-image: v-bind('darkRadioCssUrl');
 }
 
 </style>
