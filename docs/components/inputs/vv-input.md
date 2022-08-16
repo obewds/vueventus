@@ -39,6 +39,7 @@ import { VvInput } from '@obewds/vueventus'
 ## Emits: update:modelValue
 
 Emits: **`update:modelValue`**  
+Emit Value Type: **`String`**  
 
 The {{ $frontmatter.title }} emits a standard Vue key of `update:modelValue` upon input event changes of the component's generated input value attribute.
 
