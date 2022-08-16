@@ -168,8 +168,16 @@
                 Buttons
             </DevViewLinkCard>
 
+            <DevViewLinkCard icon="config" to="/configs/checkboxes" :link-classes="tw.gridCardLinkModule">
+                Checkboxes
+            </DevViewLinkCard>
+
             <DevViewLinkCard icon="config" to="/configs/inputs" :link-classes="tw.gridCardLinkModule">
                 Inputs
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="config" to="/configs/radios" :link-classes="tw.gridCardLinkModule">
+                Radios
             </DevViewLinkCard>
 
             <DevViewLinkCard icon="config" to="/configs/text" :link-classes="tw.gridCardLinkModule">
