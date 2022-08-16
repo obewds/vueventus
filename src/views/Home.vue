@@ -223,6 +223,10 @@
                 ButtonSolid
             </DevViewLinkCard>
 
+            <DevViewLinkCard icon="palette" to="/configs/palettes/checkbox-default" :link-classes="tw.gridCardLinkPalette">
+                CheckboxDefault
+            </DevViewLinkCard>
+
             <DevViewLinkCard icon="palette" to="/configs/palettes/ground-console" :link-classes="tw.gridCardLinkPalette">
                 GroundConsole
             </DevViewLinkCard>
@@ -245,6 +249,10 @@
 
             <DevViewLinkCard icon="palette" to="/configs/palettes/input-underlined" :link-classes="tw.gridCardLinkPalette">
                 InputUnderlined
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="palette" to="/configs/palettes/radio-default" :link-classes="tw.gridCardLinkPalette">
+                RadioDefault
             </DevViewLinkCard>
 
             <DevViewLinkCard icon="palette" to="/configs/palettes/text-default" :link-classes="tw.gridCardLinkPalette">
