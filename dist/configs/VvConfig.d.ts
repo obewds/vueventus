@@ -47,6 +47,22 @@ declare const _default: {
         getFabSizeClasses: import("../index.js").ReturnsClassesFunction;
         fabClasses: import("../index.js").ReturnsClassesFunction;
     };
+    checkboxes: {
+        palettes: {
+            default: import("../index.js").DefaultConfigPalette;
+        };
+        baseColors: string | undefined;
+        border: string | undefined;
+        outline: string | undefined;
+        ring: string | undefined;
+        rounding: string | undefined;
+        shadow: string | undefined;
+        transition: string | undefined;
+        base: import("../index.js").BaseFunction;
+        sizes: import("../index.js").InputsSizes;
+        getSizeClasses: import("../index.js").ReturnsClassesFunction;
+        classes: import("../index.js").ReturnsClassesFunction;
+    };
     inputs: {
         palettes: {
             default: import("../index.js").DefaultValidationPalette;
@@ -81,6 +97,22 @@ declare const _default: {
             monochromatic: import("../index.js").DefaultConfigPalette;
             pastel: import("../index.js").DefaultConfigPalette;
         };
+    };
+    radios: {
+        palettes: {
+            default: import("../index.js").DefaultConfigPalette;
+        };
+        baseColors: string | undefined;
+        border: string | undefined;
+        outline: string | undefined;
+        ring: string | undefined;
+        rounding: string | undefined;
+        shadow: string | undefined;
+        transition: string | undefined;
+        base: import("../index.js").BaseFunction;
+        sizes: import("../index.js").InputsSizes;
+        getSizeClasses: import("../index.js").ReturnsClassesFunction;
+        classes: import("../index.js").ReturnsClassesFunction;
     };
     text: {
         palettes: {

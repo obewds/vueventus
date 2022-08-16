@@ -118,7 +118,7 @@
 </template>
 
 
-<style>
+<style scoped>
 
 /* Set the svg (and thus color) of the TailwindCSS radio dot geometry */
 
