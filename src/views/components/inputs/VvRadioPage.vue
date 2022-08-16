@@ -2,11 +2,22 @@
 
 <script setup lang="ts">
 
+    import { ref } from 'vue'
     import globals from '../../../globals'
     import DevViewArticle from '../../../views/compos/DevViewArticle.vue'
+    import VvEl from '../../../components/elements/VvEl.vue'
     import VvRadio from '../../../components/inputs/VvRadio.vue'
 
     const tw = globals.classes
+
+    const selections = ref([
+        { value: 'dawn', label: 'Dawn Light' },
+        { value: 'dusk', label: 'Dusk Light' },
+        { value: 'moonlight', label: 'Moonlight' },
+        { value: 'sunlight', label: 'Sunlight' },
+    ])
+
+    const selected = ref(selections.value[0])
 
 </script>
 
@@ -19,6 +30,21 @@
             <div>
                 <h3 :class="tw.h3">VvRadio Default Palette Colors</h3>
                 <div :class="tw.flexStack">
+
+                    <div class="flex flex-col space-y-1 pb-4">
+                        <div v-for="(selection, id) in selections" class="flex items-center gap-2" :key="id">
+                            <VvRadio
+                                :id="'lightType-' + id"
+                                name="lightType"
+                                :value="selection.value"
+                                color="primary"
+                                @update:modelValue="(event) => event === true ? selected = selection : null"
+                                :checked="selection === selected"
+                            />
+                            <label :htmlFor="'lightType-' + id">{{ selection.label }}</label>
+                        </div>
+                        <VvEl text-color="primary" class="text-left font-bold pt-1">{{ selected.label }}</VvEl>
+                    </div>
 
                     <div class="flex flex-col space-y-1 pb-4">
                         <div class="flex items-center gap-2">

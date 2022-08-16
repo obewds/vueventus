@@ -6,7 +6,9 @@ import Test from '@/views/Test.vue'
 // config pages
 import AnchorsPage from '@/views/configs/AnchorsPage.vue'
 import ButtonsPage from '@/views/configs/ButtonsPage.vue'
+import CheckboxesPage from '@/views/configs/CheckboxesPage.vue'
 import InputsPage from '@/views/configs/InputsPage.vue'
+import RadiosPage from '@/views/configs/RadiosPage.vue'
 import TextPage from '@/views/configs/TextPage.vue'
 import TextareasPage from '@/views/configs/TextareasPage.vue'
 import TransitionsPage from '@/views/configs/TransitionsPage.vue'
@@ -17,12 +19,14 @@ import AnchorDefaultPage from '@/views/configs/palettes/AnchorDefaultPage.vue'
 import BorderDefaultPage from '@/views/configs/palettes/BorderDefaultPage.vue'
 import ButtonOutlinePage from '@/views/configs/palettes/ButtonOutlinePage.vue'
 import ButtonSolidPage from '@/views/configs/palettes/ButtonSolidPage.vue'
+import CheckboxDefaultPage from '@/views/configs/palettes/CheckboxDefaultPage.vue'
 import GroundConsolePage from '@/views/configs/palettes/GroundConsolePage.vue'
 import GroundDefaultPage from '@/views/configs/palettes/GroundDefaultPage.vue'
 import GroundMonochromaticPage from '@/views/configs/palettes/GroundMonochromaticPage.vue'
 import GroundPastelPage from '@/views/configs/palettes/GroundPastelPage.vue'
 import InputDefaultPage from '@/views/configs/palettes/InputDefaultPage.vue'
 import InputUnderlinedPage from '@/views/configs/palettes/InputUnderlinedPage.vue'
+import RadioDefaultPage from '@/views/configs/palettes/RadioDefaultPage.vue'
 import TextDefaultPage from '@/views/configs/palettes/TextDefaultPage.vue'
 
 // anchor component pages
@@ -78,9 +82,17 @@ const router = createRouter({
             component: ButtonsPage,
             path: '/configs/buttons'
         },{
+            name: 'Checkboxes Config Module',
+            component: CheckboxesPage,
+            path: '/configs/checkboxes'
+        },{
             name: 'Inputs Config Module',
             component: InputsPage,
             path: '/configs/inputs'
+        },{
+            name: 'Radios Config Module',
+            component: RadiosPage,
+            path: '/configs/radios'
         },{
             name: 'Text Config Module',
             component: TextPage,
@@ -120,6 +132,10 @@ const router = createRouter({
             component: ButtonSolidPage,
             path: '/configs/palettes/button-solid'
         },{
+            name: 'CheckboxDefault Palette Config Module',
+            component: CheckboxDefaultPage,
+            path: '/configs/palettes/checkbox-default'
+        },{
             name: 'GroundConsole Palette Config Module',
             component: GroundConsolePage,
             path: '/configs/palettes/ground-console'
@@ -143,6 +159,10 @@ const router = createRouter({
             name: 'InputUnderlined Palette Config Module',
             component: InputUnderlinedPage,
             path: '/configs/palettes/input-underlined'
+        },{
+            name: 'RadioDefault Palette Config Module',
+            component: RadioDefaultPage,
+            path: '/configs/palettes/radio-default'
         },{
             name: 'TextDefault Palette Config Module',
             component: TextDefaultPage,

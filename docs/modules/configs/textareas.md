@@ -428,7 +428,7 @@ However, the `Textareas.classes()` method also returns `Textareas.getSizeClasses
 |------------|:---------:|:----------:|-------------|
 | sizesKey   | `String`  | Optional   | Property name/key of an Textareas.sizes object |
 
-The applicable values for the `sizesKey` argument are set via the [Textareas.sizes](/modules/configs/inputs#inputs-sizes) property names/keys and atomic class values.
+The applicable values for the `sizesKey` argument are set via the [Textareas.sizes](/modules/configs/inputs#inputssizes) property names/keys and atomic class values.
 
 ### Examples
 
@@ -470,7 +470,7 @@ The `Textareas.getSizeClasses()` method returns text size related classes based 
 |------------|:---------:|:----------:|-------------|
 | sizesKey   | `String`  | Optional   | Property name/key of an Textareas.sizes object |
 
-The applicable values for the `sizesKey` argument are set via the [Textareas.sizes](/modules/configs/inputs#inputs-sizes) property names/keys and atomic class values.
+The applicable values for the `sizesKey` argument are set via the [Textareas.sizes](/modules/configs/inputs#inputssizes) property names/keys and atomic class values.
 
 ### Examples
 

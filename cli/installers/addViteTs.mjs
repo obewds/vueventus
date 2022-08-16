@@ -21,10 +21,12 @@ import viteConfigTsFile from '../generators/viteConfigTsFile.mjs'
 import viteConfigTsSsgFile from '../generators/viteConfigTsSsgFile.mjs'
 import vvAnchorVueFile from '../generators/vvAnchorVueFile.mjs'
 import vvButtonVueFile from '../generators/vvButtonVueFile.mjs'
+import vvCheckboxVueFile from '../generators/vvCheckboxVueFile.mjs'
 import vvColorModeButtonVueFile from '../generators/vvColorModeButtonVueFile.mjs'
 import vvElVueFile from '../generators/vvElVueFile.mjs'
 import vvInputVueFile from '../generators/vvInputVueFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
+import vvRadioVueFile from '../generators/vvRadioVueFile.mjs'
 import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
 
 import cliData from '../helpers/cliData.mjs'
@@ -80,10 +82,12 @@ export default function (userOpts, stackObj, installPkgsArr) {
     const composVv = cwd + '/src/components/vv/'
     fs.outputFileSync(composVv + 'anchors/VvAnchor.vue', vvAnchorVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'buttons/VvButton.vue', vvButtonVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'buttons/VvCheckbox.vue', vvCheckboxVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'buttons/VvColorModeButton.vue', vvColorModeButtonVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'elements/VvEl.vue', vvElVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'inputs/VvInput.vue', vvInputVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'lists/VvListItem.vue', vvListItemVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'buttons/VvRadio.vue', vvRadioVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'textareas/VvTextarea.vue', vvTextareaVueFile(), { flag: 'w+' })
     
     

@@ -14,7 +14,7 @@ title: Inputs Config Module
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} holds your application's default/prototypal Tailwind CSS classes for Input elements in your application, excluding color and color palette classes (see [Palette Config Modules](/modules/palettes/) for more info about palette modules).
+The {{ $frontmatter.title }} holds your application's default/prototypal Tailwind CSS classes for Input elements in your application, excluding color palette classes (see [Palette Config Modules](/modules/palettes/) for more info about palette modules).
 
 
 
@@ -391,7 +391,7 @@ However, the `Inputs.classes()` method also returns `Inputs.getSizeClasses()` me
 |------------|:---------:|:----------:|-------------|
 | sizesKey   | `String`  | Optional   | Property name/key of an Inputs.sizes object |
 
-The applicable values for the `sizesKey` argument are set via the [Inputs.sizes](/modules/configs/inputs#inputs-sizes) property names/keys and atomic class values.
+The applicable values for the `sizesKey` argument are set via the [Inputs.sizes](/modules/configs/inputs#inputssizes) property names/keys and atomic class values.
 
 ### Examples
 
@@ -433,7 +433,7 @@ The `Inputs.getSizeClasses()` method returns text size related classes based on 
 |------------|:---------:|:----------:|-------------|
 | sizesKey   | `String`  | Optional   | Property name/key of an Inputs.sizes object |
 
-The applicable values for the `sizesKey` argument are set via the [Inputs.sizes](/modules/configs/inputs#inputs-sizes) property names/keys and atomic class values.
+The applicable values for the `sizesKey` argument are set via the [Inputs.sizes](/modules/configs/inputs#inputssizes) property names/keys and atomic class values.
 
 ### Examples
 

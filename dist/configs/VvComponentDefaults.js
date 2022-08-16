@@ -18,6 +18,14 @@ export default {
         size: 'md',
         type: 'button',
     },
+    "VvCheckbox": {
+        color: 'default',
+        checked: false,
+        darkCheckHex: '#242426',
+        lightCheckHex: '#e1e1e3',
+        palette: 'default',
+        size: 'md',
+    },
     "VvColorModeButton": {
         color: 'default',
         mode: 'light',
@@ -36,6 +44,7 @@ export default {
     },
     "VvInput": {
         color: 'default',
+        checked: false,
         palette: 'default',
         size: 'md',
         type: 'text',
@@ -46,6 +55,14 @@ export default {
         palette: 'default',
         symbolColor: 'primary',
         symbolPalette: 'default',
+    },
+    "VvRadio": {
+        color: 'default',
+        checked: false,
+        darkRadioHex: '#242426',
+        lightRadioHex: '#e1e1e3',
+        palette: 'default',
+        size: 'md',
     },
     "VvTextarea": {
         color: 'default',

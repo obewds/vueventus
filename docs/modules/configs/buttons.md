@@ -611,7 +611,7 @@ However, the `Buttons.classes()` method also returns `Buttons.getSizeClasses()` 
 |------------|:---------:|:----------:|-------------|
 | sizesKey   | `String`  | Optional   | Property name/key of an Buttons.sizes object |
 
-The applicable values for the `sizesKey` argument are set via the [Buttons.sizes](/modules/configs/buttons#buttons-sizes) property names/keys and atomic class values.
+The applicable values for the `sizesKey` argument are set via the [Buttons.sizes](/modules/configs/buttons#buttonssizes) property names/keys and atomic class values.
 
 ### Examples
 
@@ -821,7 +821,7 @@ The `Buttons.getSizeClasses()` method returns text size related classes based on
 |------------|:---------:|:----------:|-------------|
 | sizesKey   | `String`  | Optional   | Property name/key of an Buttons.sizes object |
 
-The applicable values for the `sizesKey` argument are set via the [Buttons.sizes](/modules/configs/buttons#buttons-sizes) property names/keys and atomic class values.
+The applicable values for the `sizesKey` argument are set via the [Buttons.sizes](/modules/configs/buttons#buttonssizes) property names/keys and atomic class values.
 
 ### Examples
 

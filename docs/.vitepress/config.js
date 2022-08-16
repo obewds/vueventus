@@ -164,8 +164,10 @@ function sidebarModules() {
                 { text: 'VvConfig', link: '/modules/configs/vv-config' },
                 { text: 'Anchors Config', link: '/modules/configs/anchors' },
                 { text: 'Buttons Config', link: '/modules/configs/buttons' },
+                { text: 'Checkboxes Config', link: '/modules/configs/checkboxes' },
                 { text: 'ColorModes Config', link: '/modules/configs/color-modes' },
                 { text: 'Inputs Config', link: '/modules/configs/inputs' },
+                { text: 'Radios Config', link: '/modules/configs/radios' },
                 { text: 'Text Config', link: '/modules/configs/text' },
                 { text: 'Textareas Config', link: '/modules/configs/textareas' },
                 { text: 'Transitions Config', link: '/modules/configs/transitions' },
@@ -180,12 +182,14 @@ function sidebarModules() {
                 { text: 'BorderDefault Palette', link: '/modules/palettes/border-default' },
                 { text: 'ButtonOutline Palette', link: '/modules/palettes/button-outline' },
                 { text: 'ButtonSolid Palette', link: '/modules/palettes/button-solid' },
+                { text: 'CheckboxDefault Palette', link: '/modules/palettes/checkbox-default' },
                 { text: 'GroundConsole Palette', link: '/modules/palettes/ground-console' },
                 { text: 'GroundDefault Palette', link: '/modules/palettes/ground-default' },
                 { text: 'GroundMonochromatic Palette', link: '/modules/palettes/ground-monochromatic' },
                 { text: 'GroundPastel Palette', link: '/modules/palettes/ground-pastel' },
                 { text: 'InputDefault Palette', link: '/modules/palettes/input-default' },
                 { text: 'InputUnderlined Palette', link: '/modules/palettes/input-underlined' },
+                { text: 'RadioDefault Palette', link: '/modules/palettes/radio-default' },
                 { text: 'TextDefault Palette', link: '/modules/palettes/text-default' },
             ]
         },{
@@ -255,7 +259,9 @@ function sidebarComponents() {
             text: 'Input Components',
             collapsible: true,
             items: [
+                { text: 'VvCheckbox', link: '/components/inputs/vv-checkbox' },
                 { text: 'VvInput', link: '/components/inputs/vv-input' },
+                { text: 'VvRadio', link: '/components/inputs/vv-radio' },
             ]
         },{
             text: 'List Components',

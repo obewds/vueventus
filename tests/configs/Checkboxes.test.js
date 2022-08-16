@@ -13,12 +13,12 @@ test('Checkboxes component returns a truthy value', async () => {
 
 test('Checkboxes component returns a truthy object for "display", "ring", "text" properties', async () => {
 
-    expect(Checkboxes.border).toBeTruthy()
+    expect(Checkboxes.baseColors).toBeTruthy()
+    expect(Checkboxes.border).toBe('')
     expect(Checkboxes.outline).toBe('')
     expect(Checkboxes.ring).toBeTruthy('')
     expect(Checkboxes.rounding).toBeTruthy('')
     expect(Checkboxes.shadow).toBe('')
-    expect(Checkboxes.text).toBe('')
     expect(Checkboxes.transition).toBeTruthy()
 
 })

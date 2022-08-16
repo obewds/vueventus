@@ -4,21 +4,21 @@ import type { ConfigRadios } from '../types/ConfigRadios'
 import Transitions from './Transitions.js'
 
 export default <ConfigRadios>{
-    border: 'border-gray-400 dark:border-black',
+    baseColors: 'bg-gray-100 border-gray-400 dark:border-black ring-offset-white dark:ring-offset-gray-800',
+    border: '',
     outline: '',
-    ring: 'focus:ring-offset-2 focus:ring-2 ring-offset-white dark:ring-offset-gray-800',
+    ring: 'focus:ring-offset-2 focus:ring-2',
     rounding: '',
     shadow: '',
-    text: '',
     transition: Transitions.classes('colors', 'inOut', '300'),
     base: function () {
         return [
+            this.baseColors,
             this.border,
             this.outline,
             this.ring,
             this.rounding,
             this.shadow,
-            this.text,
             this.transition,
         ].join(' ').replace(/\s+/g,' ').trim()
     },

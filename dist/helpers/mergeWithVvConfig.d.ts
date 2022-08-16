@@ -48,6 +48,22 @@ export default function (appTwConfig: typeof VvConfig): {
         getFabSizeClasses: import("..").ReturnsClassesFunction;
         fabClasses: import("..").ReturnsClassesFunction;
     };
+    checkboxes: {
+        palettes: {
+            default: import("..").DefaultConfigPalette;
+        };
+        baseColors: string | undefined;
+        border: string | undefined;
+        outline: string | undefined;
+        ring: string | undefined;
+        rounding: string | undefined;
+        shadow: string | undefined;
+        transition: string | undefined;
+        base: import("..").BaseFunction;
+        sizes: import("..").InputsSizes;
+        getSizeClasses: import("..").ReturnsClassesFunction;
+        classes: import("..").ReturnsClassesFunction;
+    };
     inputs: {
         palettes: {
             default: import("..").DefaultValidationPalette;
@@ -82,6 +98,22 @@ export default function (appTwConfig: typeof VvConfig): {
             monochromatic: import("..").DefaultConfigPalette;
             pastel: import("..").DefaultConfigPalette;
         };
+    };
+    radios: {
+        palettes: {
+            default: import("..").DefaultConfigPalette;
+        };
+        baseColors: string | undefined;
+        border: string | undefined;
+        outline: string | undefined;
+        ring: string | undefined;
+        rounding: string | undefined;
+        shadow: string | undefined;
+        transition: string | undefined;
+        base: import("..").BaseFunction;
+        sizes: import("..").InputsSizes;
+        getSizeClasses: import("..").ReturnsClassesFunction;
+        classes: import("..").ReturnsClassesFunction;
     };
     text: {
         palettes: {

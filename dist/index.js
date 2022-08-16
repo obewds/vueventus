@@ -1,8 +1,10 @@
 // .src/configs
 export { default as Anchors } from './configs/Anchors';
 export { default as Buttons } from './configs/Buttons';
+export { default as Checkboxes } from './configs/Checkboxes';
 export { default as ColorModes } from './configs/ColorModes';
 export { default as Inputs } from './configs/Inputs';
+export { default as Radios } from './configs/Radios';
 export { default as Text } from './configs/Text';
 export { default as Textareas } from './configs/Textareas';
 export { default as Transitions } from './configs/Transitions';
@@ -12,12 +14,14 @@ export { default as AnchorDefault } from './configs/palettes/AnchorDefault';
 export { default as BorderDefault } from './configs/palettes/BorderDefault';
 export { default as ButtonOutline } from './configs/palettes/ButtonOutline';
 export { default as ButtonSolid } from './configs/palettes/ButtonSolid';
+export { default as CheckboxDefault } from './configs/palettes/CheckboxDefault';
 export { default as GroundConsole } from './configs/palettes/GroundConsole';
 export { default as GroundDefault } from './configs/palettes/GroundDefault';
 export { default as GroundMonochromatic } from './configs/palettes/GroundMonochromatic';
 export { default as GroundPastel } from './configs/palettes/GroundPastel';
 export { default as InputDefault } from './configs/palettes/InputDefault';
 export { default as InputUnderlined } from './configs/palettes/InputUnderlined';
+export { default as RadioDefault } from './configs/palettes/RadioDefault';
 export { default as TextDefault } from './configs/palettes/TextDefault';
 // .src/helpers
 export { default as appColorPairs } from './helpers/appColorPairs';
@@ -64,7 +68,9 @@ export { default as VvColorModeButton } from './components/buttons/VvColorModeBu
 // .src/components/elements
 export { default as VvEl } from './components/elements/VvEl.vue';
 // .src/components/inputs
+export { default as VvCheckbox } from './components/inputs/VvCheckbox.vue';
 export { default as VvInput } from './components/inputs/VvInput.vue';
+export { default as VvRadio } from './components/inputs/VvRadio.vue';
 // .src/components/lists
 export { default as VvListItem } from './components/lists/VvListItem.vue';
 // .src/components/logos

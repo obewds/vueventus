@@ -206,6 +206,28 @@ import type { ConfigButtons } from '@obewds/vueventus'
 
 
 
+## ConfigCheckboxes
+
+### Import
+
+```javascript
+import type { ConfigCheckboxes } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/ConfigCheckboxes.ts
+
+
+
+
+
+
+
+
+
+
+
 ## ConfigColorMode
 
 ### Import
@@ -280,6 +302,28 @@ import type { ConfigInputs } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/ConfigInputs.ts
+
+
+
+
+
+
+
+
+
+
+## ConfigRadios
+
+### Import
+
+```javascript
+import type { ConfigRadios } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/ConfigRadios.ts
+
 
 
 
@@ -735,6 +779,28 @@ import type { VvButtonProps } from '@obewds/vueventus'
 
 
 
+## VvCheckboxProps
+
+### Import
+
+```javascript
+import type { VvCheckboxProps } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/VvCheckboxProps.ts
+
+
+
+
+
+
+
+
+
+
+
 ## VvColorModeButtonProps
 
 ### Import
@@ -811,6 +877,30 @@ import type { VvListItemProps } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/VvListItemProps.ts
+
+
+
+
+
+
+
+
+
+
+
+
+## VvRadioProps
+
+### Import
+
+```javascript
+import type { VvRadioProps } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/VvRadioProps.ts
+
 
 
 
