@@ -7,7 +7,7 @@ const output = `<!-- ./src/components/vv/inputs/VvCheckbox.vue -->
 
 <script lang="ts">
 
-    import { defineComponent } from 'vue'
+    import { computed, defineComponent } from 'vue'
     import { VvCheckbox } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
@@ -42,6 +42,30 @@ const output = `<!-- ./src/components/vv/inputs/VvCheckbox.vue -->
             },
         },
 
+        setup (props) {
+            
+            // Source: https://github.com/tailwindlabs/tailwindcss-forms/issues/27#issuecomment-820958958
+            // TIP: Fill color should start with # equivalent ("%23") immediately followed by the color hex value!
+            function checkSvgUrl (string: string): string {
+                return [
+                    'url("data:image/svg+xml,%3csvg viewBox=',
+                    "'0 0 16 16'  fill='%23",
+                    string,
+                    "' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'",
+                    '/%3e%3c/svg%3e")'
+                ].join('')
+            }
+            let darkCheckCssUrl = computed( () => {
+                return checkSvgUrl( (props.darkCheckHex as string).replace(/#/g, '') )
+            })
+            let lightCheckCssUrl = computed( () => {
+                return checkSvgUrl( (props.lightCheckHex as string).replace(/#/g, '') )
+            })
+
+            return { darkCheckCssUrl, lightCheckCssUrl }
+
+        },
+
     })
 
 </script>
@@ -57,6 +81,20 @@ const output = `<!-- ./src/components/vv/inputs/VvCheckbox.vue -->
         :size="size"
     />
 </template>
+
+
+<style scoped>
+
+    /* Set the svg (and thus color) of the TailwindCSS checkbox check geometry */
+    [type="checkbox"]:checked {
+        background-image: v-bind('lightCheckCssUrl');
+    }
+
+    .dark [type="checkbox"]:checked {
+        background-image: v-bind('darkCheckCssUrl');
+    }
+
+</style>
 
 `
 
