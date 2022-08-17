@@ -6,7 +6,7 @@ export default function () {
 
 <script lang="ts">
 
-    import { defineComponent } from 'vue'
+    import { computed, defineComponent } from 'vue'
     import { VvRadio } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
@@ -23,13 +23,13 @@ export default function () {
                 type: Boolean,
                 default: appVv.defaults.VvRadio.checked,
             },
-            darkCheckHex: {
+            darkRadioHex: {
                 type: String,
-                default: appVv.defaults.VvRadio.darkCheckHex,
+                default: appVv.defaults.VvRadio.darkRadioHex,
             },
-            lightCheckHex: {
+            lightRadioHex: {
                 type: String,
-                default: appVv.defaults.VvRadio.lightCheckHex,
+                default: appVv.defaults.VvRadio.lightRadioHex,
             },
             palette: {
                 type: String,
@@ -45,6 +45,30 @@ export default function () {
             },
         },
 
+        setup (props) {
+
+            // Source: https://github.com/tailwindlabs/tailwindcss-forms/issues/27#issuecomment-820958958
+            // TIP: Fill color should start with # equivalent ("%23") immediately followed by the color hex value!
+            function radioSvgUrl (string: string): string {
+                return [
+                    'url("data:image/svg+xml,%3csvg viewBox=',
+                    "'0 0 16 16' fill='%23",
+                    string,
+                    "' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'",
+                    '/%3e%3c/svg%3e")',
+                ].join('')
+            }
+            let darkRadioCssUrl = computed( () => {
+                return radioSvgUrl( (props.darkRadioHex as string).replace(/#/g, '') )
+            })
+            let lightRadioCssUrl = computed( () => {
+                return radioSvgUrl( (props.lightRadioHex as string).replace(/#/g, '') )
+            })
+
+            return { darkRadioCssUrl, lightRadioCssUrl }
+
+        },
+
     })
 
 </script>
@@ -54,13 +78,27 @@ export default function () {
     <VvRadio
         :checked="checked"
         :color="color"
-        :dark-check-hex="darkCheckHex"
-        :light-check-hex="lightCheckHex"
+        :dark-radio-hex="darkRadioHex"
+        :light-radio-hex="lightRadioHex"
         :palette="palette"
         :size="size"
         :value="value"
     />
 </template>
+
+
+<style scoped>
+
+    /* Set the svg (and thus color) of the TailwindCSS radio dot geometry */
+    [type="radio"]:checked {
+        background-image: v-bind('lightRadioCssUrl');
+    }
+
+    .dark [type="radio"]:checked {
+        background-image: v-bind('darkRadioCssUrl');
+    }
+
+</style>
 
 `
 
