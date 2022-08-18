@@ -1,0 +1,1 @@
+import{c as a}from"./VvTextarea.vue_vue_type_script_lang.acd46d59.js";import{_ as e,o,l as r,w as t,r as n,n as l,q as c}from"../app.c9eb278d.js";function p(s,f,i,m,_,d){return o(),r(c(s.tag),{class:l(s.classes)},{default:t(()=>[n(s.$slots,"default")]),_:3},8,["class"])}const C=e(a,[["render",p]]);export{C as V};

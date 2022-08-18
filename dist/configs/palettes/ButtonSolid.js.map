@@ -1,1 +1,1 @@
-{"version":3,"file":"ButtonSolid.js","sourceRoot":"","sources":["../../../src/configs/palettes/ButtonSolid.ts"],"names":[],"mappings":"AAAA,wCAAwC;AAIxC,eAAqC;IACjC,SAAS,EAAE,wIAAwI;IACnJ,KAAK,EAAE,uHAAuH;IAC9H,OAAO,EAAE,uHAAuH;IAChI,SAAS,EAAE,6JAA6J;IACxK,OAAO,EAAE,mKAAmK;CAC/K,CAAA"}
+{"version":3,"file":"ButtonSolid.js","sourceRoot":"","sources":["../../../src/configs/palettes/ButtonSolid.ts"],"names":[],"mappings":"AAAA,wCAAwC;AAIxC,eAAqC;IACjC,SAAS,EAAE,oNAAoN;IAC/N,KAAK,EAAE,mNAAmN;IAC1N,OAAO,EAAE,mNAAmN;IAC5N,SAAS,EAAE,mNAAmN;IAC9N,OAAO,EAAE,6NAA6N;CACzO,CAAA"}
