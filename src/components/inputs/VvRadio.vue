@@ -71,7 +71,13 @@
             // Source: https://github.com/tailwindlabs/tailwindcss-forms/issues/27#issuecomment-820958958
             // TIP: Fill color should start with # equivalent ("%23") immediately followed by the color hex value!
             function radioSvgUrl (string: string): string {
-                return `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23${string}' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")`
+                return [
+                    'url("data:image/svg+xml,%3csvg viewBox=',
+                    "'0 0 16 16' fill='%23",
+                    string,
+                    "' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'",
+                    '/%3e%3c/svg%3e")',
+                ].join('')
             }
 
             let darkRadioCssUrl = computed( () => {
@@ -84,11 +90,10 @@
 
             const handleRadioChange = (event: Event) => {
                 const target = event.target as HTMLInputElement
+                checked.value = false // reset checked value to false in case this radio was de-selected
                 const isChecked = target.checked
                 if (isChecked === true) {
                     checked.value = true
-                } else {
-                    checked.value = false
                 }
                 return checked.value
             }
@@ -114,6 +119,7 @@
         :value="value"
         :checked="checked"
         @change="$emit('update:modelValue', handleRadioChange($event as any))"
+        :data-test="(darkRadioCssUrl ? darkRadioHex : '') + (lightRadioCssUrl ? lightRadioHex : '')"
     >
 </template>
 

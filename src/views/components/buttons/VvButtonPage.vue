@@ -31,19 +31,6 @@
 
         <div :class="tw.cardFlex">
             <div>
-                <h3 :class="tw.h3">VvButton Solid Palette</h3>
-                <div :class="tw.flexWrap">
-                    <VvButton color="default">default</VvButton>
-                    <VvButton color="error">error</VvButton>
-                    <VvButton color="primary">primary</VvButton>
-                    <VvButton color="secondary">secondary</VvButton>
-                    <VvButton color="success">success</VvButton>
-                </div>
-            </div>
-        </div>
-
-        <div :class="tw.cardFlex">
-            <div>
                 <h3 :class="tw.h3">VvButton Outline Palette</h3>
                 <div :class="tw.flexWrap">
                     <VvButton palette="outline" color="default">default</VvButton>

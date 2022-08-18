@@ -13,7 +13,7 @@ title: Manual Installation
 
 # {{ $frontmatter.title }}
 
-This guide will walk through installing and setting up VueVentus along with [Vite.js](https://vitejs.dev/guide/#scaffolding-your-first-vite-project), [Vue.js](https://vuejs.org/), [Tailwind CSS](https://tailwindcss.com/), [Vitest](https://vitest.dev/), [Vue Test Utils](https://test-utils.vuejs.org/guide/), [@vitest/coverage-c8](https://www.npmjs.com/package/@vitest/coverage-c8) and [happy-dom](https://github.com/capricorn86/happy-dom).
+This guide will walk through installing and setting up VueVentus along with [Vite.js](https://vitejs.dev/guide/#scaffolding-your-first-vite-project), [Vue.js](https://vuejs.org/), [Tailwind CSS](https://tailwindcss.com/), [Vitest](https://vitest.dev/), [Vue Test Utils](https://test-utils.vuejs.org/guide/) and [happy-dom](https://github.com/capricorn86/happy-dom).
 
 
 

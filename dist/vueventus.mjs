@@ -168,7 +168,7 @@ const Le = {
     ].join(" ").replace(/\s+/g, " ").trim();
   }
 }, at = {
-  border: "border border-transparent",
+  border: "border",
   cursor: "cursor-pointer",
   disabled: "disabled:opacity-25",
   display: "inline-flex items-center",
@@ -490,17 +490,17 @@ const Le = {
   secondary: "border-violet-600 dark:border-violet-300",
   success: "border-green-600 dark:border-green-300"
 }, gt = {
-  default: "text-gray-500 dark:text-gray-300 hover:text-white dark:hover:text-white hover:bg-gray-500 active:bg-gray-600 border-gray-300 hover:border-gray-800 focus:ring-gray-400 focus:border-gray-900",
-  error: "text-rose-500 dark:text-rose-300 hover:text-white dark:hover:text-white hover:bg-rose-500 active:bg-rose-600 border-rose-300 hover:border-rose-800 focus:ring-rose-400 focus:border-rose-900",
-  primary: "text-blue-500 dark:text-blue-300 hover:text-white dark:hover:text-white hover:bg-blue-500 active:bg-blue-600 border-blue-300 hover:border-blue-800 focus:ring-blue-400 focus:border-blue-900",
-  secondary: "text-teal-600 dark:text-teal-500 hover:text-white dark:hover:text-white hover:bg-teal-600 active:bg-teal-800 border-teal-600 hover:border-teal-800 focus:ring-teal-500 focus:border-teal-900",
-  success: "text-green-600 dark:text-green-500 hover:text-white dark:hover:text-white hover:bg-green-600 active:bg-green-800 border-green-600 hover:border-green-800 focus:ring-green-500 focus:border-green-900"
+  default: "text-gray-500 dark:text-gray-300 hover:text-white focus:text-white dark:hover:text-white dark:focus:text-white hover:bg-gray-500 focus:bg-gray-500 active:bg-gray-600 border-gray-300 hover:border-gray-500 focus:ring-gray-400 dark:focus:ring-gray-200 focus:border-gray-50 dark:focus:border-gray-900",
+  error: "text-rose-500 dark:text-rose-300 hover:text-white dark:hover:text-white focus:text-white dark:focus:text-white hover:bg-rose-500 focus:bg-rose-500 active:bg-rose-600 border-rose-300 hover:border-rose-500 focus:ring-rose-400 dark:focus:ring-rose-200 focus:border-rose-50 dark:focus:border-rose-900",
+  primary: "text-blue-500 dark:text-blue-300 hover:text-white dark:hover:text-white focus:text-white dark:focus:text-white hover:bg-blue-500 focus:bg-blue-500 active:bg-blue-600 border-blue-300 hover:border-blue-500 focus:ring-blue-400 dark:focus:ring-blue-200 focus:border-blue-50 dark:focus:border-blue-900",
+  secondary: "text-teal-500 dark:text-teal-300 hover:text-white dark:hover:text-white focus:text-white dark:focus:text-white hover:bg-teal-500 focus:bg-teal-500 active:bg-teal-600 border-teal-300 hover:border-teal-500 focus:ring-teal-400 dark:focus:ring-teal-200 focus:border-teal-50 dark:focus:border-teal-900",
+  success: "text-green-500 dark:text-green-300 hover:text-white dark:hover:text-white focus:text-white dark:focus:text-white hover:bg-green-500 focus:bg-green-500 active:bg-green-600 border-green-300 hover:border-green-500 focus:ring-green-400 dark:focus:ring-green-200 focus:border-green-50 dark:focus:border-green-900"
 }, ht = {
-  default: "text-gray-800 hover:text-black bg-gray-100 hover:bg-gray-200 active:bg-gray-300 border-gray-900 focus:border-black focus:ring-gray-400",
-  error: "text-white bg-rose-500 hover:bg-rose-600 active:bg-rose-700 border-rose-800 focus:ring-rose-400 focus:border-rose-900",
-  primary: "text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700 border-blue-800 focus:ring-blue-400 focus:border-blue-900",
-  secondary: "text-gray-900 hover:text-white bg-teal-500 hover:bg-teal-600 active:text-white active:bg-teal-700 border-teal-800 focus:ring-teal-400 focus:border-teal-900",
-  success: "text-gray-900 hover:text-white bg-green-500 hover:bg-green-600 active:text-white active:bg-green-700 border-green-800 focus:ring-green-400 focus:border-green-900"
+  default: "text-gray-900 bg-gray-100 hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-300 border-gray-100 hover:border-gray-200 focus:border-gray-50 dark:focus:border-gray-900 focus:ring-gray-600 dark:focus:ring-gray-50",
+  error: "text-white bg-rose-500 hover:bg-rose-600 focus:bg-rose-600 active:bg-rose-700 border-rose-500 hover:border-rose-600 focus:border-rose-100 dark:focus:border-rose-900 focus:ring-rose-600 dark:focus:ring-rose-200",
+  primary: "text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 active:bg-blue-700 border-blue-500 hover:border-blue-600 focus:border-blue-100 dark:focus:border-blue-900 focus:ring-blue-600 dark:focus:ring-blue-200",
+  secondary: "text-white bg-teal-500 hover:bg-teal-600 focus:bg-teal-600 active:bg-teal-700 border-teal-500 hover:border-teal-600 focus:border-teal-100 dark:focus:border-teal-900 focus:ring-teal-600 dark:focus:ring-teal-200",
+  success: "text-white bg-green-500 hover:bg-green-600 focus:bg-green-600 active:bg-green-700 border-green-500 hover:border-green-600 focus:border-green-100 dark:focus:border-green-900 focus:ring-green-600 dark:focus:ring-green-200"
 }, bt = {
   default: "focus:ring-gray-500 text-gray-600 dark:focus:ring-gray-200 dark:text-gray-300",
   error: "focus:ring-rose-500 text-rose-500 dark:focus:ring-rose-200 dark:text-rose-300",
@@ -707,8 +707,8 @@ const Y = (e) => Number.parseInt(e, 16), ze = (e) => Y(e) / 255, Z = (e) => e <=
 }, oe = (e) => e.a === 1 ? `rgb(${e.r}, ${e.g}, ${e.b})` : `rgba(${e.r}, ${e.g}, ${e.b}, ${e.a})`, Je = (e) => e.a === 1 ? [e.r, e.g, e.b] : [e.r, e.g, e.b, k(e.a * 255)], ne = (e, t) => {
   const r = Je(e).map((s) => s.toString(16)).map((s) => $t(s));
   return t && r.every((s) => s.charAt(0) === s.charAt(1)) ? r.map((s) => s.charAt(0)).join("") : r.join("");
-}, W = (e, t) => ne({ ...e, a: 1 }, t), _t = (e) => (e.r * 299 + e.g * 587 + e.b * 114) / 1e3;
-function Mt(e) {
+}, W = (e, t) => ne({ ...e, a: 1 }, t), Mt = (e) => (e.r * 299 + e.g * 587 + e.b * 114) / 1e3;
+function _t(e) {
   const t = e.r / 255, r = e.g / 255, s = e.b / 255, o = t <= 0.03928 ? t / 12.92 : ((t + 0.055) / 1.055) ** 2.4, n = r <= 0.03928 ? r / 12.92 : ((r + 0.055) / 1.055) ** 2.4, a = s <= 0.03928 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
   return 0.2126 * o + 0.7152 * n + 0.0722 * a;
 }
@@ -973,10 +973,10 @@ class c {
     return this._a;
   }
   getBrightness() {
-    return _t(this.toRgb());
+    return Mt(this.toRgb());
   }
   getLuminance() {
-    return Mt(E(this));
+    return _t(E(this));
   }
   toString(t) {
     return j.print(I(this), this._format, t);
@@ -1148,7 +1148,7 @@ V.shouldHandleInput = (e) => le.hex8.test(e) || le.hex4.test(e);
 V.toRgb = (e) => Qt(e);
 V.toRaw = (e) => e;
 V.toString = (e) => V.wanted === "hex4" ? ee(e, !0) : V.wanted === "hex8" ? ee(e) : q(e) ? V.options.alphaFormat === "hex" ? ee(e) : V.print(V.options.alphaFormat, e) : ee(e);
-const fe = c.registerFormat("hsl"), _e = function() {
+const fe = c.registerFormat("hsl"), Me = function() {
   return {
     hsl: new RegExp(`hsl${be}`),
     hsla: new RegExp(`hsla${pe}`)
@@ -1177,7 +1177,7 @@ function Ye(e) {
   }
   return { h: l, s: u, l: d, a: o };
 }
-function Me(e) {
+function _e(e) {
   const t = w(e.h, 360), r = w(Z(e.s), 100), s = w(Z(e.l), 100), o = e.a || 1;
   let n, a, l;
   function u(d, f, g) {
@@ -1193,7 +1193,7 @@ function Me(e) {
 }
 function Ze(e) {
   let t, r, s, o, n;
-  return (n = _e.hsl.exec(e)) ? ([t, r, s] = n.splice(1, 3), { h: t, s: r, l: s }) : (n = _e.hsla.exec(e)) ? ([t, r, s, o] = n.splice(1, 4), { h: t, s: r, l: s, a: o }) : !1;
+  return (n = Me.hsl.exec(e)) ? ([t, r, s] = n.splice(1, 3), { h: t, s: r, l: s }) : (n = Me.hsla.exec(e)) ? ([t, r, s, o] = n.splice(1, 4), { h: t, s: r, l: s, a: o }) : !1;
 }
 function Kt(e) {
   let { h: t, s: r, l: s, a: o } = e;
@@ -1204,7 +1204,7 @@ function er(e) {
   return t *= 360, { h: t, s: r, l: s, a: o };
 }
 fe.shouldHandleInput = (e) => typeof e == "object" && Xt(e) || Ze(e);
-fe.toRgb = (e) => typeof e == "object" && Me(e) || Me(Ze(e));
+fe.toRgb = (e) => typeof e == "object" && _e(e) || _e(Ze(e));
 fe.toRaw = (e) => er(Ye(e));
 fe.toString = (e) => Kt(Ye(e));
 const ge = c.registerFormat("hsv"), Ae = function() {
@@ -1421,22 +1421,22 @@ H.shouldHandleInput = (e) => X[e];
 H.toRgb = (e) => H.parse(X[e]).rgba;
 H.toRaw = (e) => e;
 H.toString = (e) => e.a === 0 ? "transparent" : q(e) && H.wanted === "toName" ? !1 : q(e) && H.wanted === "name" ? `#${W(e)}` : q(e) ? H.print(H.options.alphaFormat, e) : nr[W(e, !0)] || !1;
-function _(e, t) {
+function M(e, t) {
   return new c(e, t);
 }
-_.equals = (e, t) => c.equals(e, t);
-_.registerFormat = (e, t = {}) => c.registerFormat(e, t);
-_.fromRatio = (e, t) => c.fromRatio(e, t);
-_.mix = (e, t, r) => c.mix(e, t, r);
-_.readability = (e, t) => c.readability(e, t);
-_.isReadable = (e, t, r) => c.isReadable(e, t, r);
-_.mostReadable = (e, t, r) => c.mostReadable(e, t, r);
-_.names = X;
+M.equals = (e, t) => c.equals(e, t);
+M.registerFormat = (e, t = {}) => c.registerFormat(e, t);
+M.fromRatio = (e, t) => c.fromRatio(e, t);
+M.mix = (e, t, r) => c.mix(e, t, r);
+M.readability = (e, t) => c.readability(e, t);
+M.isReadable = (e, t, r) => c.isReadable(e, t, r);
+M.mostReadable = (e, t, r) => c.mostReadable(e, t, r);
+M.names = X;
 function ds(e, t = "#fff", r = "#000") {
   let s = JSON.parse(JSON.stringify(e)), o = Object.keys(s), n = {};
   for (let a = 0; a < o.length; a++)
     if (typeof s[o[a]] == "string" || typeof s[o[a]] == "number") {
-      const l = _(s[o[a]], {});
+      const l = M(s[o[a]], {});
       l.isValid() && (n[o[a]] = {
         backgroundColor: l.toHexString(!1),
         color: l.isDark() ? t : r
@@ -1445,7 +1445,7 @@ function ds(e, t = "#fff", r = "#000") {
       const l = Object.keys(s[o[a]]), u = {};
       for (let d = 0; d < l.length; d++)
         if (typeof s[o[a]][l[d]] == "string") {
-          const f = _(s[o[a]][l[d]], !1);
+          const f = M(s[o[a]][l[d]], !1);
           f.isValid() && (u[l[d]] = {
             backgroundColor: f.toHexString(!0),
             color: f.isDark() ? t : r
@@ -1601,7 +1601,7 @@ function kr() {
   return "#" + s + o + n;
 }
 function vs(e = "#fff", t = "#000") {
-  let r = { backgroundColor: "", color: "" }, s = _(kr(), {}), o = s.isDark();
+  let r = { backgroundColor: "", color: "" }, s = M(kr(), {}), o = s.isDark();
   return r.backgroundColor = "#" + String(s.toHex(!1)), r.color = o ? e : t, r;
 }
 function Ss() {
@@ -1627,11 +1627,11 @@ function zs(e) {
 function Vs(e) {
   return e.replace(/[^A-z0-9._-]/gi, "");
 }
-function _s(e, t = "short", r = "english", s = "AM", o = "PM") {
-  var n = new Date(Number(e) * 1e3), a = Xe(), l = a[r][t], u = n.getFullYear(), d = l[n.getMonth()], f = n.getDate(), g = n.getHours(), b = n.getMinutes(), y = n.getSeconds(), M = g >= 12 ? o : s;
-  return g = g % 12, g = g === 0 ? 12 : g, d + " " + G(f) + ", " + u + " " + g + ":" + G(b) + ":" + G(y) + " " + M;
+function Ms(e, t = "short", r = "english", s = "AM", o = "PM") {
+  var n = new Date(Number(e) * 1e3), a = Xe(), l = a[r][t], u = n.getFullYear(), d = l[n.getMonth()], f = n.getDate(), g = n.getHours(), b = n.getMinutes(), y = n.getSeconds(), _ = g >= 12 ? o : s;
+  return g = g % 12, g = g === 0 ? 12 : g, d + " " + G(f) + ", " + u + " " + g + ":" + G(b) + ":" + G(y) + " " + _;
 }
-function Ms(e) {
+function _s(e) {
   return e.filter((t, r, s) => s.indexOf(t) === r);
 }
 const As = [
@@ -1832,9 +1832,9 @@ const As = [
   setup(e) {
     const t = Object.keys(x("vv", {})).length > 0 ? x("vv") : i;
     return { classes: p(() => {
-      var o, n, a, l, u, d, f, g, b, y, M, U, J, ke, we, ve;
+      var o, n, a, l, u, d, f, g, b, y, _, U, J, ke, we, ve;
       let s = [];
-      return e.button === !0 ? (e.buttonBlock === !0 && e.buttonFab === !1 ? ((o = t == null ? void 0 : t.buttons) != null && o.blockBase() && s.push(t.buttons.blockBase()), e.buttonSize !== "" && ((a = (n = t == null ? void 0 : t.buttons) == null ? void 0 : n.blockSizes) == null ? void 0 : a[e.buttonSize]) && s.push(t.buttons.blockSizes[e.buttonSize])) : e.buttonBlock === !1 && e.buttonFab === !0 ? ((l = t == null ? void 0 : t.buttons) != null && l.fabBase() && s.push(t.buttons.fabBase()), e.buttonSize !== "" && ((d = (u = t == null ? void 0 : t.buttons) == null ? void 0 : u.fabSizes) == null ? void 0 : d[e.buttonSize]) && s.push(t.buttons.fabSizes[e.buttonSize])) : ((f = t == null ? void 0 : t.buttons) != null && f.base() && s.push(t.buttons.base()), e.buttonSize !== "" && ((b = (g = t == null ? void 0 : t.buttons) == null ? void 0 : g.sizes) == null ? void 0 : b[e.buttonSize]) && s.push(t.buttons.sizes[e.buttonSize])), (U = (M = (y = t == null ? void 0 : t.buttons) == null ? void 0 : y.palettes) == null ? void 0 : M[e.palette]) != null && U[e.color] && s.push(t.buttons.palettes[e.palette][e.color])) : ((J = t == null ? void 0 : t.anchors) != null && J.base() && s.push(t.anchors.base()), (ve = (we = (ke = t == null ? void 0 : t.anchors) == null ? void 0 : ke.palettes) == null ? void 0 : we[e.palette]) != null && ve[e.color] && s.push(t.anchors.palettes[e.palette][e.color])), s.join(" ").trim();
+      return e.button === !0 ? (e.buttonBlock === !0 && e.buttonFab === !1 ? ((o = t == null ? void 0 : t.buttons) != null && o.blockBase() && s.push(t.buttons.blockBase()), e.buttonSize !== "" && ((a = (n = t == null ? void 0 : t.buttons) == null ? void 0 : n.blockSizes) == null ? void 0 : a[e.buttonSize]) && s.push(t.buttons.blockSizes[e.buttonSize])) : e.buttonBlock === !1 && e.buttonFab === !0 ? ((l = t == null ? void 0 : t.buttons) != null && l.fabBase() && s.push(t.buttons.fabBase()), e.buttonSize !== "" && ((d = (u = t == null ? void 0 : t.buttons) == null ? void 0 : u.fabSizes) == null ? void 0 : d[e.buttonSize]) && s.push(t.buttons.fabSizes[e.buttonSize])) : ((f = t == null ? void 0 : t.buttons) != null && f.base() && s.push(t.buttons.base()), e.buttonSize !== "" && ((b = (g = t == null ? void 0 : t.buttons) == null ? void 0 : g.sizes) == null ? void 0 : b[e.buttonSize]) && s.push(t.buttons.sizes[e.buttonSize])), (U = (_ = (y = t == null ? void 0 : t.buttons) == null ? void 0 : y.palettes) == null ? void 0 : _[e.palette]) != null && U[e.color] && s.push(t.buttons.palettes[e.palette][e.color])) : ((J = t == null ? void 0 : t.anchors) != null && J.base() && s.push(t.anchors.base()), (ve = (we = (ke = t == null ? void 0 : t.anchors) == null ? void 0 : ke.palettes) == null ? void 0 : we[e.palette]) != null && ve[e.color] && s.push(t.anchors.palettes[e.palette][e.color])), s.join(" ").trim();
     }) };
   }
 }), $ = (e, t) => {
@@ -1892,22 +1892,22 @@ const Is = /* @__PURE__ */ $(Sr, [["render", zr]]), Vr = C({
   setup(e) {
     const t = Object.keys(x("vv", {})).length > 0 ? x("vv") : i, r = e.type;
     let s = p(() => {
-      var n, a, l, u, d, f, g, b, y, M, U, J;
+      var n, a, l, u, d, f, g, b, y, _, U, J;
       let o = [];
-      return e.block === !0 && e.fab === !1 ? ((n = t == null ? void 0 : t.buttons) != null && n.blockBase() && o.push(t.buttons.blockBase()), e.size !== "" && ((l = (a = t == null ? void 0 : t.buttons) == null ? void 0 : a.blockSizes) == null ? void 0 : l[e.size]) && o.push(t.buttons.blockSizes[e.size])) : e.fab === !0 && e.block === !1 ? ((u = t == null ? void 0 : t.buttons) != null && u.fabBase() && o.push(t.buttons.fabBase()), e.size !== "" && ((f = (d = t == null ? void 0 : t.buttons) == null ? void 0 : d.fabSizes) == null ? void 0 : f[e.size]) && o.push(t.buttons.fabSizes[e.size])) : ((g = t == null ? void 0 : t.buttons) != null && g.base() && o.push(t.buttons.base()), e.size !== "" && ((y = (b = t == null ? void 0 : t.buttons) == null ? void 0 : b.sizes) == null ? void 0 : y[e.size]) && o.push(t.buttons.sizes[e.size])), (J = (U = (M = t == null ? void 0 : t.buttons) == null ? void 0 : M.palettes) == null ? void 0 : U[e.palette]) != null && J[e.color] && o.push(t.buttons.palettes[e.palette][e.color]), o.join(" ").trim();
+      return e.block === !0 && e.fab === !1 ? ((n = t == null ? void 0 : t.buttons) != null && n.blockBase() && o.push(t.buttons.blockBase()), e.size !== "" && ((l = (a = t == null ? void 0 : t.buttons) == null ? void 0 : a.blockSizes) == null ? void 0 : l[e.size]) && o.push(t.buttons.blockSizes[e.size])) : e.fab === !0 && e.block === !1 ? ((u = t == null ? void 0 : t.buttons) != null && u.fabBase() && o.push(t.buttons.fabBase()), e.size !== "" && ((f = (d = t == null ? void 0 : t.buttons) == null ? void 0 : d.fabSizes) == null ? void 0 : f[e.size]) && o.push(t.buttons.fabSizes[e.size])) : ((g = t == null ? void 0 : t.buttons) != null && g.base() && o.push(t.buttons.base()), e.size !== "" && ((y = (b = t == null ? void 0 : t.buttons) == null ? void 0 : b.sizes) == null ? void 0 : y[e.size]) && o.push(t.buttons.sizes[e.size])), (J = (U = (_ = t == null ? void 0 : t.buttons) == null ? void 0 : _.palettes) == null ? void 0 : U[e.palette]) != null && J[e.color] && o.push(t.buttons.palettes[e.palette][e.color]), o.join(" ").trim();
     });
     return { btnType: r, classes: s };
   }
-}), _r = ["type"];
-function Mr(e, t, r, s, o, n) {
+}), Mr = ["type"];
+function _r(e, t, r, s, o, n) {
   return m(), v("button", {
     type: e.btnType,
     class: h(e.classes)
   }, [
     P(e.$slots, "default")
-  ], 10, _r);
+  ], 10, Mr);
 }
-const Ar = /* @__PURE__ */ $(Vr, [["render", Mr]]), Rr = C({
+const Ar = /* @__PURE__ */ $(Vr, [["render", _r]]), Rr = C({
   name: "VvColorModeButton",
   components: {
     VvButton: Ar
@@ -2115,7 +2115,13 @@ const Ds = /* @__PURE__ */ $(Er, [["render", Dr]]), xe = C({
       return (u = t == null ? void 0 : t.checkboxes) != null && u.base() && l.push(t.checkboxes.base()), e.size !== "" && ((f = (d = t == null ? void 0 : t.checkboxes) == null ? void 0 : d.sizes) == null ? void 0 : f[e.size]) && l.push(t.checkboxes.sizes[e.size]), (y = (b = (g = t == null ? void 0 : t.checkboxes) == null ? void 0 : g.palettes) == null ? void 0 : b[e.palette]) != null && y[e.color] && l.push(t.checkboxes.palettes[e.palette][e.color]), l.join(" ").trim();
     });
     function s(l) {
-      return `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23${l}' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e")`;
+      return [
+        'url("data:image/svg+xml,%3csvg viewBox=',
+        "'0 0 16 16'  fill='%23",
+        l,
+        "' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'",
+        '/%3e%3c/svg%3e")'
+      ].join("");
     }
     let o = p(() => s(e.darkCheckHex.replace(/#/g, ""))), n = p(() => s(e.lightCheckHex.replace(/#/g, "")));
     return {
@@ -2127,21 +2133,22 @@ const Ds = /* @__PURE__ */ $(Er, [["render", Dr]]), xe = C({
   }
 }), Be = () => {
   De((e) => ({
-    "48bdeb94": e.lightCheckCssUrl,
-    "1759a5a6": e.darkCheckCssUrl
+    "6ae7de80": e.lightCheckCssUrl,
+    "7dbbbfc8": e.darkCheckCssUrl
   }));
 }, He = xe.setup;
 xe.setup = He ? (e, t) => (Be(), He(e, t)) : Be;
-const Lr = ["checked"];
+const Lr = ["checked", "data-test"];
 function Pr(e, t, r, s, o, n) {
   return m(), v("input", {
     type: "checkbox",
     class: h(e.classes),
     checked: e.checked,
-    onChange: t[0] || (t[0] = (a) => e.$emit("update:modelValue", e.handleCheckboxChange(a)))
+    onChange: t[0] || (t[0] = (a) => e.$emit("update:modelValue", e.handleCheckboxChange(a))),
+    "data-test": (e.darkCheckCssUrl ? e.darkCheckHex : "") + (e.lightCheckCssUrl ? e.lightCheckHex : "")
   }, null, 42, Lr);
 }
-const Ls = /* @__PURE__ */ $(xe, [["render", Pr], ["__scopeId", "data-v-8057fb9e"]]), Nr = C({
+const Ls = /* @__PURE__ */ $(xe, [["render", Pr], ["__scopeId", "data-v-6dad9ef5"]]), Nr = C({
   name: "VvInput",
   emits: ["update:modelValue"],
   props: {
@@ -2220,39 +2227,49 @@ const Ps = /* @__PURE__ */ $(Nr, [["render", Jr]]), ye = C({
   setup(e) {
     const t = Object.keys(x("vv", {})).length > 0 ? x("vv") : i, r = Te(e.checked);
     let s = p(() => {
-      var d, f, g, b, y, M;
+      var d, f, g, b, y, _;
       let u = [];
-      return (d = t == null ? void 0 : t.radios) != null && d.base() && u.push(t.radios.base()), e.size !== "" && ((g = (f = t == null ? void 0 : t.radios) == null ? void 0 : f.sizes) == null ? void 0 : g[e.size]) && u.push(t.radios.sizes[e.size]), (M = (y = (b = t == null ? void 0 : t.radios) == null ? void 0 : b.palettes) == null ? void 0 : y[e.palette]) != null && M[e.color] && u.push(t.radios.palettes[e.palette][e.color]), u.join(" ").trim();
+      return (d = t == null ? void 0 : t.radios) != null && d.base() && u.push(t.radios.base()), e.size !== "" && ((g = (f = t == null ? void 0 : t.radios) == null ? void 0 : f.sizes) == null ? void 0 : g[e.size]) && u.push(t.radios.sizes[e.size]), (_ = (y = (b = t == null ? void 0 : t.radios) == null ? void 0 : b.palettes) == null ? void 0 : y[e.palette]) != null && _[e.color] && u.push(t.radios.palettes[e.palette][e.color]), u.join(" ").trim();
     });
     function o(u) {
-      return `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23${u}' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")`;
+      return [
+        'url("data:image/svg+xml,%3csvg viewBox=',
+        "'0 0 16 16' fill='%23",
+        u,
+        "' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'",
+        '/%3e%3c/svg%3e")'
+      ].join("");
     }
     let n = p(() => o(e.darkRadioHex.replace(/#/g, ""))), a = p(() => o(e.lightRadioHex.replace(/#/g, "")));
     return {
       classes: s,
       darkRadioCssUrl: n,
-      handleRadioChange: (u) => (u.target.checked === !0 ? r.value = !0 : r.value = !1, r.value),
+      handleRadioChange: (u) => {
+        const d = u.target;
+        return r.value = !1, d.checked === !0 && (r.value = !0), r.value;
+      },
       lightRadioCssUrl: a
     };
   }
 }), Fe = () => {
   De((e) => ({
-    "09af6114": e.lightRadioCssUrl,
-    "97e09264": e.darkRadioCssUrl
+    "5064726a": e.lightRadioCssUrl,
+    "277b8392": e.darkRadioCssUrl
   }));
 }, Oe = ye.setup;
 ye.setup = Oe ? (e, t) => (Fe(), Oe(e, t)) : Fe;
-const qr = ["value", "checked"];
+const qr = ["value", "checked", "data-test"];
 function Gr(e, t, r, s, o, n) {
   return m(), v("input", {
     type: "radio",
     class: h(e.classes),
     value: e.value,
     checked: e.checked,
-    onChange: t[0] || (t[0] = (a) => e.$emit("update:modelValue", e.handleRadioChange(a)))
+    onChange: t[0] || (t[0] = (a) => e.$emit("update:modelValue", e.handleRadioChange(a))),
+    "data-test": (e.darkRadioCssUrl ? e.darkRadioHex : "") + (e.lightRadioCssUrl ? e.lightRadioHex : "")
   }, null, 42, qr);
 }
-const Ns = /* @__PURE__ */ $(ye, [["render", Gr], ["__scopeId", "data-v-51222f41"]]), Yr = C({
+const Ns = /* @__PURE__ */ $(ye, [["render", Gr], ["__scopeId", "data-v-df3d35f5"]]), Yr = C({
   name: "VvListItem",
   props: {
     color: {
@@ -2562,6 +2579,6 @@ export {
   $s as slugifyString,
   zs as stringToCamelCase,
   Vs as stringToFilename,
-  _s as timestampToDateTimeAmPm,
-  Ms as uniqueArray
+  Ms as timestampToDateTimeAmPm,
+  _s as uniqueArray
 };

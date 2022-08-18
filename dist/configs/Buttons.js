@@ -1,7 +1,7 @@
 // ./src/configs/Buttons.ts
 import Transitions from './Transitions.js';
 export default {
-    border: 'border border-transparent',
+    border: 'border',
     cursor: 'cursor-pointer',
     disabled: 'disabled:opacity-25',
     display: 'inline-flex items-center',
