@@ -4,7 +4,7 @@ import type { ConfigButtons } from '../types/ConfigButtons'
 import Transitions from './Transitions.js'
 
 export default <ConfigButtons>{
-    border: 'border border-transparent',
+    border: 'border',
     cursor: 'cursor-pointer',
     disabled: 'disabled:opacity-25',
     display: 'inline-flex items-center',
