@@ -10,6 +10,7 @@ declare module 'react' {
   interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
     // extends React's HTMLAttributes
     class?: string | string[]
+    dataTest?: string
   }
   interface SVGProps<T> extends AriaAttributes, DOMAttributes<T> {
     // extends React's SVGProps
