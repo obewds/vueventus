@@ -54,3 +54,18 @@ test('VvCheckbox.vue component emits the update:modelValue value as expected', a
     expect(updateModelValue2[1]).toEqual([false])
     
 })
+
+
+test('VvCheckbox.vue component can successfully ingest and output the expected data-test attribute value containing the passed in hex values props', async () => {
+    
+    const wrapper = mount(VvCheckbox, {
+        props: {
+            lightCheckHex: '#ffffff',
+            darkCheckHex: '#000000',
+        },
+    })
+
+    expect(wrapper.html()).toContain('ffffff')
+    expect(wrapper.html()).toContain('000000')
+    
+})
