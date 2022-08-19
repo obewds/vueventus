@@ -82,12 +82,12 @@ export default function (userOpts, stackObj, installPkgsArr) {
     const composVv = cwd + '/src/components/vv/'
     fs.outputFileSync(composVv + 'anchors/VvAnchor.vue', vvAnchorVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'buttons/VvButton.vue', vvButtonVueFile(), { flag: 'w+' })
-    fs.outputFileSync(composVv + 'buttons/VvCheckbox.vue', vvCheckboxVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'buttons/VvColorModeButton.vue', vvColorModeButtonVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'elements/VvEl.vue', vvElVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'inputs/VvCheckbox.vue', vvCheckboxVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'inputs/VvInput.vue', vvInputVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'inputs/VvRadio.vue', vvRadioVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'lists/VvListItem.vue', vvListItemVueFile(), { flag: 'w+' })
-    fs.outputFileSync(composVv + 'buttons/VvRadio.vue', vvRadioVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'textareas/VvTextarea.vue', vvTextareaVueFile(), { flag: 'w+' })
     
     
