@@ -24,11 +24,25 @@ The {{ $frontmatter.title }} provides a set of props and config module based set
 
 ## Import
 
-To import the {{ $frontmatter.title }}:
+To import a {{ $frontmatter.title }} installed by the [vueventus CLI](/guides/vueventus-cli) or [vv-update CLI](/guides/vv-update-cli):
+
+```javascript
+// ./src/components/SomeComponent.vue
+import VvTextarea from './vv/textareas/VvTextarea.vue'
+```
+
+!!!include(snippets/vueVentusCliComponentsTip.md)!!!
+
+Alternatively, you can install the raw library {{ $frontmatter.title }} with:
 
 ```javascript
 import { VvTextarea } from '@obewds/vueventus'
 ```
+
+!!!include(snippets/vueVentusRawComposTip.md)!!!
+
+!!!include(snippets/differenceBetweenRawAndCliTip.md)!!!
+
 
 
 
