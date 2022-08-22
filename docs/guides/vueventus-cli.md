@@ -65,6 +65,7 @@ The core deps for each stack are generally pretty similar, but here's a table of
 | [@tailwindcss/forms](https://www.npmjs.com/package/@tailwindcss/forms)               |     🟢     |     🟢    |
 | [@tailwindcss/line-clamp](https://www.npmjs.com/package/@tailwindcss/line-clamp)     |     🟢     |     🟢    |
 | [@tailwindcss/typography](https://www.npmjs.com/package/@tailwindcss/typography)     |     🟢     |     🟢    |
+| [vue-router](https://router.vuejs.org/)                                              |     🟢     |     🟢    |
 | [Typescript](https://www.typescriptlang.org/)                                        |     🟢     |     🟢    |
 | [Vitest](https://vitest.dev/)                                                        |     🟢     |     🟢    |
 | [Vue Test Utils](https://test-utils.vuejs.org/guide/)                                |     🟢     |     🟢    |
@@ -73,7 +74,6 @@ The core deps for each stack are generally pretty similar, but here's a table of
 | [@vitejs/plugin-vue](https://www.npmjs.com/package/@vitejs/plugin-vue)               |     🟢     |     🟢    |
 | [Vite-SSG](https://github.com/antfu/vite-ssg)                                        |     🔴     |     🟢    |
 | [Pinia](https://pinia.vuejs.org/)                                                    |     🔴     |     🟢    |
-| [vue-router](https://router.vuejs.org/)                                              |     🔴     |     🟢    |
 | [vite-plugin-vue-markdown](https://github.com/antfu/vite-plugin-md)                  |     🔴     |     🟢    |
 | [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages)                   |     🔴     |     🟢    |
 | [unplugin-vue-components/vite](https://github.com/antfu/unplugin-vue-components)     |     🔴     |     🟢    |
