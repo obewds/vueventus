@@ -44,7 +44,7 @@ The {{ stack1 }} is a classic Vue 3 via a Vite install option setup for Single P
 
 The {{ stack2 }} is a SSR-friendly Static Site Generator setup for Vue 3 that's powered by Vite-SSG and Vite.js. It's also Typescript based and installs with pre-configured Pinia for stores. The stack also brings in the Vitest suite deps, the Tailwind CSS plugins, GSAP, Prism.js, and more to tie them all together.
 
-The SSG stack additionally incorporates Markdown, Pages, and Unplugin-like functionality in the development stack, allowing for markdown in Vue components and Vue components in markdown (just like VuePress/VitePress), automatic page routing, and automatic component loading and pre-compiling.
+The SSG stack additionally incorporates Markdown, auto-routing Pages, and auto-loading component (Unplugin) functionality in the development stack, allowing for markdown in Vue components and Vue components in markdown (just like VuePress/VitePress), automatic page routing, and automatic component loading and pre-compiling.
 
 
 
