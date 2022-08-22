@@ -7,6 +7,7 @@ const output = `// ./src/fontawesome.ts
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 //
+import { faFaceSurprise as FaSolidFaceSurprise } from '@fortawesome/free-solid-svg-icons/faFaceSurprise'
 import { faHouse as FaSolidHouse } from '@fortawesome/free-solid-svg-icons/faHouse'
 
 // Default app guide brand icon imports
@@ -29,6 +30,7 @@ import { faVuejs } from '@fortawesome/free-brands-svg-icons/faVuejs'
 
 // 
 library.add(
+    FaSolidFaceSurprise,
     FaSolidHouse,
 
     faVuejs,

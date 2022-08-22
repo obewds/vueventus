@@ -7,6 +7,7 @@ const output = `// ./src/fontAwesomePro.ts
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 //
+import { faFaceSurprise as FaLightFaceSurprise } from '@fortawesome/pro-light-svg-icons/faFaceSurprise'
 import { faHouse as FaDuotoneHouse } from '@fortawesome/pro-duotone-svg-icons/faHouse'
 import { faHouse as FaLightHouse } from '@fortawesome/pro-light-svg-icons/faHouse'
 import { faHouse as FaRegularHouse} from '@fortawesome/pro-regular-svg-icons/faHouse'
@@ -34,6 +35,7 @@ import { faVuejs } from '@fortawesome/free-brands-svg-icons/faVuejs'
 
 // 
 library.add(
+    FaLightFaceSurprise,
     FaDuotoneHouse,
     FaLightHouse,
     FaRegularHouse,
