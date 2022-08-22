@@ -36,6 +36,7 @@ export default function (optsObj) {
 const output = `// ${opts.path}
 
 import { createApp } from 'vue'
+import { createHead } from '@vueuse/head'
 import router from './router/routes'
 import App from './App.vue'
 import appVv from './app.vv'
@@ -46,10 +47,12 @@ ${prismThemeVarsLine}
 
 
 const app = createApp(App)
+const head = createHead()
 
 app.provide('vv', appVv)
 
 app.use(router)
+app.use(head)
 
 app.mount('#app')
 `
