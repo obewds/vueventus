@@ -22,11 +22,41 @@ The {{ $frontmatter.title }} provides a `localStorage()` based solution to quick
 
 
 
-## Installation
 
-The {{ $frontmatter.title }} requires a little bit of extra work due to the nature of Color Modes and JavaScript applications in a browser context.
+## Import
 
-To get this component working without any [FOUC](https://en.wikipedia.org/wiki/Flash_of_unstyled_content), you'll want to access your app's main/base HTML structure's `<head>` tag, and add a script. This script needs to run before the body is parsed and before the Vue app runs, to synchronize the user's session and any already existing `localStorage` data a user may have already from this component.
+To import a {{ $frontmatter.title }} installed by the [vueventus CLI](/guides/vueventus-cli) or [vv-update CLI](/guides/vv-update-cli):
+
+```javascript
+// ./src/components/SomeComponent.vue
+import VvColorModeButton from './vv/buttons/VvColorModeButton.vue'
+```
+
+!!!include(snippets/vueVentusCliComponentsTip.md)!!!
+
+Alternatively, you can install the raw library {{ $frontmatter.title }} with:
+
+```javascript
+import { VvColorModeButton } from '@obewds/vueventus'
+```
+
+!!!include(snippets/vueVentusRawComposTip.md)!!!
+
+!!!include(snippets/differenceBetweenRawAndCliTip.md)!!!
+
+
+
+
+
+
+
+
+
+## Manual Installation
+
+Manually installing the {{ $frontmatter.title }} requires a little bit of extra work due to the nature of Color Modes and JavaScript applications in browser contexts.
+
+To get this component working without any [FOUC](https://en.wikipedia.org/wiki/Flash_of_unstyled_content), you'll want to access your app's main/base HTML structure's `<head>` tag, and add a script. This script needs to run before the body is parsed and before the Vue app runs, to synchronize the user's session and any already existing `localStorage` color mode data a user may have already from this setup.
 
 Here's the script that needs to be added to an app's main/base HTML:
 
@@ -71,7 +101,7 @@ It's generally a good idea to go ahead and add an additional `localStorage` chec
 
     // ./src/App.vue
 
-    import { VvColorModeButton } from '@obewds/vueventus'
+    import VvColorModeButton from './components/vv/buttons/VvColorModeButton.vue'
 
     const colorMode = localStorage && localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') : 'light'
 
@@ -98,23 +128,6 @@ It's generally a good idea to go ahead and add an additional `localStorage` chec
     </main>
 
 </template>
-```
-
-
-
-
-
-
-
-
-
-
-## Import
-
-To import the {{ $frontmatter.title }}:
-
-```javascript
-import { VvColorModeButton } from '@obewds/vueventus'
 ```
 
 
