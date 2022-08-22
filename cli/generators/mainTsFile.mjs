@@ -36,6 +36,7 @@ export default function (optsObj) {
 const output = `// ${opts.path}
 
 import { createApp } from 'vue'
+import router from './router/routes'
 import App from './App.vue'
 import appVv from './app.vv'
 import './css/tailwind.css'
@@ -47,6 +48,8 @@ ${prismThemeVarsLine}
 const app = createApp(App)
 
 app.provide('vv', appVv)
+
+app.use(router)
 
 app.mount('#app')
 `
