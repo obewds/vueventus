@@ -203,6 +203,126 @@ npm run coverage
 
 
 
+
+
+
+## SPA Stack: Installed File Structure
+
+{{ stack1 }} Stack:
+
+```
+.
+├─ .vscode
+│  └─ settings.json
+├─ public
+│  └─ .htaccess
+├─ src
+│  ├─ components
+│  │  ├─ vv
+│  │  │  ├─ anchors
+│  │  │  │  ├─ VvAnchor.vue
+│  │  │  │  └─ VvRouterLink.vue
+│  │  │  ├─ buttons
+│  │  │  │  ├─ VvButton.vue
+│  │  │  │  ├─ VvColorModeButton.vue
+│  │  │  │  └─ VvScrollUp.vue 🟡
+│  │  │  ├─ elements
+│  │  │  │  ├─ VvFa.vue 🟡
+│  │  │  │  ├─ VvEl.vue
+│  │  │  │  ├─ VvPrism.vue 🟡
+│  │  │  │  └─ VvPrismVars.vue 🟡
+│  │  │  ├─ inputs
+│  │  │  │  ├─ VvCheckbox.vue
+│  │  │  │  ├─ VvInput.vue
+│  │  │  │  └─ VvRadio.vue
+│  │  │  ├─ lists
+│  │  │  │  └─ VvListItem.vue
+│  │  │  └─ textareas
+│  │  │     └─ VvTextarea.vue
+│  │  ├─ css
+│  │  │  ├─ prism-theme-vars.css 🟡
+│  │  │  └─ tailwind.css
+│  │  └─ HelloVueVentus.vue
+│  ├─ pages
+│  │  ├─ Home.vue
+│  │  └─ NotFound404.vue
+│  ├─ router
+│  │  └─ routes.ts
+│  ├─ app.colors.json
+│  ├─ App.vue
+│  ├─ app.vv.ts
+│  ├─ fontAwesome.ts/fontAwesomePro.ts 🟡/🟠
+│  ├─ gsap.ts 🟡
+│  ├─ main.ts
+│  └─vite-env.d.ts
+├─ tests
+│  └─ components
+│     └─ HelloVueVentus.test.js
+├─ .gitignore
+├─ .npmrc 🟡 (FontAwesome Pro only)
+├─ index.html
+├─ postcss.config.cjs
+├─ README-VITE.md
+├─ tailwind.config.cjs
+├─ tsconfig.json
+├─ tsconfig.node.json
+├─ vite.config.ts
+└─ vitest.config.ts
+```
+
+🟡 = Optional (opt-out) dependency  
+🟠 = License number required on install  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## SSG Stack: Installed File Structure
+
+{{ stack2 }} Stack:
+
+Coming soon!
+
+<!--
+// TODO: complete file structure for SSG Stack files (can use above as starting point)
+```
+.
+├─ xxxxxxxx
+│  ├─ xxxxxxxx
+│  └─ xxxxxxxx
+├─ xxxxxxxx
+└─ xxxxxxxx
+```
+-->
+
+
+
+
+
+
+
+
+
+
+
+
 ## Moving Forward
 
 Moving forward, the addition of the other stacks is dependent upon figuring out the best way to manage all the little specifics and especially snippets for optional dependencies in the files that exist in all of the stacks.
