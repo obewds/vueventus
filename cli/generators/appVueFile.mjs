@@ -9,8 +9,6 @@ const output = `<!-- ./src/App.vue -->
     // This starter template is using Vue 3 <script setup> SFCs
     // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
     
-    import { VueVentusSpinningMark } from '@obewds/vueventus'
-    import HelloWorld from './components/HelloWorld.vue'
     import VvColorModeButton from './components/vv/buttons/VvColorModeButton.vue'
     import VvScrollUp from './components/vv/buttons/VvScrollUp.vue'
 
@@ -20,22 +18,15 @@ const output = `<!-- ./src/App.vue -->
 
 <template>
 
-    <div class="text-center px-6 pt-20">
-    
-        <div class="max-w-2xl grid grid-cols-5 items-center gap-8 px-8 pb-10 mx-auto">
+    <div>
 
-            <img alt="Vue logo" src="./assets/logo-vue.svg"/>
-            <img alt="Tailwind CSS logo" src="./assets/logo-tailwindcss.svg"/>
-            <div>
-                <!-- div wrapper is needed so Safari contains the flex size of an svg/img child correctly -->
-                <VueVentusSpinningMark animation-class="animate-spin-reverse-4s"/>
-            </div>
-            <img alt="Vite.js logo" src="./assets/logo-vite.svg"/>
-            <img alt="Typescript logo" src="./assets/logo-typescript.svg"/>
-
-        </div>
-        
-        <HelloWorld msg="Hello Vue 3 + Tailwind CSS + VueVentus + Vite + TypeScript"/>
+        <main class="">
+            <router-view v-slot="{ Component, route }">
+                <transition name="page" mode="out-in">
+                    <component :is="Component" :key="route.path"/>
+                </transition>
+            </router-view>
+        </main>
 
         <aside class="fixed bottom-0 right-0 text-right z-40">
             <nav class="relative bottom-0 pb-3 pr-4">
@@ -49,6 +40,28 @@ const output = `<!-- ./src/App.vue -->
     </div>
 
 </template>
+
+
+<style>
+
+    .page-enter-active {
+        transition: opacity 0.3s ease-out;
+    }
+
+    .page-leave-active {
+        transition: opacity 0.3s ease-in;
+    }
+
+    .page-enter-from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    .page-leave-to {
+        opacity: 0;
+    }
+
+</style>
 
 `
 
