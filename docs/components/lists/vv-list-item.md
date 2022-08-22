@@ -25,11 +25,25 @@ The {{ $frontmatter.title }} provides palette and color control of list item tex
 
 ## Import
 
-To import the {{ $frontmatter.title }}:
+To import a {{ $frontmatter.title }} installed by the [vueventus CLI](/guides/vueventus-cli) or [vv-update CLI](/guides/vv-update-cli):
+
+```javascript
+// ./src/components/SomeComponent.vue
+import VvListItem from './vv/lists/VvListItem.vue'
+```
+
+!!!include(snippets/vueVentusCliComponentsTip.md)!!!
+
+Alternatively, you can install the raw library {{ $frontmatter.title }} with:
 
 ```javascript
 import { VvListItem } from '@obewds/vueventus'
 ```
+
+!!!include(snippets/vueVentusRawComposTip.md)!!!
+
+!!!include(snippets/differenceBetweenRawAndCliTip.md)!!!
+
 
 
 
