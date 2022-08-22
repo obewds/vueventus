@@ -21,11 +21,24 @@ The {{ $frontmatter.title }} provides a set of props and config module based set
 
 ## Import
 
-To import the {{ $frontmatter.title }}:
+To import a {{ $frontmatter.title }} installed by the [vueventus CLI](/guides/vueventus-cli) or [vv-update CLI](/guides/vv-update-cli):
+
+```javascript
+// ./src/components/SomeComponent.vue
+import VvInput from './vv/inputs/VvInput.vue'
+```
+
+!!!include(snippets/vueVentusCliComponentsTip.md)!!!
+
+Alternatively, you can install the raw library {{ $frontmatter.title }} with:
 
 ```javascript
 import { VvInput } from '@obewds/vueventus'
 ```
+
+!!!include(snippets/vueVentusRawComposTip.md)!!!
+
+!!!include(snippets/differenceBetweenRawAndCliTip.md)!!!
 
 
 
