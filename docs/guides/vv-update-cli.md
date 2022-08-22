@@ -3,14 +3,13 @@ title: vv-update CLI
 ---
 
 <script setup>
+
     import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
     import cliData from '../../cli/helpers/cliData.mjs'
 
-    let stackKeys = Object.keys(cliData.stacks)
-    let stackNames = []
-    for (let i=0; i < stackKeys.length; i++) {
-        stackNames.push(cliData.stacks[stackKeys[i]].name)
-    }
+    const stack1 = cliData.stacks.vueTwViteTs.name
+    const stack2 = cliData.stacks.vueTwViteSsgMdTs.name
+    
 </script>
 
 
@@ -62,8 +61,8 @@ npx vv-update
 
 Some files with the same name are different between different installation stacks. So first up, the vv-update CLI will ask you which stack you are using. The currently supported stacks are:
 
-1. **SPA Stack:** {{ stackNames[0] }}
-1. **SSG Stack:** {{ stackNames[1] }}
+1. **SPA Stack:** {{ stack1 }}
+1. **SSG Stack:** {{ stack2 }}
 
 
 
