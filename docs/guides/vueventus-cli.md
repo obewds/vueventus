@@ -3,14 +3,13 @@ title: vueventus CLI
 ---
 
 <script setup>
+
     import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
     import cliData from '../../cli/helpers/cliData.mjs'
 
-    let stackKeys = Object.keys(cliData.stacks)
-    let stackNames = []
-    for (let i=0; i < stackKeys.length; i++) {
-        stackNames.push(cliData.stacks[stackKeys[i]].name)
-    }
+    const stack1 = cliData.stacks.vueTwViteTs.name
+    const stack2 = cliData.stacks.vueTwViteSsgMdTs.name
+
 </script>
 
 
@@ -34,18 +33,18 @@ This guide will walk through installing and setting up a project with the vueven
 
 For now, the CLI can install the following stacks to kickoff app development:
 
-1. **SPA Stack:** {{ stackNames[0] }}
-1. **SSG Stack:** {{ stackNames[1] }}
+1. **SPA Stack:** {{ stack1 }}
+1. **SSG Stack:** {{ stack2 }}
 
 ### The SPA Stack
 
-The {{ stackNames[0] }} is a classic Vue 3 via a Vite install option setup for Single Page App development. It's Typescript based and installs with pre-configured Vitest suite deps, the Tailwind CSS plugins, GSAP, Prism.js, and more to tie them all together.
+The {{ stack1 }} is a classic Vue 3 via a Vite install option setup for Single Page App development. It's Typescript based and installs with pre-configured Vitest suite deps, the Tailwind CSS plugins, GSAP, Prism.js, and more to tie them all together.
 
 ### The SSG Stack
 
-The {{ stackNames[1] }} is a SSR-friendly Static Site Generator setup for Vue 3 that's powered by Vite-SSG and Vite.js. It's also Typescript based and installs with pre-configured Pinia for stores. The stack also brings in the Vitest suite deps, the Tailwind CSS plugins, GSAP, Prism.js, and more to tie them all together.
+The {{ stack2 }} is a SSR-friendly Static Site Generator setup for Vue 3 that's powered by Vite-SSG and Vite.js. It's also Typescript based and installs with pre-configured Pinia for stores. The stack also brings in the Vitest suite deps, the Tailwind CSS plugins, GSAP, Prism.js, and more to tie them all together.
 
-The SSG stack additionally incorporates Markdown, Pages, and Unplugin-like functionality in the development stack, allowing for markdown in Vue components and Vue components in markdown (just like VuePress/VitePress), automatic page routing, and automatic component loading and pre-compiling.
+The SSG stack additionally incorporates Markdown, auto-routing Pages, and auto-loading component (Unplugin) functionality in the development stack, allowing for markdown in Vue components and Vue components in markdown (just like VuePress/VitePress), automatic page routing, and automatic component loading and pre-compiling.
 
 
 
@@ -66,6 +65,7 @@ The core deps for each stack are generally pretty similar, but here's a table of
 | [@tailwindcss/forms](https://www.npmjs.com/package/@tailwindcss/forms)               |     🟢     |     🟢    |
 | [@tailwindcss/line-clamp](https://www.npmjs.com/package/@tailwindcss/line-clamp)     |     🟢     |     🟢    |
 | [@tailwindcss/typography](https://www.npmjs.com/package/@tailwindcss/typography)     |     🟢     |     🟢    |
+| [vue-router](https://router.vuejs.org/)                                              |     🟢     |     🟢    |
 | [Typescript](https://www.typescriptlang.org/)                                        |     🟢     |     🟢    |
 | [Vitest](https://vitest.dev/)                                                        |     🟢     |     🟢    |
 | [Vue Test Utils](https://test-utils.vuejs.org/guide/)                                |     🟢     |     🟢    |
@@ -74,7 +74,6 @@ The core deps for each stack are generally pretty similar, but here's a table of
 | [@vitejs/plugin-vue](https://www.npmjs.com/package/@vitejs/plugin-vue)               |     🟢     |     🟢    |
 | [Vite-SSG](https://github.com/antfu/vite-ssg)                                        |     🔴     |     🟢    |
 | [Pinia](https://pinia.vuejs.org/)                                                    |     🔴     |     🟢    |
-| [vue-router](https://router.vuejs.org/)                                              |     🔴     |     🟢    |
 | [vite-plugin-vue-markdown](https://github.com/antfu/vite-plugin-md)                  |     🔴     |     🟢    |
 | [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages)                   |     🔴     |     🟢    |
 | [unplugin-vue-components/vite](https://github.com/antfu/unplugin-vue-components)     |     🔴     |     🟢    |
@@ -91,6 +90,21 @@ The core deps for each stack are generally pretty similar, but here's a table of
 🟡 = Optional (opt-out) dependency  
 🟠 = License number required on install  
 🔴 = Not available in stack  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -181,6 +195,126 @@ Or to run a coverage report, use:
 ```bash
 npm run coverage
 ```
+
+
+
+
+
+
+
+
+
+
+
+## SPA Stack: Installed File Structure
+
+{{ stack1 }} Stack:
+
+```
+.
+├─ .vscode
+│  └─ settings.json
+├─ public
+│  └─ .htaccess
+├─ src
+│  ├─ components
+│  │  ├─ vv
+│  │  │  ├─ anchors
+│  │  │  │  ├─ VvAnchor.vue
+│  │  │  │  └─ VvRouterLink.vue
+│  │  │  ├─ buttons
+│  │  │  │  ├─ VvButton.vue
+│  │  │  │  ├─ VvColorModeButton.vue
+│  │  │  │  └─ VvScrollUp.vue 🟡
+│  │  │  ├─ elements
+│  │  │  │  ├─ VvFa.vue 🟡
+│  │  │  │  ├─ VvEl.vue
+│  │  │  │  ├─ VvPrism.vue 🟡
+│  │  │  │  └─ VvPrismVars.vue 🟡
+│  │  │  ├─ inputs
+│  │  │  │  ├─ VvCheckbox.vue
+│  │  │  │  ├─ VvInput.vue
+│  │  │  │  └─ VvRadio.vue
+│  │  │  ├─ lists
+│  │  │  │  └─ VvListItem.vue
+│  │  │  └─ textareas
+│  │  │     └─ VvTextarea.vue
+│  │  ├─ css
+│  │  │  ├─ prism-theme-vars.css 🟡
+│  │  │  └─ tailwind.css
+│  │  └─ HelloVueVentus.vue
+│  ├─ pages
+│  │  ├─ Home.vue
+│  │  └─ NotFound404.vue
+│  ├─ router
+│  │  └─ routes.ts
+│  ├─ app.colors.json
+│  ├─ App.vue
+│  ├─ app.vv.ts
+│  ├─ fontAwesome.ts/fontAwesomePro.ts 🟡/🟠
+│  ├─ gsap.ts 🟡
+│  ├─ main.ts
+│  └─vite-env.d.ts
+├─ tests
+│  └─ components
+│     └─ HelloVueVentus.test.js
+├─ .gitignore
+├─ .npmrc 🟡 (FontAwesome Pro only)
+├─ index.html
+├─ postcss.config.cjs
+├─ README-VITE.md
+├─ tailwind.config.cjs
+├─ tsconfig.json
+├─ tsconfig.node.json
+├─ vite.config.ts
+└─ vitest.config.ts
+```
+
+🟡 = Optional (opt-out) dependency  
+🟠 = License number required on install  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## SSG Stack: Installed File Structure
+
+{{ stack2 }} Stack:
+
+Coming soon!
+
+<!--
+// TODO: complete file structure for SSG Stack files (can use above as starting point)
+```
+.
+├─ xxxxxxxx
+│  ├─ xxxxxxxx
+│  └─ xxxxxxxx
+├─ xxxxxxxx
+└─ xxxxxxxx
+```
+-->
+
+
+
+
 
 
 

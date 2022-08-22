@@ -1,5 +1,7 @@
 // ./cli/helpers/cliData.mjs
 
+import cliStackNames from './cliStackNames.mjs'
+
 import aMdFile from '../generators/aMdFile.mjs'
 import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
 import appVueFile from '../generators/appVueFile.mjs'
@@ -13,17 +15,19 @@ import fontAwesomeTsFile from '../generators/fontAwesomeTsFile.mjs'
 import gsapTsFile from '../generators/gsapTsFile.mjs'
 import helloVueVentusTestJsFile from '../generators/helloVueVentusTestJsFile.mjs'
 import helloVueVentusVueFile from '../generators/helloVueVentusVueFile.mjs'
-import helloWorldVueFile from '../generators/helloWorldVueFile.mjs'
 import helloWorldVueSsgFile from '../generators/helloWorldVueSsgFile.mjs'
+import homeVueFile from '../generators/homeVueFile.mjs'
 import indexHtmlFile from '../generators/indexHtmlFile.mjs'
 import indexMdFile from '../generators/indexMdFile.mjs'
 // TODO: Figure out how to handle main.ts files with the vv-updater utility
 import mainTsFile from '../generators/mainTsFile.mjs'
 import mainTsFileSsg from '../generators/mainTsFileSsg.mjs'
 import mousePosVueFile from '../generators/mousePosVueFile.mjs'
+import notFound404VueFile from '../generators/notFound404VueFile.mjs'
 import piniaRootTsFile from '../generators/piniaRootTsFile.mjs'
 import postcssConfigCjsFile from '../generators/postcssConfigCjsFile.mjs'
 import prismThemeVarsCssFile from '../generators/prismThemeVarsCssFile.mjs'
+import routesTsFile from '../generators/routesTsFile.mjs'
 import tailwindConfigCjsFile from '../generators/tailwindConfigCjsFile.mjs'
 import tailwindCssFile from '../generators/tailwindCssFile.mjs'
 import tsconfigJsonFile from '../generators/tsconfigJsonFile.mjs'
@@ -45,6 +49,7 @@ import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
 import vvPrismVarsVueFile from '../generators/vvPrismVarsVueFile.mjs'
 import vvPrismVueFile from '../generators/vvPrismVueFile.mjs'
 import vvRadioVueFile from '../generators/vvRadioVueFile.mjs'
+import vvRouterLinkVueFile from '../generators/vvRouterLinkVueFile.mjs'
 import vvScrollUpVueFile from '../generators/vvScrollUpVueFile.mjs'
 import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
 
@@ -89,11 +94,23 @@ let baseVueTsOnlyFiles = {
         path: '/src/',
         src: appVueFile(),
     },
-    helloWorldVue: {
-        name: 'HelloWorld.vue',
+    homeVue: {
+        name: 'Home.vue',
         checked: true,
-        path: '/src/components/',
-        src: helloWorldVueFile(),
+        path: '/src/pages/',
+        src: homeVueFile(),
+    },
+    notFound404Vue: {
+        name: 'NotFound404.vue',
+        checked: true,
+        path: '/src/pages/',
+        src: notFound404VueFile(),
+    },
+    routesTs: {
+        name: 'routes.ts',
+        checked: true,
+        path: '/src/router/',
+        src: routesTsFile(false),
     },
     tailwindConfigCjs: {
         name: 'tailwind.config.cjs',
@@ -106,6 +123,12 @@ let baseVueTsOnlyFiles = {
         checked: true,
         path: '/',
         src: tsconfigJsonFile(false),
+    },
+    vvRouterLinkVue: {
+        name: 'VvRouterLink.vue',
+        checked: true,
+        path: '/src/components/vv/anchors/',
+        src: vvRouterLinkVueFile(),
     },
 }
 
@@ -361,24 +384,22 @@ let baseViteTypescriptDeps = {
                 src: helloVueVentusVueFile(),
             },
         },
-    },
+    }
 }
 
 export default {
     stacks: {
         vueTwViteTs: {
-            name: 'Vue 3, Tailwind CSS, Vite & Typescript',
+            name: cliStackNames.vueTwViteTs,
             files: { ...baseViteTypescriptFiles, ...baseVueTsOnlyFiles },
             deps: { ...baseViteTypescriptDeps },
             compos: { ...baseVvTsCompos },
         },
         vueTwViteSsgMdTs: {
-            name: 'Vite-SSG, Vue 3, Tailwind CSS, Pinia, Markdown & Typescript',
+            name: cliStackNames.vueTwViteSsgMdTs,
             files: { ...baseViteTypescriptFiles, ...baseVvSsgOnlyTsFiles },
             deps: { ...baseViteTypescriptDeps },
             compos: { ...baseVvTsCompos },
         },
-        // vueTwVite: { name: 'Vue 3, Tailwind CSS & Vite', files: {}, deps: {} },
-        // vueTwNuxtViteTs: { name: 'Vue 3, Tailwind CSS, Nuxt 3 & Typescript', files: {}, deps: {} },
     },
 }
