@@ -21,11 +21,24 @@ The {{ $frontmatter.title }} provides a variety of props and config module based
 
 ## Import
 
-To import the {{ $frontmatter.title }}:
+To import a {{ $frontmatter.title }} installed by the [vueventus CLI](/guides/vueventus-cli) or [vv-update CLI](/guides/vv-update-cli):
+
+```javascript
+// ./src/components/SomeComponent.vue
+import VvEl from './vv/elements/VvEl.vue'
+```
+
+!!!include(snippets/vueVentusCliComponentsTip.md)!!!
+
+Alternatively, you can install the raw library {{ $frontmatter.title }} with:
 
 ```javascript
 import { VvEl } from '@obewds/vueventus'
 ```
+
+!!!include(snippets/vueVentusRawComposTip.md)!!!
+
+!!!include(snippets/differenceBetweenRawAndCliTip.md)!!!
 
 
 
