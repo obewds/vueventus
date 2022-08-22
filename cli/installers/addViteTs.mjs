@@ -9,10 +9,12 @@ import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
 import appVueFile from '../generators/appVueFile.mjs'
 import appVueSsgFile from '../generators/appVueSsgFile.mjs'
 import appVvTsFile from '../generators/appVvTsFile.mjs'
-import helloWorldVueFile from '../generators/helloWorldVueFile.mjs'
 import helloWorldVueSsgFile from '../generators/helloWorldVueSsgFile.mjs'
+import homeVueFile from '../generators/homeVueFile.mjs'
 import indexHtmlFile from '../generators/indexHtmlFile.mjs'
+import notFound404VueFile from '../generators/notFound404VueFile.mjs'
 import postcssConfigCjsFile from '../generators/postcssConfigCjsFile.mjs'
+import routesTsFile from '../generators/routesTsFile.mjs'
 import tailwindConfigCjsFile from '../generators/tailwindConfigCjsFile.mjs'
 import tailwindCssFile from '../generators/tailwindCssFile.mjs'
 import viteConfigPrismTsFile from '../generators/viteConfigPrismTsFile.mjs'
@@ -27,6 +29,7 @@ import vvElVueFile from '../generators/vvElVueFile.mjs'
 import vvInputVueFile from '../generators/vvInputVueFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
 import vvRadioVueFile from '../generators/vvRadioVueFile.mjs'
+import vvRouterLinkVueFile from '../generators/vvRouterLinkVueFile.mjs'
 import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
 
 import cliData from '../helpers/cliData.mjs'
@@ -56,12 +59,26 @@ export default function (userOpts, stackObj, installPkgsArr) {
 
     // if the stack is vue-ts
     if ( userOpts.stack === cliData.stacks.vueTwViteTs.name ) {
+
+        // install vue-router
+        run(`npm install vue-router@4 --save-dev`)
+    
+        installPkgsArr.push('vue-router@4')
             
         // generate the App.vue file
         fs.outputFileSync(cwd + '/src/App.vue', appVueFile(), { flag: 'w+' })
 
-        // generate the HelloWorld.vue file
-        fs.outputFileSync(cwd + '/src/components/HelloWorld.vue', helloWorldVueFile(), { flag: 'w+' })
+        // generate the Home.vue file
+        fs.outputFileSync(cwd + '/src/pages/Home.vue', homeVueFile(), { flag: 'w+' })
+
+        // generate the NotFound404.ts file
+        fs.outputFileSync(cwd + '/src/pages/NotFound404.vue', notFound404VueFile(), { flag: 'w+' })
+
+        // generate the routes.ts file
+        fs.outputFileSync(cwd + '/src/router/routes.ts', routesTsFile(), { flag: 'w+' })
+
+        // generate the VvRouterLink.vue file
+        fs.outputFileSync(cwd + '/src/components/vv/anchors/VvRouterLink.vue', vvRouterLinkVueFile(), { flag: 'w+' })
 
     }
     
