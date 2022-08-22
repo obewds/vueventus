@@ -3,14 +3,13 @@ title: vueventus CLI
 ---
 
 <script setup>
+
     import DocsPackageVersion from '../../src/views/compos/DocsPackageVersion.vue'
     import cliData from '../../cli/helpers/cliData.mjs'
 
-    let stackKeys = Object.keys(cliData.stacks)
-    let stackNames = []
-    for (let i=0; i < stackKeys.length; i++) {
-        stackNames.push(cliData.stacks[stackKeys[i]].name)
-    }
+    const stack1 = cliData.stacks.vueTwViteTs.name
+    const stack2 = cliData.stacks.vueTwViteSsgMdTs.name
+
 </script>
 
 
@@ -34,16 +33,16 @@ This guide will walk through installing and setting up a project with the vueven
 
 For now, the CLI can install the following stacks to kickoff app development:
 
-1. **SPA Stack:** {{ stackNames[0] }}
-1. **SSG Stack:** {{ stackNames[1] }}
+1. **SPA Stack:** {{ stack1 }}
+1. **SSG Stack:** {{ stack2 }}
 
 ### The SPA Stack
 
-The {{ stackNames[0] }} is a classic Vue 3 via a Vite install option setup for Single Page App development. It's Typescript based and installs with pre-configured Vitest suite deps, the Tailwind CSS plugins, GSAP, Prism.js, and more to tie them all together.
+The {{ stack1 }} is a classic Vue 3 via a Vite install option setup for Single Page App development. It's Typescript based and installs with pre-configured Vitest suite deps, the Tailwind CSS plugins, GSAP, Prism.js, and more to tie them all together.
 
 ### The SSG Stack
 
-The {{ stackNames[1] }} is a SSR-friendly Static Site Generator setup for Vue 3 that's powered by Vite-SSG and Vite.js. It's also Typescript based and installs with pre-configured Pinia for stores. The stack also brings in the Vitest suite deps, the Tailwind CSS plugins, GSAP, Prism.js, and more to tie them all together.
+The {{ stack2 }} is a SSR-friendly Static Site Generator setup for Vue 3 that's powered by Vite-SSG and Vite.js. It's also Typescript based and installs with pre-configured Pinia for stores. The stack also brings in the Vitest suite deps, the Tailwind CSS plugins, GSAP, Prism.js, and more to tie them all together.
 
 The SSG stack additionally incorporates Markdown, Pages, and Unplugin-like functionality in the development stack, allowing for markdown in Vue components and Vue components in markdown (just like VuePress/VitePress), automatic page routing, and automatic component loading and pre-compiling.
 
@@ -91,6 +90,21 @@ The core deps for each stack are generally pretty similar, but here's a table of
 🟡 = Optional (opt-out) dependency  
 🟠 = License number required on install  
 🔴 = Not available in stack  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
