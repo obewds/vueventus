@@ -61,9 +61,9 @@ export default function (userOpts, stackObj, installPkgsArr) {
     if ( userOpts.stack === cliData.stacks.vueTwViteTs.name ) {
 
         // install vue-router
-        run(`npm install vue-router@4 --save-dev`)
+        run(`npm install vue-router@4 @vueuse/head --save-dev`)
     
-        installPkgsArr.push('vue-router@4')
+        installPkgsArr.push('vue-router@4', '@vueuse/head')
             
         // generate the App.vue file
         fs.outputFileSync(cwd + '/src/App.vue', appVueFile(), { flag: 'w+' })
@@ -79,6 +79,8 @@ export default function (userOpts, stackObj, installPkgsArr) {
 
         // generate the VvRouterLink.vue file
         fs.outputFileSync(cwd + '/src/components/vv/anchors/VvRouterLink.vue', vvRouterLinkVueFile(), { flag: 'w+' })
+
+        console.log(`\nThe ${vvBrand} CLI installed/added the vue-router dep/files successfully!\n`)
 
     }
     

@@ -8,7 +8,6 @@ const output = `<!-- ./src/pages/NotFound404.vue -->
 
     import { useHead } from '@vueuse/head'
     import { useRouter } from 'vue-router'
-    import globals from '../globals'
     import VvButton from '../components/vv/buttons/VvButton.vue'
     import VvFa from '../components/vv/elements/VvFa.vue'
 
@@ -27,7 +26,7 @@ const output = `<!-- ./src/pages/NotFound404.vue -->
 
     <div class="text-center">
     
-        <h1 :class="globals.classes.h1">{{ pgTitle }}</h1>
+        <h1 class="font-heading text-3xl uppercase">{{ pgTitle }}</h1>
 
         <div class="max-w-md text-center mx-auto py-10">
 
