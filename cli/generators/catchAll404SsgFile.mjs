@@ -1,9 +1,9 @@
 // ./cli/generators/catchAll404SsgFile.mjs
 
-import getVvFaCode from '../helpers/getVvFaCode.mjs'
+import get404Code from '../helpers/get404Code.mjs'
 
 export default function () {
 
-    return getVvFaCode('[...all]')
+    return get404Code('[...all]')
 
 }
