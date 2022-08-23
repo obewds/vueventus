@@ -9,6 +9,7 @@ import appVueSsgFile from '../generators/appVueSsgFile.mjs'
 import appVvTsFile from '../generators/appVvTsFile.mjs'
 import bMdFile from '../generators/bMdFile.mjs'
 import bVueFile from '../generators/bVueFile.mjs'
+import catchAll404SsgFile from '../generators/catchAll404SsgFile.mjs'
 import counterVueFile from '../generators/counterVueFile.mjs'
 import fontAwesomeProTsFile from '../generators/fontAwesomeProTsFile.mjs'
 import fontAwesomeTsFile from '../generators/fontAwesomeTsFile.mjs'
@@ -44,6 +45,7 @@ import vvCheckboxVueFile from '../generators/vvCheckboxVueFile.mjs'
 import vvColorModeButtonVueFile from '../generators/vvColorModeButtonVueFile.mjs'
 import vvElVueFile from '../generators/vvElVueFile.mjs'
 import vvFaVueFile from '../generators/vvFaVueFile.mjs'
+import vvFaVueSsgFile from '../generators/vvFaVueSsgFile.mjs'
 import vvInputVueFile from '../generators/vvInputVueFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
 import vvPrismVarsVueFile from '../generators/vvPrismVarsVueFile.mjs'
@@ -157,6 +159,12 @@ let baseVvSsgOnlyTsFiles = {
         path: '/src/pages/nested/deep/',
         src: bVueFile(),
     },
+    catchAll404: {
+        name: '[...all].vue',
+        checked: true,
+        path: '/src/pages/',
+        src: catchAll404SsgFile(),
+    },
     counterVue: {
         name: 'Counter.vue',
         checked: true,
@@ -258,8 +266,67 @@ let baseVvTsCompos = {
     },
 }
 
+let faFreeDep = {
+    checked: true,
+    name: 'FontAwesome Free',
+    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons --save-dev',
+    packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/free-solid-svg-icons', '@fortawesome/free-regular-svg-icons'],
+    files: {
+        fontAwesomeTs: {
+            name: 'fontAwesome.ts',
+            checked: true,
+            path: '/src/',
+            src: fontAwesomeTsFile(),
+        },
+        vvFa: {
+            name: 'VvFa.vue',
+            checked: true,
+            path: '/src/components/vv/elements/',
+            src: vvFaVueFile(),
+        },
+    },
+}
+
+let faFreeDepSsg = faFreeDep
+faFreeDepSsg.files.vvFa = {
+    name: 'VvFa.vue',
+    checked: true,
+    path: '/src/components/vv/elements/',
+    src: vvFaVueSsgFile(),
+}
+
+let faProDep = {
+    checked: false,
+    name: 'FontAwesome Pro (License Required)',
+    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/pro-duotone-svg-icons @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/pro-thin-svg-icons --save-dev',
+    packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/pro-solid-svg-icons', '@fortawesome/pro-regular-svg-icons', '@fortawesome/pro-duotone-svg-icons', '@fortawesome/pro-light-svg-icons', '@fortawesome/pro-thin-svg-icons'],
+    files: {
+        fontAwesomeProTs: {
+            name: 'fontAwesomePro.ts',
+            checked: true,
+            path: '/src/',
+            src: fontAwesomeProTsFile(),
+        },
+        vvFa: {
+            name: 'VvFa.vue',
+            checked: true,
+            path: '/src/components/vv/elements/',
+            src: vvFaVueFile(),
+        },
+    },
+}
+
+let faProDepSsg = faProDep
+faProDepSsg.files.vvFa = {
+    name: 'VvFa.vue',
+    checked: true,
+    path: '/src/components/vv/elements/',
+    src: vvFaVueSsgFile(),
+}
+
 let baseViteTypescriptDeps = {
-    fontawesome: {
+    fontawesome: {},
+    /*fontawesome: {
         checked: true,
         name: 'FontAwesome Free',
         install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons --save-dev',
@@ -278,8 +345,9 @@ let baseViteTypescriptDeps = {
                 src: vvFaVueFile(),
             },
         },
-    },
-    faPro: {
+    },*/
+    faPro: {},
+    /*faPro: {
         checked: false,
         name: 'FontAwesome Pro (License Required)',
         install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/pro-duotone-svg-icons @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/pro-thin-svg-icons --save-dev',
@@ -297,8 +365,14 @@ let baseViteTypescriptDeps = {
                 path: '/src/components/vv/elements/',
                 src: vvFaVueFile(),
             },
+            vvFaSsg: {
+                name: 'VvFa.vue',
+                checked: true,
+                path: '/src/components/vv/elements/',
+                src: vvFaVueSsgFile(),
+            },
         },
-    },
+    },*/
     gsap: {
         checked: true,
         name: 'GSAP',
@@ -387,18 +461,26 @@ let baseViteTypescriptDeps = {
     }
 }
 
+let vueTwDeps = baseViteTypescriptDeps
+    vueTwDeps.fontawesome = faFreeDep
+    vueTwDeps.faPro = faProDep
+
+let ssgDeps = baseViteTypescriptDeps
+    ssgDeps.fontawesome = faFreeDepSsg
+    ssgDeps.faPro = faProDepSsg
+
 export default {
     stacks: {
         vueTwViteTs: {
             name: cliStackNames.vueTwViteTs,
             files: { ...baseViteTypescriptFiles, ...baseVueTsOnlyFiles },
-            deps: { ...baseViteTypescriptDeps },
+            deps: { ...vueTwDeps },
             compos: { ...baseVvTsCompos },
         },
         vueTwViteSsgMdTs: {
             name: cliStackNames.vueTwViteSsgMdTs,
             files: { ...baseViteTypescriptFiles, ...baseVvSsgOnlyTsFiles },
-            deps: { ...baseViteTypescriptDeps },
+            deps: { ...ssgDeps },
             compos: { ...baseVvTsCompos },
         },
     },
