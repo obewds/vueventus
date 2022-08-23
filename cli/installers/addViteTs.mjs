@@ -9,6 +9,7 @@ import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
 import appVueFile from '../generators/appVueFile.mjs'
 import appVueSsgFile from '../generators/appVueSsgFile.mjs'
 import appVvTsFile from '../generators/appVvTsFile.mjs'
+import catchAll404SsgFile from '../generators/catchAll404SsgFile.mjs'
 import helloWorldVueSsgFile from '../generators/helloWorldVueSsgFile.mjs'
 import homeVueFile from '../generators/homeVueFile.mjs'
 import indexHtmlFile from '../generators/indexHtmlFile.mjs'
@@ -93,6 +94,9 @@ export default function (userOpts, stackObj, installPkgsArr) {
 
         // generate the SSG HelloWorld.vue file
         fs.outputFileSync(cwd + '/src/components/HelloWorld.vue', helloWorldVueSsgFile(), { flag: 'w+' })
+
+        // generate the SSG 404 catch all [...all].vue file
+        fs.outputFileSync(cwd + '/src/pages/[...all].vue', catchAll404SsgFile(), { flag: 'w+' })
 
     }
 
