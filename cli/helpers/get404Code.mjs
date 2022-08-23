@@ -1,4 +1,4 @@
-// ./cli/helpers/getVvFaCode.mjs
+// ./cli/helpers/get404Code.mjs
 
 export default function (filename = '') {
 
