@@ -251,18 +251,18 @@ async function installDepsAndFiles () {
         const currentTsConfig = require(cwd + '/tsconfig.json')
 
         // handle the vue-ts tsconfig.json file
-        if (userOptions.stack === cli.stacks.vueTwViteTs.name ) {
+        if ( userOptions.stack === cli.stacks.vueTwViteTs.name ) {
             fs.outputFileSync(cwd + '/tsconfig.json', JSON.stringify(merge(currentTsConfig, getTsconfigJsonObj()), null, 2), { flag: 'w+' })
         }
         
         // handle the vite-ssg tsconfig.json file
-        if (userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name ) {
+        if ( userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name ) {
             fs.outputFileSync(cwd + '/tsconfig.json', JSON.stringify(merge(currentTsConfig, getTsconfigJsonSsgObj()), null, 2), { flag: 'w+' })
         }
 
         // 
 
-        if (userOptions.stack === cli.stacks.vueTwViteTs.name ) {
+        if ( userOptions.stack === cli.stacks.vueTwViteTs.name ) {
 
             // handle main.ts app file
             writeFileMainTs(userOptions, stack.deps.fontawesome, stack.deps.faPro, stack.deps.gsap, stack.deps.prism)
@@ -353,17 +353,35 @@ async function installDepsAndFiles () {
 
                     // add .npmrc to project .gitignore file
                     fs.outputFileSync(cwd + '/.gitignore', `\n.npmrc\n`, { flag: 'a+' })
-                        
-                    // now install the pro font awesome dep
-                    installedPkgs = [...installedPkgs, ...addFaProTs(userOptions, stack.deps.faPro)]
+
+                    if ( userOptions.stack === cli.stacks.vueTwViteTs.name ) {
+    
+                        // now install the pro font awesome dep
+                        installedPkgs = [...installedPkgs, ...addFaProTs(userOptions, stack.deps.faPro, false)]
+    
+                    } else if ( userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name ) {
+    
+                        // else install the pro font awesome ssg dep
+                        installedPkgs = [...installedPkgs, ...addFaProTs(userOptions, stack.deps.faPro, true)]
+    
+                    }
 
                 }
 
 
             } else {
 
-                // else install the free font awesome dep
-                installedPkgs = [...installedPkgs, ...addFaFreeTs(userOptions, stack.deps.fontawesome)]
+                if ( userOptions.stack === cli.stacks.vueTwViteTs.name ) {
+
+                    // else install the free font awesome dep
+                    installedPkgs = [...installedPkgs, ...addFaFreeTs(userOptions, stack.deps.fontawesome, false)]
+
+                } else if ( userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name ) {
+
+                    // else install the free font awesome ssg dep
+                    installedPkgs = [...installedPkgs, ...addFaFreeTs(userOptions, stack.deps.fontawesome, true)]
+
+                }
 
             }
 
