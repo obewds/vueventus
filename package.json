@@ -57,7 +57,7 @@
     "vitepress": "^1.0.0-alpha.10",
     "vitest": "^0.22.1",
     "vue-router": "^4.1.4",
-    "vue-tsc": "^0.40.1"
+    "vue-tsc": "^0.40.4"
   },
   "sideEffects": false,
   "main": "./dist/vueventus.cjs",
