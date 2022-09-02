@@ -4,6 +4,7 @@ import fs from 'fs-extra'
 
 import fontAwesomeProTsFile from '../generators/fontAwesomeProTsFile.mjs'
 import vvFaVueFile from '../generators/vvFaVueFile.mjs'
+import vvFaVueSsgFile from '../generators/vvFaVueSsgFile.mjs'
 
 import cwd from '../helpers/cwd.mjs'
 import run from '../helpers/run.mjs'
