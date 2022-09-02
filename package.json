@@ -17,14 +17,10 @@
     "docs:serve": "vitepress serve docs",
     "changelog": "auto-changelog --package --unreleased --backfill-limit 20",
     "tag": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
-    "bump": "npm run tag && npm run changelog",
     "cleanup": "node scripts/cleanup.mjs",
     "originals": "node scripts/copyToDist.mjs",
-    "generate": "npx rimraf dist && npx rimraf docs/.vitepress/dist && npm run build && vue-tsc --emitDeclarationOnly && tsc && npm run docs:build && npm run originals",
     "pkg:org": "npm config set scope obewds",
-    "pkg:login": "npm adduser",
-    "pkg:publish": "npm publish --access public",
-    "publish:package": "npm run generate && npm run pkg:org && npm run pkg:login && npm run pkg:publish && npm run bump"
+    "generate": "npx rimraf dist && npx rimraf docs/.vitepress/dist && npm run build && vue-tsc --emitDeclarationOnly && tsc && npm run docs:build && npm run originals && npm run changelog"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.1",
