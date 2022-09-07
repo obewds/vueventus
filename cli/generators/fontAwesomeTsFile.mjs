@@ -11,7 +11,6 @@ import { faFaceSurprise as FaSolidFaceSurprise } from '@fortawesome/free-solid-s
 import { faHouse as FaSolidHouse } from '@fortawesome/free-solid-svg-icons/faHouse'
 
 // Default app guide brand icon imports
-import { faVuejs } from '@fortawesome/free-brands-svg-icons/faVuejs'
 // import { faApple } from '@fortawesome/free-brands-svg-icons/faApple'
 // import { faBootstrap } from '@fortawesome/free-brands-svg-icons/faBootstrap'
 // import { faCss3Alt } from '@fortawesome/free-brands-svg-icon/faCss3Alt'
@@ -26,6 +25,7 @@ import { faVuejs } from '@fortawesome/free-brands-svg-icons/faVuejs'
 // import { faNpm } from '@fortawesome/free-brands-svg-icons/faNpm'
 // import { faPinterest } from '@fortawesome/free-brands-svg-icons/faPinterest'
 // import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
+import { faVuejs } from '@fortawesome/free-brands-svg-icons/faVuejs'
 // import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube'
 
 // 
@@ -33,7 +33,6 @@ library.add(
     FaSolidFaceSurprise,
     FaSolidHouse,
 
-    faVuejs,
     // faApple,
     // faBootstrap,
     // faCss3Alt,
@@ -48,6 +47,7 @@ library.add(
     // faNpm,
     // faPinterest,
     // faTwitter,
+    faVuejs,
     // faYoutube,
 )
 
