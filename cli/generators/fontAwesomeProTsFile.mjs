@@ -13,10 +13,10 @@ import { faHouse as FaLightHouse } from '@fortawesome/pro-light-svg-icons/faHous
 import { faHouse as FaRegularHouse} from '@fortawesome/pro-regular-svg-icons/faHouse'
 import { faHouse as FaSolidHouse } from '@fortawesome/pro-solid-svg-icons/faHouse'
 import { faHouse as FaThinHouse } from '@fortawesome/pro-thin-svg-icons/faHouse'
+import { faHouse as FaSharpHouse } from '@fortawesome/sharp-solid-svg-icons/faHouse'
 
 
 // Default app guide brand icon imports
-import { faVuejs } from '@fortawesome/free-brands-svg-icons/faVuejs'
 // import { faApple } from '@fortawesome/free-brands-svg-icons/faApple'
 // import { faBootstrap } from '@fortawesome/free-brands-svg-icons/faBootstrap'
 // import { faCss3Alt } from '@fortawesome/free-brands-svg-icons/faCss3Alt'
@@ -31,6 +31,7 @@ import { faVuejs } from '@fortawesome/free-brands-svg-icons/faVuejs'
 // import { faNpm } from '@fortawesome/free-brands-svg-icons/faNpm'
 // import { faPinterest } from '@fortawesome/free-brands-svg-icons/faPinterest'
 // import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
+import { faVuejs } from '@fortawesome/free-brands-svg-icons/faVuejs'
 // import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube'
 
 // 
@@ -41,8 +42,8 @@ library.add(
     FaRegularHouse,
     FaSolidHouse,
     FaThinHouse,
+    FaSharpHouse,
 
-    faVuejs,
     // faApple,
     // faBootstrap,
     // faCss3Alt,
@@ -57,6 +58,7 @@ library.add(
     // faNpm,
     // faPinterest,
     // faTwitter,
+    faVuejs,
     // faYoutube,
 )
 
