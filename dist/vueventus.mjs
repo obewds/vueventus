@@ -1505,9 +1505,17 @@ function xs(e, t = "long", r = "english") {
   return Xe()[r][t][e.getMonth()] + " " + e.getDate() + ", " + e.getFullYear();
 }
 function ys(e) {
-  let t = parseInt(String(e), 10), r = Math.floor(parseInt(String(Number(t) / (24 * 3600))));
+  let t = parseInt(String(e), 10), r = Math.floor(
+    parseInt(
+      String(Number(t) / (24 * 3600))
+    )
+  );
   t = t % (24 * 3600);
-  let s = Math.floor(parseInt(String(Number(t) / 3600)));
+  let s = Math.floor(
+    parseInt(
+      String(Number(t) / 3600)
+    )
+  );
   t %= 3600;
   let o = Math.floor(t / 60);
   t %= 60;
@@ -1752,9 +1760,11 @@ const As = [
 ], Bs = [
   "fab",
   "fad",
+  "fak",
   "fal",
   "far",
   "fas",
+  "fass",
   "fat"
 ], Hs = [
   "xs",
@@ -1971,7 +1981,15 @@ const Ar = /* @__PURE__ */ $(Vr, [["render", _r]]), Rr = C({
   setup(e) {
     const t = Te(e.mode), r = p(() => t.value === "dark" ? "sun" : "moon"), s = p(() => t.value === "dark" ? e.titleLight : e.titleDark);
     return rt(() => {
-      typeof window < "u" && document && (document.documentElement.classList.add(e.groundLight, e.groundDark, e.textLight, e.textDark), document.body.classList.add(e.textLight, e.textDark), t.value === "light" ? (document.documentElement.classList.remove("dark"), document.documentElement.style.backgroundColor = e.groundLightHex) : t.value === "dark" && (document.documentElement.classList.add("dark"), document.documentElement.style.backgroundColor = e.groundDarkHex));
+      typeof window < "u" && document && (document.documentElement.classList.add(
+        e.groundLight,
+        e.groundDark,
+        e.textLight,
+        e.textDark
+      ), document.body.classList.add(
+        e.textLight,
+        e.textDark
+      ), t.value === "light" ? (document.documentElement.classList.remove("dark"), document.documentElement.style.backgroundColor = e.groundLightHex) : t.value === "dark" && (document.documentElement.classList.add("dark"), document.documentElement.style.backgroundColor = e.groundDarkHex));
     }), { mode: t, icon: r, title: s };
   },
   methods: {
