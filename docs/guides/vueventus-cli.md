@@ -239,10 +239,10 @@ npm run coverage
 │  │  │  │  └─ VvListItem.vue
 │  │  │  └─ textareas
 │  │  │     └─ VvTextarea.vue
-│  │  ├─ css
-│  │  │  ├─ prism-theme-vars.css 🟡
-│  │  │  └─ tailwind.css
 │  │  └─ HelloVueVentus.vue
+│  ├─ css
+│  │  ├─ prism-theme-vars.css 🟡
+│  │  └─ tailwind.css
 │  ├─ pages
 │  │  ├─ Home.vue
 │  │  └─ NotFound404.vue
