@@ -55,6 +55,9 @@ import vvRouterLinkVueFile from '../generators/vvRouterLinkVueFile.mjs'
 import vvScrollUpVueFile from '../generators/vvScrollUpVueFile.mjs'
 import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
 
+
+import homeTestJsFile from '../generators/homeTestJsFile.mjs'
+import notFound404TestJsFile from '../generators/notFound404TestJsFile.mjs'
 import vvAnchorTestJsFile from '../generators/vvAnchorTestJsFile.mjs'
 import vvButtonTestJsFile from '../generators/vvButtonTestJsFile.mjs'
 import vvCheckboxTestJsFile from '../generators/vvCheckboxTestJsFile.mjs'
@@ -496,6 +499,18 @@ let baseViteTypescriptDeps = {
                 checked: true,
                 path: '/src/components/',
                 src: helloVueVentusVueFile(),
+            },
+            homeTestJs: {
+                name: 'Home.test.js',
+                checked: true,
+                path: '/tests/pages/',
+                src: homeTestJsFile(),
+            },
+            notFound404TestJs: {
+                name: 'NotFound404.test.js',
+                checked: true,
+                path: '/tests/pages/',
+                src: notFound404TestJsFile(),
             },
             vvAnchorTestJs: {
                 name: 'VvAnchor.test.js',
