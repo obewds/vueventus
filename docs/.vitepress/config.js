@@ -241,6 +241,7 @@ function sidebarComponents() {
             collapsible: true,
             items: [
                 { text: 'VvAnchor', link: '/components/anchors/vv-anchor' },
+                { text: 'VvRouterLink', link: '/components/anchors/vv-router-link' },
             ]
         },{
             text: 'Button Components',
@@ -248,12 +249,16 @@ function sidebarComponents() {
             items: [
                 { text: 'VvButton', link: '/components/buttons/vv-button' },
                 { text: 'VvColorModeButton', link: '/components/buttons/vv-color-mode-button' },
+                { text: 'VvScrollUp', link: '/components/buttons/vv-scroll-up' },
             ]
         },{
             text: 'Element Components',
             collapsible: true,
             items: [
                 { text: 'VvEl', link: '/components/elements/vv-el' },
+                { text: 'VvFa', link: '/components/elements/vv-fa' },
+                { text: 'VvPrism', link: '/components/elements/vv-prism' },
+                { text: 'VvPrismVars', link: '/components/elements/vv-prism-vars' },
             ]
         },{
             text: 'Input Components',
