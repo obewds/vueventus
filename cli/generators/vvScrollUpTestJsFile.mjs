@@ -1,7 +1,5 @@
 // ./cli/generators/vvScrollUpTestJsFile.mjs
 
-// TODO add this file to vitest build processes
-
 export default function () {
 
 const output = `// ./tests/components/vv/buttons/VvScrollUp.test.js
