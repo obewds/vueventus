@@ -55,6 +55,22 @@ import vvRouterLinkVueFile from '../generators/vvRouterLinkVueFile.mjs'
 import vvScrollUpVueFile from '../generators/vvScrollUpVueFile.mjs'
 import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
 
+import vvAnchorTestJsFile from '../generators/vvAnchorTestJsFile.mjs'
+import vvButtonTestJsFile from '../generators/vvButtonTestJsFile.mjs'
+import vvCheckboxTestJsFile from '../generators/vvCheckboxTestJsFile.mjs'
+import vvColorModeButtonTestJsFile from '../generators/vvColorModeButtonTestJsFile.mjs'
+import vvElTestJsFile from '../generators/vvElTestJsFile.mjs'
+import vvFaTestJsFile from '../generators/vvFaTestJsFile.mjs'
+import vvFaTestJsFilePro from '../generators/vvFaTestJsFilePro.mjs'
+import vvInputTestJsFile from '../generators/vvInputTestJsFile.mjs'
+import vvListItemTestJsFile from '../generators/vvListItemTestJsFile.mjs'
+import vvPrismTestJsFile from '../generators/vvPrismTestJsFile.mjs'
+import vvPrismVarsTestJsFile from '../generators/vvPrismVarsTestJsFile.mjs'
+import vvRadioTestJsFile from '../generators/vvRadioTestJsFile.mjs'
+import vvRouterLinkTestJsFile from '../generators/vvRouterLinkTestJsFile.mjs'
+import vvScrollUpTestJsFile from '../generators/vvScrollUpTestJsFile.mjs'
+import vvTextareaTestJsFile from '../generators/vvTextareaTestJsFile.mjs'
+
 
 let baseViteTypescriptFiles = {
     appVvTs: {
@@ -273,16 +289,22 @@ let faFreeDep = {
     packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/free-solid-svg-icons', '@fortawesome/free-regular-svg-icons'],
     files: {
         fontAwesomeTs: {
-            name: 'fontAwesome.ts',
+            name: 'fontAwesome.ts (Free)',
             checked: true,
             path: '/src/',
             src: fontAwesomeTsFile(),
         },
         vvFa: {
-            name: 'VvFa.vue',
+            name: 'VvFa.vue (Free)',
             checked: true,
             path: '/src/components/vv/elements/',
             src: vvFaVueFile(),
+        },
+        vvFaTestJs: {
+            name: 'VvFa.test.js (Free)',
+            checked: true,
+            path: '/tests/components/elements/',
+            src: vvFaTestJsFile(),
         },
     },
 }
@@ -302,16 +324,22 @@ let faProDep = {
     packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/pro-solid-svg-icons', '@fortawesome/pro-regular-svg-icons', '@fortawesome/pro-duotone-svg-icons', '@fortawesome/pro-light-svg-icons', '@fortawesome/pro-thin-svg-icons', '@fortawesome/sharp-solid-svg-icons'],
     files: {
         fontAwesomeProTs: {
-            name: 'fontAwesomePro.ts',
+            name: 'fontAwesomePro.ts (Pro)',
             checked: true,
             path: '/src/',
             src: fontAwesomeProTsFile(),
         },
         vvFa: {
-            name: 'VvFa.vue',
+            name: 'VvFa.vue (Pro)',
             checked: true,
             path: '/src/components/vv/elements/',
             src: vvFaVueFile(),
+        },
+        vvFaTestJs: {
+            name: 'VvFa.test.js (Pro)',
+            checked: true,
+            path: '/tests/components/elements/',
+            src: vvFaTestJsFilePro(),
         },
     },
 }
@@ -431,6 +459,18 @@ let baseViteTypescriptDeps = {
                 path: '/src/components/vv/elements/',
                 src: vvPrismVarsVueFile(),
             },
+            vvPrismTestJs: {
+                name: 'VvPrism.test.js',
+                checked: true,
+                path: '/tests/components/elements/',
+                src: vvPrismTestJsFile(),
+            },
+            vvPrismVarsTestJs: {
+                name: 'VvPrismVars.test.js',
+                checked: true,
+                path: '/tests/components/elements/',
+                src: vvPrismVarsTestJsFile(),
+            },
         },
     },
     vitest: {
@@ -456,6 +496,72 @@ let baseViteTypescriptDeps = {
                 checked: true,
                 path: '/src/components/',
                 src: helloVueVentusVueFile(),
+            },
+            vvAnchorTestJs: {
+                name: 'VvAnchor.test.js',
+                checked: true,
+                path: '/tests/components/anchors/',
+                src: vvAnchorTestJsFile(),
+            },
+            vvButtonTestJs: {
+                name: 'VvButton.test.js',
+                checked: true,
+                path: '/tests/components/buttons/',
+                src: vvButtonTestJsFile(),
+            },
+            vvCheckboxTestJs: {
+                name: 'VvCheckbox.test.js',
+                checked: true,
+                path: '/tests/components/inputs/',
+                src: vvCheckboxTestJsFile(),
+            },
+            vvColorModeButtonTestJs: {
+                name: 'VvColorModeButton.test.js',
+                checked: true,
+                path: '/tests/components/buttons/',
+                src: vvColorModeButtonTestJsFile(),
+            },
+            vvElTestJs: {
+                name: 'VvEl.test.js',
+                checked: true,
+                path: '/tests/components/elements/',
+                src: vvElTestJsFile(),
+            },
+            vvInputTestJs: {
+                name: 'VvInput.test.js',
+                checked: true,
+                path: '/tests/components/inputs/',
+                src: vvInputTestJsFile(),
+            },
+            vvListItemTestJs: {
+                name: 'VvListItem.test.js',
+                checked: true,
+                path: '/tests/components/lists/',
+                src: vvListItemTestJsFile(),
+            },
+            vvRadioTestJs: {
+                name: 'VvRadio.test.js',
+                checked: true,
+                path: '/tests/components/inputs/',
+                src: vvRadioTestJsFile(),
+            },
+            vvRouterLinkTestJs: {
+                name: 'VvRouterLink.test.js',
+                checked: true,
+                path: '/tests/components/anchors/',
+                src: vvRouterLinkTestJsFile(),
+            },
+            vvScrollUpTestJs: {
+                name: 'VvScrollUp.test.js',
+                checked: true,
+                path: '/tests/components/buttons/',
+                src: vvScrollUpTestJsFile(),
+            },
+            vvTextareaTestJs: {
+                name: 'VvTextarea.test.js',
+                checked: true,
+                path: '/tests/components/textareas/',
+                src: vvTextareaTestJsFile(),
             },
         },
     }
