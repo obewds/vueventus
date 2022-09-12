@@ -1,4 +1,6 @@
-// ./cli/generators/vvScrollUpTestJsFile
+// ./cli/generators/vvScrollUpTestJsFile.mjs
+
+// TODO add this file to vitest build processes
 
 export default function () {
 

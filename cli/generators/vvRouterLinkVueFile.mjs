@@ -1,5 +1,7 @@
 // ./cli/generators/vvRouterLinkVueFile.mjs
 
+// TODO: check if this is added to cli installs yet, and if not - add it
+
 export default function () {
 
 const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->

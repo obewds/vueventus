@@ -1,5 +1,7 @@
 // ./cli/generators/vvPrismVarsTestJs.mjs
 
+// TODO add this file to vitest build processes
+
 export default function () {
 
 const output = `// ./tests/components/vv/elements/VvPrismVars.test.js

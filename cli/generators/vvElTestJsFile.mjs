@@ -1,5 +1,7 @@
 // ./cli/generators/vvElTestJsFile.mjs
 
+// TODO add this file to vitest build processes
+
 export default function () {
 
 const output = `// ./tests/components/vv/elements/VvEl.test.js
