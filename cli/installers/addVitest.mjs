@@ -30,6 +30,7 @@ export default function (userOptionsObject, vitestDepObject) {
 
         run(`npm pkg set scripts.test="vitest --dom"`)
         run(`npm pkg set scripts.coverage="vitest run --dom --coverage"`)
+        run(`npm pkg set scripts.coverage="vitest bench"`)
 
         run(vitestDepObject.install)
 
