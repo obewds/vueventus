@@ -254,31 +254,34 @@ npm run coverage
 │  ├─ fontAwesome.ts/fontAwesomePro.ts 🟡/🟠
 │  ├─ gsap.ts 🟡
 │  ├─ main.ts
-│  └─vite-env.d.ts
+│  └─ vite-env.d.ts
 ├─ tests
-│  └─ components
-│     ├─ vv
-│     │  ├─ anchors
-│     │  │  ├─ VvAnchor.test.js
-│     │  │  └─ VvRouterLink.test.js
-│     │  ├─ buttons
-│     │  │  ├─ VvButton.test.js
-│     │  │  ├─ VvColorModeButton.test.js
-│     │  │  └─ VvScrollUp.test.js 🟡
-│     │  ├─ elements
-│     │  │  ├─ VvEl.test.js
-│     │  │  ├─ VvFa.test.js 🟡
-│     │  │  ├─ VvPrism.test.js 🟡
-│     │  │  └─ VvPrismVars.test.js 🟡
-│     │  ├─ inputs
-│     │  │  ├─ VvCheckbox.test.js
-│     │  │  ├─ VvInput.test.js
-│     │  │  └─ VvRadio.test.js
-│     │  ├─ lists
-│     │  │  └─ VvListItem.test.js
-│     │  └─ textareas
-│     │     └─ VvListItem.test.js
-│     └─ HelloVueVentus.test.js
+│  ├─ components
+│  │  ├─ vv
+│  │  │  ├─ anchors
+│  │  │  │  ├─ VvAnchor.test.js
+│  │  │  │  └─ VvRouterLink.test.js
+│  │  │  ├─ buttons
+│  │  │  │  ├─ VvButton.test.js
+│  │  │  │  ├─ VvColorModeButton.test.js
+│  │  │  │  └─ VvScrollUp.test.js 🟡
+│  │  │  ├─ elements
+│  │  │  │  ├─ VvEl.test.js
+│  │  │  │  ├─ VvFa.test.js 🟡
+│  │  │  │  ├─ VvPrism.test.js 🟡
+│  │  │  │  └─ VvPrismVars.test.js 🟡
+│  │  │  ├─ inputs
+│  │  │  │  ├─ VvCheckbox.test.js
+│  │  │  │  ├─ VvInput.test.js
+│  │  │  │  └─ VvRadio.test.js
+│  │  │  ├─ lists
+│  │  │  │  └─ VvListItem.test.js
+│  │  │  └─ textareas
+│  │  │     └─ VvListItem.test.js
+│  │  └─ HelloVueVentus.test.js
+│  └─ pages
+│     ├─ Home.test.js
+│     └─ NotFound404.test.js
 ├─ .gitignore
 ├─ .npmrc 🟡 (FontAwesome Pro only)
 ├─ index.html
