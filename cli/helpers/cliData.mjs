@@ -292,19 +292,19 @@ let faFreeDep = {
     packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/free-solid-svg-icons', '@fortawesome/free-regular-svg-icons'],
     files: {
         fontAwesomeTs: {
-            name: 'fontAwesome.ts (Free)',
+            name: 'fontAwesome.ts',
             checked: true,
             path: '/src/',
             src: fontAwesomeTsFile(),
         },
         vvFa: {
-            name: 'VvFa.vue (Free)',
+            name: 'VvFa.vue',
             checked: true,
             path: '/src/components/vv/elements/',
             src: vvFaVueFile(),
         },
         vvFaTestJs: {
-            name: 'VvFa.test.js (Free)',
+            name: 'VvFa.test.js',
             checked: true,
             path: '/tests/components/elements/',
             src: vvFaTestJsFile(),
@@ -327,19 +327,19 @@ let faProDep = {
     packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/pro-solid-svg-icons', '@fortawesome/pro-regular-svg-icons', '@fortawesome/pro-duotone-svg-icons', '@fortawesome/pro-light-svg-icons', '@fortawesome/pro-thin-svg-icons', '@fortawesome/sharp-solid-svg-icons'],
     files: {
         fontAwesomeProTs: {
-            name: 'fontAwesomePro.ts (Pro)',
+            name: 'fontAwesomePro.ts',
             checked: true,
             path: '/src/',
             src: fontAwesomeProTsFile(),
         },
         vvFa: {
-            name: 'VvFa.vue (Pro)',
+            name: 'VvFa.vue',
             checked: true,
             path: '/src/components/vv/elements/',
             src: vvFaVueFile(),
         },
         vvFaTestJs: {
-            name: 'VvFa.test.js (Pro)',
+            name: 'VvFa.test.js',
             checked: true,
             path: '/tests/components/elements/',
             src: vvFaTestJsFilePro(),
