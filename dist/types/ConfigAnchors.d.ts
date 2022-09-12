@@ -4,11 +4,11 @@ import type { EmptyPalette } from './EmptyPalette';
 import type { ReturnsClassesFunction } from './ReturnsClassesFunction';
 import type { TextSizes } from './TextSizes';
 export interface ConfigAnchors {
-    cursor: string | undefined;
-    display: string | undefined;
-    focus: string | undefined;
-    text: string | undefined;
-    transition: string | undefined;
+    cursor: string;
+    display: string;
+    focus: string;
+    text: string;
+    transition: string;
     base: BaseFunction;
     sizes: TextSizes;
     getSizeClasses: ReturnsClassesFunction;

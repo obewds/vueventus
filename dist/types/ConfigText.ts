@@ -7,14 +7,14 @@ import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
 import type { TextSizes } from './TextSizes'
 
 export interface ConfigText {
-    align: string | undefined
-    decoration: string | undefined
-    family: string | undefined
-    lineHeight: string | undefined
-    smoothing: string | undefined
-    spacing: string | undefined
-    weight: string | undefined
-    wordBreak: string | undefined
+    align: string
+    decoration: string
+    family: string
+    lineHeight: string
+    smoothing: string
+    spacing: string
+    weight: string
+    wordBreak: string
     base: BaseFunction
     sizes: TextSizes
     getSizeClasses: ReturnsClassesFunction

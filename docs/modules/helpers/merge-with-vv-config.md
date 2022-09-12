@@ -18,7 +18,6 @@ The {{ $frontmatter.title }} module provides a helper function that requires a s
 
 
 
-<!-- TODO: Add args table and content for helper method like in ...modules/configs/anchors.html#anchors-classes -->
 ## Import
 
 To import the {{ $frontmatter.title }}:

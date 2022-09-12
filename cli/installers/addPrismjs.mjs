@@ -6,6 +6,9 @@ import prismThemeVarsCssFile from '../generators/prismThemeVarsCssFile.mjs'
 import vvPrismVarsVueFile from '../generators/vvPrismVarsVueFile.mjs'
 import vvPrismVueFile from '../generators/vvPrismVueFile.mjs'
 
+import vvPrismTestJsFile from '../generators/vvPrismTestJsFile.mjs'
+import vvPrismVarsTestJsFile from '../generators/vvPrismVarsTestJsFile.mjs'
+
 import cwd from '../helpers/cwd.mjs'
 import run from '../helpers/run.mjs'
 import vvBrand from '../helpers/vvBrand.mjs'
@@ -36,6 +39,25 @@ export default function (userOpts, prismDepObject) {
         if ( userOpts.files.includes( prismDepObject.files.vvPrism.name ) ) {
 
             fs.outputFileSync(cwd + prismDepObject.files.vvPrism.path + prismDepObject.files.vvPrism.name, vvPrismVueFile(), { flag: 'w+' })
+
+        }
+
+        // check for the vitest dep
+        if ( userOpts.deps.includes( vitestDepObject.name ) ) {
+
+            // install VvPrism.test.js file
+            if ( userOpts.files.includes( prismDepObject.files.vvPrismTestJs.name ) ) {
+
+                fs.outputFileSync(cwd + prismDepObject.files.vvPrismTestJs.path + prismDepObject.files.vvPrismTestJs.name, vvPrismTestJsFile(), { flag: 'w+' })
+
+            }
+
+            // install VvPrism.test.js file
+            if ( userOpts.files.includes( prismDepObject.files.vvPrismVarsTestJs.name ) ) {
+
+                fs.outputFileSync(cwd + prismDepObject.files.vvPrismVarsTestJs.path + prismDepObject.files.vvPrismVarsTestJs.name, vvPrismVarsTestJsFile(), { flag: 'w+' })
+
+            }
 
         }
 
