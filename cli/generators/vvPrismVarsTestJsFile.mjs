@@ -1,6 +1,4 @@
-// ./cli/generators/vvPrismVarsTestJs.mjs
-
-// TODO add this file to vitest build processes
+// ./cli/generators/vvPrismVarsTestJsFile.mjs
 
 export default function () {
 
