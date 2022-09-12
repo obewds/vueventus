@@ -6,6 +6,8 @@ import helloVueVentusTestJsFile from '../generators/helloVueVentusTestJsFile.mjs
 import helloVueVentusVueFile from '../generators/helloVueVentusVueFile.mjs'
 import vitestConfigTsFile from '../generators/vitestConfigTsFile.mjs'
 
+import homeTestJsFile from '../generators/homeTestJsFile.mjs'
+import notFound404TestJsFile from '../generators/notFound404TestJsFile.mjs'
 import vvAnchorTestJsFile from '../generators/vvAnchorTestJsFile.mjs'
 import vvButtonTestJsFile from '../generators/vvButtonTestJsFile.mjs'
 import vvCheckboxTestJsFile from '../generators/vvCheckboxTestJsFile.mjs'
@@ -49,8 +51,22 @@ export default function (userOptionsObject, vitestDepObject) {
         }
 
         //
-        // install VueVentus component test files for vitest
+        // install VueVentus page and component test files for vitest
         //
+
+        // install Home.test.js file
+        if ( userOptionsObject.files.includes( vitestDepObject.files.homeTestJs.name )) {
+
+            fs.outputFileSync(cwd + vitestDepObject.files.homeTestJs.path + vitestDepObject.files.homeTestJs.name, homeTestJsFile(), { flag: 'w+' })
+            
+        }
+
+        // install NotFound404.test.js file
+        if ( userOptionsObject.files.includes( vitestDepObject.files.notFound404TestJs.name )) {
+
+            fs.outputFileSync(cwd + vitestDepObject.files.notFound404TestJs.path + vitestDepObject.files.notFound404TestJs.name, notFound404TestJsFile(), { flag: 'w+' })
+            
+        }
 
         // install VvAnchor.test.js file
         if ( userOptionsObject.files.includes( vitestDepObject.files.vvAnchorTestJs.name )) {
@@ -132,7 +148,7 @@ export default function (userOptionsObject, vitestDepObject) {
         //
         // add test coverage directory to project .gitignore file
         //
-        
+
         fs.outputFileSync(cwd + '/.gitignore', `\ncoverage\n`, { flag: 'a+' })
 
         console.log(`\nThe ${vvBrand} CLI installed/added the ${vitestDepObject.name} dep/files successfully!\n`)
