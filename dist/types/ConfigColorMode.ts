@@ -8,7 +8,7 @@ export interface ConfigColorMode {
     dark: ColorMode
     light: ColorMode
     base: BaseFunction
-    transition: string | undefined
+    transition: string
     classes: ReturnsClassesFunction
     [key: string]: any
 }

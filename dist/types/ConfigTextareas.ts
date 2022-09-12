@@ -9,15 +9,15 @@ import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
 import type { ReturnsNumberFunction } from './ReturnsNumberFunction'
 
 export interface ConfigTextareas {
-    border: string | undefined
-    display: string | undefined
-    outline: string | undefined
-    placeholder: string | undefined
-    ring: string | undefined
-    rounding: string | undefined
-    shadow: string | undefined
-    text: string | undefined
-    transition: string | undefined
+    border: string
+    display: string
+    outline: string
+    placeholder: string
+    ring: string
+    rounding: string
+    shadow: string
+    text: string
+    transition: string
     base: BaseFunction
     getSizeClasses: ReturnsClassesFunction
     classes: ReturnsClassesFunction
