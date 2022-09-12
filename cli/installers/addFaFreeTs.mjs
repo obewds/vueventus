@@ -6,6 +6,8 @@ import fontAwesomeTsFile from '../generators/fontAwesomeTsFile.mjs'
 import vvFaVueFile from '../generators/vvFaVueFile.mjs'
 import vvFaVueSsgFile from '../generators/vvFaVueSsgFile.mjs'
 
+import vvFaTestJsFile from '../generators/vvFaTestJsFile.mjs'
+
 import cwd from '../helpers/cwd.mjs'
 import run from '../helpers/run.mjs'
 import vvBrand from '../helpers/vvBrand.mjs'
@@ -34,6 +36,18 @@ export default function (userOptionsObject, faFreeDepObject, isSsg = false) {
 
         }
         
+    }
+
+    // check for the vitest dep
+    if ( userOpts.deps.includes( vitestDepObject.name ) ) {
+
+        // install VvFa.test.js file
+        if ( userOpts.files.includes( faFreeDepObject.files.vvFaTestJs.name ) ) {
+
+            fs.outputFileSync(cwd + faFreeDepObject.files.vvFaTestJs.path + faFreeDepObject.files.vvFaTestJs.name, vvFaTestJsFile(), { flag: 'w+' })
+
+        }
+
     }
 
     console.log(`\nThe ${vvBrand} CLI installed/added the ${faFreeDepObject.name} dep/files successfully!\n`)
