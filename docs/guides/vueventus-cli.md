@@ -257,6 +257,27 @@ npm run coverage
 │  └─vite-env.d.ts
 ├─ tests
 │  └─ components
+│     ├─ vv
+│     │  ├─ anchors
+│     │  │  ├─ VvAnchor.test.js
+│     │  │  └─ VvRouterLink.test.js
+│     │  ├─ buttons
+│     │  │  ├─ VvButton.test.js
+│     │  │  ├─ VvColorModeButton.test.js
+│     │  │  └─ VvScrollUp.test.js 🟡
+│     │  ├─ elements
+│     │  │  ├─ VvEl.test.js
+│     │  │  ├─ VvFa.test.js 🟡
+│     │  │  ├─ VvPrism.test.js 🟡
+│     │  │  └─ VvPrismVars.test.js 🟡
+│     │  ├─ inputs
+│     │  │  ├─ VvCheckbox.test.js
+│     │  │  ├─ VvInput.test.js
+│     │  │  └─ VvRadio.test.js
+│     │  ├─ lists
+│     │  │  └─ VvListItem.test.js
+│     │  └─ textareas
+│     │     └─ VvListItem.test.js
 │     └─ HelloVueVentus.test.js
 ├─ .gitignore
 ├─ .npmrc 🟡 (FontAwesome Pro only)
