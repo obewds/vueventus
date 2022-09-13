@@ -23,7 +23,8 @@
       "vite/client" // if using vite
     ]
   },
-  //"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  // "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "include": ["src/index.ts", "src/**/*.d.ts", "src/components/**/*.vue", "src/configs/**/*.ts", "src/data/**/*.json", "src/helpers/**/*.ts", "src/types/**/*.ts", "src/validators/**/*.ts"],
+  // "exclude": ["src/main.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
