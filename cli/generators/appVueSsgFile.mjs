@@ -14,6 +14,7 @@ const output = `<!-- ./src/App.vue -->
     import type { ConfigVv } from '@obewds/vueventus'
     import HelloWorld from './components/HelloWorld.vue'
     import VvFa from './components/vv/elements/VvFa.vue'
+    import VvRouterLink from './components/vv/anchors/VvRouterLink.vue'
     import VvScrollUp from './components/vv/buttons/VvScrollUp.vue'
 
     const vv = inject<ConfigVv>('vv', VvConfig)
@@ -42,10 +43,10 @@ const output = `<!-- ./src/App.vue -->
         </div>
 
         <div class="flex justify-center items-center gap-3 pb-10">
-            <router-link to="/" :class="anchors">home</router-link>
-            <router-link to="/a" :class="anchors">/a</router-link>
-            <router-link to="/b" :class="anchors">/b</router-link>
-            <router-link to="/nested/deep/b" :class="anchors">/nested/deep/b</router-link>
+            <VvRouterLink to="/" color="success">home</VvRouterLink>
+            <VvRouterLink to="/a" color="success">/a</VvRouterLink>
+            <VvRouterLink to="/b" color="success">/b</VvRouterLink>
+            <VvRouterLink to="/nested/deep/b" color="success">/nested/deep/b</VvRouterLink>
         </div>
 
         <main>

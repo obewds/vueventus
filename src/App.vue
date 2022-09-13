@@ -36,7 +36,7 @@
                 <span class="pl-3 text-2xl">VueVentus</span>
             </router-link>
             <VvColorModeButton
-                :mode="colorMode"
+                :mode="(colorMode as string)"
                 :bg-hex-dark="VueVentusTWColors.gray['900']"
                 :bg-hex-light="VueVentusTWColors.gray['100']"
                 size="2xs"

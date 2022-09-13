@@ -139,7 +139,7 @@ export default function (userOptionsObject, vitestDepObject) {
         //
 
         // if the stack is the vue-ts stack
-        if ( userOptionsObject.stack === cli.stacks.vueTwViteTs.name ) {
+        if ( userOptionsObject.stack === cliData.stacks.vueTwViteTs.name ) {
 
             // install Home.test.js file
             if ( userOptionsObject.files.includes( vitestDepObject.files.homeTestJs.name )) {
@@ -158,7 +158,7 @@ export default function (userOptionsObject, vitestDepObject) {
         }
         
         // if the stack is the ssg stack
-        else if ( userOptionsObject.stack === cli.stacks.vueTwViteSsgMdTs.name ) {
+        else if ( userOptionsObject.stack === cliData.stacks.vueTwViteSsgMdTs.name ) {
 
             // install b.test.js file
             if ( userOptionsObject.files.includes( vitestDepObject.files.bTestJs.name )) {
