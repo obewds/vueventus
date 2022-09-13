@@ -1,7 +1,7 @@
 // ./src/validators/ValidInputTypes.ts
 const ValidInputTypes = [
     // 'button', // (use VvButton)
-    // 'checkbox', // (use TBD)
+    // 'checkbox', // (use VvCheckbox)
     'color',
     'date',
     'datetime-local',
@@ -12,7 +12,7 @@ const ValidInputTypes = [
     'month',
     'number',
     'password',
-    // 'radio', // (use TBD)
+    // 'radio', // (use VvRadio)
     // 'range', // (use TBD)
     // 'reset', // (use VvButton)
     'search',
