@@ -55,7 +55,7 @@ import vvRouterLinkVueFile from '../generators/vvRouterLinkVueFile.mjs'
 import vvScrollUpVueFile from '../generators/vvScrollUpVueFile.mjs'
 import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
 
-
+import bTestJsFile from '../generators/bTestJsFile.mjs'
 import homeTestJsFile from '../generators/homeTestJsFile.mjs'
 import notFound404TestJsFile from '../generators/notFound404TestJsFile.mjs'
 import vvAnchorTestJsFile from '../generators/vvAnchorTestJsFile.mjs'
@@ -306,7 +306,7 @@ let faFreeDep = {
         vvFaTestJs: {
             name: 'VvFa.test.js',
             checked: true,
-            path: '/tests/components/elements/',
+            path: '/tests/components/vv/elements/',
             src: vvFaTestJsFile(),
         },
     },
@@ -341,7 +341,7 @@ let faProDep = {
         vvFaTestJs: {
             name: 'VvFa.test.js',
             checked: true,
-            path: '/tests/components/elements/',
+            path: '/tests/components/vv/elements/',
             src: vvFaTestJsFilePro(),
         },
     },
@@ -353,6 +353,124 @@ faProDepSsg.files.vvFa = {
     checked: true,
     path: '/src/components/vv/elements/',
     src: vvFaVueSsgFile(),
+}
+
+let vitestBase = {
+    checked: true,
+    name: 'Vitest',
+    install: 'npm install vitest @vue/test-utils happy-dom @vitest/coverage-c8 --save-dev',
+    packages: ['vitest', '@vue/test-utils', 'happy-dom', '@vitest/coverage-c8'],
+    files: {
+        vitestConfigTs: {
+            name: 'vitest.config.ts',
+            checked: true,
+            path: '/',
+            src: vitestConfigTsFile(),
+        },
+        helloVueVentusTestJs: {
+            name: 'HelloVueVentus.test.js',
+            checked: true,
+            path: '/tests/components/',
+            src: helloVueVentusTestJsFile(),
+        },
+        helloVueVentusVue: {
+            name: 'HelloVueVentus.vue',
+            checked: true,
+            path: '/src/components/',
+            src: helloVueVentusVueFile(),
+        },
+        vvAnchorTestJs: {
+            name: 'VvAnchor.test.js',
+            checked: true,
+            path: '/tests/components/vv/anchors/',
+            src: vvAnchorTestJsFile(),
+        },
+        vvButtonTestJs: {
+            name: 'VvButton.test.js',
+            checked: true,
+            path: '/tests/components/vv/buttons/',
+            src: vvButtonTestJsFile(),
+        },
+        vvCheckboxTestJs: {
+            name: 'VvCheckbox.test.js',
+            checked: true,
+            path: '/tests/components/vv/inputs/',
+            src: vvCheckboxTestJsFile(),
+        },
+        vvColorModeButtonTestJs: {
+            name: 'VvColorModeButton.test.js',
+            checked: true,
+            path: '/tests/components/vv/buttons/',
+            src: vvColorModeButtonTestJsFile(),
+        },
+        vvElTestJs: {
+            name: 'VvEl.test.js',
+            checked: true,
+            path: '/tests/components/vv/elements/',
+            src: vvElTestJsFile(),
+        },
+        vvInputTestJs: {
+            name: 'VvInput.test.js',
+            checked: true,
+            path: '/tests/components/vv/inputs/',
+            src: vvInputTestJsFile(),
+        },
+        vvListItemTestJs: {
+            name: 'VvListItem.test.js',
+            checked: true,
+            path: '/tests/components/vv/lists/',
+            src: vvListItemTestJsFile(),
+        },
+        vvRadioTestJs: {
+            name: 'VvRadio.test.js',
+            checked: true,
+            path: '/tests/components/vv/inputs/',
+            src: vvRadioTestJsFile(),
+        },
+        vvRouterLinkTestJs: {
+            name: 'VvRouterLink.test.js',
+            checked: true,
+            path: '/tests/components/vv/anchors/',
+            src: vvRouterLinkTestJsFile(),
+        },
+        vvScrollUpTestJs: {
+            name: 'VvScrollUp.test.js',
+            checked: true,
+            path: '/tests/components/vv/buttons/',
+            src: vvScrollUpTestJsFile(),
+        },
+        vvTextareaTestJs: {
+            name: 'VvTextarea.test.js',
+            checked: true,
+            path: '/tests/components/vv/textareas/',
+            src: vvTextareaTestJsFile(),
+        },
+    },
+}
+
+let vitestDep = vitestBase
+
+vitestDep.files.homeTestJs = {
+    name: 'Home.test.js',
+    checked: true,
+    path: '/tests/pages/',
+    src: homeTestJsFile(),
+}
+
+vitestDep.files.notFound404TestJs = {
+    name: 'NotFound404.test.js',
+    checked: true,
+    path: '/tests/pages/',
+    src: notFound404TestJsFile(),
+}
+
+let vitestDepSsg = vitestBase
+
+vitestDepSsg.files.bTestJs = {
+    name: 'b.test.js',
+    checked: true,
+    path: '/tests/pages/',
+    src: bTestJsFile(),
 }
 
 let baseViteTypescriptDeps = {
@@ -465,130 +583,30 @@ let baseViteTypescriptDeps = {
             vvPrismTestJs: {
                 name: 'VvPrism.test.js',
                 checked: true,
-                path: '/tests/components/elements/',
+                path: '/tests/components/vv/elements/',
                 src: vvPrismTestJsFile(),
             },
             vvPrismVarsTestJs: {
                 name: 'VvPrismVars.test.js',
                 checked: true,
-                path: '/tests/components/elements/',
+                path: '/tests/components/vv/elements/',
                 src: vvPrismVarsTestJsFile(),
             },
         },
     },
-    vitest: {
-        checked: true,
-        name: 'Vitest',
-        install: 'npm install vitest @vue/test-utils happy-dom @vitest/coverage-c8 --save-dev',
-        packages: ['vitest', '@vue/test-utils', 'happy-dom', '@vitest/coverage-c8'],
-        files: {
-            vitestConfigTs: {
-                name: 'vitest.config.ts',
-                checked: true,
-                path: '/',
-                src: vitestConfigTsFile(),
-            },
-            helloVueVentusTestJs: {
-                name: 'HelloVueVentus.test.js',
-                checked: true,
-                path: '/tests/components/',
-                src: helloVueVentusTestJsFile(),
-            },
-            helloVueVentusVue: {
-                name: 'HelloVueVentus.vue',
-                checked: true,
-                path: '/src/components/',
-                src: helloVueVentusVueFile(),
-            },
-            homeTestJs: {
-                name: 'Home.test.js',
-                checked: true,
-                path: '/tests/pages/',
-                src: homeTestJsFile(),
-            },
-            notFound404TestJs: {
-                name: 'NotFound404.test.js',
-                checked: true,
-                path: '/tests/pages/',
-                src: notFound404TestJsFile(),
-            },
-            vvAnchorTestJs: {
-                name: 'VvAnchor.test.js',
-                checked: true,
-                path: '/tests/components/anchors/',
-                src: vvAnchorTestJsFile(),
-            },
-            vvButtonTestJs: {
-                name: 'VvButton.test.js',
-                checked: true,
-                path: '/tests/components/buttons/',
-                src: vvButtonTestJsFile(),
-            },
-            vvCheckboxTestJs: {
-                name: 'VvCheckbox.test.js',
-                checked: true,
-                path: '/tests/components/inputs/',
-                src: vvCheckboxTestJsFile(),
-            },
-            vvColorModeButtonTestJs: {
-                name: 'VvColorModeButton.test.js',
-                checked: true,
-                path: '/tests/components/buttons/',
-                src: vvColorModeButtonTestJsFile(),
-            },
-            vvElTestJs: {
-                name: 'VvEl.test.js',
-                checked: true,
-                path: '/tests/components/elements/',
-                src: vvElTestJsFile(),
-            },
-            vvInputTestJs: {
-                name: 'VvInput.test.js',
-                checked: true,
-                path: '/tests/components/inputs/',
-                src: vvInputTestJsFile(),
-            },
-            vvListItemTestJs: {
-                name: 'VvListItem.test.js',
-                checked: true,
-                path: '/tests/components/lists/',
-                src: vvListItemTestJsFile(),
-            },
-            vvRadioTestJs: {
-                name: 'VvRadio.test.js',
-                checked: true,
-                path: '/tests/components/inputs/',
-                src: vvRadioTestJsFile(),
-            },
-            vvRouterLinkTestJs: {
-                name: 'VvRouterLink.test.js',
-                checked: true,
-                path: '/tests/components/anchors/',
-                src: vvRouterLinkTestJsFile(),
-            },
-            vvScrollUpTestJs: {
-                name: 'VvScrollUp.test.js',
-                checked: true,
-                path: '/tests/components/buttons/',
-                src: vvScrollUpTestJsFile(),
-            },
-            vvTextareaTestJs: {
-                name: 'VvTextarea.test.js',
-                checked: true,
-                path: '/tests/components/textareas/',
-                src: vvTextareaTestJsFile(),
-            },
-        },
-    }
+    vitest: {}
 }
 
 let vueTwDeps = baseViteTypescriptDeps
     vueTwDeps.fontawesome = faFreeDep
     vueTwDeps.faPro = faProDep
+    vueTwDeps.vitest = vitestDep
+
 
 let ssgDeps = baseViteTypescriptDeps
     ssgDeps.fontawesome = faFreeDepSsg
     ssgDeps.faPro = faProDepSsg
+    ssgDeps.vitest = vitestDepSsg
 
 export default {
     stacks: {
