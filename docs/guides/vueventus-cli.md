@@ -215,8 +215,17 @@ npm run coverage
 ├─ .vscode
 │  └─ settings.json
 ├─ public
-│  └─ .htaccess
+│  ├─ .htaccess
+│  └─ vite.svg
 ├─ src
+│  ├─ assets
+│  │  ├─ logo-obe.svg
+│  │  ├─ logo-pinia.svg
+│  │  ├─ logo-tailwindcss.svg
+│  │  ├─ logo-typescript.svg
+│  │  ├─ logo-vite.svg
+│  │  ├─ logo-vue.svg
+│  │  └─ vue.svg
 │  ├─ components
 │  │  ├─ vv
 │  │  │  ├─ anchors
@@ -285,6 +294,8 @@ npm run coverage
 ├─ .gitignore
 ├─ .npmrc 🟡 (FontAwesome Pro only)
 ├─ index.html
+├─ package-lock.json
+├─ package.json
 ├─ postcss.config.cjs
 ├─ README-VITE.md
 ├─ tailwind.config.cjs
@@ -324,18 +335,113 @@ npm run coverage
 
 Coming soon!
 
-<!--
-// TODO: complete file structure for SSG Stack files (can use above as starting point)
 ```
 .
-├─ xxxxxxxx
-│  ├─ xxxxxxxx
-│  └─ xxxxxxxx
-├─ xxxxxxxx
-└─ xxxxxxxx
+├─ .vscode
+│  └─ settings.json
+├─ public
+│  └─ .htaccess
+├─ src
+│  ├─ assets
+│  │  ├─ logo-obe.svg
+│  │  ├─ logo-pinia.svg
+│  │  ├─ logo-tailwindcss.svg
+│  │  ├─ logo-typescript.svg
+│  │  ├─ logo-vite.svg
+│  │  ├─ logo-vue.svg
+│  │  └─ vue.svg
+│  ├─ components
+│  │  ├─ vv
+│  │  │  ├─ anchors
+│  │  │  │  ├─ VvAnchor.vue
+│  │  │  │  └─ VvRouterLink.vue
+│  │  │  ├─ buttons
+│  │  │  │  ├─ VvButton.vue
+│  │  │  │  ├─ VvColorModeButton.vue
+│  │  │  │  └─ VvScrollUp.vue 🟡
+│  │  │  ├─ elements
+│  │  │  │  ├─ VvEl.vue
+│  │  │  │  ├─ VvFa.vue 🟡
+│  │  │  │  ├─ VvPrism.vue 🟡
+│  │  │  │  └─ VvPrismVars.vue 🟡
+│  │  │  ├─ inputs
+│  │  │  │  ├─ VvCheckbox.vue
+│  │  │  │  ├─ VvInput.vue
+│  │  │  │  └─ VvRadio.vue
+│  │  │  ├─ lists
+│  │  │  │  └─ VvListItem.vue
+│  │  │  └─ textareas
+│  │  │     └─ VvTextarea.vue
+│  │  ├─ Counter.vue
+│  │  ├─ HelloVueVentus.vue
+│  │  ├─ HelloWorld.vue
+│  │  ├─ Counter.vue
+│  │  └─ MousePos.vue
+│  ├─ css
+│  │  ├─ prism-theme-vars.css 🟡
+│  │  └─ tailwind.css
+│  ├─ pages
+│  │  ├─ nested
+│  │  │  └─ deep
+│  │  │     └─ b.md
+│  │  ├─ [...all].vue
+│  │  ├─ a.md
+│  │  ├─ b.vue
+│  │  └─ index.md
+│  ├─ store
+│  │  └─ root.ts
+│  ├─ router
+│  │  └─ routes.ts
+│  ├─ app.colors.json
+│  ├─ App.vue
+│  ├─ app.vv.ts
+│  ├─ fontAwesome.ts/fontAwesomePro.ts 🟡/🟠
+│  ├─ gsap.ts 🟡
+│  ├─ main.ts
+│  └─ vite-env.d.ts
+├─ tests
+│  ├─ components
+│  │  ├─ vv
+│  │  │  ├─ anchors
+│  │  │  │  ├─ VvAnchor.test.js
+│  │  │  │  └─ VvRouterLink.test.js
+│  │  │  ├─ buttons
+│  │  │  │  ├─ VvButton.test.js
+│  │  │  │  ├─ VvColorModeButton.test.js
+│  │  │  │  └─ VvScrollUp.test.js 🟡
+│  │  │  ├─ elements
+│  │  │  │  ├─ VvEl.test.js
+│  │  │  │  ├─ VvFa.test.js 🟡
+│  │  │  │  ├─ VvPrism.test.js 🟡
+│  │  │  │  └─ VvPrismVars.test.js 🟡
+│  │  │  ├─ inputs
+│  │  │  │  ├─ VvCheckbox.test.js
+│  │  │  │  ├─ VvInput.test.js
+│  │  │  │  └─ VvRadio.test.js
+│  │  │  ├─ lists
+│  │  │  │  └─ VvListItem.test.js
+│  │  │  └─ textareas
+│  │  │     └─ VvListItem.test.js
+│  │  └─ HelloVueVentus.test.js
+│  └─ pages
+│     └─ b.test.js
+├─ .gitignore
+├─ .npmrc 🟡 (FontAwesome Pro only)
+├─ components.d.ts
+├─ index.html
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.cjs
+├─ README-VITE.md
+├─ tailwind.config.cjs
+├─ tsconfig.json
+├─ tsconfig.node.json
+├─ vite.config.ts
+└─ vitest.config.ts
 ```
--->
 
+🟡 = Optional (opt-out) dependency  
+🟠 = License number required on install  
 
 
 

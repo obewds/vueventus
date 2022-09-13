@@ -34,6 +34,7 @@ The VueVentus component system comes with a variety of {{ $frontmatter.title }} 
 HTML `<a>` element based {{ $frontmatter.title }}.
 
 * [VvAnchor](/components/anchors/vv-anchor)
+* [VvRouterLink](/components/anchors/vv-router-link)
 
 
 
@@ -47,6 +48,7 @@ HTML `<button>` element based {{ $frontmatter.title }}.
 
 * [VvButton](/components/buttons/vv-button)
 * [VvColorModeButton](/components/buttons/vv-color-mode-button)
+* [VvScrollUp](/components/buttons/vv-scroll-up)
 
 
 
@@ -59,6 +61,9 @@ HTML `<button>` element based {{ $frontmatter.title }}.
 Variable HTML element based {{ $frontmatter.title }}.
 
 * [VvEl](/components/elements/vv-el)
+* [VvFa](/components/elements/vv-fa)
+* [VvPrism](/components/elements/vv-prism)
+* [VvPrismVars](/components/elements/vv-prism-vars)
 
 
 

@@ -8,6 +8,7 @@ import vvFaVueSsgFile from '../generators/vvFaVueSsgFile.mjs'
 
 import vvFaTestJsFile from '../generators/vvFaTestJsFile.mjs'
 
+import cliData from '../helpers/cliData.mjs'
 import cwd from '../helpers/cwd.mjs'
 import run from '../helpers/run.mjs'
 import vvBrand from '../helpers/vvBrand.mjs'
@@ -39,10 +40,10 @@ export default function (userOptionsObject, faFreeDepObject, isSsg = false) {
     }
 
     // check for the vitest dep
-    if ( userOpts.deps.includes( vitestDepObject.name ) ) {
+    if ( userOptionsObject.deps.includes( cliData.stacks.vueTwViteTs.deps.vitest.name ) || userOptionsObject.deps.includes( cliData.stacks.vueTwViteSsgMdTs.deps.vitest.name ) ) {
 
         // install VvFa.test.js file
-        if ( userOpts.files.includes( faFreeDepObject.files.vvFaTestJs.name ) ) {
+        if ( userOptionsObject.files.includes( faFreeDepObject.files.vvFaTestJs.name ) ) {
 
             fs.outputFileSync(cwd + faFreeDepObject.files.vvFaTestJs.path + faFreeDepObject.files.vvFaTestJs.name, vvFaTestJsFile(), { flag: 'w+' })
 

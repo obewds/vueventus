@@ -1,5 +1,7 @@
 // ./cli/helpers/moveViteTsFilesToRoot.mjs
 
+import fs from 'fs-extra'
+
 import moveFile from './moveFile.mjs'
 import cwd from './cwd.mjs'
 
@@ -17,6 +19,11 @@ export default function (viteDirectoryString) {
 
     files.forEach( (file) => {
         moveFile(cwd + '/' + viteDirectoryString + '/' + file.from, cwd + '/' + file.to)
+    })
+
+    fs.remove(cwd + '/src/style.css', err => {
+        if (err) return console.error(err)
+        // console.log('success!')
     })
 
 }

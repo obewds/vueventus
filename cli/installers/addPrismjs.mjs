@@ -9,6 +9,7 @@ import vvPrismVueFile from '../generators/vvPrismVueFile.mjs'
 import vvPrismTestJsFile from '../generators/vvPrismTestJsFile.mjs'
 import vvPrismVarsTestJsFile from '../generators/vvPrismVarsTestJsFile.mjs'
 
+import cliData from '../helpers/cliData.mjs'
 import cwd from '../helpers/cwd.mjs'
 import run from '../helpers/run.mjs'
 import vvBrand from '../helpers/vvBrand.mjs'
@@ -43,7 +44,7 @@ export default function (userOpts, prismDepObject) {
         }
 
         // check for the vitest dep
-        if ( userOpts.deps.includes( vitestDepObject.name ) ) {
+        if ( userOpts.deps.includes( cliData.stacks.vueTwViteTs.deps.vitest.name ) || userOpts.deps.includes( cliData.stacks.vueTwViteSsgMdTs.deps.vitest.name ) ) {
 
             // install VvPrism.test.js file
             if ( userOpts.files.includes( prismDepObject.files.vvPrismTestJs.name ) ) {

@@ -6,6 +6,7 @@ import helloVueVentusTestJsFile from '../generators/helloVueVentusTestJsFile.mjs
 import helloVueVentusVueFile from '../generators/helloVueVentusVueFile.mjs'
 import vitestConfigTsFile from '../generators/vitestConfigTsFile.mjs'
 
+import bTestJsFile from '../generators/bTestJsFile.mjs'
 import homeTestJsFile from '../generators/homeTestJsFile.mjs'
 import notFound404TestJsFile from '../generators/notFound404TestJsFile.mjs'
 import vvAnchorTestJsFile from '../generators/vvAnchorTestJsFile.mjs'
@@ -20,6 +21,7 @@ import vvRouterLinkTestJsFile from '../generators/vvRouterLinkTestJsFile.mjs'
 import vvScrollUpTestJsFile from '../generators/vvScrollUpTestJsFile.mjs'
 import vvTextareaTestJsFile from '../generators/vvTextareaTestJsFile.mjs'
 
+import cliData from '../helpers/cliData.mjs'
 import cwd from '../helpers/cwd.mjs'
 import run from '../helpers/run.mjs'
 import vvBrand from '../helpers/vvBrand.mjs'
@@ -30,7 +32,7 @@ export default function (userOptionsObject, vitestDepObject) {
 
         run(`npm pkg set scripts.test="vitest --dom"`)
         run(`npm pkg set scripts.coverage="vitest run --dom --coverage"`)
-        run(`npm pkg set scripts.coverage="vitest bench"`)
+        run(`npm pkg set scripts.bench="vitest bench"`)
 
         run(vitestDepObject.install)
 
@@ -52,22 +54,8 @@ export default function (userOptionsObject, vitestDepObject) {
         }
 
         //
-        // install VueVentus page and component test files for vitest
+        // install VueVentus component test files for vitest
         //
-
-        // install Home.test.js file
-        if ( userOptionsObject.files.includes( vitestDepObject.files.homeTestJs.name )) {
-
-            fs.outputFileSync(cwd + vitestDepObject.files.homeTestJs.path + vitestDepObject.files.homeTestJs.name, homeTestJsFile(), { flag: 'w+' })
-            
-        }
-
-        // install NotFound404.test.js file
-        if ( userOptionsObject.files.includes( vitestDepObject.files.notFound404TestJs.name )) {
-
-            fs.outputFileSync(cwd + vitestDepObject.files.notFound404TestJs.path + vitestDepObject.files.notFound404TestJs.name, notFound404TestJsFile(), { flag: 'w+' })
-            
-        }
 
         // install VvAnchor.test.js file
         if ( userOptionsObject.files.includes( vitestDepObject.files.vvAnchorTestJs.name )) {
@@ -145,6 +133,43 @@ export default function (userOptionsObject, vitestDepObject) {
             fs.outputFileSync(cwd + vitestDepObject.files.vvTextareaTestJs.path + vitestDepObject.files.vvTextareaTestJs.name, vvTextareaTestJsFile(), { flag: 'w+' })
             
         }
+
+        //
+        // install VueVentus page test files for vitest
+        //
+
+        // if the stack is the vue-ts stack
+        if ( userOptionsObject.stack === cli.stacks.vueTwViteTs.name ) {
+
+            // install Home.test.js file
+            if ( userOptionsObject.files.includes( vitestDepObject.files.homeTestJs.name )) {
+
+                fs.outputFileSync(cwd + vitestDepObject.files.homeTestJs.path + vitestDepObject.files.homeTestJs.name, homeTestJsFile(), { flag: 'w+' })
+                
+            }
+
+            // install NotFound404.test.js file
+            if ( userOptionsObject.files.includes( vitestDepObject.files.notFound404TestJs.name )) {
+
+                fs.outputFileSync(cwd + vitestDepObject.files.notFound404TestJs.path + vitestDepObject.files.notFound404TestJs.name, notFound404TestJsFile(), { flag: 'w+' })
+                
+            }
+
+        }
+        
+        // if the stack is the ssg stack
+        else if ( userOptionsObject.stack === cli.stacks.vueTwViteSsgMdTs.name ) {
+
+            // install b.test.js file
+            if ( userOptionsObject.files.includes( vitestDepObject.files.bTestJs.name )) {
+
+                fs.outputFileSync(cwd + vitestDepObject.files.bTestJs.path + vitestDepObject.files.bTestJs.name, bTestJsFile(), { flag: 'w+' })
+                
+            }
+
+        }
+
+            
 
         //
         // add test coverage directory to project .gitignore file

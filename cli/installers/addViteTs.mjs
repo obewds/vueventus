@@ -78,9 +78,6 @@ export default function (userOpts, stackObj, installPkgsArr) {
         // generate the routes.ts file
         fs.outputFileSync(cwd + '/src/router/routes.ts', routesTsFile(), { flag: 'w+' })
 
-        // generate the VvRouterLink.vue file
-        fs.outputFileSync(cwd + '/src/components/vv/anchors/VvRouterLink.vue', vvRouterLinkVueFile(), { flag: 'w+' })
-
         console.log(`\nThe ${vvBrand} CLI installed/added the vue-router dep/files successfully!\n`)
 
     }
@@ -111,6 +108,7 @@ export default function (userOpts, stackObj, installPkgsArr) {
     fs.outputFileSync(composVv + 'inputs/VvInput.vue', vvInputVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'inputs/VvRadio.vue', vvRadioVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'lists/VvListItem.vue', vvListItemVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'anchors/VvRouterLink.vue', vvRouterLinkVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'textareas/VvTextarea.vue', vvTextareaVueFile(), { flag: 'w+' })
     
     
