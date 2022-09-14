@@ -318,17 +318,6 @@ npm run coverage
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 ## SSG Stack: Installed File Structure
 
 {{ stack2 }} Stack:
