@@ -5,16 +5,17 @@ export default function (isSsg = false) {
 const template = `
     <FontAwesomeIcon :icon="[family, icon]" :size="size"/>
 `
-const ssgTemplate = `
-    <client-only>
-        <FontAwesomeIcon :icon="[family, icon]" :size="size"/>
-    </client-only>
-`
+// const ssgTemplate = `
+//     <client-only>
+//         <FontAwesomeIcon :icon="[family, icon]" :size="size"/>
+//     </client-only>
+// `
 
 let variation = template
 
 if (isSsg === true) {
-    variation = ssgTemplate
+    // variation = ssgTemplate
+    variation = template
 }
 
 return `<!-- ./src/components/vv/elements/VvFa.vue -->
