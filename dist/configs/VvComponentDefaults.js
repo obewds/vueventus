@@ -64,6 +64,16 @@ export default {
         palette: 'default',
         size: 'md',
     },
+    "VvRouterLink": {
+        button: false,
+        buttonBlock: false,
+        buttonFab: false,
+        buttonSize: 'md',
+        color: 'default',
+        external: false,
+        to: '/',
+        palette: 'default',
+    },
     "VvTextarea": {
         color: 'default',
         palette: 'default',
