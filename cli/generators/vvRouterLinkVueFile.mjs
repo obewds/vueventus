@@ -15,27 +15,27 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
         props: {
             button: {
                 type: Boolean,
-                default: appVv.defaults.VvAnchor.button,
+                default: appVv.defaults.VvRouterLink.button,
             },
             buttonBlock: {
                 type: Boolean,
-                default: appVv.defaults.VvAnchor.buttonBlock,
+                default: appVv.defaults.VvRouterLink.buttonBlock,
             },
             buttonFab: {
                 type: Boolean,
-                default: appVv.defaults.VvAnchor.buttonFab,
+                default: appVv.defaults.VvRouterLink.buttonFab,
             },
             buttonSize: {
                 type: String,
-                default: appVv.defaults.VvAnchor.buttonSize,
+                default: appVv.defaults.VvRouterLink.buttonSize,
             },
             color: {
                 type: String,
-                default: appVv.defaults.VvAnchor.color,
+                default: appVv.defaults.VvRouterLink.color,
             },
             palette: {
                 type: String,
-                default: appVv.defaults.VvAnchor.palette,
+                default: appVv.defaults.VvRouterLink.palette,
             },
             to: {
                 type: String,
@@ -53,7 +53,7 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
 
                 if ( props.button === true ) {
 
-                    // collect classes for VvAnchor with button styling
+                    // collect classes for VvRouterLink with button styling
 
                     if (props.buttonBlock === true && props.buttonFab === false) {
 
@@ -93,7 +93,7 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
 
                 } else {
 
-                    // collect classes for VvAnchor with anchor styling
+                    // collect classes for VvRouterLink with anchor styling
 
                     if ( vv.anchors.base() ) {
                         output.push( vv.anchors.base() )
