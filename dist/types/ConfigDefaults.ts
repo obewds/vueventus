@@ -8,6 +8,7 @@ import type { VvElProps } from '../types/VvElProps'
 import type { VvInputProps } from '../types/VvInputProps'
 import type { VvListItemProps } from '../types/VvListItemProps'
 import type { VvRadioProps } from '../types/VvRadioProps'
+import type { VvRouterLinkProps } from '../types/VvRouterLinkProps'
 import type { VvTextareaProps } from '../types/VvTextareaProps'
 
 
@@ -20,6 +21,7 @@ export interface ConfigDefaults {
     VvInput: VvInputProps
     VvListItem: VvListItemProps
     VvRadio: VvRadioProps
+    VvRouterLink: VvRouterLinkProps
     VvTextarea: VvTextareaProps
     [key: string]: any
 }
