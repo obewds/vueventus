@@ -26,7 +26,9 @@ import TextDefault from './palettes/TextDefault.js'
 
 import VvComponentDefaults from './VvComponentDefaults'
 
-export default {
+import type { ConfigVv } from '../types/ConfigVv'
+
+export default <ConfigVv>{
     //
     // Design System Defaults
     //
