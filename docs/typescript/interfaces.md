@@ -910,6 +910,27 @@ import type { VvRadioProps } from '@obewds/vueventus'
 
 
 
+## VvRouterLinkProps
+
+### Import
+
+```javascript
+import type { VvRouterLinkProps } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/VvRouterLinkProps.ts
+
+
+
+
+
+
+
+
+
+
 
 
 
