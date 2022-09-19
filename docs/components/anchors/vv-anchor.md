@@ -229,9 +229,9 @@ Default: **`"{{ VvConfig.defaults.VvAnchor.color }}"`**
 
 The {{ $frontmatter.title }} `color` prop sets the component instance color based both on the `color` prop and the `palette` prop values together with the `button` prop value.
 
-If the `button` prop value is `false` and the component is being used to output a visually text styled `<anchor>` element, then the `color` prop value pulls a color from an anchor palette.
+If the `button` prop value is `false` and the component is being used to output a visually text styled `<a>` element, then the `color` prop value pulls classes from an anchor palette.
 
-Conversely, if the `button` prop value is `true` and button mode is enabled to output a visually text styled `<button>` element, then the `color` prop value is pulls a color from a button palette.
+Conversely, if the `button` prop value is `true` and button mode is enabled to output a visually button styled `<a>` element, then the `color` prop value pulls classes from a button palette.
 
 !!!include(snippets/vvAnchorCompoPaletteButtonTip.md)!!!
 
@@ -352,9 +352,9 @@ Default: **`"{{ VvConfig.defaults.VvAnchor.palette }}"`**
 
 The {{ $frontmatter.title }} `palette` prop sets the component instance color based both on the `palette` prop and the `color` prop values together with the `button` prop value.
 
-If the `button` prop value is `false` and the component is being used to output a visually text styled `<anchor>` element, then the `palette` prop value points to an anchor palette.
+If the `button` prop value is `false` and the component is being used to output a visually text styled `<a>` element, then the `color` prop value pulls classes from an anchor palette.
 
-Conversely, if the `button` prop value is `true` and button mode is enabled to output a visually text styled `<button>` element, then the `color` prop value points to a button palette.
+Conversely, if the `button` prop value is `true` and button mode is enabled to output a visually button styled `<a>` element, then the `color` prop value pulls classes from a button palette.
 
 !!!include(snippets/vvAnchorCompoPaletteButtonTip.md)!!!
 
