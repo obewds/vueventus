@@ -145,12 +145,6 @@ let baseVueTsOnlyFiles = {
         path: '/',
         src: tsconfigJsonFile(false),
     },
-    vvRouterLinkVue: {
-        name: 'VvRouterLink.vue',
-        checked: true,
-        path: '/src/components/vv/anchors/',
-        src: vvRouterLinkVueFile(),
-    },
 }
 
 let baseVvSsgOnlyTsFiles = {
@@ -276,6 +270,12 @@ let baseVvTsCompos = {
         checked: true,
         path: '/src/components/vv/inputs/',
         src: vvRadioVueFile(),
+    },
+    vvRouterLinkVue: {
+        name: 'VvRouterLink.vue',
+        checked: true,
+        path: '/src/components/vv/anchors/',
+        src: vvRouterLinkVueFile(),
     },
     vvTextareaVue: {
         name: 'VvTextarea.vue',

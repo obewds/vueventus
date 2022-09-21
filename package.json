@@ -1,7 +1,7 @@
 {
   "name": "@obewds/vueventus",
   "description": "A component library and styling management system for modern Vue.js, Tailwind CSS, and Typescript apps",
-  "version": "0.51.0",
+  "version": "0.51.1",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
   "license": "MIT",
@@ -43,7 +43,7 @@
     "@vitest/coverage-c8": "^0.23.4",
     "@vue/test-utils": "^2.0.2",
     "auto-changelog": "^2.4.0",
-    "autoprefixer": "^10.4.11",
+    "autoprefixer": "^10.4.12",
     "chalk": "^5.0.1",
     "happy-dom": "^6.0.4",
     "markdown-it-include": "^2.0.0",
