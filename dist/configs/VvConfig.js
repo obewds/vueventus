@@ -21,7 +21,7 @@ import InputDefault from './palettes/InputDefault.js';
 import InputUnderlined from './palettes/InputUnderlined.js';
 import RadioDefault from './palettes/RadioDefault.js';
 import TextDefault from './palettes/TextDefault.js';
-import VvComponentDefaults from './VvComponentDefaults';
+import VvComponentDefaults from './VvComponentDefaults.js';
 export default {
     //
     // Design System Defaults
