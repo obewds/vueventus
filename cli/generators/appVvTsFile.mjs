@@ -1,6 +1,6 @@
 // ./cli/generators/appVvTsFile.mjs
 
-import VvConfig from '../../src/configs/VvConfig'
+import { VvConfig } from '@obewds/vueventus'
 
 export default function () {
 
