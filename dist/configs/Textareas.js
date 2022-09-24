@@ -1,5 +1,5 @@
 // ./src/configs/Textareas.ts
-import Inputs from './Inputs';
+import Inputs from './Inputs.js';
 import Transitions from './Transitions.js';
 export default {
     border: 'border',
