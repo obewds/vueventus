@@ -29,4 +29,4 @@ export default {
         ].join(' ').replace(/\s+/g, ' ').trim();
     },
 };
-//# sourceMappingURL=Anchors.mjs.map
+//# sourceMappingURL=Anchors.js.map

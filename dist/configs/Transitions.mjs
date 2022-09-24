@@ -89,4 +89,4 @@ export default {
         ].join(' ').replace(/\s+/g, ' ').trim();
     },
 };
-//# sourceMappingURL=Transitions.mjs.map
+//# sourceMappingURL=Transitions.js.map

@@ -7,4 +7,4 @@ export default {
     secondary: 'border-violet-600 dark:border-violet-300',
     success: 'border-green-600 dark:border-green-300',
 };
-//# sourceMappingURL=BorderDefault.mjs.map
+//# sourceMappingURL=BorderDefault.js.map

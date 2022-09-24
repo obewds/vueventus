@@ -39,4 +39,4 @@ export default {
         ].join(' ').replace(/\s+/g, ' ').trim();
     },
 };
-//# sourceMappingURL=Checkboxes.mjs.map
+//# sourceMappingURL=Checkboxes.js.map

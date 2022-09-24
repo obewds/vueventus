@@ -81,4 +81,4 @@ export default {
         rowSize: 'md',
     },
 };
-//# sourceMappingURL=VvComponentDefaults.mjs.map
+//# sourceMappingURL=VvComponentDefaults.js.map

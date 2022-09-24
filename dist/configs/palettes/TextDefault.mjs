@@ -7,4 +7,4 @@ export default {
     success: 'text-green-600 dark:text-green-300',
     neutral: 'dark:text-gray-100 text-gray-900',
 };
-//# sourceMappingURL=TextDefault.mjs.map
+//# sourceMappingURL=TextDefault.js.map

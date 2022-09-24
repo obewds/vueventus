@@ -6,4 +6,4 @@ export default {
     secondary: 'text-violet-800 bg-violet-200 dark:bg-violet-800 dark:text-violet-200',
     success: 'text-green-800 bg-green-300 dark:bg-green-800 dark:text-green-300',
 };
-//# sourceMappingURL=GroundMonochromatic.mjs.map
+//# sourceMappingURL=GroundMonochromatic.js.map

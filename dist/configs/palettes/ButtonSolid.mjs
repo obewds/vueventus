@@ -6,4 +6,4 @@ export default {
     secondary: 'text-white bg-teal-500 hover:bg-teal-600 focus:bg-teal-600 active:bg-teal-700 border-teal-500 hover:border-teal-600 focus:border-teal-100 dark:focus:border-teal-900 focus:ring-teal-600 dark:focus:ring-teal-200',
     success: 'text-white bg-green-500 hover:bg-green-600 focus:bg-green-600 active:bg-green-700 border-green-500 hover:border-green-600 focus:border-green-100 dark:focus:border-green-900 focus:ring-green-600 dark:focus:ring-green-200',
 };
-//# sourceMappingURL=ButtonSolid.mjs.map
+//# sourceMappingURL=ButtonSolid.js.map

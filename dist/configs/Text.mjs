@@ -54,4 +54,4 @@ export default {
         ].join(' ').replace(/\s+/g, ' ').trim();
     },
 };
-//# sourceMappingURL=Text.mjs.map
+//# sourceMappingURL=Text.js.map
