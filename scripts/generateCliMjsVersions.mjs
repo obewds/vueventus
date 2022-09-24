@@ -37,7 +37,7 @@ function processFileForMjsUseSync(filePath) {
     
     var fileData = fs.readFileSync(srcFile, 'utf-8')
 
-    var updatedData = fileData.replace(/\.js/gm, '.mjs')
+    var updatedData = fileData.replace(/\.js';/gm, ".mjs';")
 
     fs.writeFileSync(destFile, updatedData, 'utf-8')
 
