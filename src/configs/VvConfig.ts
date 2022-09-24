@@ -24,7 +24,7 @@ import InputUnderlined from './palettes/InputUnderlined.js'
 import RadioDefault from './palettes/RadioDefault.js'
 import TextDefault from './palettes/TextDefault.js'
 
-import VvComponentDefaults from './VvComponentDefaults'
+import VvComponentDefaults from './VvComponentDefaults.js'
 
 import type { ConfigVv } from '../types/ConfigVv'
 
