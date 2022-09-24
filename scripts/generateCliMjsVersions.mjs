@@ -4,30 +4,30 @@ import fs from 'fs-extra'
 import chalk from 'chalk'
 
 const files = [
-    'configs/palettes/AnchorDefault.js',
-    'configs/palettes/BorderDefault.js',
-    'configs/palettes/ButtonOutline.js',
-    'configs/palettes/ButtonSolid.js',
-    'configs/palettes/CheckboxDefault.js',
-    'configs/palettes/GroundConsole.js',
-    'configs/palettes/GroundDefault.js',
-    'configs/palettes/GroundMonochromatic.js',
-    'configs/palettes/GroundPastel.js',
-    'configs/palettes/InputDefault.js',
-    'configs/palettes/InputUnderlined.js',
-    'configs/palettes/RadioDefault.js',
-    'configs/palettes/TextDefault.js',
-    'configs/Anchors.js',
-    'configs/Buttons.js',
-    'configs/Checkboxes.js',
-    'configs/ColorModes.js',
-    'configs/Inputs.js',
-    'configs/Radios.js',
-    'configs/Text.js',
-    'configs/Textareas.js',
-    'configs/Transitions.js',
-    'configs/VvComponentDefaults.js',
-    'configs/VvConfig.js',
+    'configs/palettes/AnchorDefault',
+    'configs/palettes/BorderDefault',
+    'configs/palettes/ButtonOutline',
+    'configs/palettes/ButtonSolid',
+    'configs/palettes/CheckboxDefault',
+    'configs/palettes/GroundConsole',
+    'configs/palettes/GroundDefault',
+    'configs/palettes/GroundMonochromatic',
+    'configs/palettes/GroundPastel',
+    'configs/palettes/InputDefault',
+    'configs/palettes/InputUnderlined',
+    'configs/palettes/RadioDefault',
+    'configs/palettes/TextDefault',
+    'configs/Anchors',
+    'configs/Buttons',
+    'configs/Checkboxes',
+    'configs/ColorModes',
+    'configs/Inputs',
+    'configs/Radios',
+    'configs/Text',
+    'configs/Textareas',
+    'configs/Transitions',
+    'configs/VvComponentDefaults',
+    'configs/VvConfig',
 ]
 
 function processFileForMjsUseSync(filePath) {
@@ -35,20 +35,15 @@ function processFileForMjsUseSync(filePath) {
     let srcFile = './dist/' + filePath + '.js'
     let destFile = './dist/' + filePath + '.mjs'
     
-    var fileData = fs.readFileSync(srcFile, 'utf-8');
+    var fileData = fs.readFileSync(srcFile, 'utf-8')
 
-    var updatedData = fileData.replace(/\.js/gm, '.mjs');
+    var updatedData = fileData.replace(/\.js/gm, '.mjs')
 
-    fs.writeFileSync(destFile, updatedData, 'utf-8');
+    fs.writeFileSync(destFile, updatedData, 'utf-8')
 
     console.log(chalk.green.bold(chalk.white('*\\o/*') + ' The VueVentus CLI ' + destFile + ' file was created successfully! ' + chalk.white('*\\o/*')))
 
 }
-
-// Create am updated VvConfig.mjs file for the CLI tooling to use
-// fs.copySync('./dist/configs/VvConfig.js', './dist/configs/VvConfig.mjs')
-// log(chalk.green.bold(prefix + './dist/configs/VvConfig.mjs' + suffix))
-// log(' ')
 
 for (let i=0; i < files.length; i++) {
     
