@@ -1,27 +1,27 @@
 // ./src/configs/VvConfig.ts
-import Anchors from './Anchors.js';
-import Buttons from './Buttons.js';
-import Checkboxes from './Checkboxes.js';
-import ColorModes from './ColorModes.js';
-import Inputs from './Inputs.js';
-import Radios from './Radios.js';
-import Text from './Text.js';
-import Textareas from './Textareas.js';
-import Transitions from './Transitions.js';
-import AnchorDefault from './palettes/AnchorDefault.js';
-import BorderDefault from './palettes/BorderDefault.js';
-import ButtonOutline from './palettes/ButtonOutline.js';
-import ButtonSolid from './palettes/ButtonSolid.js';
-import CheckboxDefault from './palettes/CheckboxDefault.js';
-import GroundConsole from './palettes/GroundConsole.js';
-import GroundDefault from './palettes/GroundDefault.js';
-import GroundMonochromatic from './palettes/GroundMonochromatic.js';
-import GroundPastel from './palettes/GroundPastel.js';
-import InputDefault from './palettes/InputDefault.js';
-import InputUnderlined from './palettes/InputUnderlined.js';
-import RadioDefault from './palettes/RadioDefault.js';
-import TextDefault from './palettes/TextDefault.js';
-import VvComponentDefaults from './VvComponentDefaults.js';
+import Anchors from './Anchors.mjs';
+import Buttons from './Buttons.mjs';
+import Checkboxes from './Checkboxes.mjs';
+import ColorModes from './ColorModes.mjs';
+import Inputs from './Inputs.mjs';
+import Radios from './Radios.mjs';
+import Text from './Text.mjs';
+import Textareas from './Textareas.mjs';
+import Transitions from './Transitions.mjs';
+import AnchorDefault from './palettes/AnchorDefault.mjs';
+import BorderDefault from './palettes/BorderDefault.mjs';
+import ButtonOutline from './palettes/ButtonOutline.mjs';
+import ButtonSolid from './palettes/ButtonSolid.mjs';
+import CheckboxDefault from './palettes/CheckboxDefault.mjs';
+import GroundConsole from './palettes/GroundConsole.mjs';
+import GroundDefault from './palettes/GroundDefault.mjs';
+import GroundMonochromatic from './palettes/GroundMonochromatic.mjs';
+import GroundPastel from './palettes/GroundPastel.mjs';
+import InputDefault from './palettes/InputDefault.mjs';
+import InputUnderlined from './palettes/InputUnderlined.mjs';
+import RadioDefault from './palettes/RadioDefault.mjs';
+import TextDefault from './palettes/TextDefault.mjs';
+import VvComponentDefaults from './VvComponentDefaults.mjs';
 export default {
     //
     // Design System Defaults
@@ -95,4 +95,4 @@ export default {
     //
     defaults: VvComponentDefaults,
 };
-//# sourceMappingURL=VvConfig.js.map
+//# sourceMappingURL=VvConfig.mjs.map
