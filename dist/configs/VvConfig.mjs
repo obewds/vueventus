@@ -95,4 +95,4 @@ export default {
     //
     defaults: VvComponentDefaults,
 };
-//# sourceMappingURL=VvConfig.mjs.map
+//# sourceMappingURL=VvConfig.js.map

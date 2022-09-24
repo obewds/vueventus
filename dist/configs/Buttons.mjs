@@ -124,4 +124,4 @@ export default {
         ].join(' ').replace(/\s+/g, ' ').trim();
     },
 };
-//# sourceMappingURL=Buttons.mjs.map
+//# sourceMappingURL=Buttons.js.map

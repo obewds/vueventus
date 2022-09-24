@@ -6,4 +6,4 @@ export default {
     secondary: 'focus:ring-teal-500 text-teal-600 dark:focus:ring-teal-200 dark:text-teal-300',
     success: 'focus:ring-green-600 text-green-600 dark:focus:ring-green-200 dark:text-green-300',
 };
-//# sourceMappingURL=RadioDefault.mjs.map
+//# sourceMappingURL=RadioDefault.js.map

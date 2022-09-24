@@ -21,4 +21,4 @@ export default {
         ].join(' ').replace(/\s+/g, ' ').trim();
     },
 };
-//# sourceMappingURL=ColorModes.mjs.map
+//# sourceMappingURL=ColorModes.js.map

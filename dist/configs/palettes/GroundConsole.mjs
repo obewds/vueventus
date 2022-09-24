@@ -6,4 +6,4 @@ export default {
     secondary: 'font-mono text-violet-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80',
     success: 'font-mono text-green-300 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80',
 };
-//# sourceMappingURL=GroundConsole.mjs.map
+//# sourceMappingURL=GroundConsole.js.map

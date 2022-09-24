@@ -6,4 +6,4 @@ export default {
     secondary: 'text-teal-500 hover:text-teal-600 dark:text-teal-300 dark:hover:text-teal-200',
     success: 'text-green-600 hover:text-green-700 dark:text-green-300 dark:hover:text-green-200',
 };
-//# sourceMappingURL=AnchorDefault.mjs.map
+//# sourceMappingURL=AnchorDefault.js.map

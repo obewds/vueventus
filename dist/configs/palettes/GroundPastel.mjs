@@ -6,4 +6,4 @@ export default {
     secondary: 'text-black bg-violet-200 dark:bg-violet-300',
     success: 'text-black bg-green-300 dark:bg-green-400',
 };
-//# sourceMappingURL=GroundPastel.mjs.map
+//# sourceMappingURL=GroundPastel.js.map
