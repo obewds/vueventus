@@ -18,10 +18,10 @@
     "changelog": "auto-changelog --package --unreleased --backfill-limit 20",
     "tag": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
     "cleanup": "node scripts/cleanup.mjs",
-    "cliVvConfig": "node scripts/generateVvConfigForCli.mjs",
+    "cli:mjs": "node scripts/generateCliMjsVersions.mjs",
     "originals": "node scripts/copyToDist.mjs",
     "pkg:org": "npm config set scope obewds",
-    "generate": "npx rimraf dist && npx rimraf docs/.vitepress/dist && npm run build && vue-tsc --emitDeclarationOnly && tsc && npm run cliVvConfig && npm run docs:build && npm run originals && npm run changelog"
+    "generate": "npx rimraf dist && npx rimraf docs/.vitepress/dist && npm run build && vue-tsc --emitDeclarationOnly && tsc && npm run cli:mjs && npm run docs:build && npm run originals && npm run changelog"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
