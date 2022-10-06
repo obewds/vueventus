@@ -39,6 +39,9 @@ import VvColorModeButtonPage from '@/views/components/buttons/VvColorModeButtonP
 // element component pages
 import VvElPage from '@/views/components/elements/VvElPage.vue'
 
+// element component pages
+import VvFormGroupPage from '@/views/components/forms/VvFormGroupPage.vue'
+
 // input component pages
 import VvCheckboxPage from '@/views/components/inputs/VvCheckboxPage.vue'
 import VvInputPage from '@/views/components/inputs/VvInputPage.vue'
@@ -170,7 +173,7 @@ const router = createRouter({
         },
         
         //
-        // anchor component pages
+        // anchors component pages
         //
 
         {
@@ -180,7 +183,7 @@ const router = createRouter({
         },
         
         //
-        // button component pages
+        // buttons component pages
         //
 
         {
@@ -194,7 +197,7 @@ const router = createRouter({
         },
         
         //
-        // element component pages
+        // elements component pages
         //
 
         {
@@ -204,7 +207,17 @@ const router = createRouter({
         },
         
         //
-        // input component pages
+        // forms component pages
+        //
+
+        {
+            name: 'VvFormGroup Component',
+            component: VvFormGroupPage,
+            path: '/components/forms/vv-form-group'
+        },
+        
+        //
+        // inputs component pages
         //
 
         {
@@ -222,7 +235,7 @@ const router = createRouter({
         },
         
         //
-        // logo component pages
+        // logos component pages
         //
 
         {
@@ -240,7 +253,7 @@ const router = createRouter({
         },
         
         //
-        // list component pages
+        // lists component pages
         //
 
         {
@@ -250,7 +263,7 @@ const router = createRouter({
         },
         
         //
-        // textarea component pages
+        // textareas component pages
         //
 
         {
