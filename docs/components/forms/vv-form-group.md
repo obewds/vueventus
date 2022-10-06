@@ -228,7 +228,132 @@ The {{ $frontmatter.title }} `errorText` prop sets the text string for the compo
         :display-error="true"
         error-text="This is the error-text"
     >
-        <VvInput id="errorClasses-id" placeholder="Example VvInput"/>
+        <VvInput id="errorText-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+## Prop: errorTextColor
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.errorTextColor }}"`**
+
+The {{ $frontmatter.title }} `errorTextColor` prop sets the error text's underlying VvEl component's text palette color.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="errorTextColor-id"
+    :display-error="true"
+    error-text-color="secondary"
+    error-text="This is secondary color error text!"
+>
+    <VvInput id="errorTextColor-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="errorTextColor-id"
+        :display-error="true"
+        error-text-color="secondary"
+        error-text="This is secondary color error text!"
+    >
+        <VvInput id="errorTextColor-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+## Prop: errorTextPalette
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.errorTextPalette }}"`**
+
+The {{ $frontmatter.title }} `errorTextPalette` prop sets the error text's underlying VvEl component's text palette value.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="errorTextPalette-id"
+    :display-error="true"
+    error-text-palette="default"
+    error-text="Example text"
+>
+    <VvInput id="errorTextPalette-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="errorTextPalette-id"
+        :display-error="true"
+        error-text-palette="default"
+        error-text="Example text"
+    >
+        <VvInput id="errorTextPalette-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+
+
+## Prop: helpClasses
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.helpClasses }}"`**
+
+The {{ $frontmatter.title }} `helpClasses` prop sets the classes for the component help text's parent element.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="helpClasses-id"
+    :display-help="true"
+    help-classes="text-2xl"
+    help-text="Example help text"
+>
+    <VvInput id="helpClasses-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="helpClasses-id"
+        :display-help="true"
+        help-classes="text-2xl"
+        help-text="Example help text"
+    >
+        <VvInput id="helpClasses-id" placeholder="Example VvInput"/>
     </VvFormGroup>
 </div>
 
@@ -241,19 +366,586 @@ The {{ $frontmatter.title }} `errorText` prop sets the text string for the compo
 
 
 
-<!-- TODO: add docs for prop errorTextColor -->
-<!-- TODO: add docs for prop helpClasses -->
-<!-- TODO: add docs for prop helpText -->
-<!-- TODO: add docs for prop helpTextColor -->
-<!-- TODO: add docs for prop label -->
-<!-- TODO: add docs for prop labelFor -->
-<!-- TODO: add docs for prop labelClasses -->
-<!-- TODO: add docs for prop labelTextColor -->
-<!-- TODO: add docs for prop slotParentClasses -->
-<!-- TODO: add docs for prop successClasses -->
-<!-- TODO: add docs for prop successText -->
-<!-- TODO: add docs for prop successTextColor -->
-<!-- TODO: add docs for prop wrapperClasses -->
+## Prop: helpText
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.helpText }}"`**
+
+The {{ $frontmatter.title }} `helpText` prop sets the text string for the component help text.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="helpText-id"
+    :display-help="true"
+    help-text="This is the help-text"
+>
+    <VvInput id="helpText-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="helpText-id"
+        :display-help="true"
+        help-text="This is the help-text"
+    >
+        <VvInput id="helpText-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+## Prop: helpTextColor
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.helpTextColor }}"`**
+
+The {{ $frontmatter.title }} `helpTextColor` prop sets the help text's underlying VvEl component's text palette color.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="helpTextColor-id"
+    :display-help="true"
+    help-text-color="secondary"
+    help-text="This is secondary color help text!"
+>
+    <VvInput id="helpTextColor-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="helpTextColor-id"
+        :display-help="true"
+        help-text-color="secondary"
+        help-text="This is secondary color help text!"
+    >
+        <VvInput id="helpTextColor-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+## Prop: helpTextPalette
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.helpTextPalette }}"`**
+
+The {{ $frontmatter.title }} `helpTextPalette` prop sets the help text's underlying VvEl component's text palette value.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="helpTextPalette-id"
+    :display-help="true"
+    help-text-palette="default"
+    help-text="Example text"
+>
+    <VvInput id="helpTextPalette-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="helpTextPalette-id"
+        :display-help="true"
+        help-text-palette="default"
+        help-text="Example text"
+    >
+        <VvInput id="helpTextPalette-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+
+
+
+## Prop: label
+
+Type: **`String`**  
+Required: **`true`**
+
+The {{ $frontmatter.title }} `label` prop sets the label text string for the component.
+
+::: danger Required Prop
+The `label` prop is a required prop for each instance of the {{ $frontmatter.title }}.
+:::
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="label-id"
+>
+    <VvInput id="label-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="label-id"
+    >
+        <VvInput id="label-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+
+
+
+## Prop: labelFor
+
+Type: **`String`**  
+Required: **`true`**
+
+The {{ $frontmatter.title }} `labelFor` prop sets the component's returned label `for` attribute value, so you can match that with a slotted VvInput component for example, to properly associate the label to the input for both semantics and usability advantages.
+
+::: danger Required Prop
+The `labelFor` prop is a required prop for each instance of the {{ $frontmatter.title }}.
+:::
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="labelFor-id"
+>
+    <VvInput id="labelFor-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="labelFor-id"
+    >
+        <VvInput id="labelFor-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+
+
+
+## Prop: labelClasses
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.labelClasses }}"`**
+
+The {{ $frontmatter.title }} `labelClasses` prop sets the component's returned label element's class value.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="labelClasses-id"
+    label-classes="text-2xl uppercase"
+>
+    <VvInput id="labelClasses-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="labelClasses-id"
+        label-classes="text-2xl uppercase"
+    >
+        <VvInput id="labelClasses-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+
+
+
+## Prop: labelTextColor
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.labelTextColor }}"`**
+
+The {{ $frontmatter.title }} `labelTextColor` prop sets the component's returned label's underlying VvEl component's text palette color value.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="labelTextColor-id"
+    label-text-color="primary"
+>
+    <VvInput id="labelTextColor-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="labelTextColor-id"
+        label-text-color="primary"
+    >
+        <VvInput id="labelTextColor-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+## Prop: labelTextPalette
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.labelTextPalette }}"`**
+
+The {{ $frontmatter.title }} `labelTextPalette` prop sets the label text's underlying VvEl component's text palette value.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="labelTextPalette-id"
+    label-text-palette="default"
+>
+    <VvInput id="labelTextPalette-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="labelTextPalette-id"
+        label-text-palette="default"
+    >
+        <VvInput id="labelTextPalette-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+
+
+
+## Prop: slotParentClasses
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.slotParentClasses }}"`**
+
+The {{ $frontmatter.title }} `slotParentClasses` prop sets the component's returned label's underlying VvEl component's text palette color value.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="slotParentClasses-id"
+    slot-parent-classes="flex items-center gap-1"
+>
+    <VvInput id="slotParentClasses-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="slotParentClasses-id"
+        slot-parent-classes="flex items-center gap-1"
+    >
+        <VvInput id="slotParentClasses-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+## Prop: successClasses
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.successClasses }}"`**
+
+The {{ $frontmatter.title }} `successClasses` prop sets the classes for the component success text's parent element.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="successClasses-id"
+    :display-success="true"
+    success-classes="text-2xl"
+    success-text="Example success text"
+>
+    <VvInput id="successClasses-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="successClasses-id"
+        :display-success="true"
+        success-classes="text-2xl"
+        success-text="Example success text"
+    >
+        <VvInput id="successClasses-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+
+
+
+## Prop: successText
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.successText }}"`**
+
+The {{ $frontmatter.title }} `successText` prop sets the text string for the component success text.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="successText-id"
+    :display-success="true"
+    success-text="This is the success-text"
+>
+    <VvInput id="successText-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="successText-id"
+        :display-success="true"
+        success-text="This is the success-text"
+    >
+        <VvInput id="successText-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+## Prop: successTextColor
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.successTextColor }}"`**
+
+The {{ $frontmatter.title }} `successTextColor` prop sets the success text's underlying VvEl component's text palette color.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="successTextColor-id"
+    :display-success="true"
+    success-text-color="secondary"
+    success-text="This is secondary color success text!"
+>
+    <VvInput id="successTextColor-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="successTextColor-id"
+        :display-success="true"
+        success-text-color="secondary"
+        success-text="This is secondary color success text!"
+    >
+        <VvInput id="successTextColor-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+## Prop: successTextPalette
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.successTextPalette }}"`**
+
+The {{ $frontmatter.title }} `successTextPalette` prop sets the success text's underlying VvEl component's text palette value.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="successTextPalette-id"
+    :display-success="true"
+    success-text-palette="default"
+    success-text="Example text"
+>
+    <VvInput id="successTextPalette-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="successTextPalette-id"
+        :display-success="true"
+        success-text-palette="default"
+        success-text="Example text"
+    >
+        <VvInput id="successTextPalette-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
+
+
+
+
+## Prop: wrapperClasses
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.wrapperClasses }}"`**
+
+The {{ $frontmatter.title }} `wrapperClasses` prop sets the classes for the component's outermost wrapping/parent element.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="wrapperClasses-id"
+    wrapper-classes="w-1/2 grid grid-cols-1 gap-3"
+>
+    <VvInput id="wrapperClasses-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="wrapperClasses-id"
+        wrapper-classes="w-1/2 grid grid-cols-1 gap-3"
+    >
+        <VvInput id="wrapperClasses-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+
+
+
+
+
 
 
 
@@ -274,16 +966,19 @@ The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child 
 ```html
 <VvFormGroup
     label="Example Label:"
-    label-for="example-id"
+    label-for="example-slot-id"
 >
-    <VvInput id="example-id"/>
+    <VvInput id="example-slot-id"/>
 </VvFormGroup>
 ```
 
 ### Result
 
 <div class="w-full pt-4">
-    <VvFormGroup>
+    <VvFormGroup
+        label="Example Label:"
+        label-for="example-slot-id"
+    >
         Slot <span class="text-red-500 dark:text-red-300">Content</span>
     </VvFormGroup>
 </div>
@@ -295,5 +990,3 @@ The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child 
 
 
 <DocsPackageVersion/>
-
-
