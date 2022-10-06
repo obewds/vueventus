@@ -1,5 +1,5 @@
-import { defineComponent as C, inject as x, computed as p, openBlock as m, createElementBlock as v, normalizeClass as h, renderSlot as P, ref as Te, onMounted as rt, resolveComponent as st, createBlock as Ie, withCtx as Ee, createCommentVNode as Se, createElementVNode as S, resolveDynamicComponent as ot, useCssVars as De } from "vue";
-const Le = {
+import { defineComponent as S, inject as m, computed as x, openBlock as b, createElementBlock as y, normalizeClass as h, renderSlot as I, ref as De, onMounted as at, resolveComponent as Le, createBlock as Y, withCtx as N, createCommentVNode as G, createElementVNode as v, resolveDynamicComponent as nt, createVNode as lt, createTextVNode as re, toDisplayString as se, useCssVars as Ne } from "vue";
+const Ge = {
   align: "",
   decoration: "",
   family: "",
@@ -106,19 +106,19 @@ const Le = {
     transform: "transition-transform"
   },
   getDurationClasses: function(e) {
-    var s, o, n;
+    var s, o, a;
     const t = e && ((s = this.durations) == null ? void 0 : s[e]) ? e : "300";
-    return (o = this.durations) != null && o[t] ? (n = this.durations) == null ? void 0 : n[t] : "";
+    return (o = this.durations) != null && o[t] ? (a = this.durations) == null ? void 0 : a[t] : "";
   },
   getEasingClasses: function(e) {
-    var s, o, n;
+    var s, o, a;
     const t = e && ((s = this.easings) == null ? void 0 : s[e]) ? e : "inOut";
-    return (o = this.easings) != null && o[t] ? (n = this.easings) == null ? void 0 : n[t] : "";
+    return (o = this.easings) != null && o[t] ? (a = this.easings) == null ? void 0 : a[t] : "";
   },
   getTransitionClasses: function(e) {
-    var s, o, n;
+    var s, o, a;
     const t = e && ((s = this.transitions) == null ? void 0 : s[e]) ? e : "default";
-    return (o = this.transitions) != null && o[t] ? (n = this.transitions) == null ? void 0 : n[t] : "";
+    return (o = this.transitions) != null && o[t] ? (a = this.transitions) == null ? void 0 : a[t] : "";
   },
   custom: function(e) {
     const t = {
@@ -133,14 +133,14 @@ const Le = {
     ].join(" ").replace(/\s+/g, " ").trim();
   },
   classes: function(e, t, r) {
-    const s = e || "", o = t || "", n = r || "";
+    const s = e || "", o = t || "", a = r || "";
     return [
       this.getTransitionClasses(s),
       this.getEasingClasses(o),
-      this.getDurationClasses(n)
+      this.getDurationClasses(a)
     ].join(" ").replace(/\s+/g, " ").trim();
   }
-}, nt = {
+}, it = {
   cursor: "cursor-pointer",
   display: "",
   focus: "",
@@ -155,7 +155,7 @@ const Le = {
       this.transition
     ].join(" ").replace(/\s+/g, " ").trim();
   },
-  sizes: Le.sizes,
+  sizes: Ge.sizes,
   getSizeClasses: function(e) {
     const t = e && this.sizes[e] ? e : "md";
     return this.sizes[t];
@@ -167,7 +167,7 @@ const Le = {
       this.getSizeClasses(t)
     ].join(" ").replace(/\s+/g, " ").trim();
   }
-}, at = {
+}, ut = {
   border: "border",
   cursor: "cursor-pointer",
   disabled: "disabled:opacity-25",
@@ -290,7 +290,7 @@ const Le = {
       this.getFabSizeClasses(t)
     ].join(" ").replace(/\s+/g, " ").trim();
   }
-}, lt = {
+}, ct = {
   baseColors: "bg-gray-100 border-gray-400 dark:border-black ring-offset-white dark:ring-offset-gray-800",
   border: "",
   outline: "",
@@ -328,7 +328,7 @@ const Le = {
       this.getSizeClasses(t)
     ].join(" ").replace(/\s+/g, " ").trim();
   }
-}, it = {
+}, dt = {
   dark: {
     ground: "dark:bg-gray-900",
     hex: "#242426",
@@ -349,7 +349,7 @@ const Le = {
       this.dark.text
     ].join(" ").replace(/\s+/g, " ").trim();
   }
-}, Pe = {
+}, Ue = {
   border: "border",
   display: "block w-full",
   outline: "",
@@ -391,7 +391,7 @@ const Le = {
       this.getSizeClasses(t)
     ].join(" ").replace(/\s+/g, " ").trim();
   }
-}, ut = {
+}, ft = {
   baseColors: "bg-gray-100 border-gray-400 dark:border-black ring-offset-white dark:ring-offset-gray-800",
   border: "",
   outline: "",
@@ -429,7 +429,7 @@ const Le = {
       this.getSizeClasses(t)
     ].join(" ").replace(/\s+/g, " ").trim();
   }
-}, ct = {
+}, gt = {
   border: "border",
   display: "block w-full",
   outline: "",
@@ -452,7 +452,7 @@ const Le = {
       this.transition
     ].join(" ").replace(/\s+/g, " ").trim();
   },
-  sizes: Pe.sizes,
+  sizes: Ue.sizes,
   getSizeClasses: function(e) {
     const t = e && this.sizes[e] ? e : "md";
     return this.sizes[t];
@@ -476,83 +476,83 @@ const Le = {
     const t = e && this.rowSizes[e] ? e : "md";
     return this.rowSizes[t];
   }
-}, dt = {
+}, ht = {
   default: "text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-200",
   error: "text-rose-500 hover:text-rose-600 dark:text-rose-300 dark:hover:text-rose-200",
   primary: "text-blue-500 hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-200",
   secondary: "text-teal-500 hover:text-teal-600 dark:text-teal-300 dark:hover:text-teal-200",
   success: "text-green-600 hover:text-green-700 dark:text-green-300 dark:hover:text-green-200"
-}, ft = {
+}, bt = {
   "": "",
   default: "border-gray-200 dark:border-gray-600",
   error: "border-rose-600 dark:border-rose-300",
   primary: "border-blue-600 dark:border-blue-300",
   secondary: "border-violet-600 dark:border-violet-300",
   success: "border-green-600 dark:border-green-300"
-}, gt = {
+}, pt = {
   default: "text-gray-500 dark:text-gray-300 hover:text-white focus:text-white dark:hover:text-white dark:focus:text-white hover:bg-gray-500 focus:bg-gray-500 active:bg-gray-600 border-gray-300 hover:border-gray-500 focus:ring-gray-400 dark:focus:ring-gray-200 focus:border-gray-50 dark:focus:border-gray-900",
   error: "text-rose-500 dark:text-rose-300 hover:text-white dark:hover:text-white focus:text-white dark:focus:text-white hover:bg-rose-500 focus:bg-rose-500 active:bg-rose-600 border-rose-300 hover:border-rose-500 focus:ring-rose-400 dark:focus:ring-rose-200 focus:border-rose-50 dark:focus:border-rose-900",
   primary: "text-blue-500 dark:text-blue-300 hover:text-white dark:hover:text-white focus:text-white dark:focus:text-white hover:bg-blue-500 focus:bg-blue-500 active:bg-blue-600 border-blue-300 hover:border-blue-500 focus:ring-blue-400 dark:focus:ring-blue-200 focus:border-blue-50 dark:focus:border-blue-900",
   secondary: "text-teal-500 dark:text-teal-300 hover:text-white dark:hover:text-white focus:text-white dark:focus:text-white hover:bg-teal-500 focus:bg-teal-500 active:bg-teal-600 border-teal-300 hover:border-teal-500 focus:ring-teal-400 dark:focus:ring-teal-200 focus:border-teal-50 dark:focus:border-teal-900",
   success: "text-green-500 dark:text-green-300 hover:text-white dark:hover:text-white focus:text-white dark:focus:text-white hover:bg-green-500 focus:bg-green-500 active:bg-green-600 border-green-300 hover:border-green-500 focus:ring-green-400 dark:focus:ring-green-200 focus:border-green-50 dark:focus:border-green-900"
-}, ht = {
+}, xt = {
   default: "text-gray-900 bg-gray-100 hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-300 border-gray-100 hover:border-gray-200 focus:border-gray-50 dark:focus:border-gray-900 focus:ring-gray-600 dark:focus:ring-gray-50",
   error: "text-white bg-rose-500 hover:bg-rose-600 focus:bg-rose-600 active:bg-rose-700 border-rose-500 hover:border-rose-600 focus:border-rose-100 dark:focus:border-rose-900 focus:ring-rose-600 dark:focus:ring-rose-200",
   primary: "text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 active:bg-blue-700 border-blue-500 hover:border-blue-600 focus:border-blue-100 dark:focus:border-blue-900 focus:ring-blue-600 dark:focus:ring-blue-200",
   secondary: "text-white bg-teal-500 hover:bg-teal-600 focus:bg-teal-600 active:bg-teal-700 border-teal-500 hover:border-teal-600 focus:border-teal-100 dark:focus:border-teal-900 focus:ring-teal-600 dark:focus:ring-teal-200",
   success: "text-white bg-green-500 hover:bg-green-600 focus:bg-green-600 active:bg-green-700 border-green-500 hover:border-green-600 focus:border-green-100 dark:focus:border-green-900 focus:ring-green-600 dark:focus:ring-green-200"
-}, bt = {
+}, mt = {
   default: "focus:ring-gray-500 text-gray-600 dark:focus:ring-gray-200 dark:text-gray-300",
   error: "focus:ring-rose-500 text-rose-500 dark:focus:ring-rose-200 dark:text-rose-300",
   primary: "focus:ring-blue-500 text-blue-500 dark:focus:ring-blue-200 dark:text-blue-300",
   secondary: "focus:ring-teal-500 text-teal-600 dark:focus:ring-teal-200 dark:text-teal-300",
   success: "focus:ring-green-600 text-green-600 dark:focus:ring-green-200 dark:text-green-300"
-}, pt = {
+}, yt = {
   default: "font-mono text-gray-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
   error: "font-mono text-rose-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
   primary: "font-mono text-blue-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
   secondary: "font-mono text-violet-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80",
   success: "font-mono text-green-300 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80"
-}, mt = {
+}, kt = {
   default: "",
   error: "text-white bg-rose-500 dark:bg-rose-600",
   primary: "text-white bg-blue-500 dark:bg-blue-600",
   secondary: "text-white bg-violet-500 dark:bg-violet-600",
   success: "text-white bg-green-500 dark:bg-green-600"
-}, xt = {
+}, wt = {
   default: "text-gray-800 bg-gray-200 dark:bg-gray-800 dark:text-gray-200",
   error: "text-rose-800 bg-rose-200 dark:bg-rose-800 dark:text-rose-200",
   primary: "text-blue-800 bg-blue-200 dark:bg-blue-800 dark:text-blue-200",
   secondary: "text-violet-800 bg-violet-200 dark:bg-violet-800 dark:text-violet-200",
   success: "text-green-800 bg-green-300 dark:bg-green-800 dark:text-green-300"
-}, kt = {
+}, vt = {
   default: "text-black bg-gray-100 dark:bg-gray-200",
   error: "text-black bg-rose-200 dark:bg-rose-300",
   primary: "text-black bg-blue-200 dark:bg-blue-300",
   secondary: "text-black bg-violet-200 dark:bg-violet-300",
   success: "text-black bg-green-300 dark:bg-green-400"
-}, Ce = {
+}, Me = {
   default: "focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-400 dark:focus:border-blue-400 border-gray-300 dark:border-gray-600 bg-gray-50 focus:bg-white dark:bg-gray-800 dark:focus:bg-gray-700 placeholder:text-gray-400 placeholder:dark:text-gray-300 selection:bg-blue-600 dark:selection:bg-blue-500 selection:text-white",
   error: "text-rose-700 dark:text-rose-200 focus:ring-rose-500 focus:border-rose-500 dark:focus:ring-rose-400 dark:focus:border-rose-400 border-rose-300 dark:border-rose-600 bg-rose-100 focus:bg-rose-50 dark:bg-rose-800 dark:focus:bg-rose-700 placeholder:text-rose-400 placeholder:dark:text-rose-300 selection:bg-rose-600 dark:selection:bg-rose-500 selection:text-white",
   success: "text-green-700 dark:text-green-200 focus:ring-green-500 focus:border-green-500 dark:focus:ring-green-400 dark:focus:border-green-400 border-green-300 dark:border-green-600 bg-green-100 focus:bg-green-50 dark:bg-green-800 dark:focus:bg-green-700 placeholder:text-green-600 placeholder:dark:text-green-400 selection:bg-green-600 dark:selection:bg-green-500 selection:text-white"
-}, $e = {
+}, Te = {
   default: "focus:ring-0 border-x-0 border-t-0 border-b-2 focus:border-b-blue-500 focus:border-x-gray-700 dark:focus:border-b-blue-400 border-b-gray-300 dark:border-b-gray-600 bg-gray-50 focus:bg-white dark:bg-gray-800 dark:focus:bg-gray-700 selection:bg-blue-600 dark:selection:bg-blue-500 selection:text-white",
   error: "focus:ring-0 border-x-0 border-t-0 border-b-2 text-rose-700 dark:text-rose-200 focus:border-b-rose-500 focus:border-x-gray-700 dark:focus:border-b-rose-400 border-b-rose-300 dark:border-b-rose-700 bg-gray-50 focus:bg-white dark:bg-gray-800 dark:focus:bg-gray-700 placeholder:text-rose-400 placeholder:dark:text-rose-400 selection:bg-rose-600 dark:selection:bg-rose-500 selection:text-white",
   success: "focus:ring-0 border-x-0 border-t-0 border-b-2 text-green-700 dark:text-green-200 focus:border-b-green-500 focus:border-x-gray-700 dark:focus:border-b-green-400 border-b-green-300 dark:border-b-green-700 bg-gray-50 focus:bg-white dark:bg-gray-800 dark:focus:bg-gray-700 placeholder:text-green-500 placeholder:dark:text-green-500 selection:bg-green-600 dark:selection:bg-green-500 selection:text-white"
-}, yt = {
+}, Ct = {
   default: "focus:ring-gray-500 text-gray-600 dark:focus:ring-gray-200 dark:text-gray-300",
   error: "focus:ring-rose-500 text-rose-500 dark:focus:ring-rose-200 dark:text-rose-300",
   primary: "focus:ring-blue-500 text-blue-500 dark:focus:ring-blue-200 dark:text-blue-300",
   secondary: "focus:ring-teal-500 text-teal-600 dark:focus:ring-teal-200 dark:text-teal-300",
   success: "focus:ring-green-600 text-green-600 dark:focus:ring-green-200 dark:text-green-300"
-}, wt = {
+}, St = {
   default: "",
   error: "text-rose-500 dark:text-rose-300",
   primary: "text-blue-500 dark:text-blue-300",
   secondary: "text-violet-500 dark:text-violet-300",
   success: "text-green-600 dark:text-green-300",
   neutral: "dark:text-gray-100 text-gray-900"
-}, vt = {
+}, Vt = {
   VvAnchor: {
     button: !1,
     buttonBlock: !1,
@@ -595,6 +595,28 @@ const Le = {
     textPalette: "default",
     textColor: "default"
   },
+  VvFormGroup: {
+    displayError: !1,
+    displayHelp: !1,
+    displaySuccess: !1,
+    errorClasses: "text-sm",
+    errorText: "",
+    errorTextColor: "error",
+    errorTextPalette: "default",
+    helpClasses: "text-sm opacity-75",
+    helpText: "",
+    helpTextColor: "default",
+    helpTextPalette: "default",
+    labelClasses: "text-lg capitalize",
+    labelTextColor: "default",
+    labelTextPalette: "default",
+    slotParentClasses: "flex items-center gap-1",
+    successClasses: "text-sm",
+    successText: "",
+    successTextColor: "success",
+    successTextPalette: "default",
+    wrapperClasses: "w-full flex flex-col space-y-1"
+  },
   VvInput: {
     color: "default",
     checked: !1,
@@ -633,146 +655,146 @@ const Le = {
     size: "md",
     rowSize: "md"
   }
-}, i = {
+}, l = {
   anchors: {
-    ...nt,
+    ...it,
     palettes: {
-      default: dt
+      default: ht
     }
   },
   borders: {
     palettes: {
-      default: ft
-    }
-  },
-  buttons: {
-    ...at,
-    palettes: {
-      outline: gt,
-      solid: ht
-    }
-  },
-  checkboxes: {
-    ...lt,
-    palettes: {
       default: bt
     }
   },
-  inputs: {
-    ...Pe,
+  buttons: {
+    ...ut,
     palettes: {
-      default: Ce,
-      underlined: $e
+      outline: pt,
+      solid: xt
+    }
+  },
+  checkboxes: {
+    ...ct,
+    palettes: {
+      default: mt
+    }
+  },
+  inputs: {
+    ...Ue,
+    palettes: {
+      default: Me,
+      underlined: Te
     }
   },
   colorModes: {
-    ...it
+    ...dt
   },
   grounds: {
     palettes: {
-      console: pt,
-      default: mt,
-      monochromatic: xt,
-      pastel: kt
+      console: yt,
+      default: kt,
+      monochromatic: wt,
+      pastel: vt
     }
   },
   radios: {
-    ...ut,
+    ...ft,
     palettes: {
-      default: yt
+      default: Ct
     }
   },
   text: {
-    ...Le,
+    ...Ge,
     palettes: {
-      default: wt
+      default: St
     }
   },
   textareas: {
-    ...ct,
+    ...gt,
     palettes: {
-      default: Ce,
-      underlined: $e
+      default: Me,
+      underlined: Te
     }
   },
   transitions: {
     ...D
   },
-  defaults: vt
-}, y = Math.round, A = Math.min, R = Math.max, St = (e) => typeof e == "string" && e.includes(".") && Number.parseFloat(e) === 1, te = (e) => typeof e == "string" && e.includes("%"), he = (e) => e < 1 ? y(e) : e, Ct = (e) => y(100 * e) / 100, Ne = (e) => (e = Number.parseFloat(e), Number.isNaN(e) || e < 0 || e > 1 ? 1 : e), q = (e) => e.a < 1 && e.a >= 0, ie = (e) => A(1, R(0, e)), $t = (e) => e.length === 1 ? `0${e}` : `${e}`, zt = "[-\\+]?\\d+%?", Vt = "[-\\+]?\\d*\\.\\d+%?", T = `(?:${Vt})|(?:${zt})`, F = (e) => new RegExp(T).test(e), Ue = (e) => F(e.r) && F(e.g) && F(e.b), be = `[\\s|\\(]+(${T})[,|\\s]+(${T})[,|\\s]+(${T})\\s*\\)?`, pe = `[\\s|\\(]+(${T})[,|\\s]+(${T})[,|\\s]+(${T})[,|\\s]+(${T})\\s*\\)?`;
-function w(e, t) {
-  St(e) && (e = "100%");
-  const r = te(e);
-  return e = A(t, R(0, Number.parseFloat(e))), r && (e = Number.parseInt(e * t, 10) / 100), Math.abs(e - t) < 1e-6 ? 1 : e % t / Number.parseFloat(t);
+  defaults: Vt
+}, w = Math.round, _ = Math.min, A = Math.max, $t = (e) => typeof e == "string" && e.includes(".") && Number.parseFloat(e) === 1, ne = (e) => typeof e == "string" && e.includes("%"), ye = (e) => e < 1 ? w(e) : e, zt = (e) => w(100 * e) / 100, qe = (e) => (e = Number.parseFloat(e), Number.isNaN(e) || e < 0 || e > 1 ? 1 : e), Z = (e) => e.a < 1 && e.a >= 0, ge = (e) => _(1, A(0, e)), Mt = (e) => e.length === 1 ? `0${e}` : `${e}`, Tt = "[-\\+]?\\d+%?", _t = "[-\\+]?\\d*\\.\\d+%?", O = `(?:${_t})|(?:${Tt})`, B = (e) => new RegExp(O).test(e), Je = (e) => B(e.r) && B(e.g) && B(e.b), ke = `[\\s|\\(]+(${O})[,|\\s]+(${O})[,|\\s]+(${O})\\s*\\)?`, we = `[\\s|\\(]+(${O})[,|\\s]+(${O})[,|\\s]+(${O})[,|\\s]+(${O})\\s*\\)?`;
+function C(e, t) {
+  $t(e) && (e = "100%");
+  const r = ne(e);
+  return e = _(t, A(0, Number.parseFloat(e))), r && (e = Number.parseInt(e * t, 10) / 100), Math.abs(e - t) < 1e-6 ? 1 : e % t / Number.parseFloat(t);
 }
-const Y = (e) => Number.parseInt(e, 16), ze = (e) => Y(e) / 255, Z = (e) => e <= 1 ? `${e * 100}%` : e, I = (e) => {
-  const [t, r, s] = [e._r, e._g, e._b].map((o) => y(o));
+const Q = (e) => Number.parseInt(e, 16), _e = (e) => Q(e) / 255, X = (e) => e <= 1 ? `${e * 100}%` : e, E = (e) => {
+  const [t, r, s] = [e._r, e._g, e._b].map((o) => w(o));
   return { r: t, g: r, b: s, a: e._roundA };
-}, E = (e) => ({ r: e._r, g: e._g, b: e._b, a: e._a }), re = (e) => {
-  const [t, r, s] = [e.r, e.g, e.b].map((o) => w(o, 255) * 255);
-  return { r: t, g: r, b: s, a: Ne(e.a) };
-}, se = (e) => {
-  const [t, r, s] = [e.r, e.g, e.b].map((o) => `${y(w(o, 255) * 100)}%`);
+}, P = (e) => ({ r: e._r, g: e._g, b: e._b, a: e._a }), le = (e) => {
+  const [t, r, s] = [e.r, e.g, e.b].map((o) => C(o, 255) * 255);
+  return { r: t, g: r, b: s, a: qe(e.a) };
+}, ie = (e) => {
+  const [t, r, s] = [e.r, e.g, e.b].map((o) => `${w(C(o, 255) * 100)}%`);
   return { r: t, g: r, b: s, a: e.a };
-}, oe = (e) => e.a === 1 ? `rgb(${e.r}, ${e.g}, ${e.b})` : `rgba(${e.r}, ${e.g}, ${e.b}, ${e.a})`, Je = (e) => e.a === 1 ? [e.r, e.g, e.b] : [e.r, e.g, e.b, y(e.a * 255)], ne = (e, t) => {
-  const r = Je(e).map((s) => s.toString(16)).map((s) => $t(s));
+}, ue = (e) => e.a === 1 ? `rgb(${e.r}, ${e.g}, ${e.b})` : `rgba(${e.r}, ${e.g}, ${e.b}, ${e.a})`, Ye = (e) => e.a === 1 ? [e.r, e.g, e.b] : [e.r, e.g, e.b, w(e.a * 255)], ce = (e, t) => {
+  const r = Ye(e).map((s) => s.toString(16)).map((s) => Mt(s));
   return t && r.every((s) => s.charAt(0) === s.charAt(1)) ? r.map((s) => s.charAt(0)).join("") : r.join("");
-}, W = (e, t) => ne({ ...e, a: 1 }, t), Mt = (e) => (e.r * 299 + e.g * 587 + e.b * 114) / 1e3;
-function _t(e) {
-  const t = e.r / 255, r = e.g / 255, s = e.b / 255, o = t <= 0.03928 ? t / 12.92 : ((t + 0.055) / 1.055) ** 2.4, n = r <= 0.03928 ? r / 12.92 : ((r + 0.055) / 1.055) ** 2.4, a = s <= 0.03928 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
-  return 0.2126 * o + 0.7152 * n + 0.0722 * a;
+}, K = (e, t) => ce({ ...e, a: 1 }, t), At = (e) => (e.r * 299 + e.g * 587 + e.b * 114) / 1e3;
+function Ft(e) {
+  const t = e.r / 255, r = e.g / 255, s = e.b / 255, o = t <= 0.03928 ? t / 12.92 : ((t + 0.055) / 1.055) ** 2.4, a = r <= 0.03928 ? r / 12.92 : ((r + 0.055) / 1.055) ** 2.4, n = s <= 0.03928 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
+  return 0.2126 * o + 0.7152 * a + 0.0722 * n;
 }
-function At(e, t, r) {
+function Rt(e, t, r) {
   r = r === 0 ? 0 : r || 50;
-  const s = new u(e).toRgb(), o = new u(t).toRgb(), n = r / 100, a = {
-    r: (o.r - s.r) * n + s.r,
-    g: (o.g - s.g) * n + s.g,
-    b: (o.b - s.b) * n + s.b,
-    a: (o.a - s.a) * n + s.a
+  const s = new u(e).toRgb(), o = new u(t).toRgb(), a = r / 100, n = {
+    r: (o.r - s.r) * a + s.r,
+    g: (o.g - s.g) * a + s.g,
+    b: (o.b - s.b) * a + s.b,
+    a: (o.a - s.a) * a + s.a
   };
-  return new u(a);
+  return new u(n);
 }
-function Rt(e) {
+function jt(e) {
   let t, r;
   return e = e || {
     level: "AA",
     size: "small"
   }, t = (e.level || "AA").toUpperCase(), r = (e.size || "small").toLowerCase(), t !== "AA" && t !== "AAA" && (t = "AA"), r !== "small" && r !== "large" && (r = "small"), { level: t, size: r };
 }
-function me(e, t) {
+function ve(e, t) {
   const r = new u(e), s = new u(t);
   return (Math.max(r.getLuminance(), s.getLuminance()) + 0.05) / (Math.min(r.getLuminance(), s.getLuminance()) + 0.05);
 }
-function qe(e, t, r) {
-  const s = me(e, t), o = Rt(r);
-  let n = !1;
+function Ze(e, t, r) {
+  const s = ve(e, t), o = jt(r);
+  let a = !1;
   switch (o.level + o.size) {
     case "AAlarge":
-      n = s >= 3;
+      a = s >= 3;
       break;
     case "AAAsmall":
-      n = s >= 7;
+      a = s >= 7;
       break;
     default:
-      n = s >= 4.5;
+      a = s >= 4.5;
   }
-  return n;
+  return a;
 }
-function Ge(e, t, r = {}) {
-  const { includeFallbackColors: s, level: o, size: n } = r;
-  let a, l = null, c = 0;
+function We(e, t, r = {}) {
+  const { includeFallbackColors: s, level: o, size: a } = r;
+  let n, i = null, c = 0;
   for (const d of t)
-    a = me(e, d), a > c && (c = a, l = new u(d));
-  return qe(e, l, { level: o, size: n }) || !s ? l : (r.includeFallbackColors = !1, Ge(e, ["#fff", "#000"], r));
+    n = ve(e, d), n > c && (c = n, i = new u(d));
+  return Ze(e, i, { level: o, size: a }) || !s ? i : (r.includeFallbackColors = !1, We(e, ["#fff", "#000"], r));
 }
 function L(e, t) {
-  return { monochromatic: Tt, analogous: Ot, complement: jt, splitcomplement: Ft, triad: Bt, tetrad: Ht }[e](...t);
+  return { monochromatic: It, analogous: Pt, complement: Bt, splitcomplement: Et, triad: Ht, tetrad: Ot }[e](...t);
 }
-function jt(e) {
+function Bt(e) {
   const t = new u(e).toHsl();
   return t.h = (t.h + 180) % 360, new u(t);
 }
-function Bt(e) {
+function Ht(e) {
   const t = new u(e).toHsl(), { h: r } = t;
   return [
     new u(e),
@@ -780,7 +802,7 @@ function Bt(e) {
     new u({ h: (r + 240) % 360, s: t.s, l: t.l })
   ];
 }
-function Ht(e) {
+function Ot(e) {
   const t = new u(e).toHsl(), { h: r } = t;
   return [
     new u(e),
@@ -789,7 +811,7 @@ function Ht(e) {
     new u({ h: (r + 270) % 360, s: t.s, l: t.l })
   ];
 }
-function Ft(e) {
+function Et(e) {
   const t = new u(e).toHsl(), { h: r } = t;
   return [
     new u(e),
@@ -797,61 +819,61 @@ function Ft(e) {
     new u({ h: (r + 216) % 360, s: t.s, l: t.l })
   ];
 }
-function Ot(e, t = 6, r = 30) {
-  const s = new u(e).toHsl(), o = 360 / r, n = [new u(e)];
+function Pt(e, t = 6, r = 30) {
+  const s = new u(e).toHsl(), o = 360 / r, a = [new u(e)];
   for (s.h = (s.h - (o * t >> 1) + 720) % 360; --t; )
-    s.h = (s.h + o) % 360, n.push(new u(s));
-  return n;
-}
-function Tt(e, t = 6) {
-  const r = new u(e).toHsv();
-  let { h: s, s: o, v: n } = r;
-  const a = [], l = 1 / t;
-  for (; t--; )
-    a.push(new u({ h: s, s: o, v: n })), n = (n + l) % 1;
+    s.h = (s.h + o) % 360, a.push(new u(s));
   return a;
 }
-function O(e, t) {
-  const s = { invert: It, desaturate: Et, saturate: Dt, greyscale: Lt, lighten: Pt, brighten: Nt, darken: Ut, spin: Jt }[e](...t), [o] = t;
+function It(e, t = 6) {
+  const r = new u(e).toHsv();
+  let { h: s, s: o, v: a } = r;
+  const n = [], i = 1 / t;
+  for (; t--; )
+    n.push(new u({ h: s, s: o, v: a })), a = (a + i) % 1;
+  return n;
+}
+function H(e, t) {
+  const s = { invert: Dt, desaturate: Lt, saturate: Nt, greyscale: Gt, lighten: Ut, brighten: qt, darken: Jt, spin: Yt }[e](...t), [o] = t;
   return o._r = s._r, o._g = s._g, o._b = s._b, o.setAlpha(s._a), o;
 }
-function It(e) {
+function Dt(e) {
   const t = new u(e).toRgb();
-  return t.r = R(0, A(255, 255 - t.r)), t.g = R(0, A(255, 255 - t.g)), t.b = R(0, A(255, 255 - t.b)), new u(t);
+  return t.r = A(0, _(255, 255 - t.r)), t.g = A(0, _(255, 255 - t.g)), t.b = A(0, _(255, 255 - t.b)), new u(t);
 }
-function Et(e, t) {
+function Lt(e, t) {
   t = t === 0 ? 0 : t || 10;
   const r = new u(e).toHsl();
-  return r.s -= t / 100, r.s = ie(r.s), new u(r);
-}
-function Dt(e, t) {
-  t = t === 0 ? 0 : t || 10;
-  const r = new u(e).toHsl();
-  return r.s += t / 100, r.s = ie(r.s), new u(r);
-}
-function Lt(e) {
-  return new u(e).desaturate(100);
-}
-function Pt(e, t) {
-  t = t === 0 ? 0 : t || 10;
-  const r = new u(e).toHsl();
-  return r.l += t / 100, r.l = ie(r.l), new u(r);
+  return r.s -= t / 100, r.s = ge(r.s), new u(r);
 }
 function Nt(e, t) {
   t = t === 0 ? 0 : t || 10;
-  const r = new u(e).toRgb();
-  return r.r = R(0, A(255, r.r - y(255 * -(t / 100)))), r.g = R(0, A(255, r.g - y(255 * -(t / 100)))), r.b = R(0, A(255, r.b - y(255 * -(t / 100)))), new u(r);
+  const r = new u(e).toHsl();
+  return r.s += t / 100, r.s = ge(r.s), new u(r);
+}
+function Gt(e) {
+  return new u(e).desaturate(100);
 }
 function Ut(e, t) {
   t = t === 0 ? 0 : t || 10;
   const r = new u(e).toHsl();
-  return r.l -= t / 100, r.l = ie(r.l), new u(r);
+  return r.l += t / 100, r.l = ge(r.l), new u(r);
+}
+function qt(e, t) {
+  t = t === 0 ? 0 : t || 10;
+  const r = new u(e).toRgb();
+  return r.r = A(0, _(255, r.r - w(255 * -(t / 100)))), r.g = A(0, _(255, r.g - w(255 * -(t / 100)))), r.b = A(0, _(255, r.b - w(255 * -(t / 100)))), new u(r);
 }
 function Jt(e, t) {
+  t = t === 0 ? 0 : t || 10;
+  const r = new u(e).toHsl();
+  return r.l -= t / 100, r.l = ge(r.l), new u(r);
+}
+function Yt(e, t) {
   const r = new u(e).toHsl(), s = (r.h + t) % 360;
   return r.h = s < 0 ? 360 + s : s, new u(r);
 }
-class qt {
+class Zt {
   constructor(t, r, s = {}) {
     this.api = t, this.id = r, this.options = s;
   }
@@ -879,7 +901,7 @@ class qt {
     return delete this.wanted, r;
   }
 }
-const Gt = {
+const Wt = {
   format: !1,
   ok: !1,
   r: 0,
@@ -887,7 +909,7 @@ const Gt = {
   b: 0,
   a: 1
 };
-class Yt {
+class Qt {
   constructor() {
     this.colorspaces = {}, this.options = {
       alphaFormat: "rgb",
@@ -901,13 +923,13 @@ class Yt {
       Object.prototype.hasOwnProperty.call(this.colorspaces, r) && Object.assign(this.colorspaces[r].options, t);
   }
   add(t, r) {
-    if (this.colorspaces[t] = new qt(this, t, { ...this.options, ...r }), r.alias)
+    if (this.colorspaces[t] = new Zt(this, t, { ...this.options, ...r }), r.alias)
       for (const s of r.alias)
         this.colorspaces[s] = this.colorspaces[t];
     return this.colorspaces[t];
   }
   findColor(t) {
-    const r = { ...Gt };
+    const r = { ...Wt };
     if (t = typeof t == "string" ? t.trim().toLowerCase() : t, t) {
       for (const s in this.colorspaces)
         if (this.colorspaces[s].shouldHandleInput(t)) {
@@ -925,20 +947,20 @@ class Yt {
     return s = s || r, s in this.colorspaces ? this.colorspaces[s].use(o).complete(t) : `[${t.r}, ${t.g}, ${t.b}, ${t.a * 255}]`;
   }
 }
-let Zt = 0;
-const j = new Yt();
+let Xt = 0;
+const F = new Qt();
 class u {
   constructor(t, r = {}) {
     if (t = t || "", t instanceof u)
       return t;
-    const s = j.findColor(t);
-    this._originalInput = t, this._r = he(s.r), this._g = he(s.g), this._b = he(s.b), this._a = s.a, this._roundA = Ct(this._a), this._format = r.format || s.format, this._gradientType = r.gradientType, this._ok = s.ok, this._tc_id = u.newId(), j.set(r);
+    const s = F.findColor(t);
+    this._originalInput = t, this._r = ye(s.r), this._g = ye(s.g), this._b = ye(s.b), this._a = s.a, this._roundA = zt(this._a), this._format = r.format || s.format, this._gradientType = r.gradientType, this._ok = s.ok, this._tc_id = u.newId(), F.set(r);
   }
   static newId() {
-    return Zt++;
+    return Xt++;
   }
   static registerFormat(t, r = {}) {
-    return j.add(t, r);
+    return F.add(t, r);
   }
   static equals(t, r) {
     return !t || !r ? !1 : new u(t).toRgbString() === new u(r).toRgbString();
@@ -947,22 +969,22 @@ class u {
     if (typeof t == "object") {
       const s = {};
       for (const o in t)
-        Object.prototype.hasOwnProperty.call(t, o) && (o === "a" ? s[o] = t[o] : s[o] = Z(t[o]));
+        Object.prototype.hasOwnProperty.call(t, o) && (o === "a" ? s[o] = t[o] : s[o] = X(t[o]));
       t = s;
     }
     return new u(t, r);
   }
   static readability(t, r) {
-    return me(t, r);
+    return ve(t, r);
   }
   static isReadable(t, r, s) {
-    return qe(t, r, s);
+    return Ze(t, r, s);
   }
   static mostReadable(t, r, s) {
-    return Ge(t, r, s);
+    return We(t, r, s);
   }
   static mix(t, r, s) {
-    return At(t, r, s);
+    return Rt(t, r, s);
   }
   isDark() {
     return this.getBrightness() < 128;
@@ -983,85 +1005,85 @@ class u {
     return this._a;
   }
   getBrightness() {
-    return Mt(this.toRgb());
+    return At(this.toRgb());
   }
   getLuminance() {
-    return _t(E(this));
+    return Ft(P(this));
   }
   toString(t) {
-    return j.print(I(this), this._format, t);
+    return F.print(E(this), this._format, t);
   }
   toName() {
-    return j.print(I(this), "name", "toName");
+    return F.print(E(this), "name", "toName");
   }
   toRgb() {
-    return E(this);
+    return P(this);
   }
   toRgbString() {
-    return oe(I(this));
+    return ue(E(this));
   }
   toRgbArray() {
-    return Je(I(this));
+    return Ye(E(this));
   }
   toPercentageRgb() {
-    return se(E(this));
+    return ie(P(this));
   }
   toPercentageRgbString() {
-    return oe(se(I(this)));
+    return ue(ie(E(this)));
   }
   toHex(t) {
-    return W(I(this), t);
+    return K(E(this), t);
   }
   toHexString(t) {
     return `#${this.toHex(t)}`;
   }
   toHex8(t) {
-    return ne(I(this), t);
+    return ce(E(this), t);
   }
   toHex8String(t) {
     return `#${this.toHex8(t)}`;
   }
   toHsv() {
-    return j.raw(E(this), "hsv");
+    return F.raw(P(this), "hsv");
   }
   toHsvString() {
-    return j.print(E(this), this._format, "hsv");
+    return F.print(P(this), this._format, "hsv");
   }
   toHsl() {
-    return j.raw(E(this), "hsl");
+    return F.raw(P(this), "hsl");
   }
   toHslString() {
-    return j.print(E(this), this._format, "hsl");
+    return F.print(P(this), this._format, "hsl");
   }
   setAlpha(t) {
-    return this._a = Ne(t), this._roundA = y(100 * this._a) / 100, this;
+    return this._a = qe(t), this._roundA = w(100 * this._a) / 100, this;
   }
   clone() {
     return new u(this.toString());
   }
   lighten(...t) {
-    return O("lighten", [this, ...t]);
+    return H("lighten", [this, ...t]);
   }
   brighten(...t) {
-    return O("brighten", [this, ...t]);
+    return H("brighten", [this, ...t]);
   }
   darken(...t) {
-    return O("darken", [this, ...t]);
+    return H("darken", [this, ...t]);
   }
   desaturate(...t) {
-    return O("desaturate", [this, ...t]);
+    return H("desaturate", [this, ...t]);
   }
   saturate(...t) {
-    return O("saturate", [this, ...t]);
+    return H("saturate", [this, ...t]);
   }
   greyscale(...t) {
-    return O("greyscale", [this, ...t]);
+    return H("greyscale", [this, ...t]);
   }
   invert(...t) {
-    return O("invert", [this, ...t]);
+    return H("invert", [this, ...t]);
   }
   spin(...t) {
-    return O("spin", [this, ...t]);
+    return H("spin", [this, ...t]);
   }
   analogous(...t) {
     return L("analogous", [this, ...t]);
@@ -1082,199 +1104,199 @@ class u {
     return L("tetrad", [this, ...t]);
   }
 }
-const Ve = function() {
+const Ae = function() {
   return {
-    rgb: new RegExp(`rgb${be}`),
-    rgba: new RegExp(`rgba${pe}`)
+    rgb: new RegExp(`rgb${ke}`),
+    rgba: new RegExp(`rgba${we}`)
   };
 }();
-function ue(e) {
-  let t, r, s, o, n;
-  return (n = Ve.rgb.exec(e)) ? ([t, r, s] = n.splice(1, 3), { r: t, g: r, b: s }) : (n = Ve.rgba.exec(e)) ? ([t, r, s, o] = n.splice(1, 4), { r: t, g: r, b: s, a: o }) : !1;
+function he(e) {
+  let t, r, s, o, a;
+  return (a = Ae.rgb.exec(e)) ? ([t, r, s] = a.splice(1, 3), { r: t, g: r, b: s }) : (a = Ae.rgba.exec(e)) ? ([t, r, s, o] = a.splice(1, 4), { r: t, g: r, b: s, a: o }) : !1;
 }
-const ce = u.registerFormat("rgb");
-ce.shouldHandleInput = (e) => typeof e == "object" && Ue(e) && !te(e.r) || ue(e);
-ce.toRgb = (e) => typeof e == "object" && re(e) || re(ue(e));
-ce.toRaw = (e) => e;
-ce.toString = (e) => oe(e);
-const de = u.registerFormat("prgb");
-de.shouldHandleInput = (e) => {
+const be = u.registerFormat("rgb");
+be.shouldHandleInput = (e) => typeof e == "object" && Je(e) && !ne(e.r) || he(e);
+be.toRgb = (e) => typeof e == "object" && le(e) || le(he(e));
+be.toRaw = (e) => e;
+be.toString = (e) => ue(e);
+const pe = u.registerFormat("prgb");
+pe.shouldHandleInput = (e) => {
   if (typeof e == "string") {
-    const t = ue(e);
-    return t && te(t.r);
+    const t = he(e);
+    return t && ne(t.r);
   }
-  return Ue(e) && te(e.r);
+  return Je(e) && ne(e.r);
 };
-de.toRgb = (e) => re(typeof e == "object" ? e : ue(e));
-de.toRaw = (e) => se(e);
-de.toString = (e) => oe(se(e));
-const z = u.registerFormat("hex", {
+pe.toRgb = (e) => le(typeof e == "object" ? e : he(e));
+pe.toRaw = (e) => ie(e);
+pe.toString = (e) => ue(ie(e));
+const $ = u.registerFormat("hex", {
   alias: ["hex3", "hex6"]
-}), ae = function() {
+}), de = function() {
   return {
     hex3: /^#?([\da-fA-F])([\da-fA-F])([\da-fA-F])$/,
     hex6: /^#?([\da-fA-F]{2})([\da-fA-F]{2})([\da-fA-F]{2})$/
   };
 }();
-function Wt(e) {
+function Kt(e) {
   let t;
-  if (t = ae.hex3.exec(e)) {
-    const [r, s, o] = t.splice(1, 3).map((n) => `${n}${n}`).map((n) => Y(n));
+  if (t = de.hex3.exec(e)) {
+    const [r, s, o] = t.splice(1, 3).map((a) => `${a}${a}`).map((a) => Q(a));
     return { r, g: s, b: o, a: 1 };
   }
-  if (t = ae.hex6.exec(e)) {
-    const [r, s, o] = t.splice(1, 3).map((n) => Y(n));
+  if (t = de.hex6.exec(e)) {
+    const [r, s, o] = t.splice(1, 3).map((a) => Q(a));
     return { r, g: s, b: o, a: 1 };
   }
   return !1;
 }
-const K = (e, t = z.options.shortHex) => `#${z.options.upperCaseHex ? W(e, t).toUpperCase() : W(e, t)}`;
-z.shouldHandleInput = (e) => ae.hex6.test(e) || ae.hex3.test(e);
-z.toRgb = (e) => Wt(e);
-z.toRaw = (e) => e;
-z.toString = (e) => /^hex6?$/.test(z.wanted) ? K(e) : z.wanted === "hex3" ? K(e, !0) : q(e) ? z.options.alphaFormat === "hex" ? K(e) : z.print(z.options.alphaFormat, e) : K(e);
-const V = u.registerFormat("hex8", {
+const oe = (e, t = $.options.shortHex) => `#${$.options.upperCaseHex ? K(e, t).toUpperCase() : K(e, t)}`;
+$.shouldHandleInput = (e) => de.hex6.test(e) || de.hex3.test(e);
+$.toRgb = (e) => Kt(e);
+$.toRaw = (e) => e;
+$.toString = (e) => /^hex6?$/.test($.wanted) ? oe(e) : $.wanted === "hex3" ? oe(e, !0) : Z(e) ? $.options.alphaFormat === "hex" ? oe(e) : $.print($.options.alphaFormat, e) : oe(e);
+const z = u.registerFormat("hex8", {
   alias: ["hex4"]
-}), le = function() {
+}), fe = function() {
   return {
     hex4: /^#?([\da-fA-F])([\da-fA-F])([\da-fA-F])([\da-fA-F])$/,
     hex8: /^#?([\da-fA-F]{2})([\da-fA-F]{2})([\da-fA-F]{2})([\da-fA-F]{2})$/
   };
 }();
-function Qt(e) {
+function er(e) {
   let t;
-  if (t = le.hex4.exec(e)) {
-    const r = ze(`${t[4]}${t[4]}`), [s, o, n] = t.splice(1, 3).map((a) => `${a}${a}`).map((a) => Y(a));
-    return { r: s, g: o, b: n, a: r };
+  if (t = fe.hex4.exec(e)) {
+    const r = _e(`${t[4]}${t[4]}`), [s, o, a] = t.splice(1, 3).map((n) => `${n}${n}`).map((n) => Q(n));
+    return { r: s, g: o, b: a, a: r };
   }
-  if (t = le.hex8.exec(e)) {
-    const r = ze(t[4]), [s, o, n] = t.splice(1, 3).map((a) => Y(a));
-    return { r: s, g: o, b: n, a: r };
+  if (t = fe.hex8.exec(e)) {
+    const r = _e(t[4]), [s, o, a] = t.splice(1, 3).map((n) => Q(n));
+    return { r: s, g: o, b: a, a: r };
   }
   return !1;
 }
-const ee = (e, t = V.options.shortHex) => `#${V.options.upperCaseHex ? ne(e, t).toUpperCase() : ne(e, t)}`;
-V.shouldHandleInput = (e) => le.hex8.test(e) || le.hex4.test(e);
-V.toRgb = (e) => Qt(e);
-V.toRaw = (e) => e;
-V.toString = (e) => V.wanted === "hex4" ? ee(e, !0) : V.wanted === "hex8" ? ee(e) : q(e) ? V.options.alphaFormat === "hex" ? ee(e) : V.print(V.options.alphaFormat, e) : ee(e);
-const fe = u.registerFormat("hsl"), Me = function() {
+const ae = (e, t = z.options.shortHex) => `#${z.options.upperCaseHex ? ce(e, t).toUpperCase() : ce(e, t)}`;
+z.shouldHandleInput = (e) => fe.hex8.test(e) || fe.hex4.test(e);
+z.toRgb = (e) => er(e);
+z.toRaw = (e) => e;
+z.toString = (e) => z.wanted === "hex4" ? ae(e, !0) : z.wanted === "hex8" ? ae(e) : Z(e) ? z.options.alphaFormat === "hex" ? ae(e) : z.print(z.options.alphaFormat, e) : ae(e);
+const xe = u.registerFormat("hsl"), Fe = function() {
   return {
-    hsl: new RegExp(`hsl${be}`),
-    hsla: new RegExp(`hsla${pe}`)
+    hsl: new RegExp(`hsl${ke}`),
+    hsla: new RegExp(`hsla${we}`)
   };
-}(), Xt = (e) => F(e.h) && F(e.s) && F(e.l);
-function Ye(e) {
-  const t = w(e.r, 255), r = w(e.g, 255), s = w(e.b, 255), o = e.a || 1, n = R(t, r, s), a = A(t, r, s);
-  let l, c;
-  const d = (n + a) / 2;
-  if (n === a)
-    l = 0, c = 0;
+}(), tr = (e) => B(e.h) && B(e.s) && B(e.l);
+function Qe(e) {
+  const t = C(e.r, 255), r = C(e.g, 255), s = C(e.b, 255), o = e.a || 1, a = A(t, r, s), n = _(t, r, s);
+  let i, c;
+  const d = (a + n) / 2;
+  if (a === n)
+    i = 0, c = 0;
   else {
-    const f = n - a;
-    switch (c = d > 0.5 ? f / (2 - n - a) : f / (n + a), n) {
+    const f = a - n;
+    switch (c = d > 0.5 ? f / (2 - a - n) : f / (a + n), a) {
       case t:
-        l = (r - s) / f + (r < s ? 6 : 0);
+        i = (r - s) / f + (r < s ? 6 : 0);
         break;
       case r:
-        l = (s - t) / f + 2;
+        i = (s - t) / f + 2;
         break;
       default:
-        l = (t - r) / f + 4;
+        i = (t - r) / f + 4;
         break;
     }
-    l /= 6;
+    i /= 6;
   }
-  return { h: l, s: c, l: d, a: o };
+  return { h: i, s: c, l: d, a: o };
 }
-function _e(e) {
-  const t = w(e.h, 360), r = w(Z(e.s), 100), s = w(Z(e.l), 100), o = e.a || 1;
-  let n, a, l;
+function Re(e) {
+  const t = C(e.h, 360), r = C(X(e.s), 100), s = C(X(e.l), 100), o = e.a || 1;
+  let a, n, i;
   function c(d, f, g) {
     return g = g < 0 ? g + 1 : g, g = g > 1 ? g - 1 : g, g < 1 / 6 ? d + (f - d) * 6 * g : g < 1 / 2 ? f : g < 2 / 3 ? d + (f - d) * (2 / 3 - g) * 6 : d;
   }
   if (r === 0)
-    n = s, a = s, l = s;
+    a = s, n = s, i = s;
   else {
     const d = s < 0.5 ? s * (1 + r) : s + r - s * r, f = 2 * s - d;
-    n = c(f, d, t + 1 / 3), a = c(f, d, t), l = c(f, d, t - 1 / 3);
+    a = c(f, d, t + 1 / 3), n = c(f, d, t), i = c(f, d, t - 1 / 3);
   }
-  return { r: n * 255, g: a * 255, b: l * 255, a: o };
+  return { r: a * 255, g: n * 255, b: i * 255, a: o };
 }
-function Ze(e) {
-  let t, r, s, o, n;
-  return (n = Me.hsl.exec(e)) ? ([t, r, s] = n.splice(1, 3), { h: t, s: r, l: s }) : (n = Me.hsla.exec(e)) ? ([t, r, s, o] = n.splice(1, 4), { h: t, s: r, l: s, a: o }) : !1;
+function Xe(e) {
+  let t, r, s, o, a;
+  return (a = Fe.hsl.exec(e)) ? ([t, r, s] = a.splice(1, 3), { h: t, s: r, l: s }) : (a = Fe.hsla.exec(e)) ? ([t, r, s, o] = a.splice(1, 4), { h: t, s: r, l: s, a: o }) : !1;
 }
-function Kt(e) {
+function rr(e) {
   let { h: t, s: r, l: s, a: o } = e;
-  return t = y(t * 360), r = y(r * 100), s = y(s * 100), o === 1 ? `hsl(${t}, ${r}%, ${s}%)` : `hsla(${t}, ${r}%, ${s}%, ${o})`;
+  return t = w(t * 360), r = w(r * 100), s = w(s * 100), o === 1 ? `hsl(${t}, ${r}%, ${s}%)` : `hsla(${t}, ${r}%, ${s}%, ${o})`;
 }
-function er(e) {
+function sr(e) {
   let { h: t, s: r, l: s, a: o } = e;
   return t *= 360, { h: t, s: r, l: s, a: o };
 }
-fe.shouldHandleInput = (e) => typeof e == "object" && Xt(e) || Ze(e);
-fe.toRgb = (e) => typeof e == "object" && _e(e) || _e(Ze(e));
-fe.toRaw = (e) => er(Ye(e));
-fe.toString = (e) => Kt(Ye(e));
-const ge = u.registerFormat("hsv"), Ae = function() {
+xe.shouldHandleInput = (e) => typeof e == "object" && tr(e) || Xe(e);
+xe.toRgb = (e) => typeof e == "object" && Re(e) || Re(Xe(e));
+xe.toRaw = (e) => sr(Qe(e));
+xe.toString = (e) => rr(Qe(e));
+const me = u.registerFormat("hsv"), je = function() {
   return {
-    hsv: new RegExp(`hsv${be}`),
-    hsva: new RegExp(`hsva${pe}`)
+    hsv: new RegExp(`hsv${ke}`),
+    hsva: new RegExp(`hsva${we}`)
   };
-}(), tr = (e) => F(e.h) && F(e.s) && F(e.v);
-function We(e) {
-  const t = w(e.r, 255), r = w(e.g, 255), s = w(e.b, 255), o = e.a || 1, n = R(t, r, s), a = A(t, r, s), l = n - a;
+}(), or = (e) => B(e.h) && B(e.s) && B(e.v);
+function Ke(e) {
+  const t = C(e.r, 255), r = C(e.g, 255), s = C(e.b, 255), o = e.a || 1, a = A(t, r, s), n = _(t, r, s), i = a - n;
   let c;
-  const d = n === 0 ? 0 : l / n, f = n;
-  if (n === a)
+  const d = a === 0 ? 0 : i / a, f = a;
+  if (a === n)
     c = 0;
   else {
-    switch (n) {
+    switch (a) {
       case t:
-        c = (r - s) / l + (r < s ? 6 : 0);
+        c = (r - s) / i + (r < s ? 6 : 0);
         break;
       case r:
-        c = (s - t) / l + 2;
+        c = (s - t) / i + 2;
         break;
       default:
-        c = (t - r) / l + 4;
+        c = (t - r) / i + 4;
         break;
     }
     c /= 6;
   }
   return { h: c, s: d, v: f, a: o };
 }
-function Re(e) {
-  const t = w(e.h, 360) * 6, r = w(Z(e.s), 100), s = w(Z(e.v), 100), o = e.a || 1, n = Math.floor(t), a = t - n, l = s * (1 - r), c = s * (1 - a * r), d = s * (1 - (1 - a) * r), f = n % 6, g = [s, c, l, l, d, s][f], b = [d, s, s, c, l, l][f], k = [l, l, d, s, s, c][f];
-  return { r: g * 255, g: b * 255, b: k * 255, a: o };
+function Be(e) {
+  const t = C(e.h, 360) * 6, r = C(X(e.s), 100), s = C(X(e.v), 100), o = e.a || 1, a = Math.floor(t), n = t - a, i = s * (1 - r), c = s * (1 - n * r), d = s * (1 - (1 - n) * r), f = a % 6, g = [s, c, i, i, d, s][f], p = [d, s, s, c, i, i][f], k = [i, i, d, s, s, c][f];
+  return { r: g * 255, g: p * 255, b: k * 255, a: o };
 }
-function Qe(e) {
-  let t, r, s, o, n;
-  return (n = Ae.hsv.exec(e)) ? ([t, r, s] = n.splice(1, 3), { h: t, s: r, v: s }) : (n = Ae.hsva.exec(e)) ? ([t, r, s, o] = n.splice(1, 4), { h: t, s: r, v: s, a: o }) : !1;
+function et(e) {
+  let t, r, s, o, a;
+  return (a = je.hsv.exec(e)) ? ([t, r, s] = a.splice(1, 3), { h: t, s: r, v: s }) : (a = je.hsva.exec(e)) ? ([t, r, s, o] = a.splice(1, 4), { h: t, s: r, v: s, a: o }) : !1;
 }
-function rr(e) {
+function ar(e) {
   let { h: t, s: r, v: s, a: o } = e;
-  return t = y(t * 360), r = y(r * 100), s = y(s * 100), o === 1 ? `hsv(${t}, ${r}%, ${s}%)` : `hsva(${t}, ${r}%, ${s}%, ${o})`;
+  return t = w(t * 360), r = w(r * 100), s = w(s * 100), o === 1 ? `hsv(${t}, ${r}%, ${s}%)` : `hsva(${t}, ${r}%, ${s}%, ${o})`;
 }
-function sr(e) {
+function nr(e) {
   let { h: t, s: r, v: s, a: o } = e;
   return t *= 360, { h: t, s: r, v: s, a: o };
 }
-ge.shouldHandleInput = (e) => typeof e == "object" && tr(e) || Qe(e);
-ge.toRgb = (e) => typeof e == "object" && Re(e) || Re(Qe(e));
-ge.toRaw = (e) => sr(We(e));
-ge.toString = (e) => rr(We(e));
-const H = u.registerFormat("name", {
+me.shouldHandleInput = (e) => typeof e == "object" && or(e) || et(e);
+me.toRgb = (e) => typeof e == "object" && Be(e) || Be(et(e));
+me.toRaw = (e) => nr(Ke(e));
+me.toString = (e) => ar(Ke(e));
+const j = u.registerFormat("name", {
   alias: ["toName"]
 });
-function or(e) {
+function lr(e) {
   const t = {};
   for (const r in e)
     Object.prototype.hasOwnProperty.call(e, r) && (t[e[r]] = r);
   return t;
 }
-const X = {
+const te = {
   aliceblue: "f0f8ff",
   antiquewhite: "faebd7",
   aqua: "0ff",
@@ -1425,12 +1447,12 @@ const X = {
   yellow: "ff0",
   yellowgreen: "9acd32"
 };
-X.transparent = "00000000";
-const nr = or(X);
-H.shouldHandleInput = (e) => X[e];
-H.toRgb = (e) => H.parse(X[e]).rgba;
-H.toRaw = (e) => e;
-H.toString = (e) => e.a === 0 ? "transparent" : q(e) && H.wanted === "toName" ? !1 : q(e) && H.wanted === "name" ? `#${W(e)}` : q(e) ? H.print(H.options.alphaFormat, e) : nr[W(e, !0)] || !1;
+te.transparent = "00000000";
+const ir = lr(te);
+j.shouldHandleInput = (e) => te[e];
+j.toRgb = (e) => j.parse(te[e]).rgba;
+j.toRaw = (e) => e;
+j.toString = (e) => e.a === 0 ? "transparent" : Z(e) && j.wanted === "toName" ? !1 : Z(e) && j.wanted === "name" ? `#${K(e)}` : Z(e) ? j.print(j.options.alphaFormat, e) : ir[K(e, !0)] || !1;
 function M(e, t) {
   return new u(e, t);
 }
@@ -1441,61 +1463,61 @@ M.mix = (e, t, r) => u.mix(e, t, r);
 M.readability = (e, t) => u.readability(e, t);
 M.isReadable = (e, t, r) => u.isReadable(e, t, r);
 M.mostReadable = (e, t, r) => u.mostReadable(e, t, r);
-M.names = X;
-function ds(e, t = "#fff", r = "#000") {
-  let s = JSON.parse(JSON.stringify(e)), o = Object.keys(s), n = {};
-  for (let a = 0; a < o.length; a++)
-    if (typeof s[o[a]] == "string" || typeof s[o[a]] == "number") {
-      const l = M(s[o[a]], {});
-      l.isValid() && (n[o[a]] = {
-        backgroundColor: l.toHexString(!1),
-        color: l.isDark() ? t : r
+M.names = te;
+function xs(e, t = "#fff", r = "#000") {
+  let s = JSON.parse(JSON.stringify(e)), o = Object.keys(s), a = {};
+  for (let n = 0; n < o.length; n++)
+    if (typeof s[o[n]] == "string" || typeof s[o[n]] == "number") {
+      const i = M(s[o[n]], {});
+      i.isValid() && (a[o[n]] = {
+        backgroundColor: i.toHexString(!1),
+        color: i.isDark() ? t : r
       });
-    } else if (typeof s[o[a]] == "object") {
-      const l = Object.keys(s[o[a]]), c = {};
-      for (let d = 0; d < l.length; d++)
-        if (typeof s[o[a]][l[d]] == "string") {
-          const f = M(s[o[a]][l[d]], !1);
-          f.isValid() && (c[l[d]] = {
+    } else if (typeof s[o[n]] == "object") {
+      const i = Object.keys(s[o[n]]), c = {};
+      for (let d = 0; d < i.length; d++)
+        if (typeof s[o[n]][i[d]] == "string") {
+          const f = M(s[o[n]][i[d]], !1);
+          f.isValid() && (c[i[d]] = {
             backgroundColor: f.toHexString(!0),
             color: f.isDark() ? t : r
           });
         }
-      n[o[a]] = c;
+      a[o[n]] = c;
     }
-  return n;
+  return a;
 }
-function fs(e) {
+function ms(e) {
   return e.replace(/([A-Z])/g, " $1").replace(/\s+/g, " ").split(" ").map((o) => o.charAt(0).toUpperCase() + o.substring(1).toLowerCase()).join(" ").trim();
 }
-function gs(e, t) {
+function ys(e, t) {
   const r = String(e).trim();
   return /^[0-9]*\.?[0-9]*$/.test(r) ? Number(r) : t;
 }
-function hs(e, t) {
+function ks(e, t) {
   const r = String(e).trim();
   return /^[1-9]\d*$/.test(r) ? Number(r) : t;
 }
-function bs() {
+function ws() {
   typeof window < "u" && document && document.body.click();
 }
-function ps(e, t = 2) {
+function vs(e, t = 2) {
   if (e === 0)
     return "0 Bytes";
-  const r = 1024, s = t < 0 ? 0 : t, o = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"], n = Math.floor(Math.log(e) / Math.log(r));
-  return parseFloat((e / Math.pow(r, n)).toFixed(s)) + " " + o[n];
+  const r = 1024, s = t < 0 ? 0 : t, o = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"], a = Math.floor(Math.log(e) / Math.log(r));
+  return parseFloat((e / Math.pow(r, a)).toFixed(s)) + " " + o[a];
 }
-function G(e, t = 2, r = "0") {
+function W(e, t = 2, r = "0") {
   return e.toString().padStart(t, r);
 }
-function ms(e, t = "/") {
+function Cs(e, t = "/") {
   return [
-    G(e.getMonth() + 1),
-    G(e.getDate()),
+    W(e.getMonth() + 1),
+    W(e.getDate()),
     e.getFullYear()
   ].join(t);
 }
-function Xe() {
+function tt() {
   return {
     english: {
       long: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -1511,10 +1533,10 @@ function Xe() {
     }
   };
 }
-function xs(e, t = "long", r = "english") {
-  return Xe()[r][t][e.getMonth()] + " " + e.getDate() + ", " + e.getFullYear();
+function Ss(e, t = "long", r = "english") {
+  return tt()[r][t][e.getMonth()] + " " + e.getDate() + ", " + e.getFullYear();
 }
-function ks(e) {
+function Vs(e) {
   let t = parseInt(String(e), 10), r = Math.floor(
     parseInt(
       String(Number(t) / (24 * 3600))
@@ -1529,150 +1551,150 @@ function ks(e) {
   t %= 3600;
   let o = Math.floor(t / 60);
   t %= 60;
-  let n = Math.floor(t), a = r < 10 ? "0" + r : r, l = s < 10 ? "0" + s : s, c = o < 10 ? "0" + o : o, d = n < 10 ? "0" + n : n, f = a === "00" ? "" : a + ":";
-  return f += l === "00" ? "" : l + ":", f += c + ":" + d, f;
+  let a = Math.floor(t), n = r < 10 ? "0" + r : r, i = s < 10 ? "0" + s : s, c = o < 10 ? "0" + o : o, d = a < 10 ? "0" + a : a, f = n === "00" ? "" : n + ":";
+  return f += i === "00" ? "" : i + ":", f += c + ":" + d, f;
 }
-function ys(e) {
+function $s(e) {
   return new Intl.NumberFormat().format(e);
 }
-function B(e, t) {
+function R(e, t) {
   return e = Math.ceil(e), t = Math.floor(t), Math.floor(Math.random() * (t - e + 1) + e);
 }
-function Ke() {
+function rt() {
   return "0123456789abcdef".split("");
 }
-var ar = function(t) {
-  return lr(t) && !ir(t);
+var ur = function(t) {
+  return cr(t) && !dr(t);
 };
-function lr(e) {
+function cr(e) {
   return !!e && typeof e == "object";
 }
-function ir(e) {
-  var t = Object.prototype.toString.call(e);
-  return t === "[object RegExp]" || t === "[object Date]" || dr(e);
-}
-var ur = typeof Symbol == "function" && Symbol.for, cr = ur ? Symbol.for("react.element") : 60103;
 function dr(e) {
-  return e.$$typeof === cr;
+  var t = Object.prototype.toString.call(e);
+  return t === "[object RegExp]" || t === "[object Date]" || hr(e);
 }
-function fr(e) {
-  return Array.isArray(e) ? [] : {};
-}
-function Q(e, t) {
-  return t.clone !== !1 && t.isMergeableObject(e) ? N(fr(e), e, t) : e;
-}
-function gr(e, t, r) {
-  return e.concat(t).map(function(s) {
-    return Q(s, r);
-  });
-}
-function hr(e, t) {
-  if (!t.customMerge)
-    return N;
-  var r = t.customMerge(e);
-  return typeof r == "function" ? r : N;
+var fr = typeof Symbol == "function" && Symbol.for, gr = fr ? Symbol.for("react.element") : 60103;
+function hr(e) {
+  return e.$$typeof === gr;
 }
 function br(e) {
+  return Array.isArray(e) ? [] : {};
+}
+function ee(e, t) {
+  return t.clone !== !1 && t.isMergeableObject(e) ? U(br(e), e, t) : e;
+}
+function pr(e, t, r) {
+  return e.concat(t).map(function(s) {
+    return ee(s, r);
+  });
+}
+function xr(e, t) {
+  if (!t.customMerge)
+    return U;
+  var r = t.customMerge(e);
+  return typeof r == "function" ? r : U;
+}
+function mr(e) {
   return Object.getOwnPropertySymbols ? Object.getOwnPropertySymbols(e).filter(function(t) {
     return e.propertyIsEnumerable(t);
   }) : [];
 }
-function je(e) {
-  return Object.keys(e).concat(br(e));
+function He(e) {
+  return Object.keys(e).concat(mr(e));
 }
-function et(e, t) {
+function st(e, t) {
   try {
     return t in e;
   } catch {
     return !1;
   }
 }
-function pr(e, t) {
-  return et(e, t) && !(Object.hasOwnProperty.call(e, t) && Object.propertyIsEnumerable.call(e, t));
+function yr(e, t) {
+  return st(e, t) && !(Object.hasOwnProperty.call(e, t) && Object.propertyIsEnumerable.call(e, t));
 }
-function mr(e, t, r) {
+function kr(e, t, r) {
   var s = {};
-  return r.isMergeableObject(e) && je(e).forEach(function(o) {
-    s[o] = Q(e[o], r);
-  }), je(t).forEach(function(o) {
-    pr(e, o) || (et(e, o) && r.isMergeableObject(t[o]) ? s[o] = hr(o, r)(e[o], t[o], r) : s[o] = Q(t[o], r));
+  return r.isMergeableObject(e) && He(e).forEach(function(o) {
+    s[o] = ee(e[o], r);
+  }), He(t).forEach(function(o) {
+    yr(e, o) || (st(e, o) && r.isMergeableObject(t[o]) ? s[o] = xr(o, r)(e[o], t[o], r) : s[o] = ee(t[o], r));
   }), s;
 }
-function N(e, t, r) {
-  r = r || {}, r.arrayMerge = r.arrayMerge || gr, r.isMergeableObject = r.isMergeableObject || ar, r.cloneUnlessOtherwiseSpecified = Q;
-  var s = Array.isArray(t), o = Array.isArray(e), n = s === o;
-  return n ? s ? r.arrayMerge(e, t, r) : mr(e, t, r) : Q(t, r);
+function U(e, t, r) {
+  r = r || {}, r.arrayMerge = r.arrayMerge || pr, r.isMergeableObject = r.isMergeableObject || ur, r.cloneUnlessOtherwiseSpecified = ee;
+  var s = Array.isArray(t), o = Array.isArray(e), a = s === o;
+  return a ? s ? r.arrayMerge(e, t, r) : kr(e, t, r) : ee(t, r);
 }
-N.all = function(t, r) {
+U.all = function(t, r) {
   if (!Array.isArray(t))
     throw new Error("first argument should be an array");
   return t.reduce(function(s, o) {
-    return N(s, o, r);
+    return U(s, o, r);
   }, {});
 };
-var xr = N, kr = xr;
-function ws(e) {
-  return Object.keys(e).length > 0 ? kr(i, e) : i;
+var wr = U, vr = wr;
+function zs(e) {
+  return Object.keys(e).length > 0 ? vr(l, e) : l;
 }
-function yr() {
-  const e = Ke(), t = 0, r = 15, s = e[B(t, r)] + e[B(t, r)], o = e[B(t, r)] + e[B(t, r)], n = e[B(t, r)] + e[B(t, r)];
-  return "#" + s + o + n;
+function Cr() {
+  const e = rt(), t = 0, r = 15, s = e[R(t, r)] + e[R(t, r)], o = e[R(t, r)] + e[R(t, r)], a = e[R(t, r)] + e[R(t, r)];
+  return "#" + s + o + a;
 }
-function vs(e = "#fff", t = "#000") {
-  let r = { backgroundColor: "", color: "" }, s = M(yr(), {}), o = s.isDark();
+function Ms(e = "#fff", t = "#000") {
+  let r = { backgroundColor: "", color: "" }, s = M(Cr(), {}), o = s.isDark();
   return r.backgroundColor = "#" + String(s.toHex(!1)), r.color = o ? e : t, r;
 }
-function Ss() {
-  const e = Ke(), t = 0, r = 15, s = e[B(t, r)], o = e[B(t, r)], n = e[B(t, r)];
-  return "#" + s + o + n;
+function Ts() {
+  const e = rt(), t = 0, r = 15, s = e[R(t, r)], o = e[R(t, r)], a = e[R(t, r)];
+  return "#" + s + o + a;
 }
-function Cs(e = 10) {
+function _s(e = 10) {
   let t = "";
   const r = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", s = r.length;
   for (let o = 0; o < Number(e); o++)
     t += r.charAt(Math.floor(Math.random() * s));
   return t;
 }
-function $s(e, t = "-") {
+function As(e, t = "-") {
   let r = e || "", s = t || "-";
   return r.toString().toLowerCase().normalize("NFD").trim().replace(/\s+/g, s).replace(/[^\w\-]+/g, "").replace(/\-\-+/g, s);
 }
-function zs(e) {
+function Fs(e) {
   return e.replace(/[^\w\s\']|_/g, " ").replace(/\s+/g, " ").replace(/(?:^\w|[A-Z]|\b\w)/g, function(t, r) {
     return r === 0 ? t.toLowerCase() : t.toUpperCase();
   }).replace(/\s+/g, "");
 }
-function Vs(e) {
+function Rs(e) {
   return e.replace(/[^A-z0-9._-]/gi, "");
 }
-function Ms(e, t = "short", r = "english", s = "AM", o = "PM") {
-  var n = new Date(Number(e) * 1e3), a = Xe(), l = a[r][t], c = n.getFullYear(), d = l[n.getMonth()], f = n.getDate(), g = n.getHours(), b = n.getMinutes(), k = n.getSeconds(), _ = g >= 12 ? o : s;
-  return g = g % 12, g = g === 0 ? 12 : g, d + " " + G(f) + ", " + c + " " + g + ":" + G(b) + ":" + G(k) + " " + _;
+function js(e, t = "short", r = "english", s = "AM", o = "PM") {
+  var a = new Date(Number(e) * 1e3), n = tt(), i = n[r][t], c = a.getFullYear(), d = i[a.getMonth()], f = a.getDate(), g = a.getHours(), p = a.getMinutes(), k = a.getSeconds(), T = g >= 12 ? o : s;
+  return g = g % 12, g = g === 0 ? 12 : g, d + " " + W(f) + ", " + c + " " + g + ":" + W(p) + ":" + W(k) + " " + T;
 }
-function _s(e) {
+function Bs(e) {
   return e.filter((t, r, s) => s.indexOf(t) === r);
 }
-const As = [
+const Hs = [
   "audio/flac",
   "audio/mp4",
   "audio/mpeg",
   "audio/ogg",
   "audio/x-flac",
   "audio/webm"
-], tt = [
+], ot = [
   "button",
   "submit",
   "reset"
-], wr = [
+], Sr = [
   "light",
   "dark"
-], Rs = [
+], Os = [
   "up",
   "down",
   "left",
   "right",
   ""
-], js = [
+], Es = [
   "style",
   "title",
   "address",
@@ -1767,7 +1789,7 @@ const As = [
   "details",
   "dialog",
   "summary"
-], Bs = [
+], Ps = [
   "fab",
   "fad",
   "fak",
@@ -1776,7 +1798,7 @@ const As = [
   "fas",
   "fass",
   "fat"
-], Hs = [
+], Is = [
   "xs",
   "sm",
   "1x",
@@ -1790,13 +1812,13 @@ const As = [
   "8x",
   "9x",
   "10x"
-], Fs = [1, 2, 3, 4, 5, 6], Os = [
+], Ds = [1, 2, 3, 4, 5, 6], Ls = [
   "image/gif",
   "image/jpeg",
   "image/png",
   "image/svg+xml",
   "image/webp"
-], vr = [
+], Vr = [
   "color",
   "date",
   "datetime-local",
@@ -1809,188 +1831,188 @@ const As = [
   "text",
   "time",
   "url"
-], Ts = [
+], Ns = [
   "video/mp4",
   "video/ogg",
   "video/webm"
-], Sr = C({
+], $r = S({
   name: "VvAnchor",
   props: {
     button: {
       type: Boolean,
-      default: i.defaults.VvAnchor.button
+      default: l.defaults.VvAnchor.button
     },
     buttonBlock: {
       type: Boolean,
-      default: i.defaults.VvAnchor.buttonBlock
+      default: l.defaults.VvAnchor.buttonBlock
     },
     buttonFab: {
       type: Boolean,
-      default: i.defaults.VvAnchor.buttonFab
+      default: l.defaults.VvAnchor.buttonFab
     },
     buttonSize: {
       type: String,
-      default: i.defaults.VvAnchor.buttonSize
+      default: l.defaults.VvAnchor.buttonSize
     },
     color: {
       type: String,
-      default: i.defaults.VvAnchor.color
+      default: l.defaults.VvAnchor.color
     },
     external: {
       type: Boolean,
-      default: i.defaults.VvAnchor.external
+      default: l.defaults.VvAnchor.external
     },
     href: {
       type: String,
-      default: i.defaults.VvAnchor.href
+      default: l.defaults.VvAnchor.href
     },
     palette: {
       type: String,
-      default: i.defaults.VvAnchor.palette
+      default: l.defaults.VvAnchor.palette
     }
   },
   setup(e) {
-    const t = Object.keys(x("vv", {})).length > 0 ? x("vv") : i;
-    return { classes: p(() => {
-      var o, n, a, l, c, d, f, g, b, k, _, U, J, ye, we, ve;
+    const t = Object.keys(m("vv", {})).length > 0 ? m("vv") : l;
+    return { classes: x(() => {
+      var o, a, n, i, c, d, f, g, p, k, T, q, J, Ve, $e, ze;
       let s = [];
-      return e.button === !0 ? (e.buttonBlock === !0 && e.buttonFab === !1 ? ((o = t == null ? void 0 : t.buttons) != null && o.blockBase() && s.push(t.buttons.blockBase()), e.buttonSize !== "" && ((a = (n = t == null ? void 0 : t.buttons) == null ? void 0 : n.blockSizes) == null ? void 0 : a[e.buttonSize]) && s.push(t.buttons.blockSizes[e.buttonSize])) : e.buttonBlock === !1 && e.buttonFab === !0 ? ((l = t == null ? void 0 : t.buttons) != null && l.fabBase() && s.push(t.buttons.fabBase()), e.buttonSize !== "" && ((d = (c = t == null ? void 0 : t.buttons) == null ? void 0 : c.fabSizes) == null ? void 0 : d[e.buttonSize]) && s.push(t.buttons.fabSizes[e.buttonSize])) : ((f = t == null ? void 0 : t.buttons) != null && f.base() && s.push(t.buttons.base()), e.buttonSize !== "" && ((b = (g = t == null ? void 0 : t.buttons) == null ? void 0 : g.sizes) == null ? void 0 : b[e.buttonSize]) && s.push(t.buttons.sizes[e.buttonSize])), (U = (_ = (k = t == null ? void 0 : t.buttons) == null ? void 0 : k.palettes) == null ? void 0 : _[e.palette]) != null && U[e.color] && s.push(t.buttons.palettes[e.palette][e.color])) : ((J = t == null ? void 0 : t.anchors) != null && J.base() && s.push(t.anchors.base()), (ve = (we = (ye = t == null ? void 0 : t.anchors) == null ? void 0 : ye.palettes) == null ? void 0 : we[e.palette]) != null && ve[e.color] && s.push(t.anchors.palettes[e.palette][e.color])), s.join(" ").trim();
+      return e.button === !0 ? (e.buttonBlock === !0 && e.buttonFab === !1 ? ((o = t == null ? void 0 : t.buttons) != null && o.blockBase() && s.push(t.buttons.blockBase()), e.buttonSize !== "" && ((n = (a = t == null ? void 0 : t.buttons) == null ? void 0 : a.blockSizes) == null ? void 0 : n[e.buttonSize]) && s.push(t.buttons.blockSizes[e.buttonSize])) : e.buttonBlock === !1 && e.buttonFab === !0 ? ((i = t == null ? void 0 : t.buttons) != null && i.fabBase() && s.push(t.buttons.fabBase()), e.buttonSize !== "" && ((d = (c = t == null ? void 0 : t.buttons) == null ? void 0 : c.fabSizes) == null ? void 0 : d[e.buttonSize]) && s.push(t.buttons.fabSizes[e.buttonSize])) : ((f = t == null ? void 0 : t.buttons) != null && f.base() && s.push(t.buttons.base()), e.buttonSize !== "" && ((p = (g = t == null ? void 0 : t.buttons) == null ? void 0 : g.sizes) == null ? void 0 : p[e.buttonSize]) && s.push(t.buttons.sizes[e.buttonSize])), (q = (T = (k = t == null ? void 0 : t.buttons) == null ? void 0 : k.palettes) == null ? void 0 : T[e.palette]) != null && q[e.color] && s.push(t.buttons.palettes[e.palette][e.color])) : ((J = t == null ? void 0 : t.anchors) != null && J.base() && s.push(t.anchors.base()), (ze = ($e = (Ve = t == null ? void 0 : t.anchors) == null ? void 0 : Ve.palettes) == null ? void 0 : $e[e.palette]) != null && ze[e.color] && s.push(t.anchors.palettes[e.palette][e.color])), s.join(" ").trim();
     }) };
   }
-}), $ = (e, t) => {
+}), V = (e, t) => {
   const r = e.__vccOpts || e;
   for (const [s, o] of t)
     r[s] = o;
   return r;
-}, Cr = ["href"], $r = ["href"];
-function zr(e, t, r, s, o, n) {
-  return e.external ? (m(), v("a", {
+}, zr = ["href"], Mr = ["href"];
+function Tr(e, t, r, s, o, a) {
+  return e.external ? (b(), y("a", {
     key: 0,
     href: e.href,
     class: h(e.classes),
     target: "_blank",
     rel: "noopener noreferrer"
   }, [
-    P(e.$slots, "default")
-  ], 10, Cr)) : (m(), v("a", {
+    I(e.$slots, "default")
+  ], 10, zr)) : (b(), y("a", {
     key: 1,
     href: e.href,
     class: h(e.classes)
   }, [
-    P(e.$slots, "default")
-  ], 10, $r));
+    I(e.$slots, "default")
+  ], 10, Mr));
 }
-const Is = /* @__PURE__ */ $(Sr, [["render", zr]]), Vr = C({
+const Gs = /* @__PURE__ */ V($r, [["render", Tr]]), _r = S({
   name: "VvButton",
   props: {
     block: {
       type: Boolean,
-      default: i.defaults.VvButton.block
+      default: l.defaults.VvButton.block
     },
     color: {
       type: String,
-      default: i.defaults.VvButton.color
+      default: l.defaults.VvButton.color
     },
     fab: {
       type: Boolean,
-      default: i.defaults.VvButton.fab
+      default: l.defaults.VvButton.fab
     },
     palette: {
       type: String,
-      default: i.defaults.VvButton.palette
+      default: l.defaults.VvButton.palette
     },
     size: {
       type: String,
-      default: i.defaults.VvButton.size
+      default: l.defaults.VvButton.size
     },
     type: {
       type: String,
-      default: i.defaults.VvButton.type,
-      validator: (e) => tt.includes(e)
+      default: l.defaults.VvButton.type,
+      validator: (e) => ot.includes(e)
     }
   },
   setup(e) {
-    const t = Object.keys(x("vv", {})).length > 0 ? x("vv") : i, r = e.type;
-    let s = p(() => {
-      var n, a, l, c, d, f, g, b, k, _, U, J;
+    const t = Object.keys(m("vv", {})).length > 0 ? m("vv") : l, r = e.type;
+    let s = x(() => {
+      var a, n, i, c, d, f, g, p, k, T, q, J;
       let o = [];
-      return e.block === !0 && e.fab === !1 ? ((n = t == null ? void 0 : t.buttons) != null && n.blockBase() && o.push(t.buttons.blockBase()), e.size !== "" && ((l = (a = t == null ? void 0 : t.buttons) == null ? void 0 : a.blockSizes) == null ? void 0 : l[e.size]) && o.push(t.buttons.blockSizes[e.size])) : e.fab === !0 && e.block === !1 ? ((c = t == null ? void 0 : t.buttons) != null && c.fabBase() && o.push(t.buttons.fabBase()), e.size !== "" && ((f = (d = t == null ? void 0 : t.buttons) == null ? void 0 : d.fabSizes) == null ? void 0 : f[e.size]) && o.push(t.buttons.fabSizes[e.size])) : ((g = t == null ? void 0 : t.buttons) != null && g.base() && o.push(t.buttons.base()), e.size !== "" && ((k = (b = t == null ? void 0 : t.buttons) == null ? void 0 : b.sizes) == null ? void 0 : k[e.size]) && o.push(t.buttons.sizes[e.size])), (J = (U = (_ = t == null ? void 0 : t.buttons) == null ? void 0 : _.palettes) == null ? void 0 : U[e.palette]) != null && J[e.color] && o.push(t.buttons.palettes[e.palette][e.color]), o.join(" ").trim();
+      return e.block === !0 && e.fab === !1 ? ((a = t == null ? void 0 : t.buttons) != null && a.blockBase() && o.push(t.buttons.blockBase()), e.size !== "" && ((i = (n = t == null ? void 0 : t.buttons) == null ? void 0 : n.blockSizes) == null ? void 0 : i[e.size]) && o.push(t.buttons.blockSizes[e.size])) : e.fab === !0 && e.block === !1 ? ((c = t == null ? void 0 : t.buttons) != null && c.fabBase() && o.push(t.buttons.fabBase()), e.size !== "" && ((f = (d = t == null ? void 0 : t.buttons) == null ? void 0 : d.fabSizes) == null ? void 0 : f[e.size]) && o.push(t.buttons.fabSizes[e.size])) : ((g = t == null ? void 0 : t.buttons) != null && g.base() && o.push(t.buttons.base()), e.size !== "" && ((k = (p = t == null ? void 0 : t.buttons) == null ? void 0 : p.sizes) == null ? void 0 : k[e.size]) && o.push(t.buttons.sizes[e.size])), (J = (q = (T = t == null ? void 0 : t.buttons) == null ? void 0 : T.palettes) == null ? void 0 : q[e.palette]) != null && J[e.color] && o.push(t.buttons.palettes[e.palette][e.color]), o.join(" ").trim();
     });
     return { btnType: r, classes: s };
   }
-}), Mr = ["type"];
-function _r(e, t, r, s, o, n) {
-  return m(), v("button", {
+}), Ar = ["type"];
+function Fr(e, t, r, s, o, a) {
+  return b(), y("button", {
     type: e.btnType,
     class: h(e.classes)
   }, [
-    P(e.$slots, "default")
-  ], 10, Mr);
+    I(e.$slots, "default")
+  ], 10, Ar);
 }
-const Ar = /* @__PURE__ */ $(Vr, [["render", _r]]), Rr = C({
+const Rr = /* @__PURE__ */ V(_r, [["render", Fr]]), jr = S({
   name: "VvColorModeButton",
   components: {
-    VvButton: Ar
+    VvButton: Rr
   },
   props: {
     mode: {
       type: String,
-      default: i.defaults.VvColorModeButton.mode,
-      validator: (e) => wr.includes(e)
+      default: l.defaults.VvColorModeButton.mode,
+      validator: (e) => Sr.includes(e)
     },
     color: {
       type: String,
-      default: i.defaults.VvColorModeButton.color
+      default: l.defaults.VvColorModeButton.color
     },
     palette: {
       type: String,
-      default: i.defaults.VvColorModeButton.palette
+      default: l.defaults.VvColorModeButton.palette
     },
     size: {
       type: String,
-      default: i.defaults.VvColorModeButton.size
+      default: l.defaults.VvColorModeButton.size
     },
     groundDark: {
       type: String,
-      default: i.colorModes.dark.ground
+      default: l.colorModes.dark.ground
     },
     groundDarkHex: {
       type: String,
-      default: i.colorModes.dark.hex
+      default: l.colorModes.dark.hex
     },
     groundLight: {
       type: String,
-      default: i.colorModes.light.ground
+      default: l.colorModes.light.ground
     },
     groundLightHex: {
       type: String,
-      default: i.colorModes.light.hex
+      default: l.colorModes.light.hex
     },
     textDark: {
       type: String,
-      default: i.colorModes.dark.text
+      default: l.colorModes.dark.text
     },
     textLight: {
       type: String,
-      default: i.colorModes.light.text
+      default: l.colorModes.light.text
     },
     titleDark: {
       type: String,
-      default: i.colorModes.dark.title
+      default: l.colorModes.dark.title
     },
     titleLight: {
       type: String,
-      default: i.colorModes.light.title
+      default: l.colorModes.light.title
     },
     type: {
       type: String,
-      default: i.defaults.VvColorModeButton.type,
-      validator: (e) => tt.includes(e)
+      default: l.defaults.VvColorModeButton.type,
+      validator: (e) => ot.includes(e)
     }
   },
   setup(e) {
-    const t = Te(e.mode), r = p(() => t.value === "dark" ? "sun" : "moon"), s = p(() => t.value === "dark" ? e.titleLight : e.titleDark);
-    return rt(() => {
+    const t = De(e.mode), r = x(() => t.value === "dark" ? "sun" : "moon"), s = x(() => t.value === "dark" ? e.titleLight : e.titleDark);
+    return at(() => {
       typeof window < "u" && document && (document.documentElement.classList.add(
         e.groundLight,
         e.groundDark,
@@ -2007,7 +2029,7 @@ const Ar = /* @__PURE__ */ $(Vr, [["render", _r]]), Rr = C({
       typeof window < "u" && document && (this.mode === "light" ? (this.mode = "dark", localStorage.setItem("colorMode", "dark"), document.documentElement.style.backgroundColor = this.groundDarkHex, document.documentElement.classList.add("dark")) : this.mode === "dark" && (this.mode = "light", localStorage.setItem("colorMode", "light"), document.documentElement.style.backgroundColor = this.groundLightHex, document.documentElement.classList.remove("dark")));
     }
   }
-}), jr = {
+}), Br = {
   key: 0,
   class: "h-5 w-5",
   xmlns: "http://www.w3.org/2000/svg",
@@ -2015,13 +2037,13 @@ const Ar = /* @__PURE__ */ $(Vr, [["render", _r]]), Rr = C({
   viewBox: "0 0 24 24",
   stroke: "currentColor",
   "stroke-width": "2"
-}, Br = /* @__PURE__ */ S("path", {
+}, Hr = /* @__PURE__ */ v("path", {
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   d: "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-}, null, -1), Hr = [
-  Br
-], Fr = {
+}, null, -1), Or = [
+  Hr
+], Er = {
   key: 1,
   class: "h-5 w-5",
   xmlns: "http://www.w3.org/2000/svg",
@@ -2029,18 +2051,18 @@ const Ar = /* @__PURE__ */ $(Vr, [["render", _r]]), Rr = C({
   viewBox: "0 0 24 24",
   stroke: "currentColor",
   "stroke-width": "2"
-}, Or = /* @__PURE__ */ S("path", {
+}, Pr = /* @__PURE__ */ v("path", {
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   d: "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-}, null, -1), Tr = [
-  Or
+}, null, -1), Ir = [
+  Pr
 ];
-function Ir(e, t, r, s, o, n) {
-  const a = st("VvButton");
-  return m(), Ie(a, {
+function Dr(e, t, r, s, o, a) {
+  const n = Le("VvButton");
+  return b(), Y(n, {
     title: e.title,
-    onClick: t[0] || (t[0] = (l) => e.toggleColorMode(l)),
+    onClick: t[0] || (t[0] = (i) => e.toggleColorMode(i)),
     class: "rounded-full",
     color: e.color,
     fab: !0,
@@ -2048,154 +2070,311 @@ function Ir(e, t, r, s, o, n) {
     type: "button",
     size: e.size
   }, {
-    default: Ee(() => [
-      e.icon === "moon" ? (m(), v("svg", jr, Hr)) : Se("", !0),
-      e.icon === "sun" ? (m(), v("svg", Fr, Tr)) : Se("", !0)
+    default: N(() => [
+      e.icon === "moon" ? (b(), y("svg", Br, Or)) : G("", !0),
+      e.icon === "sun" ? (b(), y("svg", Er, Ir)) : G("", !0)
     ]),
     _: 1
   }, 8, ["title", "color", "palette", "size"]);
 }
-const Es = /* @__PURE__ */ $(Rr, [["render", Ir]]), Er = C({
+const Us = /* @__PURE__ */ V(jr, [["render", Dr]]), Lr = S({
   name: "VvEl",
   props: {
     borderPalette: {
       type: String,
-      default: i.defaults.VvEl.borderPalette
+      default: l.defaults.VvEl.borderPalette
     },
     borderColor: {
       type: String,
-      default: i.defaults.VvEl.borderColor
+      default: l.defaults.VvEl.borderColor
     },
     groundPalette: {
       type: String,
-      default: i.defaults.VvEl.groundPalette
+      default: l.defaults.VvEl.groundPalette
     },
     groundColor: {
       type: String,
-      default: i.defaults.VvEl.groundColor
+      default: l.defaults.VvEl.groundColor
     },
     tag: {
       type: String,
-      default: i.defaults.VvEl.tag
+      default: l.defaults.VvEl.tag
     },
     textPalette: {
       type: String,
-      default: i.defaults.VvEl.textPalette
+      default: l.defaults.VvEl.textPalette
     },
     textColor: {
       type: String,
-      default: i.defaults.VvEl.textColor
+      default: l.defaults.VvEl.textColor
     }
   },
   setup(e) {
-    const t = Object.keys(x("vv", {})).length > 0 ? x("vv") : i;
-    return { classes: p(() => {
-      var o, n, a, l, c, d, f, g, b;
+    const t = Object.keys(m("vv", {})).length > 0 ? m("vv") : l;
+    return { classes: x(() => {
+      var o, a, n, i, c, d, f, g, p;
       let s = [];
-      return (a = (n = (o = t == null ? void 0 : t.borders) == null ? void 0 : o.palettes) == null ? void 0 : n[e.borderPalette]) != null && a[e.borderColor] && s.push(t.borders.palettes[e.borderPalette][e.borderColor]), (d = (c = (l = t == null ? void 0 : t.grounds) == null ? void 0 : l.palettes) == null ? void 0 : c[e.groundPalette]) != null && d[e.groundColor] && s.push(t.grounds.palettes[e.groundPalette][e.groundColor]), (b = (g = (f = t == null ? void 0 : t.text) == null ? void 0 : f.palettes) == null ? void 0 : g[e.textPalette]) != null && b[e.textColor] && s.push(t.text.palettes[e.textPalette][e.textColor]), s.join(" ").trim();
+      return (n = (a = (o = t == null ? void 0 : t.borders) == null ? void 0 : o.palettes) == null ? void 0 : a[e.borderPalette]) != null && n[e.borderColor] && s.push(t.borders.palettes[e.borderPalette][e.borderColor]), (d = (c = (i = t == null ? void 0 : t.grounds) == null ? void 0 : i.palettes) == null ? void 0 : c[e.groundPalette]) != null && d[e.groundColor] && s.push(t.grounds.palettes[e.groundPalette][e.groundColor]), (p = (g = (f = t == null ? void 0 : t.text) == null ? void 0 : f.palettes) == null ? void 0 : g[e.textPalette]) != null && p[e.textColor] && s.push(t.text.palettes[e.textPalette][e.textColor]), s.join(" ").trim();
     }) };
   }
 });
-function Dr(e, t, r, s, o, n) {
-  return m(), Ie(ot(e.tag), {
+function Nr(e, t, r, s, o, a) {
+  return b(), Y(nt(e.tag), {
     class: h(e.classes)
   }, {
-    default: Ee(() => [
-      P(e.$slots, "default")
+    default: N(() => [
+      I(e.$slots, "default")
     ]),
     _: 3
   }, 8, ["class"]);
 }
-const Ds = /* @__PURE__ */ $(Er, [["render", Dr]]), xe = C({
+const Gr = /* @__PURE__ */ V(Lr, [["render", Nr]]), Ur = S({
+  components: { VvEl: Gr },
+  props: {
+    displayError: {
+      type: Boolean,
+      default: l.defaults.VvFormGroup.displayError
+    },
+    displayHelp: {
+      type: Boolean,
+      default: l.defaults.VvFormGroup.displayHelp
+    },
+    displaySuccess: {
+      type: Boolean,
+      default: l.defaults.VvFormGroup.displaySuccess
+    },
+    errorClasses: {
+      type: String,
+      default: l.defaults.VvFormGroup.errorClasses
+    },
+    errorText: {
+      type: String,
+      default: l.defaults.VvFormGroup.errorText
+    },
+    errorTextColor: {
+      type: String,
+      default: l.defaults.VvFormGroup.errorTextColor
+    },
+    errorTextPalette: {
+      type: String,
+      default: l.defaults.VvFormGroup.errorTextPalette
+    },
+    helpClasses: {
+      type: String,
+      default: l.defaults.VvFormGroup.helpClasses
+    },
+    helpText: {
+      type: String,
+      default: l.defaults.VvFormGroup.helpText
+    },
+    helpTextColor: {
+      type: String,
+      default: l.defaults.VvFormGroup.helpTextColor
+    },
+    helpTextPalette: {
+      type: String,
+      default: l.defaults.VvFormGroup.helpTextPalette
+    },
+    label: {
+      type: String,
+      required: !0
+    },
+    labelFor: {
+      type: String,
+      required: !0
+    },
+    labelClasses: {
+      type: String,
+      default: l.defaults.VvFormGroup.labelClasses
+    },
+    labelTextColor: {
+      type: String,
+      default: l.defaults.VvFormGroup.labelTextColor
+    },
+    labelTextPalette: {
+      type: String,
+      default: l.defaults.VvFormGroup.labelTextPalette
+    },
+    slotParentClasses: {
+      type: String,
+      default: l.defaults.VvFormGroup.slotParentClasses
+    },
+    successClasses: {
+      type: String,
+      default: l.defaults.VvFormGroup.successClasses
+    },
+    successText: {
+      type: String,
+      default: l.defaults.VvFormGroup.successText
+    },
+    successTextColor: {
+      type: String,
+      default: l.defaults.VvFormGroup.successTextColor
+    },
+    successTextPalette: {
+      type: String,
+      default: l.defaults.VvFormGroup.successTextPalette
+    },
+    wrapperClasses: {
+      type: String,
+      default: l.defaults.VvFormGroup.wrapperClasses
+    }
+  }
+});
+function qr(e, t, r, s, o, a) {
+  const n = Le("VvEl");
+  return b(), y("div", {
+    class: h(e.wrapperClasses)
+  }, [
+    lt(n, {
+      tag: "label",
+      for: e.labelFor,
+      "text-palette": e.labelTextPalette,
+      "text-color": e.labelTextColor,
+      class: h(e.labelClasses)
+    }, {
+      default: N(() => [
+        re(se(e.label), 1)
+      ]),
+      _: 1
+    }, 8, ["for", "text-palette", "text-color", "class"]),
+    v("div", {
+      class: h(e.slotParentClasses)
+    }, [
+      I(e.$slots, "default")
+    ], 2),
+    !e.displayError && !e.displayHelp && !e.displaySuccess ? (b(), y("div", {
+      key: 0,
+      class: h(e.helpClasses)
+    }, "\xA0 ", 2)) : G("", !0),
+    e.displayHelp ? (b(), Y(n, {
+      key: 1,
+      tag: "div",
+      "text-palette": e.helpTextPalette,
+      "text-color": e.helpTextColor,
+      class: h(e.helpClasses)
+    }, {
+      default: N(() => [
+        re(se(e.helpText), 1)
+      ]),
+      _: 1
+    }, 8, ["text-palette", "text-color", "class"])) : G("", !0),
+    e.displaySuccess ? (b(), Y(n, {
+      key: 2,
+      tag: "div",
+      "text-palette": e.successTextPalette,
+      "text-color": e.successTextColor,
+      class: h(e.successClasses)
+    }, {
+      default: N(() => [
+        re(se(e.successText), 1)
+      ]),
+      _: 1
+    }, 8, ["text-palette", "text-color", "class"])) : G("", !0),
+    e.displayError === !0 ? (b(), Y(n, {
+      key: 3,
+      tag: "div",
+      "text-palette": e.errorTextPalette,
+      "text-color": e.errorTextColor,
+      class: h(e.errorClasses)
+    }, {
+      default: N(() => [
+        re(se(e.errorText), 1)
+      ]),
+      _: 1
+    }, 8, ["text-palette", "text-color", "class"])) : G("", !0)
+  ], 2);
+}
+const qs = /* @__PURE__ */ V(Ur, [["render", qr]]), Ce = S({
   name: "VvCheckbox",
   emits: ["update:modelValue"],
   props: {
     color: {
       type: String,
-      default: i.defaults.VvCheckbox.color
+      default: l.defaults.VvCheckbox.color
     },
     checked: {
       type: Boolean,
-      default: i.defaults.VvCheckbox.checked
+      default: l.defaults.VvCheckbox.checked
     },
     darkCheckHex: {
       type: String,
-      default: i.defaults.VvCheckbox.darkCheckHex
+      default: l.defaults.VvCheckbox.darkCheckHex
     },
     lightCheckHex: {
       type: String,
-      default: i.defaults.VvCheckbox.lightCheckHex
+      default: l.defaults.VvCheckbox.lightCheckHex
     },
     palette: {
       type: String,
-      default: i.defaults.VvCheckbox.palette
+      default: l.defaults.VvCheckbox.palette
     },
     size: {
       type: String,
-      default: i.defaults.VvCheckbox.size
+      default: l.defaults.VvCheckbox.size
     }
   },
   setup(e) {
-    const t = Object.keys(x("vv", {})).length > 0 ? x("vv") : i;
-    let r = p(() => {
-      var c, d, f, g, b, k;
-      let l = [];
-      return (c = t == null ? void 0 : t.checkboxes) != null && c.base() && l.push(t.checkboxes.base()), e.size !== "" && ((f = (d = t == null ? void 0 : t.checkboxes) == null ? void 0 : d.sizes) == null ? void 0 : f[e.size]) && l.push(t.checkboxes.sizes[e.size]), (k = (b = (g = t == null ? void 0 : t.checkboxes) == null ? void 0 : g.palettes) == null ? void 0 : b[e.palette]) != null && k[e.color] && l.push(t.checkboxes.palettes[e.palette][e.color]), l.join(" ").trim();
+    const t = Object.keys(m("vv", {})).length > 0 ? m("vv") : l;
+    let r = x(() => {
+      var c, d, f, g, p, k;
+      let i = [];
+      return (c = t == null ? void 0 : t.checkboxes) != null && c.base() && i.push(t.checkboxes.base()), e.size !== "" && ((f = (d = t == null ? void 0 : t.checkboxes) == null ? void 0 : d.sizes) == null ? void 0 : f[e.size]) && i.push(t.checkboxes.sizes[e.size]), (k = (p = (g = t == null ? void 0 : t.checkboxes) == null ? void 0 : g.palettes) == null ? void 0 : p[e.palette]) != null && k[e.color] && i.push(t.checkboxes.palettes[e.palette][e.color]), i.join(" ").trim();
     });
-    function s(l) {
+    function s(i) {
       return [
         'url("data:image/svg+xml,%3csvg viewBox=',
         "'0 0 16 16'  fill='%23",
-        l,
+        i,
         "' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'",
         '/%3e%3c/svg%3e")'
       ].join("");
     }
-    let o = p(() => s(e.darkCheckHex.replace(/#/g, ""))), n = p(() => s(e.lightCheckHex.replace(/#/g, "")));
+    let o = x(() => s(e.darkCheckHex.replace(/#/g, ""))), a = x(() => s(e.lightCheckHex.replace(/#/g, "")));
     return {
       classes: r,
       darkCheckCssUrl: o,
-      handleCheckboxChange: (l) => l.target.checked === !0,
-      lightCheckCssUrl: n
+      handleCheckboxChange: (i) => i.target.checked === !0,
+      lightCheckCssUrl: a
     };
   }
-}), Be = () => {
-  De((e) => ({
+}), Oe = () => {
+  Ne((e) => ({
     "6ae7de80": e.lightCheckCssUrl,
     "7dbbbfc8": e.darkCheckCssUrl
   }));
-}, He = xe.setup;
-xe.setup = He ? (e, t) => (Be(), He(e, t)) : Be;
-const Lr = ["checked", "data-test"];
-function Pr(e, t, r, s, o, n) {
-  return m(), v("input", {
+}, Ee = Ce.setup;
+Ce.setup = Ee ? (e, t) => (Oe(), Ee(e, t)) : Oe;
+const Jr = ["checked", "data-test"];
+function Yr(e, t, r, s, o, a) {
+  return b(), y("input", {
     type: "checkbox",
     class: h(e.classes),
     checked: e.checked,
-    onChange: t[0] || (t[0] = (a) => e.$emit("update:modelValue", e.handleCheckboxChange(a))),
+    onChange: t[0] || (t[0] = (n) => e.$emit("update:modelValue", e.handleCheckboxChange(n))),
     "data-test": (e.darkCheckCssUrl ? e.darkCheckHex : "") + (e.lightCheckCssUrl ? e.lightCheckHex : "")
-  }, null, 42, Lr);
+  }, null, 42, Jr);
 }
-const Ls = /* @__PURE__ */ $(xe, [["render", Pr], ["__scopeId", "data-v-6dad9ef5"]]), Nr = C({
+const Js = /* @__PURE__ */ V(Ce, [["render", Yr], ["__scopeId", "data-v-6dad9ef5"]]), Zr = S({
   name: "VvInput",
   emits: ["update:modelValue"],
   props: {
     color: {
       type: String,
-      default: i.defaults.VvInput.color
+      default: l.defaults.VvInput.color
     },
     palette: {
       type: String,
-      default: i.defaults.VvInput.palette
+      default: l.defaults.VvInput.palette
     },
     size: {
       type: String,
-      default: i.defaults.VvInput.size
+      default: l.defaults.VvInput.size
     },
     type: {
       type: String,
-      default: i.defaults.VvInput.type,
-      validator: (e) => vr.includes(e)
+      default: l.defaults.VvInput.type,
+      validator: (e) => Vr.includes(e)
     },
     modelValue: {
       type: String,
@@ -2203,49 +2382,49 @@ const Ls = /* @__PURE__ */ $(xe, [["render", Pr], ["__scopeId", "data-v-6dad9ef5
     }
   },
   setup(e) {
-    const t = Object.keys(x("vv", {})).length > 0 ? x("vv") : i;
-    return { classes: p(() => {
-      var n, a, l, c, d, f;
+    const t = Object.keys(m("vv", {})).length > 0 ? m("vv") : l;
+    return { classes: x(() => {
+      var a, n, i, c, d, f;
       let o = [];
-      return (n = t == null ? void 0 : t.inputs) != null && n.base() && o.push(t.inputs.base()), e.size !== "" && ((l = (a = t == null ? void 0 : t.inputs) == null ? void 0 : a.sizes) == null ? void 0 : l[e.size]) && o.push(t.inputs.sizes[e.size]), (f = (d = (c = t == null ? void 0 : t.inputs) == null ? void 0 : c.palettes) == null ? void 0 : d[e.palette]) != null && f[e.color] && o.push(t.inputs.palettes[e.palette][e.color]), o.join(" ").trim();
+      return (a = t == null ? void 0 : t.inputs) != null && a.base() && o.push(t.inputs.base()), e.size !== "" && ((i = (n = t == null ? void 0 : t.inputs) == null ? void 0 : n.sizes) == null ? void 0 : i[e.size]) && o.push(t.inputs.sizes[e.size]), (f = (d = (c = t == null ? void 0 : t.inputs) == null ? void 0 : c.palettes) == null ? void 0 : d[e.palette]) != null && f[e.color] && o.push(t.inputs.palettes[e.palette][e.color]), o.join(" ").trim();
     }), handleInputChange: (o) => o.target.value };
   }
-}), Ur = ["type", "value"];
-function Jr(e, t, r, s, o, n) {
-  return m(), v("input", {
+}), Wr = ["type", "value"];
+function Qr(e, t, r, s, o, a) {
+  return b(), y("input", {
     type: e.type,
     class: h(e.classes),
     value: e.modelValue,
-    onInput: t[0] || (t[0] = (a) => e.$emit("update:modelValue", e.handleInputChange(a)))
-  }, null, 42, Ur);
+    onInput: t[0] || (t[0] = (n) => e.$emit("update:modelValue", e.handleInputChange(n)))
+  }, null, 42, Wr);
 }
-const Ps = /* @__PURE__ */ $(Nr, [["render", Jr]]), ke = C({
+const Ys = /* @__PURE__ */ V(Zr, [["render", Qr]]), Se = S({
   name: "VvRadio",
   emits: ["update:modelValue"],
   props: {
     color: {
       type: String,
-      default: i.defaults.VvRadio.color
+      default: l.defaults.VvRadio.color
     },
     checked: {
       type: Boolean,
-      default: i.defaults.VvRadio.checked
+      default: l.defaults.VvRadio.checked
     },
     darkRadioHex: {
       type: String,
-      default: i.defaults.VvRadio.darkRadioHex
+      default: l.defaults.VvRadio.darkRadioHex
     },
     lightRadioHex: {
       type: String,
-      default: i.defaults.VvRadio.lightRadioHex
+      default: l.defaults.VvRadio.lightRadioHex
     },
     palette: {
       type: String,
-      default: i.defaults.VvRadio.palette
+      default: l.defaults.VvRadio.palette
     },
     size: {
       type: String,
-      default: i.defaults.VvRadio.size
+      default: l.defaults.VvRadio.size
     },
     value: {
       type: String,
@@ -2253,11 +2432,11 @@ const Ps = /* @__PURE__ */ $(Nr, [["render", Jr]]), ke = C({
     }
   },
   setup(e) {
-    const t = Object.keys(x("vv", {})).length > 0 ? x("vv") : i, r = Te(e.checked);
-    let s = p(() => {
-      var d, f, g, b, k, _;
+    const t = Object.keys(m("vv", {})).length > 0 ? m("vv") : l, r = De(e.checked);
+    let s = x(() => {
+      var d, f, g, p, k, T;
       let c = [];
-      return (d = t == null ? void 0 : t.radios) != null && d.base() && c.push(t.radios.base()), e.size !== "" && ((g = (f = t == null ? void 0 : t.radios) == null ? void 0 : f.sizes) == null ? void 0 : g[e.size]) && c.push(t.radios.sizes[e.size]), (_ = (k = (b = t == null ? void 0 : t.radios) == null ? void 0 : b.palettes) == null ? void 0 : k[e.palette]) != null && _[e.color] && c.push(t.radios.palettes[e.palette][e.color]), c.join(" ").trim();
+      return (d = t == null ? void 0 : t.radios) != null && d.base() && c.push(t.radios.base()), e.size !== "" && ((g = (f = t == null ? void 0 : t.radios) == null ? void 0 : f.sizes) == null ? void 0 : g[e.size]) && c.push(t.radios.sizes[e.size]), (T = (k = (p = t == null ? void 0 : t.radios) == null ? void 0 : p.palettes) == null ? void 0 : k[e.palette]) != null && T[e.color] && c.push(t.radios.palettes[e.palette][e.color]), c.join(" ").trim();
     });
     function o(c) {
       return [
@@ -2268,86 +2447,86 @@ const Ps = /* @__PURE__ */ $(Nr, [["render", Jr]]), ke = C({
         '/%3e%3c/svg%3e")'
       ].join("");
     }
-    let n = p(() => o(e.darkRadioHex.replace(/#/g, ""))), a = p(() => o(e.lightRadioHex.replace(/#/g, "")));
+    let a = x(() => o(e.darkRadioHex.replace(/#/g, ""))), n = x(() => o(e.lightRadioHex.replace(/#/g, "")));
     return {
       classes: s,
-      darkRadioCssUrl: n,
+      darkRadioCssUrl: a,
       handleRadioChange: (c) => {
         const d = c.target;
         return r.value = !1, d.checked === !0 && (r.value = !0), r.value;
       },
-      lightRadioCssUrl: a
+      lightRadioCssUrl: n
     };
   }
-}), Fe = () => {
-  De((e) => ({
+}), Pe = () => {
+  Ne((e) => ({
     "5064726a": e.lightRadioCssUrl,
     "277b8392": e.darkRadioCssUrl
   }));
-}, Oe = ke.setup;
-ke.setup = Oe ? (e, t) => (Fe(), Oe(e, t)) : Fe;
-const qr = ["value", "checked", "data-test"];
-function Gr(e, t, r, s, o, n) {
-  return m(), v("input", {
+}, Ie = Se.setup;
+Se.setup = Ie ? (e, t) => (Pe(), Ie(e, t)) : Pe;
+const Xr = ["value", "checked", "data-test"];
+function Kr(e, t, r, s, o, a) {
+  return b(), y("input", {
     type: "radio",
     class: h(e.classes),
     value: e.value,
     checked: e.checked,
-    onChange: t[0] || (t[0] = (a) => e.$emit("update:modelValue", e.handleRadioChange(a))),
+    onChange: t[0] || (t[0] = (n) => e.$emit("update:modelValue", e.handleRadioChange(n))),
     "data-test": (e.darkRadioCssUrl ? e.darkRadioHex : "") + (e.lightRadioCssUrl ? e.lightRadioHex : "")
-  }, null, 42, qr);
+  }, null, 42, Xr);
 }
-const Ns = /* @__PURE__ */ $(ke, [["render", Gr], ["__scopeId", "data-v-df3d35f5"]]), Yr = C({
+const Zs = /* @__PURE__ */ V(Se, [["render", Kr], ["__scopeId", "data-v-df3d35f5"]]), es = S({
   name: "VvListItem",
   props: {
     color: {
       type: String,
-      default: i.defaults.VvListItem.color
+      default: l.defaults.VvListItem.color
     },
     enableColoredSymbols: {
       type: Boolean,
-      default: i.defaults.VvListItem.enableColoredSymbols
+      default: l.defaults.VvListItem.enableColoredSymbols
     },
     palette: {
       type: String,
-      default: i.defaults.VvListItem.palette
+      default: l.defaults.VvListItem.palette
     },
     symbolColor: {
       type: String,
-      default: i.defaults.VvListItem.symbolColor
+      default: l.defaults.VvListItem.symbolColor
     },
     symbolPalette: {
       type: String,
-      default: i.defaults.VvListItem.symbolPalette
+      default: l.defaults.VvListItem.symbolPalette
     }
   },
   setup(e) {
-    const t = Object.keys(x("vv", {})).length > 0 ? x("vv") : i;
-    let r = t == null ? void 0 : t.text.base(), s = p(() => {
-      var a, l, c;
-      let n = [r];
-      return (c = (l = (a = t == null ? void 0 : t.text) == null ? void 0 : a.palettes) == null ? void 0 : l[e.palette]) != null && c[e.color] && n.push(t.text.palettes[e.palette][e.color]), n.join(" ").trim();
-    }), o = p(() => {
-      var a, l, c;
-      let n = [];
-      return (c = (l = (a = t == null ? void 0 : t.text) == null ? void 0 : a.palettes) == null ? void 0 : l[e.symbolPalette]) != null && c[e.symbolColor] && n.push(t.text.palettes[e.symbolPalette][e.symbolColor]), n.join(" ").trim();
+    const t = Object.keys(m("vv", {})).length > 0 ? m("vv") : l;
+    let r = t == null ? void 0 : t.text.base(), s = x(() => {
+      var n, i, c;
+      let a = [r];
+      return (c = (i = (n = t == null ? void 0 : t.text) == null ? void 0 : n.palettes) == null ? void 0 : i[e.palette]) != null && c[e.color] && a.push(t.text.palettes[e.palette][e.color]), a.join(" ").trim();
+    }), o = x(() => {
+      var n, i, c;
+      let a = [];
+      return (c = (i = (n = t == null ? void 0 : t.text) == null ? void 0 : n.palettes) == null ? void 0 : i[e.symbolPalette]) != null && c[e.symbolColor] && a.push(t.text.palettes[e.symbolPalette][e.symbolColor]), a.join(" ").trim();
     });
     return { classes: s, symbolClasses: o };
   }
 });
-function Zr(e, t, r, s, o, n) {
-  return m(), v("li", {
+function ts(e, t, r, s, o, a) {
+  return b(), y("li", {
     class: h(e.enableColoredSymbols === !0 ? e.symbolClasses : e.classes)
   }, [
-    e.enableColoredSymbols === !0 ? (m(), v("span", {
+    e.enableColoredSymbols === !0 ? (b(), y("span", {
       key: 0,
       class: h([e.classes])
     }, [
-      P(e.$slots, "default")
-    ], 2)) : P(e.$slots, "default", { key: 1 })
+      I(e.$slots, "default")
+    ], 2)) : I(e.$slots, "default", { key: 1 })
   ], 2);
 }
-const Us = /* @__PURE__ */ $(Yr, [["render", Zr]]), Wr = C({
+const Ws = /* @__PURE__ */ V(es, [["render", ts]]), rs = S({
   name: "ObeKnockoutMark",
   props: {
     blueFill: {
@@ -2371,7 +2550,7 @@ const Us = /* @__PURE__ */ $(Yr, [["render", Zr]]), Wr = C({
       default: "fill-yellow-400"
     }
   }
-}), Qr = {
+}), ss = {
   version: "1.1",
   xmlns: "http://www.w3.org/2000/svg",
   x: "0",
@@ -2379,39 +2558,39 @@ const Us = /* @__PURE__ */ $(Yr, [["render", Zr]]), Wr = C({
   viewBox: "0 0 500 500",
   "xml:space": "preserve"
 };
-function Xr(e, t, r, s, o, n) {
-  return m(), v("svg", Qr, [
-    S("path", {
+function os(e, t, r, s, o, a) {
+  return b(), y("svg", ss, [
+    v("path", {
       class: h(e.orangeFill),
       d: "M166.3 304.7c7.9-48.1 36.4-89.4 76-114.5-22.3-11.7-47.6-18.4-74.5-18.4-27.7 0-53.8 7.1-76.6 19.5 7.1 47.9 35.4 89.1 75.1 113.4zM257.6 190.2c39.7 25.1 68.1 66.4 76 114.5 39.7-24.4 68-65.5 75-113.4-22.8-12.4-48.9-19.5-76.6-19.5-26.8 0-52.2 6.7-74.4 18.4zM328.2 332.1c0-5.1-.3-10.2-.7-15.2-23.2 12.1-49.6 19-77.5 19s-54.3-6.9-77.5-19c-.5 5-.7 10.1-.7 15.2 0 58.4 31.4 109.7 78.3 137.7 46.7-28 78.1-79.2 78.1-137.7z"
     }, null, 2),
-    S("path", {
+    v("path", {
       class: h(e.yellowFill),
       d: "M249.9 194.5c-40.5 24.2-69.5 65.8-76.6 114.4 22.8 12.4 48.9 19.5 76.6 19.5 27.7 0 53.8-7.1 76.6-19.5-7.1-48.6-36.1-90.2-76.6-114.4z"
     }, null, 2),
-    S("path", {
+    v("path", {
       class: h(e.blueFill),
       d: "M273.2 63.2c-2.5-3.4-5.6-6.2-9.5-8.3-3.9-2.1-8.5-3.1-13.8-3.1-5.3 0-9.9 1-13.8 3.1-3.9 2.1-7 4.9-9.5 8.3-2.5 3.4-4.3 7.3-5.4 11.6-1.2 4.3-1.7 8.7-1.7 13.1s.6 8.8 1.7 13.1c1.1 4.3 3 8.2 5.4 11.6s5.6 6.2 9.5 8.3c3.9 2.1 8.5 3.1 13.8 3.1 5.3 0 9.9-1 13.8-3.1 3.9-2.1 7-4.9 9.5-8.3 2.5-3.4 4.3-7.3 5.4-11.6 1.1-4.3 1.7-8.7 1.7-13.1s-.6-8.8-1.7-13.1c-1.1-4.3-2.9-8.2-5.4-11.6z"
     }, null, 2),
-    S("path", {
+    v("path", {
       class: h(e.blueFill),
       d: "M249.9 7.6c-88.4 0-160.3 72-160.3 160.4 0 5.1.3 10.2.7 15.2 23.2-12.1 49.6-19 77.5-19 29.8 0 57.8 7.8 82.1 21.5 24.3-13.7 52.3-21.5 82.1-21.5 28 0 54.3 6.9 77.5 19 .5-5 .7-10.1.7-15.2.1-88.4-71.8-160.4-160.3-160.4zm39.5 97.6c-1.8 5.5-4.4 10.4-7.9 14.7-3.5 4.3-7.9 7.7-13.2 10.2-5.3 2.5-11.4 3.8-18.3 3.8-7 0-13.1-1.3-18.3-3.8-5.3-2.5-9.6-6-13.2-10.2-3.5-4.3-6.2-9.2-7.9-14.7-1.8-5.5-2.6-11.3-2.6-17.3s.9-11.8 2.6-17.3c1.8-5.5 4.4-10.4 7.9-14.7 3.5-4.3 7.9-7.7 13.2-10.2 5.3-2.5 11.4-3.8 18.3-3.8 7 0 13.1 1.3 18.3 3.8 5.3 2.5 9.6 6 13.2 10.2 3.5 4.3 6.2 9.2 7.9 14.7 1.8 5.5 2.6 11.3 2.6 17.3.1 6-.8 11.8-2.6 17.3z"
     }, null, 2),
-    S("path", {
+    v("path", {
       class: h(e.greenFill),
       d: "M123.5 378.1c-1.8-1.1-3.8-1.9-6.1-2.3-2.3-.5-4.7-.7-7.1-.7H83.5v30.4h29.3c5.1 0 9.1-1.4 12.1-4.2 3-2.8 4.4-6.7 4.4-11.5 0-2.9-.5-5.3-1.6-7.1-1.1-2-2.5-3.5-4.2-4.6zM121.3 361.7c2.9-2.3 4.4-5.8 4.4-10.5 0-3-.5-5.5-1.5-7.3-1-1.8-2.3-3.3-4.1-4.2-1.7-1-3.7-1.6-6-1.9-2.3-.3-4.7-.4-7.2-.4H83.5v28h23.4c6.7-.2 11.4-1.3 14.4-3.7z"
     }, null, 2),
-    S("path", {
+    v("path", {
       class: h(e.greenFill),
       d: "M164 332.1c0-6.5.4-12.9 1.1-19.2-42.2-24.8-72.7-67.5-80.9-117.5-46 28.2-76.7 79-76.7 136.7 0 88.4 71.9 160.3 160.3 160.3 26.9 0 52.2-6.7 74.5-18.4-47-29.7-78.3-82.2-78.3-141.9zm-24.7 67.4c-1.2 3-2.9 5.7-5.1 8.1-2.3 2.3-5 4.2-8.4 5.7-3.3 1.4-7.2 2.2-11.5 2.2H71.8v-87.9h31.9c2 0 4 0 6.2.1 2.1 0 4.2.2 6.3.4 2.1.2 4.1.5 6 .9 1.9.4 3.5 1 4.8 1.8 2.9 1.7 5.3 4.1 7.3 7.2 2 3.1 3 6.8 3 11.1 0 4.7-1.2 8.7-3.4 12.1-2.3 3.4-5.5 5.9-9.6 7.6v.2c5.4 1.2 9.6 3.6 12.4 7.4 2.9 3.8 4.3 8.4 4.3 13.8 0 3.1-.6 6.2-1.7 9.3z"
     }, null, 2),
-    S("path", {
+    v("path", {
       class: h(e.redFill),
       d: "M415.7 195.4c-8.3 50.1-38.7 92.8-80.9 117.5.7 6.3 1.1 12.7 1.1 19.2 0 59.7-31.3 112.2-78.3 142 22.3 11.7 47.6 18.4 74.5 18.4 88.4 0 160.3-71.9 160.3-160.3 0-57.8-30.8-108.6-76.7-136.8zm20.5 220h-61.1v-87.9h60.7v9.9h-49v28h45.7v9.9h-45.7v30.4h49.4v9.7z"
     }, null, 2)
   ]);
 }
-const Js = /* @__PURE__ */ $(Wr, [["render", Xr]]), Kr = C({
+const Qs = /* @__PURE__ */ V(rs, [["render", os]]), as = S({
   name: "VueVentusLogoText",
   props: {
     colorClasses: {
@@ -2419,18 +2598,18 @@ const Js = /* @__PURE__ */ $(Wr, [["render", Xr]]), Kr = C({
       default: "w-full fill-gray-900 dark:fill-gray-100"
     }
   }
-}), es = /* @__PURE__ */ S("path", { d: "m8.8 2.3 51.9 121.1L112.5 2.3h6.7l-55.4 129h-6.2L2.3 2.3h6.5zM183.4 126.7c8.2 0 15-1.5 20.4-4.6 5.4-3.1 9.7-7.1 12.8-12 3.1-5 5.3-10.6 6.6-16.9 1.3-6.3 1.9-12.7 1.9-19.2V16.5h5.5V74c0 7.7-.8 15-2.4 22-1.6 7-4.3 13.2-8 18.5-3.7 5.3-8.6 9.6-14.5 12.8-6 3.2-13.4 4.8-22.2 4.8-9.1 0-16.6-1.7-22.7-5-6.1-3.3-11-7.7-14.6-13.2-3.7-5.4-6.3-11.6-7.8-18.6-1.6-6.9-2.3-14-2.3-21.3V16.5h5.7V74c0 6.7.6 13.2 1.9 19.5 1.3 6.3 3.6 11.9 6.8 16.8 3.2 4.9 7.5 8.9 12.8 11.9 5.3 3 12 4.5 20.1 4.5zM335.8 126.1v5.2H260V16.5h74.3v5.2h-68.7V70h60.1v5.2h-60.1v50.9h70.2zM353.5 2.3l51.9 121.1L457.2 2.3h6.7l-55.4 129h-6.2L347 2.3h6.5zM558.4 126.1v5.2h-75.8V16.5h74.3v5.2h-68.7V70h60.1v5.2h-60.1v50.9h70.2zM587.6 27.1v104.1H582V16.5h4.2l84.4 105.9V16.5h5.7v114.8h-5.5L587.6 27.1zM786.2 21.6h-43v109.6h-5.7V21.6h-43v-5.2h91.6v5.2zM850.2 126.7c8.2 0 15-1.5 20.4-4.6 5.4-3.1 9.7-7.1 12.8-12 3.1-5 5.3-10.6 6.6-16.9 1.3-6.3 1.9-12.7 1.9-19.2V16.5h5.5V74c0 7.7-.8 15-2.4 22-1.6 7-4.3 13.2-8 18.5-3.7 5.3-8.6 9.6-14.5 12.8-6 3.2-13.4 4.8-22.2 4.8-9.1 0-16.6-1.7-22.7-5-6.1-3.3-11-7.7-14.6-13.2-3.7-5.4-6.3-11.6-7.8-18.6-1.6-6.9-2.3-14-2.3-21.3V16.5h5.7V74c0 6.7.6 13.2 1.9 19.5 1.3 6.3 3.6 11.9 6.8 16.8 3.2 4.9 7.5 8.9 12.8 11.9 5.4 3 12.1 4.5 20.1 4.5zM993.4 33.4c-4.2-4.6-8.8-7.9-13.9-9.8-5.1-1.9-11-2.8-17.8-2.8-12.2 0-21 2.3-26.5 6.9-5.5 4.6-8.2 10.8-8.2 18.6 0 3.9.7 7.1 2 9.8 1.3 2.6 3.4 4.9 6.2 6.7 2.8 1.8 6.4 3.4 10.8 4.6 4.4 1.2 9.7 2.5 15.8 3.8 6.2 1.3 11.9 2.7 17 4.2s9.4 3.4 12.9 5.7c3.6 2.3 6.3 5.2 8.2 8.6 1.9 3.4 2.9 7.7 2.9 12.8 0 4.8-.9 9.1-2.8 12.8-1.9 3.7-4.6 6.7-8.2 9.2-3.6 2.5-7.8 4.3-12.8 5.6-5 1.2-10.6 1.9-16.7 1.9-9.2 0-17.4-1.4-24.7-4.3-7.3-2.9-14.1-7.2-20.4-13.2l3.4-4c5.4 5.5 11.5 9.6 18.4 12.4 6.9 2.8 14.7 4.2 23.4 4.2 10.8 0 19.3-2 25.5-5.9 6.2-3.9 9.3-9.9 9.3-18 0-4.1-.8-7.6-2.3-10.4-1.5-2.9-3.8-5.3-6.9-7.3-3.1-2-7-3.7-11.6-5.2-4.7-1.5-10.2-2.8-16.6-4.1-6.3-1.3-11.8-2.6-16.6-4-4.8-1.4-8.8-3.2-12.1-5.3-3.3-2.2-5.8-4.8-7.4-7.9-1.7-3.1-2.5-7.1-2.5-11.8 0-5.1 1-9.6 2.9-13.5 1.9-3.9 4.7-7.2 8.2-9.9 3.5-2.6 7.7-4.7 12.7-6.1 5-1.4 10.4-2.1 16.5-2.1 7.4 0 14 1.1 19.6 3.2 5.6 2.2 10.7 5.6 15.4 10.3l-3.1 4.3z" }, null, -1), ts = [
-  es
+}), ns = /* @__PURE__ */ v("path", { d: "m8.8 2.3 51.9 121.1L112.5 2.3h6.7l-55.4 129h-6.2L2.3 2.3h6.5zM183.4 126.7c8.2 0 15-1.5 20.4-4.6 5.4-3.1 9.7-7.1 12.8-12 3.1-5 5.3-10.6 6.6-16.9 1.3-6.3 1.9-12.7 1.9-19.2V16.5h5.5V74c0 7.7-.8 15-2.4 22-1.6 7-4.3 13.2-8 18.5-3.7 5.3-8.6 9.6-14.5 12.8-6 3.2-13.4 4.8-22.2 4.8-9.1 0-16.6-1.7-22.7-5-6.1-3.3-11-7.7-14.6-13.2-3.7-5.4-6.3-11.6-7.8-18.6-1.6-6.9-2.3-14-2.3-21.3V16.5h5.7V74c0 6.7.6 13.2 1.9 19.5 1.3 6.3 3.6 11.9 6.8 16.8 3.2 4.9 7.5 8.9 12.8 11.9 5.3 3 12 4.5 20.1 4.5zM335.8 126.1v5.2H260V16.5h74.3v5.2h-68.7V70h60.1v5.2h-60.1v50.9h70.2zM353.5 2.3l51.9 121.1L457.2 2.3h6.7l-55.4 129h-6.2L347 2.3h6.5zM558.4 126.1v5.2h-75.8V16.5h74.3v5.2h-68.7V70h60.1v5.2h-60.1v50.9h70.2zM587.6 27.1v104.1H582V16.5h4.2l84.4 105.9V16.5h5.7v114.8h-5.5L587.6 27.1zM786.2 21.6h-43v109.6h-5.7V21.6h-43v-5.2h91.6v5.2zM850.2 126.7c8.2 0 15-1.5 20.4-4.6 5.4-3.1 9.7-7.1 12.8-12 3.1-5 5.3-10.6 6.6-16.9 1.3-6.3 1.9-12.7 1.9-19.2V16.5h5.5V74c0 7.7-.8 15-2.4 22-1.6 7-4.3 13.2-8 18.5-3.7 5.3-8.6 9.6-14.5 12.8-6 3.2-13.4 4.8-22.2 4.8-9.1 0-16.6-1.7-22.7-5-6.1-3.3-11-7.7-14.6-13.2-3.7-5.4-6.3-11.6-7.8-18.6-1.6-6.9-2.3-14-2.3-21.3V16.5h5.7V74c0 6.7.6 13.2 1.9 19.5 1.3 6.3 3.6 11.9 6.8 16.8 3.2 4.9 7.5 8.9 12.8 11.9 5.4 3 12.1 4.5 20.1 4.5zM993.4 33.4c-4.2-4.6-8.8-7.9-13.9-9.8-5.1-1.9-11-2.8-17.8-2.8-12.2 0-21 2.3-26.5 6.9-5.5 4.6-8.2 10.8-8.2 18.6 0 3.9.7 7.1 2 9.8 1.3 2.6 3.4 4.9 6.2 6.7 2.8 1.8 6.4 3.4 10.8 4.6 4.4 1.2 9.7 2.5 15.8 3.8 6.2 1.3 11.9 2.7 17 4.2s9.4 3.4 12.9 5.7c3.6 2.3 6.3 5.2 8.2 8.6 1.9 3.4 2.9 7.7 2.9 12.8 0 4.8-.9 9.1-2.8 12.8-1.9 3.7-4.6 6.7-8.2 9.2-3.6 2.5-7.8 4.3-12.8 5.6-5 1.2-10.6 1.9-16.7 1.9-9.2 0-17.4-1.4-24.7-4.3-7.3-2.9-14.1-7.2-20.4-13.2l3.4-4c5.4 5.5 11.5 9.6 18.4 12.4 6.9 2.8 14.7 4.2 23.4 4.2 10.8 0 19.3-2 25.5-5.9 6.2-3.9 9.3-9.9 9.3-18 0-4.1-.8-7.6-2.3-10.4-1.5-2.9-3.8-5.3-6.9-7.3-3.1-2-7-3.7-11.6-5.2-4.7-1.5-10.2-2.8-16.6-4.1-6.3-1.3-11.8-2.6-16.6-4-4.8-1.4-8.8-3.2-12.1-5.3-3.3-2.2-5.8-4.8-7.4-7.9-1.7-3.1-2.5-7.1-2.5-11.8 0-5.1 1-9.6 2.9-13.5 1.9-3.9 4.7-7.2 8.2-9.9 3.5-2.6 7.7-4.7 12.7-6.1 5-1.4 10.4-2.1 16.5-2.1 7.4 0 14 1.1 19.6 3.2 5.6 2.2 10.7 5.6 15.4 10.3l-3.1 4.3z" }, null, -1), ls = [
+  ns
 ];
-function rs(e, t, r, s, o, n) {
-  return m(), v("svg", {
+function is(e, t, r, s, o, a) {
+  return b(), y("svg", {
     class: h(e.colorClasses),
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 1004.5 133.5",
     "xml:space": "preserve"
-  }, ts, 2);
+  }, ls, 2);
 }
-const qs = /* @__PURE__ */ $(Kr, [["render", rs]]), ss = C({
+const Xs = /* @__PURE__ */ V(as, [["render", is]]), us = S({
   name: "VueVentusSpinningMark",
   props: {
     animationClass: {
@@ -2463,11 +2642,11 @@ const qs = /* @__PURE__ */ $(Kr, [["render", rs]]), ss = C({
     }
   },
   setup(e) {
-    return { classes: p(() => e.enableAnimation ? e.animationClass : "") };
+    return { classes: x(() => e.enableAnimation ? e.animationClass : "") };
   }
-}), os = ["fill"], ns = ["fill"];
-function as(e, t, r, s, o, n) {
-  return m(), v("svg", {
+}), cs = ["fill"], ds = ["fill"];
+function fs(e, t, r, s, o, a) {
+  return b(), y("svg", {
     class: h(e.classes),
     version: "1.1",
     xmlns: "http://www.w3.org/2000/svg",
@@ -2476,39 +2655,39 @@ function as(e, t, r, s, o, n) {
     viewBox: "0 0 1000 1000",
     "xml:space": "preserve"
   }, [
-    S("path", {
+    v("path", {
       fill: e.enableClassFills ? "" : e.fillOne,
       class: h(e.enableClassFills ? e.fillOneClasses : ""),
       d: "M210.3 237.6c0-61.4 19.2-118.5 51.8-165.4C88.8 152.1-84.2 466.7 81 657c134.5 134.8 363 48.8 386.2-131.2-66.9-7.6-126.8-37.9-172-83.1-52.4-52.4-84.9-125-84.9-205.1zM919.7 336c-134.5-134.8-363-48.8-386.2 131.2 66.9 7.6 126.8 37.9 172 83.1 52.5 52.5 85 125 85 205.1 0 61.4-19.2 118.5-51.8 165.4 173.2-79.9 346.3-394.6 181-584.8z"
-    }, null, 10, os),
-    S("g", null, [
-      S("path", {
+    }, null, 10, cs),
+    v("g", null, [
+      v("path", {
         fill: e.enableClassFills ? "" : e.fillTwo,
         class: h(e.enableClassFills ? e.fillTwoClasses : ""),
         d: "M529.7 529.6C505.2 745.2 253.8 858.5 76.1 734.7c38.9 115.6 205.6 246 371.4 255.6 161.6 9.4 309.9-110.9 268.4-282.5-21.1-87.5-88.6-165.6-186.2-178.2zM339.8 77.1C205 211.6 291 440.2 471 463.4c7.6-66.9 37.9-126.8 83.1-172 52.5-52.5 125-85 205.1-85 61.4 0 118.5 19.2 165.4 51.8C844.8 84.9 530.1-88.1 339.8 77.1z"
-      }, null, 10, ns)
+      }, null, 10, ds)
     ])
   ], 2);
 }
-const Gs = /* @__PURE__ */ $(ss, [["render", as]]), ls = C({
+const Ks = /* @__PURE__ */ V(us, [["render", fs]]), gs = S({
   name: "VvTextarea",
   emits: ["update:modelValue"],
   props: {
     color: {
       type: String,
-      default: i.defaults.VvTextarea.color
+      default: l.defaults.VvTextarea.color
     },
     palette: {
       type: String,
-      default: i.defaults.VvTextarea.palette
+      default: l.defaults.VvTextarea.palette
     },
     size: {
       type: String,
-      default: i.defaults.VvTextarea.size
+      default: l.defaults.VvTextarea.size
     },
     rowSize: {
       type: String,
-      default: i.defaults.VvTextarea.rowSize
+      default: l.defaults.VvTextarea.rowSize
     },
     modelValue: {
       type: String,
@@ -2516,97 +2695,98 @@ const Gs = /* @__PURE__ */ $(ss, [["render", as]]), ls = C({
     }
   },
   setup(e) {
-    const t = Object.keys(x("vv", {})).length > 0 ? x("vv") : i;
-    let r = p(() => {
-      var a, l, c, d, f, g;
-      let n = [];
-      return (a = t == null ? void 0 : t.textareas) != null && a.base() && n.push(t.textareas.base()), e.size !== "" && ((c = (l = t == null ? void 0 : t.textareas) == null ? void 0 : l.sizes) == null ? void 0 : c[e.size]) && n.push(t.textareas.sizes[e.size]), (g = (f = (d = t == null ? void 0 : t.textareas) == null ? void 0 : d.palettes) == null ? void 0 : f[e.palette]) != null && g[e.color] && n.push(t.textareas.palettes[e.palette][e.color]), n.join(" ").trim();
-    }), s = p(() => {
-      var n, a;
-      if (e.rowSize !== "" && ((a = (n = t == null ? void 0 : t.textareas) == null ? void 0 : n.rowSizes) == null ? void 0 : a[e.rowSize]))
+    const t = Object.keys(m("vv", {})).length > 0 ? m("vv") : l;
+    let r = x(() => {
+      var n, i, c, d, f, g;
+      let a = [];
+      return (n = t == null ? void 0 : t.textareas) != null && n.base() && a.push(t.textareas.base()), e.size !== "" && ((c = (i = t == null ? void 0 : t.textareas) == null ? void 0 : i.sizes) == null ? void 0 : c[e.size]) && a.push(t.textareas.sizes[e.size]), (g = (f = (d = t == null ? void 0 : t.textareas) == null ? void 0 : d.palettes) == null ? void 0 : f[e.palette]) != null && g[e.color] && a.push(t.textareas.palettes[e.palette][e.color]), a.join(" ").trim();
+    }), s = x(() => {
+      var a, n;
+      if (e.rowSize !== "" && ((n = (a = t == null ? void 0 : t.textareas) == null ? void 0 : a.rowSizes) == null ? void 0 : n[e.rowSize]))
         return t.textareas.rowSizes[e.rowSize];
     });
-    return { classes: r, rows: s, handleTextareaChange: (n) => n.target.value };
+    return { classes: r, rows: s, handleTextareaChange: (a) => a.target.value };
   }
-}), is = ["rows", "value"];
-function us(e, t, r, s, o, n) {
-  return m(), v("textarea", {
+}), hs = ["rows", "value"];
+function bs(e, t, r, s, o, a) {
+  return b(), y("textarea", {
     class: h(e.classes),
     rows: e.rows,
     value: e.modelValue,
-    onInput: t[0] || (t[0] = (a) => e.$emit("update:modelValue", e.handleTextareaChange(a)))
-  }, null, 42, is);
+    onInput: t[0] || (t[0] = (n) => e.$emit("update:modelValue", e.handleTextareaChange(n)))
+  }, null, 42, hs);
 }
-const Ys = /* @__PURE__ */ $(ls, [["render", us]]);
+const eo = /* @__PURE__ */ V(gs, [["render", bs]]);
 export {
-  dt as AnchorDefault,
-  nt as Anchors,
-  ft as BorderDefault,
-  gt as ButtonOutline,
-  ht as ButtonSolid,
-  at as Buttons,
-  bt as CheckboxDefault,
-  lt as Checkboxes,
-  it as ColorModes,
-  pt as GroundConsole,
-  mt as GroundDefault,
-  xt as GroundMonochromatic,
-  kt as GroundPastel,
-  Ce as InputDefault,
-  $e as InputUnderlined,
-  Pe as Inputs,
-  Js as ObeKnockoutMark,
-  yt as RadioDefault,
-  ut as Radios,
-  Le as Text,
-  wt as TextDefault,
-  ct as Textareas,
+  ht as AnchorDefault,
+  it as Anchors,
+  bt as BorderDefault,
+  pt as ButtonOutline,
+  xt as ButtonSolid,
+  ut as Buttons,
+  mt as CheckboxDefault,
+  ct as Checkboxes,
+  dt as ColorModes,
+  yt as GroundConsole,
+  kt as GroundDefault,
+  wt as GroundMonochromatic,
+  vt as GroundPastel,
+  Me as InputDefault,
+  Te as InputUnderlined,
+  Ue as Inputs,
+  Qs as ObeKnockoutMark,
+  Ct as RadioDefault,
+  ft as Radios,
+  Ge as Text,
+  St as TextDefault,
+  gt as Textareas,
   D as Transitions,
-  As as ValidAudioSourceTypes,
-  tt as ValidButtonTypes,
-  wr as ValidColorModes,
-  Rs as ValidDirections,
-  js as ValidElementTags,
-  Bs as ValidFontAwesomeFamilies,
-  Hs as ValidFontAwesomeSizes,
-  Fs as ValidHeadingLevels,
-  Os as ValidImageSourceTypes,
-  vr as ValidInputTypes,
-  Ts as ValidVideoSourceTypes,
-  qs as VueVentusLogoText,
-  Gs as VueVentusSpinningMark,
-  Is as VvAnchor,
-  Ar as VvButton,
-  Ls as VvCheckbox,
-  Es as VvColorModeButton,
-  i as VvConfig,
-  Ds as VvEl,
-  Ps as VvInput,
-  Us as VvListItem,
-  Ns as VvRadio,
-  Ys as VvTextarea,
-  ds as appColorPairs,
-  fs as camelCaseToTitleCase,
-  gs as decimalsOnly,
-  hs as digitsOnly,
-  bs as forceBodyClick,
-  ps as formatBytes,
-  ms as formatDateMMDDYYYY,
-  xs as formatDateTraditional,
-  ks as formatMediaTime,
-  ys as formatNumber,
-  B as getRandomInt,
-  Ke as hexadecimals,
-  ws as mergeWithVvConfig,
-  Xe as monthNames,
-  G as padNumber,
-  vs as randomGroundAndTextColors,
-  yr as randomHex,
-  Ss as randomHexShort,
-  Cs as randomString,
-  $s as slugifyString,
-  zs as stringToCamelCase,
-  Vs as stringToFilename,
-  Ms as timestampToDateTimeAmPm,
-  _s as uniqueArray
+  Hs as ValidAudioSourceTypes,
+  ot as ValidButtonTypes,
+  Sr as ValidColorModes,
+  Os as ValidDirections,
+  Es as ValidElementTags,
+  Ps as ValidFontAwesomeFamilies,
+  Is as ValidFontAwesomeSizes,
+  Ds as ValidHeadingLevels,
+  Ls as ValidImageSourceTypes,
+  Vr as ValidInputTypes,
+  Ns as ValidVideoSourceTypes,
+  Xs as VueVentusLogoText,
+  Ks as VueVentusSpinningMark,
+  Gs as VvAnchor,
+  Rr as VvButton,
+  Js as VvCheckbox,
+  Us as VvColorModeButton,
+  l as VvConfig,
+  Gr as VvEl,
+  qs as VvFormGroup,
+  Ys as VvInput,
+  Ws as VvListItem,
+  Zs as VvRadio,
+  eo as VvTextarea,
+  xs as appColorPairs,
+  ms as camelCaseToTitleCase,
+  ys as decimalsOnly,
+  ks as digitsOnly,
+  ws as forceBodyClick,
+  vs as formatBytes,
+  Cs as formatDateMMDDYYYY,
+  Ss as formatDateTraditional,
+  Vs as formatMediaTime,
+  $s as formatNumber,
+  R as getRandomInt,
+  rt as hexadecimals,
+  zs as mergeWithVvConfig,
+  tt as monthNames,
+  W as padNumber,
+  Ms as randomGroundAndTextColors,
+  Cr as randomHex,
+  Ts as randomHexShort,
+  _s as randomString,
+  As as slugifyString,
+  Fs as stringToCamelCase,
+  Rs as stringToFilename,
+  js as timestampToDateTimeAmPm,
+  Bs as uniqueArray
 };
