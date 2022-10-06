@@ -20,13 +20,21 @@ const output = `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
         },
 
         props: {
-            palette: {
+            buttonClasses: {
                 type: String,
-                default: 'solid'
+                default: 'rounded-full',
             },
             color: {
                 type: String,
                 default: 'primary'
+            },
+            fab: {
+                type: Boolean,
+                default: true
+            },
+            palette: {
+                type: String,
+                default: 'solid'
             },
             isVisible: {
                 type: Boolean,
@@ -35,6 +43,14 @@ const output = `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
             offsetMinimum: {
                 type: Number,
                 default: 100
+            },
+            size: {
+                type: String,
+                default: 'xs',
+            },
+            title: {
+                type: String,
+                default: 'Scroll to Top',
             },
         },
 
@@ -90,17 +106,19 @@ const output = `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
                 <div>
 
                     <VvButton
-                        title="Scroll to Top"
+                        :title="title"
                         :palette="palette"
                         :color="color"
-                        class="rounded-full"
+                        :class="buttonClasses"
                         @click="scrollToTop($event)"
-                        :fab="true"
-                        size="xs"
+                        :fab="fab"
+                        :size="size"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                        </svg>
+                        <slot>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                            </svg>
+                        </slot>
                     </VvButton>
 
                 </div>
