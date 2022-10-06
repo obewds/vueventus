@@ -14,6 +14,7 @@ import vvButtonTestJsFile from '../generators/vvButtonTestJsFile.mjs'
 import vvCheckboxTestJsFile from '../generators/vvCheckboxTestJsFile.mjs'
 import vvColorModeButtonTestJsFile from '../generators/vvColorModeButtonTestJsFile.mjs'
 import vvElTestJsFile from '../generators/vvElTestJsFile.mjs'
+import vvFormGroupTestJsFile from '../generators/vvFormGroupTestJsFile.mjs'
 import vvInputTestJsFile from '../generators/vvInputTestJsFile.mjs'
 import vvListItemTestJsFile from '../generators/vvListItemTestJsFile.mjs'
 import vvRadioTestJsFile from '../generators/vvRadioTestJsFile.mjs'
@@ -89,6 +90,13 @@ export default function (userOptionsObject, vitestDepObject) {
         if ( userOptionsObject.files.includes( vitestDepObject.files.vvElTestJs.name )) {
 
             fs.outputFileSync(cwd + vitestDepObject.files.vvElTestJs.path + vitestDepObject.files.vvElTestJs.name, vvElTestJsFile(), { flag: 'w+' })
+            
+        }
+
+        // install VvEl.test.js file
+        if ( userOptionsObject.files.includes( vitestDepObject.files.vvFormGroupTestJs.name )) {
+
+            fs.outputFileSync(cwd + vitestDepObject.files.vvFormGroupTestJs.path + vitestDepObject.files.vvFormGroupTestJs.name, vvFormGroupTestJsFile(), { flag: 'w+' })
             
         }
 

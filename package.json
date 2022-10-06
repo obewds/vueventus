@@ -1,7 +1,7 @@
 {
   "name": "@obewds/vueventus",
   "description": "A component library and styling management system for modern Vue.js, Tailwind CSS, and Typescript apps",
-  "version": "0.51.10",
+  "version": "0.52.0",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
   "license": "MIT",

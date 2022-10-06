@@ -89,7 +89,7 @@ The core deps for each stack are generally pretty similar, but here's a table of
 🟢 = Installed by default  
 🟡 = Optional (opt-out) dependency  
 🟠 = License number required on install  
-🔴 = Not available in stack  
+🔴 = Not available in stack installation  
 
 
 
@@ -169,7 +169,7 @@ So for now and with testing still ongoing for each opt-out option to be removed 
 
 ## Starting Your App
 
-To start up your installed app, use the standard Vite install command:
+To start up your installed app, use the standard Vite `dev` npm script command:
 
 ```bash
 npm run dev
@@ -184,7 +184,7 @@ npm run dev
 
 ## Running Vitest
 
-To run your app's tests, use the standard Vitest command:
+To run your app's tests, use the standard Vitest `test` npm script command:
 
 ```bash
 npm run test
@@ -240,6 +240,8 @@ npm run coverage
 │  │  │  │  ├─ VvEl.vue
 │  │  │  │  ├─ VvPrism.vue 🟡
 │  │  │  │  └─ VvPrismVars.vue 🟡
+│  │  │  ├─ forms
+│  │  │  │  └─ VvFormGroup.vue
 │  │  │  ├─ inputs
 │  │  │  │  ├─ VvCheckbox.vue
 │  │  │  │  ├─ VvInput.vue
@@ -279,6 +281,8 @@ npm run coverage
 │  │  │  │  ├─ VvFa.test.js 🟡
 │  │  │  │  ├─ VvPrism.test.js 🟡
 │  │  │  │  └─ VvPrismVars.test.js 🟡
+│  │  │  ├─ forms
+│  │  │  │  └─ VvFormGroup.test.js
 │  │  │  ├─ inputs
 │  │  │  │  ├─ VvCheckbox.test.js
 │  │  │  │  ├─ VvInput.test.js
@@ -322,8 +326,6 @@ npm run coverage
 
 {{ stack2 }} Stack:
 
-Coming soon!
-
 ```
 .
 ├─ .vscode
@@ -353,6 +355,8 @@ Coming soon!
 │  │  │  │  ├─ VvFa.vue 🟡
 │  │  │  │  ├─ VvPrism.vue 🟡
 │  │  │  │  └─ VvPrismVars.vue 🟡
+│  │  │  ├─ forms
+│  │  │  │  └─ VvFormGroup.vue 🟡
 │  │  │  ├─ inputs
 │  │  │  │  ├─ VvCheckbox.vue
 │  │  │  │  ├─ VvInput.vue
@@ -403,6 +407,8 @@ Coming soon!
 │  │  │  │  ├─ VvFa.test.js 🟡
 │  │  │  │  ├─ VvPrism.test.js 🟡
 │  │  │  │  └─ VvPrismVars.test.js 🟡
+│  │  │  ├─ forms
+│  │  │  │  └─ VvFormGroup.test.js
 │  │  │  ├─ inputs
 │  │  │  │  ├─ VvCheckbox.test.js
 │  │  │  │  ├─ VvInput.test.js

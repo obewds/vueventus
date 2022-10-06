@@ -261,6 +261,12 @@ function sidebarComponents() {
                 { text: 'VvPrismVars', link: '/components/elements/vv-prism-vars' },
             ]
         },{
+            text: 'Form Components',
+            collapsible: true,
+            items: [
+                { text: 'VvFormGroup', link: '/components/forms/vv-form-group' },
+            ]
+        },{
             text: 'Input Components',
             collapsible: true,
             items: [
