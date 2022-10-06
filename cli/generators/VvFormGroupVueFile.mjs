@@ -39,6 +39,10 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
                 type: String,
                 default: appVv.defaults.VvFormGroup.errorTextColor,
             },
+            errorTextPalette: {
+                type: String,
+                default: appVv.defaults.VvFormGroup.errorTextPalette,
+            },
             helpClasses: {
                 type: String,
                 default: appVv.defaults.VvFormGroup.helpClasses,
@@ -50,6 +54,10 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
             helpTextColor: {
                 type: String,
                 default: appVv.defaults.VvFormGroup.helpTextColor,
+            },
+            helpTextPalette: {
+                type: String,
+                default: appVv.defaults.VvFormGroup.helpTextPalette,
             },
             label: {
                 type: String,
@@ -67,6 +75,10 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
                 type: String,
                 default: appVv.defaults.VvFormGroup.labelTextColor,
             },
+            labelTextPalette: {
+                type: String,
+                default: appVv.defaults.VvFormGroup.labelTextPalette,
+            },
             slotParentClasses: {
                 type: String,
                 default: appVv.defaults.VvFormGroup.slotParentClasses,
@@ -82,6 +94,10 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
             successTextColor: {
                 type: String,
                 default: appVv.defaults.VvFormGroup.successTextColor,
+            },
+            successTextPalette: {
+                type: String,
+                default: appVv.defaults.VvFormGroup.successTextPalette,
             },
             wrapperClasses: {
                 type: String,
@@ -103,17 +119,21 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
         :error-classes="errorClasses"
         :error-text="errorText"
         :error-text-color="errorTextColor"
+        :error-text-palette="errorTextPalette"
         :help-classes="helpClasses"
         :help-text="helpText"
         :help-text-color="helpTextColor"
+        :help-text-palette="helpTextPalette"
         :label="label"
         :label-for="labelFor"
         :label-classes="labelClasses"
         :label-text-color="labelTextColor"
+        :label-text-palette="labelTextPalette"
         :slot-parent-classes="slotParentClasses"
         :success-classes="successClasses"
         :success-text="successText"
         :success-text-color="successTextColor"
+        :success-text-palette="successTextPalette"
         :wrapper-classes="wrapperClasses"
     >
         <slot/>
