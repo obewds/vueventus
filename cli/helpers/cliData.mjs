@@ -46,6 +46,7 @@ import vvColorModeButtonVueFile from '../generators/vvColorModeButtonVueFile.mjs
 import vvElVueFile from '../generators/vvElVueFile.mjs'
 import vvFaVueFile from '../generators/vvFaVueFile.mjs'
 import vvFaVueSsgFile from '../generators/vvFaVueSsgFile.mjs'
+import vvFormGroupVueFile from '../generators/vvFormGroupVueFile.mjs'
 import vvInputVueFile from '../generators/vvInputVueFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
 import vvPrismVarsVueFile from '../generators/vvPrismVarsVueFile.mjs'
@@ -65,6 +66,7 @@ import vvColorModeButtonTestJsFile from '../generators/vvColorModeButtonTestJsFi
 import vvElTestJsFile from '../generators/vvElTestJsFile.mjs'
 import vvFaTestJsFile from '../generators/vvFaTestJsFile.mjs'
 import vvFaTestJsFilePro from '../generators/vvFaTestJsFilePro.mjs'
+import vvFormGroupTestJsFile from '../generators/vvFormGroupTestJsFile.mjs'
 import vvInputTestJsFile from '../generators/vvInputTestJsFile.mjs'
 import vvListItemTestJsFile from '../generators/vvListItemTestJsFile.mjs'
 import vvPrismTestJsFile from '../generators/vvPrismTestJsFile.mjs'
@@ -253,6 +255,12 @@ let baseVvTsCompos = {
         path: '/src/components/vv/elements/',
         src: vvElVueFile(),
     },
+    vvFormGroupVue: {
+        name: 'VvFormGroup.vue',
+        checked: true,
+        path: '/src/components/vv/forms/',
+        src: vvFormGroupVueFile(),
+    },
     vvInputVue: {
         name: 'VvInput.vue',
         checked: true,
@@ -408,6 +416,12 @@ let vitestBase = {
             checked: true,
             path: '/tests/components/vv/elements/',
             src: vvElTestJsFile(),
+        },
+        vvFormGroupTestJs: {
+            name: 'VvFormGroup.test.js',
+            checked: true,
+            path: '/tests/components/vv/forms/',
+            src: vvFormGroupTestJsFile(),
         },
         vvInputTestJs: {
             name: 'VvInput.test.js',
