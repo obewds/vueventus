@@ -35,6 +35,10 @@
                 type: String,
                 default: VvConfig.defaults.VvFormGroup.errorTextColor,
             },
+            errorTextPalette: {
+                type: String,
+                default: VvConfig.defaults.VvFormGroup.errorTextPalette,
+            },
             helpClasses: {
                 type: String,
                 default: VvConfig.defaults.VvFormGroup.helpClasses,
@@ -46,6 +50,10 @@
             helpTextColor: {
                 type: String,
                 default: VvConfig.defaults.VvFormGroup.helpTextColor,
+            },
+            helpTextPalette: {
+                type: String,
+                default: VvConfig.defaults.VvFormGroup.helpTextPalette,
             },
             label: {
                 type: String,
@@ -63,6 +71,10 @@
                 type: String,
                 default: VvConfig.defaults.VvFormGroup.labelTextColor,
             },
+            labelTextPalette: {
+                type: String,
+                default: VvConfig.defaults.VvFormGroup.labelTextPalette,
+            },
             slotParentClasses: {
                 type: String,
                 default: VvConfig.defaults.VvFormGroup.slotParentClasses,
@@ -79,6 +91,10 @@
                 type: String,
                 default: VvConfig.defaults.VvFormGroup.successTextColor,
             },
+            successTextPalette: {
+                type: String,
+                default: VvConfig.defaults.VvFormGroup.successTextPalette,
+            },
             wrapperClasses: {
                 type: String,
                 default: VvConfig.defaults.VvFormGroup.wrapperClasses,
@@ -94,7 +110,13 @@
 
     <div :class="wrapperClasses">
 
-        <VvEl tag="label" :for="labelFor" :text-color="labelTextColor" :class="labelClasses">
+        <VvEl
+            tag="label"
+            :for="labelFor"
+            :text-palette="labelTextPalette"
+            :text-color="labelTextColor"
+            :class="labelClasses"
+        >
             {{ label }}
         </VvEl>
 
@@ -102,19 +124,40 @@
             <slot/>
         </div>
 
-        <div v-if="!displayError && !displayHelp && !displaySuccess" :class="helpClasses">
+        <div
+            v-if="!displayError && !displayHelp && !displaySuccess"
+            :class="helpClasses"
+        >
             <!-- placeholder to toggle opposite of messages & prevent layout shift -->&nbsp;
         </div>
 
-        <VvEl v-if="displayHelp" tag="div" :text-color="helpTextColor" :class="helpClasses">
+        <VvEl
+            v-if="displayHelp"
+            tag="div"
+            :text-palette="helpTextPalette"
+            :text-color="helpTextColor"
+            :class="helpClasses"
+        >
             {{ helpText }}
         </VvEl>
 
-        <VvEl v-if="displaySuccess" tag="div" :text-color="successTextColor" :class="successClasses">
+        <VvEl
+            v-if="displaySuccess"
+            tag="div"
+            :text-palette="successTextPalette"
+            :text-color="successTextColor"
+            :class="successClasses"
+        >
             {{ successText }}
         </VvEl>
 
-        <VvEl v-if="displayError === true" tag="div" :text-color="errorTextColor" :class="errorClasses">
+        <VvEl
+            v-if="displayError === true"
+            tag="div"
+            :text-palette="errorTextPalette"
+            :text-color="errorTextColor"
+            :class="errorClasses"
+        >
             {{ errorText }}
         </VvEl>
         
