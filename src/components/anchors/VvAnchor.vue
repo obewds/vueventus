@@ -50,7 +50,7 @@
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( props.button === true ) {
 
@@ -63,7 +63,7 @@
                         }
 
                         if ( props.buttonSize !== '' && vv?.buttons?.blockSizes?.[props.buttonSize] ) {
-                            output.push( vv.buttons.blockSizes[props.buttonSize] )
+                            output.push( vv.buttons.blockSizes[props.buttonSize] as string )
                         }
                         
                     } else if (props.buttonBlock === false && props.buttonFab === true) {
@@ -73,7 +73,7 @@
                         }
 
                         if ( props.buttonSize !== '' && vv?.buttons?.fabSizes?.[props.buttonSize] ) {
-                            output.push( vv.buttons.fabSizes[props.buttonSize] )
+                            output.push( vv.buttons.fabSizes[props.buttonSize] as string )
                         }
 
                     } else {
@@ -83,13 +83,13 @@
                         }
 
                         if ( props.buttonSize !== '' && vv?.buttons?.sizes?.[props.buttonSize] ) {
-                            output.push( vv.buttons.sizes[props.buttonSize] )
+                            output.push( vv.buttons.sizes[props.buttonSize] as string )
                         }
 
                     }
                     
                     if ( vv?.buttons?.palettes?.[props.palette as keyof typeof vv.buttons.palettes]?.[props.color] ) {
-                        output.push( vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes][props.color] )
+                        output.push( vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes][props.color] as string )
                     }
 
                 } else {
@@ -102,7 +102,7 @@
 
 
                     if ( vv?.anchors?.palettes?.[props.palette as keyof typeof vv.anchors.palettes]?.[props.color] ) {
-                        output.push( vv.anchors.palettes[props.palette as keyof typeof vv.anchors.palettes][props.color] )
+                        output.push( vv.anchors.palettes[props.palette as keyof typeof vv.anchors.palettes][props.color] as string )
                     }
 
                 }
