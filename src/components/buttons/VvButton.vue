@@ -46,32 +46,32 @@
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if (props.block === true && props.fab === false) {
                     if ( vv?.buttons?.blockBase() ) {
                         output.push( vv.buttons.blockBase() )
                     }
                     if ( props.size !== '' && vv?.buttons?.blockSizes?.[props.size] ) {
-                        output.push( vv.buttons.blockSizes[props.size] )
+                        output.push( vv.buttons.blockSizes[props.size] as string )
                     }
                 } else if (props.fab === true && props.block === false) {
                     if ( vv?.buttons?.fabBase() ) {
                         output.push( vv.buttons.fabBase() )
                     }
                     if ( props.size !== '' && vv?.buttons?.fabSizes?.[props.size] ) {
-                        output.push( vv.buttons.fabSizes[props.size] )
+                        output.push( vv.buttons.fabSizes[props.size] as string )
                     }
                 } else {
                     if ( vv?.buttons?.base() ) {
                         output.push( vv.buttons.base() )
                     }
                     if ( props.size !== '' && vv?.buttons?.sizes?.[props.size] ) {
-                        output.push( vv.buttons.sizes[props.size] )
+                        output.push( vv.buttons.sizes[props.size] as string )
                     }
                 }
                 if ( vv?.buttons?.palettes?.[props.palette as keyof typeof vv.buttons.palettes]?.[props.color] ) {
-                    output.push( vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes][props.color] )
+                    output.push( vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes][props.color] as string )
                 }
 
                 return output.join(' ').trim()

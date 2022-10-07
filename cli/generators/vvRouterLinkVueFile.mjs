@@ -8,7 +8,7 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
 <script lang="ts">
 
     import { computed, defineComponent } from 'vue'
-    import appVv from '../../../app.vv'
+    import appVv from '../../app.vv'
 
     export default defineComponent({
         
@@ -49,7 +49,7 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( props.button === true ) {
 
@@ -61,8 +61,8 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
                             output.push( vv.buttons.blockBase() )
                         }
 
-                        if ( props.buttonSize !== '' && vv.buttons.blockSizes[props.buttonSize as string] ) {
-                            output.push( vv.buttons.blockSizes[props.buttonSize as string] )
+                        if ( props.buttonSize !== '' && vv.buttons.blockSizes[props.buttonSize] ) {
+                            output.push( vv.buttons.blockSizes[props.buttonSize] as string )
                         }
                         
                     } else if (props.buttonBlock === false && props.buttonFab === true) {
@@ -71,8 +71,8 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
                             output.push( vv.buttons.fabBase() )
                         }
 
-                        if ( props.buttonSize !== '' && vv.buttons.fabSizes[props.buttonSize as string] ) {
-                            output.push( vv.buttons.fabSizes[props.buttonSize as string] )
+                        if ( props.buttonSize !== '' && vv.buttons.fabSizes[props.buttonSize] ) {
+                            output.push( vv.buttons.fabSizes[props.buttonSize] as string )
                         }
 
                     } else {
@@ -81,14 +81,14 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
                             output.push( vv.buttons.base() )
                         }
 
-                        if ( props.buttonSize !== '' && vv.buttons.sizes[props.buttonSize as string] ) {
-                            output.push( vv.buttons.sizes[props.buttonSize as string] )
+                        if ( props.buttonSize !== '' && vv.buttons.sizes[props.buttonSize] ) {
+                            output.push( vv.buttons.sizes[props.buttonSize] as string )
                         }
 
                     }
                     
-                    if ( vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes] && vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes][props.color as string] ) {
-                        output.push( vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes][props.color as string] )
+                    if ( vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes] && vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes][props.color] ) {
+                        output.push( vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes][props.color] as string )
                     }
 
                 } else {
@@ -100,8 +100,8 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
                     }
 
 
-                    if ( vv.anchors.palettes[props.palette as keyof typeof vv.anchors.palettes][props.color as string] ) {
-                        output.push( vv.anchors.palettes[props.palette as keyof typeof vv.anchors.palettes][props.color as string] )
+                    if ( vv.anchors.palettes[props.palette as keyof typeof vv.anchors.palettes][props.color] ) {
+                        output.push( vv.anchors.palettes[props.palette as keyof typeof vv.anchors.palettes][props.color] as string )
                     }
 
                 }

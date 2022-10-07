@@ -50,18 +50,18 @@
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( vv?.radios?.base() ) {
                     output.push( vv.radios.base() )
                 }
 
                 if ( props.size !== '' && vv?.radios?.sizes?.[props.size] ) {
-                    output.push( vv.radios.sizes[props.size] )
+                    output.push( vv.radios.sizes[props.size] as string )
                 }
 
                 if ( vv?.radios?.palettes?.[props.palette as keyof typeof vv.radios.palettes]?.[props.color] ) {
-                    output.push( vv.radios.palettes[props.palette as keyof typeof vv.radios.palettes][props.color] )
+                    output.push( vv.radios.palettes[props.palette as keyof typeof vv.radios.palettes][props.color] as string )
                 }
 
                 return output.join(' ').trim()
