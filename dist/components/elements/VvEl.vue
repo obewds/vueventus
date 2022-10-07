@@ -46,18 +46,18 @@
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( vv?.borders?.palettes?.[props.borderPalette as keyof typeof vv.borders.palettes]?.[props.borderColor] ) {
-                    output.push( vv.borders.palettes[props.borderPalette as keyof typeof vv.borders.palettes][props.borderColor] )
+                    output.push( vv.borders.palettes[props.borderPalette as keyof typeof vv.borders.palettes][props.borderColor] as string )
                 }
 
                 if ( vv?.grounds?.palettes?.[props.groundPalette as keyof typeof vv.grounds.palettes]?.[props.groundColor] ) {
-                    output.push( vv.grounds.palettes[props.groundPalette as keyof typeof vv.grounds.palettes][props.groundColor] )
+                    output.push( vv.grounds.palettes[props.groundPalette as keyof typeof vv.grounds.palettes][props.groundColor] as string )
                 }
 
                 if ( vv?.text?.palettes?.[props.textPalette as keyof typeof vv.text.palettes]?.[props.textColor] ) {
-                    output.push( vv.text.palettes[props.textPalette as keyof typeof vv.text.palettes][props.textColor] )
+                    output.push( vv.text.palettes[props.textPalette as keyof typeof vv.text.palettes][props.textColor] as string )
                 }
 
                 return output.join(' ').trim()

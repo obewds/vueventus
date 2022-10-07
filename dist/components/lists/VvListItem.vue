@@ -52,10 +52,10 @@
 
             let symbolClasses = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( vv?.text?.palettes?.[props.symbolPalette as keyof typeof vv.text.palettes]?.[props.symbolColor] ) {
-                    output.push( vv.text.palettes[props.symbolPalette as keyof typeof vv.text.palettes][props.symbolColor] )
+                    output.push( vv.text.palettes[props.symbolPalette as keyof typeof vv.text.palettes][props.symbolColor] as string )
                 }
 
                 return output.join(' ').trim()

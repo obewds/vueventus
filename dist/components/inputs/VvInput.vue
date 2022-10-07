@@ -42,18 +42,18 @@
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( vv?.inputs?.base() ) {
                     output.push( vv.inputs.base() )
                 }
 
                 if ( props.size !== '' && vv?.inputs?.sizes?.[props.size] ) {
-                    output.push( vv.inputs.sizes[props.size] )
+                    output.push( vv.inputs.sizes[props.size] as string )
                 }
 
                 if ( vv?.inputs?.palettes?.[props.palette as keyof typeof vv.inputs.palettes]?.[props.color] ) {
-                    output.push( vv.inputs.palettes[props.palette as keyof typeof vv.inputs.palettes][props.color] )
+                    output.push( vv.inputs.palettes[props.palette as keyof typeof vv.inputs.palettes][props.color] as string )
                 }
 
                 return output.join(' ').trim()

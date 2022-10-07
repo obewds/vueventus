@@ -40,18 +40,18 @@
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( vv?.textareas?.base() ) {
                     output.push( vv.textareas.base() )
                 }
 
                 if ( props.size !== '' && vv?.textareas?.sizes?.[props.size as keyof typeof vv.textareas.sizes] ) {
-                    output.push( vv.textareas.sizes[props.size as keyof typeof vv.textareas.sizes] )
+                    output.push( vv.textareas.sizes[props.size as keyof typeof vv.textareas.sizes] as string )
                 }
 
                 if ( vv?.textareas?.palettes?.[props.palette as keyof typeof vv.textareas.palettes]?.[props.color] ) {
-                    output.push( vv.textareas.palettes[props.palette as keyof typeof vv.textareas.palettes][props.color] )
+                    output.push( vv.textareas.palettes[props.palette as keyof typeof vv.textareas.palettes][props.color] as string )
                 }
 
                 return output.join(' ').trim()

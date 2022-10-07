@@ -14,7 +14,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     type: {
         type: StringConstructor;
-        default: "number" | "search" | "time" | "text" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "tel" | "url";
+        default: "number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url";
         validator: (prop: ValidInputTypes) => boolean;
     };
     modelValue: {
@@ -39,7 +39,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     type: {
         type: StringConstructor;
-        default: "number" | "search" | "time" | "text" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "tel" | "url";
+        default: "number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url";
         validator: (prop: ValidInputTypes) => boolean;
     };
     modelValue: {
