@@ -1,0 +1,1 @@
+import{e as o}from"./VvTextarea.vue_vue_type_script_lang.ecee8aaf.js";import{_ as a,o as t,c as p,n as l}from"../app.db287b7d.js";const r=["type","value"];function u(e,s,m,i,d,c){return t(),p("input",{type:e.type,class:l(e.classes),value:e.modelValue,onInput:s[0]||(s[0]=n=>e.$emit("update:modelValue",e.handleInputChange(n)))},null,42,r)}const V=a(o,[["render",u]]);export{V};

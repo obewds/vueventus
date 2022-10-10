@@ -13,6 +13,7 @@ export { default as BorderDefault } from './configs/palettes/BorderDefault';
 export { default as ButtonOutline } from './configs/palettes/ButtonOutline';
 export { default as ButtonSolid } from './configs/palettes/ButtonSolid';
 export { default as CheckboxDefault } from './configs/palettes/CheckboxDefault';
+export { default as FillDefault } from './configs/palettes/FillDefault';
 export { default as GroundConsole } from './configs/palettes/GroundConsole';
 export { default as GroundDefault } from './configs/palettes/GroundDefault';
 export { default as GroundMonochromatic } from './configs/palettes/GroundMonochromatic';
