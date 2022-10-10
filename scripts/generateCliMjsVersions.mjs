@@ -9,6 +9,7 @@ const files = [
     'configs/palettes/ButtonOutline',
     'configs/palettes/ButtonSolid',
     'configs/palettes/CheckboxDefault',
+    'configs/palettes/FillDefault',
     'configs/palettes/GroundConsole',
     'configs/palettes/GroundDefault',
     'configs/palettes/GroundMonochromatic',
