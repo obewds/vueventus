@@ -48,6 +48,14 @@ appVv.buttons.palettes.outline = {
     success: 'text-lime-600 dark:text-lime-500 hover:text-white dark:hover:text-white hover:bg-lime-600 active:bg-lime-800 border-lime-600 hover:border-lime-800 focus:ring-lime-500 focus:border-lime-900',
 }
 
+appVv.fills.palettes.default = {
+    'default': 'fill-lightBlue-500 dark:fill-lightBlue-300',
+    error: 'fill-pink-500 dark:fill-pink-300',
+    primary: 'fill-violet-500 dark:fill-violet-300',
+    secondary: 'fill-orange-500 dark:fill-orange-300',
+    success: 'fill-lime-600 dark:fill-lime-300',
+}
+
 appVv.grounds.palettes.console = {
     'default': 'text-lightBlue-200 bg-lightBlue-900 bg-opacity-100 dark:bg-black dark:bg-opacity-80',
     error: 'text-pink-200 bg-pink-900 bg-opacity-100 dark:bg-black dark:bg-opacity-80',

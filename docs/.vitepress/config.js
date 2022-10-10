@@ -183,6 +183,7 @@ function sidebarModules() {
                 { text: 'ButtonOutline Palette', link: '/modules/palettes/button-outline' },
                 { text: 'ButtonSolid Palette', link: '/modules/palettes/button-solid' },
                 { text: 'CheckboxDefault Palette', link: '/modules/palettes/checkbox-default' },
+                { text: 'FillDefault Palette', link: '/modules/palettes/fill-default' },
                 { text: 'GroundConsole Palette', link: '/modules/palettes/ground-console' },
                 { text: 'GroundDefault Palette', link: '/modules/palettes/ground-default' },
                 { text: 'GroundMonochromatic Palette', link: '/modules/palettes/ground-monochromatic' },

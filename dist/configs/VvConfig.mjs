@@ -13,6 +13,7 @@ import BorderDefault from './palettes/BorderDefault.mjs';
 import ButtonOutline from './palettes/ButtonOutline.mjs';
 import ButtonSolid from './palettes/ButtonSolid.mjs';
 import CheckboxDefault from './palettes/CheckboxDefault.mjs';
+import FillDefault from './palettes/FillDefault.mjs';
 import GroundConsole from './palettes/GroundConsole.mjs';
 import GroundDefault from './palettes/GroundDefault.mjs';
 import GroundMonochromatic from './palettes/GroundMonochromatic.mjs';
@@ -48,6 +49,11 @@ export default {
         ...Checkboxes,
         palettes: {
             default: CheckboxDefault,
+        },
+    },
+    fills: {
+        palettes: {
+            default: FillDefault,
         },
     },
     inputs: {

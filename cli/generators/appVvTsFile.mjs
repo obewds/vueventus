@@ -33,6 +33,10 @@ let appVv: ConfigVv = VvConfig
 //     success: '${VvConfig.borders.palettes.default.success}',
 // }
 
+// appVv.hover = {
+//     scale: 'hover:scale-103 focus:scale-103',
+// }
+
 // appVv.buttons.border = ''
 // appVv.buttons.transition += ' ' + appVv.hover.scale
 
@@ -70,6 +74,14 @@ let appVv: ConfigVv = VvConfig
 // appVv.colorModes.light.hex = '#e1e1e3'
 // appVv.colorModes.light.text = 'text-gray-900'
 
+// appVv.fills.palettes.default = {
+//     default: '${VvConfig.fills.palettes.default.default}',
+//     error: '${VvConfig.fills.palettes.default.error}',
+//     primary: '${VvConfig.fills.palettes.default.primary}',
+//     secondary: '${VvConfig.fills.palettes.default.secondary}',
+//     success: '${VvConfig.fills.palettes.default.success}',
+// }
+
 // appVv.grounds.palettes.console = {
 //     default: '${VvConfig.grounds.palettes.console.default}',
 //     error: '${VvConfig.grounds.palettes.console.error}',
@@ -100,10 +112,6 @@ let appVv: ConfigVv = VvConfig
 //     primary: '${VvConfig.grounds.palettes.pastel.primary}',
 //     secondary: '${VvConfig.grounds.palettes.pastel.secondary}',
 //     success: '${VvConfig.grounds.palettes.pastel.success}',
-// }
-
-// appVv.hover = {
-//     scale: 'hover:scale-103 focus:scale-103',
 // }
 
 // appVv.inputs.palettes.default = {

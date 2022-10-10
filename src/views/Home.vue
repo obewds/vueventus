@@ -243,6 +243,10 @@
                 CheckboxDefault
             </DevViewLinkCard>
 
+            <DevViewLinkCard icon="palette" to="/configs/palettes/fill-default" :link-classes="tw.gridCardLinkPalette">
+                FillDefault
+            </DevViewLinkCard>
+
             <DevViewLinkCard icon="palette" to="/configs/palettes/ground-console" :link-classes="tw.gridCardLinkPalette">
                 GroundConsole
             </DevViewLinkCard>

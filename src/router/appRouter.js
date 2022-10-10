@@ -20,6 +20,7 @@ import BorderDefaultPage from '@/views/configs/palettes/BorderDefaultPage.vue'
 import ButtonOutlinePage from '@/views/configs/palettes/ButtonOutlinePage.vue'
 import ButtonSolidPage from '@/views/configs/palettes/ButtonSolidPage.vue'
 import CheckboxDefaultPage from '@/views/configs/palettes/CheckboxDefaultPage.vue'
+import FillDefaultPage from '@/views/configs/palettes/FillDefaultPage.vue'
 import GroundConsolePage from '@/views/configs/palettes/GroundConsolePage.vue'
 import GroundDefaultPage from '@/views/configs/palettes/GroundDefaultPage.vue'
 import GroundMonochromaticPage from '@/views/configs/palettes/GroundMonochromaticPage.vue'
@@ -138,6 +139,10 @@ const router = createRouter({
             name: 'CheckboxDefault Palette Config Module',
             component: CheckboxDefaultPage,
             path: '/configs/palettes/checkbox-default'
+        },{
+            name: 'FillDefault Palette Config Module',
+            component: FillDefaultPage,
+            path: '/configs/palettes/fill-default'
         },{
             name: 'GroundConsole Palette Config Module',
             component: GroundConsolePage,
