@@ -23,6 +23,7 @@ title: Palette Config Modules
 * [BorderDefault Palette](/modules/palettes/border-default)
 * [ButtonOutline Palette](/modules/palettes/button-outline)
 * [ButtonSolid Palette](/modules/palettes/button-solid)
+* [FillDefault Palette](/modules/palettes/fill-default)
 * [GroundConsole Palette](/modules/palettes/ground-console)
 * [GroundDefault Palette](/modules/palettes/ground-default)
 * [GroundMonochromatic Palette](/modules/palettes/ground-monochromatic)
