@@ -15,6 +15,7 @@ import BorderDefault from './palettes/BorderDefault.js'
 import ButtonOutline from './palettes/ButtonOutline.js'
 import ButtonSolid from './palettes/ButtonSolid.js'
 import CheckboxDefault from './palettes/CheckboxDefault.js'
+import FillDefault from './palettes/FillDefault.js'
 import GroundConsole from './palettes/GroundConsole.js'
 import GroundDefault from './palettes/GroundDefault.js'
 import GroundMonochromatic from './palettes/GroundMonochromatic.js'
@@ -54,6 +55,11 @@ export default <ConfigVv>{
         ...Checkboxes,
         palettes: {
             default: CheckboxDefault,
+        },
+    },
+    fills: {
+        palettes: {
+            default: FillDefault,
         },
     },
     inputs: {
