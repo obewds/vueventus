@@ -70,6 +70,14 @@ let appVv: ConfigVv = VvConfig
 // appVv.colorModes.light.hex = '#e1e1e3'
 // appVv.colorModes.light.text = 'text-gray-900'
 
+// appVv.fills.palettes.default = {
+//     default: '${VvConfig.fills.palettes.default.default}',
+//     error: '${VvConfig.fills.palettes.default.error}',
+//     primary: '${VvConfig.fills.palettes.default.primary}',
+//     secondary: '${VvConfig.fills.palettes.default.secondary}',
+//     success: '${VvConfig.fills.palettes.default.success}',
+// }
+
 // appVv.grounds.palettes.console = {
 //     default: '${VvConfig.grounds.palettes.console.default}',
 //     error: '${VvConfig.grounds.palettes.console.error}',
