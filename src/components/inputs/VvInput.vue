@@ -60,7 +60,7 @@
 
             })
 
-            const handleInputChange = (event: Event) => (event.target as HTMLInputElement).value
+            const handleInputChange = (event: Event): string => (event.target as HTMLInputElement).value
 
             return { classes, handleInputChange }
 
@@ -76,6 +76,6 @@
         :type="type"
         :class="classes"
         :value="modelValue"
-        @input="$emit('update:modelValue', handleInputChange($event as any))"
+        @input="$emit('update:modelValue', handleInputChange($event as Event))"
     >
 </template>
