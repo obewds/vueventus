@@ -21,7 +21,10 @@
     "cli:mjs": "node scripts/generateCliMjsVersions.mjs",
     "originals": "node scripts/copyToDist.mjs",
     "pkg:org": "npm config set scope obewds",
-    "generate": "npx rimraf dist && npx rimraf docs/.vitepress/dist && npm run build && vue-tsc --emitDeclarationOnly && tsc && npm run cli:mjs && npm run docs:build && npm run originals && npm run changelog"
+    "bump:patch": "npm version patch && npm run changelog",
+    "bump:minor": "npm version minor && npm run changelog",
+    "bump:major": "npm version major && npm run changelog",
+    "generate": "npx rimraf dist && npx rimraf docs/.vitepress/dist && npm run build && vue-tsc --emitDeclarationOnly && tsc && npm run cli:mjs && npm run docs:build && npm run originals"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
