@@ -2,11 +2,16 @@
 
 <script setup lang="ts">
 
+    import { ref } from 'vue'
     import globals from '../../../globals'
     import DevViewArticle from '@/views/compos/DevViewArticle.vue'
     import VvInput from '@/components/inputs/VvInput.vue'
 
     const tw = globals.classes
+
+    const testOne = ref('')
+    const testTwo = ref('')
+    const testThree = ref('')
 
 </script>
 
@@ -19,9 +24,14 @@
             <div>
                 <h3 :class="tw.h3">VvInput Default Palette Colors</h3>
                 <div :class="tw.flexWrap">
-                    <VvInput color="default" placeholder="default Color"/>
-                    <VvInput color="error" placeholder="error Color"/>
-                    <VvInput color="success" placeholder="success Color"/>
+                    <VvInput color="default" placeholder="default Color" v-model="testOne"/>
+                    <VvInput color="error" placeholder="error Color" v-model="testTwo"/>
+                    <VvInput color="success" placeholder="success Color" v-model="testThree"/>
+                </div>
+                <div class="flex justify-between py-4">
+                    <div>{{ testOne }} </div>
+                    <div>{{ testTwo }} </div>
+                    <div>{{ testThree }} </div>
                 </div>
             </div>
         </div>
