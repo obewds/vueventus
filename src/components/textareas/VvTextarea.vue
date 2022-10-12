@@ -81,7 +81,7 @@
         :class="classes"
         :rows="rows"
         :value="modelValue"
-        @input="$emit('update:modelValue', handleTextareaChange($event as any))"
+        @input="$emit('update:modelValue', handleTextareaChange($event as Event))"
     />
 
 </template>

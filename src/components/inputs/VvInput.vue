@@ -36,7 +36,7 @@
             },
         },
 
-        setup (props) {
+        setup (props, context) {
             
             const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject<typeof VvConfig>('vv') : VvConfig
 
@@ -60,7 +60,7 @@
 
             })
 
-            const handleInputChange = (event: Event): string => (event.target as HTMLInputElement).value
+            const handleInputChange = (event: Event) => (event.target as HTMLInputElement).value
 
             return { classes, handleInputChange }
 
