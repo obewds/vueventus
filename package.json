@@ -1,7 +1,7 @@
 {
   "name": "@obewds/vueventus",
   "description": "A component library and styling management system for modern Vue.js, Tailwind CSS, and Typescript apps",
-  "version": "0.53.1",
+  "version": "0.53.2",
   "author": "@oberocks",
   "homepage": "https://obewds.github.io/vueventus/",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "bump:patch": "npm version patch && npm run changelog",
     "bump:minor": "npm version minor && npm run changelog",
     "bump:major": "npm version major && npm run changelog",
-    "generate": "npx rimraf dist && npx rimraf docs/.vitepress/dist && npm run build && vue-tsc --emitDeclarationOnly && tsc && npm run cli:mjs && npm run docs:build && npm run originals"
+    "generate": "npx rimraf dist && npx rimraf docs/.vitepress/dist && npm run build && vue-tsc --emitDeclarationOnly && tsc && npm run cli:mjs && npm run docs:build && npm run originals && npm run changelog"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",

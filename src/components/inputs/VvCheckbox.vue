@@ -110,7 +110,7 @@
         type="checkbox"
         :class="classes"
         :checked="checked"
-        @change="$emit('update:modelValue', handleCheckboxChange($event as any))"
+        @change="$emit('update:modelValue', handleCheckboxChange($event as Event))"
         :data-test="(darkCheckCssUrl ? darkCheckHex : '') + (lightCheckCssUrl ? lightCheckHex : '')"
     >
 </template>

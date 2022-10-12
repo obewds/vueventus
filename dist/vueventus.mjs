@@ -2351,8 +2351,8 @@ const Js = /* @__PURE__ */ V(qr, [["render", Jr]]), Ce = S({
   }
 }), Oe = () => {
   Ne((e) => ({
-    "16aa95b0": e.lightCheckCssUrl,
-    64545718: e.darkCheckCssUrl
+    "5c0e661d": e.lightCheckCssUrl,
+    "4d249e42": e.darkCheckCssUrl
   }));
 }, Ee = Ce.setup;
 Ce.setup = Ee ? (e, t) => (Oe(), Ee(e, t)) : Oe;
@@ -2366,7 +2366,7 @@ function Zr(e, t, r, s, o, a) {
     "data-test": (e.darkCheckCssUrl ? e.darkCheckHex : "") + (e.lightCheckCssUrl ? e.lightCheckHex : "")
   }, null, 42, Yr);
 }
-const Ys = /* @__PURE__ */ V(Ce, [["render", Zr], ["__scopeId", "data-v-5f12ce88"]]), Wr = S({
+const Ys = /* @__PURE__ */ V(Ce, [["render", Zr], ["__scopeId", "data-v-909271fe"]]), Wr = S({
   name: "VvInput",
   emits: ["update:modelValue"],
   props: {
@@ -2392,13 +2392,13 @@ const Ys = /* @__PURE__ */ V(Ce, [["render", Zr], ["__scopeId", "data-v-5f12ce88
       default: ""
     }
   },
-  setup(e) {
-    const t = Object.keys(m("vv", {})).length > 0 ? m("vv") : l;
+  setup(e, t) {
+    const r = Object.keys(m("vv", {})).length > 0 ? m("vv") : l;
     return { classes: x(() => {
-      var a, n, i, c, d, f;
-      let o = [];
-      return (a = t == null ? void 0 : t.inputs) != null && a.base() && o.push(t.inputs.base()), e.size !== "" && ((i = (n = t == null ? void 0 : t.inputs) == null ? void 0 : n.sizes) == null ? void 0 : i[e.size]) && o.push(t.inputs.sizes[e.size]), (f = (d = (c = t == null ? void 0 : t.inputs) == null ? void 0 : c.palettes) == null ? void 0 : d[e.palette]) != null && f[e.color] && o.push(t.inputs.palettes[e.palette][e.color]), o.join(" ").trim();
-    }), handleInputChange: (o) => o.target.value };
+      var n, i, c, d, f, g;
+      let a = [];
+      return (n = r == null ? void 0 : r.inputs) != null && n.base() && a.push(r.inputs.base()), e.size !== "" && ((c = (i = r == null ? void 0 : r.inputs) == null ? void 0 : i.sizes) == null ? void 0 : c[e.size]) && a.push(r.inputs.sizes[e.size]), (g = (f = (d = r == null ? void 0 : r.inputs) == null ? void 0 : d.palettes) == null ? void 0 : f[e.palette]) != null && g[e.color] && a.push(r.inputs.palettes[e.palette][e.color]), a.join(" ").trim();
+    }), handleInputChange: (a) => a.target.value };
   }
 }), Qr = ["type", "value"];
 function Xr(e, t, r, s, o, a) {
@@ -2471,8 +2471,8 @@ const Zs = /* @__PURE__ */ V(Wr, [["render", Xr]]), Se = S({
   }
 }), Pe = () => {
   Ne((e) => ({
-    "1e2a7d43": e.lightRadioCssUrl,
-    "968e4e82": e.darkRadioCssUrl
+    "01111394": e.lightRadioCssUrl,
+    "486db44e": e.darkRadioCssUrl
   }));
 }, Ie = Se.setup;
 Se.setup = Ie ? (e, t) => (Pe(), Ie(e, t)) : Pe;
@@ -2487,7 +2487,7 @@ function es(e, t, r, s, o, a) {
     "data-test": (e.darkRadioCssUrl ? e.darkRadioHex : "") + (e.lightRadioCssUrl ? e.lightRadioHex : "")
   }, null, 42, Kr);
 }
-const Ws = /* @__PURE__ */ V(Se, [["render", es], ["__scopeId", "data-v-c740e056"]]), ts = S({
+const Ws = /* @__PURE__ */ V(Se, [["render", es], ["__scopeId", "data-v-e9a9d4f7"]]), ts = S({
   name: "VvListItem",
   props: {
     color: {
