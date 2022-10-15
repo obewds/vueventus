@@ -8,7 +8,7 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
 <script lang="ts">
 
     import { computed, defineComponent } from 'vue'
-    import appVv from '../../app.vv'
+    import appVv from '../../../app.vv'
 
     export default defineComponent({
         
