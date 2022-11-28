@@ -1164,6 +1164,7 @@ export const useRootStore = defineStore({
     actions: {
 
         initialize() {
+            /* c8 ignore start */
             if (this.isReady)
                 return
             // eslint-disable-next-line no-console
@@ -1173,6 +1174,7 @@ export const useRootStore = defineStore({
                 firstName: 'Jane',
                 lastName: 'Doe',
             }
+            /* c8 ignore end */
         },
 
     },
@@ -2706,6 +2708,7 @@ ${n}
 import { mount } from '@vue/test-utils'
 import { createHead } from '@vueuse/head'
 import { createPinia } from 'pinia'
+import { useRootStore } from '../../src/store/root'
 import b from '../../src/pages/b.vue'
 
 
@@ -2733,6 +2736,22 @@ test('b.vue page component renders the setup() output as expected', async () => 
     expect(wrapper.html()).toContain('" alt="">')
     expect(wrapper.html()).toContain('Prefetch Result:')
     
+})
+
+
+test('app pinia store initialization works as expected using b.vue page component as a proxy', async () => {
+
+    const wrapper = mount(b, {
+        global: {
+            plugins: [head, pinia],
+        },
+    })
+
+    // force initialization of a pinia root store to trigger code coverage
+    const testingStore = useRootStore().initialize()
+    
+    expect(wrapper.html()).toBeTruthy()
+
 })
 
 `}function Ne(){return`// ./tests/pages/Home.test.js
