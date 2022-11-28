@@ -11,7 +11,7 @@ meta:
 
 # Page A
 
-`}function L(){return`{
+`}function H(){return`{
     "black": "#1a1a1a",
     "white": "#f8f8f8",
     "gray": {
@@ -267,7 +267,7 @@ meta:
       "900": "#463726"
     }
 }
-`}function H(){return`<!-- ./src/App.vue -->
+`}function L(){return`<!-- ./src/App.vue -->
 
 <script setup lang="ts">
 
@@ -588,6 +588,7 @@ meta:
             })
     
             const store = useRootStore()
+            const user = computed(() => store.user)
 
             const serverPrefetch = () => {
                 // eslint-disable-next-line no-console
@@ -596,7 +597,7 @@ meta:
             }
     
             return {
-                user: computed(() => store.user),
+                user,
                 serverPrefetch,
             }
         },
@@ -1495,12 +1496,18 @@ export default {
                     '/%3e%3c/svg%3e")'
                 ].join('')
             }
+
+            let darkCheckSvgTest = checkSvgUrl( (props.darkCheckHex as string).replace(/#/g, '') )
+            let lightCheckSvgTest =  checkSvgUrl( (props.lightCheckHex as string).replace(/#/g, '') )
+
+            /* c8 ignore start */
             let darkCheckCssUrl = computed( () => {
                 return checkSvgUrl( (props.darkCheckHex as string).replace(/#/g, '') )
             })
             let lightCheckCssUrl = computed( () => {
                 return checkSvgUrl( (props.lightCheckHex as string).replace(/#/g, '') )
             })
+            /* c8 ignore end */
 
             return { darkCheckCssUrl, lightCheckCssUrl }
 
@@ -1637,7 +1644,7 @@ export default {
     />
 </template>
 
-`}function Le(){return`<!-- ./src/components/vv/elements/VvEl.vue -->
+`}function He(){return`<!-- ./src/components/vv/elements/VvEl.vue -->
 
 
 <script lang="ts">
@@ -1744,7 +1751,7 @@ ${n}
 
 </template>
 
-`}function y(){return k(!1)}function w(){return k(!0)}function He(){return`<!-- ./src/components/vv/forms/VvFormGroup.vue -->
+`}function y(){return k(!1)}function w(){return k(!0)}function Le(){return`<!-- ./src/components/vv/forms/VvFormGroup.vue -->
 
 <script lang="ts">
 
@@ -2260,10 +2267,12 @@ ${n}
                 Prism.highlightAll()
             })
 
+            /* c8 ignore start */
             onUpdated(() => {
                 Prism.manual = true
                 Prism.highlightAll()
             })
+            /* c8 ignore end */
 
             return { appColors }
 
@@ -2344,12 +2353,18 @@ ${n}
                     '/%3e%3c/svg%3e")',
                 ].join('')
             }
+
+            let darkRadioSvgTest = radioSvgUrl( (props.darkRadioHex as string).replace(/#/g, '') )
+            let lightRadioSvgTest =  radioSvgUrl( (props.lightRadioHex as string).replace(/#/g, '') )
+
+            /* c8 ignore start */
             let darkRadioCssUrl = computed( () => {
                 return radioSvgUrl( (props.darkRadioHex as string).replace(/#/g, '') )
             })
             let lightRadioCssUrl = computed( () => {
                 return radioSvgUrl( (props.lightRadioHex as string).replace(/#/g, '') )
             })
+            /* c8 ignore end */
 
             return { darkRadioCssUrl, lightRadioCssUrl }
 
@@ -2689,13 +2704,35 @@ ${n}
 `}function Ue(){return`// ./tests/pages/b.test.js
 
 import { mount } from '@vue/test-utils'
+import { createHead } from '@vueuse/head'
+import { createPinia } from 'pinia'
 import b from '../../src/pages/b.vue'
+
+
+const head = createHead()
+const pinia = createPinia()
 
 
 test('b.vue page mounts successfully', async () => {
     
     expect(b).toBeTruthy()
 
+})
+
+
+test('b.vue page component renders the setup() output as expected', async () => {
+
+    const wrapper = mount(b, {
+        global: {
+            plugins: [head, pinia],
+        },
+    })
+
+    expect(wrapper.html()).toContain('<p>Hello I am B</p>')
+    expect(wrapper.html()).toContain('<img src="')
+    expect(wrapper.html()).toContain('" alt="">')
+    expect(wrapper.html()).toContain('Prefetch Result:')
+    
 })
 
 `}function Ne(){return`// ./tests/pages/Home.test.js
@@ -3386,4 +3423,4 @@ test('VvTextarea.test.vue component mounts successfully', async () => {
 
 })
 
-`}let m={appVvTs:{name:"app.vv.ts",checked:!0,path:"/src/",src:te()},appColorsJson:{name:"app.colors.json",checked:!0,path:"/src/",src:L()},indexHtml:{name:"index.html",checked:!0,path:"/",src:ve()},postCssConfigCjs:{name:"postcss.config.cjs",checked:!0,path:"/",src:be()},tailwindCss:{name:"tailwind.css",checked:!0,path:"/src/css/",src:ke()}},it={appVue:{name:"App.vue",checked:!0,path:"/src/",src:H()},homeVue:{name:"Home.vue",checked:!0,path:"/src/pages/",src:de()},notFound404Vue:{name:"NotFound404.vue",checked:!0,path:"/src/pages/",src:ge()},routesTs:{name:"routes.ts",checked:!0,path:"/src/router/",src:Ve()},tailwindConfigCjs:{name:"tailwind.config.cjs",checked:!0,path:"/",src:x(!1)},tsconfigJson:{name:"tsconfig.json",checked:!0,path:"/",src:Ce()}},pt={appVue:{name:"App.vue",checked:!0,path:"/src/",src:A()},aMd:{name:"a.md",checked:!0,path:"/src/pages/",src:z()},bMd:{name:"b.md",checked:!0,path:"/src/pages/",src:oe()},bVue:{name:"b.vue",checked:!0,path:"/src/pages/nested/deep/",src:re()},catchAll404:{name:"[...all].vue",checked:!0,path:"/src/pages/",src:se()},counterVue:{name:"Counter.vue",checked:!0,path:"/src/components/",src:ae()},helloWorldVueSsg:{name:"HelloWorld.vue",checked:!0,path:"/src/components/",src:ce()},indexMd:{name:"index.md",checked:!0,path:"/src/pages/",src:me()},mousePosVue:{name:"MousePos.vue",checked:!0,path:"/src/components/",src:fe()},piniaRootTs:{name:"root.ts",checked:!0,path:"/src/store/",src:he()},tailwindConfigCjs:{name:"tailwind.config.cjs",checked:!0,path:"/",src:x(!0)},tsconfigJson:{name:"tsconfig.json",checked:!0,path:"/",src:Fe()}},f={vvAnchorVue:{name:"VvAnchor.vue",checked:!0,path:"/src/components/vv/anchors/",src:Pe()},vvButtonVue:{name:"VvButton.vue",checked:!0,path:"/src/components/vv/buttons/",src:je()},vvCheckboxVue:{name:"VvCheckbox.vue",checked:!0,path:"/src/components/vv/inputs/",src:Re()},vvColorModeButtonVue:{name:"VvColorModeButton.vue",checked:!0,path:"/src/components/vv/buttons/",src:ze()},vvElVue:{name:"VvEl.vue",checked:!0,path:"/src/components/vv/elements/",src:Le()},vvFormGroupVue:{name:"VvFormGroup.vue",checked:!0,path:"/src/components/vv/forms/",src:He()},vvInputVue:{name:"VvInput.vue",checked:!0,path:"/src/components/vv/inputs/",src:Ae()},vvListItemVue:{name:"VvListItem.vue",checked:!0,path:"/src/components/vv/lists/",src:Me()},vvRadioVue:{name:"VvRadio.vue",checked:!0,path:"/src/components/vv/inputs/",src:$e()},vvRouterLinkVue:{name:"VvRouterLink.vue",checked:!0,path:"/src/components/vv/anchors/",src:Ge()},vvTextareaVue:{name:"VvTextarea.vue",checked:!0,path:"/src/components/vv/textareas/",src:Je()}},S={checked:!0,name:"FontAwesome Free",install:"npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons --save-dev",packages:["@fortawesome/fontawesome-svg-core","@fortawesome/vue-fontawesome@latest-3","@fortawesome/free-brands-svg-icons","@fortawesome/free-solid-svg-icons","@fortawesome/free-regular-svg-icons"],files:{fontAwesomeTs:{name:"fontAwesome.ts",checked:!0,path:"/src/",src:le()},vvFa:{name:"VvFa.vue",checked:!0,path:"/src/components/vv/elements/",src:y()},vvFaTestJs:{name:"VvFa.test.js",checked:!0,path:"/tests/components/vv/elements/",src:Xe()}}},T=S;T.files.vvFa={name:"VvFa.vue",checked:!0,path:"/src/components/vv/elements/",src:w()};let F={checked:!1,name:"FontAwesome Pro (License Required)",install:"npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/pro-duotone-svg-icons @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/pro-thin-svg-icons @fortawesome/sharp-solid-svg-icons --save-dev",packages:["@fortawesome/fontawesome-svg-core","@fortawesome/vue-fontawesome@latest-3","@fortawesome/free-brands-svg-icons","@fortawesome/pro-solid-svg-icons","@fortawesome/pro-regular-svg-icons","@fortawesome/pro-duotone-svg-icons","@fortawesome/pro-light-svg-icons","@fortawesome/pro-thin-svg-icons","@fortawesome/sharp-solid-svg-icons"],files:{fontAwesomeProTs:{name:"fontAwesomePro.ts",checked:!0,path:"/src/",src:ne()},vvFa:{name:"VvFa.vue",checked:!0,path:"/src/components/vv/elements/",src:y()},vvFaTestJs:{name:"VvFa.test.js",checked:!0,path:"/tests/components/vv/elements/",src:Ze()}}},B=F;B.files.vvFa={name:"VvFa.vue",checked:!0,path:"/src/components/vv/elements/",src:w()};let P={checked:!0,name:"Vitest",install:"npm install vitest @vue/test-utils happy-dom @vitest/coverage-c8 --save-dev",packages:["vitest","@vue/test-utils","happy-dom","@vitest/coverage-c8"],files:{vitestConfigTs:{name:"vitest.config.ts",checked:!0,path:"/",src:Be()},helloVueVentusTestJs:{name:"HelloVueVentus.test.js",checked:!0,path:"/tests/components/",src:pe()},helloVueVentusVue:{name:"HelloVueVentus.vue",checked:!0,path:"/src/components/",src:ue()},vvAnchorTestJs:{name:"VvAnchor.test.js",checked:!0,path:"/tests/components/vv/anchors/",src:qe()},vvButtonTestJs:{name:"VvButton.test.js",checked:!0,path:"/tests/components/vv/buttons/",src:We()},vvCheckboxTestJs:{name:"VvCheckbox.test.js",checked:!0,path:"/tests/components/vv/inputs/",src:_e()},vvColorModeButtonTestJs:{name:"VvColorModeButton.test.js",checked:!0,path:"/tests/components/vv/buttons/",src:Ye()},vvElTestJs:{name:"VvEl.test.js",checked:!0,path:"/tests/components/vv/elements/",src:Qe()},vvFormGroupTestJs:{name:"VvFormGroup.test.js",checked:!0,path:"/tests/components/vv/forms/",src:Ke()},vvInputTestJs:{name:"VvInput.test.js",checked:!0,path:"/tests/components/vv/inputs/",src:et()},vvListItemTestJs:{name:"VvListItem.test.js",checked:!0,path:"/tests/components/vv/lists/",src:tt()},vvRadioTestJs:{name:"VvRadio.test.js",checked:!0,path:"/tests/components/vv/inputs/",src:st()},vvRouterLinkTestJs:{name:"VvRouterLink.test.js",checked:!0,path:"/tests/components/vv/anchors/",src:at()},vvScrollUpTestJs:{name:"VvScrollUp.test.js",checked:!0,path:"/tests/components/vv/buttons/",src:nt()},vvTextareaTestJs:{name:"VvTextarea.test.js",checked:!0,path:"/tests/components/vv/textareas/",src:lt()}}},c=P;c.files.homeTestJs={name:"Home.test.js",checked:!0,path:"/tests/pages/",src:Ne()};c.files.notFound404TestJs={name:"NotFound404.test.js",checked:!0,path:"/tests/pages/",src:Oe()};let j=P;j.files.bTestJs={name:"b.test.js",checked:!0,path:"/tests/pages/",src:Ue()};let R={fontawesome:{},faPro:{},gsap:{checked:!0,name:"GSAP",install:"npm install gsap --save-dev",packages:["gsap"],files:{gsapTs:{name:"gsap.ts",checked:!0,path:"/src/",src:ie()},vvScrollUp:{name:"VvScrollUp.vue",checked:!0,path:"/src/components/vv/buttons/",src:De()}}},headless:{checked:!0,name:"Headless UI",install:"npm install @headlessui/vue --save-dev",packages:["@headlessui/vue"],files:{}},heroicons:{checked:!0,name:"Heroicons",install:"npm install @heroicons/vue --save-dev",packages:["@heroicons/vue"],files:{}},prism:{checked:!0,name:"Prism.js",install:"npm install prismjs vite-plugin-prismjs @types/prismjs prism-theme-vars --save-dev",packages:["prismjs","vite-plugin-prismjs","@types/prismjs","prism-theme-vars"],files:{vvPrism:{name:"VvPrism.vue",checked:!0,path:"/src/components/vv/elements/",src:Ee()},prismThemeVarsCss:{name:"prism-theme-vars.css",checked:!0,path:"/src/css/",src:xe()},VvPrismVars:{name:"VvPrismVars.vue",checked:!0,path:"/src/components/vv/elements/",src:Ie()},vvPrismTestJs:{name:"VvPrism.test.js",checked:!0,path:"/tests/components/vv/elements/",src:ot()},vvPrismVarsTestJs:{name:"VvPrismVars.test.js",checked:!0,path:"/tests/components/vv/elements/",src:rt()}}},vitest:{}},i=R;i.fontawesome=S;i.faPro=F;i.vitest=c;let p=R;p.fontawesome=T;p.faPro=B;p.vitest=j;const ut={stacks:{vueTwViteTs:{name:u.vueTwViteTs,files:{...m,...it},deps:{...i},compos:{...f}},vueTwViteSsgMdTs:{name:u.vueTwViteSsgMdTs,files:{...m,...pt},deps:{...p},compos:{...f}}}};export{ut as c};
+`}let m={appVvTs:{name:"app.vv.ts",checked:!0,path:"/src/",src:te()},appColorsJson:{name:"app.colors.json",checked:!0,path:"/src/",src:H()},indexHtml:{name:"index.html",checked:!0,path:"/",src:ve()},postCssConfigCjs:{name:"postcss.config.cjs",checked:!0,path:"/",src:be()},tailwindCss:{name:"tailwind.css",checked:!0,path:"/src/css/",src:ke()}},it={appVue:{name:"App.vue",checked:!0,path:"/src/",src:L()},homeVue:{name:"Home.vue",checked:!0,path:"/src/pages/",src:de()},notFound404Vue:{name:"NotFound404.vue",checked:!0,path:"/src/pages/",src:ge()},routesTs:{name:"routes.ts",checked:!0,path:"/src/router/",src:Ve()},tailwindConfigCjs:{name:"tailwind.config.cjs",checked:!0,path:"/",src:x(!1)},tsconfigJson:{name:"tsconfig.json",checked:!0,path:"/",src:Ce()}},pt={appVue:{name:"App.vue",checked:!0,path:"/src/",src:A()},aMd:{name:"a.md",checked:!0,path:"/src/pages/",src:z()},bMd:{name:"b.md",checked:!0,path:"/src/pages/",src:oe()},bVue:{name:"b.vue",checked:!0,path:"/src/pages/nested/deep/",src:re()},catchAll404:{name:"[...all].vue",checked:!0,path:"/src/pages/",src:se()},counterVue:{name:"Counter.vue",checked:!0,path:"/src/components/",src:ae()},helloWorldVueSsg:{name:"HelloWorld.vue",checked:!0,path:"/src/components/",src:ce()},indexMd:{name:"index.md",checked:!0,path:"/src/pages/",src:me()},mousePosVue:{name:"MousePos.vue",checked:!0,path:"/src/components/",src:fe()},piniaRootTs:{name:"root.ts",checked:!0,path:"/src/store/",src:he()},tailwindConfigCjs:{name:"tailwind.config.cjs",checked:!0,path:"/",src:x(!0)},tsconfigJson:{name:"tsconfig.json",checked:!0,path:"/",src:Fe()}},f={vvAnchorVue:{name:"VvAnchor.vue",checked:!0,path:"/src/components/vv/anchors/",src:Pe()},vvButtonVue:{name:"VvButton.vue",checked:!0,path:"/src/components/vv/buttons/",src:je()},vvCheckboxVue:{name:"VvCheckbox.vue",checked:!0,path:"/src/components/vv/inputs/",src:Re()},vvColorModeButtonVue:{name:"VvColorModeButton.vue",checked:!0,path:"/src/components/vv/buttons/",src:ze()},vvElVue:{name:"VvEl.vue",checked:!0,path:"/src/components/vv/elements/",src:He()},vvFormGroupVue:{name:"VvFormGroup.vue",checked:!0,path:"/src/components/vv/forms/",src:Le()},vvInputVue:{name:"VvInput.vue",checked:!0,path:"/src/components/vv/inputs/",src:Ae()},vvListItemVue:{name:"VvListItem.vue",checked:!0,path:"/src/components/vv/lists/",src:Me()},vvRadioVue:{name:"VvRadio.vue",checked:!0,path:"/src/components/vv/inputs/",src:$e()},vvRouterLinkVue:{name:"VvRouterLink.vue",checked:!0,path:"/src/components/vv/anchors/",src:Ge()},vvTextareaVue:{name:"VvTextarea.vue",checked:!0,path:"/src/components/vv/textareas/",src:Je()}},S={checked:!0,name:"FontAwesome Free",install:"npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons --save-dev",packages:["@fortawesome/fontawesome-svg-core","@fortawesome/vue-fontawesome@latest-3","@fortawesome/free-brands-svg-icons","@fortawesome/free-solid-svg-icons","@fortawesome/free-regular-svg-icons"],files:{fontAwesomeTs:{name:"fontAwesome.ts",checked:!0,path:"/src/",src:le()},vvFa:{name:"VvFa.vue",checked:!0,path:"/src/components/vv/elements/",src:y()},vvFaTestJs:{name:"VvFa.test.js",checked:!0,path:"/tests/components/vv/elements/",src:Xe()}}},T=S;T.files.vvFa={name:"VvFa.vue",checked:!0,path:"/src/components/vv/elements/",src:w()};let F={checked:!1,name:"FontAwesome Pro (License Required)",install:"npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/pro-duotone-svg-icons @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/pro-thin-svg-icons @fortawesome/sharp-solid-svg-icons --save-dev",packages:["@fortawesome/fontawesome-svg-core","@fortawesome/vue-fontawesome@latest-3","@fortawesome/free-brands-svg-icons","@fortawesome/pro-solid-svg-icons","@fortawesome/pro-regular-svg-icons","@fortawesome/pro-duotone-svg-icons","@fortawesome/pro-light-svg-icons","@fortawesome/pro-thin-svg-icons","@fortawesome/sharp-solid-svg-icons"],files:{fontAwesomeProTs:{name:"fontAwesomePro.ts",checked:!0,path:"/src/",src:ne()},vvFa:{name:"VvFa.vue",checked:!0,path:"/src/components/vv/elements/",src:y()},vvFaTestJs:{name:"VvFa.test.js",checked:!0,path:"/tests/components/vv/elements/",src:Ze()}}},B=F;B.files.vvFa={name:"VvFa.vue",checked:!0,path:"/src/components/vv/elements/",src:w()};let P={checked:!0,name:"Vitest",install:"npm install vitest @vue/test-utils happy-dom @vitest/coverage-c8 --save-dev",packages:["vitest","@vue/test-utils","happy-dom","@vitest/coverage-c8"],files:{vitestConfigTs:{name:"vitest.config.ts",checked:!0,path:"/",src:Be()},helloVueVentusTestJs:{name:"HelloVueVentus.test.js",checked:!0,path:"/tests/components/",src:pe()},helloVueVentusVue:{name:"HelloVueVentus.vue",checked:!0,path:"/src/components/",src:ue()},vvAnchorTestJs:{name:"VvAnchor.test.js",checked:!0,path:"/tests/components/vv/anchors/",src:qe()},vvButtonTestJs:{name:"VvButton.test.js",checked:!0,path:"/tests/components/vv/buttons/",src:We()},vvCheckboxTestJs:{name:"VvCheckbox.test.js",checked:!0,path:"/tests/components/vv/inputs/",src:_e()},vvColorModeButtonTestJs:{name:"VvColorModeButton.test.js",checked:!0,path:"/tests/components/vv/buttons/",src:Ye()},vvElTestJs:{name:"VvEl.test.js",checked:!0,path:"/tests/components/vv/elements/",src:Qe()},vvFormGroupTestJs:{name:"VvFormGroup.test.js",checked:!0,path:"/tests/components/vv/forms/",src:Ke()},vvInputTestJs:{name:"VvInput.test.js",checked:!0,path:"/tests/components/vv/inputs/",src:et()},vvListItemTestJs:{name:"VvListItem.test.js",checked:!0,path:"/tests/components/vv/lists/",src:tt()},vvRadioTestJs:{name:"VvRadio.test.js",checked:!0,path:"/tests/components/vv/inputs/",src:st()},vvRouterLinkTestJs:{name:"VvRouterLink.test.js",checked:!0,path:"/tests/components/vv/anchors/",src:at()},vvScrollUpTestJs:{name:"VvScrollUp.test.js",checked:!0,path:"/tests/components/vv/buttons/",src:nt()},vvTextareaTestJs:{name:"VvTextarea.test.js",checked:!0,path:"/tests/components/vv/textareas/",src:lt()}}},c=P;c.files.homeTestJs={name:"Home.test.js",checked:!0,path:"/tests/pages/",src:Ne()};c.files.notFound404TestJs={name:"NotFound404.test.js",checked:!0,path:"/tests/pages/",src:Oe()};let j=P;j.files.bTestJs={name:"b.test.js",checked:!0,path:"/tests/pages/",src:Ue()};let R={fontawesome:{},faPro:{},gsap:{checked:!0,name:"GSAP",install:"npm install gsap --save-dev",packages:["gsap"],files:{gsapTs:{name:"gsap.ts",checked:!0,path:"/src/",src:ie()},vvScrollUp:{name:"VvScrollUp.vue",checked:!0,path:"/src/components/vv/buttons/",src:De()}}},headless:{checked:!0,name:"Headless UI",install:"npm install @headlessui/vue --save-dev",packages:["@headlessui/vue"],files:{}},heroicons:{checked:!0,name:"Heroicons",install:"npm install @heroicons/vue --save-dev",packages:["@heroicons/vue"],files:{}},prism:{checked:!0,name:"Prism.js",install:"npm install prismjs vite-plugin-prismjs @types/prismjs prism-theme-vars --save-dev",packages:["prismjs","vite-plugin-prismjs","@types/prismjs","prism-theme-vars"],files:{vvPrism:{name:"VvPrism.vue",checked:!0,path:"/src/components/vv/elements/",src:Ee()},prismThemeVarsCss:{name:"prism-theme-vars.css",checked:!0,path:"/src/css/",src:xe()},VvPrismVars:{name:"VvPrismVars.vue",checked:!0,path:"/src/components/vv/elements/",src:Ie()},vvPrismTestJs:{name:"VvPrism.test.js",checked:!0,path:"/tests/components/vv/elements/",src:ot()},vvPrismVarsTestJs:{name:"VvPrismVars.test.js",checked:!0,path:"/tests/components/vv/elements/",src:rt()}}},vitest:{}},i=R;i.fontawesome=S;i.faPro=F;i.vitest=c;let p=R;p.fontawesome=T;p.faPro=B;p.vitest=j;const ut={stacks:{vueTwViteTs:{name:u.vueTwViteTs,files:{...m,...it},deps:{...i},compos:{...f}},vueTwViteSsgMdTs:{name:u.vueTwViteSsgMdTs,files:{...m,...pt},deps:{...p},compos:{...f}}}};export{ut as c};
