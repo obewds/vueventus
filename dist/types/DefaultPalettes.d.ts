@@ -1,1 +1,1 @@
-export declare type DefaultPalettes = Array<'default' | string>;
+export type DefaultPalettes = Array<'default' | string>;

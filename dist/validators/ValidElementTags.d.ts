@@ -1,3 +1,3 @@
 declare const ValidElementTags: readonly ["style", "title", "address", "article", "aside", "footer", "header", "h1", "h2", "h3", "h4", "h5", "h6", "main", "nav", "section", "blockquote", "dd", "div", "dl", "dt", "figcaption", "figure", "li", "menu", "ol", "p", "pre", "ul", "a", "abbr", "b", "bdi", "bdo", "cite", "code", "data", "dfn", "em", "i", "kbd", "mark", "q", "rp", "rt", "ruby", "s", "samp", "small", "span", "strong", "sub", "sup", "time", "u", "var", "audio", "map", "video", "iframe", "object", "picture", "portal", "svg", "math", "canvas", "del", "ins", "caption", "colgroup", "table", "tbody", "td", "tfoot", "th", "thead", "tr", "button", "datalist", "fieldset", "form", "input", "label", "legend", "meter", "optgroup", "option", "output", "progress", "select", "textarea", "details", "dialog", "summary"];
-declare type ValidElementTags = typeof ValidElementTags[number];
+type ValidElementTags = typeof ValidElementTags[number];
 export default ValidElementTags;

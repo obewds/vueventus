@@ -1,1 +1,1 @@
-export declare type ReturnsClassesFunction = (string?: string) => string;
+export type ReturnsClassesFunction = (string?: string) => string;
