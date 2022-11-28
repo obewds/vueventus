@@ -1,1 +1,1 @@
-export declare type BaseFunction = () => string;
+export type BaseFunction = () => string;

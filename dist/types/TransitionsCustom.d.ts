@@ -1,2 +1,2 @@
 import type { TransitionsCustomOptions } from '../types/TransitionsCustomOptions';
-export declare type TransitionsCustom = (settings: TransitionsCustomOptions) => string;
+export type TransitionsCustom = (settings: TransitionsCustomOptions) => string;

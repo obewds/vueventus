@@ -25,16 +25,19 @@ const output = `<!-- ./src/pages/b.vue -->
             })
     
             const store = useRootStore()
+
+            const serverPrefetch = () => {
+                // eslint-disable-next-line no-console
+                console.log('Prefetching...')
+                return 'Prefetched'
+            }
     
             return {
                 user: computed(() => store.user),
+                serverPrefetch,
             }
         },
 
-        serverPrefetch() {
-            // eslint-disable-next-line no-console
-            console.log('prefetch')
-        },
     }
 
 </script>
@@ -48,6 +51,10 @@ const output = `<!-- ./src/pages/b.vue -->
     <pre>
         {{ JSON.stringify(user) }}
     </pre>
+
+    <div>
+        Prefetch Result: <samp>{{ serverPrefetch() }}</samp>
+    </div>
 
 </template>
 
