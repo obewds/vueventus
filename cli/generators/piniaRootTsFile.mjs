@@ -27,6 +27,7 @@ export const useRootStore = defineStore({
     actions: {
 
         initialize() {
+            /* c8 ignore start */
             if (this.isReady)
                 return
             // eslint-disable-next-line no-console
@@ -36,6 +37,7 @@ export const useRootStore = defineStore({
                 firstName: 'Jane',
                 lastName: 'Doe',
             }
+            /* c8 ignore end */
         },
 
     },
