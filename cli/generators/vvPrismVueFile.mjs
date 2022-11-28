@@ -30,10 +30,12 @@ const output = `<!-- ./src/components/vv/elements/VvPrism.vue -->
                 Prism.highlightAll()
             })
 
+            /* c8 ignore start */
             onUpdated(() => {
                 Prism.manual = true
                 Prism.highlightAll()
             })
+            /* c8 ignore end */
 
             return { appColors }
 
