@@ -58,12 +58,18 @@ export default function () {
                     '/%3e%3c/svg%3e")',
                 ].join('')
             }
+
+            let darkRadioSvgTest = radioSvgUrl( (props.darkRadioHex as string).replace(/#/g, '') )
+            let lightRadioSvgTest =  radioSvgUrl( (props.lightRadioHex as string).replace(/#/g, '') )
+
+            /* c8 ignore start */
             let darkRadioCssUrl = computed( () => {
                 return radioSvgUrl( (props.darkRadioHex as string).replace(/#/g, '') )
             })
             let lightRadioCssUrl = computed( () => {
                 return radioSvgUrl( (props.lightRadioHex as string).replace(/#/g, '') )
             })
+            /* c8 ignore end */
 
             return { darkRadioCssUrl, lightRadioCssUrl }
 

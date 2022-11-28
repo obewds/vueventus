@@ -55,12 +55,18 @@ const output = `<!-- ./src/components/vv/inputs/VvCheckbox.vue -->
                     '/%3e%3c/svg%3e")'
                 ].join('')
             }
+
+            let darkCheckSvgTest = checkSvgUrl( (props.darkCheckHex as string).replace(/#/g, '') )
+            let lightCheckSvgTest =  checkSvgUrl( (props.lightCheckHex as string).replace(/#/g, '') )
+
+            /* c8 ignore start */
             let darkCheckCssUrl = computed( () => {
                 return checkSvgUrl( (props.darkCheckHex as string).replace(/#/g, '') )
             })
             let lightCheckCssUrl = computed( () => {
                 return checkSvgUrl( (props.lightCheckHex as string).replace(/#/g, '') )
             })
+            /* c8 ignore end */
 
             return { darkCheckCssUrl, lightCheckCssUrl }
 

@@ -25,6 +25,7 @@ const output = `<!-- ./src/pages/b.vue -->
             })
     
             const store = useRootStore()
+            const user = computed(() => store.user)
 
             const serverPrefetch = () => {
                 // eslint-disable-next-line no-console
@@ -33,7 +34,7 @@ const output = `<!-- ./src/pages/b.vue -->
             }
     
             return {
-                user: computed(() => store.user),
+                user,
                 serverPrefetch,
             }
         },
