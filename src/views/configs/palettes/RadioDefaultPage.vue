@@ -2,12 +2,9 @@
 
 <script setup lang="ts">
 
-    import globals from '../../../globals'
-    import RadioDefault from '../../../configs/palettes/RadioDefault'
-    import VvRadio from '../../../components/inputs/VvRadio.vue'
-    import DevViewArticle from '@/views/compos/DevViewArticle.vue'
-
-    const tw = globals.classes
+    import DevConfigPalettePre from '../../compos/DevConfigPalettePre.vue'
+    import DevViewArticle from '../../compos/DevViewArticle.vue'
+    import VvConfig from '../../../configs/VvConfig'
 
 </script>
 
@@ -16,20 +13,7 @@
 
     <DevViewArticle title="RadioDefault Palette Config Module">
 
-        <div :class="tw.cardFlex">
-            <div>
-                <h3 :class="tw.h3">RadioDefault</h3>
-                <div :class="tw.flexWrap">
-                    <VvRadio
-                        v-for="color in globals.data.colors"
-                        :color="color.key"
-                        :value="color.key"
-                        name="radioColors"
-                        :checked="color.key === 'primary'"
-                    />
-                </div>
-            </div>
-        </div>
+        <DevConfigPalettePre :data="VvConfig.radios.palettes.default"/>
     
     </DevViewArticle>
 
