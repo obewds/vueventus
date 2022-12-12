@@ -47,8 +47,10 @@ import vvBrand from '../helpers/vvBrand.mjs'
 
 export default function (userOpts, stackObj, installPkgsArr) {
     
-    
-    run(`npm create vite@latest ${userOpts.name} -- --template vue-ts`)
+    // TODO: Keep an eye on vite-plugin-vue-markdown
+    // https://github.com/mdit-vue/vite-plugin-vue-markdown
+    // as currently Vite v4 conflicts with a peer dep for Vite v3 in vite-plugin-vue-markdown
+    run(`npm create vite@3.2.5 ${userOpts.name} -- --template vue-ts`)
     
     
     installPkgsArr.push('vite@latest')
