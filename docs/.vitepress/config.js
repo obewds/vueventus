@@ -193,6 +193,7 @@ function sidebarModules() {
                 { text: 'GroundPastel Palette', link: '/modules/palettes/ground-pastel' },
                 { text: 'InputDefault Palette', link: '/modules/palettes/input-default' },
                 { text: 'InputUnderlined Palette', link: '/modules/palettes/input-underlined' },
+                { text: 'ListDefault Palette', link: '/modules/palettes/list-default' },
                 { text: 'ListboxButtonDefault Palette', link: '/modules/palettes/listbox-button-default' },
                 { text: 'ListboxButtonUnderlined Palette', link: '/modules/palettes/listbox-button-underlined' },
                 { text: 'ListboxOptionDefault Palette', link: '/modules/palettes/listbox-option-default' },
