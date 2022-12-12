@@ -89,7 +89,7 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
 
 <template>
     <VvColorModeButton
-        :mode="(colorMode as string)"
+        :mode="(colorMode as ValidColorModes)"
         :color="color"
         :palette="palette"
         :size="size"
