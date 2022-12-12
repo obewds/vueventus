@@ -11,13 +11,15 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
     import { ValidButtonTypes, ValidColorModes, VvColorModeButton } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
+    import { PropType } from 'vue'
+
     export default defineComponent({
 
         components: { VvColorModeButton },
 
         props: {
             mode: {
-                type: String,
+                type: String as PropType<ValidColorModes>,
                 default: appVv.defaults.VvColorModeButton.mode,
                 validator: (prop: ValidColorModes) => (ValidColorModes).includes(prop),
             },
@@ -66,7 +68,7 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
                 default: appVv.colorModes.light.title,
             },
             type: {
-                type: String,
+                type: String as PropType<ValidButtonTypes>,
                 default: appVv.defaults.VvColorModeButton.type,
                 validator: (prop: ValidButtonTypes) => (ValidButtonTypes).includes(prop),
             },

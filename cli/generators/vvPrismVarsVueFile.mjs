@@ -10,11 +10,13 @@ const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->
     import { defineComponent } from 'vue'
     import appColors from '../../../app.colors.json'
 
+    import { PropType } from 'vue'
+
     export default defineComponent({
 
         props: {
             commentStyle: {
-                type: String,
+                type: String as PropType<'normal'|'italic'|'oblique'>,
                 default: 'normal',
                 validator: (prop: string) => (['normal', 'italic', 'oblique']).includes(prop),
             },
@@ -35,6 +37,7 @@ const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->
                 default: 'unset',
             },
             urlDecoration: {
+                type: String as PropType<'underline'|'overline'|'none'>,
                 type: String,
                 default: 'underline',
                 validator: (prop: string) => (['underline', 'overline', 'none']).includes(prop),
