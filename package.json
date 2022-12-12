@@ -27,6 +27,8 @@
     "bump:major": "npm version major && npm run generate && npm run changelog"
   },
   "dependencies": {
+    "@headlessui/tailwindcss": "^0.1.2",
+    "@headlessui/vue": "^1.7.4",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/line-clamp": "^0.4.2",
