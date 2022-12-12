@@ -6,6 +6,8 @@
     import ValidButtonTypes from '../../validators/ValidButtonTypes'
     import VvConfig from '../../configs/VvConfig.js'
 
+    import type { PropType } from 'vue'
+
     export default defineComponent({
 
         name: 'VvButton',
@@ -32,7 +34,7 @@
                 default: VvConfig.defaults.VvButton.size,
             },
             type: {
-                type: String,
+                type: String as PropType<ValidButtonTypes>,
                 default: VvConfig.defaults.VvButton.type,
                 validator: (prop: ValidButtonTypes) => (ValidButtonTypes).includes(prop),
             },

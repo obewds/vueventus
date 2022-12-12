@@ -1,6 +1,6 @@
 export interface DefaultValidationPalette {
     default?: string;
-    error?: string | undefined;
-    success?: string | undefined;
+    error?: string;
+    success?: string;
     [key: string]: string | undefined;
 }

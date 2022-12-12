@@ -1,4 +1,5 @@
 import ValidInputTypes from '../../validators/ValidInputTypes';
+import type { PropType } from 'vue';
 declare const _default: import("vue").DefineComponent<{
     color: {
         type: StringConstructor;
@@ -13,7 +14,7 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     type: {
-        type: StringConstructor;
+        type: PropType<"number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url">;
         default: "number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url";
         validator: (prop: ValidInputTypes) => boolean;
     };
@@ -38,7 +39,7 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     type: {
-        type: StringConstructor;
+        type: PropType<"number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url">;
         default: "number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url";
         validator: (prop: ValidInputTypes) => boolean;
     };
@@ -51,7 +52,7 @@ declare const _default: import("vue").DefineComponent<{
 }, {
     color: string;
     palette: string;
-    type: string;
+    type: "number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url";
     size: string;
     modelValue: string;
 }>;

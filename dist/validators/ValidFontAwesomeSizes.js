@@ -13,6 +13,7 @@ const ValidFontAwesomeSizes = [
     '8x',
     '9x',
     '10x',
+    null, // need to add this or else TS will complain downstream
 ];
 export default ValidFontAwesomeSizes;
 //# sourceMappingURL=ValidFontAwesomeSizes.js.map

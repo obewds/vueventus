@@ -167,7 +167,10 @@ function sidebarModules() {
                 { text: 'Checkboxes Config', link: '/modules/configs/checkboxes' },
                 { text: 'ColorModes Config', link: '/modules/configs/color-modes' },
                 { text: 'Inputs Config', link: '/modules/configs/inputs' },
+                { text: 'Listboxes Config', link: '/modules/configs/listboxes' },
+                { text: 'Lists Config', link: '/modules/configs/lists' },
                 { text: 'Radios Config', link: '/modules/configs/radios' },
+                { text: 'Selects Config', link: '/modules/configs/selects' },
                 { text: 'Text Config', link: '/modules/configs/text' },
                 { text: 'Textareas Config', link: '/modules/configs/textareas' },
                 { text: 'Transitions Config', link: '/modules/configs/transitions' },
@@ -190,6 +193,10 @@ function sidebarModules() {
                 { text: 'GroundPastel Palette', link: '/modules/palettes/ground-pastel' },
                 { text: 'InputDefault Palette', link: '/modules/palettes/input-default' },
                 { text: 'InputUnderlined Palette', link: '/modules/palettes/input-underlined' },
+                { text: 'ListboxButtonDefault Palette', link: '/modules/palettes/listbox-button-default' },
+                { text: 'ListboxButtonUnderlined Palette', link: '/modules/palettes/listbox-button-underlined' },
+                { text: 'ListboxOptionDefault Palette', link: '/modules/palettes/listbox-option-default' },
+                { text: 'ListboxOptionUnderlined Palette', link: '/modules/palettes/listbox-option-underlined' },
                 { text: 'RadioDefault Palette', link: '/modules/palettes/radio-default' },
                 { text: 'TextDefault Palette', link: '/modules/palettes/text-default' },
             ]
@@ -279,6 +286,7 @@ function sidebarComponents() {
             text: 'List Components',
             collapsible: true,
             items: [
+                { text: 'VvList', link: '/components/lists/vv-list' },
                 { text: 'VvListItem', link: '/components/lists/vv-list-item' },
             ]
         },{
@@ -288,6 +296,13 @@ function sidebarComponents() {
                 { text: 'ObeKnockoutMark', link: '/components/logos/obe-knockout-mark' },
                 { text: 'VueVentusLogoText', link: '/components/logos/vueventus-logo-text' },
                 { text: 'VueVentusSpinningMark', link: '/components/logos/vueventus-spinning-mark' },
+            ]
+        },{
+            text: 'Select Components',
+            collapsible: true,
+            items: [
+                { text: 'VvListbox', link: '/components/selects/vv-listbox' },
+                { text: 'VvSelect', link: '/components/selects/vv-select' },
             ]
         },{
             text: 'Textarea Components',
