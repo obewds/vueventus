@@ -48,12 +48,15 @@ import vvFaVueFile from '../generators/vvFaVueFile.mjs'
 import vvFaVueSsgFile from '../generators/vvFaVueSsgFile.mjs'
 import vvFormGroupVueFile from '../generators/vvFormGroupVueFile.mjs'
 import vvInputVueFile from '../generators/vvInputVueFile.mjs'
+import vvListVueFile from '../generators/vvListVueFile.mjs'
+import vvListboxVueFile from '../generators/vvListboxVueFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
 import vvPrismVarsVueFile from '../generators/vvPrismVarsVueFile.mjs'
 import vvPrismVueFile from '../generators/vvPrismVueFile.mjs'
 import vvRadioVueFile from '../generators/vvRadioVueFile.mjs'
 import vvRouterLinkVueFile from '../generators/vvRouterLinkVueFile.mjs'
 import vvScrollUpVueFile from '../generators/vvScrollUpVueFile.mjs'
+import vvSelectVueFile from '../generators/vvSelectVueFile.mjs'
 import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
 
 import bTestJsFile from '../generators/bTestJsFile.mjs'
@@ -68,12 +71,15 @@ import vvFaTestJsFile from '../generators/vvFaTestJsFile.mjs'
 import vvFaTestJsFilePro from '../generators/vvFaTestJsFilePro.mjs'
 import vvFormGroupTestJsFile from '../generators/vvFormGroupTestJsFile.mjs'
 import vvInputTestJsFile from '../generators/vvInputTestJsFile.mjs'
+import vvListTestJsFile from '../generators/vvListTestJsFile.mjs'
+import vvListboxTestJsFile from '../generators/vvListboxTestJsFile.mjs'
 import vvListItemTestJsFile from '../generators/vvListItemTestJsFile.mjs'
 import vvPrismTestJsFile from '../generators/vvPrismTestJsFile.mjs'
 import vvPrismVarsTestJsFile from '../generators/vvPrismVarsTestJsFile.mjs'
 import vvRadioTestJsFile from '../generators/vvRadioTestJsFile.mjs'
 import vvRouterLinkTestJsFile from '../generators/vvRouterLinkTestJsFile.mjs'
 import vvScrollUpTestJsFile from '../generators/vvScrollUpTestJsFile.mjs'
+import vvSelectTestJsFile from '../generators/vvSelectTestJsFile.mjs'
 import vvTextareaTestJsFile from '../generators/vvTextareaTestJsFile.mjs'
 
 
@@ -267,6 +273,18 @@ let baseVvTsCompos = {
         path: '/src/components/vv/inputs/',
         src: vvInputVueFile(),
     },
+    vvListVue: {
+        name: 'VvList.vue',
+        checked: true,
+        path: '/src/components/vv/lists/',
+        src: vvListVueFile(),
+    },
+    vvListboxVue: {
+        name: 'VvListbox.vue',
+        checked: true,
+        path: '/src/components/vv/selects/',
+        src: vvListboxVueFile(),
+    },
     vvListItemVue: {
         name: 'VvListItem.vue',
         checked: true,
@@ -284,6 +302,12 @@ let baseVvTsCompos = {
         checked: true,
         path: '/src/components/vv/anchors/',
         src: vvRouterLinkVueFile(),
+    },
+    vvSelectVue: {
+        name: 'VvSelect.vue',
+        checked: true,
+        path: '/src/components/vv/selects/',
+        src: vvSelectVueFile(),
     },
     vvTextareaVue: {
         name: 'VvTextarea.vue',
@@ -429,6 +453,18 @@ let vitestBase = {
             path: '/tests/components/vv/inputs/',
             src: vvInputTestJsFile(),
         },
+        vvListTestJs: {
+            name: 'VvList.test.js',
+            checked: true,
+            path: '/tests/components/vv/lists/',
+            src: vvListTestJsFile(),
+        },
+        vvListboxTestJs: {
+            name: 'VvListbox.test.js',
+            checked: true,
+            path: '/tests/components/vv/selects/',
+            src: vvListboxTestJsFile(),
+        },
         vvListItemTestJs: {
             name: 'VvListItem.test.js',
             checked: true,
@@ -452,6 +488,12 @@ let vitestBase = {
             checked: true,
             path: '/tests/components/vv/buttons/',
             src: vvScrollUpTestJsFile(),
+        },
+        vvSelectTestJs: {
+            name: 'VvSelect.test.js',
+            checked: true,
+            path: '/tests/components/vv/selects/',
+            src: vvSelectTestJsFile(),
         },
         vvTextareaTestJs: {
             name: 'VvTextarea.test.js',
@@ -559,8 +601,8 @@ let baseViteTypescriptDeps = {
     headless: {
         checked: true,
         name: 'Headless UI',
-        install: 'npm install @headlessui/vue --save-dev',
-        packages: ['@headlessui/vue'],
+        install: 'npm install @headlessui/vue @headlessui/tailwindcss --save-dev',
+        packages: ['@headlessui/vue', '@headlessui/tailwindcss'],
         files: {},
     },
     heroicons: {
