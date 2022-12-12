@@ -11,16 +11,17 @@ const output = `<!-- ./src/App.vue -->
 
     import { inject } from 'vue'
     import { VvColorModeButton, VueVentusSpinningMark, VvConfig } from '@obewds/vueventus'
-    import type { ConfigVv } from '@obewds/vueventus'
     import HelloWorld from './components/HelloWorld.vue'
     import VvFa from './components/vv/elements/VvFa.vue'
     import VvRouterLink from './components/vv/anchors/VvRouterLink.vue'
     import VvScrollUp from './components/vv/buttons/VvScrollUp.vue'
 
+    import type { ConfigVv, ValidColorModes } from '@obewds/vueventus'
+
     const vv = inject<ConfigVv>('vv', VvConfig)
     const anchors = [vv.anchors.classes(), vv.anchors.palettes.default.success].join(' ')
 
-    const colorMode = typeof window !== 'undefined' && localStorage && localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') : 'light'
+    const colorMode = typeof window !== 'undefined' && localStorage && localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') as ValidColorModes : 'light' as ValidColorModes
 
 </script>
 
@@ -60,7 +61,7 @@ const output = `<!-- ./src/App.vue -->
                 <div class="flex flex-col justify-end space-y-3">
                     <VvFa family="fas" icon="house" size="2x"/>
                     <VvScrollUp/>
-                    <VvColorModeButton palette="solid" color="primary" :mode="(colorMode as string)"/>
+                    <VvColorModeButton palette="solid" color="primary" :mode="(colorMode)"/>
                 </div>
             </nav>
         </aside>
