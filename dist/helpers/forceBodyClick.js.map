@@ -1,1 +1,0 @@
-{"version":3,"file":"forceBodyClick.js","sourceRoot":"","sources":["../../src/helpers/forceBodyClick.ts"],"names":[],"mappings":"AAAA,kCAAkC;AAElC,MAAM,CAAC,OAAO;IACV,IAAI,OAAO,MAAM,KAAK,WAAW,IAAI,QAAQ,EAAE;QAC3C,QAAQ,CAAC,IAAI,CAAC,KAAK,EAAE,CAAA;KACxB;AACL,CAAC"}

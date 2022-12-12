@@ -1,8 +1,0 @@
-// ./src/helpers/getRandomInt.ts
-export default function (min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    // The maximum and minimum are both inclusive
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-//# sourceMappingURL=getRandomInt.js.map
