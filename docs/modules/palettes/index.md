@@ -30,6 +30,11 @@ title: Palette Config Modules
 * [GroundPastel Palette](/modules/palettes/ground-pastel)
 * [InputDefault Palette](/modules/palettes/input-default)
 * [InputUnderlined Palette](/modules/palettes/input-underlined)
+* [ListboxButtonDefault Palette](/modules/palettes/listbox-button-default)
+* [ListboxButtonUnderlined Palette](/modules/palettes/listbox-button-underlined)
+* [ListboxOptionDefault Palette](/modules/palettes/listbox-option-default)
+* [ListboxOptionUnderlined Palette](/modules/palettes/listbox-option-underlined)
+* [ListDefault Palette](/modules/palettes/list-default)
 * [TextDefault Palette](/modules/palettes/text-default)
 
 
