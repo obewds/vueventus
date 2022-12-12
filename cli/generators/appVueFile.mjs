@@ -12,7 +12,9 @@ const output = `<!-- ./src/App.vue -->
     import VvColorModeButton from './components/vv/buttons/VvColorModeButton.vue'
     import VvScrollUp from './components/vv/buttons/VvScrollUp.vue'
 
-    const colorMode = localStorage && localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') : 'light'
+    import type { ValidColorModes } from '@obewds/vueventus'
+
+    const colorMode = localStorage && localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') as ValidColorModes : 'light' as ValidColorModes
 
 </script>
 
@@ -32,7 +34,7 @@ const output = `<!-- ./src/App.vue -->
             <nav class="relative bottom-0 pb-3 pr-4">
                 <div class="flex flex-col justify-end space-y-3">
                     <VvScrollUp/>
-                    <VvColorModeButton palette="solid" color="primary" :mode="(colorMode as string)"/>
+                    <VvColorModeButton palette="solid" color="primary" :mode="(colorMode)"/>
                 </div>
             </nav>
         </aside>

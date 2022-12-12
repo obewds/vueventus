@@ -14,7 +14,7 @@ const ValidFontAwesomeSizes = [
     '8x',
     '9x',
     '10x',
-    null, // need to add this or else TS will complain downstream
+    undefined, // need to add this or else TS will complain downstream
 ] as const
 
 type ValidFontAwesomeSizes = typeof ValidFontAwesomeSizes[number]

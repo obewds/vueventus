@@ -10,7 +10,8 @@ const output = `<!-- ./src/components/vv/selects/VvListbox.vue -->
     import { defineComponent } from 'vue'
     import { VvListbox } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
-
+    
+    import type { PropType } from 'vue'
     import type { VvListboxData } from '@obewds/vueventus'
 
     export default defineComponent({
