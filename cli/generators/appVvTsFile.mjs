@@ -136,6 +136,12 @@ let appVv: ConfigVv = VvConfig
 
 // appVv.scrollbars = 'scrollbar scrollbar-thumb-trueGray-100 scrollbar-track-trueGray-200 dark:scrollbar-thumb-trueGray-600 dark:scrollbar-track-trueGray-800'
 
+// appVv.selects.palettes.default = {
+//     default: '${VvConfig.selects.palettes.default.default}',
+//     error: '${VvConfig.selects.palettes.default.error}',
+//     success: '${VvConfig.selects.palettes.default.success}',
+// }
+
 // appVv.textareas.palettes.default = appVv.inputs.palettes.default
 // appVv.textareas.palettes.underlined = appVv.inputs.palettes.underlined
 
