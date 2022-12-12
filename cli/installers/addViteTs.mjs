@@ -29,9 +29,12 @@ import vvColorModeButtonVueFile from '../generators/vvColorModeButtonVueFile.mjs
 import vvElVueFile from '../generators/vvElVueFile.mjs'
 import vvFormGroupVueFile from '../generators/vvFormGroupVueFile.mjs'
 import vvInputVueFile from '../generators/vvInputVueFile.mjs'
+import vvListFile from '../generators/vvListFile.mjs'
+import vvListboxFile from '../generators/vvListboxFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
 import vvRadioVueFile from '../generators/vvRadioVueFile.mjs'
 import vvRouterLinkVueFile from '../generators/vvRouterLinkVueFile.mjs'
+import vvSelectVueFile from '../generators/vvSelectVueFile.mjs'
 import vvTextareaVueFile from '../generators/vvTextareaVueFile.mjs'
 
 import cliData from '../helpers/cliData.mjs'
@@ -108,9 +111,12 @@ export default function (userOpts, stackObj, installPkgsArr) {
     fs.outputFileSync(composVv + 'elements/VvEl.vue', vvElVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'forms/VvFormGroup.vue', vvFormGroupVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'inputs/VvInput.vue', vvInputVueFile(), { flag: 'w+' })
-    fs.outputFileSync(composVv + 'inputs/VvRadio.vue', vvRadioVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'lists/VvList.vue', vvListFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'selects/VvListbox.vue', vvListboxFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'lists/VvListItem.vue', vvListItemVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'inputs/VvRadio.vue', vvRadioVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'anchors/VvRouterLink.vue', vvRouterLinkVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'selects/VvSelect.vue', vvSelectVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'textareas/VvTextarea.vue', vvTextareaVueFile(), { flag: 'w+' })
     
     
