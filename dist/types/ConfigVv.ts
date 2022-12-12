@@ -7,7 +7,10 @@ import type { ConfigCheckboxes } from './ConfigCheckboxes'
 import type { ConfigColorMode } from './ConfigColorMode'
 import type { ConfigGrounds } from './ConfigGrounds'
 import type { ConfigInputs } from './ConfigInputs'
+import type { ConfigListboxes } from './ConfigListboxes'
+import type { ConfigLists } from './ConfigLists'
 import type { ConfigRadios } from './ConfigRadios'
+import type { ConfigSelects } from './ConfigSelects'
 import type { ConfigText } from './ConfigText'
 import type { ConfigTextareas } from './ConfigTextareas'
 import type { ConfigTransitions } from './ConfigTransitions'
@@ -22,7 +25,10 @@ export interface ConfigVv {
     colorModes: ConfigColorMode
     grounds: ConfigGrounds
     inputs: ConfigInputs
+    listboxes: ConfigListboxes
+    lists: ConfigLists
     radios: ConfigRadios
+    selects: ConfigSelects
     text: ConfigText
     textareas: ConfigTextareas
     transitions: ConfigTransitions

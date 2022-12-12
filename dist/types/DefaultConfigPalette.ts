@@ -2,9 +2,9 @@
 
 export interface DefaultConfigPalette {
     default?: string
-    error?: string | undefined
-    primary?: string | undefined
-    secondary?: string | undefined
-    success?: string | undefined
+    error?: string
+    primary?: string
+    secondary?: string
+    success?: string
     [key: string]: string | undefined
 }

@@ -1,4 +1,5 @@
 import ValidButtonTypes from '../../validators/ValidButtonTypes';
+import type { PropType } from 'vue';
 declare const _default: import("vue").DefineComponent<{
     block: {
         type: BooleanConstructor;
@@ -21,7 +22,7 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     type: {
-        type: StringConstructor;
+        type: PropType<"button" | "submit" | "reset">;
         default: "button" | "submit" | "reset";
         validator: (prop: ValidButtonTypes) => boolean;
     };
@@ -50,14 +51,14 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     type: {
-        type: StringConstructor;
+        type: PropType<"button" | "submit" | "reset">;
         default: "button" | "submit" | "reset";
         validator: (prop: ValidButtonTypes) => boolean;
     };
 }>>, {
     color: string;
     palette: string;
-    type: string;
+    type: "button" | "submit" | "reset";
     block: boolean;
     fab: boolean;
     size: string;

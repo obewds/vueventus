@@ -2,11 +2,9 @@
 
 <script setup lang="ts">
 
-    import globals from '../../globals'
-    import DevViewArticle from '@/views/compos/DevViewArticle.vue'
+    import DevConfigPres from '../compos/DevConfigPres.vue'
+    import DevViewArticle from '../compos/DevViewArticle.vue'
     import VvConfig from '../../configs/VvConfig'
-
-    const tw = globals.classes
 
 </script>
 
@@ -15,16 +13,7 @@
 
     <DevViewArticle title="Buttons Config Module">
 
-        <div :class="tw.cardFlex">
-            <div>
-                <h3 :class="tw.h3">Buttons</h3>
-                <div :class="tw.flexWrap">
-                    <div :class="[VvConfig.buttons.classes(), String(VvConfig.buttons.palettes.solid.primary), tw.pad]">
-                        Buttons.classes()
-                    </div>
-                </div>
-            </div>
-        </div>
+        <DevConfigPres :data="VvConfig.buttons"/>
     
     </DevViewArticle>
 

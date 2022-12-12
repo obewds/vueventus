@@ -57,9 +57,9 @@ declare const _default: import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     color: string;
-    checked: boolean;
     palette: string;
     size: string;
+    checked: boolean;
     darkCheckHex: string;
     lightCheckHex: string;
 }>;

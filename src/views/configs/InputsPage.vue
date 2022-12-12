@@ -2,14 +2,9 @@
 
 <script setup lang="ts">
 
-    import { inject } from 'vue'
-    import globals from '../../globals'
-    import DevViewArticle from '@/views/compos/DevViewArticle.vue'
+    import DevConfigPres from '../compos/DevConfigPres.vue'
+    import DevViewArticle from '../compos/DevViewArticle.vue'
     import VvConfig from '../../configs/VvConfig'
-
-    const tw = globals.classes
-
-    const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject<typeof VvConfig>('vv') : VvConfig
 
 </script>
 
@@ -18,71 +13,7 @@
 
     <DevViewArticle title="Inputs Config Module">
 
-        <div :class="tw.cardFlex">
-            <div>
-                <h3 :class="tw.h3">Inputs Colors</h3>
-                <div :class="tw.flexWrap + ' pb-3'">
-                    <input
-                        :class="[String(vv?.inputs.classes()), String(vv?.inputs.palettes.default.default)]"
-                        placeholder="Default Color"
-                    />
-                </div>
-                <div :class="tw.flexWrap + ' pb-3'">
-                    <input
-                        :class="[String(vv?.inputs.classes()), String(vv?.inputs.palettes.default.error)]"
-                        placeholder="Error Color"
-                    />
-                </div>
-                <div :class="tw.flexWrap">
-                    <input
-                        :class="[String(vv?.inputs.classes()), String(vv?.inputs.palettes.default.success)]"
-                        placeholder="Success Color"
-                    />
-                </div>
-            </div>
-        </div>
-
-        <div :class="tw.cardFlex">
-            <div>
-                <h3 :class="tw.h3">Inputs Sizes</h3>
-                <div :class="tw.flexWrap + ' pb-3'">
-                    <input
-                        :class="[String(vv?.inputs.classes('xs')), String(vv?.inputs.palettes.default.default)]"
-                        placeholder="'xs' Size"
-                    />
-                </div>
-                <div :class="tw.flexWrap + ' pb-3'">
-                    <input
-                        :class="[String(vv?.inputs.classes('sm')), String(vv?.inputs.palettes.default.default)]"
-                        placeholder="'sm' Size"
-                    />
-                </div>
-                <div :class="tw.flexWrap + ' pb-3'">
-                    <input
-                        :class="[String(vv?.inputs.classes()), String(vv?.inputs.palettes.default.default)]"
-                        placeholder="'md' Size"
-                    />
-                </div>
-                <div :class="tw.flexWrap + ' pb-3'">
-                    <input
-                        :class="[String(vv?.inputs.classes('lg')), String(vv?.inputs.palettes.default.default)]"
-                        placeholder="'lg' Size"
-                    />
-                </div>
-                <div :class="tw.flexWrap + ' pb-3'">
-                    <input
-                        :class="[String(vv?.inputs.classes('xl')), String(vv?.inputs.palettes.default.default)]"
-                        placeholder="'xl' Size"
-                    />
-                </div>
-                <div :class="tw.flexWrap">
-                    <input
-                        :class="[String(vv?.inputs.classes('2xl')), String(vv?.inputs.palettes.default.default)]"
-                        placeholder="'2xl' Size"
-                    />
-                </div>
-            </div>
-        </div>
+        <DevConfigPres :data="VvConfig.inputs"/>
     
     </DevViewArticle>
 

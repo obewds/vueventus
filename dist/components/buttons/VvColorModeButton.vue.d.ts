@@ -1,8 +1,9 @@
 import ValidButtonTypes from '../../validators/ValidButtonTypes';
 import ValidColorModes from '../../validators/ValidColorModes';
+import { PropType } from 'vue';
 declare const _default: import("vue").DefineComponent<{
     mode: {
-        type: StringConstructor;
+        type: PropType<"dark" | "light">;
         default: string;
         validator: (prop: ValidColorModes) => boolean;
     };
@@ -51,19 +52,19 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     type: {
-        type: StringConstructor;
+        type: PropType<"button" | "submit" | "reset">;
         default: "button" | "submit" | "reset";
         validator: (prop: ValidButtonTypes) => boolean;
     };
 }, {
-    mode: import("vue").Ref<string>;
+    mode: import("vue").Ref<"dark" | "light">;
     icon: import("vue").ComputedRef<"sun" | "moon">;
     title: import("vue").ComputedRef<string>;
 }, unknown, {}, {
     toggleColorMode(event: Event): void;
 }, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     mode: {
-        type: StringConstructor;
+        type: PropType<"dark" | "light">;
         default: string;
         validator: (prop: ValidColorModes) => boolean;
     };
@@ -112,16 +113,16 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     type: {
-        type: StringConstructor;
+        type: PropType<"button" | "submit" | "reset">;
         default: "button" | "submit" | "reset";
         validator: (prop: ValidButtonTypes) => boolean;
     };
 }>>, {
     color: string;
     palette: string;
-    type: string;
+    type: "button" | "submit" | "reset";
     size: string;
-    mode: string;
+    mode: "dark" | "light";
     groundDark: string;
     groundDarkHex: string;
     groundLight: string;

@@ -4,8 +4,8 @@
 
     import { ref } from 'vue'
     import globals from '../../../globals'
-    import DevViewArticle from '@/views/compos/DevViewArticle.vue'
-    import VvInput from '@/components/inputs/VvInput.vue'
+    import DevViewArticle from '../../../views/compos/DevViewArticle.vue'
+    import VvInput from '../../../components/inputs/VvInput.vue'
 
     const tw = globals.classes
 
@@ -51,12 +51,12 @@
             <div>
                 <h3 :class="tw.h3">VvInput Sizes</h3>
                 <div :class="tw.flexWrap">
-                    <VvInput size="xs" placeholder='size="xs"'/>
-                    <VvInput size="sm" placeholder='size="sm"'/>
-                    <VvInput size="md" placeholder='size="md"'/>
-                    <VvInput size="lg" placeholder='size="lg"'/>
-                    <VvInput size="xl" placeholder='size="xl"'/>
-                    <VvInput size="2xl" placeholder='size="2xl"'/>
+                    <VvInput size="xs" placeholder='size: xs'/>
+                    <VvInput size="sm" placeholder='size: sm'/>
+                    <VvInput size="md" placeholder='size: md'/>
+                    <VvInput size="lg" placeholder='size: lg'/>
+                    <VvInput size="xl" placeholder='size: xl'/>
+                    <VvInput size="2xl" placeholder='size: 2xl'/>
                 </div>
             </div>
         </div>

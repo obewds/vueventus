@@ -1,3 +1,6 @@
 // ./src/types/DefaultPalettes.ts
 
-export type DefaultPalettes =  Array<'default' | string>
+export interface DefaultPalettes {
+    default?: string
+    [key: string]: string | undefined
+}

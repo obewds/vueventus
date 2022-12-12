@@ -22,6 +22,7 @@ interface Globals {
         article: string
         border: string
         cardFlex: string
+        configPre: string
         fakeConsole: string
         flexStack: string
         flexWrap: string
@@ -49,6 +50,7 @@ export default <Globals>{
         article: 'px-4 pb-20',
         border: 'border',
         cardFlex: 'w-full flex flex-col justify-center bg-gray-50 dark:bg-gray-800 p-6 rounded-xl drop-shadow-md gap-8 mb-10',
+        configPre: 'overflow-x-auto text-left p-4 mb-6',
         fakeConsole: 'bg-gray-100 dark:bg-gray-900 text-lime-700 dark:text-lime-300 p-6',
         flexStack: 'w-full flex flex-col space-y-1',
         flexWrap: 'w-full flex flex-wrap justify-center items-center gap-8',

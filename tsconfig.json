@@ -16,6 +16,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
+    "allowJs": true,
     "outDir": "dist",
     "declaration": true,
     "types": [

@@ -11,6 +11,8 @@ const output = `<!-- ./src/components/vv/inputs/VvInput.vue -->
     import { ValidInputTypes, VvInput } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
+    import { PropType } from 'vue'
+
     export default defineComponent({
 
         components: { VvInput },
@@ -29,7 +31,7 @@ const output = `<!-- ./src/components/vv/inputs/VvInput.vue -->
                 default: appVv.defaults.VvInput.size,
             },
             type: {
-                type: String,
+                type: String as PropType<ValidInputTypes>,
                 default: appVv.defaults.VvInput.type,
                 validator: (prop: ValidInputTypes) => (ValidInputTypes).includes(prop),
             },

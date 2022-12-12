@@ -8,6 +8,8 @@
     import VvButton from './VvButton.vue'
     import VvConfig from '../../configs/VvConfig.js'
 
+    import { PropType } from 'vue'
+
     export default defineComponent({
 
         name: 'VvColorModeButton',
@@ -18,7 +20,7 @@
 
         props: {
             mode: {
-                type: String,
+                type: String as PropType<ValidColorModes>,
                 default: VvConfig.defaults.VvColorModeButton.mode,
                 validator: (prop: ValidColorModes) => (ValidColorModes).includes(prop),
             },
@@ -67,7 +69,7 @@
                 default: VvConfig.colorModes.light.title,
             },
             type: {
-                type: String,
+                type: String as PropType<ValidButtonTypes>,
                 default: VvConfig.defaults.VvColorModeButton.type,
                 validator: (prop: ValidButtonTypes) => (ValidButtonTypes).includes(prop),
             },

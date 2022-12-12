@@ -119,7 +119,7 @@
         :value="value"
         :checked="checked"
         @change="$emit('update:modelValue', handleRadioChange($event as Event))"
-        :data-test="(darkRadioCssUrl ? darkRadioHex : '') + (lightRadioCssUrl ? lightRadioHex : '')"
+        :data-test="(darkRadioCssUrl + lightRadioCssUrl)"
     >
 </template>
 

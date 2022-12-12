@@ -1,3 +1,7 @@
 // ./src/types/DefaultInputPalettes.ts
 
-export type DefaultInputPalettes =  Array<'default' | 'underlined' | string>
+export interface DefaultInputPalettes {
+    default?: string
+    underlined?: string
+    [key: string]: string | undefined
+}

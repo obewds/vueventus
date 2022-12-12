@@ -8,7 +8,10 @@ import AnchorsPage from '@/views/configs/AnchorsPage.vue'
 import ButtonsPage from '@/views/configs/ButtonsPage.vue'
 import CheckboxesPage from '@/views/configs/CheckboxesPage.vue'
 import InputsPage from '@/views/configs/InputsPage.vue'
+import ListboxesPage from '@/views/configs/ListboxesPage.vue'
+import ListsPage from '@/views/configs/ListsPage.vue'
 import RadiosPage from '@/views/configs/RadiosPage.vue'
+import SelectsPage from '@/views/configs/SelectsPage.vue'
 import TextPage from '@/views/configs/TextPage.vue'
 import TextareasPage from '@/views/configs/TextareasPage.vue'
 import TransitionsPage from '@/views/configs/TransitionsPage.vue'
@@ -27,6 +30,11 @@ import GroundMonochromaticPage from '@/views/configs/palettes/GroundMonochromati
 import GroundPastelPage from '@/views/configs/palettes/GroundPastelPage.vue'
 import InputDefaultPage from '@/views/configs/palettes/InputDefaultPage.vue'
 import InputUnderlinedPage from '@/views/configs/palettes/InputUnderlinedPage.vue'
+import ListboxButtonDefaultPage from '@/views/configs/palettes/ListboxButtonDefaultPage.vue'
+import ListboxButtonUnderlinedPage from '@/views/configs/palettes/ListboxButtonUnderlinedPage.vue'
+import ListboxOptionDefaultPage from '@/views/configs/palettes/ListboxOptionDefaultPage.vue'
+import ListboxOptionUnderlinedPage from '@/views/configs/palettes/ListboxOptionUnderlinedPage.vue'
+import ListDefaultPage from '@/views/configs/palettes/ListDefaultPage.vue'
 import RadioDefaultPage from '@/views/configs/palettes/RadioDefaultPage.vue'
 import TextDefaultPage from '@/views/configs/palettes/TextDefaultPage.vue'
 
@@ -49,12 +57,17 @@ import VvInputPage from '@/views/components/inputs/VvInputPage.vue'
 import VvRadioPage from '@/views/components/inputs/VvRadioPage.vue'
 
 // list component pages
+import VvListPage from '@/views/components/lists/VvListPage.vue'
 import VvListItemPage from '@/views/components/lists/VvListItemPage.vue'
 
 // logo component pages
 import ObeKnockoutMarkPage from '@/views/components/logos/ObeKnockoutMarkPage.vue'
 import VueVentusLogoTextPage from '@/views/components/logos/VueVentusLogoTextPage.vue'
 import VueVentusSpinningMarkPage from '@/views/components/logos/VueVentusSpinningMarkPage.vue'
+
+// select component pages
+import VvListboxPage from '@/views/components/selects/VvListboxPage.vue'
+import VvSelectPage from '@/views/components/selects/VvSelectPage.vue'
 
 // textarea component pages
 import VvTextareaPage from '@/views/components/textareas/VvTextareaPage.vue'
@@ -94,9 +107,21 @@ const router = createRouter({
             component: InputsPage,
             path: '/configs/inputs'
         },{
+            name: 'Listboxes Config Module',
+            component: ListboxesPage,
+            path: '/configs/listboxes'
+        },{
+            name: 'Lists Config Module',
+            component: ListsPage,
+            path: '/configs/lists'
+        },{
             name: 'Radios Config Module',
             component: RadiosPage,
             path: '/configs/radios'
+        },{
+            name: 'Selects Config Module',
+            component: SelectsPage,
+            path: '/configs/selects'
         },{
             name: 'Text Config Module',
             component: TextPage,
@@ -167,6 +192,26 @@ const router = createRouter({
             name: 'InputUnderlined Palette Config Module',
             component: InputUnderlinedPage,
             path: '/configs/palettes/input-underlined'
+        },{
+            name: 'ListboxButtonDefault Palette Config Module',
+            component: ListboxButtonDefaultPage,
+            path: '/configs/palettes/listbox-button-default'
+        },{
+            name: 'ListboxButtonUnderlined Palette Config Module',
+            component: ListboxButtonUnderlinedPage,
+            path: '/configs/palettes/listbox-button-underlined'
+        },{
+            name: 'ListboxOptionDefault Palette Config Module',
+            component: ListboxOptionDefaultPage,
+            path: '/configs/palettes/listbox-option-default'
+        },{
+            name: 'ListboxOptionUnderlined Palette Config Module',
+            component: ListboxOptionUnderlinedPage,
+            path: '/configs/palettes/listbox-option-underlined'
+        },{
+            name: 'ListDefault Palette Config Module',
+            component: ListDefaultPage,
+            path: '/configs/palettes/list-default'
         },{
             name: 'RadioDefault Palette Config Module',
             component: RadioDefaultPage,
@@ -262,9 +307,27 @@ const router = createRouter({
         //
 
         {
+            name: 'VvList Component',
+            component: VvListPage,
+            path: '/components/lists/vv-list'
+        },{
             name: 'VvListItem Component',
             component: VvListItemPage,
             path: '/components/lists/vv-list-item'
+        },
+        
+        //
+        // selects component pages
+        //
+
+        {
+            name: 'VvSelect Component',
+            component: VvSelectPage,
+            path: '/components/selects/vv-select'
+        },{
+            name: 'VvListbox Component',
+            component: VvListboxPage,
+            path: '/components/selects/vv-listbox'
         },
         
         //

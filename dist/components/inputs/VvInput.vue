@@ -6,6 +6,8 @@
     import ValidInputTypes from '../../validators/ValidInputTypes'
     import VvConfig from '../../configs/VvConfig.js'
 
+    import type { PropType } from 'vue'
+
     export default defineComponent({
 
         name: 'VvInput',
@@ -26,7 +28,7 @@
                 default: VvConfig.defaults.VvInput.size,
             },
             type: {
-                type: String,
+                type: String as PropType<ValidInputTypes>,
                 default: VvConfig.defaults.VvInput.type,
                 validator: (prop: ValidInputTypes) => (ValidInputTypes).includes(prop),
             },

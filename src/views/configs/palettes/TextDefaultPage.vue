@@ -2,11 +2,9 @@
 
 <script setup lang="ts">
 
-    import globals from '../../../globals'
-    import TextDefault from '../../../configs/palettes/TextDefault'
-    import DevViewArticle from '@/views/compos/DevViewArticle.vue'
-
-    const tw = globals.classes
+    import DevConfigPalettePre from '../../compos/DevConfigPalettePre.vue'
+    import DevViewArticle from '../../compos/DevViewArticle.vue'
+    import VvConfig from '../../../configs/VvConfig'
 
 </script>
 
@@ -15,16 +13,7 @@
 
     <DevViewArticle title="TextDefault Palette Config Module">
 
-        <div :class="tw.cardFlex">
-            <div>
-                <h3 :class="tw.h3">TextDefault</h3>
-                <div :class="tw.flexWrap">
-                    <div v-for="color in globals.data.colors" :class="[String(TextDefault[color.key])]">
-                        {{ color.name }}
-                    </div>
-                </div>
-            </div>
-        </div>
+        <DevConfigPalettePre :data="VvConfig.text.palettes.default"/>
     
     </DevViewArticle>
 

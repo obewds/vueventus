@@ -29,10 +29,11 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidAudioSourceTypes } from '@obewds/vueventus'
+    import { PropType } from 'vue'
 
     const props = defineProps({
         audioSource: {
-            type: String,
+            type: String as PropType<ValidAudioSourceTypes>,
             validator: (prop: ValidAudioSourceTypes) => (ValidAudioSourceTypes).includes(prop),
         }
     })
@@ -59,10 +60,11 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidButtonTypes } from '@obewds/vueventus'
+    import { PropType } from 'vue'
 
     const props = defineProps({
         buttonType: {
-            type: String,
+            type: String as PropType<ValidButtonTypes>,
             validator: (prop: ValidButtonTypes) => (ValidButtonTypes).includes(prop),
         }
     })
@@ -88,10 +90,11 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidColorModes } from '@obewds/vueventus'
+    import { PropType } from 'vue'
 
     const props = defineProps({
         colorMode: {
-            type: String,
+            type: String as PropType<ValidColorModes>,
             validator: (prop: ValidColorModes) => (ValidColorModes).includes(prop),
         }
     })
@@ -117,10 +120,11 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidDirections } from '@obewds/vueventus'
+    import { PropType } from 'vue'
 
     const props = defineProps({
         direction: {
-            type: String,
+            type: String as PropType<ValidDirections>,
             validator: (prop: ValidDirections) => (ValidDirections).includes(prop),
         }
     })
@@ -146,10 +150,11 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidElementTags } from '@obewds/vueventus'
+    import { PropType } from 'vue'
 
     const props = defineProps({
         tag: {
-            type: String,
+            type: String as PropType<ValidElementTags>,
             validator: (prop: ValidElementTags) => (ValidElementTags).includes(prop),
         }
     })
@@ -175,10 +180,11 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidFontAwesomeFamilies } from '@obewds/vueventus'
+    import { PropType } from 'vue'
 
     const props = defineProps({
         faFamily: {
-            type: String,
+            type: String as PropType<ValidFontAwesomeFamilies>,
             validator: (prop: ValidFontAwesomeFamilies) => (ValidFontAwesomeFamilies).includes(prop),
         }
     })
@@ -204,10 +210,11 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidFontAwesomeSizes } from '@obewds/vueventus'
+    import { PropType } from 'vue'
 
     const props = defineProps({
         faSize: {
-            type: String,
+            type: String as PropType<ValidFontAwesomeSizes>,
             validator: (prop: ValidFontAwesomeSizes) => (ValidFontAwesomeSizes).includes(prop),
         }
     })
@@ -233,10 +240,11 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidHeadingLevels } from '@obewds/vueventus'
+    import { PropType } from 'vue'
 
     const props = defineProps({
         headingLevel: {
-            type: String,
+            type: String as PropType<ValidHeadingLevels>,
             validator: (prop: ValidHeadingLevels) => (ValidHeadingLevels).includes(prop),
         }
     })
@@ -262,10 +270,11 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidImageSourceTypes } from '@obewds/vueventus'
+    import { PropType } from 'vue'
 
     const props = defineProps({
         headingLevel: {
-            type: String,
+            type: String as PropType<ValidImageSourceTypes>,
             validator: (prop: ValidImageSourceTypes) => (ValidImageSourceTypes).includes(prop),
         }
     })
@@ -291,11 +300,42 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidInputTypes } from '@obewds/vueventus'
+    import { PropType } from 'vue'
 
     const props = defineProps({
         headingLevel: {
-            type: String,
+            type: String as PropType<ValidInputTypes>,
             validator: (prop: ValidInputTypes) => (ValidInputTypes).includes(prop),
+        }
+    })
+
+</script>
+```
+
+### Module Code
+
+<<< @/../src/validators/ValidInputTypes.ts
+
+
+
+
+
+
+
+## ValidListTypes
+
+### Use example
+
+```html
+<script setup lang="ts">
+
+    import { ValidListTypes } from '@obewds/vueventus'
+    import type { PropType } from 'vue'
+
+    const props = defineProps({
+        tag: {
+            type: String as PropType<ValidListTypes>,
+            validator: (prop: ValidListTypes) => (ValidListTypes).includes(prop),
         }
     })
 
@@ -320,10 +360,11 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidVideoSourceTypes } from '@obewds/vueventus'
+    import { PropType } from 'vue'
 
     const props = defineProps({
         headingLevel: {
-            type: String,
+            type: String as PropType<ValidVideoSourceTypes>,
             validator: (prop: ValidVideoSourceTypes) => (ValidVideoSourceTypes).includes(prop),
         }
     })

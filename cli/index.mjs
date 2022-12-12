@@ -408,7 +408,6 @@ async function installDepsAndFiles () {
     
     }
 
-
     console.log(`${vvBrand} CLI installed the following packages:`)
     console.log(installedPkgs)
 

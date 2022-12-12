@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
     import globals from '../globals'
-    import DevViewLinkCard from '@/views/compos/DevViewLinkCard.vue'
+    import DevViewLinkCard from './compos/DevViewLinkCard.vue'
 
     const tw = globals.classes
     
@@ -116,7 +116,11 @@
             VUE LIST COMPONENTS
         </div>
 
-        <div :class="[tw.grid, 'grid-cols-1']">
+        <div :class="[tw.grid, 'grid-cols-1 sm:grid-cols-2']">
+
+            <DevViewLinkCard icon="component" to="/components/lists/vv-list">
+                VvList
+            </DevViewLinkCard>
 
             <DevViewLinkCard icon="component" to="/components/lists/vv-list-item">
                 VvListItem
@@ -145,6 +149,26 @@
 
             <DevViewLinkCard icon="component" to="/components/logos/vueventus-spinning-mark">
                 VueVentusSpinningMark
+            </DevViewLinkCard>
+
+        </div>
+
+
+
+
+
+        <div :class="tw.subhead">
+            VUE SELECT COMPONENTS
+        </div>
+
+        <div :class="[tw.grid, 'grid-cols-1 sm:grid-cols-2']">
+
+            <DevViewLinkCard icon="component" to="/components/selects/vv-listbox">
+                VvListboxPage
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="component" to="/components/selects/vv-select">
+                VvSelect
             </DevViewLinkCard>
 
         </div>
@@ -192,8 +216,20 @@
                 Inputs
             </DevViewLinkCard>
 
+            <DevViewLinkCard icon="config" to="/configs/listboxes" :link-classes="tw.gridCardLinkModule">
+                Listboxes
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="config" to="/configs/lists" :link-classes="tw.gridCardLinkModule">
+                Lists
+            </DevViewLinkCard>
+
             <DevViewLinkCard icon="config" to="/configs/radios" :link-classes="tw.gridCardLinkModule">
                 Radios
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="config" to="/configs/selects" :link-classes="tw.gridCardLinkModule">
+                Selects
             </DevViewLinkCard>
 
             <DevViewLinkCard icon="config" to="/configs/text" :link-classes="tw.gridCardLinkModule">
@@ -269,6 +305,26 @@
 
             <DevViewLinkCard icon="palette" to="/configs/palettes/input-underlined" :link-classes="tw.gridCardLinkPalette">
                 InputUnderlined
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="palette" to="/configs/palettes/listbox-button-default" :link-classes="tw.gridCardLinkPalette">
+                ListboxButtonDefault
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="palette" to="/configs/palettes/listbox-button-underlined" :link-classes="tw.gridCardLinkPalette">
+                ListboxButtonUnderlined
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="palette" to="/configs/palettes/listbox-option-default" :link-classes="tw.gridCardLinkPalette">
+                ListboxOptionDefault
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="palette" to="/configs/palettes/listbox-option-underlined" :link-classes="tw.gridCardLinkPalette">
+                ListboxOptionUnderlined
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="palette" to="/configs/palettes/list-default" :link-classes="tw.gridCardLinkPalette">
+                ListDefault
             </DevViewLinkCard>
 
             <DevViewLinkCard icon="palette" to="/configs/palettes/radio-default" :link-classes="tw.gridCardLinkPalette">

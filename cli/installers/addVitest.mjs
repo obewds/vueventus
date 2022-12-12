@@ -16,10 +16,13 @@ import vvColorModeButtonTestJsFile from '../generators/vvColorModeButtonTestJsFi
 import vvElTestJsFile from '../generators/vvElTestJsFile.mjs'
 import vvFormGroupTestJsFile from '../generators/vvFormGroupTestJsFile.mjs'
 import vvInputTestJsFile from '../generators/vvInputTestJsFile.mjs'
+import vvListTestJsFile from '../generators/vvListTestJsFile.mjs'
+import vvListboxTestJsFile from '../generators/vvListboxTestJsFile.mjs'
 import vvListItemTestJsFile from '../generators/vvListItemTestJsFile.mjs'
 import vvRadioTestJsFile from '../generators/vvRadioTestJsFile.mjs'
 import vvRouterLinkTestJsFile from '../generators/vvRouterLinkTestJsFile.mjs'
 import vvScrollUpTestJsFile from '../generators/vvScrollUpTestJsFile.mjs'
+import vvSelectTestJsFile from '../generators/vvSelectTestJsFile.mjs'
 import vvTextareaTestJsFile from '../generators/vvTextareaTestJsFile.mjs'
 
 import cliData from '../helpers/cliData.mjs'
@@ -107,6 +110,20 @@ export default function (userOptionsObject, vitestDepObject) {
             
         }
 
+        // install VvList.test.js file
+        if ( userOptionsObject.files.includes( vitestDepObject.files.vvListTestJs.name )) {
+
+            fs.outputFileSync(cwd + vitestDepObject.files.vvListTestJs.path + vitestDepObject.files.vvListTestJs.name, vvListTestJsFile(), { flag: 'w+' })
+            
+        }
+
+        // install VvListbox.test.js file
+        if ( userOptionsObject.files.includes( vitestDepObject.files.vvListboxTestJs.name )) {
+
+            fs.outputFileSync(cwd + vitestDepObject.files.vvListboxTestJs.path + vitestDepObject.files.vvListboxTestJs.name, vvListboxTestJsFile(), { flag: 'w+' })
+            
+        }
+
         // install VvListItem.test.js file
         if ( userOptionsObject.files.includes( vitestDepObject.files.vvListItemTestJs.name )) {
 
@@ -132,6 +149,13 @@ export default function (userOptionsObject, vitestDepObject) {
         if ( userOptionsObject.files.includes( vitestDepObject.files.vvScrollUpTestJs.name )) {
 
             fs.outputFileSync(cwd + vitestDepObject.files.vvScrollUpTestJs.path + vitestDepObject.files.vvScrollUpTestJs.name, vvScrollUpTestJsFile(), { flag: 'w+' })
+            
+        }
+
+        // install VvSelect.test.js file
+        if ( userOptionsObject.files.includes( vitestDepObject.files.vvSelectTestJs.name )) {
+
+            fs.outputFileSync(cwd + vitestDepObject.files.vvSelectTestJs.path + vitestDepObject.files.vvSelectTestJs.name, vvSelectTestJsFile(), { flag: 'w+' })
             
         }
 

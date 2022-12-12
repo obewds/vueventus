@@ -126,6 +126,30 @@ let appVv: ConfigVv = VvConfig
 //     success: '${VvConfig.inputs.palettes.underlined.success}',
 // }
 
+// appVv.listboxes.buttonPalettes.default = {
+//     default: '${VvConfig.listboxes.buttonPalettes.default.default}',
+//     error: '${VvConfig.listboxes.buttonPalettes.default.error}',
+//     success: '${VvConfig.listboxes.buttonPalettes.default.success}',
+// }
+
+// appVv.listboxes.buttonPalettes.underlined = {
+//     default: '${VvConfig.listboxes.buttonPalettes.underlined.default}',
+//     error: '${VvConfig.listboxes.buttonPalettes.underlined.error}',
+//     success: '${VvConfig.listboxes.buttonPalettes.underlined.success}',
+// }
+
+// appVv.listboxes.optionPalettes.default = {
+//     default: '${VvConfig.listboxes.optionPalettes.default.default}',
+//     error: '${VvConfig.listboxes.optionPalettes.default.error}',
+//     success: '${VvConfig.listboxes.optionPalettes.default.success}',
+// }
+
+// appVv.listboxes.optionPalettes.underlined = {
+//     default: '${VvConfig.listboxes.optionPalettes.underlined.default}',
+//     error: '${VvConfig.listboxes.optionPalettes.underlined.error}',
+//     success: '${VvConfig.listboxes.optionPalettes.underlined.success}',
+// }
+
 // appVv.radios.palettes.default = {
 //     default: '${VvConfig.radios.palettes.default.default}',
 //     error: '${VvConfig.radios.palettes.default.error}',
@@ -135,6 +159,12 @@ let appVv: ConfigVv = VvConfig
 // }
 
 // appVv.scrollbars = 'scrollbar scrollbar-thumb-trueGray-100 scrollbar-track-trueGray-200 dark:scrollbar-thumb-trueGray-600 dark:scrollbar-track-trueGray-800'
+
+// appVv.selects.palettes.default = {
+//     default: '${VvConfig.selects.palettes.default.default}',
+//     error: '${VvConfig.selects.palettes.default.error}',
+//     success: '${VvConfig.selects.palettes.default.success}',
+// }
 
 // appVv.textareas.palettes.default = appVv.inputs.palettes.default
 // appVv.textareas.palettes.underlined = appVv.inputs.palettes.underlined

@@ -61,6 +61,8 @@ The core deps for each stack are generally pretty similar, but here's a table of
 | [Vite.js](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)             |     🟢     |     🟢    |
 | [Vue.js](https://vuejs.org/)                                                         |     🟢     |     🟢    |
 | [Tailwind CSS](https://tailwindcss.com/)                                             |     🟢     |     🟢    |
+| [Headless UI (Vue)](https://headlessui.com/)                                         |     🟢     |     🟢    |
+| [@headlessui/tailwindcss](https://www.npmjs.com/package/@headlessui/tailwindcss)     |     🟢     |     🟢    |
 | [@tailwindcss/aspect-ratio](https://www.npmjs.com/package/@tailwindcss/aspect-ratio) |     🟢     |     🟢    |
 | [@tailwindcss/forms](https://www.npmjs.com/package/@tailwindcss/forms)               |     🟢     |     🟢    |
 | [@tailwindcss/line-clamp](https://www.npmjs.com/package/@tailwindcss/line-clamp)     |     🟢     |     🟢    |
@@ -247,7 +249,11 @@ npm run coverage
 │  │  │  │  ├─ VvInput.vue
 │  │  │  │  └─ VvRadio.vue
 │  │  │  ├─ lists
+│  │  │  │  ├─ VvList.vue
 │  │  │  │  └─ VvListItem.vue
+│  │  │  ├─ selects
+│  │  │  │  ├─ VvListbox.vue
+│  │  │  │  └─ VvSelect.vue
 │  │  │  └─ textareas
 │  │  │     └─ VvTextarea.vue
 │  │  └─ HelloVueVentus.vue
@@ -288,7 +294,11 @@ npm run coverage
 │  │  │  │  ├─ VvInput.test.js
 │  │  │  │  └─ VvRadio.test.js
 │  │  │  ├─ lists
+│  │  │  │  ├─ VvList.test.js
 │  │  │  │  └─ VvListItem.test.js
+│  │  │  ├─ selects
+│  │  │  │  ├─ VvListbox.test.js
+│  │  │  │  └─ VvSelect.test.js
 │  │  │  └─ textareas
 │  │  │     └─ VvListItem.test.js
 │  │  └─ HelloVueVentus.test.js
@@ -362,7 +372,11 @@ npm run coverage
 │  │  │  │  ├─ VvInput.vue
 │  │  │  │  └─ VvRadio.vue
 │  │  │  ├─ lists
+│  │  │  │  ├─ VvList.vue
 │  │  │  │  └─ VvListItem.vue
+│  │  │  ├─ selects
+│  │  │  │  ├─ VvListbox.vue
+│  │  │  │  └─ VvSelect.vue
 │  │  │  └─ textareas
 │  │  │     └─ VvTextarea.vue
 │  │  ├─ Counter.vue
@@ -414,7 +428,11 @@ npm run coverage
 │  │  │  │  ├─ VvInput.test.js
 │  │  │  │  └─ VvRadio.test.js
 │  │  │  ├─ lists
+│  │  │  │  ├─ VvList.test.js
 │  │  │  │  └─ VvListItem.test.js
+│  │  │  ├─ selects
+│  │  │  │  ├─ VvListbox.test.js
+│  │  │  │  └─ VvSelect.test.js
 │  │  │  └─ textareas
 │  │  │     └─ VvListItem.test.js
 │  │  └─ HelloVueVentus.test.js

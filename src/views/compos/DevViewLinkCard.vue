@@ -5,9 +5,11 @@
     import { computed } from 'vue'
     import globals from '../../globals'
 
+    import { PropType } from 'vue'
+
     const props = defineProps({
         icon: {
-            type: String,
+            type: String as PropType<'component'|'config'|'palette'>,
             default: 'component',
             validator: (prop: string) => (['component', 'config', 'palette']).includes(prop),
         },
