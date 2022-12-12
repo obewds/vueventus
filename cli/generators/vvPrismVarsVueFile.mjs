@@ -38,7 +38,6 @@ const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->
             },
             urlDecoration: {
                 type: String as PropType<'underline'|'overline'|'none'>,
-                type: String,
                 default: 'underline',
                 validator: (prop: string) => (['underline', 'overline', 'none']).includes(prop),
             },
