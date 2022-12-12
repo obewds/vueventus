@@ -1,1 +1,5 @@
-export type DefaultSelectPalettes = Array<'default' | 'underlined' | string>;
+export interface DefaultSelectPalettes {
+    default?: string;
+    underlined?: string;
+    [key: string]: string | undefined;
+}
