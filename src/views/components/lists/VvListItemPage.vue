@@ -4,8 +4,8 @@
 
     import { inject } from 'vue'
     import globals from '../../../globals'
-    import DevViewArticle from '@/views/compos/DevViewArticle.vue'
-    import VvListItem from '@/components/lists/VvListItem.vue'
+    import DevViewArticle from '../../../views/compos/DevViewArticle.vue'
+    import VvListItem from '../../../components/lists/VvListItem.vue'
     import VvConfig from '../../../configs/VvConfig'
 
     const tw = globals.classes
