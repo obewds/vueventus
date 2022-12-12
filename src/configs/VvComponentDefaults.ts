@@ -69,7 +69,6 @@ export default <ConfigDefaults>{
     },
     "VvInput": {
         color: 'default',
-        checked: false,
         palette: 'default',
         size: 'md',
         type: 'text',
