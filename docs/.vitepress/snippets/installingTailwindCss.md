@@ -1,11 +1,11 @@
-## Installing Tailwind CSS
+## Installing Tailwind Labs Packages
 
-To install Tailwind CSS, we'll be using the [Vite.js Guide](https://tailwindcss.com/docs/guides/vite) variation for this guide and example.
+To install Tailwind CSS and Headless UI, we'll be using the [Vite.js Guide](https://tailwindcss.com/docs/guides/vite) variation for this guide and example.
 
 So from the project's root directory, run the following commands:
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer tailwind-scrollbar
+npm install -D tailwindcss postcss autoprefixer tailwind-scrollbar @headlessui/vue @headlessui/tailwindcss
 ```
 
 ```bash
