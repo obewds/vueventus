@@ -312,6 +312,48 @@ import type { ConfigInputs } from '@obewds/vueventus'
 
 
 
+## ConfigListboxes
+
+### Import
+
+```javascript
+import type { ConfigListboxes } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/ConfigListboxes.ts
+
+
+
+
+
+
+
+
+
+
+## ConfigLists
+
+### Import
+
+```javascript
+import type { ConfigLists } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/ConfigLists.ts
+
+
+
+
+
+
+
+
+
+
 ## ConfigRadios
 
 ### Import
@@ -323,6 +365,27 @@ import type { ConfigRadios } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/ConfigRadios.ts
+
+
+
+
+
+
+
+
+
+
+## ConfigSelects
+
+### Import
+
+```javascript
+import type { ConfigSelects } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/ConfigSelects.ts
 
 
 
@@ -428,6 +491,27 @@ import type { DefaultConfigPalette } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/DefaultConfigPalette.ts
+
+
+
+
+
+
+
+
+
+
+## DefaultSelectPalettes
+
+### Import
+
+```javascript
+import type { DefaultSelectPalettes } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultSelectPalettes.ts
 
 
 
@@ -580,6 +664,27 @@ import type { MonthNamesTypes } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/MonthNamesTypes.ts
+
+
+
+
+
+
+
+
+
+
+## SelectsSizes
+
+### Import
+
+```javascript
+import type { SelectsSizes } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/SelectsSizes.ts
 
 
 
@@ -864,6 +969,48 @@ import type { VvInputProps } from '@obewds/vueventus'
 
 
 
+## VvListboxData
+
+### Import
+
+```javascript
+import type { VvListboxData } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/VvListboxData.ts
+
+
+
+
+
+
+
+
+
+
+## VvListboxProps
+
+### Import
+
+```javascript
+import type { VvListboxProps } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/VvListboxProps.ts
+
+
+
+
+
+
+
+
+
+
 
 
 ## VvListItemProps
@@ -877,6 +1024,29 @@ import type { VvListItemProps } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/VvListItemProps.ts
+
+
+
+
+
+
+
+
+
+
+
+
+## VvListProps
+
+### Import
+
+```javascript
+import type { VvListProps } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/VvListProps.ts
 
 
 
@@ -921,6 +1091,27 @@ import type { VvRouterLinkProps } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/VvRouterLinkProps.ts
+
+
+
+
+
+
+
+
+
+
+## VvSelectProps
+
+### Import
+
+```javascript
+import type { VvSelectProps } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/VvSelectProps.ts
 
 
 
