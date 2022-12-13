@@ -44,7 +44,9 @@ const output = `<!-- ./src/components/vv/lists/VvList.vue -->
         :marker-color="markerColor"
         :marker-palette="markerPalette"
         :tag="tag"
-    />
+    >
+        <slot/>
+    </VvList>
 
 </template>
 
