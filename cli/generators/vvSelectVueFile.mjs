@@ -41,7 +41,9 @@ const output = `<!-- ./src/components/vv/selects/VvSelect.vue -->
         :color="color"
         :palette="palette"
         :size="size"
-    />
+    >
+        <slot/>
+    </VvSelect>
 
 </template>
 
