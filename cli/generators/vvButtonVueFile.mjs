@@ -11,8 +11,6 @@ const output = `<!-- ./src/components/vv/buttons/VvButton.vue -->
     import { ValidButtonTypes, VvButton } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
-    import { PropType } from 'vue'
-
     export default defineComponent({
 
         components: { VvButton },
@@ -39,7 +37,7 @@ const output = `<!-- ./src/components/vv/buttons/VvButton.vue -->
                 default: appVv.defaults.VvButton.size,
             },
             type: {
-                type: String as PropType<ValidButtonTypes>,
+                type: String,
                 default: appVv.defaults.VvButton.type,
                 validator: (prop: ValidButtonTypes) => (ValidButtonTypes).includes(prop),
             },
@@ -57,7 +55,7 @@ const output = `<!-- ./src/components/vv/buttons/VvButton.vue -->
         :fab="fab"
         :palette="palette"
         :size="size"
-        :type="type"
+        :type="(type as ValidButtonTypes)"
     >
         <slot/>
     </VvButton>
