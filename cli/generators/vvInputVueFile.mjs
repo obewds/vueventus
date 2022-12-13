@@ -47,7 +47,7 @@ const output = `<!-- ./src/components/vv/inputs/VvInput.vue -->
         :color="color"
         :palette="palette"
         :size="size"
-        :type="type"
+        :type="(type as ValidInputTypes)"
     />
 </template>
 

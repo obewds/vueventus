@@ -101,7 +101,7 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
         :text-light="textLight"
         :title-dark="titleDark"
         :title-light="titleLight"
-        :type="type"
+        :type="(type as ValidButtonTypes)"
     />
 </template>
 
