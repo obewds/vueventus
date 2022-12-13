@@ -1429,8 +1429,6 @@ export default {
     import { ValidButtonTypes, VvButton } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
-    import { PropType } from 'vue'
-
     export default defineComponent({
 
         components: { VvButton },
@@ -1457,7 +1455,7 @@ export default {
                 default: appVv.defaults.VvButton.size,
             },
             type: {
-                type: String as PropType<ValidButtonTypes>,
+                type: String,
                 default: appVv.defaults.VvButton.type,
                 validator: (prop: ValidButtonTypes) => (ValidButtonTypes).includes(prop),
             },
@@ -1475,7 +1473,7 @@ export default {
         :fab="fab"
         :palette="palette"
         :size="size"
-        :type="type"
+        :type="(type as ValidButtonTypes)"
     >
         <slot/>
     </VvButton>
@@ -1680,7 +1678,7 @@ export default {
         :text-light="textLight"
         :title-dark="titleDark"
         :title-light="titleLight"
-        :type="type"
+        :type="(type as ValidButtonTypes)"
     />
 </template>
 
@@ -1977,7 +1975,7 @@ ${n}
         :color="color"
         :palette="palette"
         :size="size"
-        :type="type"
+        :type="(type as ValidInputTypes)"
     />
 </template>
 
