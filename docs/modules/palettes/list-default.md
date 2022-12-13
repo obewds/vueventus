@@ -38,18 +38,18 @@ let appVv: ConfigVv = VvConfig
 // ...
 
 // Override the default VvConfig lists palette colors individually
-appVv.lists.palette.default.default = '...'
-appVv.lists.palette.default.error = '...'
-appVv.lists.palette.default.secondary = '...'
+appVv.lists.palettes.default.default = '...'
+appVv.lists.palettes.default.error = '...'
+appVv.lists.palettes.default.secondary = '...'
 
 
 // Add a new custom app lists palette color name & value
 // to the default VvConfig lists palette
-appVv.lists.palette.default.newAppColor = '...'
+appVv.lists.palettes.default.newAppColor = '...'
 
 
 // Add a new custom app anchor palette
-appVv.lists.palette.myCustomAppPalette = {
+appVv.lists.palettes.myCustomAppPalette = {
     default: '...',
     error: '...',
     success: '...',
