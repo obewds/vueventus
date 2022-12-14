@@ -15,8 +15,6 @@ title: Text Config Module
 
 # {{ $frontmatter.title }}
 
-{{ $frontmatter.title }} documentation coming soon!
-
 The {{ $frontmatter.title }} holds your application's default/prototypal Tailwind CSS classes for elements/components containing rendered text string in your application, excluding color and color palette classes (see [Palette Config Modules](/modules/palettes/) for more info about palette modules).
 
 
@@ -191,7 +189,7 @@ Type: **`Object`**
 ```javascript
 // ./src/app.vv.ts
 appVv.text.sizes = {
-     '5xs': '',
+     '5xs': '{{ Text.sizes['5xs'] }}',
      '4xs': '',
      '3xs': '',
      '2xs': '',
