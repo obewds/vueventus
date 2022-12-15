@@ -584,7 +584,7 @@ let baseViteTypescriptDeps = {
                 path: '/src/css/',
                 src: prismThemeVarsCssFile(),
             },
-            VvPrismVars: {
+            vvPrismVars: {
                 name: 'VvPrismVars.vue',
                 checked: true,
                 path: '/src/components/vv/elements/',
