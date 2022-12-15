@@ -26,7 +26,7 @@ return `<!-- ./src/components/vv/elements/VvFa.vue -->
     import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
     import { ValidFontAwesomeFamilies, ValidFontAwesomeSizes } from '@obewds/vueventus'
 
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     export default defineComponent({
 
