@@ -91,6 +91,7 @@ export default <Globals>{
             { name: 'Success', key: 'success' },
         ],
         textSizes: [
+            { name: '5xs', maxWidth: 'max-w-md' },
             { name: '4xs', maxWidth: 'max-w-md' },
             { name: '3xs', maxWidth: 'max-w-md' },
             { name: '2xs', maxWidth: 'max-w-md' },
