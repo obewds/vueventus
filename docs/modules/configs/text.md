@@ -189,7 +189,7 @@ Type: **`Object`**
 ```javascript
 // ./src/app.vv.ts
 appVv.text.sizes = {
-     '5xs': '{{ Text.sizes['5xs'] }}',
+     '5xs': '',
      '4xs': '',
      '3xs': '',
      '2xs': '',
