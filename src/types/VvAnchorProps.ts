@@ -12,4 +12,5 @@ export interface VvAnchorProps {
     external: boolean
     href: string
     palette: DefaultPalettes | string
+    textSize: string
 }
