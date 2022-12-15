@@ -1,5 +1,5 @@
 {
-    "5xs": ["0.35rem", { "lineHeight": "0.75rem" }],
+    "5xs": ["0.35rem", { "lineHeight": "0.5rem" }],
     "4xs": ["0.45rem", { "lineHeight": "0.9rem" }],
     "3xs": ["0.55rem", { "lineHeight": "1rem" }],
     "2xs": ["0.65rem", { "lineHeight": "1rem" }],
@@ -15,12 +15,12 @@
     "2xl": ["1.5rem", { "lineHeight": "2rem" }],
     "3xl": ["1.875rem", { "lineHeight": "2.25rem" }],
     "4xl": ["2.25rem", { "lineHeight": "2.5rem" }],
-    "5xl": ["3rem", { "lineHeight": "3.25rem" }],
-    "6xl": ["4rem", { "lineHeight": "1" }],
-    "7xl": ["5rem", { "lineHeight": "1" }],
-    "8xl": ["6rem", { "lineHeight": "1" }],
-    "9xl": ["7rem", { "lineHeight": "1" }],
-    "10xl": ["8rem", { "lineHeight": "1" }],
-    "11xl": ["9rem", { "lineHeight": "1" }],
-    "12xl": ["10rem", { "lineHeight": "1" }]
+    "5xl": ["2.5rem", { "lineHeight": "2.875rem" }],
+    "6xl": ["2.875rem", { "lineHeight": "3.25rem" }],
+    "7xl": ["3.25rem", { "lineHeight": "3.5rem" }],
+    "8xl": ["3.5rem", { "lineHeight": "3.875rem" }],
+    "9xl": ["3.875rem", { "lineHeight": "4.25rem" }],
+    "10xl": ["4.25rem", { "lineHeight": "4.5rem" }],
+    "11xl": ["4.5rem", { "lineHeight": "4.875rem" }],
+    "12xl": ["4.875rem", { "lineHeight": "5.25rem" }]
 }

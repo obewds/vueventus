@@ -5,5 +5,6 @@ export interface VvListProps {
     listStyleTypeClass: string;
     markerPalette: DefaultPalettes | string;
     markerColor: DefaultPaletteColors | string;
+    size: string;
     tag: ValidListTypes;
 }

@@ -1,16 +1,19 @@
 import ValidInputTypes from '../../validators/ValidInputTypes';
 import type { PropType } from 'vue';
+import type { DefaultValidationPalette } from '../../types/DefaultValidationPalette';
+import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors';
+import type { InputsSizes } from '../../types/InputsSizes';
 declare const _default: import("vue").DefineComponent<{
     color: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultValidationPaletteColors;
+        type: PropType<keyof DefaultValidationPaletteColors>;
+        default: string | DefaultValidationPaletteColors;
     };
     palette: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultValidationPalette;
+        type: PropType<keyof DefaultValidationPalette>;
+        default: string | DefaultValidationPalette;
     };
     size: {
-        type: StringConstructor;
+        type: PropType<keyof InputsSizes>;
         default: string;
     };
     type: {
@@ -27,15 +30,15 @@ declare const _default: import("vue").DefineComponent<{
     handleInputChange: (event: Event) => string;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "update:modelValue"[], "update:modelValue", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     color: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultValidationPaletteColors;
+        type: PropType<keyof DefaultValidationPaletteColors>;
+        default: string | DefaultValidationPaletteColors;
     };
     palette: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultValidationPalette;
+        type: PropType<keyof DefaultValidationPalette>;
+        default: string | DefaultValidationPalette;
     };
     size: {
-        type: StringConstructor;
+        type: PropType<keyof InputsSizes>;
         default: string;
     };
     type: {
@@ -50,10 +53,10 @@ declare const _default: import("vue").DefineComponent<{
 }>> & {
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
-    color: string;
-    palette: string;
+    color: keyof DefaultValidationPaletteColors;
+    palette: keyof DefaultValidationPalette;
     type: "number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url";
-    size: string;
+    size: keyof InputsSizes;
     modelValue: string;
 }>;
 export default _default;

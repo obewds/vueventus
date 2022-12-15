@@ -42,6 +42,10 @@
                 type: String,
                 default: VvConfig.defaults.VvAnchor.palette,
             },
+            textSize: {
+                type: String,
+                default: VvConfig.defaults.VvAnchor.textSize,
+            },
         },
 
         setup(props){
@@ -100,6 +104,9 @@
                         output.push( vv.anchors.base() )
                     }
 
+                    if ( props.textSize !== '' && vv?.anchors?.sizes?.[props.textSize] ) {
+                        output.push( vv.anchors.sizes[props.textSize] as string )
+                    }
 
                     if ( vv?.anchors?.palettes?.[props.palette as keyof typeof vv.anchors.palettes]?.[props.color] ) {
                         output.push( vv.anchors.palettes[props.palette as keyof typeof vv.anchors.palettes][props.color] as string )
