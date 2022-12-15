@@ -77,6 +77,7 @@ export default <ConfigDefaults>{
         listStyleTypeClass: 'list-disc',
         markerColor: 'primary',
         markerPalette: 'default',
+        size: 'md',
         tag: 'ul',
     },
     "VvListbox": {
