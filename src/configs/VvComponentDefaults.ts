@@ -136,6 +136,7 @@ export default <ConfigDefaults>{
         external: false,
         to: '/',
         palette: 'default',
+        textSize: 'md',
     },
     "VvSelect": {
         color: 'default',
