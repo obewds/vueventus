@@ -30,9 +30,9 @@ export default function (userOpts, prismDepObject) {
         }
 
         // install VvPrismVars.vue file
-        if ( userOpts.files.includes( prismDepObject.files.VvPrismVars.name ) ) {
+        if ( userOpts.files.includes( prismDepObject.files.vvPrismVars.name ) ) {
 
-            fs.outputFileSync(cwd + prismDepObject.files.VvPrismVars.path + prismDepObject.files.VvPrismVars.name, vvPrismVarsVueFile(), { flag: 'w+' })
+            fs.outputFileSync(cwd + prismDepObject.files.vvPrismVars.path + prismDepObject.files.vvPrismVars.name, vvPrismVarsVueFile(), { flag: 'w+' })
 
         }
 
