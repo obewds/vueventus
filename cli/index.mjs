@@ -31,6 +31,7 @@ import gradientText from './helpers/gradientText.mjs'
 import mergeJson from './helpers/mergeJson.mjs'
 import require from './helpers/require.mjs'
 import run from './helpers/run.mjs'
+import selectStack from './helpers/selectStack.mjs'
 import vvBrand from './helpers/vvBrand.mjs'
 import writeFileMainTs from './helpers/writeFileMainTs.mjs'
 import writeFileMainTsSsg from './helpers/writeFileMainTsSsg.mjs'
@@ -81,25 +82,7 @@ console.log(' ')
 
 
 
-async function chooseStack () {
-
-    let choices = []
-
-    const stackKeys = Object.keys(cli.stacks)
-
-    stackKeys.forEach( (stack) => choices.push(cli.stacks[stack].name) )
-    
-    const answers = await inquirer.prompt({
-        name: 'userStack',
-        type: 'list',
-        message: 'Which ' + vvBrand + ' stack are you installing?\n',
-        choices: choices,
-    })
-
-    return answers.userStack
-}
-
-userOptions.stack = await chooseStack()
+userOptions.stack = await selectStack()
 
 console.log(' ')
 
