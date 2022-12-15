@@ -42,6 +42,7 @@ export default <ConfigDefaults>{
         borderColor: '',
         groundPalette: 'default',
         groundColor: 'default',
+        size: 'md',
         tag: 'div',
         textPalette: 'default',
         textColor: 'default',
