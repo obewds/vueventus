@@ -12,6 +12,7 @@ export default <ConfigDefaults>{
         external: false,
         href: '#',
         palette: 'default',
+        textSize: 'md',
     },
     "VvButton": {
         block: false,
