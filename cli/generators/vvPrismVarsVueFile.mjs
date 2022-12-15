@@ -10,7 +10,7 @@ const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->
     import { defineComponent } from 'vue'
     import appColors from '../../../app.colors.json'
 
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     export default defineComponent({
 
