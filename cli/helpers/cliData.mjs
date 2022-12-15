@@ -531,53 +531,7 @@ vitestDepSsg.files.bTestJs = {
 
 let baseViteTypescriptDeps = {
     fontawesome: {},
-    /*fontawesome: {
-        checked: true,
-        name: 'FontAwesome Free',
-        install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons --save-dev',
-        packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/free-solid-svg-icons', '@fortawesome/free-regular-svg-icons'],
-        files: {
-            fontAwesomeTs: {
-                name: 'fontAwesome.ts',
-                checked: true,
-                path: '/src/',
-                src: fontAwesomeTsFile(),
-            },
-            vvFa: {
-                name: 'VvFa.vue',
-                checked: true,
-                path: '/src/components/vv/elements/',
-                src: vvFaVueFile(),
-            },
-        },
-    },*/
     faPro: {},
-    /*faPro: {
-        checked: false,
-        name: 'FontAwesome Pro (License Required)',
-        install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/pro-duotone-svg-icons @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/pro-thin-svg-icons --save-dev',
-        packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/pro-solid-svg-icons', '@fortawesome/pro-regular-svg-icons', '@fortawesome/pro-duotone-svg-icons', '@fortawesome/pro-light-svg-icons', '@fortawesome/pro-thin-svg-icons'],
-        files: {
-            fontAwesomeProTs: {
-                name: 'fontAwesomePro.ts',
-                checked: true,
-                path: '/src/',
-                src: fontAwesomeProTsFile(),
-            },
-            vvFa: {
-                name: 'VvFa.vue',
-                checked: true,
-                path: '/src/components/vv/elements/',
-                src: vvFaVueFile(),
-            },
-            vvFaSsg: {
-                name: 'VvFa.vue',
-                checked: true,
-                path: '/src/components/vv/elements/',
-                src: vvFaVueSsgFile(),
-            },
-        },
-    },*/
     gsap: {
         checked: true,
         name: 'GSAP',
