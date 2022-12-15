@@ -202,6 +202,122 @@ The {{ $frontmatter.title }} `markerPalette` prop sets the component instance ma
 
 
 
+## Prop: size
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvList.size }}"`**
+
+The {{ $frontmatter.title }} `size` prop sets the component instance size-based classes which in the context of list elements typically involves font size atomic classes.
+
+### Syntax
+
+```html
+<VvList size="lg">
+    <li>Large Item One</li>
+    <li>Large Item Two</li>
+</VvList>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvList size="lg">
+        <li>Large Item One</li>
+        <li>Large Item Two</li>
+    </VvList>
+</div>
+
+::: details size prop VvList size examples
+<div class="pt-4">
+    <VvList size="5xs">
+        <li>size="5xs" One</li>
+        <li>size="5xs" Two</li>
+    </VvList>
+    <VvList size="4xs">
+        <li>size="4xs" One</li>
+        <li>size="4xs" Two</li>
+    </VvList>
+    <VvList size="3xs">
+        <li>size="3xs" One</li>
+        <li>size="3xs" Two</li>
+    </VvList>
+    <VvList size="2xs">
+        <li>size="2xs" One</li>
+        <li>size="2xs" Two</li>
+    </VvList>
+    <VvList size="xs">
+        <li>size="xs" One</li>
+        <li>size="xs" Two</li>
+    </VvList>
+    <VvList size="sm">
+        <li>size="sm" One</li>
+        <li>size="sm" Two</li>
+    </VvList>
+    <VvList size="md">
+        <li>size="md" One</li>
+        <li>size="md" Two</li>
+    </VvList>
+    <VvList size="lg">
+        <li>size="lg" One</li>
+        <li>size="lg" Two</li>
+    </VvList>
+    <VvList size="xl">
+        <li>size="xl" One</li>
+        <li>size="xl" Two</li>
+    </VvList>
+    <VvList size="2xl">
+        <li>size="2xl" One</li>
+        <li>size="2xl" Two</li>
+    </VvList>
+    <VvList size="3xl">
+        <li>size="3xl" One</li>
+        <li>size="3xl" Two</li>
+    </VvList>
+    <VvList size="4xl">
+        <li>size="4xl" One</li>
+        <li>size="4xl" Two</li>
+    </VvList>
+    <VvList size="5xl">
+        <li>size="5xl" One</li>
+        <li>size="5xl" Two</li>
+    </VvList>
+    <VvList size="6xl">
+        <li>size="6xl" One</li>
+        <li>size="6xl" Two</li>
+    </VvList>
+    <VvList size="7xl">
+        <li>size="7xl" One</li>
+        <li>size="7xl" Two</li>
+    </VvList>
+    <VvList size="8xl">
+        <li>size="8xl" One</li>
+        <li>size="8xl" Two</li>
+    </VvList>
+    <VvList size="9xl">
+        <li>size="9xl" One</li>
+        <li>size="9xl" Two</li>
+    </VvList>
+    <VvList size="10xl">
+        <li>size="10xl" One</li>
+        <li>size="10xl" Two</li>
+    </VvList>
+    <VvList size="11xl">
+        <li>size="11xl" One</li>
+        <li>size="11xl" Two</li>
+    </VvList>
+    <VvList size="12xl">
+        <li>size="12xl" One</li>
+        <li>size="12xl" Two</li>
+    </VvList>
+</div>
+:::
+
+
+
+
+
+
+
 ## Prop: tag
 
 Type: **`String`**  
