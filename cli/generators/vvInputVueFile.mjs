@@ -11,7 +11,7 @@ const output = `<!-- ./src/components/vv/inputs/VvInput.vue -->
     import { ValidInputTypes, VvInput } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     export default defineComponent({
 

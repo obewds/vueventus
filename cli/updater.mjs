@@ -7,6 +7,7 @@ import inquirer from 'inquirer'
 import cliData from './helpers/cliData.mjs'
 import cwd from './helpers/cwd.mjs'
 import gradientText from './helpers/gradientText.mjs'
+import selectStack from './helpers/selectStack.mjs'
 import vvBrand from './helpers/vvBrand.mjs'
 
 
@@ -52,21 +53,6 @@ console.log(`
 
 
 
-async function selectStack () {
-
-    let choices = []
-
-    cliStackKeys.forEach( (stack) => choices.push(cliData.stacks[stack].name) )
-    
-    const answers = await inquirer.prompt({
-        name: 'userStack',
-        type: 'list',
-        message: 'Which ' + vvBrand + ' stack are you using?\n',
-        choices: choices,
-    })
-
-    return answers.userStack
-}
 
 userOptions.stackName = await selectStack()
 

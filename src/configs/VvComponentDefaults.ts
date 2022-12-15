@@ -12,6 +12,7 @@ export default <ConfigDefaults>{
         external: false,
         href: '#',
         palette: 'default',
+        textSize: 'md',
     },
     "VvButton": {
         block: false,
@@ -41,6 +42,7 @@ export default <ConfigDefaults>{
         borderColor: '',
         groundPalette: 'default',
         groundColor: 'default',
+        size: 'md',
         tag: 'div',
         textPalette: 'default',
         textColor: 'default',
@@ -77,6 +79,7 @@ export default <ConfigDefaults>{
         listStyleTypeClass: 'list-disc',
         markerColor: 'primary',
         markerPalette: 'default',
+        size: 'md',
         tag: 'ul',
     },
     "VvListbox": {
@@ -133,6 +136,7 @@ export default <ConfigDefaults>{
         external: false,
         to: '/',
         palette: 'default',
+        textSize: 'md',
     },
     "VvSelect": {
         color: 'default',

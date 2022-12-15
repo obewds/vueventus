@@ -377,6 +377,119 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 
 
 
+## Prop: textSize
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvRouterLink.textSize }}"`**
+
+The {{ $frontmatter.title }} `textSize` prop sets the component instance size-based classes which in the context of anchor elements typically involves font size atomic classes.
+
+### Syntax
+
+```html
+<VvRouterLink to="/" text-size="lg">
+    "lg" VvRouterLink text
+</VvRouterLink>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvAnchor href="/" text-size="lg">
+        "lg" VvRouterLink text
+    </VvAnchor>
+</div>
+
+::: details size prop VvAnchor size examples
+<div class="pt-4">
+    <VvAnchor href="/" text-size="5xs">
+        "5xs" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="4xs">
+        "4xs" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="3xs">
+        "3xs" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="2xs">
+        "2xs" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="xs">
+        "xs" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="sm">
+        "sm" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="md">
+        "md" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="lg">
+        "lg" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="xl">
+        "xl" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="2xl">
+        "2xl" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="3xl">
+        "3xl" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="4xl">
+        "4xl" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="5xl">
+        "5xl" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="6xl">
+        "6xl" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="7xl">
+        "7xl" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="8xl">
+        "8xl" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="9xl">
+        "9xl" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="10xl">
+        "10xl" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="11xl">
+        "11xl" VvRouterLink text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="12xl">
+        "12xl" VvRouterLink text
+    </VvAnchor>
+</div>
+:::
+
+
+
+
+
+
+
 ## Prop: to
 
 Type: **`String`**  

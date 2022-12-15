@@ -26,6 +26,10 @@
                 type: String,
                 default: VvConfig.defaults.VvEl.groundColor,
             },
+            size: {
+                type: String,
+                default: VvConfig.defaults.VvEl.size,
+            },
             tag: {
                 type: String,
                 default: VvConfig.defaults.VvEl.tag,
@@ -47,6 +51,10 @@
             let classes = computed( () => {
 
                 let output: string[] = []
+
+                if ( vv?.text?.sizes?.[props.size] ) {
+                    output.push( vv.text.sizes[props.size] as string )
+                }
 
                 if ( vv?.borders?.palettes?.[props.borderPalette as keyof typeof vv.borders.palettes]?.[props.borderColor] ) {
                     output.push( vv.borders.palettes[props.borderPalette as keyof typeof vv.borders.palettes][props.borderColor] as string )

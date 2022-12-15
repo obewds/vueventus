@@ -6,6 +6,7 @@ export interface VvElProps {
     borderColor: DefaultPaletteColors | string;
     groundPalette: DefaultPalettes | string;
     groundColor: DefaultPaletteColors | string;
+    size: string;
     tag: ValidElementTags;
     textPalette: DefaultPalettes | string;
     textColor: DefaultPaletteColors | string;

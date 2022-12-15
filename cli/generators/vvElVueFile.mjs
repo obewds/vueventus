@@ -32,6 +32,10 @@ const output = `<!-- ./src/components/vv/elements/VvEl.vue -->
                 type: String,
                 default: appVv.defaults.VvEl.groundColor,
             },
+            size: {
+                type: String,
+                default: appVv.defaults.VvEl.size,
+            },
             tag: {
                 type: String,
                 default: appVv.defaults.VvEl.tag,
@@ -58,6 +62,7 @@ const output = `<!-- ./src/components/vv/elements/VvEl.vue -->
         :border-color="borderColor"
         :ground-palette="groundPalette"
         :ground-color="groundColor"
+        :size="size"
         :tag="tag"
         :text-palette="textPalette"
         :text-color="textColor"

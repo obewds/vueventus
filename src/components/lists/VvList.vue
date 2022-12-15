@@ -26,6 +26,10 @@
                 type: String,
                 default: VvConfig.defaults.VvList.markerPalette,
             },
+            size: {
+                type: String,
+                default: VvConfig.defaults.VvList.size,
+            },
             tag: {
                 type: String as PropType<ValidListTypes>,
                 default: VvConfig.defaults.VvList.tag,
@@ -42,6 +46,10 @@
             let classes = computed( () => {
 
                 let output = [baseClasses]
+
+                if ( vv?.lists?.sizes?.[props.size] ) {
+                    output.push( vv.lists.sizes[props.size] )
+                }
 
                 if ( vv?.lists?.palettes?.[props.markerPalette as keyof typeof vv.lists.palettes]?.[String(props.markerColor)] ) {
                     output.push( vv.lists.palettes[props.markerPalette as keyof typeof vv.lists.palettes][String(props.markerColor)] )

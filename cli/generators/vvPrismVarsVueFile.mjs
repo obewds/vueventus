@@ -10,7 +10,7 @@ const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->
     import { defineComponent } from 'vue'
     import appColors from '../../../app.colors.json'
 
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     export default defineComponent({
 
@@ -66,26 +66,26 @@ const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->
             --vv-line-highlight-opacity: {{ lineHighlightOpacity }};
 
             --vv-light-foreground: {{ appColors.coolGray['700'] }};
-            --vv-light-background: {{ appColors.gray['50'] }};
+            --vv-light-background: {{ appColors.white }};
             --vv-light-comment: {{ appColors.warmGray['400'] }};
 
             --vv-light-boolean: {{ appColors.indigo['600'] }};
             --vv-light-builtin: {{ appColors.green['500'] }}; /* controls color of html element tags */
             --vv-light-class: {{ appColors.blue['400'] }};
             --vv-light-constant: {{ appColors.lightBlue['500'] }};
-            --vv-light-decorator: #ffffff;
-            --vv-light-deleted: #ffffff;
+            --vv-light-decorator: {{ appColors.lightBlue['600'] }};
+            --vv-light-deleted: {{ appColors.red['600'] }};
             --vv-light-function: {{ appColors.violet['500'] }};
             --vv-light-important: {{ appColors.red['500'] }}; /* controls markdown headline and css important */
             --vv-light-interpolation: {{ appColors.cyan['600'] }};
             --vv-light-json-property: {{ appColors.lime['500'] }};
             --vv-light-keyword: {{ appColors.fuchsia['500'] }};
-            --vv-light-keyword-control: #ffffff;
+            --vv-light-keyword-control: {{ appColors.pink['600'] }};
             --vv-light-line-highlight-background: {{ appColors.gray['200'] }};
-            --vv-light-line-number: {{ appColors.white }}; /* controls color of the dividing line for line numbers */
+            --vv-light-line-number: {{ appColors.gray['100'] }}; /* controls color of the dividing line for line numbers */
             --vv-light-line-number-gutter: {{ appColors.gray['200'] }}; /* controls color of line number digits */
             --vv-light-literal: {{ appColors.cyan['600'] }};
-            --vv-light-namespace: #ffffff;
+            --vv-light-namespace: {{ appColors.lightBlue['600'] }};
             --vv-light-number: {{ appColors.pink['600'] }};
             --vv-light-property: {{ appColors.cyan['600'] }};
             --vv-light-operator: {{ appColors.yellow['500'] }};
@@ -106,19 +106,19 @@ const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->
             --vv-dark-builtin: {{ appColors.green['400'] }}; /* controls color of html element tags */
             --vv-dark-class: {{ appColors.blue['300'] }};
             --vv-dark-constant: {{ appColors.lightBlue['300'] }};
-            --vv-dark-decorator: #000000;
-            --vv-dark-deleted: #000000;
+            --vv-dark-decorator: {{ appColors.lightBlue['200'] }};
+            --vv-dark-deleted: {{ appColors.red['200'] }};
             --vv-dark-function: {{ appColors.violet['200'] }};
             --vv-dark-important: {{ appColors.red['300'] }}; /* controls markdown headline and css important */
             --vv-dark-interpolation: {{ appColors.cyan['300'] }};
             --vv-dark-json-property: {{ appColors.lime['300'] }};
             --vv-dark-keyword: {{ appColors.fuchsia['300'] }};
-            --vv-dark-keyword-control: #000000;
+            --vv-dark-keyword-control: {{ appColors.pink['200'] }};
             --vv-dark-line-highlight-background: {{ appColors.coolGray['800'] }};
             --vv-dark-line-number: {{ appColors.gray['900'] }}; /* controls color of dividing line for line numbers */
             --vv-dark-line-number-gutter: {{ appColors.gray['700'] }}; /* controls color of line number digits */
             --vv-dark-literal: {{ appColors.cyan['300'] }};
-            --vv-dark-namespace: #000000;
+            --vv-dark-namespace: {{ appColors.lightBlue['200'] }};
             --vv-dark-number: {{ appColors.pink['200'] }};
             --vv-dark-property: {{ appColors.cyan['300'] }};
             --vv-dark-operator: {{ appColors.yellow['300'] }};

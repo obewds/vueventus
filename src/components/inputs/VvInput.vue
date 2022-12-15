@@ -7,6 +7,9 @@
     import VvConfig from '../../configs/VvConfig.js'
 
     import type { PropType } from 'vue'
+    import type { DefaultValidationPalette } from '../../types/DefaultValidationPalette'
+    import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors'
+    import type { InputsSizes } from '../../types/InputsSizes'
 
     export default defineComponent({
 
@@ -16,15 +19,15 @@
 
         props: {
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: VvConfig.defaults.VvInput.color,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPalette>,
                 default: VvConfig.defaults.VvInput.palette,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof InputsSizes>,
                 default: VvConfig.defaults.VvInput.size,
             },
             type: {
@@ -51,11 +54,11 @@
                 }
 
                 if ( props.size !== '' && vv?.inputs?.sizes?.[props.size] ) {
-                    output.push( vv.inputs.sizes[props.size] as string )
+                    output.push( String(vv.inputs.sizes[props.size]) )
                 }
 
-                if ( vv?.inputs?.palettes?.[props.palette as keyof typeof vv.inputs.palettes]?.[props.color] ) {
-                    output.push( vv.inputs.palettes[props.palette as keyof typeof vv.inputs.palettes][props.color] as string )
+                if ( vv?.inputs?.palettes?.[props.palette]?.[props.color] ) {
+                    output.push( String(vv.inputs.palettes[props.palette][props.color]) )
                 }
 
                 return output.join(' ').trim()

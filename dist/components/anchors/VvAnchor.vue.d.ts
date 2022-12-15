@@ -31,6 +31,10 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string | import("../../index.js").DefaultPalettes;
     };
+    textSize: {
+        type: StringConstructor;
+        default: string;
+    };
 }, {
     classes: import("vue").ComputedRef<string>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
@@ -66,6 +70,10 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string | import("../../index.js").DefaultPalettes;
     };
+    textSize: {
+        type: StringConstructor;
+        default: string;
+    };
 }>>, {
     button: boolean;
     color: string;
@@ -75,5 +83,6 @@ declare const _default: import("vue").DefineComponent<{
     external: boolean;
     href: string;
     palette: string;
+    textSize: string;
 }>;
 export default _default;

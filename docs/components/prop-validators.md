@@ -29,7 +29,7 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidAudioSourceTypes } from '@obewds/vueventus'
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     const props = defineProps({
         audioSource: {
@@ -60,7 +60,7 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidButtonTypes } from '@obewds/vueventus'
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     const props = defineProps({
         buttonType: {
@@ -90,7 +90,7 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidColorModes } from '@obewds/vueventus'
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     const props = defineProps({
         colorMode: {
@@ -120,7 +120,7 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidDirections } from '@obewds/vueventus'
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     const props = defineProps({
         direction: {
@@ -150,7 +150,7 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidElementTags } from '@obewds/vueventus'
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     const props = defineProps({
         tag: {
@@ -180,7 +180,7 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidFontAwesomeFamilies } from '@obewds/vueventus'
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     const props = defineProps({
         faFamily: {
@@ -210,7 +210,7 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidFontAwesomeSizes } from '@obewds/vueventus'
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     const props = defineProps({
         faSize: {
@@ -240,7 +240,7 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidHeadingLevels } from '@obewds/vueventus'
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     const props = defineProps({
         headingLevel: {
@@ -270,7 +270,7 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidImageSourceTypes } from '@obewds/vueventus'
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     const props = defineProps({
         headingLevel: {
@@ -300,7 +300,7 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidInputTypes } from '@obewds/vueventus'
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     const props = defineProps({
         headingLevel: {
@@ -360,7 +360,7 @@ These modules are used to allow a single source of truth between library compone
 <script setup lang="ts">
 
     import { ValidVideoSourceTypes } from '@obewds/vueventus'
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     const props = defineProps({
         headingLevel: {

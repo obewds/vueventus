@@ -280,6 +280,100 @@ The {{ $frontmatter.title }} `groundColor` prop sets the component instance bord
 
 
 
+
+## Prop: size
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvEl.size }}"`**
+
+The {{ $frontmatter.title }} `size` prop sets the component instance size-based classes which in the context of elements typically involves font size atomic classes.
+
+### Syntax
+
+```html
+<VvEl size="lg">
+    Large VvEl Text
+</VvEl>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvEl size="lg">
+        VvEl "lg" Text
+    </VvEl>
+</div>
+
+::: details size prop VvEl size examples
+<div class="pt-4">
+    <VvEl size="5xs">
+        VvEl "5xs" Text
+    </VvEl>
+    <VvEl size="4xs">
+        VvEl "4xs" Text
+    </VvEl>
+    <VvEl size="3xs">
+        VvEl "3xs" Text
+    </VvEl>
+    <VvEl size="2xs">
+        VvEl "2xs" Text
+    </VvEl>
+    <VvEl size="xs">
+        VvEl "xs" Text
+    </VvEl>
+    <VvEl size="sm">
+        VvEl "sm" Text
+    </VvEl>
+    <VvEl size="md">
+        VvEl "md" Text
+    </VvEl>
+    <VvEl size="lg">
+        VvEl "lg" Text
+    </VvEl>
+    <VvEl size="xl">
+        VvEl "xl" Text
+    </VvEl>
+    <VvEl size="2xl">
+        VvEl "2xl" Text
+    </VvEl>
+    <VvEl size="3xl">
+        VvEl "3xl" Text
+    </VvEl>
+    <VvEl size="4xl">
+        VvEl "4xl" Text
+    </VvEl>
+    <VvEl size="5xl">
+        VvEl "5xl" Text
+    </VvEl>
+    <VvEl size="6xl">
+        VvEl "6xl" Text
+    </VvEl>
+    <VvEl size="7xl">
+        VvEl "7xl" Text
+    </VvEl>
+    <VvEl size="8xl">
+        VvEl "8xl" Text
+    </VvEl>
+    <VvEl size="9xl">
+        VvEl "9xl" Text
+    </VvEl>
+    <VvEl size="10xl">
+        VvEl "10xl" Text
+    </VvEl>
+    <VvEl size="11xl">
+        VvEl "11xl" Text
+    </VvEl>
+    <VvEl size="12xl">
+        VvEl "12xl" Text
+    </VvEl>
+</div>
+:::
+
+
+
+
+
+
 ## Prop: tag
 
 Type: **`String`**  

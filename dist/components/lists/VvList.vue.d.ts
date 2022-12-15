@@ -13,6 +13,10 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string | import("../..").DefaultPalettes;
     };
+    size: {
+        type: StringConstructor;
+        default: string;
+    };
     tag: {
         type: PropType<"ol" | "ul">;
         default: "ol" | "ul";
@@ -33,12 +37,17 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string | import("../..").DefaultPalettes;
     };
+    size: {
+        type: StringConstructor;
+        default: string;
+    };
     tag: {
         type: PropType<"ol" | "ul">;
         default: "ol" | "ul";
         validator: (prop: ValidListTypes) => boolean;
     };
 }>>, {
+    size: string;
     tag: "ol" | "ul";
     listStyleTypeClass: string;
     markerColor: string;

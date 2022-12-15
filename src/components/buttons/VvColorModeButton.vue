@@ -8,7 +8,7 @@
     import VvButton from './VvButton.vue'
     import VvConfig from '../../configs/VvConfig.js'
 
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     export default defineComponent({
 

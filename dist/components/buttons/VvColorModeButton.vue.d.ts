@@ -1,6 +1,6 @@
 import ValidButtonTypes from '../../validators/ValidButtonTypes';
 import ValidColorModes from '../../validators/ValidColorModes';
-import { PropType } from 'vue';
+import type { PropType } from 'vue';
 declare const _default: import("vue").DefineComponent<{
     mode: {
         type: PropType<"dark" | "light">;

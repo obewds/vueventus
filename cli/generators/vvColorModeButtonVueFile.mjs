@@ -11,7 +11,7 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
     import { ValidButtonTypes, ValidColorModes, VvColorModeButton } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     export default defineComponent({
 

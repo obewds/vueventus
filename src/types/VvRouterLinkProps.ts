@@ -12,4 +12,5 @@ export interface VvRouterLinkProps {
     external: boolean
     to: string
     palette: DefaultPalettes | string
+    textSize: string
 }
