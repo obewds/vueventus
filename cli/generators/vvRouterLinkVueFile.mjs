@@ -37,6 +37,10 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
                 type: String,
                 default: appVv.defaults.VvRouterLink.palette,
             },
+            textSize: {
+                type: String,
+                default: appVv.defaults.VvRouterLink.textSize,
+            },
             to: {
                 type: String,
                 required: true,
@@ -97,6 +101,10 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
 
                     if ( vv.anchors.base() ) {
                         output.push( vv.anchors.base() )
+                    }
+
+                    if ( props.textSize !== '' && vv?.anchors?.sizes?.[props.textSize] ) {
+                        output.push( vv.anchors.sizes[props.textSize] as string )
                     }
 
 
