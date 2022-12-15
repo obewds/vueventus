@@ -48,6 +48,10 @@ const output = `<!-- ./src/components/vv/anchors/VvAnchor.vue -->
                 type: String,
                 default: appVv.defaults.VvAnchor.palette,
             },
+            textSize: {
+                type: String,
+                default: appVv.defaults.VvAnchor.textSize,
+            },
         },
 
     })
@@ -65,6 +69,7 @@ const output = `<!-- ./src/components/vv/anchors/VvAnchor.vue -->
         :external="external"
         :href="href"
         :palette="palette"
+        :text-size="textSize"
     >
         <slot/>
     </VvAnchor>
