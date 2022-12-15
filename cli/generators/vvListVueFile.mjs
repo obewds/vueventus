@@ -11,7 +11,7 @@ const output = `<!-- ./src/components/vv/lists/VvList.vue -->
     import { ValidListTypes, VvList } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     export default defineComponent({
 
@@ -25,6 +25,10 @@ const output = `<!-- ./src/components/vv/lists/VvList.vue -->
             markerPalette: {
                 type: String,
                 default: appVv.defaults.VvList.markerPalette,
+            },
+            size: {
+                type: String,
+                default: appVv.defaults.VvList.size,
             },
             tag: {
                 type: String as PropType<ValidListTypes>,
@@ -43,6 +47,7 @@ const output = `<!-- ./src/components/vv/lists/VvList.vue -->
     <VvList
         :marker-color="markerColor"
         :marker-palette="markerPalette"
+        :size="size"
         :tag="tag"
     >
         <slot/>
