@@ -5,7 +5,7 @@
     import { computed } from 'vue'
     import globals from '../../globals'
 
-    import { PropType } from 'vue'
+    import type { PropType } from 'vue'
 
     const props = defineProps({
         icon: {
