@@ -76,7 +76,8 @@
   ],
   "bin": {
     "vueventus": "./cli/index.mjs",
-    "vv-update": "./cli/updater.mjs"
+    "vv-update": "./cli/updater.mjs",
+    "vv-update-locals": "./cli/updateLocals.mjs"
   },
   "types": "./dist/index.d.ts",
   "exports": {
