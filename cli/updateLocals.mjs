@@ -2,6 +2,7 @@
 // ./cli/updateLocals.mjs
 
 import fs from 'fs-extra'
+import gradient from 'gradient-string'
 import inquirer from 'inquirer'
 
 import cliData from './helpers/cliData.mjs'
@@ -118,20 +119,20 @@ userOptions.fontAwesomeType = await selectFontAwesomeType()
 let filesToUpdate = []
 
 // get the standard stack vue components data keys from cliData
-let stackComponentKeys = Object.keys(cliData.stacks[userOptions.stack].compos)
+let stackComponentKeys = Object.keys(userOptions.stack.compos)
 
 // use the stackComponentKeys to extract the data objects for each vv cli standard component
 stackComponentKeys.forEach( (componentKey) => {
-    filesToUpdate.push( cliData.stacks[userOptions.stack].compos[componentKey] )
+    filesToUpdate.push( userOptions.stack.compos[componentKey] )
 })
 
 // manually add in the vv cli dep components that are grouped differently than the standard vv compos in cliData
-filesToUpdate.push( cliData.stacks[userOptions.stack].deps.gsap.files.vvScrollUp )
-filesToUpdate.push( cliData.stacks[userOptions.stack].deps.prism.files.vvPrism )
-filesToUpdate.push( cliData.stacks[userOptions.stack].deps.prism.files.vvPrismVars )
+filesToUpdate.push( userOptions.stack.deps.gsap.files.vvScrollUp )
+filesToUpdate.push( userOptions.stack.deps.prism.files.vvPrism )
+filesToUpdate.push( userOptions.stack.deps.prism.files.vvPrismVars )
 
 // get the standard stack vitest test files data keys from cliData
-let stackTestFilesKeys = Object.keys(cliData.stacks[userOptions.stack].deps.vitest.files)
+let stackTestFilesKeys = Object.keys(userOptions.stack.deps.vitest.files)
 
 // create an array to specify vitest installation only files that should be excluded from this update script
 let excludedTestFileKeys = [
@@ -154,7 +155,7 @@ cliStackKeys.forEach( (stack) => {
     else if ( userOptions.stackName === cliData.stacks.vueTwViteSsgMdTs.name ) {
 
         // then add the ssg stack specific vitest file keys to the excludedTestFileKeys array
-        excludedTestFileKeys.push('bTestJs')
+        excludedTestFileKeys.push('homeTestJs', 'notFound404TestJs', 'bTestJs')
 
     }
     
@@ -176,47 +177,41 @@ stackTestFilesKeys.forEach( (testFileKey) => {
     // if this file should be updated via this script and isn't in the exclude list
     if (useKey === true) {
         // add the stack vitest test file data object to the filesToUpdate array
-        filesToUpdate.push( cliData.stacks[userOptions.stack].deps.vitest.files[testFileKey] )
+        filesToUpdate.push( userOptions.stack.deps.vitest.files[testFileKey] )
     }
 
 })
 
 // manually add in the vv cli vitest test files that are grouped differently than the standard vv vitest files in cliData
-filesToUpdate.push( cliData.stacks[userOptions.stack].deps.gsap.files.vvScrollUp )
-filesToUpdate.push( cliData.stacks[userOptions.stack].deps.prism.files.vvPrismTestJs )
-filesToUpdate.push( cliData.stacks[userOptions.stack].deps.prism.files.vvPrismVarsTestJs )
+filesToUpdate.push( userOptions.stack.deps.gsap.files.vvScrollUp )
+filesToUpdate.push( userOptions.stack.deps.prism.files.vvPrismTestJs )
+filesToUpdate.push( userOptions.stack.deps.prism.files.vvPrismVarsTestJs )
 
 // and finally handle which of the FontAwesome types the user needs to update
 if ( userOptions.fontAwesomeType === fontAwesomeTypes.free ) {
 
-    filesToUpdate.push(cliData.stacks[userOptions.stack].deps.fontawesome.files.vvFa)
-    filesToUpdate.push(cliData.stacks[userOptions.stack].deps.fontawesome.files.vvFaTestJs)
+    filesToUpdate.push(userOptions.stack.deps.fontawesome.files.vvFa)
+    filesToUpdate.push(userOptions.stack.deps.fontawesome.files.vvFaTestJs)
 
 } else if ( userOptions.fontAwesomeType === fontAwesomeTypes.pro ) {
 
-    filesToUpdate.push(cliData.stacks[userOptions.stack].deps.faPro.files.vvFa)
-    filesToUpdate.push(cliData.stacks[userOptions.stack].deps.faPro.files.vvFaTestJs)
+    filesToUpdate.push(userOptions.stack.deps.faPro.files.vvFa)
+    filesToUpdate.push(userOptions.stack.deps.faPro.files.vvFaTestJs)
 
 }
 
 userOptions.files = filesToUpdate
 
-// const xxx = cliData.stacks[userOptions.stack].compos
-// console.log(' ')
-// console.log('userOptions:')
-// console.log(userOptions)
-// console.log(' ')
 
 
-
-
+console.log(' ')
 
 // loop through the user's files to update and write the files
 userOptions.files.forEach( (file) => {
 
     fs.outputFileSync(cwd + file.path + file.name, file.src, { flag: 'w+' })
 
-    console.log(`\n${gradientText('.' + file.path + file.name) + ' was installed successfully!'}\n`)
+    console.log(`${gradientText('.' + file.path + file.name) + ' was installed successfully!'}`)
 
 })
 
@@ -236,19 +231,3 @@ console.log(' ')
 console.log(`${gradient('lightGreen', 'cyan')('Happy Hacking!')}\n`)
 
 console.log(' ')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
