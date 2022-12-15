@@ -450,6 +450,119 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 
 
 
+## Prop: textSize
+
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvAnchor.textSize }}"`**
+
+The {{ $frontmatter.title }} `textSize` prop sets the component instance size-based classes which in the context of anchor elements typically involves font size atomic classes.
+
+### Syntax
+
+```html
+<VvAnchor href="/" text-size="lg">
+    "lg" VvAnchor text
+</VvAnchor>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvAnchor href="/" text-size="lg">
+        "lg" VvAnchor text
+    </VvAnchor>
+</div>
+
+::: details size prop VvAnchor size examples
+<div class="pt-4">
+    <VvAnchor href="/" text-size="5xs">
+        "5xs" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="4xs">
+        "4xs" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="3xs">
+        "3xs" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="2xs">
+        "2xs" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="xs">
+        "xs" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="sm">
+        "sm" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="md">
+        "md" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="lg">
+        "lg" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="xl">
+        "xl" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="2xl">
+        "2xl" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="3xl">
+        "3xl" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="4xl">
+        "4xl" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="5xl">
+        "5xl" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="6xl">
+        "6xl" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="7xl">
+        "7xl" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="8xl">
+        "8xl" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="9xl">
+        "9xl" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="10xl">
+        "10xl" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="11xl">
+        "11xl" VvAnchor text
+    </VvAnchor>
+    <br>
+    <VvAnchor href="/" text-size="12xl">
+        "12xl" VvAnchor text
+    </VvAnchor>
+</div>
+:::
+
+
+
+
+
+
+
 
 ## Slot: #default
 
