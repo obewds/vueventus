@@ -31,7 +31,7 @@ Here's what that generally looks like in practice in a real world app context:
 // ./src/app.vv.ts
 
 import { VvConfig } from '@obewds/vueventus'
-import type { ConfigVv, DefaultConfigPalette } from '@obewds/vueventus'
+import type { ConfigVv, DefaultPaletteColors } from '@obewds/vueventus'
 
 let appVv: ConfigVv = VvConfig
 
@@ -55,7 +55,7 @@ appVv.listboxes.optionPalettes.myCustomAppPalette = {
     success: '...',
     // Add a new custom app anchor color name & value
     anotherAppColor: '...',
-} as DefaultConfigPalette
+} as DefaultPaletteColors
 
 // ...
 
