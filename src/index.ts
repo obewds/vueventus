@@ -132,8 +132,7 @@ import type { ConfigText } from './types/ConfigText'
 import type { ConfigTextareas } from './types/ConfigTextareas'
 import type { ConfigTransitions } from './types/ConfigTransitions'
 import type { ConfigVv } from './types/ConfigVv'
-import type { DefaultConfigPalette } from './types/DefaultConfigPalette'
-import type { DefaultInputPalettes } from './types/DefaultInputPalettes'
+import type { DefaultColors } from './types/DefaultColors'
 import type { DefaultPaletteColors } from './types/DefaultPaletteColors'
 import type { DefaultPalettes } from './types/DefaultPalettes'
 import type { DefaultSelectPalettes } from './types/DefaultSelectPalettes'
@@ -194,8 +193,7 @@ export type { ConfigText }
 export type { ConfigTextareas }
 export type { ConfigTransitions }
 export type { ConfigVv }
-export type { DefaultConfigPalette }
-export type { DefaultInputPalettes }
+export type { DefaultColors }
 export type { DefaultPaletteColors }
 export type { DefaultPalettes }
 export type { DefaultSelectPalettes }
