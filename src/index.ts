@@ -116,7 +116,7 @@ import type { AppColors } from './types/AppColors'
 import type { AppTintShadePairs } from './types/AppTintShadePairs'
 import type { AppTintsShades } from './types/AppTintsShades'
 import type { BaseFunction } from './types/BaseFunction'
-import type { ButtonsSizes } from './types/ButtonsSizes'
+import type { ButtonsSizes } from './types/ButtonsSizes' // DEPRECIATED
 import type { ColorMode } from './types/ColorMode'
 import type { ConfigAnchors } from './types/ConfigAnchors'
 import type { ConfigBorders } from './types/ConfigBorders'
@@ -135,22 +135,32 @@ import type { ConfigTextareas } from './types/ConfigTextareas'
 import type { ConfigTransitions } from './types/ConfigTransitions'
 import type { ConfigVv } from './types/ConfigVv'
 import type { DefaultColors } from './types/DefaultColors'
+import type { DefaultConfigPalette } from './types/DefaultConfigPalette' // DEPRECIATED
+import type { DefaultButtonPalettes } from './types/DefaultButtonPalettes'
+import type { DefaultInputPalettes } from './types/DefaultInputPalettes' // DEPRECIATED
 import type { DefaultPaletteColors } from './types/DefaultPaletteColors'
 import type { DefaultPalettes } from './types/DefaultPalettes'
-import type { DefaultSelectPalettes } from './types/DefaultSelectPalettes'
-import type { DefaultValidationPalette } from './types/DefaultValidationPalette'
+import type { DefaultSelectPalettes } from './types/DefaultSelectPalettes' // DEPRECIATED
 import type { DefaultValidationPaletteColors } from './types/DefaultValidationPaletteColors'
+import type { DefaultValidationPalette } from './types/DefaultValidationPalette' // DEPRECIATED
+import type { DefaultValidationPalettes } from './types/DefaultValidationPalettes'
 import type { GroundTextColors } from './types/GroundTextColors'
-import type { InputsSizes } from './types/InputsSizes'
+import type { InputsSizes } from './types/InputsSizes' // DEPRECIATED
 import type { MonthNames } from './types/MonthNames'
 import type { MonthNamesTypes } from './types/MonthNamesTypes'
 import type { MonthNamesTypesArray } from './types/MonthNamesTypesArray'
 import type { ReturnsClassesFunction } from './types/ReturnsClassesFunction'
 import type { ReturnsNumberFunction } from './types/ReturnsNumberFunction'
-import type { SelectsSizes } from './types/SelectsSizes'
-import type { TextareasSizes } from './types/TextareasSizes'
-import type { TextareasRowSizes } from './types/TextareasRowSizes'
-import type { TextSizes } from './types/TextSizes'
+import type { SelectsSizes } from './types/SelectsSizes' // DEPRECIATED
+import type { SizesButtons } from './types/SizesButtons'
+import type { SizesInputs } from './types/SizesInputs'
+import type { SizesSelects } from './types/SizesSelects'
+import type { SizesText } from './types/SizesText'
+import type { SizesTextareas } from './types/SizesTextareas'
+import type { SizesTextareasRows } from './types/SizesTextareasRows'
+import type { TextareasSizes } from './types/TextareasSizes' // DEPRECIATED
+import type { TextareasRowSizes } from './types/TextareasRowSizes' // DEPRECIATED
+import type { TextSizes } from './types/TextSizes' // DEPRECIATED
 import type { TransitionsClasses } from './types/TransitionsClasses'
 import type { TransitionsCustom } from './types/TransitionsCustom'
 import type { TransitionsCustomOptions } from './types/TransitionsCustomOptions'
@@ -162,13 +172,18 @@ import type { VvButtonProps } from './types/VvButtonProps'
 import type { VvCheckboxProps } from './types/VvCheckboxProps'
 import type { VvColorModeButtonProps } from './types/VvColorModeButtonProps'
 import type { VvElProps } from './types/VvElProps'
+import type { VvFaProps } from './types/VvFaProps'
+import type { VvFormGroupProps } from './types/VvFormGroupProps'
 import type { VvInputProps } from './types/VvInputProps'
 import type { VvListboxData } from './types/VvListboxData'
 import type { VvListboxProps } from './types/VvListboxProps'
 import type { VvListProps } from './types/VvListProps'
 import type { VvListItemProps } from './types/VvListItemProps'
+import type { VvPrismProps } from './types/VvPrismProps'
+import type { VvPrismVarsProps } from './types/VvPrismVarsProps'
 import type { VvRadioProps } from './types/VvRadioProps'
 import type { VvRouterLinkProps } from './types/VvRouterLinkProps'
+import type { VvScrollUpProps } from './types/VvScrollUpProps'
 import type { VvSelectProps } from './types/VvSelectProps'
 import type { VvTextareaProps } from './types/VvTextareaProps'
 
@@ -177,7 +192,7 @@ export type { AppColors }
 export type { AppTintShadePairs }
 export type { AppTintsShades }
 export type { BaseFunction }
-export type { ButtonsSizes }
+export type { ButtonsSizes }// DEPRECIATED
 export type { ColorMode }
 export type { ConfigAnchors }
 export type { ConfigBorders }
@@ -196,22 +211,32 @@ export type { ConfigTextareas }
 export type { ConfigTransitions }
 export type { ConfigVv }
 export type { DefaultColors }
+export type { DefaultConfigPalette } // DEPRECIATED
+export type { DefaultButtonPalettes }
+export type { DefaultInputPalettes } // DEPRECIATED
 export type { DefaultPaletteColors }
 export type { DefaultPalettes }
-export type { DefaultSelectPalettes }
-export type { DefaultValidationPalette }
+export type { DefaultSelectPalettes } // DEPRECIATED
 export type { DefaultValidationPaletteColors }
+export type { DefaultValidationPalette } // DEPRECIATED
+export type { DefaultValidationPalettes }
 export type { GroundTextColors }
-export type { InputsSizes }
+export type { InputsSizes }// DEPRECIATED
 export type { MonthNames }
 export type { MonthNamesTypes }
 export type { MonthNamesTypesArray }
 export type { ReturnsClassesFunction }
 export type { ReturnsNumberFunction }
-export type { SelectsSizes }
-export type { TextareasSizes }
-export type { TextareasRowSizes }
-export type { TextSizes }
+export type { SelectsSizes }// DEPRECIATED
+export type { SizesButtons }
+export type { SizesInputs }
+export type { SizesSelects }
+export type { SizesText }
+export type { SizesTextareas }
+export type { SizesTextareasRows }
+export type { TextareasSizes }// DEPRECIATED
+export type { TextareasRowSizes }// DEPRECIATED
+export type { TextSizes }// DEPRECIATED
 export type { TransitionsClasses }
 export type { TransitionsCustom }
 export type { TransitionsCustomOptions }
@@ -223,12 +248,17 @@ export type { VvButtonProps }
 export type { VvCheckboxProps }
 export type { VvColorModeButtonProps }
 export type { VvElProps }
+export type { VvFaProps }
+export type { VvFormGroupProps }
 export type { VvInputProps }
 export type { VvListboxData }
 export type { VvListboxProps }
 export type { VvListProps }
 export type { VvListItemProps }
+export type { VvPrismProps }
+export type { VvPrismVarsProps }
 export type { VvRadioProps }
 export type { VvRouterLinkProps }
+export type { VvScrollUpProps }
 export type { VvSelectProps }
 export type { VvTextareaProps }
