@@ -11,25 +11,28 @@ const output = `<!-- ./src/components/vv/textareas/VvTextarea.vue -->
     import { VvTextarea } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
+    import type { PropType } from 'vue'
+    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesTextareas, SizesTextareaRows } from '@obewds/vueventus'
+
     export default defineComponent({
 
         components: { VvTextarea },
 
         props: {
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: appVv.defaults.VvTextarea.color,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPalettes>,
                 default: appVv.defaults.VvTextarea.palette,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof SizesTextareas>,
                 default: appVv.defaults.VvTextarea.size,
             },
             rowSize: {
-                type: String,
+                type: String as PropType<keyof SizesTextareaRows>,
                 default: appVv.defaults.VvTextarea.rowSize,
             },
         },
