@@ -5,6 +5,11 @@
     import { computed, defineComponent, inject } from 'vue'
     import VvConfig from '../../configs/VvConfig.js'
 
+    import type { PropType } from 'vue'
+    import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors'
+    import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes'
+    import type { SelectsSizes } from '../../types/SelectsSizes'
+
     export default defineComponent({
 
         name: 'VvSelect',
@@ -13,15 +18,15 @@
 
         props: {
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: VvConfig.defaults.VvSelect.color,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPalettes>,
                 default: VvConfig.defaults.VvSelect.palette,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof SelectsSizes>,
                 default: VvConfig.defaults.VvSelect.size,
             },
             modelValue: {
@@ -30,24 +35,24 @@
             },
         },
 
-        setup (props, context) {
+        setup (props) {
             
             const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject<typeof VvConfig>('vv') : VvConfig
 
             let classes = computed( () => {
 
-                let output: string[] = []
+                let output = []
 
                 if ( vv?.selects?.base() ) {
                     output.push( vv.selects.base() )
                 }
 
                 if ( props.size !== '' && vv?.selects?.sizes?.[props.size] ) {
-                    output.push( vv.selects.sizes[props.size] as string )
+                    output.push( vv.selects.sizes[props.size] )
                 }
 
-                if ( vv?.selects?.palettes?.[props.palette as keyof typeof vv.selects.palettes]?.[props.color] ) {
-                    output.push( vv.selects.palettes[props.palette as keyof typeof vv.selects.palettes][props.color] as string )
+                if ( vv?.selects?.palettes?.[props.palette]?.[props.color] ) {
+                    output.push( vv.selects.palettes[props.palette][props.color] )
                 }
 
                 return output.join(' ').trim()
