@@ -1,7 +1,7 @@
 // ./src/types/ConfigLists.ts
 
 import type { BaseFunction } from './BaseFunction'
-import type { DefaultConfigPalette } from '../types/DefaultConfigPalette'
+import type { DefaultPaletteColors } from '../types/DefaultPaletteColors'
 import type { EmptyPalette } from './EmptyPalette'
 import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
 import type { TextSizes } from './TextSizes'
@@ -21,8 +21,8 @@ export interface ConfigLists {
     getSizeClasses: ReturnsClassesFunction
     classes: ReturnsClassesFunction
     palettes: {
-        default: DefaultConfigPalette
-        [key: string]: EmptyPalette | DefaultConfigPalette
+        default: DefaultPaletteColors
+        [key: string]: EmptyPalette | DefaultPaletteColors
     },
     [key: string]: any
 }
