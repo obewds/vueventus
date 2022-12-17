@@ -12,7 +12,7 @@ const output = `<!-- ./src/components/vv/textareas/VvTextarea.vue -->
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesTextareas, SizesTextareaRows } from '@obewds/vueventus'
+    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesTextareas, SizesTextareasRows } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -32,7 +32,7 @@ const output = `<!-- ./src/components/vv/textareas/VvTextarea.vue -->
                 default: appVv.defaults.VvTextarea.size,
             },
             rowSize: {
-                type: String as PropType<keyof SizesTextareaRows>,
+                type: String as PropType<keyof SizesTextareasRows>,
                 default: appVv.defaults.VvTextarea.rowSize,
             },
         },
