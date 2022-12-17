@@ -12,7 +12,7 @@ const output = `<!-- ./src/components/vv/anchors/VvAnchor.vue -->
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, TextSizes } from '@obewds/vueventus'
+    import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, SizesText } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -52,7 +52,7 @@ const output = `<!-- ./src/components/vv/anchors/VvAnchor.vue -->
                 default: appVv.defaults.VvAnchor.palette,
             },
             textSize: {
-                type: String as PropType<keyof TextSizes>,
+                type: String as PropType<keyof SizesText>,
                 default: appVv.defaults.VvAnchor.textSize,
             },
         },
