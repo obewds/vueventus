@@ -5,6 +5,12 @@
     import { computed, defineComponent, inject } from 'vue'
     import VvConfig from '../../configs/VvConfig.js'
 
+    import type { PropType } from 'vue'
+    import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors'
+    import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes'
+    import type { TextareasRowSizes } from '../../types/TextareasRowSizes'
+    import type { TextareasSizes } from '../../types/TextareasSizes'
+
     export default defineComponent({
 
         name: 'VvTextarea',
@@ -13,19 +19,19 @@
 
         props: {
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: VvConfig.defaults.VvTextarea.color,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPalettes>,
                 default: VvConfig.defaults.VvTextarea.palette,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof TextareasSizes>,
                 default: VvConfig.defaults.VvTextarea.size,
             },
             rowSize: {
-                type: String,
+                type: String as PropType<keyof TextareasRowSizes>,
                 default: VvConfig.defaults.VvTextarea.rowSize,
             },
             modelValue: {
