@@ -6,6 +6,10 @@
     import VvEl from '../elements/VvEl.vue'
     import VvConfig from '../../configs/VvConfig.js'
 
+    import type { PropType } from 'vue'
+    import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
+    import type { DefaultPalettes } from '../../types/DefaultPalettes'
+
     export default defineComponent({
 
         components: { VvEl },
@@ -32,11 +36,11 @@
                 default: VvConfig.defaults.VvFormGroup.errorText,
             },
             errorTextColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvFormGroup.errorTextColor,
             },
             errorTextPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: VvConfig.defaults.VvFormGroup.errorTextPalette,
             },
             helpClasses: {
@@ -48,11 +52,11 @@
                 default: VvConfig.defaults.VvFormGroup.helpText,
             },
             helpTextColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvFormGroup.helpTextColor,
             },
             helpTextPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: VvConfig.defaults.VvFormGroup.helpTextPalette,
             },
             label: {
@@ -68,11 +72,11 @@
                 default: VvConfig.defaults.VvFormGroup.labelClasses,
             },
             labelTextColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvFormGroup.labelTextColor,
             },
             labelTextPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: VvConfig.defaults.VvFormGroup.labelTextPalette,
             },
             slotParentClasses: {
@@ -88,11 +92,11 @@
                 default: VvConfig.defaults.VvFormGroup.successText,
             },
             successTextColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvFormGroup.successTextColor,
             },
             successTextPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: VvConfig.defaults.VvFormGroup.successTextPalette,
             },
             wrapperClasses: {

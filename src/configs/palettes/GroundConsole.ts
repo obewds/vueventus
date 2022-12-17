@@ -1,8 +1,8 @@
 // ./src/configs/palettes/GroundConsole.ts
 
-import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
 
-export default <DefaultConfigPalette>{
+export default <DefaultPaletteColors>{
     'default': 'font-mono text-gray-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80',
     error: 'font-mono text-rose-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80',
     primary: 'font-mono text-blue-200 bg-gray-800 bg-opacity-100 dark:bg-black dark:bg-opacity-80',

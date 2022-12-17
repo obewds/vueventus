@@ -5,6 +5,13 @@
     import { computed, defineComponent, inject } from 'vue'
     import VvConfig from '../../configs/VvConfig.js'
 
+    import type { PropType } from 'vue'
+    import type { DefaultButtonPalettes } from '../../types/DefaultButtonPalettes'
+    import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
+    import type { DefaultPalettes } from '../../types/DefaultPalettes'
+    import type { SizesButtons } from '../../types/SizesButtons'
+    import type { SizesText } from '../../types/SizesText'
+
     export default defineComponent({
 
         name: 'VvAnchor',
@@ -23,11 +30,11 @@
                 default: VvConfig.defaults.VvAnchor.buttonFab,
             },
             buttonSize: {
-                type: String,
+                type: String as PropType<keyof SizesButtons>,
                 default: VvConfig.defaults.VvAnchor.buttonSize,
             },
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvAnchor.color,
             },
             external: {
@@ -39,22 +46,22 @@
                 default: VvConfig.defaults.VvAnchor.href,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes | keyof DefaultButtonPalettes>,
                 default: VvConfig.defaults.VvAnchor.palette,
             },
             textSize: {
-                type: String,
+                type: String as PropType<keyof SizesText>,
                 default: VvConfig.defaults.VvAnchor.textSize,
             },
         },
 
-        setup(props){
+        setup (props) {
 
             const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject<typeof VvConfig>('vv') : VvConfig
 
             let classes = computed( () => {
 
-                let output: string[] = []
+                let output = []
 
                 if ( props.button === true ) {
 
@@ -67,7 +74,7 @@
                         }
 
                         if ( props.buttonSize !== '' && vv?.buttons?.blockSizes?.[props.buttonSize] ) {
-                            output.push( vv.buttons.blockSizes[props.buttonSize] as string )
+                            output.push( vv.buttons.blockSizes[props.buttonSize] )
                         }
                         
                     } else if (props.buttonBlock === false && props.buttonFab === true) {
@@ -77,7 +84,7 @@
                         }
 
                         if ( props.buttonSize !== '' && vv?.buttons?.fabSizes?.[props.buttonSize] ) {
-                            output.push( vv.buttons.fabSizes[props.buttonSize] as string )
+                            output.push( vv.buttons.fabSizes[props.buttonSize] )
                         }
 
                     } else {
@@ -87,13 +94,13 @@
                         }
 
                         if ( props.buttonSize !== '' && vv?.buttons?.sizes?.[props.buttonSize] ) {
-                            output.push( vv.buttons.sizes[props.buttonSize] as string )
+                            output.push( vv.buttons.sizes[props.buttonSize] )
                         }
 
                     }
                     
-                    if ( vv?.buttons?.palettes?.[props.palette as keyof typeof vv.buttons.palettes]?.[props.color] ) {
-                        output.push( vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes][props.color] as string )
+                    if ( vv?.buttons?.palettes?.[props.palette]?.[props.color] ) {
+                        output.push( vv.buttons.palettes[props.palette][props.color] )
                     }
 
                 } else {
@@ -105,11 +112,11 @@
                     }
 
                     if ( props.textSize !== '' && vv?.anchors?.sizes?.[props.textSize] ) {
-                        output.push( vv.anchors.sizes[props.textSize] as string )
+                        output.push( vv.anchors.sizes[props.textSize] )
                     }
 
-                    if ( vv?.anchors?.palettes?.[props.palette as keyof typeof vv.anchors.palettes]?.[props.color] ) {
-                        output.push( vv.anchors.palettes[props.palette as keyof typeof vv.anchors.palettes][props.color] as string )
+                    if ( vv?.anchors?.palettes?.[props.palette]?.[props.color] ) {
+                        output.push( vv.anchors.palettes[props.palette][props.color] )
                     }
 
                 }
@@ -128,10 +135,20 @@
 
 
 <template>
-    <a v-if="external" :href="href" :class="classes" target="_blank" rel="noopener noreferrer">
+    <a
+        v-if="external"
+        :href="href"
+        :class="classes"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
         <slot/>
     </a>
-    <a v-else :href="href" :class="classes">
+    <a
+        v-else
+        :href="href"
+        :class="classes"
+    >
         <slot/>
     </a>
 </template>

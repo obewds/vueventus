@@ -12,6 +12,7 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
+    import type { DefaultButtonPalettes, DefaultPaletteColors, SizesButtons } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -24,15 +25,15 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
                 validator: (prop: ValidColorModes) => (ValidColorModes).includes(prop),
             },
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvColorModeButton.color,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultButtonPalettes>,
                 default: appVv.defaults.VvColorModeButton.palette,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof SizesButtons>,
                 default: appVv.defaults.VvColorModeButton.size,
             },
             groundDark: {

@@ -9,6 +9,9 @@
     import VvConfig from '../../configs/VvConfig.js'
 
     import type { PropType } from 'vue'
+    import type { DefaultButtonPalettes } from '../../types/DefaultButtonPalettes'
+    import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
+    import type { SizesButtons } from '../../types/SizesButtons'
 
     export default defineComponent({
 
@@ -25,15 +28,15 @@
                 validator: (prop: ValidColorModes) => (ValidColorModes).includes(prop),
             },
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvColorModeButton.color,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultButtonPalettes>,
                 default: VvConfig.defaults.VvColorModeButton.palette,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof SizesButtons>,
                 default: VvConfig.defaults.VvColorModeButton.size,
             },
             groundDark: {

@@ -5,6 +5,11 @@
     import { computed, defineComponent, inject, ref } from 'vue'
     import VvConfig from '../../configs/VvConfig.js'
 
+    import type { PropType } from 'vue'
+    import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes'
+    import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors'
+    import type { SizesInputs } from '../../types/SizesInputs'
+
     export default defineComponent({
 
         name: 'VvRadio',
@@ -13,7 +18,7 @@
 
         props: {
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: VvConfig.defaults.VvRadio.color,
             },
             checked: {
@@ -29,11 +34,11 @@
                 default: VvConfig.defaults.VvRadio.lightRadioHex,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPalettes>,
                 default: VvConfig.defaults.VvRadio.palette,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof SizesInputs>,
                 default: VvConfig.defaults.VvRadio.size,
             },
             value: {
@@ -50,18 +55,18 @@
 
             let classes = computed( () => {
 
-                let output: string[] = []
+                let output = []
 
                 if ( vv?.radios?.base() ) {
                     output.push( vv.radios.base() )
                 }
 
                 if ( props.size !== '' && vv?.radios?.sizes?.[props.size] ) {
-                    output.push( vv.radios.sizes[props.size] as string )
+                    output.push( vv.radios.sizes[props.size] )
                 }
 
-                if ( vv?.radios?.palettes?.[props.palette as keyof typeof vv.radios.palettes]?.[props.color] ) {
-                    output.push( vv.radios.palettes[props.palette as keyof typeof vv.radios.palettes][props.color] as string )
+                if ( vv?.radios?.palettes?.[props.palette]?.[props.color] ) {
+                    output.push( vv.radios.palettes[props.palette][props.color] )
                 }
 
                 return output.join(' ').trim()

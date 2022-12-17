@@ -1,3 +1,8 @@
+import type { PropType } from 'vue';
+import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors';
+import type { DefaultPalettes } from '../../types/DefaultPalettes';
+import type { SizesButtons } from '../../types/SizesButtons';
+import type { SizesText } from '../../types/SizesText';
 declare const _default: import("vue").DefineComponent<{
     button: {
         type: BooleanConstructor;
@@ -12,12 +17,12 @@ declare const _default: import("vue").DefineComponent<{
         default: boolean;
     };
     buttonSize: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof SizesButtons>;
+        default: keyof SizesButtons;
     };
     color: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultPaletteColors;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     external: {
         type: BooleanConstructor;
@@ -28,12 +33,12 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     palette: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultPalettes;
+        type: PropType<string | number>;
+        default: keyof DefaultPalettes;
     };
     textSize: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
     };
 }, {
     classes: import("vue").ComputedRef<string>;
@@ -51,12 +56,12 @@ declare const _default: import("vue").DefineComponent<{
         default: boolean;
     };
     buttonSize: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof SizesButtons>;
+        default: keyof SizesButtons;
     };
     color: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultPaletteColors;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     external: {
         type: BooleanConstructor;
@@ -67,22 +72,22 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     palette: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultPalettes;
+        type: PropType<string | number>;
+        default: keyof DefaultPalettes;
     };
     textSize: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
     };
 }>>, {
     button: boolean;
-    color: string;
+    color: keyof DefaultPaletteColors;
     buttonBlock: boolean;
     buttonFab: boolean;
-    buttonSize: string;
+    buttonSize: keyof SizesButtons;
     external: boolean;
     href: string;
-    palette: string;
-    textSize: string;
+    palette: string | number;
+    textSize: keyof SizesText;
 }>;
 export default _default;

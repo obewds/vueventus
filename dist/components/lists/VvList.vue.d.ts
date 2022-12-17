@@ -1,21 +1,24 @@
 import ValidListTypes from '../../validators/ValidListTypes';
 import type { PropType } from 'vue';
+import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors';
+import type { DefaultPalettes } from '../../types/DefaultPalettes';
+import type { SizesText } from '../../types/SizesText';
 declare const _default: import("vue").DefineComponent<{
     listStyleTypeClass: {
         type: StringConstructor;
         default: string;
     };
     markerColor: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultPaletteColors;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     markerPalette: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultPalettes;
+        type: PropType<keyof DefaultPalettes>;
+        default: keyof DefaultPalettes;
     };
     size: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
     };
     tag: {
         type: PropType<"ol" | "ul">;
@@ -30,16 +33,16 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     markerColor: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultPaletteColors;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     markerPalette: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultPalettes;
+        type: PropType<keyof DefaultPalettes>;
+        default: keyof DefaultPalettes;
     };
     size: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
     };
     tag: {
         type: PropType<"ol" | "ul">;
@@ -47,10 +50,10 @@ declare const _default: import("vue").DefineComponent<{
         validator: (prop: ValidListTypes) => boolean;
     };
 }>>, {
-    size: string;
+    size: keyof SizesText;
     tag: "ol" | "ul";
     listStyleTypeClass: string;
-    markerColor: string;
-    markerPalette: string;
+    markerColor: keyof DefaultPaletteColors;
+    markerPalette: keyof DefaultPalettes;
 }>;
 export default _default;

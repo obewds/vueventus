@@ -10,13 +10,16 @@ export default function () {
     import { VvRadio } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
+    import type { PropType } from 'vue'
+    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesInputs } from '@obewds/vueventus'
+
     export default defineComponent({
 
         components: { VvRadio },
 
         props: {
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: appVv.defaults.VvRadio.color,
             },
             checked: {
@@ -32,11 +35,11 @@ export default function () {
                 default: appVv.defaults.VvRadio.lightRadioHex,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPalettes>,
                 default: appVv.defaults.VvRadio.palette,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof SizesInputs>,
                 default: appVv.defaults.VvRadio.size,
             },
             value: {

@@ -1,6 +1,8 @@
 // ./src/types/DefaultPalettes.ts
 
+import type { DefaultColors } from './DefaultColors'
+
 export interface DefaultPalettes {
-    default?: string
-    [key: string]: string | undefined
+    default?: DefaultColors
+    [key: string]: DefaultColors | undefined
 }

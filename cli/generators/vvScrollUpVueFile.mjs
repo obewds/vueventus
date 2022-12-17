@@ -9,7 +9,11 @@ const output = `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
     import { defineComponent, onMounted, ref } from 'vue'
     import { TransitionChild, TransitionRoot } from '@headlessui/vue'
     import { VvButton } from '@obewds/vueventus'
+    import appVv from '../../../app.vv'
     import gsap from 'gsap'
+
+    import type { PropType } from 'vue'
+    import type { DefaultButtonPalettes, DefaultPaletteColors, SizesButtons } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -22,35 +26,35 @@ const output = `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
         props: {
             buttonClasses: {
                 type: String,
-                default: 'rounded-full',
+                default: appVv.defaults.VvScrollUp.buttonClasses,
             },
             color: {
-                type: String,
-                default: 'primary'
+                type: String as PropType<keyof DefaultPaletteColors>,
+                default: appVv.defaults.VvScrollUp.color,
             },
             fab: {
                 type: Boolean,
-                default: true
+                default: appVv.defaults.VvScrollUp.fab,
             },
             palette: {
-                type: String,
-                default: 'solid'
+                type: String as PropType<keyof DefaultButtonPalettes>,
+                default: appVv.defaults.VvScrollUp.palette,
             },
             isVisible: {
                 type: Boolean,
-                default: false
+                default: appVv.defaults.VvScrollUp.isVisible,
             },
             offsetMinimum: {
                 type: Number,
-                default: 100
+                default: appVv.defaults.VvScrollUp.offsetMinimum,
             },
             size: {
-                type: String,
-                default: 'xs',
+                type: String as PropType<keyof SizesButtons>,
+                default: appVv.defaults.VvScrollUp.size,
             },
             title: {
                 type: String,
-                default: 'Scroll to Top',
+                default: appVv.defaults.VvScrollUp.title,
             },
         },
 

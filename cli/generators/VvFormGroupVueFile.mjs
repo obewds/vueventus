@@ -10,6 +10,9 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
     import { VvFormGroup } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
+    import type { PropType } from 'vue'
+    import type { DefaultPaletteColors, DefaultPalettes } from '@obewds/vueventus'
+
     export default defineComponent({
 
         components: { VvFormGroup },
@@ -36,11 +39,11 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
                 default: appVv.defaults.VvFormGroup.errorText,
             },
             errorTextColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvFormGroup.errorTextColor,
             },
             errorTextPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvFormGroup.errorTextPalette,
             },
             helpClasses: {
@@ -52,11 +55,11 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
                 default: appVv.defaults.VvFormGroup.helpText,
             },
             helpTextColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvFormGroup.helpTextColor,
             },
             helpTextPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvFormGroup.helpTextPalette,
             },
             label: {
@@ -72,11 +75,11 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
                 default: appVv.defaults.VvFormGroup.labelClasses,
             },
             labelTextColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvFormGroup.labelTextColor,
             },
             labelTextPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvFormGroup.labelTextPalette,
             },
             slotParentClasses: {
@@ -92,11 +95,11 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
                 default: appVv.defaults.VvFormGroup.successText,
             },
             successTextColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvFormGroup.successTextColor,
             },
             successTextPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvFormGroup.successTextPalette,
             },
             wrapperClasses: {

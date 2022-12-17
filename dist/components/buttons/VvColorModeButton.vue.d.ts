@@ -1,23 +1,26 @@
 import ValidButtonTypes from '../../validators/ValidButtonTypes';
 import ValidColorModes from '../../validators/ValidColorModes';
 import type { PropType } from 'vue';
+import type { DefaultButtonPalettes } from '../../types/DefaultButtonPalettes';
+import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors';
+import type { SizesButtons } from '../../types/SizesButtons';
 declare const _default: import("vue").DefineComponent<{
     mode: {
         type: PropType<"dark" | "light">;
-        default: string;
+        default: "dark" | "light";
         validator: (prop: ValidColorModes) => boolean;
     };
     color: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultPaletteColors;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     palette: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultPalettes;
+        type: PropType<keyof DefaultButtonPalettes>;
+        default: keyof import("../..").DefaultPalettes;
     };
     size: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof SizesButtons>;
+        default: keyof SizesButtons;
     };
     groundDark: {
         type: StringConstructor;
@@ -65,20 +68,20 @@ declare const _default: import("vue").DefineComponent<{
 }, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     mode: {
         type: PropType<"dark" | "light">;
-        default: string;
+        default: "dark" | "light";
         validator: (prop: ValidColorModes) => boolean;
     };
     color: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultPaletteColors;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     palette: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultPalettes;
+        type: PropType<keyof DefaultButtonPalettes>;
+        default: keyof import("../..").DefaultPalettes;
     };
     size: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof SizesButtons>;
+        default: keyof SizesButtons;
     };
     groundDark: {
         type: StringConstructor;
@@ -118,10 +121,10 @@ declare const _default: import("vue").DefineComponent<{
         validator: (prop: ValidButtonTypes) => boolean;
     };
 }>>, {
-    color: string;
-    palette: string;
+    color: keyof DefaultPaletteColors;
+    palette: keyof DefaultButtonPalettes;
     type: "button" | "submit" | "reset";
-    size: string;
+    size: keyof SizesButtons;
     mode: "dark" | "light";
     groundDark: string;
     groundDarkHex: string;

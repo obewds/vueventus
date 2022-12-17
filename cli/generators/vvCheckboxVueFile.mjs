@@ -11,13 +11,16 @@ const output = `<!-- ./src/components/vv/inputs/VvCheckbox.vue -->
     import { VvCheckbox } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
+    import type { PropType } from 'vue'
+    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesInputs } from '@obewds/vueventus'
+
     export default defineComponent({
 
         components: { VvCheckbox },
 
         props: {
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: appVv.defaults.VvCheckbox.color,
             },
             checked: {
@@ -33,11 +36,11 @@ const output = `<!-- ./src/components/vv/inputs/VvCheckbox.vue -->
                 default: appVv.defaults.VvCheckbox.lightCheckHex,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPalettes>,
                 default: appVv.defaults.VvCheckbox.palette,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof SizesInputs>,
                 default: appVv.defaults.VvCheckbox.size,
             },
         },

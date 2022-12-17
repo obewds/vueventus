@@ -11,6 +11,9 @@ const output = `<!-- ./src/components/vv/anchors/VvAnchor.vue -->
     import { VvAnchor } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
+    import type { PropType } from 'vue'
+    import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, SizesText } from '@obewds/vueventus'
+
     export default defineComponent({
 
         components: { VvAnchor },
@@ -29,11 +32,11 @@ const output = `<!-- ./src/components/vv/anchors/VvAnchor.vue -->
                 default: appVv.defaults.VvAnchor.buttonFab,
             },
             buttonSize: {
-                type: String,
+                type: String as PropType<keyof SizesButtons>,
                 default: appVv.defaults.VvAnchor.buttonSize,
             },
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvAnchor.color,
             },
             external: {
@@ -45,11 +48,11 @@ const output = `<!-- ./src/components/vv/anchors/VvAnchor.vue -->
                 default: appVv.defaults.VvAnchor.href,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes | keyof DefaultButtonPalettes>,
                 default: appVv.defaults.VvAnchor.palette,
             },
             textSize: {
-                type: String,
+                type: String as PropType<keyof SizesText>,
                 default: appVv.defaults.VvAnchor.textSize,
             },
         },

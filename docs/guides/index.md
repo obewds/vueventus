@@ -31,7 +31,6 @@ You'll find lots of information and insight here covering how to use the VueVent
 But first, you'll need to choose your path for installation:
 
 * [vueventus CLI](/guides/vueventus-cli)
-* [vv-update CLI](/guides/vv-update-cli)
 * [Manual Installation](/guides/manual-installation)
 
 <!-- * [Install with Nuxt.js 3](/guides/install-nuxt) -->
@@ -39,6 +38,19 @@ But first, you'll need to choose your path for installation:
 ::: tip 
 VueVentus is written in Typescript and with Vue SFC Composition API syntax!
 :::
+
+
+
+
+
+## Updating Installed Files
+
+You can easily update all of your already installed VueVentus components and test files to the newest versions in one easy shot using the [vv-update-locals CLI](/guides/vv-update-locals-cli) (excluding install only files).
+
+Additionally, you can install any file from a [vueventus CLI](/guides/vueventus-cli) installation individually using the [vv-update CLI](/guides/vv-update-cli)!
+
+* [vv-update CLI](/guides/vv-update-cli)
+* [vv-update-locals CLI](/guides/vv-update-locals-cli)
 
 
 

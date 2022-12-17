@@ -1,9 +1,3 @@
-export interface InputsSizes {
-    'xs'?: string | undefined;
-    'sm'?: string | undefined;
-    'md'?: string | undefined;
-    'lg'?: string | undefined;
-    'xl'?: string | undefined;
-    '2xl'?: string | undefined;
-    [key: string]: string | undefined;
+import type { SizesInputs } from './SizesInputs';
+export interface InputsSizes extends SizesInputs {
 }

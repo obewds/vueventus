@@ -1,8 +1,8 @@
 import type { BaseFunction } from './BaseFunction';
-import type { DefaultConfigPalette } from '../types/DefaultConfigPalette';
+import type { DefaultPaletteColors } from '../types/DefaultPaletteColors';
 import type { EmptyPalette } from './EmptyPalette';
 import type { ReturnsClassesFunction } from './ReturnsClassesFunction';
-import type { ButtonsSizes } from './ButtonsSizes';
+import type { SizesButtons } from './SizesButtons';
 export interface ConfigButtons {
     border: string;
     cursor: string;
@@ -14,23 +14,23 @@ export interface ConfigButtons {
     text: string;
     transition: string;
     base: BaseFunction;
-    sizes: ButtonsSizes;
+    sizes: SizesButtons;
     getSizeClasses: ReturnsClassesFunction;
     classes: ReturnsClassesFunction;
     blockDisplay: string;
     blockBase: BaseFunction;
-    blockSizes: ButtonsSizes;
+    blockSizes: SizesButtons;
     getBlockSizeClasses: ReturnsClassesFunction;
     blockClasses: ReturnsClassesFunction;
     fabDisplay: string;
     fabBase: BaseFunction;
-    fabSizes: ButtonsSizes;
+    fabSizes: SizesButtons;
     getFabSizeClasses: ReturnsClassesFunction;
     fabClasses: ReturnsClassesFunction;
     palettes: {
-        solid: DefaultConfigPalette;
-        outline: DefaultConfigPalette;
-        [key: string]: EmptyPalette | DefaultConfigPalette;
+        solid: DefaultPaletteColors;
+        outline: DefaultPaletteColors;
+        [key: string]: EmptyPalette | DefaultPaletteColors;
     };
     [key: string]: any;
 }

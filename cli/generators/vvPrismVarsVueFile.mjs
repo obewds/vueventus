@@ -8,7 +8,9 @@ const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->
 <script lang="ts">
 
     import { defineComponent } from 'vue'
+    import { ValidCommentStyles, ValidUrlDecorations } from '@obewds/vueventus'
     import appColors from '../../../app.colors.json'
+    import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
 
@@ -16,30 +18,30 @@ const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->
 
         props: {
             commentStyle: {
-                type: String as PropType<'normal'|'italic'|'oblique'>,
-                default: 'normal',
-                validator: (prop: string) => (['normal', 'italic', 'oblique']).includes(prop),
+                type: String as PropType<ValidCommentStyles>,
+                default: appVv.defaults.VvPrismVars.commentStyle,
+                validator: (prop: ValidCommentStyles) => (ValidCommentStyles).includes(prop),
             },
             fontSize: {
                 type: String,
-                default: '1rem',
+                default: appVv.defaults.VvPrismVars.fontSize,
             },
             lineHeight: {
                 type: String,
-                default: '1.3rem',
+                default: appVv.defaults.VvPrismVars.lineHeight,
             },
             lineHighlightOpacity: {
                 type: String,
-                default: '0.25',
+                default: appVv.defaults.VvPrismVars.lineHighlightOpacity,
             },
             textShadow: {
                 type: String,
-                default: 'unset',
+                default: appVv.defaults.VvPrismVars.textShadow,
             },
             urlDecoration: {
-                type: String as PropType<'underline'|'overline'|'none'>,
-                default: 'underline',
-                validator: (prop: string) => (['underline', 'overline', 'none']).includes(prop),
+                type: String as PropType<ValidUrlDecorations>,
+                default: appVv.defaults.VvPrismVars.urlDecoration,
+                validator: (prop: ValidUrlDecorations) => (ValidUrlDecorations).includes(prop),
             },
         },
         

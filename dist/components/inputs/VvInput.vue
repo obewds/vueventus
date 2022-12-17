@@ -7,9 +7,9 @@
     import VvConfig from '../../configs/VvConfig.js'
 
     import type { PropType } from 'vue'
-    import type { DefaultValidationPalette } from '../../types/DefaultValidationPalette'
+    import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes'
     import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors'
-    import type { InputsSizes } from '../../types/InputsSizes'
+    import type { SizesInputs } from '../../types/SizesInputs'
 
     export default defineComponent({
 
@@ -23,11 +23,11 @@
                 default: VvConfig.defaults.VvInput.color,
             },
             palette: {
-                type: String as PropType<keyof DefaultValidationPalette>,
+                type: String as PropType<keyof DefaultValidationPalettes>,
                 default: VvConfig.defaults.VvInput.palette,
             },
             size: {
-                type: String as PropType<keyof InputsSizes>,
+                type: String as PropType<keyof SizesInputs>,
                 default: VvConfig.defaults.VvInput.size,
             },
             type: {
@@ -41,24 +41,24 @@
             },
         },
 
-        setup (props, context) {
+        setup (props) {
             
             const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject<typeof VvConfig>('vv') : VvConfig
 
             let classes = computed( () => {
 
-                let output: string[] = []
+                let output = []
 
                 if ( vv?.inputs?.base() ) {
                     output.push( vv.inputs.base() )
                 }
 
                 if ( props.size !== '' && vv?.inputs?.sizes?.[props.size] ) {
-                    output.push( String(vv.inputs.sizes[props.size]) )
+                    output.push( vv.inputs.sizes[props.size] )
                 }
 
-                if ( vv?.inputs?.palettes?.[props.palette]?.[props.color] ) {
-                    output.push( String(vv.inputs.palettes[props.palette][props.color]) )
+                if ( vv?.inputs?.palettes?.[String(props.palette)]?.[props.color] ) {
+                    output.push( vv.inputs.palettes[String(props.palette)][props.color] )
                 }
 
                 return output.join(' ').trim()

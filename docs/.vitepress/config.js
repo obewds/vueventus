@@ -130,6 +130,7 @@ function sidebarGuides() {
             { text: 'Getting Started', link: '/guides/' },
             { text: 'vueventus CLI', link: '/guides/vueventus-cli' },
             { text: 'vv-update CLI', link: '/guides/vv-update-cli' },
+            { text: 'vv-update-locals CLI', link: '/guides/vv-update-locals-cli' },
             { text: 'Manual Installation', link: '/guides/manual-installation' },
             // { text: 'Install with Nuxt.js 3', link: '/guides/install-nuxt' },
             { text: 'Test Drive: VvButton', link: '/guides/test-drive-vv-button' },

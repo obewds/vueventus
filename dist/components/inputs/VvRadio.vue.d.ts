@@ -1,7 +1,11 @@
+import type { PropType } from 'vue';
+import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes';
+import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors';
+import type { SizesInputs } from '../../types/SizesInputs';
 declare const _default: import("vue").DefineComponent<{
     color: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultPaletteColors;
+        type: PropType<keyof DefaultValidationPaletteColors>;
+        default: keyof import("../../index.js").DefaultPaletteColors;
     };
     checked: {
         type: BooleanConstructor;
@@ -16,12 +20,12 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     palette: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultPalettes;
+        type: PropType<keyof DefaultValidationPalettes>;
+        default: keyof import("../../index.js").DefaultPalettes;
     };
     size: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof SizesInputs>;
+        default: keyof SizesInputs;
     };
     value: {
         type: StringConstructor;
@@ -34,8 +38,8 @@ declare const _default: import("vue").DefineComponent<{
     lightRadioCssUrl: import("vue").ComputedRef<string>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "update:modelValue"[], "update:modelValue", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     color: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultPaletteColors;
+        type: PropType<keyof DefaultValidationPaletteColors>;
+        default: keyof import("../../index.js").DefaultPaletteColors;
     };
     checked: {
         type: BooleanConstructor;
@@ -50,12 +54,12 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     palette: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultPalettes;
+        type: PropType<keyof DefaultValidationPalettes>;
+        default: keyof import("../../index.js").DefaultPalettes;
     };
     size: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof SizesInputs>;
+        default: keyof SizesInputs;
     };
     value: {
         type: StringConstructor;
@@ -64,9 +68,9 @@ declare const _default: import("vue").DefineComponent<{
 }>> & {
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
-    color: string;
-    palette: string;
-    size: string;
+    color: keyof DefaultValidationPaletteColors;
+    palette: keyof DefaultValidationPalettes;
+    size: keyof SizesInputs;
     checked: boolean;
     darkRadioHex: string;
     lightRadioHex: string;

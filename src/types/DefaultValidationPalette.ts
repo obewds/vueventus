@@ -1,7 +1,9 @@
 // ./src/types/DefaultValidationPalette.ts
 
-export interface DefaultValidationPalette {
-    default?: string
-    underlined?: string
-    [key: string]: string | undefined
-}
+// BUG: This interface is DEPRECIATED
+// TODO: Remove this interface from the package
+// use the "DefaultValidationPalettes" interface instead
+
+import type { DefaultValidationPalettes } from './DefaultValidationPalettes'
+
+export interface DefaultValidationPalette extends DefaultValidationPalettes {}

@@ -1,8 +1,8 @@
 // ./src/types/DefaultValidationPaletteColors.ts
 
-export interface DefaultValidationPaletteColors {
-    default?: string
+import type { DefaultColors } from './DefaultColors'
+
+export interface DefaultValidationPaletteColors extends DefaultColors {
     error?: string
     success?: string
-    [key: string]: string | undefined
 }

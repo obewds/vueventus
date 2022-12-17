@@ -112,6 +112,37 @@ These modules are used to allow a single source of truth between library compone
 
 
 
+## ValidCommentStyles
+
+### Use example
+
+```html
+<script setup lang="ts">
+
+    import { ValidCommentStyles } from '@obewds/vueventus'
+    import type { PropType } from 'vue'
+
+    const props = defineProps({
+        commentStyles: {
+            type: String as PropType<ValidCommentStyles>,
+            validator: (prop: ValidCommentStyles) => (ValidCommentStyles).includes(prop),
+        }
+    })
+
+</script>
+```
+
+### Module Code
+
+<<< @/../src/validators/ValidCommentStyles.ts
+
+
+
+
+
+
+
+
 ## ValidDirections
 
 ### Use example
@@ -345,6 +376,36 @@ These modules are used to allow a single source of truth between library compone
 ### Module Code
 
 <<< @/../src/validators/ValidInputTypes.ts
+
+
+
+
+
+
+
+## ValidUrlDecorations
+
+### Use example
+
+```html
+<script setup lang="ts">
+
+    import { ValidUrlDecorations } from '@obewds/vueventus'
+    import type { PropType } from 'vue'
+
+    const props = defineProps({
+        urlDecoration: {
+            type: String as PropType<ValidUrlDecorations>,
+            validator: (prop: ValidUrlDecorations) => (ValidUrlDecorations).includes(prop),
+        }
+    })
+
+</script>
+```
+
+### Module Code
+
+<<< @/../src/validators/ValidUrlDecorations.ts
 
 
 

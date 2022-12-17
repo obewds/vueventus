@@ -11,6 +11,7 @@ const output = `<!-- ./src/components/vv/elements/VvPrism.vue -->
     import Prism from 'prismjs'
     import VvPrismVars from './VvPrismVars.vue'
     import appColors from '../../../app.colors.json'
+    import appVv from '../../../app.vv'
 
     export default defineComponent({
         
@@ -19,7 +20,7 @@ const output = `<!-- ./src/components/vv/elements/VvPrism.vue -->
         props: {
             prismVars: {
                 type: Boolean,
-                default: true,
+                default: appVv.defaults.VvPrism.prismVars,
             },
         },
         

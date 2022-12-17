@@ -8,8 +8,11 @@ const output = `<!-- ./src/components/vv/elements/VvEl.vue -->
 <script lang="ts">
 
     import { defineComponent } from 'vue'
-    import { VvEl } from '@obewds/vueventus'
+    import { ValidElementTags, VvEl } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
+
+    import type { PropType } from 'vue'
+    import type { DefaultPaletteColors, DefaultPalettes, SizesText } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -17,35 +20,36 @@ const output = `<!-- ./src/components/vv/elements/VvEl.vue -->
 
         props: {
             borderPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvEl.borderPalette,
             },
             borderColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvEl.borderColor,
             },
             groundPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvEl.groundPalette,
             },
             groundColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvEl.groundColor,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof SizesText>,
                 default: appVv.defaults.VvEl.size,
             },
             tag: {
-                type: String,
+                type: String as PropType<ValidElementTags>,
                 default: appVv.defaults.VvEl.tag,
+                validator: (prop: ValidElementTags) => (ValidElementTags).includes(prop),
             },
             textPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvEl.textPalette,
             },
             textColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvEl.textColor,
             },
         },

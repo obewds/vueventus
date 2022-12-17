@@ -101,7 +101,7 @@ import type { AppTintsShades } from '@obewds/vueventus'
 
 
 
-## ButtonsSizes
+## ButtonsSizes (DEPRECIATED)
 
 ### Import
 
@@ -480,7 +480,28 @@ import type { ConfigVv } from '@obewds/vueventus'
 
 
 
-## DefaultConfigPalette
+## DefaultColors
+
+### Import
+
+```javascript
+import type { DefaultColors } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultColors.ts
+
+
+
+
+
+
+
+
+
+
+## DefaultConfigPalette (DEPRECIATED)
 
 ### Import
 
@@ -501,7 +522,90 @@ import type { DefaultConfigPalette } from '@obewds/vueventus'
 
 
 
-## DefaultSelectPalettes
+## DefaultButtonPalettes
+
+### Import
+
+```javascript
+import type { DefaultButtonPalettes } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultButtonPalettes.ts
+
+
+
+
+
+
+
+
+
+
+## DefaultInputPalettes (DEPRECIATED)
+
+### Import
+
+```javascript
+import type { DefaultInputPalettes } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultInputPalettes.ts
+
+
+
+
+
+
+
+
+
+
+## DefaultPaletteColors
+
+### Import
+
+```javascript
+import type { DefaultPaletteColors } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultPaletteColors.ts
+
+
+
+
+
+
+
+
+
+## DefaultPalettes
+
+### Import
+
+```javascript
+import type { DefaultPalettes } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultPalettes.ts
+
+
+
+
+
+
+
+
+
+
+## DefaultSelectPalettes (DEPRECIATED)
 
 ### Import
 
@@ -523,17 +627,17 @@ import type { DefaultSelectPalettes } from '@obewds/vueventus'
 
 
 
-## DefaultValidationPalette
+## DefaultValidationPalettes
 
 ### Import
 
 ```javascript
-import type { DefaultValidationPalette } from '@obewds/vueventus'
+import type { DefaultValidationPalettes } from '@obewds/vueventus'
 ```
 
 ### Module Code
 
-<<< @/../src/types/DefaultValidationPalette.ts
+<<< @/../src/types/DefaultValidationPalettes.ts
 
 
 
@@ -557,6 +661,29 @@ import type { DefaultValidationPaletteColors } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/DefaultValidationPaletteColors.ts
+
+
+
+
+
+
+
+
+
+
+
+
+## DefaultValidationPalette (DEPRECIATED)
+
+### Import
+
+```javascript
+import type { DefaultValidationPalette } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultValidationPalette.ts
 
 
 
@@ -611,7 +738,7 @@ import type { GroundTextColors } from '@obewds/vueventus'
 
 
 
-## InputsSizes
+## InputsSizes (DEPRECIATED)
 
 ### Import
 
@@ -674,7 +801,7 @@ import type { MonthNamesTypes } from '@obewds/vueventus'
 
 
 
-## SelectsSizes
+## SelectsSizes (DEPRECIATED)
 
 ### Import
 
@@ -695,7 +822,133 @@ import type { SelectsSizes } from '@obewds/vueventus'
 
 
 
-## TextSizes
+## SizesButtons
+
+### Import
+
+```javascript
+import type { SizesButtons } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/SizesButtons.ts
+
+
+
+
+
+
+
+
+
+
+## SizesInputs
+
+### Import
+
+```javascript
+import type { SizesInputs } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/SizesInputs.ts
+
+
+
+
+
+
+
+
+
+
+## SizesSelects
+
+### Import
+
+```javascript
+import type { SizesSelects } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/SizesSelects.ts
+
+
+
+
+
+
+
+
+
+
+## SizesText
+
+### Import
+
+```javascript
+import type { SizesText } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/SizesText.ts
+
+
+
+
+
+
+
+
+
+
+## SizesTextareas
+
+### Import
+
+```javascript
+import type { SizesTextareas } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/SizesTextareas.ts
+
+
+
+
+
+
+
+
+
+
+## SizesTextareasRows
+
+### Import
+
+```javascript
+import type { SizesTextareasRows } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/SizesTextareasRows.ts
+
+
+
+
+
+
+
+
+
+
+## TextSizes (DEPRECIATED)
 
 ### Import
 
@@ -716,7 +969,7 @@ import type { TextSizes } from '@obewds/vueventus'
 
 
 
-## TextareasRowSizes
+## TextareasRowSizes (DEPRECIATED)
 
 ### Import
 
@@ -738,7 +991,7 @@ import type { TextareasRowSizes } from '@obewds/vueventus'
 
 
 
-## TextareasSizes
+## TextareasSizes (DEPRECIATED)
 
 ### Import
 
