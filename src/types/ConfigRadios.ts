@@ -3,8 +3,8 @@
 import type { BaseFunction } from './BaseFunction'
 import type { DefaultValidationPaletteColors } from './DefaultValidationPaletteColors'
 import type { EmptyPalette } from './EmptyPalette'
-import type { InputsSizes } from './InputsSizes'
 import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
+import type { SizesInputs } from './SizesInputs'
 
 export interface ConfigRadios {
     baseColors: string
@@ -15,7 +15,7 @@ export interface ConfigRadios {
     shadow: string
     transition: string
     base: BaseFunction
-    sizes: InputsSizes
+    sizes: SizesInputs
     getSizeClasses: ReturnsClassesFunction
     classes: ReturnsClassesFunction
     palettes: {
