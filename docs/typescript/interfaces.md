@@ -480,7 +480,28 @@ import type { ConfigVv } from '@obewds/vueventus'
 
 
 
-## DefaultConfigPalette
+## DefaultColors
+
+### Import
+
+```javascript
+import type { DefaultColors } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultColors.ts
+
+
+
+
+
+
+
+
+
+
+## DefaultConfigPalette (DEPRECIATED)
 
 ### Import
 
