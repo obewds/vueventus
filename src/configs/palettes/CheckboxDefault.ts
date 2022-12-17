@@ -1,8 +1,8 @@
 // ./src/configs/palettes/CheckboxDefault.ts
 
-import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
 
-export default <DefaultConfigPalette>{
+export default <DefaultPaletteColors>{
     'default': 'focus:ring-gray-500 text-gray-600 dark:focus:ring-gray-200 dark:text-gray-300',
     error: 'focus:ring-rose-500 text-rose-500 dark:focus:ring-rose-200 dark:text-rose-300',
     primary: 'focus:ring-blue-500 text-blue-500 dark:focus:ring-blue-200 dark:text-blue-300',
