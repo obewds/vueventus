@@ -1,8 +1,8 @@
 // ./src/configs/palettes/ButtonSolid.ts
 
-import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
 
-export default <DefaultConfigPalette>{
+export default <DefaultPaletteColors>{
     'default': 'text-gray-900 bg-gray-100 hover:bg-gray-200 focus:bg-gray-200 active:bg-gray-300 border-gray-100 hover:border-gray-200 focus:border-gray-50 dark:focus:border-gray-900 focus:ring-gray-600 dark:focus:ring-gray-50',
     error: 'text-white bg-rose-500 hover:bg-rose-600 focus:bg-rose-600 active:bg-rose-700 border-rose-500 hover:border-rose-600 focus:border-rose-100 dark:focus:border-rose-900 focus:ring-rose-600 dark:focus:ring-rose-200',
     primary: 'text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 active:bg-blue-700 border-blue-500 hover:border-blue-600 focus:border-blue-100 dark:focus:border-blue-900 focus:ring-blue-600 dark:focus:ring-blue-200',
