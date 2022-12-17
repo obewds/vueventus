@@ -1,8 +1,8 @@
 // ./src/configs/palettes/FillDefault.ts
 
-import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
 
-export default <DefaultConfigPalette>{
+export default <DefaultPaletteColors>{
     'default': 'dark:fill-gray-100 fill-gray-900',
     error: 'fill-rose-500 dark:fill-rose-300',
     primary: 'fill-blue-500 dark:fill-blue-300',
