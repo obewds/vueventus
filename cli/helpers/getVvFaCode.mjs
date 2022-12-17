@@ -25,6 +25,7 @@ return `<!-- ./src/components/vv/elements/VvFa.vue -->
     import { defineComponent } from 'vue'
     import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
     import { ValidFontAwesomeFamilies, ValidFontAwesomeSizes } from '@obewds/vueventus'
+    import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
 
@@ -35,16 +36,16 @@ return `<!-- ./src/components/vv/elements/VvFa.vue -->
         props: {
             family: {
                 type: String as PropType<ValidFontAwesomeFamilies>,
-                default: 'fas',
+                default: appVv.defaults.VvFa.family,
                 validator: (prop: ValidFontAwesomeFamilies) => (ValidFontAwesomeFamilies).includes(prop),
             },
             icon: {
                 type: String,
-                default: 'house',
+                default: appVv.defaults.VvFa.icon,
             },
             size: {
                 type: String as PropType<ValidFontAwesomeSizes>,
-                default: '1x',
+                default: appVv.defaults.VvFa.size,
                 validator: (prop: ValidFontAwesomeSizes) => (ValidFontAwesomeSizes).includes(prop),
             },
         },
