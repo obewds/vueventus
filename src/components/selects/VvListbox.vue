@@ -8,6 +8,11 @@
     import VvConfig from '../../configs/VvConfig.js'
 
     import type { PropType } from 'vue'
+    import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
+    import type { DefaultPalettes } from '../../types/DefaultPalettes'
+    import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes'
+    import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors'
+    import type { InputsSizes } from '../../types/InputsSizes'
     import type { VvListboxData } from '../../types/VvListboxData'
 
     export default defineComponent({
@@ -62,11 +67,11 @@
                 default: VvConfig.defaults.VvListbox.listboxButtonClasses,
             },
             listboxButtonColor: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: VvConfig.defaults.VvListbox.listboxButtonColor,
             },
             listboxButtonPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPalettes>,
                 default: VvConfig.defaults.VvListbox.listboxButtonPalette,
             },
             listboxOptionClasses: {
@@ -74,11 +79,11 @@
                 default: VvConfig.defaults.VvListbox.listboxOptionClasses,
             },
             listboxOptionColor: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: VvConfig.defaults.VvListbox.listboxOptionColor,
             },
             listboxOptionPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPalettes>,
                 default: VvConfig.defaults.VvListbox.listboxOptionPalette,
             },
             listboxOptionsClasses: {
@@ -106,7 +111,7 @@
                 default: VvConfig.defaults.VvListbox.selectedIndex,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof InputsSizes>,
                 default: VvConfig.defaults.VvListbox.size,
             },
         },
@@ -121,18 +126,18 @@
 
             const listboxButtonVvClasses = computed( () => {
 
-                let output: string[] = []
+                let output = []
 
                 if ( vv?.listboxes?.base() ) {
                     output.push( vv.listboxes.base() )
                 }
 
                 if ( props.size !== '' && vv?.listboxes?.sizes?.[props.size] ) {
-                    output.push( vv.listboxes.sizes[props.size] as string )
+                    output.push( vv.listboxes.sizes[props.size] )
                 }
 
-                if ( vv?.listboxes?.buttonPalettes?.[props.listboxButtonPalette as keyof typeof vv.listboxes.buttonPalettes]?.[props.listboxButtonColor] ) {
-                    output.push( vv.listboxes.buttonPalettes[props.listboxButtonPalette as keyof typeof vv.listboxes.buttonPalettes][props.listboxButtonColor] as string )
+                if ( vv?.listboxes?.buttonPalettes?.[props.listboxButtonPalette]?.[props.listboxButtonColor] ) {
+                    output.push( vv.listboxes.buttonPalettes[props.listboxButtonPalette][props.listboxButtonColor] )
                 }
 
                 return output.join(' ').trim()
@@ -141,13 +146,13 @@
 
             const listboxOptionVvClasses = computed( () => {
 
-                let output = ''
+                let output = []
 
-                if ( vv?.listboxes?.optionPalettes?.[props.listboxOptionPalette as keyof typeof vv.listboxes.optionPalettes]?.[props.listboxOptionColor] ) {
-                    output = String(vv.listboxes.optionPalettes[props.listboxOptionPalette as keyof typeof vv.listboxes.optionPalettes][props.listboxOptionColor])
+                if ( vv?.listboxes?.optionPalettes?.[props.listboxOptionPalette]?.[props.listboxOptionColor] ) {
+                    output.push( vv.listboxes.optionPalettes[props.listboxOptionPalette][props.listboxOptionColor] )
                 }
 
-                return output
+                return output.join(' ').trim()
 
             })
 
