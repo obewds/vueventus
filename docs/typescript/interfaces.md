@@ -522,7 +522,89 @@ import type { DefaultConfigPalette } from '@obewds/vueventus'
 
 
 
-## DefaultSelectPalettes
+## DefaultButtonPalettes
+
+### Import
+
+```javascript
+import type { DefaultButtonPalettes } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultButtonPalettes.ts
+
+
+
+
+
+
+
+
+
+
+## DefaultInputPalettes (DEPRECIATED)
+
+### Import
+
+```javascript
+import type { DefaultInputPalettes } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultInputPalettes.ts
+
+
+
+
+
+
+
+
+
+
+## DefaultPaletteColors
+
+### Import
+
+```javascript
+import type { DefaultPaletteColors } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultPaletteColors.ts
+
+
+
+
+
+
+
+
+
+## DefaultPalettes
+
+### Import
+
+```javascript
+import type { DefaultPalettes } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/DefaultPalettes.ts
+
+
+
+
+
+
+
+
+
+
 
 ### Import
 
