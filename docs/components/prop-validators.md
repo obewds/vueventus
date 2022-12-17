@@ -383,6 +383,36 @@ These modules are used to allow a single source of truth between library compone
 
 
 
+## ValidUrlDecorations
+
+### Use example
+
+```html
+<script setup lang="ts">
+
+    import { ValidUrlDecorations } from '@obewds/vueventus'
+    import type { PropType } from 'vue'
+
+    const props = defineProps({
+        urlDecoration: {
+            type: String as PropType<ValidUrlDecorations>,
+            validator: (prop: ValidUrlDecorations) => (ValidUrlDecorations).includes(prop),
+        }
+    })
+
+</script>
+```
+
+### Module Code
+
+<<< @/../src/validators/ValidUrlDecorations.ts
+
+
+
+
+
+
+
 ## ValidVideoSourceTypes
 
 ### Use example
