@@ -11,7 +11,7 @@ export default function () {
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, InputsSizes } from '@obewds/vueventus'
+    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesInputs } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -39,7 +39,7 @@ export default function () {
                 default: appVv.defaults.VvRadio.palette,
             },
             size: {
-                type: String as PropType<keyof InputsSizes>,
+                type: String as PropType<keyof SizesInputs>,
                 default: appVv.defaults.VvRadio.size,
             },
             value: {
