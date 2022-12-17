@@ -1,8 +1,8 @@
 // ./src/configs/palettes/ListDefault.ts
 
-import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette'
+import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
 
-export default <DefaultConfigPalette>{
+export default <DefaultPaletteColors>{
     'default': '',
     error: 'marker:text-rose-500 dark:marker:text-rose-300',
     primary: 'marker:text-blue-500 dark:marker:text-blue-300',
