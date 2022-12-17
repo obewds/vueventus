@@ -11,21 +11,24 @@ const output = `<!-- ./src/components/vv/selects/VvSelect.vue -->
     import { VvSelect } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
+    import type { PropType } from 'vue'
+    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesSelects } from '@obewds/vueventus'
+
     export default defineComponent({
 
         components: { VvSelect },
 
         props: {
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: appVv.defaults.VvSelect.color,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPalettes>,
                 default: appVv.defaults.VvSelect.palette,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof SizesSelects>,
                 default: appVv.defaults.VvSelect.size,
             },
         },
