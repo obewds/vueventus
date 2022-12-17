@@ -10,6 +10,9 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
     import { computed, defineComponent } from 'vue'
     import appVv from '../../../app.vv'
 
+    import type { PropType } from 'vue'
+    import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, TextSizes } from '@obewds/vueventus'
+
     export default defineComponent({
         
         props: {
@@ -26,19 +29,19 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
                 default: appVv.defaults.VvRouterLink.buttonFab,
             },
             buttonSize: {
-                type: String,
+                type: String as PropType<keyof SizesButtons>,
                 default: appVv.defaults.VvRouterLink.buttonSize,
             },
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvRouterLink.color,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes | keyof DefaultButtonPalettes>,
                 default: appVv.defaults.VvRouterLink.palette,
             },
             textSize: {
-                type: String,
+                type: String as PropType<keyof TextSizes>,
                 default: appVv.defaults.VvRouterLink.textSize,
             },
             to: {
@@ -91,8 +94,8 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
 
                     }
                     
-                    if ( vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes] && vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes][props.color] ) {
-                        output.push( vv.buttons.palettes[props.palette as keyof typeof vv.buttons.palettes][props.color] as string )
+                    if ( vv.buttons.palettes[props.palette] && vv.buttons.palettes[props.palette][props.color] ) {
+                        output.push( vv.buttons.palettes[props.palette][props.color] as string )
                     }
 
                 } else {
@@ -108,8 +111,8 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
                     }
 
 
-                    if ( vv.anchors.palettes[props.palette as keyof typeof vv.anchors.palettes][props.color] ) {
-                        output.push( vv.anchors.palettes[props.palette as keyof typeof vv.anchors.palettes][props.color] as string )
+                    if ( vv.anchors.palettes[props.palette][props.color] ) {
+                        output.push( vv.anchors.palettes[props.palette][props.color] as string )
                     }
 
                 }
