@@ -60,7 +60,7 @@ title: Typescript Modules
 * [ConfigTextareas](/typescript/interfaces#configtextareas)
 * [ConfigTransitions](/typescript/interfaces#configtransitions)
 * [ConfigVv](/typescript/interfaces#configvv)
-* [DefaultConfigPalette](/typescript/interfaces#defaultconfigpalette)
+* [DefaultColors](/typescript/interfaces#defaultcolors)
 * [DefaultSelectPalettes](/typescript/interfaces#defaultselectpalettes)
 * [DefaultValidationPalette](/typescript/interfaces#defaultvalidationpalette)
 * [DefaultValidationPaletteColors](/typescript/interfaces#defaultvalidationpalettecolors)
