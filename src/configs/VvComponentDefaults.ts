@@ -47,6 +47,11 @@ export default <ConfigDefaults>{
         textPalette: 'default',
         textColor: 'default',
     },
+    "VvFa": {
+        family: 'fas',
+        icon: 'house',
+        size: '1x',
+    },
     "VvFormGroup": {
         displayError: false,
         displayHelp: false,
@@ -119,6 +124,17 @@ export default <ConfigDefaults>{
         symbolColor: 'primary',
         symbolPalette: 'default',
     },
+    "VvPrism": {
+        prismVars: true,
+    },
+    "VvPrismVars": {
+        commentStyle: 'normal',
+        fontSize: '1rem',
+        lineHeight: '1.3rem',
+        lineHighlightOpacity: '0.25',
+        textShadow: 'unset',
+        urlDecoration: 'underline',
+    },
     "VvRadio": {
         color: 'default',
         checked: false,
@@ -137,6 +153,16 @@ export default <ConfigDefaults>{
         to: '/',
         palette: 'default',
         textSize: 'md',
+    },
+    "VvScrollUp": {
+        buttonClasses: 'rounded-full',
+        color: 'primary',
+        fab: true,
+        palette: 'solid',
+        isVisible: false,
+        offsetMinimum: 100,
+        size: 'xs',
+        title: 'Scroll to Top',
     },
     "VvSelect": {
         color: 'default',
