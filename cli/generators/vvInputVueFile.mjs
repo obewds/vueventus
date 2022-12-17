@@ -12,7 +12,7 @@ const output = `<!-- ./src/components/vv/inputs/VvInput.vue -->
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultValidationPalettes, DefaultValidationPaletteColors, InputsSizes } from '@obewds/vueventus'
+    import type { DefaultValidationPalettes, DefaultValidationPaletteColors, SizesInputs } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -28,7 +28,7 @@ const output = `<!-- ./src/components/vv/inputs/VvInput.vue -->
                 default: appVv.defaults.VvInput.palette,
             },
             size: {
-                type: String as PropType<keyof InputsSizes>,
+                type: String as PropType<keyof SizesInputs>,
                 default: appVv.defaults.VvInput.size,
             },
             type: {
