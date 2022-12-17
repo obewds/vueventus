@@ -11,7 +11,7 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, TextSizes } from '@obewds/vueventus'
+    import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, SizesText } from '@obewds/vueventus'
 
     export default defineComponent({
         
@@ -41,7 +41,7 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
                 default: appVv.defaults.VvRouterLink.palette,
             },
             textSize: {
-                type: String as PropType<keyof TextSizes>,
+                type: String as PropType<keyof SizesText>,
                 default: appVv.defaults.VvRouterLink.textSize,
             },
             to: {
