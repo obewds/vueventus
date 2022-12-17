@@ -5,6 +5,11 @@
     import { computed, defineComponent, inject } from 'vue'
     import VvConfig from '../../configs/VvConfig.js'
 
+    import type { PropType } from 'vue'
+    import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes'
+    import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors'
+    import type { InputsSizes } from '../../types/InputsSizes'
+
     export default defineComponent({
 
         name: 'VvCheckbox',
@@ -13,7 +18,7 @@
 
         props: {
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: VvConfig.defaults.VvCheckbox.color,
             },
             checked: {
@@ -29,11 +34,11 @@
                 default: VvConfig.defaults.VvCheckbox.lightCheckHex,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultValidationPalettes>,
                 default: VvConfig.defaults.VvCheckbox.palette,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof InputsSizes>,
                 default: VvConfig.defaults.VvCheckbox.size,
             },
         },
@@ -44,18 +49,18 @@
 
             let classes = computed( () => {
 
-                let output: string[] = []
+                let output = []
 
                 if ( vv?.checkboxes?.base() ) {
                     output.push( vv.checkboxes.base() )
                 }
 
                 if ( props.size !== '' && vv?.checkboxes?.sizes?.[props.size] ) {
-                    output.push( vv.checkboxes.sizes[props.size] as string )
+                    output.push( vv.checkboxes.sizes[props.size] )
                 }
 
-                if ( vv?.checkboxes?.palettes?.[props.palette as keyof typeof vv.checkboxes.palettes]?.[props.color] ) {
-                    output.push( vv.checkboxes.palettes[props.palette as keyof typeof vv.checkboxes.palettes][props.color] as string )
+                if ( vv?.checkboxes?.palettes?.[props.palette]?.[props.color] ) {
+                    output.push( vv.checkboxes.palettes[props.palette][props.color] )
                 }
 
                 return output.join(' ').trim()
