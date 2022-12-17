@@ -2,14 +2,14 @@
 
 <script lang="ts">
 
-    import { Prop, computed, defineComponent, inject } from 'vue'
+    import { computed, defineComponent, inject } from 'vue'
     import ValidElementTags from '../../validators/ValidElementTags'
     import VvConfig from '../../configs/VvConfig.js'
 
     import type { PropType } from 'vue'
     import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
     import type { DefaultPalettes } from '../../types/DefaultPalettes'
-    import type { TextSizes } from '../../types/TextSizes'
+    import type { SizesText } from '../../types/SizesText'
 
     export default defineComponent({
 
@@ -33,7 +33,7 @@
                 default: VvConfig.defaults.VvEl.groundColor,
             },
             size: {
-                type: String as PropType<keyof TextSizes>,
+                type: String as PropType<keyof SizesText>,
                 default: VvConfig.defaults.VvEl.size,
             },
             tag: {
