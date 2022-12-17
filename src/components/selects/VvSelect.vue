@@ -8,7 +8,7 @@
     import type { PropType } from 'vue'
     import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors'
     import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes'
-    import type { SelectsSizes } from '../../types/SelectsSizes'
+    import type { SizesSelects } from '../../types/SizesSelects'
 
     export default defineComponent({
 
@@ -26,7 +26,7 @@
                 default: VvConfig.defaults.VvSelect.palette,
             },
             size: {
-                type: String as PropType<keyof SelectsSizes>,
+                type: String as PropType<keyof SizesSelects>,
                 default: VvConfig.defaults.VvSelect.size,
             },
             modelValue: {
