@@ -8,8 +8,8 @@
     import type { PropType } from 'vue'
     import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors'
     import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes'
-    import type { TextareasRowSizes } from '../../types/TextareasRowSizes'
-    import type { TextareasSizes } from '../../types/TextareasSizes'
+    import type { SizesTextareas } from '../../types/SizesTextareas'
+    import type { SizesTextareasRows } from '../../types/SizesTextareasRows'
 
     export default defineComponent({
 
@@ -27,11 +27,11 @@
                 default: VvConfig.defaults.VvTextarea.palette,
             },
             size: {
-                type: String as PropType<keyof TextareasSizes>,
+                type: String as PropType<keyof SizesTextareas>,
                 default: VvConfig.defaults.VvTextarea.size,
             },
             rowSize: {
-                type: String as PropType<keyof TextareasRowSizes>,
+                type: String as PropType<keyof SizesTextareasRows>,
                 default: VvConfig.defaults.VvTextarea.rowSize,
             },
             modelValue: {
