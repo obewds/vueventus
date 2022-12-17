@@ -2,7 +2,7 @@
 
 import type { DefaultValidationPaletteColors } from './DefaultValidationPaletteColors'
 import type { DefaultValidationPalettes } from './DefaultValidationPalettes'
-import type { InputsSizes } from './InputsSizes'
+import type { SizesSelects } from './SizesSelects'
 import type { VvListboxData } from './VvListboxData'
 
 export interface VvListboxProps {
@@ -26,5 +26,5 @@ export interface VvListboxProps {
     optionIconParentClasses: string
     selectedDisplayClasses: string
     selectedIndex: number
-    size: keyof InputsSizes | string
+    size: keyof SizesSelects | string
 }
