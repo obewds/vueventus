@@ -1,10 +1,10 @@
 import type { BaseFunction } from './BaseFunction';
 import type { DefaultValidationPaletteColors } from './DefaultValidationPaletteColors';
 import type { EmptyPalette } from './EmptyPalette';
-import type { TextareasSizes } from './TextareasSizes';
-import type { TextareasRowSizes } from './TextareasRowSizes';
 import type { ReturnsClassesFunction } from './ReturnsClassesFunction';
 import type { ReturnsNumberFunction } from './ReturnsNumberFunction';
+import type { SizesTextareas } from './SizesTextareas';
+import type { SizesTextareasRows } from './SizesTextareasRows';
 export interface ConfigTextareas {
     border: string;
     display: string;
@@ -23,8 +23,8 @@ export interface ConfigTextareas {
         underlined: DefaultValidationPaletteColors;
         [key: string]: EmptyPalette | DefaultValidationPaletteColors;
     };
-    sizes: TextareasSizes;
-    rowSizes: TextareasRowSizes;
+    sizes: SizesTextareas;
+    rowSizes: SizesTextareasRows;
     getRowSize: ReturnsNumberFunction;
     [key: string]: any;
 }

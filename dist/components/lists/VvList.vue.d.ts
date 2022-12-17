@@ -2,7 +2,7 @@ import ValidListTypes from '../../validators/ValidListTypes';
 import type { PropType } from 'vue';
 import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors';
 import type { DefaultPalettes } from '../../types/DefaultPalettes';
-import type { TextSizes } from '../../types/TextSizes';
+import type { SizesText } from '../../types/SizesText';
 declare const _default: import("vue").DefineComponent<{
     listStyleTypeClass: {
         type: StringConstructor;
@@ -17,8 +17,8 @@ declare const _default: import("vue").DefineComponent<{
         default: keyof DefaultPalettes;
     };
     size: {
-        type: PropType<keyof TextSizes>;
-        default: keyof import("../..").SizesText;
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
     };
     tag: {
         type: PropType<"ol" | "ul">;
@@ -41,8 +41,8 @@ declare const _default: import("vue").DefineComponent<{
         default: keyof DefaultPalettes;
     };
     size: {
-        type: PropType<keyof TextSizes>;
-        default: keyof import("../..").SizesText;
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
     };
     tag: {
         type: PropType<"ol" | "ul">;
@@ -50,7 +50,7 @@ declare const _default: import("vue").DefineComponent<{
         validator: (prop: ValidListTypes) => boolean;
     };
 }>>, {
-    size: keyof TextSizes;
+    size: keyof SizesText;
     tag: "ol" | "ul";
     listStyleTypeClass: string;
     markerColor: keyof DefaultPaletteColors;

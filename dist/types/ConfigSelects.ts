@@ -3,7 +3,7 @@
 import type { BaseFunction } from './BaseFunction'
 import type { DefaultValidationPaletteColors } from './DefaultValidationPaletteColors'
 import type { EmptyPalette } from './EmptyPalette'
-import type { SelectsSizes } from './SelectsSizes'
+import type { SizesSelects } from './SizesSelects'
 import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
 
 export interface ConfigSelects {
@@ -16,7 +16,7 @@ export interface ConfigSelects {
     text: string
     transition: string
     base: BaseFunction
-    sizes: SelectsSizes
+    sizes: SizesSelects
     getSizeClasses: ReturnsClassesFunction
     classes: ReturnsClassesFunction
     palettes: {

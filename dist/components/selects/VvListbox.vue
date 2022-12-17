@@ -8,11 +8,9 @@
     import VvConfig from '../../configs/VvConfig.js'
 
     import type { PropType } from 'vue'
-    import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
-    import type { DefaultPalettes } from '../../types/DefaultPalettes'
     import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes'
     import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors'
-    import type { InputsSizes } from '../../types/InputsSizes'
+    import type { SizesSelects } from '../../types/SizesSelects'
     import type { VvListboxData } from '../../types/VvListboxData'
 
     export default defineComponent({
@@ -111,7 +109,7 @@
                 default: VvConfig.defaults.VvListbox.selectedIndex,
             },
             size: {
-                type: String as PropType<keyof InputsSizes>,
+                type: String as PropType<keyof SizesSelects>,
                 default: VvConfig.defaults.VvListbox.size,
             },
         },

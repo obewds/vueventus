@@ -1,7 +1,7 @@
 import type { PropType } from 'vue';
 import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes';
 import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors';
-import type { InputsSizes } from '../../types/InputsSizes';
+import type { SizesSelects } from '../../types/SizesSelects';
 import type { VvListboxData } from '../../types/VvListboxData';
 declare const _default: import("vue").DefineComponent<{
     data: {
@@ -85,8 +85,8 @@ declare const _default: import("vue").DefineComponent<{
         default: number;
     };
     size: {
-        type: PropType<keyof InputsSizes>;
-        default: keyof InputsSizes;
+        type: PropType<keyof SizesSelects>;
+        default: keyof SizesSelects;
     };
 }, {
     listboxButtonVvClasses: import("vue").ComputedRef<string>;
@@ -188,15 +188,15 @@ declare const _default: import("vue").DefineComponent<{
         default: number;
     };
     size: {
-        type: PropType<keyof InputsSizes>;
-        default: keyof InputsSizes;
+        type: PropType<keyof SizesSelects>;
+        default: keyof SizesSelects;
     };
 }>> & {
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     data: VvListboxData[];
     label: string;
-    size: keyof InputsSizes;
+    size: keyof SizesSelects;
     labelClasses: string;
     displayClasses: string;
     displayDisabledClasses: string;

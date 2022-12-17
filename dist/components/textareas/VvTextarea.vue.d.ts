@@ -1,8 +1,8 @@
 import type { PropType } from 'vue';
 import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors';
 import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes';
-import type { TextareasRowSizes } from '../../types/TextareasRowSizes';
-import type { TextareasSizes } from '../../types/TextareasSizes';
+import type { SizesTextareas } from '../../types/SizesTextareas';
+import type { SizesTextareasRows } from '../../types/SizesTextareasRows';
 declare const _default: import("vue").DefineComponent<{
     color: {
         type: PropType<keyof DefaultValidationPaletteColors>;
@@ -13,12 +13,12 @@ declare const _default: import("vue").DefineComponent<{
         default: keyof DefaultValidationPalettes;
     };
     size: {
-        type: PropType<keyof TextareasSizes>;
-        default: keyof import("../../index.js").SizesTextareas;
+        type: PropType<keyof SizesTextareas>;
+        default: keyof SizesTextareas;
     };
     rowSize: {
-        type: PropType<keyof TextareasRowSizes>;
-        default: keyof import("../../index.js").SizesTextareasRows;
+        type: PropType<keyof SizesTextareasRows>;
+        default: keyof SizesTextareasRows;
     };
     modelValue: {
         type: StringConstructor;
@@ -38,12 +38,12 @@ declare const _default: import("vue").DefineComponent<{
         default: keyof DefaultValidationPalettes;
     };
     size: {
-        type: PropType<keyof TextareasSizes>;
-        default: keyof import("../../index.js").SizesTextareas;
+        type: PropType<keyof SizesTextareas>;
+        default: keyof SizesTextareas;
     };
     rowSize: {
-        type: PropType<keyof TextareasRowSizes>;
-        default: keyof import("../../index.js").SizesTextareasRows;
+        type: PropType<keyof SizesTextareasRows>;
+        default: keyof SizesTextareasRows;
     };
     modelValue: {
         type: StringConstructor;
@@ -54,8 +54,8 @@ declare const _default: import("vue").DefineComponent<{
 }, {
     color: keyof DefaultValidationPaletteColors;
     palette: keyof DefaultValidationPalettes;
-    size: keyof TextareasSizes;
+    size: keyof SizesTextareas;
     modelValue: string;
-    rowSize: keyof TextareasRowSizes;
+    rowSize: keyof SizesTextareasRows;
 }>;
 export default _default;

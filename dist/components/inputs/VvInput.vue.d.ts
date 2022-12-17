@@ -2,7 +2,7 @@ import ValidInputTypes from '../../validators/ValidInputTypes';
 import type { PropType } from 'vue';
 import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes';
 import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors';
-import type { InputsSizes } from '../../types/InputsSizes';
+import type { SizesInputs } from '../../types/SizesInputs';
 declare const _default: import("vue").DefineComponent<{
     color: {
         type: PropType<keyof DefaultValidationPaletteColors>;
@@ -13,8 +13,8 @@ declare const _default: import("vue").DefineComponent<{
         default: keyof DefaultValidationPalettes;
     };
     size: {
-        type: PropType<keyof InputsSizes>;
-        default: keyof import("../..").SizesInputs;
+        type: PropType<keyof SizesInputs>;
+        default: keyof SizesInputs;
     };
     type: {
         type: PropType<"number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url">;
@@ -38,8 +38,8 @@ declare const _default: import("vue").DefineComponent<{
         default: keyof DefaultValidationPalettes;
     };
     size: {
-        type: PropType<keyof InputsSizes>;
-        default: keyof import("../..").SizesInputs;
+        type: PropType<keyof SizesInputs>;
+        default: keyof SizesInputs;
     };
     type: {
         type: PropType<"number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url">;
@@ -56,7 +56,7 @@ declare const _default: import("vue").DefineComponent<{
     color: keyof DefaultValidationPaletteColors;
     palette: keyof DefaultValidationPalettes;
     type: "number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url";
-    size: keyof InputsSizes;
+    size: keyof SizesInputs;
     modelValue: string;
 }>;
 export default _default;

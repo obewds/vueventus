@@ -1,7 +1,7 @@
 import type { PropType } from 'vue';
 import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors';
 import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes';
-import type { SelectsSizes } from '../../types/SelectsSizes';
+import type { SizesSelects } from '../../types/SizesSelects';
 declare const _default: import("vue").DefineComponent<{
     color: {
         type: PropType<keyof DefaultValidationPaletteColors>;
@@ -12,8 +12,8 @@ declare const _default: import("vue").DefineComponent<{
         default: keyof DefaultValidationPalettes;
     };
     size: {
-        type: PropType<keyof SelectsSizes>;
-        default: keyof import("../../index.js").SizesSelects;
+        type: PropType<keyof SizesSelects>;
+        default: keyof SizesSelects;
     };
     modelValue: {
         type: StringConstructor;
@@ -32,8 +32,8 @@ declare const _default: import("vue").DefineComponent<{
         default: keyof DefaultValidationPalettes;
     };
     size: {
-        type: PropType<keyof SelectsSizes>;
-        default: keyof import("../../index.js").SizesSelects;
+        type: PropType<keyof SizesSelects>;
+        default: keyof SizesSelects;
     };
     modelValue: {
         type: StringConstructor;
@@ -44,7 +44,7 @@ declare const _default: import("vue").DefineComponent<{
 }, {
     color: keyof DefaultValidationPaletteColors;
     palette: keyof DefaultValidationPalettes;
-    size: keyof SelectsSizes;
+    size: keyof SizesSelects;
     modelValue: string;
 }>;
 export default _default;

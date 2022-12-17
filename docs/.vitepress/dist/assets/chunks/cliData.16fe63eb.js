@@ -1362,7 +1362,7 @@ export default {
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, TextSizes } from '@obewds/vueventus'
+    import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, SizesText } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -1402,7 +1402,7 @@ export default {
                 default: appVv.defaults.VvAnchor.palette,
             },
             textSize: {
-                type: String as PropType<keyof TextSizes>,
+                type: String as PropType<keyof SizesText>,
                 default: appVv.defaults.VvAnchor.textSize,
             },
         },
@@ -1500,7 +1500,7 @@ export default {
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, InputsSizes } from '@obewds/vueventus'
+    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesInputs } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -1528,7 +1528,7 @@ export default {
                 default: appVv.defaults.VvCheckbox.palette,
             },
             size: {
-                type: String as PropType<keyof InputsSizes>,
+                type: String as PropType<keyof SizesInputs>,
                 default: appVv.defaults.VvCheckbox.size,
             },
         },
@@ -1707,7 +1707,7 @@ export default {
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultPaletteColors, DefaultPalettes, TextSizes } from '@obewds/vueventus'
+    import type { DefaultPaletteColors, DefaultPalettes, SizesText } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -1731,7 +1731,7 @@ export default {
                 default: appVv.defaults.VvEl.groundColor,
             },
             size: {
-                type: String as PropType<keyof TextSizes>,
+                type: String as PropType<keyof SizesText>,
                 default: appVv.defaults.VvEl.size,
             },
             tag: {
@@ -1968,7 +1968,7 @@ ${n}
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultValidationPalettes, DefaultValidationPaletteColors, InputsSizes } from '@obewds/vueventus'
+    import type { DefaultValidationPalettes, DefaultValidationPaletteColors, SizesInputs } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -1984,7 +1984,7 @@ ${n}
                 default: appVv.defaults.VvInput.palette,
             },
             size: {
-                type: String as PropType<keyof InputsSizes>,
+                type: String as PropType<keyof SizesInputs>,
                 default: appVv.defaults.VvInput.size,
             },
             type: {
@@ -2018,7 +2018,7 @@ ${n}
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultPaletteColors, DefaultPalettes, TextSizes } from '@obewds/vueventus'
+    import type { DefaultPaletteColors, DefaultPalettes, SizesText } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -2034,7 +2034,7 @@ ${n}
                 default: appVv.defaults.VvList.markerPalette,
             },
             size: {
-                type: String as PropType<keyof TextSizes>,
+                type: String as PropType<keyof SizesText>,
                 default: appVv.defaults.VvList.size,
             },
             tag: {
@@ -2575,7 +2575,7 @@ ${n}
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, InputsSizes } from '@obewds/vueventus'
+    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesInputs } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -2603,7 +2603,7 @@ ${n}
                 default: appVv.defaults.VvRadio.palette,
             },
             size: {
-                type: String as PropType<keyof InputsSizes>,
+                type: String as PropType<keyof SizesInputs>,
                 default: appVv.defaults.VvRadio.size,
             },
             value: {
@@ -2682,7 +2682,7 @@ ${n}
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, TextSizes } from '@obewds/vueventus'
+    import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, SizesText } from '@obewds/vueventus'
 
     export default defineComponent({
         
@@ -2712,7 +2712,7 @@ ${n}
                 default: appVv.defaults.VvRouterLink.palette,
             },
             textSize: {
-                type: String as PropType<keyof TextSizes>,
+                type: String as PropType<keyof SizesText>,
                 default: appVv.defaults.VvRouterLink.textSize,
             },
             to: {

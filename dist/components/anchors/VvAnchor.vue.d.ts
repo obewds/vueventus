@@ -2,7 +2,7 @@ import type { PropType } from 'vue';
 import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors';
 import type { DefaultPalettes } from '../../types/DefaultPalettes';
 import type { SizesButtons } from '../../types/SizesButtons';
-import type { TextSizes } from '../../types/TextSizes';
+import type { SizesText } from '../../types/SizesText';
 declare const _default: import("vue").DefineComponent<{
     button: {
         type: BooleanConstructor;
@@ -37,8 +37,8 @@ declare const _default: import("vue").DefineComponent<{
         default: keyof DefaultPalettes;
     };
     textSize: {
-        type: PropType<keyof TextSizes>;
-        default: keyof import("../../index.js").SizesText;
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
     };
 }, {
     classes: import("vue").ComputedRef<string>;
@@ -76,8 +76,8 @@ declare const _default: import("vue").DefineComponent<{
         default: keyof DefaultPalettes;
     };
     textSize: {
-        type: PropType<keyof TextSizes>;
-        default: keyof import("../../index.js").SizesText;
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
     };
 }>>, {
     button: boolean;
@@ -88,6 +88,6 @@ declare const _default: import("vue").DefineComponent<{
     external: boolean;
     href: string;
     palette: string | number;
-    textSize: keyof TextSizes;
+    textSize: keyof SizesText;
 }>;
 export default _default;
