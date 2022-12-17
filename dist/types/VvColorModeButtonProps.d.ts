@@ -1,10 +1,12 @@
 import type { DefaultPaletteColors } from './DefaultPaletteColors';
 import type { DefaultPalettes } from './DefaultPalettes';
+import type { SizesButtons } from './SizesButtons';
 import ValidButtonTypes from '../validators/ValidButtonTypes';
+import ValidColorModes from '../validators/ValidColorModes';
 export interface VvColorModeButtonProps {
-    color: DefaultPaletteColors | string;
-    mode: string;
-    palette: DefaultPalettes | string;
-    size: string;
+    color: keyof DefaultPaletteColors | string;
+    mode: ValidColorModes;
+    palette: keyof DefaultPalettes | string;
+    size: keyof SizesButtons | string;
     type: ValidButtonTypes;
 }

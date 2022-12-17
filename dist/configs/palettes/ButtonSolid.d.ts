@@ -1,3 +1,3 @@
-import type { DefaultConfigPalette } from '../../types/DefaultConfigPalette';
-declare const _default: DefaultConfigPalette;
+import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors';
+declare const _default: DefaultPaletteColors;
 export default _default;

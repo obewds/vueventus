@@ -1,1 +1,1 @@
-{"version":3,"file":"InputDefault.js","sourceRoot":"","sources":["../../../src/configs/palettes/InputDefault.ts"],"names":[],"mappings":"AAAA,yCAAyC;AAIzC,eAA0C;IACtC,SAAS,EAAE,qUAAqU;IAChV,KAAK,EAAE,yWAAyW;IAChX,OAAO,EAAE,yXAAyX;CACrY,CAAA"}
+{"version":3,"file":"InputDefault.js","sourceRoot":"","sources":["../../../src/configs/palettes/InputDefault.ts"],"names":[],"mappings":"AAAA,yCAAyC;AAIzC,eAAgD;IAC5C,SAAS,EAAE,qUAAqU;IAChV,KAAK,EAAE,yWAAyW;IAChX,OAAO,EAAE,yXAAyX;CACrY,CAAA"}

@@ -1,9 +1,9 @@
-import type { DefaultConfigPalette } from '../types/DefaultConfigPalette';
+import type { DefaultPaletteColors } from '../types/DefaultPaletteColors';
 import type { EmptyPalette } from './EmptyPalette';
 export interface ConfigBorders {
     palettes: {
-        default: DefaultConfigPalette;
-        [key: string]: EmptyPalette | DefaultConfigPalette;
+        default: DefaultPaletteColors;
+        [key: string]: EmptyPalette | DefaultPaletteColors;
     };
     [key: string]: any;
 }

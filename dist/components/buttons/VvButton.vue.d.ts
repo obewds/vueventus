@@ -1,25 +1,28 @@
 import ValidButtonTypes from '../../validators/ValidButtonTypes';
 import type { PropType } from 'vue';
+import type { DefaultButtonPalettes } from '../../types/DefaultButtonPalettes';
+import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors';
+import type { SizesButtons } from '../../types/SizesButtons';
 declare const _default: import("vue").DefineComponent<{
     block: {
         type: BooleanConstructor;
         default: boolean;
     };
     color: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultPaletteColors;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     fab: {
         type: BooleanConstructor;
         default: boolean;
     };
     palette: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultPalettes;
+        type: PropType<keyof DefaultButtonPalettes>;
+        default: keyof import("../..").DefaultPalettes;
     };
     size: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof SizesButtons>;
+        default: keyof SizesButtons;
     };
     type: {
         type: PropType<"button" | "submit" | "reset">;
@@ -35,20 +38,20 @@ declare const _default: import("vue").DefineComponent<{
         default: boolean;
     };
     color: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultPaletteColors;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     fab: {
         type: BooleanConstructor;
         default: boolean;
     };
     palette: {
-        type: StringConstructor;
-        default: string | import("../..").DefaultPalettes;
+        type: PropType<keyof DefaultButtonPalettes>;
+        default: keyof import("../..").DefaultPalettes;
     };
     size: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof SizesButtons>;
+        default: keyof SizesButtons;
     };
     type: {
         type: PropType<"button" | "submit" | "reset">;
@@ -56,11 +59,11 @@ declare const _default: import("vue").DefineComponent<{
         validator: (prop: ValidButtonTypes) => boolean;
     };
 }>>, {
-    color: string;
-    palette: string;
+    fab: boolean;
+    color: keyof DefaultPaletteColors;
+    palette: keyof DefaultButtonPalettes;
     type: "button" | "submit" | "reset";
     block: boolean;
-    fab: boolean;
-    size: string;
+    size: keyof SizesButtons;
 }>;
 export default _default;

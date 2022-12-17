@@ -1,11 +1,9 @@
 // ./src/types/InputsSizes.ts
 
-export interface InputsSizes {
-    'xs'?: string | undefined
-    'sm'?: string | undefined
-    'md'?: string | undefined
-    'lg'?: string | undefined
-    'xl'?: string | undefined
-    '2xl'?: string | undefined
-    [key: string]: string | undefined
-}
+// BUG: This interface is DEPRECIATED
+// TODO: Remove this interface from the package
+// use the "SizesInputs" interface instead
+
+import type { SizesInputs } from './SizesInputs'
+
+export interface InputsSizes extends SizesInputs {}

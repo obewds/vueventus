@@ -1,4 +1,7 @@
 import type { PropType } from 'vue';
+import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes';
+import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors';
+import type { InputsSizes } from '../../types/InputsSizes';
 import type { VvListboxData } from '../../types/VvListboxData';
 declare const _default: import("vue").DefineComponent<{
     data: {
@@ -38,24 +41,24 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     listboxButtonColor: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultValidationPaletteColors;
+        type: PropType<keyof DefaultValidationPaletteColors>;
+        default: keyof DefaultValidationPaletteColors;
     };
     listboxButtonPalette: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultValidationPalette;
+        type: PropType<keyof DefaultValidationPalettes>;
+        default: keyof DefaultValidationPalettes;
     };
     listboxOptionClasses: {
         type: StringConstructor;
         default: string;
     };
     listboxOptionColor: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultValidationPaletteColors;
+        type: PropType<keyof DefaultValidationPaletteColors>;
+        default: keyof DefaultValidationPaletteColors;
     };
     listboxOptionPalette: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultValidationPalette;
+        type: PropType<keyof DefaultValidationPalettes>;
+        default: keyof DefaultValidationPalettes;
     };
     listboxOptionsClasses: {
         type: StringConstructor;
@@ -82,8 +85,8 @@ declare const _default: import("vue").DefineComponent<{
         default: number;
     };
     size: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof InputsSizes>;
+        default: keyof InputsSizes;
     };
 }, {
     listboxButtonVvClasses: import("vue").ComputedRef<string>;
@@ -141,24 +144,24 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     listboxButtonColor: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultValidationPaletteColors;
+        type: PropType<keyof DefaultValidationPaletteColors>;
+        default: keyof DefaultValidationPaletteColors;
     };
     listboxButtonPalette: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultValidationPalette;
+        type: PropType<keyof DefaultValidationPalettes>;
+        default: keyof DefaultValidationPalettes;
     };
     listboxOptionClasses: {
         type: StringConstructor;
         default: string;
     };
     listboxOptionColor: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultValidationPaletteColors;
+        type: PropType<keyof DefaultValidationPaletteColors>;
+        default: keyof DefaultValidationPaletteColors;
     };
     listboxOptionPalette: {
-        type: StringConstructor;
-        default: string | import("../../index.js").DefaultValidationPalette;
+        type: PropType<keyof DefaultValidationPalettes>;
+        default: keyof DefaultValidationPalettes;
     };
     listboxOptionsClasses: {
         type: StringConstructor;
@@ -185,15 +188,15 @@ declare const _default: import("vue").DefineComponent<{
         default: number;
     };
     size: {
-        type: StringConstructor;
-        default: string;
+        type: PropType<keyof InputsSizes>;
+        default: keyof InputsSizes;
     };
 }>> & {
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     data: VvListboxData[];
     label: string;
-    size: string;
+    size: keyof InputsSizes;
     labelClasses: string;
     displayClasses: string;
     displayDisabledClasses: string;
@@ -201,11 +204,11 @@ declare const _default: import("vue").DefineComponent<{
     iconSelectedClasses: string;
     iconsSizeClasses: string;
     listboxButtonClasses: string;
-    listboxButtonColor: string;
-    listboxButtonPalette: string;
+    listboxButtonColor: keyof DefaultValidationPaletteColors;
+    listboxButtonPalette: keyof DefaultValidationPalettes;
     listboxOptionClasses: string;
-    listboxOptionColor: string;
-    listboxOptionPalette: string;
+    listboxOptionColor: keyof DefaultValidationPaletteColors;
+    listboxOptionPalette: keyof DefaultValidationPalettes;
     listboxOptionsClasses: string;
     listboxOptionsWithLabelSpacing: string;
     listboxOptionsWithoutLabelSpacing: string;

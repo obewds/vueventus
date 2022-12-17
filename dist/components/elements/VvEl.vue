@@ -2,8 +2,14 @@
 
 <script lang="ts">
 
-    import { computed, defineComponent, inject } from 'vue'
+    import { Prop, computed, defineComponent, inject } from 'vue'
+    import ValidElementTags from '../../validators/ValidElementTags'
     import VvConfig from '../../configs/VvConfig.js'
+
+    import type { PropType } from 'vue'
+    import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
+    import type { DefaultPalettes } from '../../types/DefaultPalettes'
+    import type { TextSizes } from '../../types/TextSizes'
 
     export default defineComponent({
 
@@ -11,35 +17,36 @@
 
         props: {
             borderPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: VvConfig.defaults.VvEl.borderPalette,
             },
             borderColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvEl.borderColor,
             },
             groundPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: VvConfig.defaults.VvEl.groundPalette,
             },
             groundColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvEl.groundColor,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof TextSizes>,
                 default: VvConfig.defaults.VvEl.size,
             },
             tag: {
-                type: String,
+                type: String as PropType<ValidElementTags>,
                 default: VvConfig.defaults.VvEl.tag,
+                validator: (prop: ValidElementTags) => (ValidElementTags).includes(prop),
             },
             textPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: VvConfig.defaults.VvEl.textPalette,
             },
             textColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvEl.textColor,
             },
         },
@@ -50,22 +57,22 @@
 
             let classes = computed( () => {
 
-                let output: string[] = []
+                let output = []
 
                 if ( vv?.text?.sizes?.[props.size] ) {
-                    output.push( vv.text.sizes[props.size] as string )
+                    output.push( vv.text.sizes[props.size] )
                 }
 
-                if ( vv?.borders?.palettes?.[props.borderPalette as keyof typeof vv.borders.palettes]?.[props.borderColor] ) {
-                    output.push( vv.borders.palettes[props.borderPalette as keyof typeof vv.borders.palettes][props.borderColor] as string )
+                if ( vv?.borders?.palettes?.[props.borderPalette]?.[props.borderColor] ) {
+                    output.push( vv.borders.palettes[props.borderPalette][props.borderColor] )
                 }
 
-                if ( vv?.grounds?.palettes?.[props.groundPalette as keyof typeof vv.grounds.palettes]?.[props.groundColor] ) {
-                    output.push( vv.grounds.palettes[props.groundPalette as keyof typeof vv.grounds.palettes][props.groundColor] as string )
+                if ( vv?.grounds?.palettes?.[props.groundPalette]?.[props.groundColor] ) {
+                    output.push( vv.grounds.palettes[props.groundPalette][props.groundColor] )
                 }
 
-                if ( vv?.text?.palettes?.[props.textPalette as keyof typeof vv.text.palettes]?.[props.textColor] ) {
-                    output.push( vv.text.palettes[props.textPalette as keyof typeof vv.text.palettes][props.textColor] as string )
+                if ( vv?.text?.palettes?.[props.textPalette]?.[props.textColor] ) {
+                    output.push( vv.text.palettes[props.textPalette][props.textColor] )
                 }
 
                 return output.join(' ').trim()

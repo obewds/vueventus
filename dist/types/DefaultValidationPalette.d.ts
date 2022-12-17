@@ -1,5 +1,3 @@
-export interface DefaultValidationPalette {
-    default?: string;
-    underlined?: string;
-    [key: string]: string | undefined;
+import type { DefaultValidationPalettes } from './DefaultValidationPalettes';
+export interface DefaultValidationPalette extends DefaultValidationPalettes {
 }

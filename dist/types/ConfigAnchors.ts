@@ -1,6 +1,6 @@
 // ./src/types/ConfigAnchors.ts
 
-import type { DefaultConfigPalette } from '../types/DefaultConfigPalette'
+import type { DefaultPaletteColors } from '../types/DefaultPaletteColors'
 import type { BaseFunction } from './BaseFunction'
 import type { EmptyPalette } from './EmptyPalette'
 import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
@@ -17,8 +17,8 @@ export interface ConfigAnchors {
     getSizeClasses: ReturnsClassesFunction
     classes: ReturnsClassesFunction
     palettes: {
-        default: DefaultConfigPalette
-        [key: string]: EmptyPalette | DefaultConfigPalette
+        default: DefaultPaletteColors
+        [key: string]: EmptyPalette | DefaultPaletteColors
     }
     [key: string]: any
 }

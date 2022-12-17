@@ -61,6 +61,7 @@ export { default as uniqueArray } from './helpers/uniqueArray';
 export { default as ValidAudioSourceTypes } from './validators/ValidAudioSourceTypes';
 export { default as ValidButtonTypes } from './validators/ValidButtonTypes';
 export { default as ValidColorModes } from './validators/ValidColorModes';
+export { default as ValidCommentStyles } from './validators/ValidCommentStyles';
 export { default as ValidDirections } from './validators/ValidDirections';
 export { default as ValidElementTags } from './validators/ValidElementTags';
 export { default as ValidFontAwesomeFamilies } from './validators/ValidFontAwesomeFamilies';
@@ -69,6 +70,7 @@ export { default as ValidHeadingLevels } from './validators/ValidHeadingLevels';
 export { default as ValidImageSourceTypes } from './validators/ValidImageSourceTypes';
 export { default as ValidInputTypes } from './validators/ValidInputTypes';
 export { default as ValidListTypes } from './validators/ValidListTypes';
+export { default as ValidUrlDecorations } from './validators/ValidUrlDecorations';
 export { default as ValidVideoSourceTypes } from './validators/ValidVideoSourceTypes';
 // .src/components/anchors
 export { default as VvAnchor } from './components/anchors/VvAnchor.vue';

@@ -1,7 +1,8 @@
-import type { DefaultValidationPaletteColors } from '../types/DefaultValidationPaletteColors';
-import type { DefaultValidationPalette } from '../types/DefaultValidationPalette';
+import type { DefaultValidationPaletteColors } from './DefaultValidationPaletteColors';
+import type { DefaultValidationPalettes } from './DefaultValidationPalettes';
+import type { SizesSelects } from './SizesSelects';
 export interface VvSelectProps {
-    color: DefaultValidationPaletteColors | string;
-    palette: DefaultValidationPalette | string;
-    size: string;
+    color: keyof DefaultValidationPaletteColors | string;
+    palette: keyof DefaultValidationPalettes | string;
+    size: keyof SizesSelects | string;
 }

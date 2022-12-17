@@ -1,8 +1,3 @@
-export interface DefaultConfigPalette {
-    default?: string;
-    error?: string;
-    primary?: string;
-    secondary?: string;
-    success?: string;
-    [key: string]: string | undefined;
+import type { DefaultPaletteColors } from './DefaultPaletteColors';
+export interface DefaultConfigPalette extends DefaultPaletteColors {
 }

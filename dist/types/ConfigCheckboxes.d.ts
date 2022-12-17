@@ -1,5 +1,5 @@
 import type { BaseFunction } from './BaseFunction';
-import type { DefaultValidationPalette } from './DefaultValidationPalette';
+import type { DefaultValidationPaletteColors } from './DefaultValidationPaletteColors';
 import type { EmptyPalette } from './EmptyPalette';
 import type { InputsSizes } from './InputsSizes';
 import type { ReturnsClassesFunction } from './ReturnsClassesFunction';
@@ -16,8 +16,8 @@ export interface ConfigCheckboxes {
     getSizeClasses: ReturnsClassesFunction;
     classes: ReturnsClassesFunction;
     palettes: {
-        default: DefaultValidationPalette;
-        [key: string]: EmptyPalette | DefaultValidationPalette;
+        default: DefaultValidationPaletteColors;
+        [key: string]: EmptyPalette | DefaultValidationPaletteColors;
     };
     [key: string]: any;
 }

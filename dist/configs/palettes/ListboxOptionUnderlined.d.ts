@@ -1,3 +1,3 @@
-import type { DefaultValidationPalette } from '../../types/DefaultValidationPalette';
-declare const _default: DefaultValidationPalette;
+import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors';
+declare const _default: DefaultValidationPaletteColors;
 export default _default;

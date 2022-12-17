@@ -1,5 +1,5 @@
 import type { BaseFunction } from './BaseFunction';
-import type { DefaultValidationPalette } from './DefaultValidationPalette';
+import type { DefaultValidationPaletteColors } from './DefaultValidationPaletteColors';
 import type { EmptyPalette } from './EmptyPalette';
 import type { SelectsSizes } from './SelectsSizes';
 import type { ReturnsClassesFunction } from './ReturnsClassesFunction';
@@ -17,9 +17,9 @@ export interface ConfigSelects {
     getSizeClasses: ReturnsClassesFunction;
     classes: ReturnsClassesFunction;
     palettes: {
-        default: DefaultValidationPalette;
-        underlined: DefaultValidationPalette;
-        [key: string]: EmptyPalette | DefaultValidationPalette;
+        default: DefaultValidationPaletteColors;
+        underlined: DefaultValidationPaletteColors;
+        [key: string]: EmptyPalette | DefaultValidationPaletteColors;
     };
     [key: string]: any;
 }

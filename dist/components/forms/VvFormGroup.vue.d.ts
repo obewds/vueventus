@@ -1,47 +1,50 @@
+import type { PropType } from 'vue';
+import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors';
+import type { DefaultPalettes } from '../../types/DefaultPalettes';
 declare const _default: import("vue").DefineComponent<{
     displayError: {
         type: BooleanConstructor;
-        default: any;
+        default: boolean;
     };
     displayHelp: {
         type: BooleanConstructor;
-        default: any;
+        default: boolean;
     };
     displaySuccess: {
         type: BooleanConstructor;
-        default: any;
+        default: boolean;
     };
     errorClasses: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     errorText: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     errorTextColor: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     errorTextPalette: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPalettes>;
+        default: keyof DefaultPalettes;
     };
     helpClasses: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     helpText: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     helpTextColor: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     helpTextPalette: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPalettes>;
+        default: keyof DefaultPalettes;
     };
     label: {
         type: StringConstructor;
@@ -53,84 +56,84 @@ declare const _default: import("vue").DefineComponent<{
     };
     labelClasses: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     labelTextColor: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     labelTextPalette: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPalettes>;
+        default: keyof DefaultPalettes;
     };
     slotParentClasses: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     successClasses: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     successText: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     successTextColor: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     successTextPalette: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPalettes>;
+        default: keyof DefaultPalettes;
     };
     wrapperClasses: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
 }, unknown, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     displayError: {
         type: BooleanConstructor;
-        default: any;
+        default: boolean;
     };
     displayHelp: {
         type: BooleanConstructor;
-        default: any;
+        default: boolean;
     };
     displaySuccess: {
         type: BooleanConstructor;
-        default: any;
+        default: boolean;
     };
     errorClasses: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     errorText: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     errorTextColor: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     errorTextPalette: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPalettes>;
+        default: keyof DefaultPalettes;
     };
     helpClasses: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     helpText: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     helpTextColor: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     helpTextPalette: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPalettes>;
+        default: keyof DefaultPalettes;
     };
     label: {
         type: StringConstructor;
@@ -142,39 +145,39 @@ declare const _default: import("vue").DefineComponent<{
     };
     labelClasses: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     labelTextColor: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     labelTextPalette: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPalettes>;
+        default: keyof DefaultPalettes;
     };
     slotParentClasses: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     successClasses: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     successText: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
     successTextColor: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPaletteColors>;
+        default: keyof DefaultPaletteColors;
     };
     successTextPalette: {
-        type: StringConstructor;
-        default: any;
+        type: PropType<keyof DefaultPalettes>;
+        default: keyof DefaultPalettes;
     };
     wrapperClasses: {
         type: StringConstructor;
-        default: any;
+        default: string;
     };
 }>>, {
     displayError: boolean;
@@ -182,20 +185,20 @@ declare const _default: import("vue").DefineComponent<{
     displaySuccess: boolean;
     errorClasses: string;
     errorText: string;
-    errorTextColor: string;
-    errorTextPalette: string;
+    errorTextColor: keyof DefaultPaletteColors;
+    errorTextPalette: keyof DefaultPalettes;
     helpClasses: string;
     helpText: string;
-    helpTextColor: string;
-    helpTextPalette: string;
+    helpTextColor: keyof DefaultPaletteColors;
+    helpTextPalette: keyof DefaultPalettes;
     labelClasses: string;
-    labelTextColor: string;
-    labelTextPalette: string;
+    labelTextColor: keyof DefaultPaletteColors;
+    labelTextPalette: keyof DefaultPalettes;
     slotParentClasses: string;
     successClasses: string;
     successText: string;
-    successTextColor: string;
-    successTextPalette: string;
+    successTextColor: keyof DefaultPaletteColors;
+    successTextPalette: keyof DefaultPalettes;
     wrapperClasses: string;
 }>;
 export default _default;
