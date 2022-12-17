@@ -73,6 +73,7 @@ export { default as ValidHeadingLevels } from './validators/ValidHeadingLevels'
 export { default as ValidImageSourceTypes } from './validators/ValidImageSourceTypes'
 export { default as ValidInputTypes } from './validators/ValidInputTypes'
 export { default as ValidListTypes } from './validators/ValidListTypes'
+export { default as ValidUrlDecorations } from './validators/ValidUrlDecorations'
 export { default as ValidVideoSourceTypes } from './validators/ValidVideoSourceTypes'
 
 // .src/components/anchors
