@@ -9,7 +9,7 @@
     import type { PropType } from 'vue'
     import type { DefaultValidationPalettes } from '../../types/DefaultValidationPalettes'
     import type { DefaultValidationPaletteColors } from '../../types/DefaultValidationPaletteColors'
-    import type { InputsSizes } from '../../types/InputsSizes'
+    import type { SizesInputs } from '../../types/SizesInputs'
 
     export default defineComponent({
 
@@ -27,7 +27,7 @@
                 default: VvConfig.defaults.VvInput.palette,
             },
             size: {
-                type: String as PropType<keyof InputsSizes>,
+                type: String as PropType<keyof SizesInputs>,
                 default: VvConfig.defaults.VvInput.size,
             },
             type: {
