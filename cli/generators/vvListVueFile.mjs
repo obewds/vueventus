@@ -12,6 +12,7 @@ const output = `<!-- ./src/components/vv/lists/VvList.vue -->
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
+    import type { DefaultPaletteColors, DefaultPalettes, TextSizes } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -19,15 +20,15 @@ const output = `<!-- ./src/components/vv/lists/VvList.vue -->
 
         props: {
             markerColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvList.markerColor,
             },
             markerPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvList.markerPalette,
             },
             size: {
-                type: String,
+                type: String as PropType<keyof TextSizes>,
                 default: appVv.defaults.VvList.size,
             },
             tag: {
