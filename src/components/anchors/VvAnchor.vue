@@ -10,7 +10,7 @@
     import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
     import type { DefaultPalettes } from '../../types/DefaultPalettes'
     import type { SizesButtons } from '../../types/SizesButtons'
-    import type { TextSizes } from '../../types/TextSizes'
+    import type { SizesText } from '../../types/SizesText'
 
     export default defineComponent({
 
@@ -50,7 +50,7 @@
                 default: VvConfig.defaults.VvAnchor.palette,
             },
             textSize: {
-                type: String as PropType<keyof TextSizes>,
+                type: String as PropType<keyof SizesText>,
                 default: VvConfig.defaults.VvAnchor.textSize,
             },
         },
