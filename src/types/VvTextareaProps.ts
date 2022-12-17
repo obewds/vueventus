@@ -1,11 +1,13 @@
 // ./src/types/VvTextareaProps.ts
 
-import type { DefaultValidationPaletteColors } from '../types/DefaultValidationPaletteColors'
-import type { DefaultValidationPalette } from '../types/DefaultValidationPalette'
+import type { DefaultValidationPaletteColors } from './DefaultValidationPaletteColors'
+import type { DefaultValidationPalettes } from './DefaultValidationPalettes'
+import type { SizesTextareas } from './SizesTextareas'
+import type { SizesTextareasRows } from './SizesTextareasRows'
 
 export interface VvTextareaProps {
-    color: DefaultValidationPaletteColors | string
-    palette: DefaultValidationPalette | string
-    size: string
-    rowSize: string
+    color: keyof DefaultValidationPaletteColors | string
+    palette: keyof DefaultValidationPalettes | string
+    size: keyof SizesTextareas | string
+    rowSize: keyof SizesTextareasRows | string
 }
