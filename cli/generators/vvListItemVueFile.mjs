@@ -11,13 +11,16 @@ const output = `<!-- ./src/components/vv/lists/VvListItem.vue -->
     import { VvListItem } from '@obewds/vueventus'
     import appVv from '../../../app.vv'
 
+    import type { PropType } from 'vue'
+    import type { DefaultPaletteColors, DefaultPalettes } from '@obewds/vueventus'
+
     export default defineComponent({
 
         components: { VvListItem },
 
         props: {
             color: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvListItem.color,
             },
             enableColoredSymbols: {
@@ -25,15 +28,15 @@ const output = `<!-- ./src/components/vv/lists/VvListItem.vue -->
                 default: appVv.defaults.VvListItem.enableColoredSymbols,
             },
             palette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvListItem.palette,
             },
             symbolColor: {
-                type: String,
+                type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvListItem.symbolColor,
             },
             symbolPalette: {
-                type: String,
+                type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvListItem.symbolPalette,
             },
         },
