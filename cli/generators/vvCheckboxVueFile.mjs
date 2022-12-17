@@ -12,7 +12,7 @@ const output = `<!-- ./src/components/vv/inputs/VvCheckbox.vue -->
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, InputsSizes } from '@obewds/vueventus'
+    import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesInputs } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -40,7 +40,7 @@ const output = `<!-- ./src/components/vv/inputs/VvCheckbox.vue -->
                 default: appVv.defaults.VvCheckbox.palette,
             },
             size: {
-                type: String as PropType<keyof InputsSizes>,
+                type: String as PropType<keyof SizesInputs>,
                 default: appVv.defaults.VvCheckbox.size,
             },
         },
