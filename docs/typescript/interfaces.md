@@ -695,7 +695,7 @@ import type { DefaultValidationPalette } from '@obewds/vueventus'
 
 
 
-## EmptyPalette
+## EmptyPalette (DEPRECIATED)
 
 ### Import
 
