@@ -1,6 +1,5 @@
 import type { BaseFunction } from './BaseFunction';
 import type { DefaultPaletteColors } from '../types/DefaultPaletteColors';
-import type { EmptyPalette } from './EmptyPalette';
 import type { ReturnsClassesFunction } from './ReturnsClassesFunction';
 import type { SizesButtons } from './SizesButtons';
 export interface ConfigButtons {
@@ -30,7 +29,7 @@ export interface ConfigButtons {
     palettes: {
         solid: DefaultPaletteColors;
         outline: DefaultPaletteColors;
-        [key: string]: EmptyPalette | DefaultPaletteColors;
+        [key: string]: DefaultPaletteColors;
     };
     [key: string]: any;
 }
