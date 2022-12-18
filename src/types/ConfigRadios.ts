@@ -2,7 +2,6 @@
 
 import type { BaseFunction } from './BaseFunction'
 import type { DefaultValidationPaletteColors } from './DefaultValidationPaletteColors'
-import type { EmptyPalette } from './EmptyPalette'
 import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
 import type { SizesInputs } from './SizesInputs'
 
@@ -20,7 +19,7 @@ export interface ConfigRadios {
     classes: ReturnsClassesFunction
     palettes: {
         default: DefaultValidationPaletteColors
-        [key: string]: EmptyPalette | DefaultValidationPaletteColors
+        [key: string]: DefaultValidationPaletteColors
     }
     [key: string]: any
 }
