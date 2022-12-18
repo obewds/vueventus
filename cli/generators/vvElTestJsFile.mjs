@@ -14,6 +14,19 @@ test('VvEl.test.vue component mounts successfully', async () => {
 
 })
 
+
+test('VvEl.vue component accepts a tag prop that validates', async () => {
+
+    const wrapper = mount(VvEl, {
+        props: {
+            tag: 'div',
+        },
+    })
+
+    expect(wrapper.html()).toBeTruthy()
+
+})
+
 `
 
 return output
