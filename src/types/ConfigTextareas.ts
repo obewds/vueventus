@@ -2,7 +2,6 @@
 
 import type { BaseFunction } from './BaseFunction'
 import type { DefaultValidationPaletteColors } from './DefaultValidationPaletteColors'
-import type { EmptyPalette } from './EmptyPalette'
 import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
 import type { ReturnsNumberFunction } from './ReturnsNumberFunction'
 import type { SizesTextareas } from './SizesTextareas'
@@ -24,7 +23,7 @@ export interface ConfigTextareas {
     palettes: {
         default: DefaultValidationPaletteColors
         underlined: DefaultValidationPaletteColors
-        [key: string]: EmptyPalette | DefaultValidationPaletteColors
+        [key: string]: DefaultValidationPaletteColors
     }
     sizes: SizesTextareas
     rowSizes: SizesTextareasRows

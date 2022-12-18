@@ -66,7 +66,7 @@ title: Typescript Modules
 * [DefaultValidationPaletteColors](/typescript/interfaces#defaultvalidationpalettecolors)
 * [DefaultValidationPalette](/typescript/interfaces#defaultvalidationpalette-depreciated) (DEPRECIATED)
 * [DefaultValidationPalettes](/typescript/interfaces#defaultvalidationpalettes)
-* [EmptyPalette](/typescript/interfaces#emptypalette)
+* [EmptyPalette](/typescript/interfaces#emptypalette-depreciated) (DEPRECIATED)
 * [GroundTextColors](/typescript/interfaces#groundtextcolors)
 * [InputsSizes](/typescript/interfaces#inputssizes-depreciated) (DEPRECIATED)
 * [MonthNames](/typescript/interfaces#monthnames)

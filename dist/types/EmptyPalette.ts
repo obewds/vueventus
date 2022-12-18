@@ -1,6 +1,7 @@
 // ./src/types/EmptyPalette.ts
 
-// TODO: Depreciate this interface???
+// BUG: This interface is DEPRECIATED
+// TODO: Remove this interface from the package
 
 import type { DefaultColors } from './DefaultColors'
 
