@@ -2,9 +2,8 @@
 
 import type { BaseFunction } from './BaseFunction'
 import type { DefaultValidationPaletteColors } from './DefaultValidationPaletteColors'
-import type { EmptyPalette } from './EmptyPalette'
-import type { SizesSelects } from './SizesSelects'
 import type { ReturnsClassesFunction } from './ReturnsClassesFunction'
+import type { SizesSelects } from './SizesSelects'
 
 export interface ConfigSelects {
     border: string
@@ -22,7 +21,7 @@ export interface ConfigSelects {
     palettes: {
         default: DefaultValidationPaletteColors
         underlined: DefaultValidationPaletteColors
-        [key: string]: EmptyPalette | DefaultValidationPaletteColors
+        [key: string]: DefaultValidationPaletteColors
     }
     [key: string]: any
 }
