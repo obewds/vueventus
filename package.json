@@ -46,7 +46,7 @@
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
     "@vitejs/plugin-vue": "^3.2.0",
-    "@vitest/coverage-c8": "^0.25.7",
+    "@vitest/coverage-c8": "^0.26.2",
     "@vue/test-utils": "^2.2.6",
     "auto-changelog": "^2.4.0",
     "autoprefixer": "^10.4.13",
