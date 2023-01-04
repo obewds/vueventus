@@ -117,7 +117,6 @@ import type { AppColors } from './types/AppColors'
 import type { AppTintShadePairs } from './types/AppTintShadePairs'
 import type { AppTintsShades } from './types/AppTintsShades'
 import type { BaseFunction } from './types/BaseFunction'
-import type { ButtonsSizes } from './types/ButtonsSizes' // DEPRECIATED
 import type { ColorMode } from './types/ColorMode'
 import type { ConfigAnchors } from './types/ConfigAnchors'
 import type { ConfigBorders } from './types/ConfigBorders'
@@ -136,32 +135,23 @@ import type { ConfigTextareas } from './types/ConfigTextareas'
 import type { ConfigTransitions } from './types/ConfigTransitions'
 import type { ConfigVv } from './types/ConfigVv'
 import type { DefaultColors } from './types/DefaultColors'
-import type { DefaultConfigPalette } from './types/DefaultConfigPalette' // DEPRECIATED
 import type { DefaultButtonPalettes } from './types/DefaultButtonPalettes'
-import type { DefaultInputPalettes } from './types/DefaultInputPalettes' // DEPRECIATED
 import type { DefaultPaletteColors } from './types/DefaultPaletteColors'
 import type { DefaultPalettes } from './types/DefaultPalettes'
-import type { DefaultSelectPalettes } from './types/DefaultSelectPalettes' // DEPRECIATED
 import type { DefaultValidationPaletteColors } from './types/DefaultValidationPaletteColors'
-import type { DefaultValidationPalette } from './types/DefaultValidationPalette' // DEPRECIATED
 import type { DefaultValidationPalettes } from './types/DefaultValidationPalettes'
 import type { GroundTextColors } from './types/GroundTextColors'
-import type { InputsSizes } from './types/InputsSizes' // DEPRECIATED
 import type { MonthNames } from './types/MonthNames'
 import type { MonthNamesTypes } from './types/MonthNamesTypes'
 import type { MonthNamesTypesArray } from './types/MonthNamesTypesArray'
 import type { ReturnsClassesFunction } from './types/ReturnsClassesFunction'
 import type { ReturnsNumberFunction } from './types/ReturnsNumberFunction'
-import type { SelectsSizes } from './types/SelectsSizes' // DEPRECIATED
 import type { SizesButtons } from './types/SizesButtons'
 import type { SizesInputs } from './types/SizesInputs'
 import type { SizesSelects } from './types/SizesSelects'
 import type { SizesText } from './types/SizesText'
 import type { SizesTextareas } from './types/SizesTextareas'
 import type { SizesTextareasRows } from './types/SizesTextareasRows'
-import type { TextareasSizes } from './types/TextareasSizes' // DEPRECIATED
-import type { TextareasRowSizes } from './types/TextareasRowSizes' // DEPRECIATED
-import type { TextSizes } from './types/TextSizes' // DEPRECIATED
 import type { TransitionsClasses } from './types/TransitionsClasses'
 import type { TransitionsCustom } from './types/TransitionsCustom'
 import type { TransitionsCustomOptions } from './types/TransitionsCustomOptions'
@@ -194,7 +184,6 @@ export type { AppColors }
 export type { AppTintShadePairs }
 export type { AppTintsShades }
 export type { BaseFunction }
-export type { ButtonsSizes }// DEPRECIATED
 export type { ColorMode }
 export type { ConfigAnchors }
 export type { ConfigBorders }
@@ -213,32 +202,23 @@ export type { ConfigTextareas }
 export type { ConfigTransitions }
 export type { ConfigVv }
 export type { DefaultColors }
-export type { DefaultConfigPalette } // DEPRECIATED
 export type { DefaultButtonPalettes }
-export type { DefaultInputPalettes } // DEPRECIATED
 export type { DefaultPaletteColors }
 export type { DefaultPalettes }
-export type { DefaultSelectPalettes } // DEPRECIATED
 export type { DefaultValidationPaletteColors }
-export type { DefaultValidationPalette } // DEPRECIATED
 export type { DefaultValidationPalettes }
 export type { GroundTextColors }
-export type { InputsSizes }// DEPRECIATED
 export type { MonthNames }
 export type { MonthNamesTypes }
 export type { MonthNamesTypesArray }
 export type { ReturnsClassesFunction }
 export type { ReturnsNumberFunction }
-export type { SelectsSizes }// DEPRECIATED
 export type { SizesButtons }
 export type { SizesInputs }
 export type { SizesSelects }
 export type { SizesText }
 export type { SizesTextareas }
 export type { SizesTextareasRows }
-export type { TextareasSizes }// DEPRECIATED
-export type { TextareasRowSizes }// DEPRECIATED
-export type { TextSizes }// DEPRECIATED
 export type { TransitionsClasses }
 export type { TransitionsCustom }
 export type { TransitionsCustomOptions }
