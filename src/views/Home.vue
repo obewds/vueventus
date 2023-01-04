@@ -76,10 +76,14 @@
             VUE FORM COMPONENTS
         </div>
 
-        <div :class="[tw.grid, 'grid-cols-1']">
+        <div :class="[tw.grid, 'grid-cols-1 sm:grid-cols-2']">
 
             <DevViewLinkCard icon="component" to="/components/forms/vv-form-group">
                 VvFormGroup
+            </DevViewLinkCard>
+
+            <DevViewLinkCard icon="component" to="/components/forms/vv-quad-form-group">
+                VvQuadFormGroup
             </DevViewLinkCard>
 
         </div>
@@ -164,7 +168,7 @@
         <div :class="[tw.grid, 'grid-cols-1 sm:grid-cols-2']">
 
             <DevViewLinkCard icon="component" to="/components/selects/vv-listbox">
-                VvListboxPage
+                VvListbox
             </DevViewLinkCard>
 
             <DevViewLinkCard icon="component" to="/components/selects/vv-select">
