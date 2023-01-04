@@ -53,8 +53,8 @@ export default function (userOpts, stackObj, installPkgsArr) {
     // as currently Vite v4 conflicts with a peer dep for Vite v3 in vite-plugin-vue-markdown
     run(`npm create vite@3.2.1 ${userOpts.name} -- --template vue-ts`)
     
-    
-    installPkgsArr.push('vite@latest')
+    // TODO: Same as to do above! ^^^
+    installPkgsArr.push('vite@3.2.1')
 
     
     // copy each vite generated folder and file from the vite generated directory back up into the root directory
