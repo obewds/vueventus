@@ -174,7 +174,7 @@ The {{ $frontmatter.title }} `buttonFab` prop sets the component instance to use
 
 
 ## Prop: buttonSize
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvRouterLink.buttonSize }}"`**
 
@@ -207,6 +207,10 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
     </VvAnchor>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -215,7 +219,7 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 
 
 ## Prop: color
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvRouterLink.color }}"`**
 
@@ -267,6 +271,10 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -275,7 +283,7 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 
 
 ## Prop: palette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvRouterLink.palette }}"`**
 
@@ -371,6 +379,10 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -378,7 +390,7 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 
 
 ## Prop: textSize
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvRouterLink.textSize }}"`**
 
@@ -484,7 +496,9 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 </div>
 :::
 
-
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
