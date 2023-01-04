@@ -6,6 +6,8 @@ title: VvPrismVars Component
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
 </script>
 
+<!-- TODO: This docs page needs to be updated so all default values pull from VvConfig data -->
+
 
 
 # {{ $frontmatter.title }}
@@ -38,7 +40,8 @@ import VvPrismVars from './vv/elements/VvPrismVars.vue'
 
 
 ## Prop: commentStyle
-
+<!-- TODO: change this type to new PropType keyof syntax -->
+<!-- TODO: this should use the new ValidCommentStyles validator -->
 Type: **`String`**  
 Valid Values: **`"normal"`**, **`"italic"`**, **`"oblique"`**  
 Default: **`"normal"`**
@@ -50,6 +53,10 @@ The {{ $frontmatter.title }} `commentStyle` prop sets the font style of comments
 ```html
 <VvPrismVars comment-style="normal"/>
 ```
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
@@ -111,9 +118,9 @@ The {{ $frontmatter.title }} `lineHighlightOpacity` prop sets the opacity of hig
 
 
 ## Prop: textShadow
-
+<!-- TODO: change this type to new PropType keyof syntax -->
+<!-- TODO: this should use the new ValidCommentStyles validator -->
 Type: **`String`**  
-Valid Values: **`"normal"`**, **`"italic"`**, **`"oblique"`**  
 Default: **`"unset"`**
 
 The {{ $frontmatter.title }} `textShadow` prop sets the text shadowing used for highlighted code. VueVentus sets this to `"unset"` by default, because text shadows can make the code a little harder to read in the contexts of dark/light mode highlighted code.
@@ -124,13 +131,20 @@ The {{ $frontmatter.title }} `textShadow` prop sets the text shadowing used for 
 <VvPrismVars text-shadow="unset"/>
 ```
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
+
 
 
 
 
 
 ## Prop: urlDecoration
-
+<!-- TODO: change this type to new PropType keyof syntax -->
+<!-- TODO: this should use the new ValidUrlDecorations validator -->
 Type: **`String`**  
 Valid Values: **`"underline"`**, **`"overline"`**, **`"none"`**  
 Default: **`"underline"`**
@@ -142,6 +156,10 @@ The {{ $frontmatter.title }} `urlDecoration` prop sets the text decoration for a
 ```html
 <VvPrismVars url-decoration="underline"/>
 ```
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
