@@ -46,7 +46,7 @@ import { VvEl } from '@obewds/vueventus'
 
 
 ## Prop: borderPalette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvEl.borderPalette }}"`**
 
@@ -68,13 +68,17 @@ The {{ $frontmatter.title }} `borderPalette` prop sets the component instance bo
     </VvEl>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
 
 
 ## Prop: borderColor
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvEl.borderColor }}"`**
 
@@ -116,11 +120,17 @@ The {{ $frontmatter.title }} `borderColor` prop sets the component instance bord
 </div>
 :::
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
+
 
 
 
 ## Prop: groundPalette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvEl.groundPalette }}"`**
 
@@ -222,6 +232,10 @@ The {{ $frontmatter.title }} `groundPalette` prop sets the component instance bo
 </div>
 :::
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -233,7 +247,7 @@ The {{ $frontmatter.title }} `groundPalette` prop sets the component instance bo
 
 
 ## Prop: groundColor
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvEl.groundColor }}"`**
 
@@ -275,6 +289,13 @@ The {{ $frontmatter.title }} `groundColor` prop sets the component instance bord
 </div>
 :::
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
+
+
 
 
 
@@ -282,7 +303,7 @@ The {{ $frontmatter.title }} `groundColor` prop sets the component instance bord
 
 
 ## Prop: size
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvEl.size }}"`**
 
@@ -369,13 +390,20 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
 </div>
 :::
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
+
+
 
 
 
 
 
 ## Prop: tag
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Valid Values: [ValidElementTags Module](/components/prop-validators#validelementtags)  
 Default: **`"{{ VvConfig.defaults.VvEl.tag }}"`**
@@ -398,13 +426,20 @@ The {{ $frontmatter.title }} `tag` prop sets the HTML `tag` attribute to a value
     </VvEl>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
+
+
 
 
 
 
 
 ## Prop: textPalette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvEl.textPalette }}"`**
 
@@ -426,13 +461,20 @@ The {{ $frontmatter.title }} `textPalette` prop sets the component instance bord
     </VvEl>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
+
+
 
 
 
 
 
 ## Prop: textColor
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvEl.textColor }}"`**
 
@@ -473,6 +515,10 @@ The {{ $frontmatter.title }} `textColor` prop sets the component instance border
     </VvEl>
 </div>
 :::
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
