@@ -183,7 +183,7 @@ The {{ $frontmatter.title }} `buttonFab` prop sets the component instance to use
 
 ## Prop: buttonSize
 
-Type: **`String`**  
+Type: **`String`** as PropType<keyof **[SizesButtons](/typescript/interfaces#sizesbuttons)**>  
 Default: **`"{{ VvConfig.defaults.VvAnchor.buttonSize }}"`**
 
 The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classes applied to the output element. By default, these classes match the size classes (and examples) over in the [VvButton Prop: Size](/components/buttons/vv-button#prop-size) docs section.
@@ -216,6 +216,50 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 </div>
 
 
+### Typing for Downstream Component Instances
+
+If you are building a component that uses a nested {{ $frontmatter.title }} and want to pass through strict typing into your code base when using your built component, you can add typing for Vue props like this:
+
+```html
+<!-- ./src/components/MyComponent.vue -->
+<script lang="ts">
+
+    import { defineComponent } from 'vue'
+    import VvAnchor from './vv/anchors/VvAnchor.vue'
+    import type { PropType } from 'vue'
+    import type { SizesButtons } from '@obewds/vueventus'
+
+    export default defineComponent({
+
+        components: { VvAnchor },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            buttonSize: {
+                type: String as PropType<keyof SizesButtons>,
+                default: 'md',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvAnchor
+        :href="href"
+        :button="true"
+        :button-size="buttonSize"
+    >
+        buttonSize prop example
+    </VvAnchor>
+</template>
+```
+
+
 
 
 
@@ -224,6 +268,7 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 
 ## Prop: color
 
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvAnchor.color }}"`**
 
@@ -277,6 +322,9 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
@@ -347,7 +395,7 @@ The {{ $frontmatter.title }} `href` prop value sets the href value for the outpu
 
 ## Prop: palette
 
-Type: **`String`**  
+Type: **`String`** as PropType<keyof **[DefaultValidationPalettes](/typescript/interfaces#defaultvalidationpalettes)** | keyof **[DefaultButtonPalettes](/typescript/interfaces#Defaultbuttonpalettes)**>  
 Default: **`"{{ VvConfig.defaults.VvAnchor.palette }}"`**
 
 The {{ $frontmatter.title }} `palette` prop sets the component instance color based both on the `palette` prop and the `color` prop values together with the `button` prop value.
@@ -445,13 +493,58 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
 
+### Typing for Downstream Component Instances
+
+If you are building a component that uses a nested {{ $frontmatter.title }} and want to pass through strict typing into your code base when using your built component, you can add typing for Vue props like this:
+
+```html
+<!-- ./src/components/MyComponent.vue -->
+<script lang="ts">
+
+    import { defineComponent } from 'vue'
+    import VvAnchor from './vv/anchors/VvAnchor.vue'
+    import type { PropType } from 'vue'
+    import type { DefaultButtonPalettes, DefaultPalettes } from '@obewds/vueventus'
+
+    export default defineComponent({
+
+        components: { VvAnchor },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            palette: {
+                type: String as PropType<keyof DefaultPalettes | keyof DefaultButtonPalettes>,
+                default: 'default', // 'default' is an anchor palette, could use 'solid' or 'outline' button palettes, too!
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvAnchor
+        :href="href"
+        :palette="palette"
+    >
+        palette prop example
+    </VvAnchor>
+</template>
+```
+
+
+
+
 
 
 
 
 
 ## Prop: textSize
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvAnchor.textSize }}"`**
 
@@ -556,6 +649,11 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
     </VvAnchor>
 </div>
 :::
+
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
