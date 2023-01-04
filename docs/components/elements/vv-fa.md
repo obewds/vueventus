@@ -7,7 +7,7 @@ title: VvFa Component
     import { VvConfig } from '../../../src/index'
 </script>
 
-
+<!-- TODO: This docs page needs to be updated so all default values pull from VvConfig data -->
 
 # {{ $frontmatter.title }}
 
@@ -35,7 +35,7 @@ import VvFa from './vv/elements/VvFa.vue'
 
 
 ## Prop: family
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Valid Values: [ValidFontAwesomeFamilies Module](/components/prop-validators#validfontawesomefamilies)  
 Default: **`"fas"`**
@@ -47,6 +47,12 @@ The {{ $frontmatter.title }} `family` prop sets the font awesome family of icons
 ```html
 <VvFa family="fas"/>
 ```
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
 
 
 
@@ -72,7 +78,7 @@ The {{ $frontmatter.title }} `icon` prop sets the font awesome icon from the ico
 
 
 ## Prop: size
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Valid Values: [ValidFontAwesomeSizes Module](/components/prop-validators#validfontawesomesizes)  
 Default: **`"1x"`**
@@ -84,6 +90,12 @@ The {{ $frontmatter.title }} `size` prop sets the font awesome size for any icon
 ```html
 <VvFa size="1x"/>
 ```
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
 
 
 
