@@ -51,7 +51,7 @@ import { VvListItem } from '@obewds/vueventus'
 
 
 ## Prop: color
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvListItem.color }}"`**
 
@@ -82,6 +82,10 @@ The {{ $frontmatter.title }} `color` prop sets the component instance text color
         <VvListItem color="neutral">neutral List Item</VvListItem>
     </ul>
 </div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
@@ -127,7 +131,7 @@ The {{ $frontmatter.title }} `enableColoredSymbols` prop enables the component t
 
 
 ## Prop: palette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvListItem.palette }}"`**
 
@@ -149,13 +153,17 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance text col
     </ul>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
 
 
 ## Prop: symbolColor
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvListItem.symbolColor }}"`**
 
@@ -187,13 +195,17 @@ The {{ $frontmatter.title }} `symbolColor` prop sets the component instance symb
     </ul>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
 
 
 ## Prop: symbolPalette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvListItem.symbolPalette }}"`**
 
@@ -214,6 +226,10 @@ The {{ $frontmatter.title }} `symbolPalette` prop sets the component instance sy
         <VvListItem :enable-colored-symbols="true" symbol-palette="default">default Palette List Item</VvListItem>
     </ul>
 </div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
