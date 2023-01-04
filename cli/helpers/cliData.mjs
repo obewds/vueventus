@@ -53,6 +53,7 @@ import vvListboxVueFile from '../generators/vvListboxVueFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
 import vvPrismVarsVueFile from '../generators/vvPrismVarsVueFile.mjs'
 import vvPrismVueFile from '../generators/vvPrismVueFile.mjs'
+import vvQuadFormGroupVueFile from '../generators/vvQuadFormGroupVueFile.mjs'
 import vvRadioVueFile from '../generators/vvRadioVueFile.mjs'
 import vvRouterLinkVueFile from '../generators/vvRouterLinkVueFile.mjs'
 import vvScrollUpVueFile from '../generators/vvScrollUpVueFile.mjs'
@@ -76,6 +77,7 @@ import vvListboxTestJsFile from '../generators/vvListboxTestJsFile.mjs'
 import vvListItemTestJsFile from '../generators/vvListItemTestJsFile.mjs'
 import vvPrismTestJsFile from '../generators/vvPrismTestJsFile.mjs'
 import vvPrismVarsTestJsFile from '../generators/vvPrismVarsTestJsFile.mjs'
+import vvQuadFormGroupTestJsFile from '../generators/vvQuadFormGroupTestJsFile.mjs'
 import vvRadioTestJsFile from '../generators/vvRadioTestJsFile.mjs'
 import vvRouterLinkTestJsFile from '../generators/vvRouterLinkTestJsFile.mjs'
 import vvScrollUpTestJsFile from '../generators/vvScrollUpTestJsFile.mjs'
@@ -291,6 +293,12 @@ let baseVvTsCompos = {
         path: '/src/components/vv/lists/',
         src: vvListItemVueFile(),
     },
+    vvQuadFormGroupVue: {
+        name: 'VvQuadFormGroup.vue',
+        checked: true,
+        path: '/src/components/vv/forms/',
+        src: vvQuadFormGroupVueFile(),
+    },
     vvRadioVue: {
         name: 'VvRadio.vue',
         checked: true,
@@ -470,6 +478,12 @@ let vitestBase = {
             checked: true,
             path: '/tests/components/vv/lists/',
             src: vvListItemTestJsFile(),
+        },
+        vvQuadFormGroupTestJs: {
+            name: 'VvQuadFormGroup.test.js',
+            checked: true,
+            path: '/tests/components/vv/forms/',
+            src: vvQuadFormGroupTestJsFile(),
         },
         vvRadioTestJs: {
             name: 'VvRadio.test.js',
