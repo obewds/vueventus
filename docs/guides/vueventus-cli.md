@@ -243,7 +243,8 @@ npm run coverage
 │  │  │  │  ├─ VvPrism.vue 🟡
 │  │  │  │  └─ VvPrismVars.vue 🟡
 │  │  │  ├─ forms
-│  │  │  │  └─ VvFormGroup.vue
+│  │  │  │  ├─ VvFormGroup.vue
+│  │  │  │  └─ VvQuadFormGroup.vue
 │  │  │  ├─ inputs
 │  │  │  │  ├─ VvCheckbox.vue
 │  │  │  │  ├─ VvInput.vue
@@ -288,7 +289,8 @@ npm run coverage
 │  │  │  │  ├─ VvPrism.test.js 🟡
 │  │  │  │  └─ VvPrismVars.test.js 🟡
 │  │  │  ├─ forms
-│  │  │  │  └─ VvFormGroup.test.js
+│  │  │  │  ├─ VvFormGroup.test.js
+│  │  │  │  └─ VvQuadFormGroup.test.js
 │  │  │  ├─ inputs
 │  │  │  │  ├─ VvCheckbox.test.js
 │  │  │  │  ├─ VvInput.test.js
@@ -366,7 +368,8 @@ npm run coverage
 │  │  │  │  ├─ VvPrism.vue 🟡
 │  │  │  │  └─ VvPrismVars.vue 🟡
 │  │  │  ├─ forms
-│  │  │  │  └─ VvFormGroup.vue 🟡
+│  │  │  │  ├─ VvFormGroup.vue
+│  │  │  │  └─ VvQuadFormGroup.vue
 │  │  │  ├─ inputs
 │  │  │  │  ├─ VvCheckbox.vue
 │  │  │  │  ├─ VvInput.vue
@@ -422,7 +425,8 @@ npm run coverage
 │  │  │  │  ├─ VvPrism.test.js 🟡
 │  │  │  │  └─ VvPrismVars.test.js 🟡
 │  │  │  ├─ forms
-│  │  │  │  └─ VvFormGroup.test.js
+│  │  │  │  ├─ VvFormGroup.test.js
+│  │  │  │  └─ VvQuadFormGroup.test.js
 │  │  │  ├─ inputs
 │  │  │  │  ├─ VvCheckbox.test.js
 │  │  │  │  ├─ VvInput.test.js
