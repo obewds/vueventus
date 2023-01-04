@@ -122,7 +122,7 @@ The {{ $frontmatter.title }} `checked` prop sets the component instance `checked
 
 
 ## Prop: color
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvCheckbox.color }}"`**
 
@@ -149,6 +149,12 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
     <VvCheckbox color="secondary" :checked="true"/>
     <VvCheckbox color="success" :checked="true"/>
 </div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
 
 
 
@@ -222,7 +228,7 @@ The {{ $frontmatter.title }} `lightCheckHex` prop sets the component checked sta
 
 
 ## Prop: palette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvCheckbox.palette }}"`**
 
@@ -250,6 +256,12 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance palette 
     <VvCheckbox palette="default" color="success" :checked="true"/>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
+
 
 
 
@@ -260,7 +272,7 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance palette 
 
 
 ## Prop: size
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvCheckbox.size }}"`**
 
@@ -359,6 +371,10 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
 </div>
 
 :::
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
