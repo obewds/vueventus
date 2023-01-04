@@ -3,9 +3,9 @@
 <script setup lang="ts">
 
     import globals from '../../../globals'
-    import DevViewArticle from '@/views/compos/DevViewArticle.vue'
-    import VvFormGroup from '@/components/forms/VvFormGroup.vue'
-    import VvInput from '@/components/inputs/VvInput.vue'
+    import DevViewArticle from '../../../views/compos/DevViewArticle.vue'
+    import VvFormGroup from '../../../components/forms/VvFormGroup.vue'
+    import VvInput from '../../../components/inputs/VvInput.vue'
 
     const tw = globals.classes
 

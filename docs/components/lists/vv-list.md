@@ -105,7 +105,7 @@ The {{ $frontmatter.title }} `listStyleTypeClass` prop sets the Tailwind list st
 
 
 ## Prop: markerColor
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvList.markerColor }}"`**
 
@@ -165,6 +165,10 @@ The {{ $frontmatter.title }} `markerColor` prop sets the component instance mark
     </VvList>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -172,7 +176,7 @@ The {{ $frontmatter.title }} `markerColor` prop sets the component instance mark
 
 
 ## Prop: markerPalette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvList.markerPalette }}"`**
 
@@ -196,6 +200,10 @@ The {{ $frontmatter.title }} `markerPalette` prop sets the component instance ma
     </VvList>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -203,7 +211,7 @@ The {{ $frontmatter.title }} `markerPalette` prop sets the component instance ma
 
 
 ## Prop: size
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvList.size }}"`**
 
@@ -312,6 +320,10 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
 </div>
 :::
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -319,7 +331,7 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
 
 
 ## Prop: tag
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Valid Values: [ValidListTypes Module](/components/prop-validators#validlisttypes)  
 Default: **`"{{ VvConfig.defaults.VvList.tag }}"`**
@@ -352,6 +364,20 @@ The {{ $frontmatter.title }} `tag` prop sets the component's output HTML tag nam
         <li>Ordered List Item Two</li>
     </VvList>
 </div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
+
+
+
+
+
+## Slot: #default
+<!-- TODO: add default slot documentation for component -->
+Coming Soon!
 
 
 

@@ -89,7 +89,7 @@ This means when using the {{ $frontmatter.title }} downstream in an end applicat
 
 
 ## Prop: color
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvSelect.color }}"`**
 
@@ -137,6 +137,10 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
     </VvSelect>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -147,7 +151,7 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
 
 
 ## Prop: palette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvSelect.palette }}"`**
 
@@ -195,6 +199,10 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance palette 
     </VvSelect>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -205,7 +213,7 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance palette 
 
 
 ## Prop: size
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvSelect.size }}"`**
 
@@ -265,6 +273,10 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
     </VvSelect>
 </div>
 :::
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 

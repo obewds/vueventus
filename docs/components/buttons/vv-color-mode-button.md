@@ -137,7 +137,7 @@ It's generally a good idea to go ahead and add an additional `localStorage` chec
 
 
 ## Prop: color
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvColorModeButton.color }}"`**
 
@@ -156,6 +156,10 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
 </div>
 
 !!!include(snippets/colorCodeExamplesWarning.md)!!!
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
@@ -274,7 +278,7 @@ The {{ $frontmatter.title }} `groundLightHex` prop sets the component instance c
 
 
 ## Prop: mode
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Valid Values: [ValidColorModes Module](/components/prop-validators#validcolormodes)  
 Default: **`"{{ VvConfig.defaults.VvColorModeButton.mode }}"`**
@@ -295,6 +299,10 @@ The {{ $frontmatter.title }} `type` prop sets the button HTML `type` attribute t
 
 !!!include(snippets/colorCodeExamplesWarning.md)!!!
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -302,7 +310,7 @@ The {{ $frontmatter.title }} `type` prop sets the button HTML `type` attribute t
 
 
 ## Prop: palette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvColorModeButton.palette }}"`**
 
@@ -322,6 +330,10 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance color ba
 
 !!!include(snippets/colorCodeExamplesWarning.md)!!!
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -330,7 +342,7 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance color ba
 
 
 ## Prop: size
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvColorModeButton.size }}"`**
 
@@ -349,6 +361,10 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
 </div>
 
 !!!include(snippets/colorCodeExamplesWarning.md)!!!
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
@@ -477,7 +493,7 @@ The {{ $frontmatter.title }} `titleLight` prop sets the component instance title
 
 
 ## Prop: type
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Valid Values: [ValidButtonTypes Module](/components/prop-validators#validbuttontypes)  
 Default: **`"{{ VvConfig.defaults.VvColorModeButton.type }}"`**
@@ -495,6 +511,10 @@ The {{ $frontmatter.title }} `type` prop sets the button HTML `type` attribute t
 <div class="w-full pt-4">
     <VvColorModeButton type="submit"/>
 </div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 

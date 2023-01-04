@@ -6,6 +6,8 @@ title: VvPrism Component
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
 </script>
 
+<!-- TODO: This docs page needs to be updated so all default values pull from VvConfig data -->
+
 
 
 # {{ $frontmatter.title }}

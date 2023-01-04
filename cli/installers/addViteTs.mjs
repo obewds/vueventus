@@ -32,6 +32,7 @@ import vvInputVueFile from '../generators/vvInputVueFile.mjs'
 import vvListVueFile from '../generators/vvListVueFile.mjs'
 import vvListboxVueFile from '../generators/vvListboxVueFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
+import vvQuadFormGroupVueFile from '../generators/vvQuadFormGroupVueFile.mjs'
 import vvRadioVueFile from '../generators/vvRadioVueFile.mjs'
 import vvRouterLinkVueFile from '../generators/vvRouterLinkVueFile.mjs'
 import vvSelectVueFile from '../generators/vvSelectVueFile.mjs'
@@ -52,8 +53,8 @@ export default function (userOpts, stackObj, installPkgsArr) {
     // as currently Vite v4 conflicts with a peer dep for Vite v3 in vite-plugin-vue-markdown
     run(`npm create vite@3.2.1 ${userOpts.name} -- --template vue-ts`)
     
-    
-    installPkgsArr.push('vite@latest')
+    // TODO: Same as to do above! ^^^
+    installPkgsArr.push('vite@3.2.1')
 
     
     // copy each vite generated folder and file from the vite generated directory back up into the root directory
@@ -116,6 +117,7 @@ export default function (userOpts, stackObj, installPkgsArr) {
     fs.outputFileSync(composVv + 'lists/VvList.vue', vvListVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'selects/VvListbox.vue', vvListboxVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'lists/VvListItem.vue', vvListItemVueFile(), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'forms/VvQuadFormGroup.vue', vvQuadFormGroupVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'inputs/VvRadio.vue', vvRadioVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'anchors/VvRouterLink.vue', vvRouterLinkVueFile(), { flag: 'w+' })
     fs.outputFileSync(composVv + 'selects/VvSelect.vue', vvSelectVueFile(), { flag: 'w+' })

@@ -96,7 +96,7 @@ This means when using the {{ $frontmatter.title }} downstream in an end applicat
 
 
 ## Prop: color
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvTextarea.color }}"`**
 
@@ -118,6 +118,10 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
     <VvTextarea color="success" class="mb-2"/>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -128,7 +132,7 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
 
 
 ## Prop: palette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvTextarea.palette }}"`**
 
@@ -150,6 +154,10 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance palette 
     <VvTextarea palette="default" color="success" class="mb-2"/>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -160,7 +168,7 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance palette 
 
 
 ## Prop: size
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvTextarea.size }}"`**
 
@@ -188,6 +196,10 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
     <VvTextarea size="2xl" placeholder="Size: 2xl"/>
 </div>
 :::
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 

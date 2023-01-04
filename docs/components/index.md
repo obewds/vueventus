@@ -76,6 +76,7 @@ Variable HTML element based {{ $frontmatter.title }}.
 Form focused {{ $frontmatter.title }}.
 
 * [VvFormGroup](/components/forms/vv-form-group)
+* [VvQuadFormGroup](/components/forms/vv-quad-form-group)
 
 
 
