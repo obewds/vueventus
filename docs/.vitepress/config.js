@@ -275,6 +275,7 @@ function sidebarComponents() {
             collapsible: true,
             items: [
                 { text: 'VvFormGroup', link: '/components/forms/vv-form-group' },
+                { text: 'VvQuadFormGroup', link: '/components/forms/vv-quad-form-group' },
             ]
         },{
             text: 'Input Components',
