@@ -11,6 +11,7 @@ import type { VvListboxProps } from '../types/VvListboxProps';
 import type { VvListItemProps } from '../types/VvListItemProps';
 import type { VvPrismProps } from '../types/VvPrismProps';
 import type { VvPrismVarsProps } from '../types/VvPrismVarsProps';
+import type { VvQuadFormGroupProps } from '../types/VvQuadFormGroupProps';
 import type { VvRadioProps } from '../types/VvRadioProps';
 import type { VvRouterLinkProps } from '../types/VvRouterLinkProps';
 import type { VvScrollUpProps } from '../types/VvScrollUpProps';
@@ -30,6 +31,7 @@ export interface ConfigDefaults {
     "VvListItem": VvListItemProps;
     "VvPrism": VvPrismProps;
     "VvPrismVars": VvPrismVarsProps;
+    "VvQuadFormGroup": VvQuadFormGroupProps;
     "VvRadio": VvRadioProps;
     "VvRouterLink": VvRouterLinkProps;
     "VvScrollUp": VvScrollUpProps;

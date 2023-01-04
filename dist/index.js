@@ -81,6 +81,7 @@ export { default as VvColorModeButton } from './components/buttons/VvColorModeBu
 export { default as VvEl } from './components/elements/VvEl.vue';
 // .src/components/forms
 export { default as VvFormGroup } from './components/forms/VvFormGroup.vue';
+export { default as VvQuadFormGroup } from './components/forms/VvQuadFormGroup.vue';
 // .src/components/inputs
 export { default as VvCheckbox } from './components/inputs/VvCheckbox.vue';
 export { default as VvInput } from './components/inputs/VvInput.vue';
