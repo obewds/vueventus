@@ -48,8 +48,9 @@ import VvColorModeButtonPage from '@/views/components/buttons/VvColorModeButtonP
 // element component pages
 import VvElPage from '@/views/components/elements/VvElPage.vue'
 
-// element component pages
+// form component pages
 import VvFormGroupPage from '@/views/components/forms/VvFormGroupPage.vue'
+import VvQuadFormGroupPage from '@/views/components/forms/VvQuadFormGroupPage.vue'
 
 // input component pages
 import VvCheckboxPage from '@/views/components/inputs/VvCheckboxPage.vue'
@@ -264,6 +265,10 @@ const router = createRouter({
             name: 'VvFormGroup Component',
             component: VvFormGroupPage,
             path: '/components/forms/vv-form-group'
+        },{
+            name: 'VvQuadFormGroup Component',
+            component: VvQuadFormGroupPage,
+            path: '/components/forms/vv-quad-form-group'
         },
         
         //
