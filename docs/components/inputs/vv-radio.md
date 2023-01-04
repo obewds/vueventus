@@ -235,7 +235,7 @@ You can also simply use the attribute `checked` on your VvRadio instance to rend
 
 
 ## Prop: color
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvRadio.color }}"`**
 
@@ -373,6 +373,10 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
     </div>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -491,7 +495,7 @@ The {{ $frontmatter.title }} `lightRadioHex` prop sets the component checked sta
 
 
 ## Prop: palette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvRadio.palette }}"`**
 
@@ -519,6 +523,10 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance palette 
     <VvRadio palette="default" name="colors" value="green" color="success"/>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -532,7 +540,7 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance palette 
 
 
 ## Prop: size
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvRadio.size }}"`**
 
@@ -872,6 +880,10 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
 
 :::
 
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
