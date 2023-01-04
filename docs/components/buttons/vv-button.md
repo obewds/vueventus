@@ -77,7 +77,7 @@ The {{ $frontmatter.title }} `block` prop sets the component instance to use blo
 
 
 ## Prop: color
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvButton.color }}"`**
 
@@ -123,6 +123,10 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
 </div>
 :::
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -162,7 +166,7 @@ The {{ $frontmatter.title }} `fab` prop sets the component instance to use base 
 
 
 ## Prop: palette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvButton.palette }}"`**
 
@@ -232,6 +236,10 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance color ba
 </div>
 :::
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -242,7 +250,7 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance color ba
 
 
 ## Prop: size
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvButton.size }}"`**
 
@@ -340,12 +348,18 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
 </div>
 :::
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
+
 
 
 
 
 ## Prop: type
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Valid Values: [ValidButtonTypes Module](/components/prop-validators#validbuttontypes)  
 Default: **`"{{ VvConfig.defaults.VvButton.type }}"`**
@@ -367,6 +381,12 @@ The {{ $frontmatter.title }} `type` prop sets the button HTML `type` attribute t
         Submit
     </VvButton>
 </div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
 
 
 
