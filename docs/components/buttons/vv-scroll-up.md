@@ -6,6 +6,8 @@ title: VvScrollUp Component
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
 </script>
 
+<!-- TODO: This docs page needs to be updated so all default values pull from VvConfig data -->
+
 
 
 # {{ $frontmatter.title }}
@@ -52,7 +54,7 @@ The {{ $frontmatter.title }} `buttonClasses` prop sets the underlying VvButton's
 
 
 ## Prop: color
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"primary"`**
 
@@ -63,6 +65,10 @@ The {{ $frontmatter.title }} `color` prop sets the underlying VvButton's palette
 ```html
 <VvScrollUp color="primary"/>
 ```
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
@@ -124,7 +130,7 @@ The {{ $frontmatter.title }} `offsetMinimum` prop sets threshold (in pixels) tha
 
 
 ## Prop: palette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"solid"`**
 
@@ -136,13 +142,17 @@ The {{ $frontmatter.title }} `palette` prop sets the underlying VvButton's color
 <VvScrollUp palette="solid"/>
 ```
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
 
 
 ## Prop: size
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"xs"`**
 
@@ -153,6 +163,10 @@ The {{ $frontmatter.title }} `size` prop sets the underlying VvButton's size val
 ```html
 <VvScrollUp size="xs"/>
 ```
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
