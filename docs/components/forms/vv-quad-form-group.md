@@ -338,7 +338,7 @@ The {{ $frontmatter.title }} `errorText` prop sets the text string for the compo
 
 
 ## Prop: errorTextColor
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvQuadFormGroup.errorTextColor }}"`**
 
@@ -372,6 +372,10 @@ The {{ $frontmatter.title }} `errorTextColor` prop sets the error text's underly
     </VvQuadFormGroup>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -379,7 +383,7 @@ The {{ $frontmatter.title }} `errorTextColor` prop sets the error text's underly
 
 
 ## Prop: errorTextPalette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvQuadFormGroup.errorTextPalette }}"`**
 
@@ -412,6 +416,10 @@ The {{ $frontmatter.title }} `errorTextPalette` prop sets the error text's under
         <VvInput id="errorTextPalette-id" placeholder="Example VvInput"/>
     </VvQuadFormGroup>
 </div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
@@ -510,7 +518,7 @@ The {{ $frontmatter.title }} `helpText` prop sets the text string for the compon
 
 
 ## Prop: helpTextColor
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvQuadFormGroup.helpTextColor }}"`**
 
@@ -544,6 +552,10 @@ The {{ $frontmatter.title }} `helpTextColor` prop sets the help text's underlyin
     </VvQuadFormGroup>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -551,7 +563,7 @@ The {{ $frontmatter.title }} `helpTextColor` prop sets the help text's underlyin
 
 
 ## Prop: helpTextPalette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvQuadFormGroup.helpTextPalette }}"`**
 
@@ -584,6 +596,10 @@ The {{ $frontmatter.title }} `helpTextPalette` prop sets the help text's underly
         <VvInput id="helpTextPalette-id" placeholder="Example VvInput"/>
     </VvQuadFormGroup>
 </div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
@@ -719,7 +735,7 @@ The {{ $frontmatter.title }} `labelClasses` prop sets the component's returned l
 
 
 ## Prop: labelTextColor
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvQuadFormGroup.labelTextColor }}"`**
 
@@ -749,6 +765,10 @@ The {{ $frontmatter.title }} `labelTextColor` prop sets the component's returned
     </VvQuadFormGroup>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -756,7 +776,7 @@ The {{ $frontmatter.title }} `labelTextColor` prop sets the component's returned
 
 
 ## Prop: labelTextPalette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvQuadFormGroup.labelTextPalette }}"`**
 
@@ -785,6 +805,10 @@ The {{ $frontmatter.title }} `labelTextPalette` prop sets the label text's under
         <VvInput id="labelTextPalette-id" placeholder="Example VvInput"/>
     </VvQuadFormGroup>
 </div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
@@ -926,7 +950,7 @@ The {{ $frontmatter.title }} `successText` prop sets the text string for the com
 
 
 ## Prop: successTextColor
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvQuadFormGroup.successTextColor }}"`**
 
@@ -960,6 +984,10 @@ The {{ $frontmatter.title }} `successTextColor` prop sets the success text's und
     </VvQuadFormGroup>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -967,7 +995,7 @@ The {{ $frontmatter.title }} `successTextColor` prop sets the success text's und
 
 
 ## Prop: successTextPalette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvQuadFormGroup.successTextPalette }}"`**
 
@@ -1000,6 +1028,10 @@ The {{ $frontmatter.title }} `successTextPalette` prop sets the success text's u
         <VvInput id="successTextPalette-id" placeholder="Example VvInput"/>
     </VvQuadFormGroup>
 </div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
