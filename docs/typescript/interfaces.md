@@ -101,26 +101,6 @@ import type { AppTintsShades } from '@obewds/vueventus'
 
 
 
-## ButtonsSizes (DEPRECIATED)
-
-### Import
-
-```javascript
-import type { ButtonsSizes } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/ButtonsSizes.ts
-
-
-
-
-
-
-
-
-
 
 ## ColorMode
 
@@ -501,27 +481,6 @@ import type { DefaultColors } from '@obewds/vueventus'
 
 
 
-## DefaultConfigPalette (DEPRECIATED)
-
-### Import
-
-```javascript
-import type { DefaultConfigPalette } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/DefaultConfigPalette.ts
-
-
-
-
-
-
-
-
-
-
 ## DefaultButtonPalettes
 
 ### Import
@@ -533,27 +492,6 @@ import type { DefaultButtonPalettes } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/DefaultButtonPalettes.ts
-
-
-
-
-
-
-
-
-
-
-## DefaultInputPalettes (DEPRECIATED)
-
-### Import
-
-```javascript
-import type { DefaultInputPalettes } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/DefaultInputPalettes.ts
 
 
 
@@ -595,27 +533,6 @@ import type { DefaultPalettes } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/DefaultPalettes.ts
-
-
-
-
-
-
-
-
-
-
-## DefaultSelectPalettes (DEPRECIATED)
-
-### Import
-
-```javascript
-import type { DefaultSelectPalettes } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/DefaultSelectPalettes.ts
 
 
 
@@ -672,51 +589,6 @@ import type { DefaultValidationPaletteColors } from '@obewds/vueventus'
 
 
 
-
-## DefaultValidationPalette (DEPRECIATED)
-
-### Import
-
-```javascript
-import type { DefaultValidationPalette } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/DefaultValidationPalette.ts
-
-
-
-
-
-
-
-
-
-
-
-## EmptyPalette (DEPRECIATED)
-
-### Import
-
-```javascript
-import type { EmptyPalette } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/EmptyPalette.ts
-
-
-
-
-
-
-
-
-
-
-
 ## GroundTextColors
 
 ### Import
@@ -728,27 +600,6 @@ import type { GroundTextColors } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/GroundTextColors.ts
-
-
-
-
-
-
-
-
-
-
-## InputsSizes (DEPRECIATED)
-
-### Import
-
-```javascript
-import type { InputsSizes } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/InputsSizes.ts
 
 
 
@@ -791,27 +642,6 @@ import type { MonthNamesTypes } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/MonthNamesTypes.ts
-
-
-
-
-
-
-
-
-
-
-## SelectsSizes (DEPRECIATED)
-
-### Import
-
-```javascript
-import type { SelectsSizes } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/SelectsSizes.ts
 
 
 
@@ -938,70 +768,6 @@ import type { SizesTextareasRows } from '@obewds/vueventus'
 ### Module Code
 
 <<< @/../src/types/SizesTextareasRows.ts
-
-
-
-
-
-
-
-
-
-
-## TextSizes (DEPRECIATED)
-
-### Import
-
-```javascript
-import type { TextSizes } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/TextSizes.ts
-
-
-
-
-
-
-
-
-
-
-## TextareasRowSizes (DEPRECIATED)
-
-### Import
-
-```javascript
-import type { TextareasRowSizes } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/TextareasRowSizes.ts
-
-
-
-
-
-
-
-
-
-
-
-## TextareasSizes (DEPRECIATED)
-
-### Import
-
-```javascript
-import type { TextareasSizes } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/TextareasSizes.ts
 
 
 
