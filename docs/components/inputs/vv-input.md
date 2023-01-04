@@ -89,7 +89,7 @@ This means when using the {{ $frontmatter.title }} downstream in an end applicat
 
 
 ## Prop: color
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvInput.color }}"`**
 
@@ -111,6 +111,10 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
     <VvInput color="success" class="mb-2"/>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -121,7 +125,7 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
 
 
 ## Prop: palette
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvInput.palette }}"`**
 
@@ -143,6 +147,10 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance palette 
     <VvInput palette="underlined" color="success" class="mb-2" placeholder="success" style="border-bottom-style: solid;"/>
 </div>
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -153,7 +161,7 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance palette 
 
 
 ## Prop: size
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvInput.size }}"`**
 
@@ -182,6 +190,10 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
 </div>
 :::
 
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
 
 
 
@@ -193,7 +205,7 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
 
 
 ## Prop: type
-
+<!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Valid Values: [ValidInputTypes Module](/components/prop-validators#validinputtypes)  
 Default: **`"{{ VvConfig.defaults.VvInput.type }}"`**
@@ -211,6 +223,10 @@ The {{ $frontmatter.title }} `type` prop sets the input HTML `type` attribute to
 <div class="w-full pt-4">
     <VvInput type="email" placeholder="Type: email"/>
 </div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
 
 
 
