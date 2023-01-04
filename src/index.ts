@@ -88,6 +88,7 @@ export { default as VvEl } from './components/elements/VvEl.vue'
 
 // .src/components/forms
 export { default as VvFormGroup } from './components/forms/VvFormGroup.vue'
+export { default as VvQuadFormGroup } from './components/forms/VvQuadFormGroup.vue'
 
 // .src/components/inputs
 export { default as VvCheckbox } from './components/inputs/VvCheckbox.vue'
@@ -181,6 +182,7 @@ import type { VvListProps } from './types/VvListProps'
 import type { VvListItemProps } from './types/VvListItemProps'
 import type { VvPrismProps } from './types/VvPrismProps'
 import type { VvPrismVarsProps } from './types/VvPrismVarsProps'
+import type { VvQuadFormGroupProps } from './types/VvQuadFormGroupProps'
 import type { VvRadioProps } from './types/VvRadioProps'
 import type { VvRouterLinkProps } from './types/VvRouterLinkProps'
 import type { VvScrollUpProps } from './types/VvScrollUpProps'
@@ -257,6 +259,7 @@ export type { VvListProps }
 export type { VvListItemProps }
 export type { VvPrismProps }
 export type { VvPrismVarsProps }
+export type { VvQuadFormGroupProps }
 export type { VvRadioProps }
 export type { VvRouterLinkProps }
 export type { VvScrollUpProps }
