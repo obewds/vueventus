@@ -115,7 +115,7 @@ export default <ConfigDefaults>{
         listboxOptionPalette: 'default',
         listboxOptionsClasses: 'w-full shadow-md',
         listboxOptionsWithLabelSpacing: 'pt-1',
-        listboxOptionsWithoutLabelSpacing: '-mt-7',
+        listboxOptionsWithoutLabelSpacing: 'pt-1',
         optionIconParentClasses: 'w-6',
         selectedDisplayClasses: 'block text-left',
         selectedIndex: 0,
@@ -167,7 +167,7 @@ export default <ConfigDefaults>{
         successTextSize: 'sm',
         textParentClasses: 'flex justify-between gap-3',
         topSlotClasses: 'flex justify-between gap-3',
-        topWrapperClasses: 'flex justify-between gap-3',
+        topWrapperClasses: 'flex justify-between items-end gap-3',
         wrapperClasses: 'w-full flex flex-col space-y-1',
     },
     "VvRadio": {
