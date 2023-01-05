@@ -11,7 +11,7 @@ const output = `<!-- ./src/components/vv/forms/VvQuadFormGroup.vue -->
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultPaletteColors, DefaultPalettes } from '@obewds/vueventus'
+    import type { DefaultPaletteColors, DefaultPalettes, SizesText } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -54,6 +54,10 @@ const output = `<!-- ./src/components/vv/forms/VvQuadFormGroup.vue -->
                 type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvQuadFormGroup.errorTextPalette,
             },
+            errorTextSize: {
+                type: String as PropType<keyof SizesText>,
+                default: appVv.defaults.VvQuadFormGroup.errorTextSize,
+            },
             helpClasses: {
                 type: String,
                 default: appVv.defaults.VvQuadFormGroup.helpClasses,
@@ -69,6 +73,10 @@ const output = `<!-- ./src/components/vv/forms/VvQuadFormGroup.vue -->
             helpTextPalette: {
                 type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvQuadFormGroup.helpTextPalette,
+            },
+            helpTextSize: {
+                type: String as PropType<keyof SizesText>,
+                default: appVv.defaults.VvQuadFormGroup.helpTextSize,
             },
             label: {
                 type: String,
@@ -90,6 +98,10 @@ const output = `<!-- ./src/components/vv/forms/VvQuadFormGroup.vue -->
                 type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvQuadFormGroup.labelTextPalette,
             },
+            labelTextSize: {
+                type: String as PropType<keyof SizesText>,
+                default: appVv.defaults.VvQuadFormGroup.labelTextSize,
+            },
             slotParentClasses: {
                 type: String,
                 default: appVv.defaults.VvQuadFormGroup.slotParentClasses,
@@ -109,6 +121,10 @@ const output = `<!-- ./src/components/vv/forms/VvQuadFormGroup.vue -->
             successTextPalette: {
                 type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvQuadFormGroup.successTextPalette,
+            },
+            successTextSize: {
+                type: String as PropType<keyof SizesText>,
+                default: appVv.defaults.VvQuadFormGroup.successTextSize,
             },
             textParentClasses: {
                 type: String,
@@ -145,26 +161,32 @@ const output = `<!-- ./src/components/vv/forms/VvQuadFormGroup.vue -->
         :error-text="errorText"
         :error-text-color="errorTextColor"
         :error-text-palette="errorTextPalette"
+        :error-text-size="errorTextSize"
         :help-classes="helpClasses"
         :help-text="helpText"
         :help-text-color="helpTextColor"
         :help-text-palette="helpTextPalette"
+        :help-text-size="helpTextSize"
         :label="label"
         :label-for="labelFor"
         :label-classes="labelClasses"
         :label-text-color="labelTextColor"
         :label-text-palette="labelTextPalette"
+        :label-text-size="labelTextSize"
         :slot-parent-classes="slotParentClasses"
         :success-classes="successClasses"
         :success-text="successText"
         :success-text-color="successTextColor"
         :success-text-palette="successTextPalette"
+        :success-text-size="successTextSize"
         :text-parent-classes="textParentClasses"
         :top-slot-classes="topSlotClasses"
         :top-wrapper-classes="topWrapperClasses"
         :wrapper-classes="wrapperClasses"
     >
-        <slot/>
+        <template v-for="(_, name) in $slots" v-slot:[name]="slotData">
+            <slot :name="name" v-bind="slotData"/>
+        </template>
     </VvQuadFormGroup>
 
 </template>

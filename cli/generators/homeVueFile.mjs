@@ -14,12 +14,15 @@ const output = `<!-- ./src/pages/Home.vue -->
     import appVv from '../app.vv'
     import VvAnchor from '../components/vv/anchors/VvAnchor.vue'
     import VvButton from '../components/vv/buttons/VvButton.vue'
-    import VvColorModeButton from '../components/vv/buttons/VvColorModeButton.vue'
     import VvEl from '../components/vv/elements/VvEl.vue'
+    import VvFa from '../components/vv/elements/VvFa.vue'
+    import VvFormGroup from '../components/vv/forms/VvFormGroup.vue'
     import VvInput from '../components/vv/inputs/VvInput.vue'
     import VvListItem from '../components/vv/lists/VvListItem.vue'
     import VvTextarea from '../components/vv/textareas/VvTextarea.vue'
     import VvPrism from '../components/vv/elements/VvPrism.vue'
+    import VvQuadFormGroup from '../components/vv/forms/VvQuadFormGroup.vue'
+    import VvRouterLink from '../components/vv/anchors/VvRouterLink.vue'
 
     const msg = '${cliStackNames.vueTwViteTs}'
 
@@ -69,42 +72,68 @@ const output = `<!-- ./src/pages/Home.vue -->
                 Edit <VvEl tag="span" ground-palette="monochromatic" ground-color="success" class="px-2 rounded">components/HelloWorld.vue</VvEl> to test hot module replacement.
             </p>
 
-            <div class="mx-auto text-center">
+            <div class="flex flex-col w-full max-w-xl gap-10 mx-auto text-center pt-8">
             
-                <VvAnchor href="https://github.com/obewds/vueventus" color="primary">
-                    VvAnchor Test
-                </VvAnchor>
+                <div>
+                    <VvAnchor href="https://github.com/obewds/vueventus" color="primary">
+                        VvAnchor
+                    </VvAnchor>
+                    <span> | </span>
+                    <VvRouterLink to="/" color="primary">
+                        VvRouterLink Test
+                    </VvRouterLink>
+                </div>
+            
+                <div>
+                    <VvButton color="primary">
+                        VvButton Test
+                    </VvButton>
+                </div>
+            
+                <div>
+                    <VvEl color="primary" palette="solid">
+                        VvEl Test Div
+                    </VvEl>
+                </div>
+            
+                <div>
+                    <VvFa family="fas" icon="house" size="3x"/>
+                </div>
 
-                <br><br>
+                <div class="text-left">
+                    <VvFormGroup
+                        label="VvFormGroup Test:"
+                        label-for="vv-input-test"
+                        :display-help="true"
+                        help-text="This is example help text"
+                    >
+                        <VvInput id="vv-input-test" color="default" placeholder="VvInput Test"/>
+                    </VvFormGroup>
+                </div>
 
-                <VvButton color="primary">
-                    VvButton Test
-                </VvButton>
-
-                <br><br>
-
-                <VvColorModeButton color="primary" palette="solid"/>
-
-                <br><br>
-
-                <VvEl color="primary" palette="solid">
-                    VvEl Test Div
-                </VvEl>
-
-                <br>
-
-                <VvInput color="default" placeholder="VvInput Test"/>
-
-                <br>
-
-                <ul class="w-full list-disc text-left pl-4">
-                    <VvListItem>VvListItem Test</VvListItem>
-                    <VvListItem symbol-color="success">VvListItem Test</VvListItem>
-                </ul>
-
-                <br>
-
-                <VvTextarea color="default" placeholder="VvTextarea Test"/>
+                <div class="text-left">
+                    <VvQuadFormGroup
+                        label="VvQuadFormGroup Test:"
+                        label-for="vv-input-test"
+                        :display-help="true"
+                        help-text="This is example help text"
+                    >
+                        <template v-slot:top>
+                            <span class="text-xl">&times;</span>
+                        </template>
+                        <VvTextarea color="default" placeholder="VvTextarea Test"/>
+                        <template v-slot:bottom>
+                            000/000
+                        </template>
+                    </VvQuadFormGroup>
+                </div>
+            
+                <div>
+                    <ul class="w-full list-disc text-left pl-4">
+                        <VvListItem>VvListItem Test</VvListItem>
+                        <VvListItem symbol-color="success">VvListItem Test</VvListItem>
+                    </ul>
+                </div>
 
             </div>
 

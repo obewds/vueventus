@@ -328,6 +328,51 @@ Coming Soon!
 
 
 
+## Prop: errorTextSize
+<!-- TODO: change this type to new PropType keyof syntax -->
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.errorTextSize }}"`**
+
+The {{ $frontmatter.title }} `errorTextSize` prop sets the error text's underlying VvEl component's text size value.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="errorTextSize-id"
+    :display-error="true"
+    error-text-size="2xl"
+    error-text="Example text"
+>
+    <VvInput id="errorTextSize-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="errorTextSize-id"
+        :display-error="true"
+        error-text-size="2xl"
+        error-text="Example text"
+    >
+        <VvInput id="errorTextSize-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
+
+
+
+
+
 
 
 ## Prop: helpClasses
@@ -510,6 +555,51 @@ Coming Soon!
 
 
 
+## Prop: helpTextSize
+<!-- TODO: change this type to new PropType keyof syntax -->
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.helpTextSize }}"`**
+
+The {{ $frontmatter.title }} `helpTextSize` prop sets the help text's underlying VvEl component's text size value.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="helpTextSize-id"
+    :display-help="true"
+    help-text-size="2xl"
+    help-text="Example text"
+>
+    <VvInput id="helpTextSize-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="helpTextSize-id"
+        :display-help="true"
+        help-text-size="2xl"
+        help-text="Example text"
+    >
+        <VvInput id="helpTextSize-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
+
+
+
+
+
 
 
 
@@ -612,7 +702,7 @@ The {{ $frontmatter.title }} `labelClasses` prop sets the component's returned l
 <VvFormGroup
     label="Example Label:"
     label-for="labelClasses-id"
-    label-classes="text-2xl uppercase"
+    label-classes="uppercase"
 >
     <VvInput id="labelClasses-id" placeholder="Example VvInput"/>
 </VvFormGroup>
@@ -624,7 +714,7 @@ The {{ $frontmatter.title }} `labelClasses` prop sets the component's returned l
     <VvFormGroup
         label="Example Label:"
         label-for="labelClasses-id"
-        label-classes="text-2xl uppercase"
+        label-classes="uppercase"
     >
         <VvInput id="labelClasses-id" placeholder="Example VvInput"/>
     </VvFormGroup>
@@ -708,6 +798,49 @@ The {{ $frontmatter.title }} `labelTextPalette` prop sets the label text's under
         label-text-palette="default"
     >
         <VvInput id="labelTextPalette-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
+
+
+
+
+
+## Prop: labelTextSize
+<!-- TODO: change this type to new PropType keyof syntax -->
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.labelTextSize }}"`**
+
+The {{ $frontmatter.title }} `labelTextSize` prop sets the label text's underlying VvEl component's size value.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example 2XL Label:"
+    label-for="labelTextSize-id"
+    label-text-palette="default"
+    label-text-size="2xl"
+>
+    <VvInput id="labelTextSize-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example 2XL Label:"
+        label-for="labelTextSize-id"
+        label-text-palette="default"
+        label-text-size="2xl"
+    >
+        <VvInput id="labelTextSize-id" placeholder="Example VvInput"/>
     </VvFormGroup>
 </div>
 
@@ -945,6 +1078,51 @@ Coming Soon!
 
 
 
+## Prop: successTextSize
+<!-- TODO: change this type to new PropType keyof syntax -->
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvFormGroup.successTextSize }}"`**
+
+The {{ $frontmatter.title }} `successTextSize` prop sets the success text's underlying VvEl component's text size value.
+
+### Syntax
+
+```html
+<VvFormGroup
+    label="Example Label:"
+    label-for="successTextSize-id"
+    :display-success="true"
+    success-text-size="2xl"
+    success-text="Example text"
+>
+    <VvInput id="successTextSize-id" placeholder="Example VvInput"/>
+</VvFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvFormGroup
+        label="Example Label:"
+        label-for="successTextSize-id"
+        :display-success="true"
+        success-text-size="2xl"
+        success-text="Example text"
+    >
+        <VvInput id="successTextSize-id" placeholder="Example VvInput"/>
+    </VvFormGroup>
+</div>
+
+### Typing for Downstream Component Instances
+<!-- TODO: add typing use example code block for PropType keyof syntax -->
+Coming Soon!
+
+
+
+
+
+
+
 
 
 
@@ -1006,7 +1184,7 @@ The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child 
     label="Example Label:"
     label-for="example-slot-id"
 >
-    <VvInput id="example-slot-id"/>
+    <VvInput id="example-slot-id" placeholder="Via #default slot"/>
 </VvFormGroup>
 ```
 
@@ -1017,7 +1195,7 @@ The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child 
         label="Example Label:"
         label-for="example-slot-id"
     >
-        Slot <span class="text-red-500 dark:text-red-300">Content</span>
+        <VvInput id="example-slot-id" placeholder="Via #default slot"/>
     </VvFormGroup>
 </div>
 

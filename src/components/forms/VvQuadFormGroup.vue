@@ -9,6 +9,7 @@ import VvConfig from '../../configs/VvConfig.js'
 import type { PropType } from 'vue'
 import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors'
 import type { DefaultPalettes } from '../../types/DefaultPalettes'
+import type { SizesText } from '../../types/SizesText'
 
 export default defineComponent({
 
@@ -51,6 +52,10 @@ export default defineComponent({
             type: String as PropType<keyof DefaultPalettes>,
             default: VvConfig.defaults.VvQuadFormGroup.errorTextPalette,
         },
+        errorTextSize: {
+            type: String as PropType<keyof SizesText>,
+            default: VvConfig.defaults.VvQuadFormGroup.errorTextSize,
+        },
         helpClasses: {
             type: String,
             default: VvConfig.defaults.VvQuadFormGroup.helpClasses,
@@ -66,6 +71,10 @@ export default defineComponent({
         helpTextPalette: {
             type: String as PropType<keyof DefaultPalettes>,
             default: VvConfig.defaults.VvQuadFormGroup.helpTextPalette,
+        },
+        helpTextSize: {
+            type: String as PropType<keyof SizesText>,
+            default: VvConfig.defaults.VvQuadFormGroup.helpTextSize,
         },
         label: {
             type: String,
@@ -87,6 +96,10 @@ export default defineComponent({
             type: String as PropType<keyof DefaultPalettes>,
             default: VvConfig.defaults.VvQuadFormGroup.labelTextPalette,
         },
+        labelTextSize: {
+            type: String as PropType<keyof SizesText>,
+            default: VvConfig.defaults.VvQuadFormGroup.labelTextSize,
+        },
         slotParentClasses: {
             type: String,
             default: VvConfig.defaults.VvQuadFormGroup.slotParentClasses,
@@ -106,6 +119,10 @@ export default defineComponent({
         successTextPalette: {
             type: String as PropType<keyof DefaultPalettes>,
             default: VvConfig.defaults.VvQuadFormGroup.successTextPalette,
+        },
+        successTextSize: {
+            type: String as PropType<keyof SizesText>,
+            default: VvConfig.defaults.VvQuadFormGroup.successTextSize,
         },
         textParentClasses: {
             type: String,
@@ -142,6 +159,7 @@ export default defineComponent({
                 :text-palette="labelTextPalette"
                 :text-color="labelTextColor"
                 :class="labelClasses"
+                :size="labelTextSize"
             >
                 {{ label }}
             </VvEl>
@@ -173,6 +191,7 @@ export default defineComponent({
                     :text-palette="helpTextPalette"
                     :text-color="helpTextColor"
                     :class="helpClasses"
+                    :size="helpTextSize"
                 >
                     {{ helpText }}
                 </VvEl>
@@ -183,6 +202,7 @@ export default defineComponent({
                     :text-palette="successTextPalette"
                     :text-color="successTextColor"
                     :class="successClasses"
+                    :size="successTextSize"
                 >
                     {{ successText }}
                 </VvEl>
@@ -193,6 +213,7 @@ export default defineComponent({
                     :text-palette="errorTextPalette"
                     :text-color="errorTextColor"
                     :class="errorClasses"
+                    :size="errorTextSize"
                 >
                     {{ errorText }}
                 </VvEl>

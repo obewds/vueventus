@@ -19,6 +19,7 @@ import vvInputTestJsFile from '../generators/vvInputTestJsFile.mjs'
 import vvListTestJsFile from '../generators/vvListTestJsFile.mjs'
 import vvListboxTestJsFile from '../generators/vvListboxTestJsFile.mjs'
 import vvListItemTestJsFile from '../generators/vvListItemTestJsFile.mjs'
+import vvQuadFormGroupTestJsFile from '../generators/vvQuadFormGroupTestJsFile.mjs'
 import vvRadioTestJsFile from '../generators/vvRadioTestJsFile.mjs'
 import vvRouterLinkTestJsFile from '../generators/vvRouterLinkTestJsFile.mjs'
 import vvScrollUpTestJsFile from '../generators/vvScrollUpTestJsFile.mjs'
@@ -96,7 +97,7 @@ export default function (userOptionsObject, vitestDepObject) {
             
         }
 
-        // install VvEl.test.js file
+        // install VvFormGroup.test.js file
         if ( userOptionsObject.files.includes( vitestDepObject.files.vvFormGroupTestJs.name )) {
 
             fs.outputFileSync(cwd + vitestDepObject.files.vvFormGroupTestJs.path + vitestDepObject.files.vvFormGroupTestJs.name, vvFormGroupTestJsFile(), { flag: 'w+' })
@@ -128,6 +129,13 @@ export default function (userOptionsObject, vitestDepObject) {
         if ( userOptionsObject.files.includes( vitestDepObject.files.vvListItemTestJs.name )) {
 
             fs.outputFileSync(cwd + vitestDepObject.files.vvListItemTestJs.path + vitestDepObject.files.vvListItemTestJs.name, vvListItemTestJsFile(), { flag: 'w+' })
+            
+        }
+
+        // install VvQuadFormGroup.test.js file
+        if ( userOptionsObject.files.includes( vitestDepObject.files.vvQuadFormGroupTestJs.name )) {
+
+            fs.outputFileSync(cwd + vitestDepObject.files.vvQuadFormGroupTestJs.path + vitestDepObject.files.vvQuadFormGroupTestJs.name, vvQuadFormGroupTestJsFile(), { flag: 'w+' })
             
         }
 
