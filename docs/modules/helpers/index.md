@@ -40,6 +40,11 @@ title: Helper Method Modules
 * [stringToFilename()](/modules/helpers/string-to-filename)
 * [timestampToDateTimeAmPm()](/modules/helpers/timestamp-to-date-time-am-pm)
 * [uniqueArray()](/modules/helpers/unique-array)
+* [verifyDateMMDDYYYY()](/modules/helpers/verify-date-mmddyyyy)
+* [verifyEmailString()](/modules/helpers/verify-email-string)
+* [verifyRunTime()](/modules/helpers/verify-run-time)
+* [verifyStringLengths()](/modules/helpers/verify-string-lengths)
+* [verifyType()](/modules/helpers/verify-type)
 
 
 
