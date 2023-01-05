@@ -11,7 +11,7 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
     import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
-    import type { DefaultPaletteColors, DefaultPalettes } from '@obewds/vueventus'
+    import type { DefaultPaletteColors, DefaultPalettes, SizesText } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -46,6 +46,10 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
                 type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvFormGroup.errorTextPalette,
             },
+            errorTextSize: {
+                type: String as PropType<keyof SizesText>,
+                default: appVv.defaults.VvFormGroup.errorTextSize,
+            },
             helpClasses: {
                 type: String,
                 default: appVv.defaults.VvFormGroup.helpClasses,
@@ -61,6 +65,10 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
             helpTextPalette: {
                 type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvFormGroup.helpTextPalette,
+            },
+            helpTextSize: {
+                type: String as PropType<keyof SizesText>,
+                default: appVv.defaults.VvFormGroup.helpTextSize,
             },
             label: {
                 type: String,
@@ -82,6 +90,10 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
                 type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvFormGroup.labelTextPalette,
             },
+            labelTextSize: {
+                type: String as PropType<keyof SizesText>,
+                default: appVv.defaults.VvFormGroup.labelTextSize,
+            },
             slotParentClasses: {
                 type: String,
                 default: appVv.defaults.VvFormGroup.slotParentClasses,
@@ -101,6 +113,10 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
             successTextPalette: {
                 type: String as PropType<keyof DefaultPalettes>,
                 default: appVv.defaults.VvFormGroup.successTextPalette,
+            },
+            successTextSize: {
+                type: String as PropType<keyof SizesText>,
+                default: appVv.defaults.VvFormGroup.successTextSize,
             },
             wrapperClasses: {
                 type: String,
@@ -123,20 +139,24 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
         :error-text="errorText"
         :error-text-color="errorTextColor"
         :error-text-palette="errorTextPalette"
+        :error-text-size="errorTextSize"
         :help-classes="helpClasses"
         :help-text="helpText"
         :help-text-color="helpTextColor"
         :help-text-palette="helpTextPalette"
+        :help-text-size="helpTextSize"
         :label="label"
         :label-for="labelFor"
         :label-classes="labelClasses"
         :label-text-color="labelTextColor"
         :label-text-palette="labelTextPalette"
+        :label-text-size="labelTextSize"
         :slot-parent-classes="slotParentClasses"
         :success-classes="successClasses"
         :success-text="successText"
         :success-text-color="successTextColor"
         :success-text-palette="successTextPalette"
+        :success-text-size="successTextSize"
         :wrapper-classes="wrapperClasses"
     >
         <slot/>
