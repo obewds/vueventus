@@ -1,6 +1,7 @@
 import type { PropType } from 'vue';
 import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors';
 import type { DefaultPalettes } from '../../types/DefaultPalettes';
+import type { SizesText } from '@/types/SizesText';
 declare const _default: import("vue").DefineComponent<{
     displayError: {
         type: BooleanConstructor;
@@ -30,6 +31,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultPalettes>;
         default: keyof DefaultPalettes;
     };
+    errorTextSize: {
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
+    };
     helpClasses: {
         type: StringConstructor;
         default: string;
@@ -45,6 +50,10 @@ declare const _default: import("vue").DefineComponent<{
     helpTextPalette: {
         type: PropType<keyof DefaultPalettes>;
         default: keyof DefaultPalettes;
+    };
+    helpTextSize: {
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
     };
     label: {
         type: StringConstructor;
@@ -66,6 +75,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultPalettes>;
         default: keyof DefaultPalettes;
     };
+    labelTextSize: {
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
+    };
     slotParentClasses: {
         type: StringConstructor;
         default: string;
@@ -85,6 +98,10 @@ declare const _default: import("vue").DefineComponent<{
     successTextPalette: {
         type: PropType<keyof DefaultPalettes>;
         default: keyof DefaultPalettes;
+    };
+    successTextSize: {
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
     };
     wrapperClasses: {
         type: StringConstructor;
@@ -119,6 +136,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultPalettes>;
         default: keyof DefaultPalettes;
     };
+    errorTextSize: {
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
+    };
     helpClasses: {
         type: StringConstructor;
         default: string;
@@ -134,6 +155,10 @@ declare const _default: import("vue").DefineComponent<{
     helpTextPalette: {
         type: PropType<keyof DefaultPalettes>;
         default: keyof DefaultPalettes;
+    };
+    helpTextSize: {
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
     };
     label: {
         type: StringConstructor;
@@ -155,6 +180,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultPalettes>;
         default: keyof DefaultPalettes;
     };
+    labelTextSize: {
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
+    };
     slotParentClasses: {
         type: StringConstructor;
         default: string;
@@ -175,6 +204,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultPalettes>;
         default: keyof DefaultPalettes;
     };
+    successTextSize: {
+        type: PropType<keyof SizesText>;
+        default: keyof SizesText;
+    };
     wrapperClasses: {
         type: StringConstructor;
         default: string;
@@ -187,18 +220,22 @@ declare const _default: import("vue").DefineComponent<{
     errorText: string;
     errorTextColor: keyof DefaultPaletteColors;
     errorTextPalette: keyof DefaultPalettes;
+    errorTextSize: keyof SizesText;
     helpClasses: string;
     helpText: string;
     helpTextColor: keyof DefaultPaletteColors;
     helpTextPalette: keyof DefaultPalettes;
+    helpTextSize: keyof SizesText;
     labelClasses: string;
     labelTextColor: keyof DefaultPaletteColors;
     labelTextPalette: keyof DefaultPalettes;
+    labelTextSize: keyof SizesText;
     slotParentClasses: string;
     successClasses: string;
     successText: string;
     successTextColor: keyof DefaultPaletteColors;
     successTextPalette: keyof DefaultPalettes;
+    successTextSize: keyof SizesText;
     wrapperClasses: string;
 }>;
 export default _default;
