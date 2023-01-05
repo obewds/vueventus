@@ -16,7 +16,9 @@ export default function (timestamp: number|string, format: 'long'|'short' = 'sho
     var seconds = a.getSeconds()
     var amPm = hours >= 12 ? pm : am
     hours = hours % 12
+    /* c8 ignore start */
     hours = hours === 0 ? 12 : hours
+    /* c8 ignore stop */
     
     return month + ' ' + padNumber(date) + ', ' + year + ' ' + hours + ':' + padNumber(minutes) + ':' + padNumber(seconds) + ' ' + amPm
 

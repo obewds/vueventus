@@ -231,6 +231,11 @@ function sidebarModules() {
                 { text: 'stringToFilename()', link: '/modules/helpers/string-to-filename' },
                 { text: 'timestampToDateTimeAmPm()', link: '/modules/helpers/timestamp-to-date-time-am-pm' },
                 { text: 'uniqueArray()', link: '/modules/helpers/unique-array' },
+                { text: 'verifyDateMMDDYYYY()', link: '/modules/helpers/verify-date-mmddyyyy' },
+                { text: 'verifyEmailString()', link: '/modules/helpers/verify-email-string' },
+                { text: 'verifyRunTime()', link: '/modules/helpers/verify-run-time' },
+                { text: 'verifyStringLengths()', link: '/modules/helpers/verify-string-lengths' },
+                { text: 'verifyType()', link: '/modules/helpers/verify-type' },
             ]
         },
     ]
