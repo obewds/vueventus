@@ -1770,7 +1770,7 @@ function $a(e, t) {
   return /^[1-9]\d*$/.test(s) ? Number(s) : t;
 }
 function za() {
-  typeof window < "u" && document && document.body.click();
+  typeof window < "u" && document && (document.body.click(), document.body.dispatchEvent(new Event("click")));
 }
 function Ta(e, t = 2) {
   if (e === 0)
@@ -3609,7 +3609,7 @@ let ra = T({ name: "Listbox", emits: { "update:modelValue": (e) => !0 }, props: 
   let c = _o(x(() => ({ as: e.as, type: t.type })), o.buttonRef);
   return () => {
     var u, d;
-    let f = { open: o.listboxState.value === 0, disabled: o.disabled.value, value: o.value.value }, { id: p, ...k } = e, V = { ref: o.buttonRef, id: p, type: c.value, "aria-haspopup": !0, "aria-controls": (u = O(o.optionsRef)) == null ? void 0 : u.id, "aria-expanded": o.disabled.value ? void 0 : o.listboxState.value === 0, "aria-labelledby": o.labelRef.value ? [(d = O(o.labelRef)) == null ? void 0 : d.id, p].join(" ") : void 0, disabled: o.disabled.value === !0 ? !0 : void 0, onKeydown: a, onKeyup: l, onClick: i };
+    let f = { open: o.listboxState.value === 0, disabled: o.disabled.value, value: o.value.value }, { id: p, ...k } = e, V = { ref: o.buttonRef, id: p, type: c.value, "aria-haspopup": "listbox", "aria-controls": (u = O(o.optionsRef)) == null ? void 0 : u.id, "aria-expanded": o.disabled.value ? void 0 : o.listboxState.value === 0, "aria-labelledby": o.labelRef.value ? [(d = O(o.labelRef)) == null ? void 0 : d.id, p].join(" ") : void 0, disabled: o.disabled.value === !0 ? !0 : void 0, onKeydown: a, onKeyup: l, onClick: i };
     return be({ ourProps: V, theirProps: k, slot: f, attrs: t, slots: s, name: "ListboxButton" });
   };
 } }), la = T({ name: "ListboxOptions", props: { as: { type: [Object, String], default: "ul" }, static: { type: Boolean, default: !1 }, unmount: { type: Boolean, default: !0 }, id: { type: String, default: () => `headlessui-listbox-options-${Ie()}` } }, setup(e, { attrs: t, slots: s, expose: r }) {
