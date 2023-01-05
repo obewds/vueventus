@@ -57,6 +57,11 @@ export { default as stringToCamelCase } from './helpers/stringToCamelCase';
 export { default as stringToFilename } from './helpers/stringToFilename';
 export { default as timestampToDateTimeAmPm } from './helpers/timestampToDateTimeAmPm';
 export { default as uniqueArray } from './helpers/uniqueArray';
+export { default as verifyDateMMDDYYYY } from './helpers/verifyDateMMDDYYYY';
+export { default as verifyEmailString } from './helpers/verifyEmailString';
+export { default as verifyRunTime } from './helpers/verifyRunTime';
+export { default as verifyStringLengths } from './helpers/verifyStringLengths';
+export { default as verifyType } from './helpers/verifyType';
 // .src/validators
 export { default as ValidAudioSourceTypes } from './validators/ValidAudioSourceTypes';
 export { default as ValidButtonTypes } from './validators/ValidButtonTypes';
