@@ -4,8 +4,8 @@
 
     import { Transitions } from '../../../index'
     import globals from '../../../globals'
-    import DevViewArticle from '@/views/compos/DevViewArticle.vue'
-    import VvAnchor from '@/components/anchors/VvAnchor.vue'
+    import DevViewArticle from '../../../views/compos/DevViewArticle.vue'
+    import VvAnchor from '../../../components/anchors/VvAnchor.vue'
 
     const tw = globals.classes
 
@@ -20,7 +20,12 @@
             <div>
                 <h3 :class="tw.h3">VvAnchor External Link Mode</h3>
                 <div :class="tw.flexWrap">
-                    <VvAnchor :external="true" href="https://tailwind.mattmct.com/">TWCSS Color Tool</VvAnchor>
+                    <VvAnchor
+                        :external="true"
+                        href="https://tailwind.mattmct.com/"
+                    >
+                        TWCSS Color Tool
+                    </VvAnchor>
                 </div>
             </div>
         </div>
