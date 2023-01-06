@@ -17,6 +17,11 @@
         name: 'VvList',
 
         props: {
+            // TODO: add "debug" prop to docs
+            debug: {
+                type: Boolean,
+                default: VvConfig.defaults.VvList.debug,
+            },
             listStyleTypeClass: {
                 type: String,
                 default: VvConfig.defaults.VvList.listStyleTypeClass,
@@ -75,7 +80,18 @@
 
 <template>
 
-    <component :is="tag" :class="[listStyleTypeClass, classes]" role="list">
+    <component
+        :is="tag"
+        :class="[listStyleTypeClass, classes]"
+        role="list"
+        :data-vv-list-generated-classes="debug ? classes : null"
+        :data-vv-list-prop-list-style-type-class="debug ? listStyleTypeClass : null"
+        :data-vv-list-prop-marker-color="debug ? markerColor : null"
+        :data-vv-list-prop-marker-palette="debug ? markerPalette : null"
+        :data-vv-list-prop-size="debug ? size : null"
+        :data-vv-list-prop-tag="debug ? tag : null"
+        
+    >
         <slot/>
     </component>
     
