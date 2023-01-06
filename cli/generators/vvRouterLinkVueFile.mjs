@@ -1,5 +1,5 @@
 // ./cli/generators/vvRouterLinkVueFile.mjs
-// TODO: add "debug" prop to docs
+
 export default function () {
 
 const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
