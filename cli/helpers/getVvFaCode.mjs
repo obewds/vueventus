@@ -1,9 +1,15 @@
 // ./cli/helpers/getVvFaCode.mjs
-
+// TODO: add "debug" prop to docs
 export default function (isSsg = false) {
 
 const template = `
-    <FontAwesomeIcon :icon="[family, icon]" :size="size"/>
+    <FontAwesomeIcon
+        :icon="[family, icon]"
+        :size="size"
+        :data-vv-fa-prop-family="debug ? family : null"
+        :data-vv-fa-prop-icon="debug ? icon : null"
+        :data-vv-fa-prop-size="debug ? size : null"
+    />
 `
 // const ssgTemplate = `
 //     <client-only>
@@ -34,6 +40,10 @@ return `<!-- ./src/components/vv/elements/VvFa.vue -->
         components: { FontAwesomeIcon },
 
         props: {
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvFa.debug,
+            },
             family: {
                 type: String as PropType<ValidFontAwesomeFamilies>,
                 default: appVv.defaults.VvFa.family,

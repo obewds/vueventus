@@ -23,6 +23,10 @@ const output = `<!-- ./src/components/vv/textareas/VvTextarea.vue -->
                 type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: appVv.defaults.VvTextarea.color,
             },
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvTextarea.debug,
+            },
             palette: {
                 type: String as PropType<keyof DefaultValidationPalettes>,
                 default: appVv.defaults.VvTextarea.palette,
@@ -49,6 +53,10 @@ const output = `<!-- ./src/components/vv/textareas/VvTextarea.vue -->
         :palette="palette"
         :size="size"
         :row-size="rowSize"
+        :data-vv-textarea-prop-color="debug ? color : null"
+        :data-vv-textarea-prop-palette="debug ? palette : null"
+        :data-vv-textarea-prop-row-size="debug ? rowSize : null"
+        :data-vv-textarea-prop-size="debug ? size : null"
     />
 
 </template>
