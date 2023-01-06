@@ -34,6 +34,25 @@ import VvFa from './vv/elements/VvFa.vue'
 
 
 
+
+
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvFa.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-fa-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvFa :debug="true"/>
+```
+
+
+
+
+
+
 ## Prop: family
 <!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
