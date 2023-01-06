@@ -267,7 +267,6 @@ If you are building a component that uses a nested {{ $frontmatter.title }} and 
 
 
 ## Prop: color
-
 <!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Default: **`"{{ VvConfig.defaults.VvAnchor.color }}"`**
@@ -331,6 +330,39 @@ Coming Soon!
 
 
 
+
+
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`"{{ VvConfig.defaults.VvAnchor.debug }}"`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-anchor-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvAnchor :debug="true">
+    VvAnchor debug
+</VvAnchor>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvAnchor :debug="true">
+        VvAnchor debug
+    </VvAnchor>
+</div>
+
+
+
+
+
+
+
+
+
+
 ## Prop: external
 
 Type: **`Boolean`**  
@@ -356,6 +388,7 @@ When the {{ $frontmatter.title }} `external` prop value is `true`, the output `<
         VueVentus VvAnchor Docs
     </VvAnchor>
 </div>
+
 
 
 
