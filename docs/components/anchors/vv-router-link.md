@@ -296,10 +296,6 @@ The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a compo
 </VvRouterLink>
 ```
 
-### Result
-
-_A result example is currently not available in this documentation environment._
-
 
 
 
