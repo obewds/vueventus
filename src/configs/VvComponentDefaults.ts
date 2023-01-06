@@ -9,6 +9,7 @@ export default <ConfigDefaults>{
         buttonFab: false,
         buttonSize: 'md',
         color: 'default',
+        debug: false,
         external: false,
         href: '#',
         palette: 'default',
@@ -53,6 +54,7 @@ export default <ConfigDefaults>{
         size: '1x',
     },
     "VvFormGroup": {
+        debug: false,
         displayError: false,
         displayHelp: false,
         displaySuccess: false,
@@ -142,6 +144,7 @@ export default <ConfigDefaults>{
     "VvQuadFormGroup": {
         bottomSlotClasses: '',
         bottomWrapperClasses: 'flex justify-between gap-3',
+        debug: false,
         displayError: false,
         displayHelp: false,
         displaySuccess: false,
