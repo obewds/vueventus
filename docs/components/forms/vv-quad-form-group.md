@@ -143,6 +143,59 @@ The {{ $frontmatter.title }} `bottomWrapperClasses` prop sets the help/error/suc
 
 
 
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`"{{ VvConfig.defaults.VvQuadFormGroup.debug }}"`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-quad-form-group-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvQuadFormGroup
+    label="Debug Example:"
+    label-for="debug-id"
+    :debug="true"
+>
+
+    <template v-slot:top>
+        Top
+    </template>
+
+    <VvInput id="debug-id" placeholder="Example VvInput"/>
+
+    <template v-slot:bottom>
+        Bottom
+    </template>
+
+</VvQuadFormGroup>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvQuadFormGroup
+        label="Debug Example:"
+        label-for="debug-id"
+        :debug="true"
+    >
+        <template v-slot:top>
+            Top
+        </template>
+        <VvInput id="debug-id" placeholder="Example VvInput"/>
+        <template v-slot:bottom>
+            Bottom
+        </template>
+    </VvQuadFormGroup>
+</div>
+
+
+
+
+
+
+
+
 
 ## Prop: displayError
 

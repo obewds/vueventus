@@ -39,6 +39,10 @@ const output = `<!-- ./src/components/vv/anchors/VvAnchor.vue -->
                 type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvAnchor.color,
             },
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvAnchor.debug,
+            },
             external: {
                 type: Boolean,
                 default: appVv.defaults.VvAnchor.external,
@@ -73,6 +77,15 @@ const output = `<!-- ./src/components/vv/anchors/VvAnchor.vue -->
         :href="href"
         :palette="palette"
         :text-size="textSize"
+        :data-vv-anchor-prop-button="debug ? button : null"
+        :data-vv-anchor-prop-button-block="debug ? buttonBlock : null"
+        :data-vv-anchor-prop-button-fab="debug ? buttonFab : null"
+        :data-vv-anchor-prop-button-size="debug ? buttonSize : null"
+        :data-vv-anchor-prop-color="debug ? color : null"
+        :data-vv-anchor-prop-external="debug ? external : null"
+        :data-vv-anchor-prop-href="debug ? href : null"
+        :data-vv-anchor-prop-palette="debug ? palette : null"
+        :data-vv-anchor-prop-text-size="debug ? textSize : null"
     >
         <slot/>
     </VvAnchor>

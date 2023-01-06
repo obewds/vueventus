@@ -18,6 +18,10 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
         components: { VvFormGroup },
 
         props: {
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvFormGroup.debug,
+            },
             displayError: {
                 type: Boolean,
                 default: appVv.defaults.VvFormGroup.displayError,
@@ -158,6 +162,32 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
         :success-text-palette="successTextPalette"
         :success-text-size="successTextSize"
         :wrapper-classes="wrapperClasses"
+        :data-vv-form-group-prop-display-error="debug ? displayError : null"
+        :data-vv-form-group-prop-display-help="debug ? displayHelp : null"
+        :data-vv-form-group-prop-display-success="debug ? displaySuccess : null"
+        :data-vv-form-group-prop-error-classes="debug ? errorClasses : null"
+        :data-vv-form-group-prop-error-text="debug ? errorText : null"
+        :data-vv-form-group-prop-error-text-color="debug ? errorTextColor : null"
+        :data-vv-form-group-prop-error-text-palette="debug ? errorTextPalette : null"
+        :data-vv-form-group-prop-error-text-size="debug ? errorTextSize : null"
+        :data-vv-form-group-prop-help-classes="debug ? helpClasses : null"
+        :data-vv-form-group-prop-help-text="debug ? helpText : null"
+        :data-vv-form-group-prop-help-text-color="debug ? helpTextColor : null"
+        :data-vv-form-group-prop-help-text-palette="debug ? helpTextPalette : null"
+        :data-vv-form-group-prop-help-text-size="debug ? helpTextSize : null"
+        :data-vv-form-group-prop-label="debug ? label : null"
+        :data-vv-form-group-prop-label-for="debug ? labelFor : null"
+        :data-vv-form-group-prop-label-classes="debug ? labelClasses : null"
+        :data-vv-form-group-prop-label-text-color="debug ? labelTextColor : null"
+        :data-vv-form-group-prop-label-text-palette="debug ? labelTextPalette : null"
+        :data-vv-form-group-prop-label-text-size="debug ? labelTextSize : null"
+        :data-vv-form-group-prop-slot-parent-classes="debug ? slotParentClasses : null"
+        :data-vv-form-group-prop-success-classes="debug ? successClasses : null"
+        :data-vv-form-group-prop-success-text="debug ? successText : null"
+        :data-vv-form-group-prop-success-text-color="debug ? successTextColor : null"
+        :data-vv-form-group-prop-success-text-palette="debug ? successTextPalette : null"
+        :data-vv-form-group-prop-success-text-size="debug ? successTextSize : null"
+        :data-vv-form-group-prop-wrapper-classes="debug ? wrapperClasses : null"
     >
         <slot/>
     </VvFormGroup>

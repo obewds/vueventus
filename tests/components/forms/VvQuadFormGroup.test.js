@@ -56,3 +56,34 @@ test('VvQuadFormGroup.vue component props toggle error, help, and success text c
     expect(wrapper.html()).toContain(label)
     
 })
+
+
+
+test('VvQuadFormGroup.vue component debug mode with no help/error/success returns an expected result', async () => {
+
+    const wrapper = mount(VvQuadFormGroup, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-quad-form-group-')
+    
+})
+
+
+
+test('VvQuadFormGroup.vue component debug mode with help/error/success returns an expected result', async () => {
+
+    const wrapper = mount(VvQuadFormGroup, {
+        props: {
+            displayError: true,
+            displayHelp: true,
+            displaySuccess: true,
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-quad-form-group-')
+    
+})

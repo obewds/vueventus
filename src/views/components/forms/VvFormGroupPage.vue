@@ -9,7 +9,7 @@
 
     const tw = globals.classes
 
-    const groupClasses = 'max-w-lg text-left mx-auto pb-3'
+    const groupClasses = 'max-w-lg text-left mx-auto pb-5'
 
 </script>
 

@@ -1,29 +1,29 @@
 {
-  "hash": "77c3521f",
-  "browserHash": "bd2c67bf",
+  "hash": "59d2a4d0",
+  "browserHash": "8a500480",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "d63ce80d",
+      "fileHash": "ca8fca08",
       "needsInterop": false
     },
     "@thebespokepixel/es-tinycolor": {
       "src": "../../../../node_modules/@thebespokepixel/es-tinycolor/esm/index.js",
       "file": "@thebespokepixel_es-tinycolor.js",
-      "fileHash": "50ffcc94",
+      "fileHash": "cc70d4bb",
       "needsInterop": false
     },
     "deepmerge": {
       "src": "../../../../node_modules/deepmerge/dist/cjs.js",
       "file": "deepmerge.js",
-      "fileHash": "6f403204",
+      "fileHash": "e47bf2fb",
       "needsInterop": true
     },
     "@headlessui/vue": {
       "src": "../../../../node_modules/@headlessui/vue/dist/headlessui.esm.js",
       "file": "@headlessui_vue.js",
-      "fileHash": "6c1b5674",
+      "fileHash": "5aa32b23",
       "needsInterop": false
     }
   },
