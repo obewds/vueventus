@@ -72,6 +72,19 @@ test('VvAnchor.vue component external mode returns target="_blank" and rel="noop
     
 })
 
+
+test('VvAnchor.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvAnchor, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-anchor-')
+    
+})
+
 `
 
 return output
