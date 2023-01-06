@@ -17,17 +17,22 @@
         emits: ['update:modelValue'],
 
         props: {
-            color: {
-                type: String as PropType<keyof DefaultValidationPaletteColors>,
-                default: VvConfig.defaults.VvCheckbox.color,
-            },
             checked: {
                 type: Boolean,
                 default: VvConfig.defaults.VvCheckbox.checked,
             },
+            color: {
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
+                default: VvConfig.defaults.VvCheckbox.color,
+            },
             darkCheckHex: {
                 type: String,
                 default: VvConfig.defaults.VvCheckbox.darkCheckHex,
+            },
+            // TODO: add "debug" prop to docs
+            debug: {
+                type: Boolean,
+                default: VvConfig.defaults.VvCheckbox.debug,
             },
             lightCheckHex: {
                 type: String,
@@ -117,6 +122,13 @@
         :checked="checked"
         @change="$emit('update:modelValue', handleCheckboxChange($event as Event))"
         :data-test="(darkCheckCssUrl + lightCheckCssUrl)"
+        :data-vv-checkbox-generated-classes="debug ? classes : null"
+        :data-vv-checkbox-prop-checked="debug ? checked : null"
+        :data-vv-checkbox-prop-color="debug ? color : null"
+        :data-vv-checkbox-prop-dark-check-hex="debug ? darkCheckHex : null"
+        :data-vv-checkbox-prop-light-check-hex="debug ? lightCheckHex : null"
+        :data-vv-checkbox-prop-palette="debug ? palette : null"
+        :data-vv-checkbox-prop-size="debug ? size : null"
     >
 </template>
 
