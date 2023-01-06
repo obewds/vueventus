@@ -131,6 +131,35 @@ Coming Soon!
 
 
 
+
+
+
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvButton.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-button-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvButton :debug="true">
+    VvButton debug
+</VvButton>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvButton :debug="true">
+        VvButton debug
+    </VvButton>
+</div>
+
+
+
+
+
 ## Prop: fab
 
 Type: **`Boolean`**  
