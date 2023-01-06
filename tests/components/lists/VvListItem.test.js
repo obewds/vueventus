@@ -59,3 +59,17 @@ test('VvListItem.vue component returns an expected result when enableColoredSymb
     expect(wrapper.html()).not.toContain('span')
     
 })
+
+
+
+test('VvListItem.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvListItem, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-list-item-')
+    
+})
