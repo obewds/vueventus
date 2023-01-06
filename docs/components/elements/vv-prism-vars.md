@@ -4,6 +4,7 @@ title: VvPrismVars Component
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+    import { VvConfig } from '../../../src/index'
 </script>
 
 <!-- TODO: This docs page needs to be updated so all default values pull from VvConfig data -->
@@ -57,6 +58,29 @@ The {{ $frontmatter.title }} `commentStyle` prop sets the font style of comments
 ### Typing for Downstream Component Instances
 <!-- TODO: add typing use example code block for PropType keyof syntax -->
 Coming Soon!
+
+
+
+
+
+
+
+
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvPrismVars.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-prism-vars-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvPrismVars :debug="true"/>
+```
+
+### Result
+
+_A result example is currently not available in this documentation environment._
 
 
 
