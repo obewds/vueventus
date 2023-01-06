@@ -57,3 +57,34 @@ test('VvFormGroup.vue component props toggle error, help, and success text conte
     expect(wrapper.html()).toContain(label)
     
 })
+
+
+
+test('VvFormGroup.vue component debug mode with no help/error/success text enabled returns an expected result', async () => {
+
+    const wrapper = mount(VvFormGroup, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-form-group-')
+    
+})
+
+
+
+test('VvFormGroup.vue component debug mode with help/error/success text enabled returns an expected result', async () => {
+
+    const wrapper = mount(VvFormGroup, {
+        props: {
+            displayError: true,
+            displayHelp: true,
+            displaySuccess: true,
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-form-group-')
+    
+})
