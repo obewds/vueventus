@@ -22,7 +22,6 @@
                 type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: VvConfig.defaults.VvTextarea.color,
             },
-            // TODO: add "debug" prop to docs
             debug: {
                 type: Boolean,
                 default: VvConfig.defaults.VvTextarea.debug,

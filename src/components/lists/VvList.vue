@@ -17,7 +17,6 @@
         name: 'VvList',
 
         props: {
-            // TODO: add "debug" prop to docs
             debug: {
                 type: Boolean,
                 default: VvConfig.defaults.VvList.debug,

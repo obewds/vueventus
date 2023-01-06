@@ -29,7 +29,6 @@
                 type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvColorModeButton.color,
             },
-            // TODO: add "debug" prop to docs
             debug: {
                 type: Boolean,
                 default: VvConfig.defaults.VvColorModeButton.debug,

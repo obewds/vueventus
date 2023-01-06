@@ -24,7 +24,6 @@
                 type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvEl.borderColor,
             },
-            // TODO: add "debug" prop to docs
             debug: {
                 type: Boolean,
                 default: VvConfig.defaults.VvEl.debug,

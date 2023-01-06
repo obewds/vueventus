@@ -29,7 +29,6 @@
                 type: String,
                 default: VvConfig.defaults.VvCheckbox.darkCheckHex,
             },
-            // TODO: add "debug" prop to docs
             debug: {
                 type: Boolean,
                 default: VvConfig.defaults.VvCheckbox.debug,

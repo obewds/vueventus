@@ -32,7 +32,6 @@
                 type: Array as PropType<Array<VvListboxData>>,
                 default: VvConfig.defaults.VvListbox.data,
             },
-            // TODO: add "debug" prop to docs
             debug: {
                 type: Boolean,
                 default: VvConfig.defaults.VvListbox.debug,

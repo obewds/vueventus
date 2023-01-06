@@ -1,5 +1,5 @@
 // ./cli/helpers/getVvFaCode.mjs
-// TODO: add "debug" prop to docs
+
 export default function (isSsg = false) {
 
 const template = `

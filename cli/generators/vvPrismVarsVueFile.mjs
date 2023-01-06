@@ -1,5 +1,5 @@
 // ./cli/generators/vvPrismVarsVueFile.mjs
-// TODO: add "debug" prop to docs
+
 export default function () {
 
 const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->
