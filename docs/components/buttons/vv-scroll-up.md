@@ -4,9 +4,10 @@ title: VvScrollUp Component
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+    import { VvConfig } from '../../../src/index'
 </script>
 
-<!-- TODO: This docs page needs to be updated so all default values pull from VvConfig data -->
+
 
 
 
@@ -38,7 +39,7 @@ import VvScrollUp from './vv/buttons/VvScrollUp.vue'
 ## Prop: buttonClasses
 
 Type: **`String`**  
-Default: **`"rounded-full"`**
+Default: **`"{{ VvConfig.defaults.VvScrollUp.buttonClasses }}"`**
 
 The {{ $frontmatter.title }} `buttonClasses` prop sets the underlying VvButton's Tailwind CSS classes.
 
@@ -56,7 +57,7 @@ The {{ $frontmatter.title }} `buttonClasses` prop sets the underlying VvButton's
 ## Prop: color
 <!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
-Default: **`"primary"`**
+Default: **`"{{ VvConfig.defaults.VvScrollUp.color }}"`**
 
 The {{ $frontmatter.title }} `color` prop sets the underlying VvButton's palette color value (in conjunction with the `palette` prop value).
 
@@ -97,7 +98,7 @@ The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a compo
 ## Prop: fab
 
 Type: **`Boolean`**  
-Default: **`true`**
+Default: **`{{ VvConfig.defaults.VvScrollUp.fab }}`**
 
 The {{ $frontmatter.title }} `fab` prop sets the underlying VvButton's boolean `fab` value, which switches the base classes for the button to the `fabSizes` set of classes.
 
@@ -112,10 +113,10 @@ The {{ $frontmatter.title }} `fab` prop sets the underlying VvButton's boolean `
 
 
 
-## Prop: isVisible
+## Prop: 
 
 Type: **`Boolean`**  
-Default: **`false`**
+Default: **`{{ VvConfig.defaults.VvScrollUp.isVisible }}`**
 
 The {{ $frontmatter.title }} `isVisible` prop sets the visibility state of the component, which by default is `false` to allow the VvScrollUp component to animate into view once a user has scrolled a page. If the value of the `isVisible` prop is `true`, then the component won't animate in/out and will stay visible.
 
@@ -133,7 +134,7 @@ The {{ $frontmatter.title }} `isVisible` prop sets the visibility state of the c
 ## Prop: offsetMinimum
 
 Type: **`Number`**  
-Default: **`100`**
+Default: **`{{ VvConfig.defaults.VvScrollUp.offsetMinimum }}`**
 
 The {{ $frontmatter.title }} `offsetMinimum` prop sets threshold (in pixels) that determines when the VvScrollUp component will animate into view once a user has scrolled a page past the `offsetMinimum` value.
 
@@ -151,7 +152,7 @@ The {{ $frontmatter.title }} `offsetMinimum` prop sets threshold (in pixels) tha
 ## Prop: palette
 <!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
-Default: **`"solid"`**
+Default: **`"{{ VvConfig.defaults.VvScrollUp.palette }}"`**
 
 The {{ $frontmatter.title }} `palette` prop sets the underlying VvButton's color value (in conjunction with the `color` prop value).
 
@@ -173,7 +174,7 @@ Coming Soon!
 ## Prop: size
 <!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
-Default: **`"xs"`**
+Default: **`"{{ VvConfig.defaults.VvScrollUp.size }}"`**
 
 The {{ $frontmatter.title }} `size` prop sets the underlying VvButton's size value.
 
@@ -195,7 +196,7 @@ Coming Soon!
 ## Prop: title
 
 Type: **`String`**  
-Default: **`"Scroll to Top"`**
+Default: **`"{{ VvConfig.defaults.VvScrollUp.title }}"`**
 
 The {{ $frontmatter.title }} `title` prop sets the underlying VvButton's title attribute value, which is shown to users that hover over the button without moving the cursor for a second or so, and is also accessible by screen readers.
 
