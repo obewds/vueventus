@@ -1,5 +1,5 @@
 // ./cli/generators/vvPrismVueFile.mjs
-
+// TODO: add "debug" prop to docs
 export default function () {
 
 const output = `<!-- ./src/components/vv/elements/VvPrism.vue -->
@@ -18,6 +18,10 @@ const output = `<!-- ./src/components/vv/elements/VvPrism.vue -->
         components: { VvPrismVars },
         
         props: {
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvPrism.debug,
+            },
             prismVars: {
                 type: Boolean,
                 default: appVv.defaults.VvPrism.prismVars,
@@ -49,7 +53,7 @@ const output = `<!-- ./src/components/vv/elements/VvPrism.vue -->
 
 <template>
 
-    <div>
+    <div :data-vv-prism-prop-prism-vars="debug ? prismVars : null">
 
         <template v-if="prismVars">
             <VvPrismVars/>
