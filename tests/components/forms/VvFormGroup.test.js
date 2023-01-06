@@ -64,6 +64,8 @@ test('VvFormGroup.vue component debug mode with no help/error/success text enabl
 
     const wrapper = mount(VvFormGroup, {
         props: {
+            label: 'debug label',
+            labelFor: 'debug-id',
             debug: true,
         },
     })
@@ -78,6 +80,8 @@ test('VvFormGroup.vue component debug mode with help/error/success text enabled 
 
     const wrapper = mount(VvFormGroup, {
         props: {
+            label: 'debug label',
+            labelFor: 'debug-id',
             displayError: true,
             displayHelp: true,
             displaySuccess: true,
