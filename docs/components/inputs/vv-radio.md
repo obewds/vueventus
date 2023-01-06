@@ -437,6 +437,31 @@ The {{ $frontmatter.title }} `darkRadioHex` prop sets the component checked stat
 
 
 
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvRadio.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-radio-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvRadio :debug="true"/>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvRadio :debug="true" value="debugExample"/>
+</div>
+
+
+
+
+
+
+
+
 
 
 ## Prop: lightRadioHex
