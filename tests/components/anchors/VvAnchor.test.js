@@ -120,3 +120,32 @@ test('VvAnchor.vue component external mode returns an expected result', async ()
     expect(wrapper.html()).toContain('rel="noopener noreferrer"')
     
 })
+
+
+
+test('VvAnchor.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvAnchor, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-anchor-')
+    
+})
+
+
+
+test('VvAnchor.vue component debug mode with external mode returns an expected result', async () => {
+
+    const wrapper = mount(VvAnchor, {
+        props: {
+            external: true,
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-anchor')
+    
+})
