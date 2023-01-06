@@ -1,7 +1,7 @@
 import type { PropType } from 'vue';
 import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors';
 import type { DefaultPalettes } from '../../types/DefaultPalettes';
-import type { SizesText } from '@/types/SizesText';
+import type { SizesText } from '../../types/SizesText';
 declare const _default: import("vue").DefineComponent<{
     debug: {
         type: BooleanConstructor;
