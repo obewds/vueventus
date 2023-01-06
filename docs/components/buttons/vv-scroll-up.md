@@ -75,6 +75,25 @@ Coming Soon!
 
 
 
+
+
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvScrollUp.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-scroll-up-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvScrollUp :debug="true"/>
+```
+
+
+
+
+
+
 ## Prop: fab
 
 Type: **`Boolean`**  
