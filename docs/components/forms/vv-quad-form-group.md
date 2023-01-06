@@ -145,7 +145,7 @@ The {{ $frontmatter.title }} `bottomWrapperClasses` prop sets the help/error/suc
 
 ## Prop: debug
 Type: **`Boolean`**  
-Default: **`"{{ VvConfig.defaults.VvQuadFormGroup.debug }}"`**
+Default: **`{{ VvConfig.defaults.VvQuadFormGroup.debug }}`**
 
 The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-quad-form-group-` prefixed HTML attributes.
 
