@@ -62,3 +62,17 @@ test('VvTextarea.vue component emits the update:modelValue value as expected', a
     expect(updateModelValue[0]).toEqual(['test'])
     
 })
+
+
+
+test('VvTextarea.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvTextarea, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-textarea-')
+    
+})
