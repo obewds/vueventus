@@ -7,7 +7,7 @@ title: VvFa Component
     import { VvConfig } from '../../../src/index'
 </script>
 
-<!-- TODO: This docs page needs to be updated so all default values pull from VvConfig data -->
+
 
 # {{ $frontmatter.title }}
 
@@ -57,7 +57,7 @@ The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a compo
 <!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Valid Values: [ValidFontAwesomeFamilies Module](/components/prop-validators#validfontawesomefamilies)  
-Default: **`"fas"`**
+Default: **`"{{ VvConfig.defaults.VvFa.family }}"`**
 
 The {{ $frontmatter.title }} `family` prop sets the font awesome family of icons you are using via your FontAwesome `library()` icon families.
 
@@ -81,7 +81,7 @@ Coming Soon!
 ## Prop: icon
 
 Type: **`String`**  
-Default: **`"house"`**
+Default: **`"{{ VvConfig.defaults.VvFa.icon }}"`**
 
 The {{ $frontmatter.title }} `icon` prop sets the font awesome icon from the icons you are using via your FontAwesome `library()` declared icons.
 
@@ -100,7 +100,7 @@ The {{ $frontmatter.title }} `icon` prop sets the font awesome icon from the ico
 <!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
 Valid Values: [ValidFontAwesomeSizes Module](/components/prop-validators#validfontawesomesizes)  
-Default: **`"1x"`**
+Default: **`"{{ VvConfig.defaults.VvFa.size }}"`**
 
 The {{ $frontmatter.title }} `size` prop sets the font awesome size for any icons you are using via your FontAwesome `library()` declared icons.
 
