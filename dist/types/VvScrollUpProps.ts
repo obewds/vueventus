@@ -7,10 +7,11 @@ import type { SizesButtons } from '../types/SizesButtons'
 export interface VvScrollUpProps {
     buttonClasses: string
     color: keyof DefaultPaletteColors | string
+    debug: boolean
     fab: boolean
-    palette: keyof DefaultButtonPalettes | string
     isVisible: boolean
     offsetMinimum: number
+    palette: keyof DefaultButtonPalettes | string
     size: keyof SizesButtons | string
     title: string
 }

@@ -74,3 +74,17 @@ test('VvButton.vue component returns Tailwind CSS classes for a specific width a
     expect(wrapper.html()).toContain('h-')
     
 })
+
+
+
+test('VvButton.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvButton, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-button-')
+    
+})

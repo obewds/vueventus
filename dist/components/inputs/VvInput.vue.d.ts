@@ -8,6 +8,14 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultValidationPaletteColors>;
         default: keyof DefaultValidationPaletteColors;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    modelValue: {
+        type: StringConstructor;
+        default: string;
+    };
     palette: {
         type: PropType<keyof DefaultValidationPalettes>;
         default: keyof DefaultValidationPalettes;
@@ -20,10 +28,6 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<"number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url">;
         default: "number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url";
         validator: (prop: ValidInputTypes) => boolean;
-    };
-    modelValue: {
-        type: StringConstructor;
-        default: string;
     };
 }, {
     classes: import("vue").ComputedRef<string>;
@@ -33,6 +37,14 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultValidationPaletteColors>;
         default: keyof DefaultValidationPaletteColors;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    modelValue: {
+        type: StringConstructor;
+        default: string;
+    };
     palette: {
         type: PropType<keyof DefaultValidationPalettes>;
         default: keyof DefaultValidationPalettes;
@@ -46,14 +58,11 @@ declare const _default: import("vue").DefineComponent<{
         default: "number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url";
         validator: (prop: ValidInputTypes) => boolean;
     };
-    modelValue: {
-        type: StringConstructor;
-        default: string;
-    };
 }>> & {
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     color: keyof DefaultValidationPaletteColors;
+    debug: boolean;
     palette: keyof DefaultValidationPalettes;
     type: "number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url";
     size: keyof SizesInputs;

@@ -3,6 +3,7 @@ import type { DefaultValidationPalettes } from './DefaultValidationPalettes';
 import type { SizesSelects } from './SizesSelects';
 export interface VvSelectProps {
     color: keyof DefaultValidationPaletteColors | string;
+    debug: boolean;
     palette: keyof DefaultValidationPalettes | string;
     size: keyof SizesSelects | string;
 }

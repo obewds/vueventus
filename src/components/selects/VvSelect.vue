@@ -21,6 +21,10 @@
                 type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: VvConfig.defaults.VvSelect.color,
             },
+            debug: {
+                type: Boolean,
+                default: VvConfig.defaults.VvSelect.debug,
+            },
             palette: {
                 type: String as PropType<keyof DefaultValidationPalettes>,
                 default: VvConfig.defaults.VvSelect.palette,
@@ -77,6 +81,11 @@
         :class="classes"
         :value="modelValue"
         @change="$emit('update:modelValue', handleSelectChange($event))"
+        :data-vv-select-generated-classes="debug ? classes : null"
+        :data-vv-select-prop-color="debug ? color : null"
+        :data-vv-select-prop-model-value="debug ? modelValue : null"
+        :data-vv-select-prop-palette="debug ? palette : null"
+        :data-vv-select-prop-size="debug ? size : null"
     >
         <slot/>
     </select>

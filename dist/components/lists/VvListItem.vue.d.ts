@@ -6,6 +6,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultPaletteColors>;
         default: keyof DefaultPaletteColors;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     enableColoredSymbols: {
         type: BooleanConstructor;
         default: boolean;
@@ -30,6 +34,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultPaletteColors>;
         default: keyof DefaultPaletteColors;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     enableColoredSymbols: {
         type: BooleanConstructor;
         default: boolean;
@@ -48,6 +56,7 @@ declare const _default: import("vue").DefineComponent<{
     };
 }>>, {
     color: keyof DefaultPaletteColors;
+    debug: boolean;
     palette: keyof DefaultPalettes;
     enableColoredSymbols: boolean;
     symbolColor: keyof DefaultPaletteColors;

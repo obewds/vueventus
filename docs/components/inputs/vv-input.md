@@ -122,6 +122,31 @@ Coming Soon!
 
 
 
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvInput.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-input-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvInput :debug="true"/>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvInput :debug="true"/>
+</div>
+
+
+
+
+
+
+
+
 
 
 ## Prop: palette

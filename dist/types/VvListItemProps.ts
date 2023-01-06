@@ -4,9 +4,10 @@ import type { DefaultPaletteColors } from './DefaultPaletteColors'
 import type { DefaultPalettes } from './DefaultPalettes'
 
 export interface VvListItemProps {
-    palette: keyof DefaultPalettes | string
     color: keyof DefaultPaletteColors | string
+    debug: boolean
     enableColoredSymbols: boolean
-    symbolPalette: keyof DefaultPalettes | string
+    palette: keyof DefaultPalettes | string
     symbolColor: keyof DefaultPaletteColors | string
+    symbolPalette: keyof DefaultPalettes | string
 }

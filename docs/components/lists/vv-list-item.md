@@ -92,6 +92,35 @@ Coming Soon!
 
 
 
+
+
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvListItem.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-list-item-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<ul class="list-disc text-left pl-4">
+    <VvListItem :debug="true">VvListItem debug</VvListItem>
+</ul>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <ul class="list-disc text-left pl-4">
+        <VvListItem :debug="true">VvListItem debug</VvListItem>
+    </ul>
+</div>
+
+
+
+
+
+
 ## Prop: enableColoredSymbols
 
 Type: **`Boolean`**  

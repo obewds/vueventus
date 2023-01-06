@@ -23,6 +23,10 @@ const output = `<!-- ./src/components/vv/selects/VvListbox.vue -->
                 type: Array as PropType<Array<VvListboxData>>,
                 default: appVv.defaults.VvListbox.data,
             },
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvListbox.debug,
+            },
             displayClasses: {
                 type: String,
                 default: appVv.defaults.VvListbox.displayClasses,
@@ -134,6 +138,27 @@ const output = `<!-- ./src/components/vv/selects/VvListbox.vue -->
         :selected-display-classes="selectedDisplayClasses"
         :selected-index="selectedIndex"
         :size="size"
+        :data-vv-listbox-prop-data="debug ? data : null"
+        :data-vv-listbox-prop-display-classes="debug ? displayClasses : null"
+        :data-vv-listbox-prop-display-disabled-classes="debug ? displayDisabledClasses : null"
+        :data-vv-listbox-prop-icon-disabled-classes="debug ? iconDisabledClasses : null"
+        :data-vv-listbox-prop-icon-selected-classes="debug ? iconSelectedClasses : null"
+        :data-vv-listbox-prop-icons-size-classes="debug ? iconsSizeClasses : null"
+        :data-vv-listbox-prop-label="debug ? label : null"
+        :data-vv-listbox-prop-label-classes="debug ? labelClasses : null"
+        :data-vv-listbox-prop-listbox-button-classes="debug ? listboxButtonClasses : null"
+        :data-vv-listbox-prop-listbox-button-color="debug ? listboxButtonColor : null"
+        :data-vv-listbox-prop-listbox-button-palette="debug ? listboxButtonPalette : null"
+        :data-vv-listbox-prop-listbox-option-classes="debug ? listboxOptionClasses : null"
+        :data-vv-listbox-prop-listbox-option-color="debug ? listboxOptionColor : null"
+        :data-vv-listbox-prop-listbox-option-palette="debug ? listboxOptionPalette : null"
+        :data-vv-listbox-prop-listbox-options-classes="debug ? listboxOptionsClasses : null"
+        :data-vv-listbox-prop-listbox-options-with-label-spacing="debug ? listboxOptionsWithLabelSpacing : null"
+        :data-vv-listbox-prop-listbox-options-without-label-spacing="debug ? listboxOptionsWithoutLabelSpacing : null"
+        :data-vv-listbox-prop-option-icon-parent-classes="debug ? optionIconParentClasses : null"
+        :data-vv-listbox-prop-selected-display-classes="debug ? selectedDisplayClasses : null"
+        :data-vv-listbox-prop-selected-index="debug ? selectedIndex : null"
+        :data-vv-listbox-prop-size="debug ? size : null"
     />
 
 </template>

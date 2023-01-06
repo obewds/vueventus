@@ -23,6 +23,10 @@ const output = `<!-- ./src/components/vv/selects/VvSelect.vue -->
                 type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: appVv.defaults.VvSelect.color,
             },
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvSelect.debug,
+            },
             palette: {
                 type: String as PropType<keyof DefaultValidationPalettes>,
                 default: appVv.defaults.VvSelect.palette,
@@ -44,6 +48,9 @@ const output = `<!-- ./src/components/vv/selects/VvSelect.vue -->
         :color="color"
         :palette="palette"
         :size="size"
+        :data-vv-select-prop-color="debug ? color : null"
+        :data-vv-select-prop-palette="debug ? palette : null"
+        :data-vv-select-prop-size="debug ? size : null"
     >
         <slot/>
     </VvSelect>

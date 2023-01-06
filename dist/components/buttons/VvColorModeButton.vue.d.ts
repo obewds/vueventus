@@ -5,22 +5,13 @@ import type { DefaultButtonPalettes } from '../../types/DefaultButtonPalettes';
 import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors';
 import type { SizesButtons } from '../../types/SizesButtons';
 declare const _default: import("vue").DefineComponent<{
-    mode: {
-        type: PropType<"dark" | "light">;
-        default: "dark" | "light";
-        validator: (prop: ValidColorModes) => boolean;
-    };
     color: {
         type: PropType<keyof DefaultPaletteColors>;
         default: keyof DefaultPaletteColors;
     };
-    palette: {
-        type: PropType<keyof DefaultButtonPalettes>;
-        default: keyof import("../..").DefaultPalettes;
-    };
-    size: {
-        type: PropType<keyof SizesButtons>;
-        default: keyof SizesButtons;
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
     };
     groundDark: {
         type: StringConstructor;
@@ -37,6 +28,19 @@ declare const _default: import("vue").DefineComponent<{
     groundLightHex: {
         type: StringConstructor;
         default: string;
+    };
+    mode: {
+        type: PropType<"dark" | "light">;
+        default: "dark" | "light";
+        validator: (prop: ValidColorModes) => boolean;
+    };
+    palette: {
+        type: PropType<keyof DefaultButtonPalettes>;
+        default: keyof import("../..").DefaultPalettes;
+    };
+    size: {
+        type: PropType<keyof SizesButtons>;
+        default: keyof SizesButtons;
     };
     textDark: {
         type: StringConstructor;
@@ -64,24 +68,15 @@ declare const _default: import("vue").DefineComponent<{
     icon: import("vue").ComputedRef<"sun" | "moon">;
     title: import("vue").ComputedRef<string>;
 }, unknown, {}, {
-    toggleColorMode(event: Event): void;
+    toggleColorMode(): void;
 }, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-    mode: {
-        type: PropType<"dark" | "light">;
-        default: "dark" | "light";
-        validator: (prop: ValidColorModes) => boolean;
-    };
     color: {
         type: PropType<keyof DefaultPaletteColors>;
         default: keyof DefaultPaletteColors;
     };
-    palette: {
-        type: PropType<keyof DefaultButtonPalettes>;
-        default: keyof import("../..").DefaultPalettes;
-    };
-    size: {
-        type: PropType<keyof SizesButtons>;
-        default: keyof SizesButtons;
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
     };
     groundDark: {
         type: StringConstructor;
@@ -98,6 +93,19 @@ declare const _default: import("vue").DefineComponent<{
     groundLightHex: {
         type: StringConstructor;
         default: string;
+    };
+    mode: {
+        type: PropType<"dark" | "light">;
+        default: "dark" | "light";
+        validator: (prop: ValidColorModes) => boolean;
+    };
+    palette: {
+        type: PropType<keyof DefaultButtonPalettes>;
+        default: keyof import("../..").DefaultPalettes;
+    };
+    size: {
+        type: PropType<keyof SizesButtons>;
+        default: keyof SizesButtons;
     };
     textDark: {
         type: StringConstructor;
@@ -122,6 +130,7 @@ declare const _default: import("vue").DefineComponent<{
     };
 }>>, {
     color: keyof DefaultPaletteColors;
+    debug: boolean;
     palette: keyof DefaultButtonPalettes;
     type: "button" | "submit" | "reset";
     size: keyof SizesButtons;

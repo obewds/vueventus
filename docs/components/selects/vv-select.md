@@ -148,6 +148,37 @@ Coming Soon!
 
 
 
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvSelect.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-select-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvSelect :debug="true">
+    <option value="">Select Option</option>
+    <option value="one">Option 1</option>
+</VvSelect>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvSelect :debug="true">
+        <option value="">Select Option</option>
+        <option value="one">Option 1</option>
+    </VvSelect>
+</div>
+
+
+
+
+
+
+
+
 
 
 ## Prop: palette

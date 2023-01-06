@@ -129,6 +129,35 @@ Coming Soon!
 
 
 
+
+
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvEl.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-el-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvEl :debug="true">
+    VvEl debug
+</VvEl>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvEl :debug="true">
+        VvEl debug
+    </VvEl>
+</div>
+
+
+
+
+
+
 ## Prop: groundPalette
 <!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  

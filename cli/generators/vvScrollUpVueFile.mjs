@@ -32,13 +32,13 @@ const output = `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
                 type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvScrollUp.color,
             },
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvScrollUp.debug,
+            },
             fab: {
                 type: Boolean,
                 default: appVv.defaults.VvScrollUp.fab,
-            },
-            palette: {
-                type: String as PropType<keyof DefaultButtonPalettes>,
-                default: appVv.defaults.VvScrollUp.palette,
             },
             isVisible: {
                 type: Boolean,
@@ -47,6 +47,10 @@ const output = `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
             offsetMinimum: {
                 type: Number,
                 default: appVv.defaults.VvScrollUp.offsetMinimum,
+            },
+            palette: {
+                type: String as PropType<keyof DefaultButtonPalettes>,
+                default: appVv.defaults.VvScrollUp.palette,
             },
             size: {
                 type: String as PropType<keyof SizesButtons>,
@@ -117,10 +121,29 @@ const output = `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
                         @click="scrollToTop($event)"
                         :fab="fab"
                         :size="size"
+                        :data-vv-scroll-up-prop-button-classes="debug ? buttonClasses : null"
+                        :data-vv-scroll-up-prop-color="debug ? color : null"
+                        :data-vv-scroll-up-prop-fab="debug ? fab : null"
+                        :data-vv-scroll-up-prop-palette="debug ? palette : null"
+                        :data-vv-scroll-up-prop-is-visible="debug ? isVisible : null"
+                        :data-vv-scroll-up-prop-offset-minimum="debug ? offsetMinimum : null"
+                        :data-vv-scroll-up-prop-size="debug ? size : null"
+                        :data-vv-scroll-up-prop-title="debug ? title : null"
                     >
                         <slot>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M5 15l7-7 7 7"
+                                />
                             </svg>
                         </slot>
                     </VvButton>

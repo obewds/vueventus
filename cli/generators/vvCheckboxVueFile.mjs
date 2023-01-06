@@ -19,17 +19,21 @@ const output = `<!-- ./src/components/vv/inputs/VvCheckbox.vue -->
         components: { VvCheckbox },
 
         props: {
-            color: {
-                type: String as PropType<keyof DefaultValidationPaletteColors>,
-                default: appVv.defaults.VvCheckbox.color,
-            },
             checked: {
                 type: Boolean,
                 default: appVv.defaults.VvCheckbox.checked,
             },
+            color: {
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
+                default: appVv.defaults.VvCheckbox.color,
+            },
             darkCheckHex: {
                 type: String,
                 default: appVv.defaults.VvCheckbox.darkCheckHex,
+            },
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvEl.debug,
             },
             lightCheckHex: {
                 type: String,
@@ -88,6 +92,12 @@ const output = `<!-- ./src/components/vv/inputs/VvCheckbox.vue -->
         :light-check-hex="lightCheckHex"
         :palette="palette"
         :size="size"
+        :data-vv-checkbox-prop-checked="debug ? checked : null"
+        :data-vv-checkbox-prop-color="debug ? color : null"
+        :data-vv-checkbox-prop-dark-check-hex="debug ? darkCheckHex : null"
+        :data-vv-checkbox-prop-light-check-hex="debug ? lightCheckHex : null"
+        :data-vv-checkbox-prop-palette="debug ? palette : null"
+        :data-vv-checkbox-prop-size="debug ? size : null"
     />
 </template>
 

@@ -4,9 +4,8 @@ title: VvPrismVars Component
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+    import { VvConfig } from '../../../src/index'
 </script>
-
-<!-- TODO: This docs page needs to be updated so all default values pull from VvConfig data -->
 
 
 
@@ -44,7 +43,7 @@ import VvPrismVars from './vv/elements/VvPrismVars.vue'
 <!-- TODO: this should use the new ValidCommentStyles validator -->
 Type: **`String`**  
 Valid Values: **`"normal"`**, **`"italic"`**, **`"oblique"`**  
-Default: **`"normal"`**
+Default: **`"{{ VvConfig.defaults.VvPrismVars.commentStyle }}"`**
 
 The {{ $frontmatter.title }} `commentStyle` prop sets the font style of comments in highlighted code.
 
@@ -63,10 +62,29 @@ Coming Soon!
 
 
 
+
+
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvPrismVars.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-prism-vars-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvPrismVars :debug="true"/>
+```
+
+
+
+
+
+
 ## Prop: fontSize
 
 Type: **`String`**  
-Default: **`"1rem"`**
+Default: **`"{{ VvConfig.defaults.VvPrismVars.fontSize }}"`**
 
 The {{ $frontmatter.title }} `fontSize` prop sets the font size of highlighted code.
 
@@ -84,7 +102,7 @@ The {{ $frontmatter.title }} `fontSize` prop sets the font size of highlighted c
 ## Prop: lineHeight
 
 Type: **`String`**  
-Default: **`"1.3rem"`**
+Default: **`"{{ VvConfig.defaults.VvPrismVars.lineHeight }}"`**
 
 The {{ $frontmatter.title }} `lineHeight` prop sets the line height of highlighted code.
 
@@ -102,7 +120,7 @@ The {{ $frontmatter.title }} `lineHeight` prop sets the line height of highlight
 ## Prop: lineHighlightOpacity
 
 Type: **`String`**  
-Default: **`"0.25"`**
+Default: **`"{{ VvConfig.defaults.VvPrismVars.lineHighlightOpacity }}"`**
 
 The {{ $frontmatter.title }} `lineHighlightOpacity` prop sets the opacity of highlighted lines of code within your highlighted code.
 
@@ -121,7 +139,7 @@ The {{ $frontmatter.title }} `lineHighlightOpacity` prop sets the opacity of hig
 <!-- TODO: change this type to new PropType keyof syntax -->
 <!-- TODO: this should use the new ValidCommentStyles validator -->
 Type: **`String`**  
-Default: **`"unset"`**
+Default: **`"{{ VvConfig.defaults.VvPrismVars.textShadow }}"`**
 
 The {{ $frontmatter.title }} `textShadow` prop sets the text shadowing used for highlighted code. VueVentus sets this to `"unset"` by default, because text shadows can make the code a little harder to read in the contexts of dark/light mode highlighted code.
 
@@ -146,8 +164,8 @@ Coming Soon!
 <!-- TODO: change this type to new PropType keyof syntax -->
 <!-- TODO: this should use the new ValidUrlDecorations validator -->
 Type: **`String`**  
-Valid Values: **`"underline"`**, **`"overline"`**, **`"none"`**  
-Default: **`"underline"`**
+Valid Values: **`"underline"`**, **`"overline"`**, **`"none"`** 
+Default: **`"{{ VvConfig.defaults.VvPrismVars.urlDecoration }}"`** 
 
 The {{ $frontmatter.title }} `urlDecoration` prop sets the text decoration for any URL's that may appear in your highlighted code or code comments.
 

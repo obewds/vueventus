@@ -334,7 +334,7 @@ Coming Soon!
 
 ## Prop: debug
 Type: **`Boolean`**  
-Default: **`"{{ VvConfig.defaults.VvAnchor.debug }}"`**
+Default: **`{{ VvConfig.defaults.VvAnchor.debug }}`**
 
 The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-anchor-` prefixed HTML attributes.
 

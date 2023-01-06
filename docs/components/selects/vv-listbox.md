@@ -223,11 +223,39 @@ The {{ $frontmatter.title }} `data` prop sets the component instance data that u
 
 
 
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvListbox.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-listbox-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvListbox :debug="true"/>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvListbox :debug="true"/>
+</div>
+
+
+
+
+
+
+
+
 
 
 ## Prop: displayClasses
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.displayClasses }}"`**
+
 <!-- TODO: add docs content for displayClasses prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -239,8 +267,11 @@ Coming Soon!
 
 
 ## Prop: displayDisabledClasses
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.displayDisabledClasses }}"`**
+
 <!-- TODO: add docs content for displayDisabledClasses prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -252,8 +283,11 @@ Coming Soon!
 
 
 ## Prop: iconDisabledClasses
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.iconDisabledClasses }}"`**
+
 <!-- TODO: add docs content for iconDisabledClasses prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -265,8 +299,11 @@ Coming Soon!
 
 
 ## Prop: iconSelectedClasses
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.iconSelectedClasses }}"`**
+
 <!-- TODO: add docs content for iconSelectedClasses prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -278,8 +315,11 @@ Coming Soon!
 
 
 ## Prop: iconsSizeClasses
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.iconsSizeClasses }}"`**
+
 <!-- TODO: add docs content for iconsSizeClasses prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -291,8 +331,11 @@ Coming Soon!
 
 
 ## Prop: label
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.label }}"`**
+
 <!-- TODO: add docs content for label prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -304,8 +347,11 @@ Coming Soon!
 
 
 ## Prop: labelClasses
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.labelClasses }}"`**
+
 <!-- TODO: add docs content for labelClasses prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -317,8 +363,11 @@ Coming Soon!
 
 
 ## Prop: listboxButtonClasses
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.listboxButtonClasses }}"`**
+
 <!-- TODO: add docs content for listboxButtonClasses prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -330,8 +379,11 @@ Coming Soon!
 
 
 ## Prop: listboxButtonColor
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.listboxButtonColor }}"`**
+
 <!-- TODO: add docs content for listboxButtonColor prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -343,8 +395,11 @@ Coming Soon!
 
 
 ## Prop: listboxButtonPalette
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.listboxButtonPalette }}"`**
+
 <!-- TODO: add docs content for listboxButtonPalette prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -356,8 +411,11 @@ Coming Soon!
 
 
 ## Prop: listboxOptionClasses
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.listboxOptionClasses }}"`**
+
 <!-- TODO: add docs content for listboxOptionClasses prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -369,8 +427,11 @@ Coming Soon!
 
 
 ## Prop: listboxOptionColor
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.listboxOptionColor }}"`**
+
 <!-- TODO: add docs content for listboxOptionColor prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -382,8 +443,11 @@ Coming Soon!
 
 
 ## Prop: listboxOptionPalette
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.listboxOptionPalette }}"`**
+
 <!-- TODO: add docs content for listboxOptionPalette prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -395,8 +459,11 @@ Coming Soon!
 
 
 ## Prop: listboxOptionsClasses
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.listboxOptionsClasses }}"`**
+
 <!-- TODO: add docs content for listboxOptionsClasses prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -408,8 +475,11 @@ Coming Soon!
 
 
 ## Prop: listboxOptionsWithLabelSpacing
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.listboxOptionsWithLabelSpacing }}"`**
+
 <!-- TODO: add docs content for listboxOptionsWithLabelSpacing prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -421,8 +491,11 @@ Coming Soon!
 
 
 ## Prop: listboxOptionsWithoutLabelSpacing
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.listboxOptionsWithoutLabelSpacing }}"`**
+
 <!-- TODO: add docs content for listboxOptionsWithoutLabelSpacing prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -434,8 +507,11 @@ Coming Soon!
 
 
 ## Prop: optionIconParentClasses
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.optionIconParentClasses }}"`**
+
 <!-- TODO: add docs content for optionIconParentClasses prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -447,21 +523,11 @@ Coming Soon!
 
 
 ## Prop: selectedDisplayClasses
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.selectedDisplayClasses }}"`**
+
 <!-- TODO: add docs content for selectedDisplayClasses prop -->
-Coming Soon!
-
-
-
-
-
-
-
-
-
-
-## Prop: selectedDisplayClasses
-<!-- TODO: add docs content for selectedDisplayClasses prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -473,8 +539,11 @@ Coming Soon!
 
 
 ## Prop: selectedIndex
+Type: **`Number`**  
+Default: **`{{ VvConfig.defaults.VvListbox.selectedIndex }}`**
+
 <!-- TODO: add docs content for selectedIndex prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -486,8 +555,11 @@ Coming Soon!
 
 
 ## Prop: size
+Type: **`String`**  
+Default: **`"{{ VvConfig.defaults.VvListbox.size }}"`**
+
 <!-- TODO: add docs content for size prop -->
-Coming Soon!
+More documentation coming Soon!
 
 
 
@@ -497,7 +569,7 @@ Coming Soon!
 
 ## Slot: #default
 <!-- TODO: add default slot documentation for component -->
-Coming Soon!
+More documentation coming Soon!
 
 
 

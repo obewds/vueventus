@@ -18,17 +18,21 @@ export default function () {
         components: { VvRadio },
 
         props: {
-            color: {
-                type: String as PropType<keyof DefaultValidationPaletteColors>,
-                default: appVv.defaults.VvRadio.color,
-            },
             checked: {
                 type: Boolean,
                 default: appVv.defaults.VvRadio.checked,
             },
+            color: {
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
+                default: appVv.defaults.VvRadio.color,
+            },
             darkRadioHex: {
                 type: String,
                 default: appVv.defaults.VvRadio.darkRadioHex,
+            },
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvRadio.debug,
             },
             lightRadioHex: {
                 type: String,
@@ -92,6 +96,13 @@ export default function () {
         :palette="palette"
         :size="size"
         :value="value"
+        :data-vv-radio-prop-checked="debug ? checked : null"
+        :data-vv-radio-prop-color="debug ? color : null"
+        :data-vv-radio-prop-dark-radio-hex="debug ? darkRadioHex : null"
+        :data-vv-radio-prop-light-radio-hex="debug ? lightRadioHex : null"
+        :data-vv-radio-prop-palette="debug ? palette : null"
+        :data-vv-radio-prop-size="debug ? size : null"
+        :data-vv-radio-prop-value="debug ? value : null"
     />
 </template>
 

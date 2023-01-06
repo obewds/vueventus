@@ -62,3 +62,17 @@ test('VvInput.vue component emits the update:modelValue value as expected', asyn
     expect(updateModelValue[0]).toEqual(['test'])
     
 })
+
+
+
+test('VvInput.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvInput, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-input-')
+    
+})

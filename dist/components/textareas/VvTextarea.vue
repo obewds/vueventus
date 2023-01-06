@@ -22,21 +22,25 @@
                 type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: VvConfig.defaults.VvTextarea.color,
             },
+            debug: {
+                type: Boolean,
+                default: VvConfig.defaults.VvTextarea.debug,
+            },
+            modelValue: {
+                type: String,
+                default: '',
+            },
             palette: {
                 type: String as PropType<keyof DefaultValidationPalettes>,
                 default: VvConfig.defaults.VvTextarea.palette,
-            },
-            size: {
-                type: String as PropType<keyof SizesTextareas>,
-                default: VvConfig.defaults.VvTextarea.size,
             },
             rowSize: {
                 type: String as PropType<keyof SizesTextareasRows>,
                 default: VvConfig.defaults.VvTextarea.rowSize,
             },
-            modelValue: {
-                type: String,
-                default: '',
+            size: {
+                type: String as PropType<keyof SizesTextareas>,
+                default: VvConfig.defaults.VvTextarea.size,
             },
         },
 
@@ -88,6 +92,12 @@
         :rows="rows"
         :value="modelValue"
         @input="$emit('update:modelValue', handleTextareaChange($event as Event))"
+        :data-vv-textarea-generated-classes="debug ? classes : null"
+        :data-vv-textarea-prop-color="debug ? color : null"
+        :data-vv-textarea-prop-model-value="debug ? modelValue : null"
+        :data-vv-textarea-prop-palette="debug ? palette : null"
+        :data-vv-textarea-prop-row-size="debug ? rowSize : null"
+        :data-vv-textarea-prop-size="debug ? size : null"
     />
 
 </template>

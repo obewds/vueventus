@@ -8,6 +8,7 @@ export interface VvRouterLinkProps {
     buttonFab: boolean;
     buttonSize: keyof SizesButtons | string;
     color: keyof DefaultPaletteColors | string;
+    debug: boolean;
     external: boolean;
     to: string;
     palette: keyof DefaultPalettes | string;

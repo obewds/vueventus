@@ -24,6 +24,10 @@
                 type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvEl.borderColor,
             },
+            debug: {
+                type: Boolean,
+                default: VvConfig.defaults.VvEl.debug,
+            },
             groundPalette: {
                 type: String as PropType<keyof DefaultPalettes>,
                 default: VvConfig.defaults.VvEl.groundPalette,
@@ -90,7 +94,19 @@
 
 <template>
 
-    <component :is="tag" :class="classes">
+    <component
+        :is="tag"
+        :class="classes"
+        :data-vv-el-generated-classes="debug ? classes : null"
+        :data-vv-el-prop-border-palette="debug ? borderPalette : null"
+        :data-vv-el-prop-border-color="debug ? borderColor : null"
+        :data-vv-el-prop-ground-palette="debug ? groundPalette : null"
+        :data-vv-el-prop-ground-color="debug ? groundColor : null"
+        :data-vv-el-prop-size="debug ? size : null"
+        :data-vv-el-prop-tag="debug ? tag : null"
+        :data-vv-el-prop-text-palette="debug ? textPalette : null"
+        :data-vv-el-prop-text-color="debug ? textColor : null"
+    >
         <slot/>
     </component>
 

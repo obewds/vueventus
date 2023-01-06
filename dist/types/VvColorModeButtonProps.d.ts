@@ -5,6 +5,7 @@ import ValidButtonTypes from '../validators/ValidButtonTypes';
 import ValidColorModes from '../validators/ValidColorModes';
 export interface VvColorModeButtonProps {
     color: keyof DefaultPaletteColors | string;
+    debug: boolean;
     mode: ValidColorModes;
     palette: keyof DefaultPalettes | string;
     size: keyof SizesButtons | string;

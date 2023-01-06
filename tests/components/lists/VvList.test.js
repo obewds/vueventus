@@ -63,3 +63,17 @@ test('VvList.vue component returns an expected result when enableColoredSymbols 
     expect(wrapper.html()).toContain('</ol>')
     
 })
+
+
+
+test('VvList.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvList, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-list-')
+    
+})
