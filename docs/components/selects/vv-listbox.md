@@ -223,6 +223,31 @@ The {{ $frontmatter.title }} `data` prop sets the component instance data that u
 
 
 
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvListbox.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-listbox-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvListbox :debug="true"/>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvListbox :debug="true"/>
+</div>
+
+
+
+
+
+
+
+
 
 
 ## Prop: displayClasses
