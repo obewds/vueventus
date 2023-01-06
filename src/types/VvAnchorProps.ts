@@ -11,6 +11,7 @@ export interface VvAnchorProps {
     buttonFab: boolean
     buttonSize: keyof SizesButtons | string
     color: keyof DefaultPaletteColors | string
+    debug: boolean
     external: boolean
     href: string
     palette: keyof DefaultPalettes | string
