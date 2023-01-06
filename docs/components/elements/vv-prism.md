@@ -39,6 +39,31 @@ import VvPrism from './vv/elements/VvPrism.vue'
 
 
 
+
+
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvPrism.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-prism-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvPrism :debug="true">
+    <pre class="language-html">
+        <code>
+            &lt;br/&gt;
+        </code>
+    </pre>
+</VvPrism>
+```
+
+
+
+
+
+
 ## Prop: prismVars
 
 Type: **`Boolean`**  
