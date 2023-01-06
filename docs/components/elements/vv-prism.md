@@ -4,9 +4,10 @@ title: VvPrism Component
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+    import { VvConfig } from '../../../src/index'
 </script>
 
-<!-- TODO: This docs page needs to be updated so all default values pull from VvConfig data -->
+
 
 
 
@@ -67,7 +68,7 @@ The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a compo
 ## Prop: prismVars
 
 Type: **`Boolean`**  
-Default: **`true`**
+Default: **`{{ VvConfig.defaults.VvPrism.prismVars }}`**
 
 The {{ $frontmatter.title }} `prismVars` prop sets the component instance border color based both on the `prismVars` prop and the `prismVars` prop value together.
 
