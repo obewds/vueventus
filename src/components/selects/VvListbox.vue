@@ -32,6 +32,11 @@
                 type: Array as PropType<Array<VvListboxData>>,
                 default: VvConfig.defaults.VvListbox.data,
             },
+            // TODO: add "debug" prop to docs
+            debug: {
+                type: Boolean,
+                default: VvConfig.defaults.VvListbox.debug,
+            },
             displayClasses: {
                 type: String,
                 default: VvConfig.defaults.VvListbox.displayClasses,
@@ -176,20 +181,42 @@
         @update:modelValue="value => $emit('update:modelValue', value)"
         by="id"
     >
+
         <template v-if="label.length > 0">
-            <ListboxLabel :class="labelClasses">
+
+            <ListboxLabel
+                :class="labelClasses"
+                :data-vv-listbox-prop-label-classes="debug ? labelClasses : null"
+            >
+
                 <slot>{{ label }}</slot>
+
             </ListboxLabel>
+
         </template>
+
         <template v-else>
-            <ListboxLabel :class="labelClasses">
+
+            <ListboxLabel
+                :class="labelClasses"
+                :data-vv-listbox-prop-label-classes="debug ? labelClasses : null"
+            >
+
                 <slot/>
+
             </ListboxLabel>
+
         </template>
     
-        <ListboxButton :class="[listboxButtonClasses, listboxButtonVvClasses]">
+        <ListboxButton
+            :class="[listboxButtonClasses, listboxButtonVvClasses]"
+            :data-vv-listbox-prop-listbox-button-classes="debug ? listboxButtonClasses : null"
+        >
 
-            <span :class="selectedDisplayClasses">
+            <span
+                :class="selectedDisplayClasses"
+                :data-vv-listbox-prop-selected-display-classes="debug ? selectedDisplayClasses : null"
+            >
                 {{ selectedItem.display }}
             </span>
 
@@ -199,13 +226,23 @@
                 fill="none" viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
+                :data-vv-listbox-prop-icons-size-classes="debug ? iconsSizeClasses : null"
             >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
             </svg>
 
         </ListboxButton>
 
-        <ListboxOptions :class="[listboxOptionsClasses, label.length > 0 ? listboxOptionsWithLabelSpacing : listboxOptionsWithoutLabelSpacing]">
+        <ListboxOptions
+            :class="[listboxOptionsClasses, label.length > 0 ? listboxOptionsWithLabelSpacing : listboxOptionsWithoutLabelSpacing]"
+            :data-vv-listbox-prop-listbox-options-classes="debug ? listboxOptionsClasses : null"
+            :data-vv-listbox-prop-listbox-options-with-label-spacing="debug && label.length > 0 ? listboxOptionsWithLabelSpacing : null"
+            :data-vv-listbox-prop-listbox-options-without-label-spacing="debug && label.length <= 0 ? listboxOptionsWithoutLabelSpacing : null"
+        >
 
             <template v-for="item in selectData">
             
@@ -215,9 +252,14 @@
                     :value="item"
                     :disabled="item.disabled"
                     :class="[listboxOptionClasses, listboxOptionVvClasses]"
+                    :data-vv-listbox-prop-listbox-option-classes="debug ? listboxOptionClasses : null"
+                    :data-vv-listbox-prop-listbox-option-vv-classes="debug ? listboxOptionVvClasses : null"
                 >
 
-                    <span :class="optionIconParentClasses">
+                    <span
+                        :class="optionIconParentClasses"
+                        :data-vv-listbox-prop-option-icon-parent-classes="debug ? optionIconParentClasses : null"
+                    >
 
                         <svg
                             :class="['hidden ui-selected:block mr-3', iconsSizeClasses]"
@@ -226,8 +268,12 @@
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
                             stroke="currentColor"
+                            :data-vv-listbox-prop-icon-size-classes="debug ? iconsSizeClasses : null"
                         >
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"
+                            />
                         </svg>
 
                         <svg
@@ -237,13 +283,22 @@
                             fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5"
                             stroke="currentColor"
+                            :data-vv-listbox-prop-icon-size-classes="debug ? iconsSizeClasses : null"
                         >
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
+                            />
                         </svg>
 
                     </span>
 
-                    <span :class="[displayClasses, item.disabled ? displayDisabledClasses : '']">
+                    <span
+                        :class="[displayClasses, item.disabled ? displayDisabledClasses : '']"
+                        :data-vv-listbox-prop-display-classes="debug ? displayClasses : null"
+                        :data-vv-listbox-prop-display-disabled-classes="debug && item.disabled ? displayDisabledClasses : null"
+                    >
                         {{ item.display }}
                     </span>
 
