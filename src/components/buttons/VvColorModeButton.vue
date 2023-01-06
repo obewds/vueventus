@@ -2,6 +2,9 @@
 
 <script lang="ts">
 
+    // TODO: create new "fab" (Boolean) and defaults/types/docs/etc
+    // TODO: create new "roundingClasses" (String) and defaults/types/docs/etc
+
     import { computed, defineComponent, onMounted, ref } from 'vue'
     import ValidButtonTypes from '../../validators/ValidButtonTypes'
     import ValidColorModes from '../../validators/ValidColorModes'
@@ -22,22 +25,14 @@
         },
 
         props: {
-            mode: {
-                type: String as PropType<ValidColorModes>,
-                default: VvConfig.defaults.VvColorModeButton.mode,
-                validator: (prop: ValidColorModes) => (ValidColorModes).includes(prop),
-            },
             color: {
                 type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvColorModeButton.color,
             },
-            palette: {
-                type: String as PropType<keyof DefaultButtonPalettes>,
-                default: VvConfig.defaults.VvColorModeButton.palette,
-            },
-            size: {
-                type: String as PropType<keyof SizesButtons>,
-                default: VvConfig.defaults.VvColorModeButton.size,
+            // TODO: add "debug" prop to docs
+            debug: {
+                type: Boolean,
+                default: VvConfig.defaults.VvColorModeButton.debug,
             },
             groundDark: {
                 type: String,
@@ -54,6 +49,19 @@
             groundLightHex: {
                 type: String,
                 default: VvConfig.colorModes.light.hex,
+            },
+            mode: {
+                type: String as PropType<ValidColorModes>,
+                default: VvConfig.defaults.VvColorModeButton.mode,
+                validator: (prop: ValidColorModes) => (ValidColorModes).includes(prop),
+            },
+            palette: {
+                type: String as PropType<keyof DefaultButtonPalettes>,
+                default: VvConfig.defaults.VvColorModeButton.palette,
+            },
+            size: {
+                type: String as PropType<keyof SizesButtons>,
+                default: VvConfig.defaults.VvColorModeButton.size,
             },
             textDark: {
                 type: String,
@@ -122,7 +130,7 @@
 
         methods: {
 
-            toggleColorMode (event: Event): void {
+            toggleColorMode (): void {
 
                 if (typeof window !== 'undefined' && document ) {
                 
@@ -156,21 +164,59 @@
 <template>
 
     <VvButton
-        :title="title"
-        @click="toggleColorMode($event)"
+        @click="toggleColorMode()"
         class="rounded-full"
         :color="color"
         :fab="true"
         :palette="palette"
-        type="button"
         :size="size"
+        :title="title"
+        :type="type"
+        :data-vv-color-mode-button-prop-color="debug ? color : null"
+        :data-vv-color-mode-button-prop-mode="debug ? mode : null"
+        :data-vv-color-mode-button-prop-palette="debug ? palette : null"
+        :data-vv-color-mode-button-prop-size="debug ? size : null"
+        :data-vv-color-mode-button-prop-title="debug ? title : null"
+        :data-vv-color-mode-button-prop-type="debug ? type : null"
+        :data-vv-color-mode-button-prop-ground-dark="debug ? groundDark : null"
+        :data-vv-color-mode-button-prop-ground-dark-hex="debug ? groundDarkHex : null"
+        :data-vv-color-mode-button-prop-ground-light="debug ? groundLight : null"
+        :data-vv-color-mode-button-prop-ground-light-hex="debug ? groundLightHex : null"
+        :data-vv-color-mode-button-prop-text-dark="debug ? textDark : null"
+        :data-vv-color-mode-button-prop-text-light="debug ? textLight : null"
+        :data-vv-color-mode-button-prop-title-dark="debug ? titleDark : null"
+        :data-vv-color-mode-button-prop-title-light="debug ? titleLight : null"
     >
-        <svg v-if="icon === 'moon'" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        <svg
+            v-if="icon === 'moon'"
+            class="h-5 w-5"
+            stroke="currentColor"
+            fill="none"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            />
         </svg>
 
-        <svg v-if="icon === 'sun'" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        <svg
+            v-if="icon === 'sun'"
+            class="h-5 w-5"
+            stroke="currentColor"
+            fill="none"
+            stroke-width="2"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            />
         </svg>
 
     </VvButton>
