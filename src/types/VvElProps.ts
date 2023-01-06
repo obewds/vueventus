@@ -8,6 +8,7 @@ import ValidElementTags from '../validators/ValidElementTags'
 export interface VvElProps {
     borderPalette: keyof DefaultPalettes | string
     borderColor: keyof DefaultPaletteColors | string
+    debug: boolean
     groundPalette: keyof DefaultPalettes | string
     groundColor: keyof DefaultPaletteColors | string
     size: keyof SizesText | string
