@@ -72,3 +72,37 @@ test('VvListbox.vue component accepts basic props values and returns expected ma
     expect(wrapper.html()).not.toContain('</li')
     
 })
+
+
+
+test('VvListbox.vue component debug mode returns an expected result with a label prop passed in', async () => {
+
+    const wrapper = mount(VvListbox, {
+        props: {
+            label: 'Testing Label:',
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-listbox-')
+    
+})
+
+
+
+test('VvListbox.vue component debug mode returns an expected result without a label prop passed in', async () => {
+
+    const wrapper = mount(VvListbox, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-listbox-')
+
+    await wrapper.find('button').trigger('click')
+
+    expect(wrapper.html()).toContain('data-vv-listbox-prop-icon-size-classes')
+    
+    
+})
