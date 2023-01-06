@@ -65,3 +65,17 @@ test('VvColorModeButton.vue toggles a "dark" mode icon to a "light" mode icon an
     expect(initSvgPath).toBe(backToOriginalPath)
 
 })
+
+
+
+test('VvColorModeButton.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvColorModeButton, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-color-mode-button-')
+    
+})
