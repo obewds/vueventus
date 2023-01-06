@@ -23,6 +23,10 @@ const output = `<!-- ./src/components/vv/inputs/VvInput.vue -->
                 type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: appVv.defaults.VvInput.color,
             },
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvInput.debug,
+            },
             palette: {
                 type: String as PropType<keyof DefaultValidationPalettes>,
                 default: appVv.defaults.VvInput.palette,
@@ -49,6 +53,10 @@ const output = `<!-- ./src/components/vv/inputs/VvInput.vue -->
         :palette="palette"
         :size="size"
         :type="type"
+        :data-vv-input-prop-color="debug ? color : null"
+        :data-vv-input-prop-palette="debug ? palette : null"
+        :data-vv-input-prop-size="debug ? size : null"
+        :data-vv-input-prop-type="debug ? type : null"
     />
 </template>
 
