@@ -49,7 +49,7 @@ import { VvFormGroup } from '@obewds/vueventus'
 
 ## Prop: debug
 Type: **`Boolean`**  
-Default: **`"{{ VvConfig.defaults.VvFormGroup.debug }}"`**
+Default: **`{{ VvConfig.defaults.VvFormGroup.debug }}`**
 
 The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-form-group-` prefixed HTML attributes.
 
