@@ -22,6 +22,15 @@
                 type: String as PropType<keyof DefaultValidationPaletteColors>,
                 default: VvConfig.defaults.VvInput.color,
             },
+            // TODO: add "debug" prop to docs
+            debug: {
+                type: Boolean,
+                default: VvConfig.defaults.VvInput.debug,
+            },
+            modelValue: {
+                type: String,
+                default: '',
+            },
             palette: {
                 type: String as PropType<keyof DefaultValidationPalettes>,
                 default: VvConfig.defaults.VvInput.palette,
@@ -34,10 +43,6 @@
                 type: String as PropType<ValidInputTypes>,
                 default: VvConfig.defaults.VvInput.type,
                 validator: (prop: ValidInputTypes) => (ValidInputTypes).includes(prop),
-            },
-            modelValue: {
-                type: String,
-                default: '',
             },
         },
 
@@ -82,5 +87,11 @@
         :class="classes"
         :value="modelValue"
         @input="$emit('update:modelValue', handleInputChange($event as Event))"
+        :data-vv-input-generated-classes="debug ? classes : null"
+        :data-vv-input-prop-color="debug ? color : null"
+        :data-vv-input-prop-model-value="debug ? modelValue : null"
+        :data-vv-input-prop-palette="debug ? palette : null"
+        :data-vv-input-prop-size="debug ? size : null"
+        :data-vv-input-prop-type="debug ? type : null"
     >
 </template>
