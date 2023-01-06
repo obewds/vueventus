@@ -129,6 +129,31 @@ Coming Soon!
 
 
 
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvTextarea.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-textarea-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvTextarea :debug="true"/>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvTextarea :debug="true"/>
+</div>
+
+
+
+
+
+
+
+
 
 
 ## Prop: palette
