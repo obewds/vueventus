@@ -11,6 +11,10 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     displayError: {
         type: BooleanConstructor;
         default: boolean;
@@ -136,6 +140,10 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     displayError: {
         type: BooleanConstructor;
         default: boolean;
@@ -253,6 +261,7 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
 }>>, {
+    debug: boolean;
     displayError: boolean;
     displayHelp: boolean;
     displaySuccess: boolean;

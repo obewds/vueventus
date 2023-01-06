@@ -7,6 +7,7 @@ import type { SizesText } from './SizesText'
 export interface VvQuadFormGroupProps {
     bottomSlotClasses: string
     bottomWrapperClasses: string
+    debug: boolean
     displayError: boolean
     displayHelp: boolean
     displaySuccess: boolean

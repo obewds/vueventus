@@ -2,6 +2,7 @@ import type { DefaultPaletteColors } from './DefaultPaletteColors';
 import type { DefaultPalettes } from './DefaultPalettes';
 import type { SizesText } from './SizesText';
 export interface VvFormGroupProps {
+    debug: boolean;
     displayError: boolean;
     displayHelp: boolean;
     displaySuccess: boolean;

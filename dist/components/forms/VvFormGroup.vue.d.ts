@@ -3,6 +3,10 @@ import type { DefaultPaletteColors } from '../../types/DefaultPaletteColors';
 import type { DefaultPalettes } from '../../types/DefaultPalettes';
 import type { SizesText } from '@/types/SizesText';
 declare const _default: import("vue").DefineComponent<{
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     displayError: {
         type: BooleanConstructor;
         default: boolean;
@@ -108,6 +112,10 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
 }, unknown, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     displayError: {
         type: BooleanConstructor;
         default: boolean;
@@ -213,6 +221,7 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
 }>>, {
+    debug: boolean;
     displayError: boolean;
     displayHelp: boolean;
     displaySuccess: boolean;

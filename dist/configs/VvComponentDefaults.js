@@ -6,6 +6,7 @@ export default {
         buttonFab: false,
         buttonSize: 'md',
         color: 'default',
+        debug: false,
         external: false,
         href: '#',
         palette: 'default',
@@ -50,6 +51,7 @@ export default {
         size: '1x',
     },
     "VvFormGroup": {
+        debug: false,
         displayError: false,
         displayHelp: false,
         displaySuccess: false,
@@ -112,7 +114,7 @@ export default {
         listboxOptionPalette: 'default',
         listboxOptionsClasses: 'w-full shadow-md',
         listboxOptionsWithLabelSpacing: 'pt-1',
-        listboxOptionsWithoutLabelSpacing: '-mt-7',
+        listboxOptionsWithoutLabelSpacing: 'pt-1',
         optionIconParentClasses: 'w-6',
         selectedDisplayClasses: 'block text-left',
         selectedIndex: 0,
@@ -139,6 +141,7 @@ export default {
     "VvQuadFormGroup": {
         bottomSlotClasses: '',
         bottomWrapperClasses: 'flex justify-between gap-3',
+        debug: false,
         displayError: false,
         displayHelp: false,
         displaySuccess: false,
@@ -164,7 +167,7 @@ export default {
         successTextSize: 'sm',
         textParentClasses: 'flex justify-between gap-3',
         topSlotClasses: 'flex justify-between gap-3',
-        topWrapperClasses: 'flex justify-between gap-3',
+        topWrapperClasses: 'flex justify-between items-end gap-3',
         wrapperClasses: 'w-full flex flex-col space-y-1',
     },
     "VvRadio": {

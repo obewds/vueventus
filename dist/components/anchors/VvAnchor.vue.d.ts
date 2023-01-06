@@ -24,6 +24,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultPaletteColors>;
         default: keyof DefaultPaletteColors;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     external: {
         type: BooleanConstructor;
         default: boolean;
@@ -63,6 +67,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultPaletteColors>;
         default: keyof DefaultPaletteColors;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     external: {
         type: BooleanConstructor;
         default: boolean;
@@ -85,6 +93,7 @@ declare const _default: import("vue").DefineComponent<{
     buttonBlock: boolean;
     buttonFab: boolean;
     buttonSize: keyof SizesButtons;
+    debug: boolean;
     external: boolean;
     href: string;
     palette: string | number;

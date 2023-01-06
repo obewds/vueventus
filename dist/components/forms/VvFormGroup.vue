@@ -16,6 +16,10 @@
         components: { VvEl },
 
         props: {
+            debug: {
+                type: Boolean,
+                default: VvConfig.defaults.VvFormGroup.debug,
+            },
             displayError: {
                 type: Boolean,
                 default: VvConfig.defaults.VvFormGroup.displayError,
@@ -129,37 +133,56 @@
 
 <template>
 
-    <div :class="wrapperClasses">
+    <div
+        :class="wrapperClasses"
+        :data-vv-form-group-prop-wrapper-classes="debug ? wrapperClasses : null"
+    >
 
         <VvEl
             tag="label"
             :for="labelFor"
-            :text-palette="labelTextPalette"
-            :text-color="labelTextColor"
             :class="labelClasses"
+            :text-color="labelTextColor"
+            :text-palette="labelTextPalette"
             :size="labelTextSize"
+            :data-vv-form-group-prop-label-classes="debug ? labelClasses : null"
+            :data-vv-form-group-prop-label-text-color="debug ? labelTextColor : null"
+            :data-vv-form-group-prop-label-text-palette="debug ? labelTextPalette : null"
+            :data-vv-form-group-prop-label-text-size="debug ? labelTextSize : null"
         >
             {{ label }}
         </VvEl>
 
-        <div :class="slotParentClasses">
+        <div
+            :class="slotParentClasses"
+            :data-vv-form-group-prop-slot-parent-classes="debug ? slotParentClasses : null"
+        >
             <slot/>
         </div>
 
-        <div
+        <VvEl
             v-if="!displayError && !displayHelp && !displaySuccess"
+            tag="div"
             :class="helpClasses"
+            :size="helpTextSize"
+            :data-vv-form-group-prop-help-classes="debug ? helpClasses : null"
+            :data-vv-form-group-prop-help-text-size="debug ? helpTextSize : null"
         >
-            <!-- placeholder to toggle opposite of messages & prevent layout shift -->&nbsp;
-        </div>
+            <!-- placeholder to toggle opposite of messages & prevent layout shift -->
+            <span class="invisible">&nbsp;{{ helpText }}</span>
+        </VvEl>
 
         <VvEl
             v-if="displayHelp"
             tag="div"
-            :text-palette="helpTextPalette"
-            :text-color="helpTextColor"
             :class="helpClasses"
+            :text-color="helpTextColor"
+            :text-palette="helpTextPalette"
             :size="helpTextSize"
+            :data-vv-form-group-prop-help-classes="debug ? helpClasses : null"
+            :data-vv-form-group-prop-help-text-color="debug ? helpTextColor : null"
+            :data-vv-form-group-prop-help-text-palette="debug ? helpTextPalette : null"
+            :data-vv-form-group-prop-help-text-size="debug ? helpTextSize : null"
         >
             {{ helpText }}
         </VvEl>
@@ -167,10 +190,14 @@
         <VvEl
             v-if="displaySuccess"
             tag="div"
-            :text-palette="successTextPalette"
-            :text-color="successTextColor"
             :class="successClasses"
+            :text-color="successTextColor"
+            :text-palette="successTextPalette"
             :size="successTextSize"
+            :data-vv-form-group-prop-success-classes="debug ? successClasses : null"
+            :data-vv-form-group-prop-success-text-color="debug ? successTextColor : null"
+            :data-vv-form-group-prop-success-text-palette="debug ? successTextPalette : null"
+            :data-vv-form-group-prop-success-text-size="debug ? successTextSize : null"
         >
             {{ successText }}
         </VvEl>
@@ -178,10 +205,14 @@
         <VvEl
             v-if="displayError === true"
             tag="div"
-            :text-palette="errorTextPalette"
-            :text-color="errorTextColor"
             :class="errorClasses"
+            :text-color="errorTextColor"
+            :text-palette="errorTextPalette"
             :size="errorTextSize"
+            :data-vv-form-group-prop-error-classes="debug ? errorClasses : null"
+            :data-vv-form-group-prop-error-text-color="debug ? errorTextColor : null"
+            :data-vv-form-group-prop-error-text-palette="debug ? errorTextPalette : null"
+            :data-vv-form-group-prop-error-text-size="debug ? errorTextSize : null"
         >
             {{ errorText }}
         </VvEl>
