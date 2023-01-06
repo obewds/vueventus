@@ -19,6 +19,14 @@ const output = `<!-- ./src/components/vv/lists/VvList.vue -->
         components: { VvList },
 
         props: {
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvList.debug,
+            },
+            listStyleTypeClass: {
+                type: String,
+                default: appVv.defaults.VvList.listStyleTypeClass,
+            },
             markerColor: {
                 type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvList.markerColor,
@@ -50,6 +58,11 @@ const output = `<!-- ./src/components/vv/lists/VvList.vue -->
         :marker-palette="markerPalette"
         :size="size"
         :tag="tag"
+        :data-vv-list-prop-list-style-type-class="debug ? listStyleTypeClass : null"
+        :data-vv-list-prop-marker-color="debug ? markerColor : null"
+        :data-vv-list-prop-marker-palette="debug ? markerPalette : null"
+        :data-vv-list-prop-size="debug ? size : null"
+        :data-vv-list-prop-tag="debug ? tag : null"
     >
         <slot/>
     </VvList>
