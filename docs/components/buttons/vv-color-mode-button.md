@@ -168,6 +168,31 @@ Coming Soon!
 
 
 
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvColorModeButton.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-color-mode-button-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvColorModeButton :debug="true"/>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvColorModeButton :debug="true"/>
+</div>
+
+
+
+
+
+
+
+
 ## Prop: groundDark
 
 Type: **`String`**  
