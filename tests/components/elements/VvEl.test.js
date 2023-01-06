@@ -63,3 +63,17 @@ test('VvEl.vue component can intake props and render an expected output', async 
     expect(wrapper.html()).toContain('text-')
     
 })
+
+
+
+test('VvEl.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvEl, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-el-')
+    
+})
