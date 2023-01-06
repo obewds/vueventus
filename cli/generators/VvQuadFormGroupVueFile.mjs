@@ -26,6 +26,10 @@ const output = `<!-- ./src/components/vv/forms/VvQuadFormGroup.vue -->
                 type: String,
                 default: appVv.defaults.VvQuadFormGroup.bottomWrapperClasses,
             },
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvQuadFormGroup.debug,
+            },
             displayError: {
                 type: Boolean,
                 default: appVv.defaults.VvQuadFormGroup.displayError,
