@@ -7,6 +7,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultValidationPaletteColors>;
         default: keyof DefaultValidationPaletteColors;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     palette: {
         type: PropType<keyof DefaultValidationPalettes>;
         default: keyof DefaultValidationPalettes;
@@ -27,6 +31,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultValidationPaletteColors>;
         default: keyof DefaultValidationPaletteColors;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     palette: {
         type: PropType<keyof DefaultValidationPalettes>;
         default: keyof DefaultValidationPalettes;
@@ -43,6 +51,7 @@ declare const _default: import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     color: keyof DefaultValidationPaletteColors;
+    debug: boolean;
     palette: keyof DefaultValidationPalettes;
     size: keyof SizesSelects;
     modelValue: string;

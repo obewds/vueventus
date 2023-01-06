@@ -145,6 +145,7 @@
         :class="classes"
         target="_blank"
         rel="noopener noreferrer"
+        :data-vv-anchor-generated-classes="debug ? classes : null"
         :data-vv-anchor-prop-button="debug ? button : null"
         :data-vv-anchor-prop-button-block="debug ? buttonBlock : null"
         :data-vv-anchor-prop-button-fab="debug ? buttonFab : null"

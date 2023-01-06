@@ -12,6 +12,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultPaletteColors>;
         default: keyof DefaultPaletteColors;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     groundPalette: {
         type: PropType<keyof DefaultPalettes>;
         default: keyof DefaultPalettes;
@@ -48,6 +52,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultPaletteColors>;
         default: keyof DefaultPaletteColors;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     groundPalette: {
         type: PropType<keyof DefaultPalettes>;
         default: keyof DefaultPalettes;
@@ -74,6 +82,7 @@ declare const _default: import("vue").DefineComponent<{
         default: keyof DefaultPaletteColors;
     };
 }>>, {
+    debug: boolean;
     size: keyof SizesText;
     borderPalette: keyof DefaultPalettes;
     borderColor: keyof DefaultPaletteColors;

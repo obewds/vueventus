@@ -17,17 +17,21 @@
         emits: ['update:modelValue'],
 
         props: {
-            color: {
-                type: String as PropType<keyof DefaultValidationPaletteColors>,
-                default: VvConfig.defaults.VvRadio.color,
-            },
             checked: {
                 type: Boolean,
                 default: VvConfig.defaults.VvRadio.checked,
             },
+            color: {
+                type: String as PropType<keyof DefaultValidationPaletteColors>,
+                default: VvConfig.defaults.VvRadio.color,
+            },
             darkRadioHex: {
                 type: String,
                 default: VvConfig.defaults.VvRadio.darkRadioHex,
+            },
+            debug: {
+                type: Boolean,
+                default: VvConfig.defaults.VvRadio.debug,
             },
             lightRadioHex: {
                 type: String,
@@ -125,6 +129,14 @@
         :checked="checked"
         @change="$emit('update:modelValue', handleRadioChange($event as Event))"
         :data-test="(darkRadioCssUrl + lightRadioCssUrl)"
+        :data-vv-radio-generated-classes="debug ? classes : null"
+        :data-vv-radio-prop-checked="debug ? checked : null"
+        :data-vv-radio-prop-color="debug ? color : null"
+        :data-vv-radio-prop-dark-radio-hex="debug ? darkRadioHex : null"
+        :data-vv-radio-prop-light-radio-hex="debug ? lightRadioHex : null"
+        :data-vv-radio-prop-palette="debug ? palette : null"
+        :data-vv-radio-prop-size="debug ? size : null"
+        :data-vv-radio-prop-value="debug ? value : null"
     >
 </template>
 

@@ -7,6 +7,7 @@ import type { VvListboxData } from './VvListboxData'
 
 export interface VvListboxProps {
     data: VvListboxData[]
+    debug: boolean
     displayClasses: string
     displayDisabledClasses: string
     iconDisabledClasses: string

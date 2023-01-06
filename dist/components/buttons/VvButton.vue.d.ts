@@ -12,6 +12,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultPaletteColors>;
         default: keyof DefaultPaletteColors;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     fab: {
         type: BooleanConstructor;
         default: boolean;
@@ -30,7 +34,6 @@ declare const _default: import("vue").DefineComponent<{
         validator: (prop: ValidButtonTypes) => boolean;
     };
 }, {
-    btnType: "button" | "submit" | "reset";
     classes: import("vue").ComputedRef<string>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     block: {
@@ -40,6 +43,10 @@ declare const _default: import("vue").DefineComponent<{
     color: {
         type: PropType<keyof DefaultPaletteColors>;
         default: keyof DefaultPaletteColors;
+    };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
     };
     fab: {
         type: BooleanConstructor;
@@ -61,6 +68,7 @@ declare const _default: import("vue").DefineComponent<{
 }>>, {
     fab: boolean;
     color: keyof DefaultPaletteColors;
+    debug: boolean;
     palette: keyof DefaultButtonPalettes;
     type: "button" | "submit" | "reset";
     block: boolean;

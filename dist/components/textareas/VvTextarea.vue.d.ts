@@ -8,21 +8,25 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultValidationPaletteColors>;
         default: keyof DefaultValidationPaletteColors;
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    modelValue: {
+        type: StringConstructor;
+        default: string;
+    };
     palette: {
         type: PropType<keyof DefaultValidationPalettes>;
         default: keyof DefaultValidationPalettes;
-    };
-    size: {
-        type: PropType<keyof SizesTextareas>;
-        default: keyof SizesTextareas;
     };
     rowSize: {
         type: PropType<keyof SizesTextareasRows>;
         default: keyof SizesTextareasRows;
     };
-    modelValue: {
-        type: StringConstructor;
-        default: string;
+    size: {
+        type: PropType<keyof SizesTextareas>;
+        default: keyof SizesTextareas;
     };
 }, {
     classes: import("vue").ComputedRef<string>;
@@ -33,26 +37,31 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<keyof DefaultValidationPaletteColors>;
         default: keyof DefaultValidationPaletteColors;
     };
-    palette: {
-        type: PropType<keyof DefaultValidationPalettes>;
-        default: keyof DefaultValidationPalettes;
-    };
-    size: {
-        type: PropType<keyof SizesTextareas>;
-        default: keyof SizesTextareas;
-    };
-    rowSize: {
-        type: PropType<keyof SizesTextareasRows>;
-        default: keyof SizesTextareasRows;
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
     };
     modelValue: {
         type: StringConstructor;
         default: string;
     };
+    palette: {
+        type: PropType<keyof DefaultValidationPalettes>;
+        default: keyof DefaultValidationPalettes;
+    };
+    rowSize: {
+        type: PropType<keyof SizesTextareasRows>;
+        default: keyof SizesTextareasRows;
+    };
+    size: {
+        type: PropType<keyof SizesTextareas>;
+        default: keyof SizesTextareas;
+    };
 }>> & {
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     color: keyof DefaultValidationPaletteColors;
+    debug: boolean;
     palette: keyof DefaultValidationPalettes;
     size: keyof SizesTextareas;
     modelValue: string;

@@ -8,6 +8,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<VvListboxData[]>;
         default: VvListboxData[];
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     displayClasses: {
         type: StringConstructor;
         default: string;
@@ -111,6 +115,10 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<VvListboxData[]>;
         default: VvListboxData[];
     };
+    debug: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     displayClasses: {
         type: StringConstructor;
         default: string;
@@ -196,6 +204,7 @@ declare const _default: import("vue").DefineComponent<{
 }, {
     data: VvListboxData[];
     label: string;
+    debug: boolean;
     size: keyof SizesSelects;
     labelClasses: string;
     displayClasses: string;
