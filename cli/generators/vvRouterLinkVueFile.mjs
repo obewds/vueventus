@@ -1,5 +1,5 @@
 // ./cli/generators/vvRouterLinkVueFile.mjs
-
+// TODO: add "debug" prop to docs
 export default function () {
 
 const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
@@ -35,6 +35,10 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
             color: {
                 type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvRouterLink.color,
+            },
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvRouterLink.debug,
             },
             palette: {
                 type: String as PropType<keyof DefaultPalettes | keyof DefaultButtonPalettes>,
@@ -131,7 +135,20 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
 
 
 <template>
-    <router-link :to="to" :class="classes">
+    <router-link
+        :to="to"
+        :class="classes"
+        :data-vv-router-link-generated-classes="debug ? classes : null"
+        :data-vv-router-link-prop-button="debug ? button : null"
+        :data-vv-router-link-prop-button-block="debug ? buttonBlock : null"
+        :data-vv-router-link-prop-button-fab="debug ? buttonFab : null"
+        :data-vv-router-link-prop-button-size="debug ? buttonSize : null"
+        :data-vv-router-link-prop-color="debug ? color : null"
+        :data-vv-router-link-prop-external="debug ? external : null"
+        :data-vv-router-link-prop-palette="debug ? palette : null"
+        :data-vv-router-link-prop-text-size="debug ? textSize : null"
+        :data-vv-router-link-prop-to="debug ? to : null"
+    >
         <slot/>
     </router-link>
 </template>
