@@ -282,6 +282,29 @@ Coming Soon!
 
 
 
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvRouterLink.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-router-link-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvRouterLink :debug="true">
+    VvRouterLink debug
+</VvRouterLink>
+```
+
+### Result
+
+_A result example is currently not available in this documentation environment._
+
+
+
+
+
+
 ## Prop: palette
 <!-- TODO: change this type to new PropType keyof syntax -->
 Type: **`String`**  
