@@ -19,22 +19,13 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
         components: { VvColorModeButton },
 
         props: {
-            mode: {
-                type: String as PropType<ValidColorModes>,
-                default: appVv.defaults.VvColorModeButton.mode,
-                validator: (prop: ValidColorModes) => (ValidColorModes).includes(prop),
-            },
             color: {
                 type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvColorModeButton.color,
             },
-            palette: {
-                type: String as PropType<keyof DefaultButtonPalettes>,
-                default: appVv.defaults.VvColorModeButton.palette,
-            },
-            size: {
-                type: String as PropType<keyof SizesButtons>,
-                default: appVv.defaults.VvColorModeButton.size,
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvColorModeButton.debug,
             },
             groundDark: {
                 type: String,
@@ -51,6 +42,19 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
             groundLightHex: {
                 type: String,
                 default: appVv.colorModes.light.hex,
+            },
+            mode: {
+                type: String as PropType<ValidColorModes>,
+                default: appVv.defaults.VvColorModeButton.mode,
+                validator: (prop: ValidColorModes) => (ValidColorModes).includes(prop),
+            },
+            palette: {
+                type: String as PropType<keyof DefaultButtonPalettes>,
+                default: appVv.defaults.VvColorModeButton.palette,
+            },
+            size: {
+                type: String as PropType<keyof SizesButtons>,
+                default: appVv.defaults.VvColorModeButton.size,
             },
             textDark: {
                 type: String,
@@ -103,6 +107,20 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
         :title-dark="titleDark"
         :title-light="titleLight"
         :type="(type as ValidButtonTypes)"
+        :data-vv-color-mode-button-prop-color="debug ? color : null"
+        :data-vv-color-mode-button-prop-mode="debug ? mode : null"
+        :data-vv-color-mode-button-prop-palette="debug ? palette : null"
+        :data-vv-color-mode-button-prop-size="debug ? size : null"
+        :data-vv-color-mode-button-prop-title="debug ? title : null"
+        :data-vv-color-mode-button-prop-type="debug ? type : null"
+        :data-vv-color-mode-button-prop-ground-dark="debug ? groundDark : null"
+        :data-vv-color-mode-button-prop-ground-dark-hex="debug ? groundDarkHex : null"
+        :data-vv-color-mode-button-prop-ground-light="debug ? groundLight : null"
+        :data-vv-color-mode-button-prop-ground-light-hex="debug ? groundLightHex : null"
+        :data-vv-color-mode-button-prop-text-dark="debug ? textDark : null"
+        :data-vv-color-mode-button-prop-text-light="debug ? textLight : null"
+        :data-vv-color-mode-button-prop-title-dark="debug ? titleDark : null"
+        :data-vv-color-mode-button-prop-title-light="debug ? titleLight : null"
     />
 </template>
 
