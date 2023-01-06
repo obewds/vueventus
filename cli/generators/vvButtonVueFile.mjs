@@ -27,6 +27,10 @@ const output = `<!-- ./src/components/vv/buttons/VvButton.vue -->
                 type: String as PropType<keyof DefaultPaletteColors>,
                 default: appVv.defaults.VvButton.color,
             },
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvButton.debug,
+            },
             fab: {
                 type: Boolean,
                 default: appVv.defaults.VvButton.fab,
@@ -59,6 +63,12 @@ const output = `<!-- ./src/components/vv/buttons/VvButton.vue -->
         :palette="palette"
         :size="size"
         :type="(type as ValidButtonTypes)"
+        :data-vv-button-prop-block="debug ? block : null"
+        :data-vv-button-prop-color="debug ? color : null"
+        :data-vv-button-prop-fab="debug ? fab : null"
+        :data-vv-button-prop-palette="debug ? palette : null"
+        :data-vv-button-prop-size="debug ? size : null"
+        :data-vv-button-prop-type="debug ? type : null"
     >
         <slot/>
     </VvButton>
