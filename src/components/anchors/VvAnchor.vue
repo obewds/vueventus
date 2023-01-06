@@ -37,6 +37,10 @@
                 type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvAnchor.color,
             },
+            debug: {
+                type: Boolean,
+                default: VvConfig.defaults.VvAnchor.debug,
+            },
             external: {
                 type: Boolean,
                 default: VvConfig.defaults.VvAnchor.external,
@@ -141,6 +145,15 @@
         :class="classes"
         target="_blank"
         rel="noopener noreferrer"
+        :data-vv-anchor-prop-button="debug ? button : null"
+        :data-vv-anchor-prop-button-block="debug ? buttonBlock : null"
+        :data-vv-anchor-prop-button-fab="debug ? buttonFab : null"
+        :data-vv-anchor-prop-button-size="debug ? buttonSize : null"
+        :data-vv-anchor-prop-color="debug ? color : null"
+        :data-vv-anchor-prop-external="debug ? external : null"
+        :data-vv-anchor-prop-href="debug ? href : null"
+        :data-vv-anchor-prop-palette="debug ? palette : null"
+        :data-vv-anchor-prop-text-size="debug ? textSize : null"
     >
         <slot/>
     </a>
@@ -148,6 +161,16 @@
         v-else
         :href="href"
         :class="classes"
+        :data-vv-anchor-generated-classes="debug ? classes : null"
+        :data-vv-anchor-prop-button="debug ? button : null"
+        :data-vv-anchor-prop-button-block="debug ? buttonBlock : null"
+        :data-vv-anchor-prop-button-fab="debug ? buttonFab : null"
+        :data-vv-anchor-prop-button-size="debug ? buttonSize : null"
+        :data-vv-anchor-prop-color="debug ? color : null"
+        :data-vv-anchor-prop-external="debug ? external : null"
+        :data-vv-anchor-prop-href="debug ? href : null"
+        :data-vv-anchor-prop-palette="debug ? palette : null"
+        :data-vv-anchor-prop-text-size="debug ? textSize : null"
     >
         <slot/>
     </a>
