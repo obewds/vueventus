@@ -46,6 +46,35 @@ import { VvList } from '@obewds/vueventus'
 
 
 
+
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvList.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-list-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvList :debug="true">
+    <li>Item</li>
+</VvList>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvList :debug="true">
+        <li>Item</li>
+    </VvList>
+</div>
+
+
+
+
+
+
+
 ## Prop: listStyleTypeClass
 
 Type: **`String`**  
