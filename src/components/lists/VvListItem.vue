@@ -18,6 +18,11 @@
                 type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvListItem.color,
             },
+            // TODO: add "debug" prop to docs
+            debug: {
+                type: Boolean,
+                default: VvConfig.defaults.VvListItem.debug,
+            },
             enableColoredSymbols: {
                 type: Boolean,
                 default: VvConfig.defaults.VvListItem.enableColoredSymbols,
@@ -78,9 +83,21 @@
 
 
 <template>
-    <li :class="enableColoredSymbols === true ? symbolClasses : classes">
+    <li
+        :class="enableColoredSymbols === true ? symbolClasses : classes"
+        :data-vv-list-item-generated-classes="debug ? classes : null"
+        :data-vv-list-item-prop-color="debug ? color : null"
+        :data-vv-list-item-prop-enable-colored-symbols="debug ? enableColoredSymbols : null"
+        :data-vv-list-item-prop-palette="debug ? palette : null"
+        :data-vv-list-item-prop-symbol-classes="debug ? symbolClasses : null"
+        :data-vv-list-item-prop-symbol-color="debug ? symbolColor : null"
+        :data-vv-list-item-prop-symbol-palette="debug ? symbolPalette : null"
+    >
         <template v-if="enableColoredSymbols === true">
-            <span :class="[classes]">
+            <span
+                :class="[classes]"
+                :data-vv-list-item-generated-classes="debug ? classes : null"
+            >
                 <slot/>
             </span>
         </template>
