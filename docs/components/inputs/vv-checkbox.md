@@ -193,6 +193,31 @@ The {{ $frontmatter.title }} `darkCheckHex` prop sets the component checked stat
 
 
 
+## Prop: debug
+Type: **`Boolean`**  
+Default: **`{{ VvConfig.defaults.VvCheckbox.debug }}`**
+
+The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-checkbox-` prefixed HTML attributes.
+
+### Syntax
+
+```html
+<VvCheckbox :debug="true"/>
+```
+
+### Result
+
+<div class="w-full pt-4">
+    <VvCheckbox :debug="true"/>
+</div>
+
+
+
+
+
+
+
+
 ## Prop: lightCheckHex
 
 Type: **`String`**  
