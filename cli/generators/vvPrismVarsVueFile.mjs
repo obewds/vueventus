@@ -1,5 +1,5 @@
 // ./cli/generators/vvPrismVarsVueFile.mjs
-
+// TODO: add "debug" prop to docs
 export default function () {
 
 const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->
@@ -21,6 +21,10 @@ const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->
                 type: String as PropType<ValidCommentStyles>,
                 default: appVv.defaults.VvPrismVars.commentStyle,
                 validator: (prop: ValidCommentStyles) => (ValidCommentStyles).includes(prop),
+            },
+            debug: {
+                type: Boolean,
+                default: appVv.defaults.VvPrismVars.debug,
             },
             fontSize: {
                 type: String,
@@ -58,7 +62,16 @@ const output = `<!-- ./src/components/vv/elements/VvPrismVars.vue -->
 
 <template>
 
-    <component is="style" v-once>
+    <component
+        is="style"
+        v-once
+        :data-vv-prism-vars-prop-comment-style="debug ? commentStyle : null"
+        :data-vv-prism-vars-prop-font-size="debug ? fontSize : null"
+        :data-vv-prism-vars-prop-line-height="debug ? lineHeight : null"
+        :data-vv-prism-vars-prop-line-highlight-opacity="debug ? lineHighlightOpacity : null"
+        :data-vv-prism-vars-prop-text-shadow="debug ? textShadow : null"
+        :data-vv-prism-vars-prop-url-decoration="debug ? urlDecoration : null"
+    >
         :root {
             --vv-comment-style: {{ commentStyle }};
             --vv-url-decoration: {{ urlDecoration }};
