@@ -24,6 +24,11 @@
                 type: String as PropType<keyof DefaultPaletteColors>,
                 default: VvConfig.defaults.VvButton.color,
             },
+            // TODO: add "debug" prop to docs
+            debug: {
+                type: Boolean,
+                default: VvConfig.defaults.VvButton.debug,
+            },
             fab: {
                 type: Boolean,
                 default: VvConfig.defaults.VvButton.fab,
@@ -46,8 +51,6 @@
         setup (props) {
 
             const vv = Object.keys( inject( 'vv', {} ) ).length > 0 ? inject<typeof VvConfig>('vv') : VvConfig
-
-            const btnType = props.type as ValidButtonTypes
 
             let classes = computed( () => {
 
@@ -93,7 +96,7 @@
 
             })
 
-            return { btnType, classes }
+            return { classes }
 
         }
 
@@ -104,7 +107,17 @@
 
 <template>
 
-    <button :type="btnType" :class="classes">
+    <button
+        :class="classes"
+        :type="type"
+        :data-vv-button-generated-classes="debug ? classes : null"
+        :data-vv-button-prop-block="debug ? block : null"
+        :data-vv-button-prop-color="debug ? color : null"
+        :data-vv-button-prop-fab="debug ? fab : null"
+        :data-vv-button-prop-palette="debug ? palette : null"
+        :data-vv-button-prop-size="debug ? size : null"
+        :data-vv-button-prop-type="debug ? type : null"
+    >
         <slot/>
     </button>
 
