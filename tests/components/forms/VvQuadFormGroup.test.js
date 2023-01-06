@@ -63,6 +63,8 @@ test('VvQuadFormGroup.vue component debug mode with no help/error/success return
 
     const wrapper = mount(VvQuadFormGroup, {
         props: {
+            label: 'debug label',
+            labelFor: 'debug-id',
             debug: true,
         },
     })
@@ -77,6 +79,8 @@ test('VvQuadFormGroup.vue component debug mode with help/error/success returns a
 
     const wrapper = mount(VvQuadFormGroup, {
         props: {
+            label: 'debug label',
+            labelFor: 'debug-id',
             displayError: true,
             displayHelp: true,
             displaySuccess: true,
