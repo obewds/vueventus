@@ -158,6 +158,7 @@ const output = `<!-- ./src/components/vv/forms/VvQuadFormGroup.vue -->
     <VvQuadFormGroup
         :bottom-slot-classes="bottomSlotClasses"
         :bottom-wrapper-classes="bottomWrapperClasses"
+        :debug="debug"
         :display-error="displayError"
         :display-help="displayHelp"
         :display-success="displaySuccess"
