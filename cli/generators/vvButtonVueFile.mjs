@@ -59,6 +59,7 @@ const output = `<!-- ./src/components/vv/buttons/VvButton.vue -->
     <VvButton
         :block="block"
         :color="color"
+        :debug="debug"
         :fab="fab"
         :palette="palette"
         :size="size"
