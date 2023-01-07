@@ -44,6 +44,20 @@ test('VvScrollUp.vue component is impacted by a click event as expected', async 
 
 })
 
+
+test('VvScrollUp.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvScrollUp, {
+        props: {
+            debug: true,
+            isVisible: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-scroll-up-')
+
+})
+
 `
 
 return output
