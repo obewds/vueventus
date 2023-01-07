@@ -144,7 +144,6 @@ const output = `<!-- ./src/components/vv/anchors/VvRouterLink.vue -->
         :data-vv-router-link-prop-button-fab="debug ? buttonFab : null"
         :data-vv-router-link-prop-button-size="debug ? buttonSize : null"
         :data-vv-router-link-prop-color="debug ? color : null"
-        :data-vv-router-link-prop-external="debug ? external : null"
         :data-vv-router-link-prop-palette="debug ? palette : null"
         :data-vv-router-link-prop-text-size="debug ? textSize : null"
         :data-vv-router-link-prop-to="debug ? to : null"
