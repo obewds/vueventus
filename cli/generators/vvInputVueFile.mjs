@@ -50,6 +50,7 @@ const output = `<!-- ./src/components/vv/inputs/VvInput.vue -->
 <template>
     <VvInput
         :color="color"
+        :debug="debug"
         :palette="palette"
         :size="size"
         :type="type"
