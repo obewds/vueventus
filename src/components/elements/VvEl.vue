@@ -61,22 +61,22 @@
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( vv?.text?.sizes?.[props.size] ) {
-                    output.push( vv.text.sizes[props.size] )
+                    output.push( String(vv.text.sizes[props.size]) )
                 }
 
                 if ( vv?.borders?.palettes?.[props.borderPalette]?.[props.borderColor] ) {
-                    output.push( vv.borders.palettes[props.borderPalette][props.borderColor] )
+                    output.push( String(vv.borders.palettes[props.borderPalette][props.borderColor]) )
                 }
 
                 if ( vv?.grounds?.palettes?.[props.groundPalette]?.[props.groundColor] ) {
-                    output.push( vv.grounds.palettes[props.groundPalette][props.groundColor] )
+                    output.push( String(vv.grounds.palettes[props.groundPalette][props.groundColor]) )
                 }
 
                 if ( vv?.text?.palettes?.[props.textPalette]?.[props.textColor] ) {
-                    output.push( vv.text.palettes[props.textPalette][props.textColor] )
+                    output.push( String(vv.text.palettes[props.textPalette][props.textColor]) )
                 }
 
                 return output.join(' ').trim()
