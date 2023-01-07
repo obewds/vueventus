@@ -153,6 +153,25 @@ test('VvRouterLink.vue component returns an expected result when props button, p
     
 })
 
+
+test('VvRouterLink.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvRouterLink, {
+        global: {
+            stubs: {
+                RouterLink: RouterLinkStub,
+            },
+        },
+        props: {
+            debug: true,
+            to: '/',
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-router-link-')
+    
+})
+
 `
 
 return output
