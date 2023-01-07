@@ -117,7 +117,9 @@ const output = `<!-- ./src/components/vv/selects/VvListbox.vue -->
 <template>
 
     <VvListbox
+        as="div"
         :data="data"
+        :debug="debug"
         :display-classes="displayClasses"
         :display-disabled-classes="displayDisabledClasses"
         :icon-disabled-classes="iconDisabledClasses"
