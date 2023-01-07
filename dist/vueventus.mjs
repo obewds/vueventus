@@ -2448,26 +2448,25 @@ function tr(e, t, a, s, r, o) {
     title: e.title,
     type: e.type,
     "data-vv-color-mode-button-prop-color": e.debug ? e.color : null,
-    "data-vv-color-mode-button-prop-mode": e.debug ? e.mode : null,
-    "data-vv-color-mode-button-prop-palette": e.debug ? e.palette : null,
-    "data-vv-color-mode-button-prop-size": e.debug ? e.size : null,
-    "data-vv-color-mode-button-prop-title": e.debug ? e.title : null,
-    "data-vv-color-mode-button-prop-type": e.debug ? e.type : null,
     "data-vv-color-mode-button-prop-ground-dark": e.debug ? e.groundDark : null,
     "data-vv-color-mode-button-prop-ground-dark-hex": e.debug ? e.groundDarkHex : null,
     "data-vv-color-mode-button-prop-ground-light": e.debug ? e.groundLight : null,
     "data-vv-color-mode-button-prop-ground-light-hex": e.debug ? e.groundLightHex : null,
+    "data-vv-color-mode-button-prop-mode": e.debug ? e.mode : null,
+    "data-vv-color-mode-button-prop-palette": e.debug ? e.palette : null,
+    "data-vv-color-mode-button-prop-size": e.debug ? e.size : null,
     "data-vv-color-mode-button-prop-text-dark": e.debug ? e.textDark : null,
     "data-vv-color-mode-button-prop-text-light": e.debug ? e.textLight : null,
     "data-vv-color-mode-button-prop-title-dark": e.debug ? e.titleDark : null,
-    "data-vv-color-mode-button-prop-title-light": e.debug ? e.titleLight : null
+    "data-vv-color-mode-button-prop-title-light": e.debug ? e.titleLight : null,
+    "data-vv-color-mode-button-prop-type": e.debug ? e.type : null
   }, {
     default: P(() => [
       e.icon === "moon" ? (m(), O("svg", Ys, Xs)) : q("", !0),
       e.icon === "sun" ? (m(), O("svg", Ks, er)) : q("", !0)
     ]),
     _: 1
-  }, 8, ["color", "palette", "size", "title", "type", "data-vv-color-mode-button-prop-color", "data-vv-color-mode-button-prop-mode", "data-vv-color-mode-button-prop-palette", "data-vv-color-mode-button-prop-size", "data-vv-color-mode-button-prop-title", "data-vv-color-mode-button-prop-type", "data-vv-color-mode-button-prop-ground-dark", "data-vv-color-mode-button-prop-ground-dark-hex", "data-vv-color-mode-button-prop-ground-light", "data-vv-color-mode-button-prop-ground-light-hex", "data-vv-color-mode-button-prop-text-dark", "data-vv-color-mode-button-prop-text-light", "data-vv-color-mode-button-prop-title-dark", "data-vv-color-mode-button-prop-title-light"]);
+  }, 8, ["color", "palette", "size", "title", "type", "data-vv-color-mode-button-prop-color", "data-vv-color-mode-button-prop-ground-dark", "data-vv-color-mode-button-prop-ground-dark-hex", "data-vv-color-mode-button-prop-ground-light", "data-vv-color-mode-button-prop-ground-light-hex", "data-vv-color-mode-button-prop-mode", "data-vv-color-mode-button-prop-palette", "data-vv-color-mode-button-prop-size", "data-vv-color-mode-button-prop-text-dark", "data-vv-color-mode-button-prop-text-light", "data-vv-color-mode-button-prop-title-dark", "data-vv-color-mode-button-prop-title-light", "data-vv-color-mode-button-prop-type"]);
 }
 const Sl = /* @__PURE__ */ j(Js, [["render", tr]]), ar = T({
   name: "VvEl",
