@@ -50,14 +50,14 @@
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
                 
                 if ( vv?.text.base() ) {
-                    output.push(vv?.text.base())
+                    output.push( vv?.text.base() )
                 }
 
                 if ( vv?.lists?.sizes?.[props.size] ) {
-                    output.push( vv.lists.sizes[props.size] )
+                    output.push( String(vv.lists.sizes[props.size]) )
                 }
 
                 if ( vv?.lists?.palettes?.[props.markerPalette]?.[props.markerColor] ) {

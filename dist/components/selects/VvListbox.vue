@@ -3,6 +3,8 @@
 
 <script lang="ts">
 
+    // TODO: create new "as" (String) prop and defaults/types/docs/etc
+
     import { computed, defineComponent, inject, ref } from 'vue'
     import { Listbox, ListboxButton, ListboxLabel, ListboxOptions, ListboxOption } from '@headlessui/vue'
     import VvConfig from '../../configs/VvConfig.js'
@@ -128,18 +130,18 @@
 
             const listboxButtonVvClasses = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( vv?.listboxes?.base() ) {
                     output.push( vv.listboxes.base() )
                 }
 
                 if ( props.size !== '' && vv?.listboxes?.sizes?.[props.size] ) {
-                    output.push( vv.listboxes.sizes[props.size] )
+                    output.push( String(vv.listboxes.sizes[props.size]) )
                 }
 
                 if ( vv?.listboxes?.buttonPalettes?.[props.listboxButtonPalette]?.[props.listboxButtonColor] ) {
-                    output.push( vv.listboxes.buttonPalettes[props.listboxButtonPalette][props.listboxButtonColor] )
+                    output.push( String(vv.listboxes.buttonPalettes[props.listboxButtonPalette][props.listboxButtonColor]) )
                 }
 
                 return output.join(' ').trim()
@@ -148,10 +150,10 @@
 
             const listboxOptionVvClasses = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( vv?.listboxes?.optionPalettes?.[props.listboxOptionPalette]?.[props.listboxOptionColor] ) {
-                    output.push( vv.listboxes.optionPalettes[props.listboxOptionPalette][props.listboxOptionColor] )
+                    output.push( String(vv.listboxes.optionPalettes[props.listboxOptionPalette][props.listboxOptionColor]) )
                 }
 
                 return output.join(' ').trim()
@@ -176,6 +178,7 @@
 <template>
 
     <Listbox
+        as="div"
         v-model="selectedItem"
         @update:modelValue="value => $emit('update:modelValue', value)"
         by="id"

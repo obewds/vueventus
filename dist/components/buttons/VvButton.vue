@@ -53,7 +53,7 @@
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if (props.block === true && props.fab === false) {
 
@@ -62,7 +62,7 @@
                     }
 
                     if ( props.size !== '' && vv?.buttons?.blockSizes?.[props.size] ) {
-                        output.push( vv.buttons.blockSizes[props.size] )
+                        output.push( String(vv.buttons.blockSizes[props.size]) )
                     }
 
                 } else if (props.fab === true && props.block === false) {
@@ -72,7 +72,7 @@
                     }
 
                     if ( props.size !== '' && vv?.buttons?.fabSizes?.[props.size] ) {
-                        output.push( vv.buttons.fabSizes[props.size] )
+                        output.push( String(vv.buttons.fabSizes[props.size]) )
                     }
 
                 } else {
@@ -82,13 +82,13 @@
                     }
 
                     if ( props.size !== '' && vv?.buttons?.sizes?.[props.size] ) {
-                        output.push( vv.buttons.sizes[props.size] )
+                        output.push( String(vv.buttons.sizes[props.size]) )
                     }
 
                 }
 
                 if ( vv?.buttons?.palettes?.[props.palette]?.[props.color] ) {
-                    output.push( vv.buttons.palettes[props.palette][props.color] )
+                    output.push( String(vv.buttons.palettes[props.palette][props.color]) )
                 }
 
                 return output.join(' ').trim()

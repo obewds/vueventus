@@ -46,14 +46,14 @@
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( vv?.text.base() ) {
                     output.push( vv?.text.base() )
                 }
 
                 if ( vv?.text?.palettes?.[props.palette]?.[props.color] ) {
-                    output.push( vv.text.palettes[props.palette][props.color] )
+                    output.push( String(vv.text.palettes[props.palette][props.color]) )
                 }
 
                 return output.join(' ').trim()
@@ -62,10 +62,10 @@
 
             let symbolClasses = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( vv?.text?.palettes?.[props.symbolPalette]?.[props.symbolColor] ) {
-                    output.push( vv.text.palettes[props.symbolPalette][props.symbolColor] )
+                    output.push( String(vv.text.palettes[props.symbolPalette][props.symbolColor]) )
                 }
 
                 return output.join(' ').trim()

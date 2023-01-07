@@ -45,18 +45,18 @@
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( vv?.selects?.base() ) {
                     output.push( vv.selects.base() )
                 }
 
                 if ( props.size !== '' && vv?.selects?.sizes?.[props.size] ) {
-                    output.push( vv.selects.sizes[props.size] )
+                    output.push( String(vv.selects.sizes[props.size]) )
                 }
 
                 if ( vv?.selects?.palettes?.[props.palette]?.[props.color] ) {
-                    output.push( vv.selects.palettes[props.palette][props.color] )
+                    output.push( String(vv.selects.palettes[props.palette][props.color]) )
                 }
 
                 return output.join(' ').trim()
