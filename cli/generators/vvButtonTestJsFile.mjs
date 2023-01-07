@@ -69,6 +69,19 @@ test('VvButton.vue component props all work as expected', async () => {
     
 })
 
+
+test('VvButton.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvButton, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-button-')
+
+})
+
 `
 
 return output
