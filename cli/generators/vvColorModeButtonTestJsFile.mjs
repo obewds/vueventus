@@ -91,6 +91,20 @@ test('VvColorModeButton.vue component can check localStorage for a colorMode pro
     
 })
 
+
+test('VvColorModeButton.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvColorModeButton, {
+        props: {
+            mode: 'dark',
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-color-mode-button-')
+
+})
+
 `
 
 return output

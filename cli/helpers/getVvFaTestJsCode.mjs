@@ -35,6 +35,19 @@ test('VvFa.vue component accepts family and icon prop values and returns/renders
 
 })
 
+
+test('VvFa.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvFa, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-fa-')
+
+})
+
 `
 
 }

@@ -27,6 +27,19 @@ test('VvEl.vue component accepts a tag prop that validates', async () => {
 
 })
 
+
+test('VvEl.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvEl, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-el-')
+
+})
+
 `
 
 return output

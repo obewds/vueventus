@@ -47,6 +47,19 @@ test('VvInput.vue component can successfully inject() a parent component provide
     
 })
 
+
+test('VvInput.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvInput, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-input-')
+
+})
+
 `
 
 return output
