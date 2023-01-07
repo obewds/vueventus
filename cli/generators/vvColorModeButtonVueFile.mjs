@@ -112,7 +112,6 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
         :data-vv-color-mode-button-prop-mode="debug ? mode : null"
         :data-vv-color-mode-button-prop-palette="debug ? palette : null"
         :data-vv-color-mode-button-prop-size="debug ? size : null"
-        :data-vv-color-mode-button-prop-title="debug ? title : null"
         :data-vv-color-mode-button-prop-type="debug ? type : null"
         :data-vv-color-mode-button-prop-ground-dark="debug ? groundDark : null"
         :data-vv-color-mode-button-prop-ground-dark-hex="debug ? groundDarkHex : null"
