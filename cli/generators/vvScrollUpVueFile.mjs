@@ -114,6 +114,7 @@ const output = `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
                 <div>
 
                     <VvButton
+                        :debug="debug"
                         :title="title"
                         :palette="palette"
                         :color="color"
