@@ -65,7 +65,7 @@
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( props.button === true ) {
 
@@ -78,7 +78,7 @@
                         }
 
                         if ( props.buttonSize !== '' && vv?.buttons?.blockSizes?.[props.buttonSize] ) {
-                            output.push( vv.buttons.blockSizes[props.buttonSize] )
+                            output.push( String(vv.buttons.blockSizes[props.buttonSize]) )
                         }
                         
                     } else if (props.buttonBlock === false && props.buttonFab === true) {
@@ -88,7 +88,7 @@
                         }
 
                         if ( props.buttonSize !== '' && vv?.buttons?.fabSizes?.[props.buttonSize] ) {
-                            output.push( vv.buttons.fabSizes[props.buttonSize] )
+                            output.push( String(vv.buttons.fabSizes[props.buttonSize]) )
                         }
 
                     } else {
@@ -98,13 +98,13 @@
                         }
 
                         if ( props.buttonSize !== '' && vv?.buttons?.sizes?.[props.buttonSize] ) {
-                            output.push( vv.buttons.sizes[props.buttonSize] )
+                            output.push( String(vv.buttons.sizes[props.buttonSize]) )
                         }
 
                     }
                     
                     if ( vv?.buttons?.palettes?.[props.palette]?.[props.color] ) {
-                        output.push( vv.buttons.palettes[props.palette][props.color] )
+                        output.push( String(vv.buttons.palettes[props.palette][props.color]) )
                     }
 
                 } else {
@@ -116,11 +116,11 @@
                     }
 
                     if ( props.textSize !== '' && vv?.anchors?.sizes?.[props.textSize] ) {
-                        output.push( vv.anchors.sizes[props.textSize] )
+                        output.push( String(vv.anchors.sizes[props.textSize]) )
                     }
 
                     if ( vv?.anchors?.palettes?.[props.palette]?.[props.color] ) {
-                        output.push( vv.anchors.palettes[props.palette][props.color] )
+                        output.push( String(vv.anchors.palettes[props.palette][props.color]) )
                     }
 
                 }
