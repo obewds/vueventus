@@ -73,6 +73,7 @@ const output = `<!-- ./src/components/vv/anchors/VvAnchor.vue -->
         :button-fab="buttonFab"
         :button-size="buttonSize"
         :color="color"
+        :debug="debug"
         :external="external"
         :href="href"
         :palette="palette"

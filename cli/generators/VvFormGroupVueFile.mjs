@@ -136,6 +136,7 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
 <template>
 
     <VvFormGroup
+        :debug="debug"
         :display-error="displayError"
         :display-help="displayHelp"
         :display-success="displaySuccess"

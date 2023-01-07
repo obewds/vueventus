@@ -92,6 +92,7 @@ export default function () {
         :checked="checked"
         :color="color"
         :dark-radio-hex="darkRadioHex"
+        :debug="debug"
         :light-radio-hex="lightRadioHex"
         :palette="palette"
         :size="size"

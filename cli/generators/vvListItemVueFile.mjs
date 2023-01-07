@@ -53,6 +53,7 @@ const output = `<!-- ./src/components/vv/lists/VvListItem.vue -->
 <template>
     <VvListItem
         :color="color"
+        :debug="debug"
         :enable-colored-symbols="enableColoredSymbols"
         :palette="palette"
         :symbol-color="symbolColor"

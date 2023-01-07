@@ -53,18 +53,18 @@
 
             let classes = computed( () => {
 
-                let output = []
+                let output: string[] = []
 
                 if ( vv?.checkboxes?.base() ) {
                     output.push( vv.checkboxes.base() )
                 }
 
                 if ( props.size !== '' && vv?.checkboxes?.sizes?.[props.size] ) {
-                    output.push( vv.checkboxes.sizes[props.size] )
+                    output.push( String(vv.checkboxes.sizes[props.size]) )
                 }
 
                 if ( vv?.checkboxes?.palettes?.[props.palette]?.[props.color] ) {
-                    output.push( vv.checkboxes.palettes[props.palette][props.color] )
+                    output.push( String(vv.checkboxes.palettes[props.palette][props.color]) )
                 }
 
                 return output.join(' ').trim()

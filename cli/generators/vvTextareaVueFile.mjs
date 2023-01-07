@@ -50,6 +50,7 @@ const output = `<!-- ./src/components/vv/textareas/VvTextarea.vue -->
 
     <VvTextarea
         :color="color"
+        :debug="debug"
         :palette="palette"
         :size="size"
         :row-size="rowSize"

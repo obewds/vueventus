@@ -46,6 +46,7 @@ const output = `<!-- ./src/components/vv/selects/VvSelect.vue -->
 
     <VvSelect
         :color="color"
+        :debug="debug"
         :palette="palette"
         :size="size"
         :data-vv-select-prop-color="debug ? color : null"

@@ -2,8 +2,8 @@
 
 <script lang="ts">
 
-    // TODO: create new "fab" (Boolean) and defaults/types/docs/etc
-    // TODO: create new "roundingClasses" (String) and defaults/types/docs/etc
+    // TODO: create new "fab" (Boolean) prop and defaults/types/docs/etc
+    // TODO: create new "roundingClasses" (String) prop and defaults/types/docs/etc
 
     import { computed, defineComponent, onMounted, ref } from 'vue'
     import ValidButtonTypes from '../../validators/ValidButtonTypes'

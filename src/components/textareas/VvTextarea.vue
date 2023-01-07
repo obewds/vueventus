@@ -56,12 +56,12 @@
                     output.push( vv.textareas.base() )
                 }
 
-                if ( props.size !== '' && vv?.textareas?.sizes?.[props.size as keyof typeof vv.textareas.sizes] ) {
-                    output.push( vv.textareas.sizes[props.size as keyof typeof vv.textareas.sizes] as string )
+                if ( props.size !== '' && vv?.textareas?.sizes?.[props.size] ) {
+                    output.push( String(vv.textareas.sizes[props.size]) )
                 }
 
-                if ( vv?.textareas?.palettes?.[props.palette as keyof typeof vv.textareas.palettes]?.[props.color] ) {
-                    output.push( vv.textareas.palettes[props.palette as keyof typeof vv.textareas.palettes][props.color] as string )
+                if ( vv?.textareas?.palettes?.[props.palette]?.[props.color] ) {
+                    output.push( String(vv.textareas.palettes[props.palette][props.color]) )
                 }
 
                 return output.join(' ').trim()
@@ -69,8 +69,8 @@
             })
 
             let rows = computed( () => {
-                if ( props.rowSize !== '' && vv?.textareas?.rowSizes?.[props.rowSize as keyof typeof vv.textareas.rowSizes] ) {
-                    return vv.textareas.rowSizes[props.rowSize as keyof typeof vv.textareas.rowSizes]
+                if ( props.rowSize !== '' && vv?.textareas?.rowSizes?.[props.rowSize] ) {
+                    return vv.textareas.rowSizes[props.rowSize]
                 }
             })
 

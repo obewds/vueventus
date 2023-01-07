@@ -68,6 +68,7 @@ const output = `<!-- ./src/components/vv/elements/VvEl.vue -->
     <VvEl
         :border-palette="borderPalette"
         :border-color="borderColor"
+        :debug="debug"
         :ground-palette="groundPalette"
         :ground-color="groundColor"
         :size="size"

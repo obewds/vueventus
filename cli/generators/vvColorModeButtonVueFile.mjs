@@ -96,6 +96,7 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
     <VvColorModeButton
         :mode="(colorMode as ValidColorModes)"
         :color="color"
+        :debug="debug"
         :palette="palette"
         :size="size"
         :ground-dark="groundDark"

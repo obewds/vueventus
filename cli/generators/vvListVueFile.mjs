@@ -54,6 +54,7 @@ const output = `<!-- ./src/components/vv/lists/VvList.vue -->
 <template>
 
     <VvList
+        :debug="debug"
         :marker-color="markerColor"
         :marker-palette="markerPalette"
         :size="size"
