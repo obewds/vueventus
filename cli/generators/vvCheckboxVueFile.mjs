@@ -89,6 +89,7 @@ const output = `<!-- ./src/components/vv/inputs/VvCheckbox.vue -->
         :checked="checked"
         :color="color"
         :dark-check-hex="darkCheckHex"
+        :debug="debug"
         :light-check-hex="lightCheckHex"
         :palette="palette"
         :size="size"
