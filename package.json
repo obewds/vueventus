@@ -44,7 +44,7 @@
     "vue": "^3.2.45"
   },
   "devDependencies": {
-    "@types/fs-extra": "^9.0.13",
+    "@types/fs-extra": "^11.0.1",
     "@vitejs/plugin-vue": "~3.2.0",
     "@vitest/coverage-c8": "^0.26.3",
     "@vue/test-utils": "^2.2.7",
