@@ -200,6 +200,7 @@ function sidebarModules() {
                 { text: 'ListboxOptionDefault Palette', link: '/modules/palettes/listbox-option-default' },
                 { text: 'ListboxOptionUnderlined Palette', link: '/modules/palettes/listbox-option-underlined' },
                 { text: 'RadioDefault Palette', link: '/modules/palettes/radio-default' },
+                { text: 'ScrollbarDefault Palette', link: '/modules/palettes/scrollbar-default' },
                 { text: 'TextDefault Palette', link: '/modules/palettes/text-default' },
             ]
         },{
