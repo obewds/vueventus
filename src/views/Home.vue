@@ -335,6 +335,10 @@
                 RadioDefault
             </DevViewLinkCard>
 
+            <DevViewLinkCard icon="palette" to="/configs/palettes/scrollbar-default" :link-classes="tw.gridCardLinkPalette">
+                ScrollbarDefault
+            </DevViewLinkCard>
+
             <DevViewLinkCard icon="palette" to="/configs/palettes/text-default" :link-classes="tw.gridCardLinkPalette">
                 TextDefault
             </DevViewLinkCard>
