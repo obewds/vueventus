@@ -31,6 +31,7 @@ export { default as ListboxOptionDefault } from './configs/palettes/ListboxOptio
 export { default as ListboxOptionUnderlined } from './configs/palettes/ListboxOptionUnderlined';
 export { default as ListDefault } from './configs/palettes/ListDefault';
 export { default as RadioDefault } from './configs/palettes/RadioDefault';
+export { default as ScrollbarDefault } from './configs/palettes/ScrollbarDefault';
 export { default as TextDefault } from './configs/palettes/TextDefault';
 // .src/helpers
 export { default as appColorPairs } from './helpers/appColorPairs';

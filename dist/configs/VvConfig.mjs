@@ -29,6 +29,7 @@ import ListboxOptionDefault from './palettes/ListboxOptionDefault.mjs';
 import ListboxOptionUnderlined from './palettes/ListboxOptionUnderlined.mjs';
 import ListDefault from './palettes/ListDefault.mjs';
 import RadioDefault from './palettes/RadioDefault.mjs';
+import ScrollbarDefault from './palettes/ScrollbarDefault.mjs';
 import TextDefault from './palettes/TextDefault.mjs';
 import VvComponentDefaults from './VvComponentDefaults.mjs';
 export default {
@@ -103,6 +104,11 @@ export default {
         ...Radios,
         palettes: {
             default: RadioDefault,
+        },
+    },
+    scrollbars: {
+        palettes: {
+            default: ScrollbarDefault,
         },
     },
     selects: {
