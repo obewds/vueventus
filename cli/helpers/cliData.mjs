@@ -236,20 +236,20 @@ let baseVvSsgOnlyTsFiles = {
     },
 }
 
-let baseNuxtFiles = {
-    appVvTs: baseViteTypescriptFiles.appVvTs,
-    appColorsJson: baseViteTypescriptFiles.appColorsJson,
-}
-baseNuxtFiles.appVvTs.path = '/'
-baseNuxtFiles.appVvTs.src = appVvTsFile(true)
-baseNuxtFiles.appColorsJson.path = '/'
+// let baseNuxtFiles = {
+//     appVvTs: baseViteTypescriptFiles.appVvTs,
+//     appColorsJson: baseViteTypescriptFiles.appColorsJson,
+// }
+// baseNuxtFiles.appVvTs.path = '/'
+// baseNuxtFiles.appVvTs.src = appVvTsFile(true)
+// baseNuxtFiles.appColorsJson.path = '/'
 
-baseNuxtFiles.appVue = {
-    name: 'app.vue',
-    checked: true,
-    path: '/',
-    src: appVueNuxtFile(),
-}
+// baseNuxtFiles.appVue = {
+//     name: 'app.vue',
+//     checked: true,
+//     path: '/',
+//     src: appVueNuxtFile(),
+// }
 
 
 //
