@@ -349,27 +349,27 @@ let baseVvTsCompos = {
     },
 }
 
-let baseVvTsNuxtCompos = {
-    vvAnchorVue: baseVvTsCompos.vvAnchorVue,
-    vvButtonVue: baseVvTsCompos.vvButtonVue,
-    vvCheckboxVue: baseVvTsCompos.vvCheckboxVue,
-    vvColorModeButtonVue: baseVvTsCompos.vvColorModeButtonVue,
-    vvElVue: baseVvTsCompos.vvElVue,
-    vvFormGroupVue: baseVvTsCompos.vvFormGroupVue,
-    vvInputVue: baseVvTsCompos.vvInputVue,
-    vvListVue: baseVvTsCompos.vvListVue,
-    vvListboxVue: baseVvTsCompos.vvListboxVue,
-    vvListItemVue: baseVvTsCompos.vvListItemVue,
-    vvQuadFormGroupVue: baseVvTsCompos.vvQuadFormGroupVue,
-    vvRadioVue: baseVvTsCompos.vvRadioVue,
-    vvRouterLinkVue: baseVvTsCompos.vvRouterLinkVue,
-    vvSelectVue: baseVvTsCompos.vvSelectVue,
-    vvTextareaVue: baseVvTsCompos.vvTextareaVue,
-}
+// let baseVvTsNuxtCompos = {
+//     vvAnchorVue: baseVvTsCompos.vvAnchorVue,
+//     vvButtonVue: baseVvTsCompos.vvButtonVue,
+//     vvCheckboxVue: baseVvTsCompos.vvCheckboxVue,
+//     vvColorModeButtonVue: baseVvTsCompos.vvColorModeButtonVue,
+//     vvElVue: baseVvTsCompos.vvElVue,
+//     vvFormGroupVue: baseVvTsCompos.vvFormGroupVue,
+//     vvInputVue: baseVvTsCompos.vvInputVue,
+//     vvListVue: baseVvTsCompos.vvListVue,
+//     vvListboxVue: baseVvTsCompos.vvListboxVue,
+//     vvListItemVue: baseVvTsCompos.vvListItemVue,
+//     vvQuadFormGroupVue: baseVvTsCompos.vvQuadFormGroupVue,
+//     vvRadioVue: baseVvTsCompos.vvRadioVue,
+//     vvRouterLinkVue: baseVvTsCompos.vvRouterLinkVue,
+//     vvSelectVue: baseVvTsCompos.vvSelectVue,
+//     vvTextareaVue: baseVvTsCompos.vvTextareaVue,
+// }
 
-baseVvTsNuxtCompos.vvAnchorVue.name = 'Anchor.vue'
-baseVvTsNuxtCompos.vvAnchorVue.path = '/components/Vv/'
-baseVvTsNuxtCompos.vvAnchorVue.src = vvAnchorVueFile(true)
+// baseVvTsNuxtCompos.vvAnchorVue.name = 'Anchor.vue'
+// baseVvTsNuxtCompos.vvAnchorVue.path = '/components/Vv/'
+// baseVvTsNuxtCompos.vvAnchorVue.src = vvAnchorVueFile(true)
 
 //
 // Dependency files and components for each stack
