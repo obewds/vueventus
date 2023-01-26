@@ -50,6 +50,7 @@ title: Typescript Modules
 * [ConfigListboxes](/typescript/interfaces#configlistboxes)
 * [ConfigLists](/typescript/interfaces#configlists)
 * [ConfigRadios](/typescript/interfaces#configradios)
+* [ConfigScrollbars](/typescript/interfaces#configscrollbars)
 * [ConfigSelects](/typescript/interfaces#configselects)
 * [ConfigText](/typescript/interfaces#configtext)
 * [ConfigTextareas](/typescript/interfaces#configtextareas)
