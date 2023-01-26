@@ -6,6 +6,7 @@ import aMdFile from '../generators/aMdFile.mjs'
 import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
 import appVueFile from '../generators/appVueFile.mjs'
 import appVueSsgFile from '../generators/appVueSsgFile.mjs'
+import appVueNuxtFile from '../generators/appVueNuxtFile.mjs'
 import appVvTsFile from '../generators/appVvTsFile.mjs'
 import bMdFile from '../generators/bMdFile.mjs'
 import bVueFile from '../generators/bVueFile.mjs'
@@ -84,6 +85,9 @@ import vvScrollUpTestJsFile from '../generators/vvScrollUpTestJsFile.mjs'
 import vvSelectTestJsFile from '../generators/vvSelectTestJsFile.mjs'
 import vvTextareaTestJsFile from '../generators/vvTextareaTestJsFile.mjs'
 
+//
+// Base files for each stack
+//
 
 let baseViteTypescriptFiles = {
     appVvTs: {
@@ -232,6 +236,26 @@ let baseVvSsgOnlyTsFiles = {
     },
 }
 
+let baseNuxtFiles = {
+    appVvTs: baseViteTypescriptFiles.appVvTs,
+    appColorsJson: baseViteTypescriptFiles.appColorsJson,
+}
+baseNuxtFiles.appVvTs.path = '/'
+baseNuxtFiles.appVvTs.src = appVvTsFile(true)
+baseNuxtFiles.appColorsJson.path = '/'
+
+baseNuxtFiles.appVue = {
+    name: 'app.vue',
+    checked: true,
+    path: '/',
+    src: appVueNuxtFile(),
+}
+
+
+//
+// Component files for each stack
+//
+
 let baseVvTsCompos = {
     vvAnchorVue: {
         name: 'VvAnchor.vue',
@@ -324,6 +348,32 @@ let baseVvTsCompos = {
         src: vvTextareaVueFile(),
     },
 }
+
+let baseVvTsNuxtCompos = {
+    vvAnchorVue: baseVvTsCompos.vvAnchorVue,
+    vvButtonVue: baseVvTsCompos.vvButtonVue,
+    vvCheckboxVue: baseVvTsCompos.vvCheckboxVue,
+    vvColorModeButtonVue: baseVvTsCompos.vvColorModeButtonVue,
+    vvElVue: baseVvTsCompos.vvElVue,
+    vvFormGroupVue: baseVvTsCompos.vvFormGroupVue,
+    vvInputVue: baseVvTsCompos.vvInputVue,
+    vvListVue: baseVvTsCompos.vvListVue,
+    vvListboxVue: baseVvTsCompos.vvListboxVue,
+    vvListItemVue: baseVvTsCompos.vvListItemVue,
+    vvQuadFormGroupVue: baseVvTsCompos.vvQuadFormGroupVue,
+    vvRadioVue: baseVvTsCompos.vvRadioVue,
+    vvRouterLinkVue: baseVvTsCompos.vvRouterLinkVue,
+    vvSelectVue: baseVvTsCompos.vvSelectVue,
+    vvTextareaVue: baseVvTsCompos.vvTextareaVue,
+}
+
+baseVvTsNuxtCompos.vvAnchorVue.name = 'Anchor.vue'
+baseVvTsNuxtCompos.vvAnchorVue.path = '/components/Vv/'
+baseVvTsNuxtCompos.vvAnchorVue.src = vvAnchorVueFile(true)
+
+//
+// Dependency files and components for each stack
+//
 
 let faFreeDep = {
     checked: true,
@@ -646,5 +696,11 @@ export default {
             deps: { ...ssgDeps },
             compos: { ...baseVvTsCompos },
         },
+        // vueTwNuxt3: {
+        //     name: cliStackNames.vueTwNuxt3,
+        //     files: { ...baseNuxtFiles, ...baseVvTsNuxtCompos },
+        //     deps: {},
+        //     compos: {},
+        // },
     },
 }
