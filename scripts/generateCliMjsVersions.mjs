@@ -24,6 +24,7 @@ const files = [
     'configs/palettes/ListboxOptionUnderlined',
     'configs/palettes/ListDefault',
     'configs/palettes/RadioDefault',
+    'configs/palettes/ScrollbarDefault',
     'configs/palettes/TextDefault',
     'configs/Anchors',
     'configs/Buttons',

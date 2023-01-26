@@ -36,6 +36,7 @@ import ListboxOptionDefaultPage from '@/views/configs/palettes/ListboxOptionDefa
 import ListboxOptionUnderlinedPage from '@/views/configs/palettes/ListboxOptionUnderlinedPage.vue'
 import ListDefaultPage from '@/views/configs/palettes/ListDefaultPage.vue'
 import RadioDefaultPage from '@/views/configs/palettes/RadioDefaultPage.vue'
+import ScrollbarDefaultPage from '@/views/configs/palettes/ScrollbarDefaultPage.vue'
 import TextDefaultPage from '@/views/configs/palettes/TextDefaultPage.vue'
 
 // anchor component pages
@@ -217,6 +218,10 @@ const router = createRouter({
             name: 'RadioDefault Palette Config Module',
             component: RadioDefaultPage,
             path: '/configs/palettes/radio-default'
+        },{
+            name: 'ScrollbarDefault Palette Config Module',
+            component: ScrollbarDefaultPage,
+            path: '/configs/palettes/scrollbar-default'
         },{
             name: 'TextDefault Palette Config Module',
             component: TextDefaultPage,

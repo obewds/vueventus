@@ -1,12 +1,14 @@
 // ./cli/generators/vvAnchorTestJsFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
+
+let importsPath = useNuxtPaths ? '../../../../' : '../../../../src/'
 
 const output = `// ./tests/components/vv/anchors/VvAnchor.test.js
 
 import { mount } from '@vue/test-utils'
-import VvAnchor from '../../../../src/components/vv/anchors/VvAnchor.vue'
-import appVv from '../../../../src/app.vv'
+import VvAnchor from '${importsPath}components/vv/anchors/VvAnchor.vue'
+import appVv from '${importsPath}app.vv'
 
 
 test('VvAnchor.vue component mounts successfully', async () => {

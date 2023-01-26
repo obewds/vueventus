@@ -2,9 +2,11 @@
 
 import VvConfig from '../../dist/configs/VvConfig.mjs'
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
-const output = `// ./src/app.vv.ts
+let commentPath = useNuxtPaths ? './' : './src/'
+
+const output = `// ${commentPath}app.vv.ts
 
 import { VvConfig } from '@obewds/vueventus'
 import type { ConfigVv } from '@obewds/vueventus'
@@ -158,7 +160,14 @@ let appVv: ConfigVv = VvConfig
 //     success: '${VvConfig.radios.palettes.default.success}',
 // }
 
-// appVv.scrollbars = 'scrollbar scrollbar-thumb-trueGray-100 scrollbar-track-trueGray-200 dark:scrollbar-thumb-trueGray-600 dark:scrollbar-track-trueGray-800'
+// appVv.scrollbars.palettes.default = {
+//     '': '',
+//     default: '${VvConfig.scrollbars.palettes.default.default}',
+//     error: '${VvConfig.scrollbars.palettes.default.error}',
+//     primary: '${VvConfig.scrollbars.palettes.default.primary}',
+//     secondary: '${VvConfig.scrollbars.palettes.default.secondary}',
+//     success: '${VvConfig.scrollbars.palettes.default.success}',
+// }
 
 // appVv.selects.palettes.default = {
 //     default: '${VvConfig.selects.palettes.default.default}',

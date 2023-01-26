@@ -32,6 +32,7 @@ export { default as ListboxOptionDefault } from './configs/palettes/ListboxOptio
 export { default as ListboxOptionUnderlined } from './configs/palettes/ListboxOptionUnderlined'
 export { default as ListDefault } from './configs/palettes/ListDefault'
 export { default as RadioDefault } from './configs/palettes/RadioDefault'
+export { default as ScrollbarDefault } from './configs/palettes/ScrollbarDefault'
 export { default as TextDefault } from './configs/palettes/TextDefault'
 
 // .src/helpers
@@ -134,6 +135,7 @@ import type { ConfigInputs } from './types/ConfigInputs'
 import type { ConfigListboxes } from './types/ConfigListboxes'
 import type { ConfigLists } from './types/ConfigLists'
 import type { ConfigRadios } from './types/ConfigRadios'
+import type { ConfigScrollbars } from './types/ConfigScrollbars'
 import type { ConfigSelects } from './types/ConfigSelects'
 import type { ConfigText } from './types/ConfigText'
 import type { ConfigTextareas } from './types/ConfigTextareas'
@@ -201,6 +203,7 @@ export type { ConfigInputs }
 export type { ConfigListboxes }
 export type { ConfigLists }
 export type { ConfigRadios }
+export type { ConfigScrollbars }
 export type { ConfigSelects }
 export type { ConfigText }
 export type { ConfigTextareas }

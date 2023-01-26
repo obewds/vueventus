@@ -23,6 +23,7 @@ title: Palette Config Modules
 * [BorderDefault Palette](/modules/palettes/border-default)
 * [ButtonOutline Palette](/modules/palettes/button-outline)
 * [ButtonSolid Palette](/modules/palettes/button-solid)
+* [CheckboxDefault Palette](/modules/palettes/checkbox-default)
 * [FillDefault Palette](/modules/palettes/fill-default)
 * [GroundConsole Palette](/modules/palettes/ground-console)
 * [GroundDefault Palette](/modules/palettes/ground-default)
@@ -35,6 +36,8 @@ title: Palette Config Modules
 * [ListboxOptionDefault Palette](/modules/palettes/listbox-option-default)
 * [ListboxOptionUnderlined Palette](/modules/palettes/listbox-option-underlined)
 * [ListDefault Palette](/modules/palettes/list-default)
+* [RadioDefault Palette](/modules/palettes/radio-default)
+* [ScrollbarDefault Palette](/modules/palettes/scrollbar-default)
 * [TextDefault Palette](/modules/palettes/text-default)
 
 

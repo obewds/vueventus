@@ -8,6 +8,7 @@ import type { ConfigInputs } from './ConfigInputs';
 import type { ConfigListboxes } from './ConfigListboxes';
 import type { ConfigLists } from './ConfigLists';
 import type { ConfigRadios } from './ConfigRadios';
+import type { ConfigScrollbars } from './ConfigScrollbars';
 import type { ConfigSelects } from './ConfigSelects';
 import type { ConfigText } from './ConfigText';
 import type { ConfigTextareas } from './ConfigTextareas';
@@ -24,6 +25,7 @@ export interface ConfigVv {
     listboxes: ConfigListboxes;
     lists: ConfigLists;
     radios: ConfigRadios;
+    scrollbars: ConfigScrollbars;
     selects: ConfigSelects;
     text: ConfigText;
     textareas: ConfigTextareas;

@@ -1,15 +1,19 @@
 // ./cli/generators/vvAnchorVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
-const output = `<!-- ./src/components/vv/anchors/VvAnchor.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/Anchor.vue' : './src/components/vv/anchors/VvAnchor.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 
 <script lang="ts">
 
     import { defineComponent } from 'vue'
     import { VvAnchor } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
+    import appVv from '${appVvPath}'
 
     import type { PropType } from 'vue'
     import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, SizesText } from '@obewds/vueventus'

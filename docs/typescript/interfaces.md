@@ -355,6 +355,27 @@ import type { ConfigRadios } from '@obewds/vueventus'
 
 
 
+## ConfigScrollbars
+
+### Import
+
+```javascript
+import type { ConfigScrollbars } from '@obewds/vueventus'
+```
+
+### Module Code
+
+<<< @/../src/types/ConfigScrollbars.ts
+
+
+
+
+
+
+
+
+
+
 ## ConfigSelects
 
 ### Import

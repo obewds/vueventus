@@ -213,6 +213,10 @@ async function installDepsAndFiles () {
 
         stack = cli.stacks.vueTwViteSsgMdTs
     
+    } else if (userOptions.stack === cli.stacks.vueTwNuxt3.name) {
+
+        stack = cli.stacks.vueTwNuxt3
+    
     }
 
 
