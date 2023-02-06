@@ -54,7 +54,7 @@
     "happy-dom": "^8.1.5",
     "markdown-it-include": "^2.0.0",
     "postcss": "^8.4.21",
-    "typescript": "^4.9.4",
+    "typescript": "^4.9.5",
     "vite": "~3.2.5",
     "vitepress": "^1.0.0-alpha.40",
     "vitest": "^0.28.2",
