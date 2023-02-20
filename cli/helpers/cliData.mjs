@@ -236,20 +236,26 @@ let baseVvSsgOnlyTsFiles = {
     },
 }
 
-// let baseNuxtFiles = {
-//     appVvTs: baseViteTypescriptFiles.appVvTs,
-//     appColorsJson: baseViteTypescriptFiles.appColorsJson,
-// }
-// baseNuxtFiles.appVvTs.path = '/'
-// baseNuxtFiles.appVvTs.src = appVvTsFile(true)
-// baseNuxtFiles.appColorsJson.path = '/'
-
-// baseNuxtFiles.appVue = {
-//     name: 'app.vue',
-//     checked: true,
-//     path: '/',
-//     src: appVueNuxtFile(),
-// }
+let baseNuxtFiles = {
+    appVvTs: {
+        name: 'app.vv.ts',
+        checked: true,
+        path: '/', // nuxt needs this file in root
+        src: appVvTsFile(true), // pass true argument for nuxt version of file
+    },
+    appColorsJson: {
+        name: 'app.colors.json',
+        checked: true,
+        path: '/', // nuxt needs this file in root
+        src: appColorsJsonFile(),
+    },
+    appVue: {
+        name: 'app.vue',
+        checked: true,
+        path: '/',
+        src: appVueNuxtFile(),
+    }
+}
 
 
 //
@@ -349,27 +355,36 @@ let baseVvTsCompos = {
     },
 }
 
-// let baseVvTsNuxtCompos = {
-//     vvAnchorVue: baseVvTsCompos.vvAnchorVue,
-//     vvButtonVue: baseVvTsCompos.vvButtonVue,
-//     vvCheckboxVue: baseVvTsCompos.vvCheckboxVue,
-//     vvColorModeButtonVue: baseVvTsCompos.vvColorModeButtonVue,
-//     vvElVue: baseVvTsCompos.vvElVue,
-//     vvFormGroupVue: baseVvTsCompos.vvFormGroupVue,
-//     vvInputVue: baseVvTsCompos.vvInputVue,
-//     vvListVue: baseVvTsCompos.vvListVue,
-//     vvListboxVue: baseVvTsCompos.vvListboxVue,
-//     vvListItemVue: baseVvTsCompos.vvListItemVue,
-//     vvQuadFormGroupVue: baseVvTsCompos.vvQuadFormGroupVue,
-//     vvRadioVue: baseVvTsCompos.vvRadioVue,
-//     vvRouterLinkVue: baseVvTsCompos.vvRouterLinkVue,
-//     vvSelectVue: baseVvTsCompos.vvSelectVue,
-//     vvTextareaVue: baseVvTsCompos.vvTextareaVue,
-// }
+let baseVvTsNuxtCompos = {
+    vvAnchorVue: {
+        name: 'Anchor.vue',
+        checked: true,
+        path: '/components/Vv/',
+        src: vvAnchorVueFile(true),
+    },
+    // vvButtonVue: {
+    //     name: 'Button.vue',
+    //     checked: true,
+    //     path: '/src/components/vv/buttons/',
+    //     src: vvButtonVueFile(),
+    // },
+}
+// vvButtonVue: baseVvTsCompos.vvButtonVue,
+// vvCheckboxVue: baseVvTsCompos.vvCheckboxVue,
+// vvColorModeButtonVue: baseVvTsCompos.vvColorModeButtonVue,
+// vvElVue: baseVvTsCompos.vvElVue,
+// vvFormGroupVue: baseVvTsCompos.vvFormGroupVue,
+// vvInputVue: baseVvTsCompos.vvInputVue,
+// vvListVue: baseVvTsCompos.vvListVue,
+// vvListboxVue: baseVvTsCompos.vvListboxVue,
+// vvListItemVue: baseVvTsCompos.vvListItemVue,
+// vvQuadFormGroupVue: baseVvTsCompos.vvQuadFormGroupVue,
+// vvRadioVue: baseVvTsCompos.vvRadioVue,
+// vvRouterLinkVue: baseVvTsCompos.vvRouterLinkVue,
+// vvSelectVue: baseVvTsCompos.vvSelectVue,
+// vvTextareaVue: baseVvTsCompos.vvTextareaVue,
 
-// baseVvTsNuxtCompos.vvAnchorVue.name = 'Anchor.vue'
-// baseVvTsNuxtCompos.vvAnchorVue.path = '/components/Vv/'
-// baseVvTsNuxtCompos.vvAnchorVue.src = vvAnchorVueFile(true)
+
 
 //
 // Dependency files and components for each stack
@@ -696,11 +711,11 @@ export default {
             deps: { ...ssgDeps },
             compos: { ...baseVvTsCompos },
         },
-        // vueTwNuxt3: {
-        //     name: cliStackNames.vueTwNuxt3,
-        //     files: { ...baseNuxtFiles, ...baseVvTsNuxtCompos },
-        //     deps: {},
-        //     compos: {},
-        // },
+        vueTwNuxt3: {
+            name: cliStackNames.vueTwNuxt3,
+            files: { ...baseNuxtFiles, ...baseVvTsNuxtCompos },
+            deps: {},
+            compos: {},
+        },
     },
 }
