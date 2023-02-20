@@ -1,5 +1,6 @@
 // ./cli/installers/addNuxtTs.mjs
 
+import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
 import appVueNuxtFile from '../generators/appVueNuxtFile.mjs'
 import nuxtConfigTsFile from '../generators/nuxtConfigTsFile.mjs'
 import vvAnchorVueFile from '../generators/vvAnchorVueFile.mjs'
@@ -42,14 +43,24 @@ export default function (userOpts, stackObj, installPkgsArr) {
 
     installPkgsArr.push('nuxt-headlessui', '@headlessui/tailwindcss')
 
-    // copy the VueVentus starter end user app component files 
-    // from the cli stubs file generators
-    const composVv = cwd + '/components/Vv/'
-    fs.outputFileSync(composVv + 'Anchor.vue', vvAnchorVueFile(true), { flag: 'w+' })
-
     // install app.vv.ts file
     if ( userOpts.files.includes( stackObj.files.appVvTs.name ) ) {
         fs.outputFileSync(cwd + stackObj.files.appVvTs.path + stackObj.files.appVvTs.name, appVueNuxtFile(), { flag: 'w+' })
     }
+
+    // install app.colors.json file
+    if ( userOpts.files.includes( stackObj.files.appColorsJson.name ) ) {
+        fs.outputFileSync(cwd + stackObj.files.appColorsJson.path + stackObj.files.appColorsJson.name, appColorsJsonFile(), { flag: 'w+' })
+    }
+
+    // install app.vue file
+    if ( userOpts.files.includes( stackObj.files.appVue.name ) ) {
+        fs.outputFileSync(cwd + stackObj.files.appVue.path + stackObj.files.appVue.name, appVueNuxtFile(), { flag: 'w+' })
+    }
+
+    // copy the VueVentus starter end user app component files 
+    // from the cli stubs file generators
+    const composVv = cwd + '/components/Vv/'
+    fs.outputFileSync(composVv + 'Anchor.vue', vvAnchorVueFile(true), { flag: 'w+' })
 
 }

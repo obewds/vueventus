@@ -8,6 +8,7 @@ import merge from 'deepmerge'
 import rimraf from 'rimraf'
 
 import addDep from './installers/addDep.mjs'
+import addNuxtTs from './installers/addNuxtTs.mjs'
 import addViteTs from './installers/addViteTs.mjs'
 import addFaFreeTs from './installers/addFaFreeTs.mjs'
 import addFaProTs from './installers/addFaProTs.mjs'
@@ -95,9 +96,17 @@ async function chooseDeps () {
 
     // set the stack
     if ( userOptions.stack === cli.stacks.vueTwViteTs.name ) {
+
         stack = cli.stacks.vueTwViteTs
+
     } else if ( userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name ) {
+
         stack = cli.stacks.vueTwViteSsgMdTs
+
+    } else if ( userOptions.stack === cli.stacks.vueTwNuxt3.name ) {
+
+        stack = cli.stacks.vueTwNuxt3
+
     }
 
     const depKeys = Object.keys(stack.deps)
@@ -132,9 +141,17 @@ async function chooseFiles () {
 
     // set the stack
     if ( userOptions.stack === cli.stacks.vueTwViteTs.name ) {
+
         stack = cli.stacks.vueTwViteTs
+
     } else if ( userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name ) {
+
         stack = cli.stacks.vueTwViteSsgMdTs
+
+    } else if ( userOptions.stack === cli.stacks.vueTwNuxt3.name ) {
+
+        stack = cli.stacks.vueTwNuxt3
+
     }
 
     const fileKeys = Object.keys(stack.files)
@@ -217,6 +234,17 @@ async function installDepsAndFiles () {
 
         stack = cli.stacks.vueTwNuxt3
     
+    }
+
+
+    if (userOptions.stack === cli.stacks.vueTwNuxt3.name) {
+
+        //
+        // START install nuxt 3
+        //
+
+        addNuxtTs(userOptions, stack, installedPkgs)
+
     }
 
 
