@@ -1,5 +1,7 @@
 // ./cli/installers/addNuxtTs.mjs
 
+import fs from 'fs-extra'
+
 import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
 import appVueNuxtFile from '../generators/appVueNuxtFile.mjs'
 import nuxtConfigTsFile from '../generators/nuxtConfigTsFile.mjs'
