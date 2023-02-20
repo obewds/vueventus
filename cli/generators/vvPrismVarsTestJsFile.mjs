@@ -28,6 +28,19 @@ test('VvPrismVars.vue component accepts validating prop values and returns truth
 
 })
 
+
+test('VvPrismVars.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvPrismVars, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-prism-vars-')
+
+})
+
 `
 
 return output
