@@ -2,21 +2,25 @@
 
 export default function () {
 
-const output = `<!-- ./src/components/vv/inputs/VvCheckbox.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/Checkbox.vue' : './src/components/vv/anchors/VvCheckbox.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 
 <script lang="ts">
 
-    import { computed, defineComponent } from 'vue'
-    import { VvCheckbox } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
-
     import type { PropType } from 'vue'
     import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesInputs } from '@obewds/vueventus'
 
+    import { computed, defineComponent } from 'vue'
+    import { VvCheckbox as LibVvCheckbox } from '@obewds/vueventus'
+    import appVv from '${appVvPath}'
+
     export default defineComponent({
 
-        components: { VvCheckbox },
+        components: { LibVvCheckbox },
 
         props: {
             checked: {
@@ -85,7 +89,7 @@ const output = `<!-- ./src/components/vv/inputs/VvCheckbox.vue -->
 
 
 <template>
-    <VvCheckbox
+    <LibVvCheckbox
         :checked="checked"
         :color="color"
         :dark-check-hex="darkCheckHex"
