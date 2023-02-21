@@ -4,6 +4,7 @@ import fs from 'fs-extra'
 
 import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
 import appVueNuxtFile from '../generators/appVueNuxtFile.mjs'
+import appVvTsFile from '../generators/appVvTsFile.mjs'
 import nuxtConfigTsFile from '../generators/nuxtConfigTsFile.mjs'
 import vvAnchorVueFile from '../generators/vvAnchorVueFile.mjs'
 
@@ -47,7 +48,7 @@ export default function (userOpts, stackObj, installPkgsArr) {
 
     // install app.vv.ts file
     if ( userOpts.files.includes( stackObj.files.appVvTs.name ) ) {
-        fs.outputFileSync(cwd + stackObj.files.appVvTs.path + stackObj.files.appVvTs.name, appVueNuxtFile(), { flag: 'w+' })
+        fs.outputFileSync(cwd + stackObj.files.appVvTs.path + stackObj.files.appVvTs.name, appVvTsFile(), { flag: 'w+' })
     }
 
     // install app.colors.json file
