@@ -20,9 +20,12 @@ import aMdFile from './generators/aMdFile.mjs'
 import bMdFile from './generators/bMdFile.mjs'
 import bVueFile from './generators/bVueFile.mjs'
 import counterVueFile from './generators/counterVueFile.mjs'
+import fontAwesomeProTsNuxtFile from './generators/fontAwesomeProTsNuxtFile.mjs'
+import fontAwesomeTsNuxtFile from './generators/fontAwesomeTsNuxtFile.mjs'
 import indexMdFile from './generators/indexMdFile.mjs'
 import mousePosVueFile from './generators/mousePosVueFile.mjs'
 import piniaRootTsFile from './generators/piniaRootTsFile.mjs'
+import vvFaVueNuxtFile from './generators/vvFaVueNuxtFile.mjs'
 
 import cliData from './helpers/cliData.mjs'
 import cwd from './helpers/cwd.mjs'
@@ -244,6 +247,85 @@ async function installDepsAndFiles () {
         //
 
         addNuxtTs(userOptions, stack, installedPkgs)
+
+        // if the user chose the optional FontAwesome dep
+        if (userOptions.deps.includes(stack.deps.fontawesome.name) || userOptions.deps.includes(stack.deps.faPro.name)) {
+
+            if (userOptions.deps.includes(stack.deps.faPro.name)) {
+
+                // install the pro font awesome dep
+                async function setFaProLicense () {
+    
+                    const answers = await inquirer.prompt({
+                        name: 'faProLicense',
+                        type: 'input',
+                        message: 'What is your FontAwesome Pro license authorization token (required to download artwork via a project .npmrc file which will be created for you)?\n',
+                    })
+                
+                    return (answers.faProLicense).trim()
+                }
+                
+                userOptions.faProLicense = await setFaProLicense()
+                
+                console.log(' ')
+
+                // create faPro .npmrc file - adding in the user supplied
+                if (userOptions.faProLicense !== '') {
+
+                    // add .npmrc to project .gitignore file
+                    fs.appendFileSync(cwd + '/.gitignore', `\n.npmrc\n`, { flag: 'a+' })
+
+                    // add fa pro license to project .npmrc file
+                    fs.appendFileSync(cwd + '/.npmrc', `\n@fortawesome:registry=https://npm.fontawesome.com/\n` + `//npm.fontawesome.com/:_authToken=${userOptions.faProLicense}\n`, { flag: 'a+' })
+
+                    // install all fa pro deps
+                    run(stack.deps.faPro.install)
+
+                    installedPkgs = [...installedPkgs, ...stack.deps.faPro.packages]
+
+                    // add FontAwesome Pro base file if the user also selected it
+                    if ( userOptions.files.includes( stack.deps.faPro.files.fontAwesomeTs.name ) ) {
+
+                        fs.outputFileSync(cwd + stack.deps.faPro.files.fontAwesomeTs.path + stack.deps.faPro.files.fontAwesomeTs.name, fontAwesomeProTsNuxtFile(), { flag: 'w+' })
+
+                    }
+
+                    // add FontAwesome Pro component file if the user also selected it
+                    if ( userOptions.files.includes( stack.deps.faPro.files.vvFa.name ) ) {
+
+                        fs.outputFileSync(cwd + stack.deps.faPro.files.vvFa.path + stack.deps.faPro.files.vvFa.name, vvFaVueNuxtFile(), { flag: 'w+' })
+
+                    }
+
+                }
+
+
+            } else {
+
+                // install all fa free deps
+                run(stack.deps.fontawesome.install)
+
+                installedPkgs = [...installedPkgs, ...stack.deps.fontawesome.packages]
+
+                // add FontAwesome free base file if the user also selected it
+                if ( userOptions.files.includes( stack.deps.fontawesome.files.fontAwesomeTs.name ) ) {
+
+                    fs.outputFileSync(cwd + stack.deps.fontawesome.files.fontAwesomeTs.path + stack.deps.fontawesome.files.fontAwesomeTs.name, fontAwesomeTsNuxtFile(), { flag: 'w+' })
+
+                }
+
+                // add FontAwesome free component file if the user also selected it
+                if ( userOptions.files.includes( stack.deps.fontawesome.files.vvFa.name ) ) {
+
+                    fs.outputFileSync(cwd + stack.deps.fontawesome.files.vvFa.path + stack.deps.fontawesome.files.vvFa.name, vvFaVueNuxtFile(), { flag: 'w+' })
+
+                }
+
+            }
+    
+            console.log(`\nThe ${vvBrand} CLI installed/added the ${stack.deps.faPro.name} dep/files successfully!\n`)
+
+        }
 
     }
 

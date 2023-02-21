@@ -69,3 +69,17 @@ test('VvCheckbox.vue component can successfully ingest and output the expected d
     expect(wrapper.html()).toContain('000000')
     
 })
+
+
+
+test('VvCheckbox.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvCheckbox, {
+        props: {
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-checkbox-')
+    
+})

@@ -12,8 +12,10 @@ import bMdFile from '../generators/bMdFile.mjs'
 import bVueFile from '../generators/bVueFile.mjs'
 import catchAll404SsgFile from '../generators/catchAll404SsgFile.mjs'
 import counterVueFile from '../generators/counterVueFile.mjs'
+import fontAwesomeProTsNuxtFile from '../generators/fontAwesomeProTsNuxtFile.mjs'
 import fontAwesomeProTsFile from '../generators/fontAwesomeProTsFile.mjs'
 import fontAwesomeTsFile from '../generators/fontAwesomeTsFile.mjs'
+import fontAwesomeTsNuxtFile from '../generators/fontAwesomeTsNuxtFile.mjs'
 import gsapTsFile from '../generators/gsapTsFile.mjs'
 import helloVueVentusTestJsFile from '../generators/helloVueVentusTestJsFile.mjs'
 import helloVueVentusVueFile from '../generators/helloVueVentusVueFile.mjs'
@@ -50,6 +52,7 @@ import vvCheckboxVueFile from '../generators/vvCheckboxVueFile.mjs'
 import vvColorModeButtonVueFile from '../generators/vvColorModeButtonVueFile.mjs'
 import vvElVueFile from '../generators/vvElVueFile.mjs'
 import vvFaVueFile from '../generators/vvFaVueFile.mjs'
+import vvFaVueNuxtFile from '../generators/vvFaVueNuxtFile.mjs'
 import vvFaVueSsgFile from '../generators/vvFaVueSsgFile.mjs'
 import vvFormGroupVueFile from '../generators/vvFormGroupVueFile.mjs'
 import vvInputVueFile from '../generators/vvInputVueFile.mjs'
@@ -88,6 +91,19 @@ import vvRouterLinkTestJsFile from '../generators/vvRouterLinkTestJsFile.mjs'
 import vvScrollUpTestJsFile from '../generators/vvScrollUpTestJsFile.mjs'
 import vvSelectTestJsFile from '../generators/vvSelectTestJsFile.mjs'
 import vvTextareaTestJsFile from '../generators/vvTextareaTestJsFile.mjs'
+
+const faFreeName = 'FontAwesome Free'
+
+const faProName = 'FontAwesome Pro (License Required)'
+
+const faFreeInstall = 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons --save-dev'
+
+const faProInstall = 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/pro-duotone-svg-icons @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/pro-thin-svg-icons @fortawesome/sharp-solid-svg-icons --save-dev'
+
+const faFreePackages = ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/free-solid-svg-icons', '@fortawesome/free-regular-svg-icons']
+
+const faProPackages = ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/pro-solid-svg-icons', '@fortawesome/pro-regular-svg-icons', '@fortawesome/pro-duotone-svg-icons', '@fortawesome/pro-light-svg-icons', '@fortawesome/pro-thin-svg-icons', '@fortawesome/sharp-solid-svg-icons']
+
 
 //
 // Base files for each stack
@@ -473,9 +489,9 @@ let baseVvTsNuxtCompos = {
 
 let faFreeDep = {
     checked: true,
-    name: 'FontAwesome Free',
-    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons --save-dev',
-    packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/free-solid-svg-icons', '@fortawesome/free-regular-svg-icons'],
+    name: faFreeName,
+    install: faFreeInstall,
+    packages: faFreePackages,
     files: {
         fontAwesomeTs: {
             name: 'fontAwesome.ts',
@@ -498,19 +514,86 @@ let faFreeDep = {
     },
 }
 
-let faFreeDepSsg = faFreeDep
+let faFreeDepSsg = {
+    checked: true,
+    name: faFreeName,
+    install: faFreeInstall,
+    packages: faFreePackages,
+    files: {
+        fontAwesomeTs: {
+            name: 'fontAwesome.ts',
+            checked: true,
+            path: '/src/',
+            src: fontAwesomeTsFile(),
+        },
+        vvFa: {
+            name: 'VvFa.vue',
+            checked: true,
+            path: '/src/components/vv/elements/',
+            src: vvFaVueSsgFile(), // different generator for the ssg stack
+        },
+        vvFaTestJs: {
+            name: 'VvFa.test.js',
+            checked: true,
+            path: '/tests/components/vv/elements/',
+            src: vvFaTestJsFile(),
+        },
+    },
+}/*faFreeDep
 faFreeDepSsg.files.vvFa = {
     name: 'VvFa.vue',
     checked: true,
     path: '/src/components/vv/elements/',
     src: vvFaVueSsgFile(),
+}*/
+
+let faFreeNuxtDep = {
+    checked: true,
+    name: faFreeName,
+    install: faFreeInstall,
+    packages: faFreePackages,
+    files: {
+        fontAwesomeTs: {
+            name: 'fontAwesome.ts',
+            checked: true,
+            path: '/',
+            src: fontAwesomeTsNuxtFile(), // different generator for the nuxt stack
+        },
+        vvFa: {
+            name: 'Fa.vue',
+            checked: true,
+            path: '/components/Vv/',
+            src: vvFaVueNuxtFile(), // different generator for the nuxt stack
+        },
+    },
 }
 
 let faProDep = {
     checked: false,
-    name: 'FontAwesome Pro (License Required)',
-    install: 'npm install @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-brands-svg-icons @fortawesome/pro-duotone-svg-icons @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/pro-thin-svg-icons @fortawesome/sharp-solid-svg-icons --save-dev',
-    packages: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome@latest-3', '@fortawesome/free-brands-svg-icons', '@fortawesome/pro-solid-svg-icons', '@fortawesome/pro-regular-svg-icons', '@fortawesome/pro-duotone-svg-icons', '@fortawesome/pro-light-svg-icons', '@fortawesome/pro-thin-svg-icons', '@fortawesome/sharp-solid-svg-icons'],
+    name: faProName,
+    install: faProInstall,
+    packages: faProPackages,
+    files: {
+        fontAwesomeProTs: {
+            name: 'fontAwesomePro.ts',
+            checked: true,
+            path: '/',
+            src: fontAwesomeProTsFile(),
+        },
+        vvFa: {
+            name: 'VvFa.vue',
+            checked: true,
+            path: '/src/components/vv/elements/',
+            src: vvFaVueFile(),
+        },
+    },
+}
+
+let faProDepSsg = {
+    checked: false,
+    name: faProName,
+    install: faProInstall,
+    packages: faProPackages,
     files: {
         fontAwesomeProTs: {
             name: 'fontAwesomePro.ts',
@@ -522,7 +605,7 @@ let faProDep = {
             name: 'VvFa.vue',
             checked: true,
             path: '/src/components/vv/elements/',
-            src: vvFaVueFile(),
+            src: vvFaVueSsgFile(), // different generator for the ssg stack
         },
         vvFaTestJs: {
             name: 'VvFa.test.js',
@@ -531,14 +614,35 @@ let faProDep = {
             src: vvFaTestJsFilePro(),
         },
     },
-}
-
-let faProDepSsg = faProDep
+}/*faProDep
 faProDepSsg.files.vvFa = {
     name: 'VvFa.vue',
     checked: true,
     path: '/src/components/vv/elements/',
     src: vvFaVueSsgFile(),
+}*/
+
+
+
+let faProNuxtDep = {
+    checked: true,
+    name: faProName,
+    install: faProInstall,
+    packages: faProPackages,
+    files: {
+        fontAwesomeTs: {
+            name: 'fontAwesomePro.ts',
+            checked: true,
+            path: '/',
+            src: fontAwesomeProTsNuxtFile(), // different generator for the nuxt stack
+        },
+        vvFa: {
+            name: 'Fa.vue',
+            checked: true,
+            path: '/components/Vv/',
+            src: vvFaVueNuxtFile(), // different generator for the nuxt stack
+        },
+    },
 }
 
 let vitestBase = {
@@ -778,6 +882,27 @@ let ssgDeps = baseViteTypescriptDeps
     ssgDeps.faPro = faProDepSsg
     ssgDeps.vitest = vitestDepSsg
 
+let baseNuxtDeps = {
+    fontawesome: {},
+    faPro: {},
+    headless: {
+        checked: true,
+        name: 'Headless UI',
+        install: 'npm install @headlessui/vue @headlessui/tailwindcss --save-dev',
+        packages: ['@headlessui/vue', '@headlessui/tailwindcss'],
+        files: {},
+    },
+    heroicons: {
+        checked: true,
+        name: 'Heroicons',
+        install: 'npm install @heroicons/vue --save-dev',
+        packages: ['@heroicons/vue'],
+        files: {},
+    },
+}
+baseNuxtDeps.fontawesome = faFreeNuxtDep
+baseNuxtDeps.faPro = faProNuxtDep
+
 export default {
     stacks: {
         vueTwViteTs: {
@@ -795,7 +920,7 @@ export default {
         vueTwNuxt3: {
             name: cliStackNames.vueTwNuxt3,
             files: { ...baseNuxtFiles },
-            deps: {},
+            deps: { ...baseNuxtDeps },
             compos: { ...baseVvTsNuxtCompos },
         },
     },

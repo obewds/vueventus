@@ -6,6 +6,213 @@ let commentPath = useNuxtPaths ? './components/Vv/QuadFormGroup.vue' : './src/co
 
 let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
 
+let templateMarkup = `<template>
+
+    <LibVvQuadFormGroup
+        :bottom-slot-classes="bottomSlotClasses"
+        :bottom-wrapper-classes="bottomWrapperClasses"
+        :debug="debug"
+        :display-error="displayError"
+        :display-help="displayHelp"
+        :display-success="displaySuccess"
+        :error-classes="errorClasses"
+        :error-text="errorText"
+        :error-text-color="errorTextColor"
+        :error-text-palette="errorTextPalette"
+        :error-text-size="errorTextSize"
+        :help-classes="helpClasses"
+        :help-text="helpText"
+        :help-text-color="helpTextColor"
+        :help-text-palette="helpTextPalette"
+        :help-text-size="helpTextSize"
+        :label="label"
+        :label-for="labelFor"
+        :label-classes="labelClasses"
+        :label-text-color="labelTextColor"
+        :label-text-palette="labelTextPalette"
+        :label-text-size="labelTextSize"
+        :slot-parent-classes="slotParentClasses"
+        :success-classes="successClasses"
+        :success-text="successText"
+        :success-text-color="successTextColor"
+        :success-text-palette="successTextPalette"
+        :success-text-size="successTextSize"
+        :text-parent-classes="textParentClasses"
+        :top-slot-classes="topSlotClasses"
+        :top-wrapper-classes="topWrapperClasses"
+        :wrapper-classes="wrapperClasses"
+        :data-vv-form-group-prop-bottom-slot-classes="debug ? bottomSlotClasses : null"
+        :data-vv-form-group-prop-bottom-wrapper-classes="debug ? bottomWrapperClasses : null"
+        :data-vv-form-group-prop-display-error="debug ? displayError : null"
+        :data-vv-form-group-prop-display-help="debug ? displayHelp : null"
+        :data-vv-form-group-prop-display-success="debug ? displaySuccess : null"
+        :data-vv-form-group-prop-error-classes="debug ? errorClasses : null"
+        :data-vv-form-group-prop-error-text="debug ? errorText : null"
+        :data-vv-form-group-prop-error-text-color="debug ? errorTextColor : null"
+        :data-vv-form-group-prop-error-text-palette="debug ? errorTextPalette : null"
+        :data-vv-form-group-prop-error-text-size="debug ? errorTextSize : null"
+        :data-vv-form-group-prop-help-classes="debug ? helpClasses : null"
+        :data-vv-form-group-prop-help-text="debug ? helpText : null"
+        :data-vv-form-group-prop-help-text-color="debug ? helpTextColor : null"
+        :data-vv-form-group-prop-help-text-palette="debug ? helpTextPalette : null"
+        :data-vv-form-group-prop-help-text-size="debug ? helpTextSize : null"
+        :data-vv-form-group-prop-label="debug ? label : null"
+        :data-vv-form-group-prop-label-for="debug ? labelFor : null"
+        :data-vv-form-group-prop-label-classes="debug ? labelClasses : null"
+        :data-vv-form-group-prop-label-text-color="debug ? labelTextColor : null"
+        :data-vv-form-group-prop-label-text-palette="debug ? labelTextPalette : null"
+        :data-vv-form-group-prop-label-text-size="debug ? labelTextSize : null"
+        :data-vv-form-group-prop-slot-parent-classes="debug ? slotParentClasses : null"
+        :data-vv-form-group-prop-success-classes="debug ? successClasses : null"
+        :data-vv-form-group-prop-success-text="debug ? successText : null"
+        :data-vv-form-group-prop-success-text-color="debug ? successTextColor : null"
+        :data-vv-form-group-prop-success-text-palette="debug ? successTextPalette : null"
+        :data-vv-form-group-prop-success-text-size="debug ? successTextSize : null"
+        :data-vv-form-group-prop-text-parent-classes="debug ? textParentClasses : null"
+        :data-vv-form-group-prop-top-slot-classes="debug ? topSlotClasses : null"
+        :data-vv-form-group-prop-top-wrapper-classes="debug ? topWrapperClasses : null"
+        :data-vv-form-group-prop-wrapper-classes="debug ? wrapperClasses : null"
+    >
+        <template v-for="(_, name) in $slots" v-slot:[name]="slotData">
+            <slot :name="name" v-bind="slotData"/>
+        </template>
+    </LibVvQuadFormGroup>
+
+</template>
+`
+
+// Nuxt 3 isn't handling the scopedSlots approach to pass through slot content
+// down to the origin vueventus component through the locally installed quad from group component
+// so instead if nuxt 3 is relevant, the code below is simply copied from the template code for
+// the lib/core version of VvQuadFormGroup component
+if (useNuxtPaths) {
+templateMarkup = `<template>
+
+    <div
+        :class="wrapperClasses"
+        :data-vv-quad-form-group-prop-wrapper-classes="debug ? wrapperClasses : null"
+    >
+
+        <div
+            :class="topWrapperClasses"
+            :data-vv-quad-form-group-prop-top-wrapper-classes="debug ? topWrapperClasses : null"
+        >
+
+            <VvEl
+                tag="label"
+                :for="labelFor"
+                :class="labelClasses"
+                :text-color="labelTextColor"
+                :text-palette="labelTextPalette"
+                :size="labelTextSize"
+                :data-vv-quad-form-group-prop-label-classes="debug ? labelClasses : null"
+                :data-vv-quad-form-group-prop-label-text-color="debug ? labelTextColor : null"
+                :data-vv-quad-form-group-prop-label-text-palette="debug ? labelTextPalette : null"
+                :data-vv-quad-form-group-prop-label-text-size="debug ? labelTextSize : null"
+            >
+                {{ label }}
+            </VvEl>
+
+            <div
+                :class="topSlotClasses"
+                :data-vv-quad-form-group-prop-top-slot-classes="debug ? topSlotClasses : null"
+            >
+                <slot name="top"/>
+            </div>
+
+        </div>
+
+        <div
+            :class="slotParentClasses"
+            :data-vv-quad-form-group-prop-slot-parent-classes="debug ? slotParentClasses : null"
+        >
+            <slot/>
+        </div>
+
+        <div
+            :class="bottomWrapperClasses"
+            :data-vv-quad-form-group-prop-bottom-wrapper-classes="debug ? bottomWrapperClasses : null"
+        >
+
+            <div
+                :class="textParentClasses"
+                :data-vv-quad-form-group-prop-text-parent-classes="debug ? textParentClasses : null"
+            >
+
+                <VvEl
+                    v-if="!displayError && !displayHelp && !displaySuccess"
+                    tag="div"
+                    :class="helpClasses"
+                    :size="helpTextSize"
+                    :data-vv-quad-form-group-prop-help-classes="debug ? helpClasses : null"
+                    :data-vv-quad-form-group-prop-help-text-size="debug ? helpTextSize : null"
+                >
+                    <!-- placeholder to toggle opposite of messages & prevent layout shift -->
+                    <span class="invisible">&nbsp;{{ helpText }}</span>
+                </VvEl>
+
+                <VvEl
+                    v-if="displayHelp"
+                    tag="div"
+                    :class="helpClasses"
+                    :text-color="helpTextColor"
+                    :text-palette="helpTextPalette"
+                    :size="helpTextSize"
+                    :data-vv-quad-form-group-prop-help-classes="debug ? helpClasses : null"
+                    :data-vv-quad-form-group-prop-help-text-color="debug ? helpTextColor : null"
+                    :data-vv-quad-form-group-prop-help-text-palette="debug ? helpTextPalette : null"
+                    :data-vv-quad-form-group-prop-help-text-size="debug ? helpTextSize : null"
+                >
+                    {{ helpText }}
+                </VvEl>
+
+                <VvEl
+                    v-if="displaySuccess"
+                    tag="div"
+                    :class="successClasses"
+                    :text-color="successTextColor"
+                    :text-palette="successTextPalette"
+                    :size="successTextSize"
+                    :data-vv-quad-form-group-prop-success-classes="debug ? successClasses : null"
+                    :data-vv-quad-form-group-prop-success-text-color="debug ? successTextColor : null"
+                    :data-vv-quad-form-group-prop-success-text-palette="debug ? successTextPalette : null"
+                    :data-vv-quad-form-group-prop-success-text-size="debug ? successTextSize : null"
+                >
+                    {{ successText }}
+                </VvEl>
+
+                <VvEl
+                    v-if="displayError === true"
+                    tag="div"
+                    :class="errorClasses"
+                    :text-color="errorTextColor"
+                    :text-palette="errorTextPalette"
+                    :size="errorTextSize"
+                    :data-vv-quad-form-group-prop-error-classes="debug ? errorClasses : null"
+                    :data-vv-quad-form-group-prop-error-text-color="debug ? errorTextColor : null"
+                    :data-vv-quad-form-group-prop-error-text-palette="debug ? errorTextPalette : null"
+                    :data-vv-quad-form-group-prop-error-text-size="debug ? errorTextSize : null"
+                >
+                    {{ errorText }}
+                </VvEl>
+
+            </div>
+
+            <div
+                :class="bottomSlotClasses"
+                :data-vv-quad-form-group-prop-bottom-slot-classes="debug ? bottomSlotClasses : null"
+            >
+                <slot name="bottom"/>
+            </div>
+
+        </div>
+        
+    </div>
+
+</template>
+`
+}
+
 const output = `<!-- ${commentPath} -->
 
 <script lang="ts">
@@ -157,79 +364,7 @@ const output = `<!-- ${commentPath} -->
 </script>
 
 
-<template>
-
-    <LibVvQuadFormGroup
-        :bottom-slot-classes="bottomSlotClasses"
-        :bottom-wrapper-classes="bottomWrapperClasses"
-        :debug="debug"
-        :display-error="displayError"
-        :display-help="displayHelp"
-        :display-success="displaySuccess"
-        :error-classes="errorClasses"
-        :error-text="errorText"
-        :error-text-color="errorTextColor"
-        :error-text-palette="errorTextPalette"
-        :error-text-size="errorTextSize"
-        :help-classes="helpClasses"
-        :help-text="helpText"
-        :help-text-color="helpTextColor"
-        :help-text-palette="helpTextPalette"
-        :help-text-size="helpTextSize"
-        :label="label"
-        :label-for="labelFor"
-        :label-classes="labelClasses"
-        :label-text-color="labelTextColor"
-        :label-text-palette="labelTextPalette"
-        :label-text-size="labelTextSize"
-        :slot-parent-classes="slotParentClasses"
-        :success-classes="successClasses"
-        :success-text="successText"
-        :success-text-color="successTextColor"
-        :success-text-palette="successTextPalette"
-        :success-text-size="successTextSize"
-        :text-parent-classes="textParentClasses"
-        :top-slot-classes="topSlotClasses"
-        :top-wrapper-classes="topWrapperClasses"
-        :wrapper-classes="wrapperClasses"
-        :data-vv-form-group-prop-bottom-slot-classes="debug ? bottomSlotClasses : null"
-        :data-vv-form-group-prop-bottom-wrapper-classes="debug ? bottomWrapperClasses : null"
-        :data-vv-form-group-prop-display-error="debug ? displayError : null"
-        :data-vv-form-group-prop-display-help="debug ? displayHelp : null"
-        :data-vv-form-group-prop-display-success="debug ? displaySuccess : null"
-        :data-vv-form-group-prop-error-classes="debug ? errorClasses : null"
-        :data-vv-form-group-prop-error-text="debug ? errorText : null"
-        :data-vv-form-group-prop-error-text-color="debug ? errorTextColor : null"
-        :data-vv-form-group-prop-error-text-palette="debug ? errorTextPalette : null"
-        :data-vv-form-group-prop-error-text-size="debug ? errorTextSize : null"
-        :data-vv-form-group-prop-help-classes="debug ? helpClasses : null"
-        :data-vv-form-group-prop-help-text="debug ? helpText : null"
-        :data-vv-form-group-prop-help-text-color="debug ? helpTextColor : null"
-        :data-vv-form-group-prop-help-text-palette="debug ? helpTextPalette : null"
-        :data-vv-form-group-prop-help-text-size="debug ? helpTextSize : null"
-        :data-vv-form-group-prop-label="debug ? label : null"
-        :data-vv-form-group-prop-label-for="debug ? labelFor : null"
-        :data-vv-form-group-prop-label-classes="debug ? labelClasses : null"
-        :data-vv-form-group-prop-label-text-color="debug ? labelTextColor : null"
-        :data-vv-form-group-prop-label-text-palette="debug ? labelTextPalette : null"
-        :data-vv-form-group-prop-label-text-size="debug ? labelTextSize : null"
-        :data-vv-form-group-prop-slot-parent-classes="debug ? slotParentClasses : null"
-        :data-vv-form-group-prop-success-classes="debug ? successClasses : null"
-        :data-vv-form-group-prop-success-text="debug ? successText : null"
-        :data-vv-form-group-prop-success-text-color="debug ? successTextColor : null"
-        :data-vv-form-group-prop-success-text-palette="debug ? successTextPalette : null"
-        :data-vv-form-group-prop-success-text-size="debug ? successTextSize : null"
-        :data-vv-form-group-prop-text-parent-classes="debug ? textParentClasses : null"
-        :data-vv-form-group-prop-top-slot-classes="debug ? topSlotClasses : null"
-        :data-vv-form-group-prop-top-wrapper-classes="debug ? topWrapperClasses : null"
-        :data-vv-form-group-prop-wrapper-classes="debug ? wrapperClasses : null"
-    >
-        <template v-for="(_, name) in $slots" v-slot:[name]="slotData">
-            <slot :name="name" v-bind="slotData"/>
-        </template>
-    </LibVvQuadFormGroup>
-
-</template>
+${templateMarkup}
 
 `
 

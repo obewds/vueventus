@@ -22,10 +22,6 @@ const output = `<!-- ./pages/index.vue -->
             </VvButton>
         </div>
 
-        <div>
-            <VvColorModeButton color="primary"/>
-        </div>
-
         <div class="flex flex-col w-full space-y-2">
 
             <div class="flex items-center gap-2">
@@ -88,6 +84,23 @@ const output = `<!-- ./pages/index.vue -->
         </div>
 
         <div class="text-left">
+            <VvQuadFormGroup
+                label="Example VvQuadFormGroup Label:"
+                label-for="label-input-quad-id"
+                :display-help="true"
+                help-text="Example VvQuadFormGroup help text"
+            >
+                <template v-slot:top>
+                    Top
+                </template>
+                <VvInput id="label-input-quad-id" placeholder="Example VvInput"/>
+                <template v-slot:bottom>
+                    Bot
+                </template>
+            </VvQuadFormGroup>
+        </div>
+
+        <div class="text-left">
             <VvFormGroup
                 label="Example VvFormGroup Label:"
                 label-for="label-select-id"
@@ -114,12 +127,12 @@ const output = `<!-- ./pages/index.vue -->
 
         <div class="text-left">
             <ul class="list-disc text-left pl-6">
-                <VvListItem color="default">default List Item</VvListItem>
-                <VvListItem color="error">error List Item</VvListItem>
-                <VvListItem color="primary">primary List Item</VvListItem>
-                <VvListItem color="secondary">secondary List Item</VvListItem>
-                <VvListItem color="success">success List Item</VvListItem>
-                <VvListItem color="neutral">neutral List Item</VvListItem>
+                <VvListItem color="default">default VvListItem</VvListItem>
+                <VvListItem color="error">error VvListItem</VvListItem>
+                <VvListItem color="primary">primary VvListItem</VvListItem>
+                <VvListItem color="secondary">secondary VvListItem</VvListItem>
+                <VvListItem color="success">success VvListItem</VvListItem>
+                <VvListItem color="neutral">neutral VvListItem</VvListItem>
             </ul>
         </div>
 
