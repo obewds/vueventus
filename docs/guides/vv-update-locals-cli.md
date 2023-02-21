@@ -9,6 +9,7 @@ title: vv-update-locals CLI
 
     const stack1 = cliData.stacks.vueTwViteTs.name
     const stack2 = cliData.stacks.vueTwViteSsgMdTs.name
+    const stack3 = cliData.stacks.vueTwNuxt3.name
     
 </script>
 
@@ -48,6 +49,7 @@ Some files with the same name are different between different installation stack
 
 1. **SPA Stack:** {{ stack1 }}
 1. **SSG Stack:** {{ stack2 }}
+1. **Nuxt 3 Stack:** {{ stack3 }}
 
 
 
