@@ -5,6 +5,7 @@ import fs from 'fs-extra'
 import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
 import appVueNuxtFile from '../generators/appVueNuxtFile.mjs'
 import appVvTsFile from '../generators/appVvTsFile.mjs'
+import onPageLoadColorModesNuxtJsFile from '../generators/onPageLoadColorModesNuxtJsFile.mjs'
 import pagesIndexNuxtFile from '../generators/pagesIndexNuxtFile.mjs'
 import nuxtConfigTsFile from '../generators/nuxtConfigTsFile.mjs'
 import tailwindConfigTsNuxtFile from '../generators/tailwindConfigTsNuxtFile.mjs'
@@ -106,6 +107,13 @@ export default function (userOpts, stackObj, installPkgsArr) {
     fs.outputFileSync(composVv + 'Radio.vue', vvRadioVueFile(true), { flag: 'w+' })
     fs.outputFileSync(composVv + 'Select.vue', vvSelectVueFile(true), { flag: 'w+' })
     fs.outputFileSync(composVv + 'Textarea.vue', vvTextareaVueFile(true), { flag: 'w+' })
+
+
+
+    // install color modes js file in nuxt public directory - key to avoid FOUC with dark/light mode
+    if ( userOpts.files.includes( stackObj.files.onPageLoadColorModesNuxtJs.name ) ) {
+        fs.outputFileSync(cwd + stackObj.files.onPageLoadColorModesNuxtJs.path + stackObj.files.onPageLoadColorModesNuxtJs.name, onPageLoadColorModesNuxtJsFile(), { flag: 'w+' })
+    }
 
 
 
