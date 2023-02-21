@@ -2,7 +2,7 @@
 
 export default function ( useNuxtPaths = false ) {
 
-let commentPath = useNuxtPaths ? './components/Vv/ColorModeButton.vue' : './src/components/vv/anchors/VvColorModeButton.vue'
+let commentPath = useNuxtPaths ? './components/Vv/ColorModeButton.vue' : './src/components/vv/buttons/VvColorModeButton.vue'
 
 let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
 
