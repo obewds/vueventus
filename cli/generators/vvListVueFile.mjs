@@ -2,21 +2,25 @@
 
 export default function () {
 
-const output = `<!-- ./src/components/vv/lists/VvList.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/List.vue' : './src/components/vv/anchors/VvList.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 
 <script lang="ts">
 
-    import { defineComponent } from 'vue'
-    import { ValidListTypes, VvList } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
-
     import type { PropType } from 'vue'
     import type { DefaultPaletteColors, DefaultPalettes, SizesText } from '@obewds/vueventus'
 
+    import { defineComponent } from 'vue'
+    import { ValidListTypes, VvList as LibVvList } from '@obewds/vueventus'
+    import appVv from '${appVvPath}'
+
     export default defineComponent({
 
-        components: { VvList },
+        components: { LibVvList },
 
         props: {
             debug: {
@@ -53,7 +57,7 @@ const output = `<!-- ./src/components/vv/lists/VvList.vue -->
 
 <template>
 
-    <VvList
+    <LibVvList
         :debug="debug"
         :marker-color="markerColor"
         :marker-palette="markerPalette"
@@ -66,7 +70,7 @@ const output = `<!-- ./src/components/vv/lists/VvList.vue -->
         :data-vv-list-prop-tag="debug ? tag : null"
     >
         <slot/>
-    </VvList>
+    </LibVvList>
 
 </template>
 
