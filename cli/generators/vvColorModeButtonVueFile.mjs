@@ -6,6 +6,11 @@ let commentPath = useNuxtPaths ? './components/Vv/ColorModeButton.vue' : './src/
 
 let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
 
+let clientOnlyOpenTag = useNuxtPaths ? '<ClientOnly>' : ''
+let clientOnlyCloseTag = useNuxtPaths ? '</ClientOnly>' : ''
+
+let nuxtIndent = useNuxtPaths ? `    ` : ''
+
 const output = `<!-- ${commentPath} -->
 
 
@@ -97,35 +102,37 @@ const output = `<!-- ${commentPath} -->
 
 
 <template>
-    <LibVvColorModeButton
-        :mode="(colorMode as ValidColorModes)"
-        :color="color"
-        :debug="debug"
-        :palette="palette"
-        :size="size"
-        :ground-dark="groundDark"
-        :ground-dark-hex="groundDarkHex"
-        :ground-light="groundLight"
-        :ground-light-hex="groundLightHex"
-        :text-dark="textDark"
-        :text-light="textLight"
-        :title-dark="titleDark"
-        :title-light="titleLight"
-        :type="(type as ValidButtonTypes)"
-        :data-vv-color-mode-button-prop-color="debug ? color : null"
-        :data-vv-color-mode-button-prop-mode="debug ? mode : null"
-        :data-vv-color-mode-button-prop-palette="debug ? palette : null"
-        :data-vv-color-mode-button-prop-size="debug ? size : null"
-        :data-vv-color-mode-button-prop-type="debug ? type : null"
-        :data-vv-color-mode-button-prop-ground-dark="debug ? groundDark : null"
-        :data-vv-color-mode-button-prop-ground-dark-hex="debug ? groundDarkHex : null"
-        :data-vv-color-mode-button-prop-ground-light="debug ? groundLight : null"
-        :data-vv-color-mode-button-prop-ground-light-hex="debug ? groundLightHex : null"
-        :data-vv-color-mode-button-prop-text-dark="debug ? textDark : null"
-        :data-vv-color-mode-button-prop-text-light="debug ? textLight : null"
-        :data-vv-color-mode-button-prop-title-dark="debug ? titleDark : null"
-        :data-vv-color-mode-button-prop-title-light="debug ? titleLight : null"
-    />
+    ${clientOnlyOpenTag}
+${nuxtIndent}    <LibVvColorModeButton
+${nuxtIndent}        :mode="(colorMode as ValidColorModes)"
+${nuxtIndent}        :color="color"
+${nuxtIndent}        :debug="debug"
+${nuxtIndent}        :palette="palette"
+${nuxtIndent}        :size="size"
+${nuxtIndent}        :ground-dark="groundDark"
+${nuxtIndent}        :ground-dark-hex="groundDarkHex"
+${nuxtIndent}        :ground-light="groundLight"
+${nuxtIndent}        :ground-light-hex="groundLightHex"
+${nuxtIndent}        :text-dark="textDark"
+${nuxtIndent}        :text-light="textLight"
+${nuxtIndent}        :title-dark="titleDark"
+${nuxtIndent}        :title-light="titleLight"
+${nuxtIndent}        :type="(type as ValidButtonTypes)"
+${nuxtIndent}        :data-vv-color-mode-button-prop-color="debug ? color : null"
+${nuxtIndent}        :data-vv-color-mode-button-prop-mode="debug ? mode : null"
+${nuxtIndent}        :data-vv-color-mode-button-prop-palette="debug ? palette : null"
+${nuxtIndent}        :data-vv-color-mode-button-prop-size="debug ? size : null"
+${nuxtIndent}        :data-vv-color-mode-button-prop-type="debug ? type : null"
+${nuxtIndent}        :data-vv-color-mode-button-prop-ground-dark="debug ? groundDark : null"
+${nuxtIndent}        :data-vv-color-mode-button-prop-ground-dark-hex="debug ? groundDarkHex : null"
+${nuxtIndent}        :data-vv-color-mode-button-prop-ground-light="debug ? groundLight : null"
+${nuxtIndent}        :data-vv-color-mode-button-prop-ground-light-hex="debug ? groundLightHex : null"
+${nuxtIndent}        :data-vv-color-mode-button-prop-text-dark="debug ? textDark : null"
+${nuxtIndent}        :data-vv-color-mode-button-prop-text-light="debug ? textLight : null"
+${nuxtIndent}        :data-vv-color-mode-button-prop-title-dark="debug ? titleDark : null"
+${nuxtIndent}        :data-vv-color-mode-button-prop-title-light="debug ? titleLight : null"
+${nuxtIndent}    />
+    ${clientOnlyCloseTag}
 </template>
 
 `
