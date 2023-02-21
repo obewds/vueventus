@@ -12,7 +12,7 @@ const output = `<!-- ${commentPath} -->
 <script lang="ts">
 
     import { defineComponent } from 'vue'
-    import { VvAnchor } from '@obewds/vueventus'
+    import { VvAnchor as LibVvAnchor } from '@obewds/vueventus'
     import appVv from '${appVvPath}'
 
     import type { PropType } from 'vue'
@@ -20,7 +20,7 @@ const output = `<!-- ${commentPath} -->
 
     export default defineComponent({
 
-        components: { VvAnchor },
+        components: { LibVvAnchor },
 
         props: {
             button: {
@@ -71,7 +71,7 @@ const output = `<!-- ${commentPath} -->
 
 
 <template>
-    <VvAnchor
+    <LibVvAnchor
         :button="button"
         :button-block="buttonBlock"
         :button-fab="buttonFab"
@@ -93,7 +93,7 @@ const output = `<!-- ${commentPath} -->
         :data-vv-anchor-prop-text-size="debug ? textSize : null"
     >
         <slot/>
-    </VvAnchor>
+    </LibVvAnchor>
 </template>
 
 `
