@@ -84,3 +84,18 @@ test('VvRadio.vue component that is selected triggers a false checked value when
     expect(firstRadio.html()).toContain('checked=""')
     
 })
+
+
+
+test('VvRadio.vue component debug mode returns an expected result', async () => {
+
+    const wrapper = mount(VvRadio, {
+        props: {
+            value: 'test',
+            debug: true,
+        },
+    })
+
+    expect(wrapper.html()).toContain('data-vv-radio-')
+    
+})
