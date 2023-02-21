@@ -26,8 +26,8 @@ import mainTsFile from '../generators/mainTsFile.mjs'
 import mainTsFileSsg from '../generators/mainTsFileSsg.mjs'
 import mousePosVueFile from '../generators/mousePosVueFile.mjs'
 import notFound404VueFile from '../generators/notFound404VueFile.mjs'
+import onPageLoadColorModesNuxtJsFile from '../generators/onPageLoadColorModesNuxtJsFile.mjs'
 import pagesIndexNuxtFile from '../generators/pagesIndexNuxtFile.mjs'
-
 import piniaRootTsFile from '../generators/piniaRootTsFile.mjs'
 import postcssConfigCjsFile from '../generators/postcssConfigCjsFile.mjs'
 import prismThemeVarsCssFile from '../generators/prismThemeVarsCssFile.mjs'
@@ -43,6 +43,7 @@ import viteConfigTsFile from '../generators/viteConfigTsFile.mjs'
 import viteConfigPrismTsSsgFile from '../generators/viteConfigPrismTsSsgFile.mjs'
 import viteConfigTsSsgFile from '../generators/viteConfigTsSsgFile.mjs'
 import vitestConfigTsFile from '../generators/vitestConfigTsFile.mjs'
+
 import vvAnchorVueFile from '../generators/vvAnchorVueFile.mjs'
 import vvButtonVueFile from '../generators/vvButtonVueFile.mjs'
 import vvCheckboxVueFile from '../generators/vvCheckboxVueFile.mjs'
@@ -270,6 +271,12 @@ let baseNuxtFiles = {
         path: '/',
         src: tailwindConfigTsNuxtFile(),
     },
+    onPageLoadColorModesNuxtJs: {
+        name: 'on-page-load-color-modes.js',
+        checked: true,
+        path: '/public/js/',
+        src: onPageLoadColorModesNuxtJsFile(),
+    },
 }
 
 
@@ -457,8 +464,6 @@ let baseVvTsNuxtCompos = {
     },
 }
 // vvRouterLinkVue: baseVvTsCompos.vvRouterLinkVue,
-// vvSelectVue: baseVvTsCompos.vvSelectVue,
-// vvTextareaVue: baseVvTsCompos.vvTextareaVue,
 
 
 
