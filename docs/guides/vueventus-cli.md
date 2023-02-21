@@ -96,7 +96,7 @@ The core deps for each stack are generally pretty similar, but here's a table of
 | [GSAP](https://greensock.com/gsap/)                                                  |     🟡     |     🟡    |      Soon     |
 
 
-🔵 = Installed via Nuxt 3 or a Nuxt 3 Module
+🔵 = Installed via Nuxt 3 or a Nuxt 3 Module  
 🟢 = Installed by default  
 🟡 = Optional (opt-out) dependency  
 🟠 = License number required on install  
