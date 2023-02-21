@@ -26,6 +26,8 @@ import mainTsFile from '../generators/mainTsFile.mjs'
 import mainTsFileSsg from '../generators/mainTsFileSsg.mjs'
 import mousePosVueFile from '../generators/mousePosVueFile.mjs'
 import notFound404VueFile from '../generators/notFound404VueFile.mjs'
+import pagesIndexNuxtFile from '../generators/pagesIndexNuxtFile.mjs'
+
 import piniaRootTsFile from '../generators/piniaRootTsFile.mjs'
 import postcssConfigCjsFile from '../generators/postcssConfigCjsFile.mjs'
 import prismThemeVarsCssFile from '../generators/prismThemeVarsCssFile.mjs'
@@ -254,6 +256,12 @@ let baseNuxtFiles = {
         checked: true,
         path: '/',
         src: appVueNuxtFile(),
+    },
+    pagesIndex: {
+        name: 'index.vue',
+        checked: true,
+        path: '/pages/',
+        src: pagesIndexNuxtFile(),
     }
 }
 
