@@ -5,8 +5,10 @@ import fs from 'fs-extra'
 import appColorsJsonFile from '../generators/appColorsJsonFile.mjs'
 import appVueNuxtFile from '../generators/appVueNuxtFile.mjs'
 import appVvTsFile from '../generators/appVvTsFile.mjs'
+import pagesIndexNuxtFile from '../generators/pagesIndexNuxtFile.mjs'
 import nuxtConfigTsFile from '../generators/nuxtConfigTsFile.mjs'
 import vvAnchorVueFile from '../generators/vvAnchorVueFile.mjs'
+
 
 import cwd from '../helpers/cwd.mjs'
 import moveNuxtTsFilesToRoot from '../helpers/moveNuxtTsFilesToRoot.mjs'
@@ -61,9 +63,19 @@ export default function (userOpts, stackObj, installPkgsArr) {
         fs.outputFileSync(cwd + stackObj.files.appVue.path + stackObj.files.appVue.name, appVueNuxtFile(), { flag: 'w+' })
     }
 
+
+
     // copy the VueVentus starter end user app component files 
     // from the cli stubs file generators
     const composVv = cwd + '/components/Vv/'
     fs.outputFileSync(composVv + 'Anchor.vue', vvAnchorVueFile(true), { flag: 'w+' })
+
+
+
+    // install pages/index.vue file
+    if ( userOpts.files.includes( stackObj.files.pagesIndex.name ) ) {
+        fs.outputFileSync(cwd + stackObj.files.pagesIndex.path + stackObj.files.pagesIndex.name, pagesIndexNuxtFile(), { flag: 'w+' })
+    }
+
 
 }
