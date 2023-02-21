@@ -22,10 +22,6 @@ const output = `<!-- ./pages/index.vue -->
             </VvButton>
         </div>
 
-        <div>
-            <VvColorModeButton color="primary"/>
-        </div>
-
         <div class="flex flex-col w-full space-y-2">
 
             <div class="flex items-center gap-2">
