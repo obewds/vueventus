@@ -2,21 +2,25 @@
 
 export default function () {
 
-const output = `<!-- ./src/components/vv/selects/VvListbox.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/Listbox.vue' : './src/components/vv/anchors/VvListbox.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 
 <script lang="ts">
-
-    import { defineComponent } from 'vue'
-    import { VvListbox } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
     
     import type { PropType } from 'vue'
     import type { VvListboxData } from '@obewds/vueventus'
 
+    import { defineComponent } from 'vue'
+    import { VvListbox as LibVvListbox } from '@obewds/vueventus'
+    import appVv from '${appVvPath}'
+
     export default defineComponent({
 
-        components: { VvListbox },
+        components: { LibVvListbox },
 
         props: {
             data: {
@@ -116,7 +120,7 @@ const output = `<!-- ./src/components/vv/selects/VvListbox.vue -->
 
 <template>
 
-    <VvListbox
+    <LibVvListbox
         as="div"
         :data="data"
         :debug="debug"
