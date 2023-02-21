@@ -9,6 +9,7 @@ title: vueventus CLI
 
     const stack1 = cliData.stacks.vueTwViteTs.name
     const stack2 = cliData.stacks.vueTwViteSsgMdTs.name
+    const stack3 = cliData.stacks.vueTwNuxt3.name
 
 </script>
 
@@ -35,6 +36,7 @@ For now, the CLI can install the following stacks to kickoff app development:
 
 1. **SPA Stack:** {{ stack1 }}
 1. **SSG Stack:** {{ stack2 }}
+1. **Nuxt 3 Stack:** {{ stack3 }}
 
 ### The SPA Stack
 
@@ -46,6 +48,10 @@ The {{ stack2 }} is a SSR-friendly Static Site Generator setup for Vue 3 that's 
 
 The SSG stack additionally incorporates Markdown, auto-routing Pages, and auto-loading component (Unplugin) functionality in the development stack, allowing for markdown in Vue components and Vue components in markdown (just like VuePress/VitePress), automatic page routing, and automatic component loading and pre-compiling.
 
+### The Nuxt 3 Stack
+
+The {{ stack3 }} is a powerful combo with Nuxt 3, Vue 3, Tailwind CSS, and VueVentus all acting together for a really fast and flexible way to develop a web app or even an interaction-heavy website. Nuxt 3 is Typescript based by default.
+
 
 
 
@@ -56,38 +62,41 @@ The SSG stack additionally incorporates Markdown, auto-routing Pages, and auto-l
 
 The core deps for each stack are generally pretty similar, but here's a table of the major app development specific dependencies to visualize the stacks themselves better:
 
-| Primary Deps                                                                         | SPA Stack | SSG Stack |
-|--------------------------------------------------------------------------------------|:---------:|:---------:|
-| [Vite.js](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)             |     🟢     |     🟢    |
-| [Vue.js](https://vuejs.org/)                                                         |     🟢     |     🟢    |
-| [Tailwind CSS](https://tailwindcss.com/)                                             |     🟢     |     🟢    |
-| [Headless UI (Vue)](https://headlessui.com/)                                         |     🟢     |     🟢    |
-| [@headlessui/tailwindcss](https://www.npmjs.com/package/@headlessui/tailwindcss)     |     🟢     |     🟢    |
-| [@tailwindcss/aspect-ratio](https://www.npmjs.com/package/@tailwindcss/aspect-ratio) |     🟢     |     🟢    |
-| [@tailwindcss/forms](https://www.npmjs.com/package/@tailwindcss/forms)               |     🟢     |     🟢    |
-| [@tailwindcss/line-clamp](https://www.npmjs.com/package/@tailwindcss/line-clamp)     |     🟢     |     🟢    |
-| [@tailwindcss/typography](https://www.npmjs.com/package/@tailwindcss/typography)     |     🟢     |     🟢    |
-| [vue-router](https://router.vuejs.org/)                                              |     🟢     |     🟢    |
-| [Typescript](https://www.typescriptlang.org/)                                        |     🟢     |     🟢    |
-| [Vitest](https://vitest.dev/)                                                        |     🟢     |     🟢    |
-| [Vue Test Utils](https://test-utils.vuejs.org/guide/)                                |     🟢     |     🟢    |
-| [@vitest/coverage-c8](https://www.npmjs.com/package/@vitest/coverage-c8)             |     🟢     |     🟢    |
-| [happy-dom](https://github.com/capricorn86/happy-dom)                                |     🟢     |     🟢    |
-| [@vitejs/plugin-vue](https://www.npmjs.com/package/@vitejs/plugin-vue)               |     🟢     |     🟢    |
-| [Vite-SSG](https://github.com/antfu/vite-ssg)                                        |     🔴     |     🟢    |
-| [Pinia](https://pinia.vuejs.org/)                                                    |     🔴     |     🟢    |
-| [vite-plugin-vue-markdown](https://github.com/antfu/vite-plugin-md)                  |     🔴     |     🟢    |
-| [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages)                   |     🔴     |     🟢    |
-| [unplugin-vue-components/vite](https://github.com/antfu/unplugin-vue-components)     |     🔴     |     🟢    |
-| [Prism.js](https://prismjs.com/)                                                     |     🟡     |     🟡    |
-| [prism-theme-vars](https://github.com/antfu/prism-theme-vars)                        |     🟡     |     🟡    |
-| [FontAwesome Free](https://fontawesome.com/)                                         |     🟡     |     🟡    |
-| [FontAwesome Pro](https://fontawesome.com/)                                          |     🟠     |     🟠    |
-| [Headless UI](https://headlessui.com/)                                               |     🟡     |     🟡    |
-| [Heroicons](https://heroicons.com/)                                                  |     🟡     |     🟡    |
-| [GSAP](https://greensock.com/gsap/)                                                  |     🟡     |     🟡    |
+| Primary Deps                                                                         | SPA Stack | SSG Stack | Nuxt 3 Stack  |
+|--------------------------------------------------------------------------------------|:---------:|:---------:|:-------------:|
+| [Vite.js](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)             |     🟢     |     🟢    |       🟢      |
+| [Vue.js](https://vuejs.org/)                                                         |     🟢     |     🟢    |       🟢      |
+| [Tailwind CSS](https://tailwindcss.com/)                                             |     🟢     |     🟢    |       🔵      |
+| [@nuxtjs/tailwindcss](https://nuxt.com/modules/tailwindcss)                          |     🔴     |     🔴    |       🟢      |
+| [Headless UI (Vue)](https://headlessui.com/)                                         |     🟢     |     🟢    |       🔵      |
+| [nuxt-headlessui](https://nuxt.com/modules/headlessui)                               |     🔴     |     🔴    |       🟢      |
+| [@headlessui/tailwindcss](https://www.npmjs.com/package/@headlessui/tailwindcss)     |     🟢     |     🟢    |       🟢      |
+| [Heroicons](https://heroicons.com/)                                                  |     🟡     |     🟡    |       🔴      |
+| [@tailwindcss/aspect-ratio](https://www.npmjs.com/package/@tailwindcss/aspect-ratio) |     🟢     |     🟢    |       🟢      |
+| [@tailwindcss/forms](https://www.npmjs.com/package/@tailwindcss/forms)               |     🟢     |     🟢    |       🟢      |
+| [@tailwindcss/line-clamp](https://www.npmjs.com/package/@tailwindcss/line-clamp)     |     🟢     |     🟢    |       🟢      |
+| [@tailwindcss/typography](https://www.npmjs.com/package/@tailwindcss/typography)     |     🟢     |     🟢    |       🟢      |
+| [vue-router](https://router.vuejs.org/)                                              |     🟢     |     🟢    |       🔵      |
+| [Typescript](https://www.typescriptlang.org/)                                        |     🟢     |     🟢    |       🟢      |
+| [Vitest](https://vitest.dev/)                                                        |     🟢     |     🟢    |       🔵      |
+| [nuxt-vitest](https://vitest.dev/)                                                   |     🔴     |     🔴    |      Soon     |
+| [Vue Test Utils](https://test-utils.vuejs.org/guide/)                                |     🟢     |     🟢    |      ???      |
+| [@vitest/coverage-c8](https://www.npmjs.com/package/@vitest/coverage-c8)             |     🟢     |     🟢    |      ???      |
+| [happy-dom](https://github.com/capricorn86/happy-dom)                                |     🟢     |     🟢    |       🔵      |
+| [@vitejs/plugin-vue](https://www.npmjs.com/package/@vitejs/plugin-vue)               |     🟢     |     🟢    |       🔴      |
+| [Vite-SSG](https://github.com/antfu/vite-ssg)                                        |     🔴     |     🟢    |       🔴      |
+| [Pinia](https://pinia.vuejs.org/)                                                    |     🔴     |     🟢    |       🔵      |
+| [vite-plugin-vue-markdown](https://github.com/antfu/vite-plugin-md)                  |     🔴     |     🟢    |       🔴      |
+| [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages)                   |     🔴     |     🟢    |       🔴      |
+| [unplugin-vue-components/vite](https://github.com/antfu/unplugin-vue-components)     |     🔴     |     🟢    |       🔴      |
+| [Prism.js](https://prismjs.com/)                                                     |     🟡     |     🟡    |      Soon     |
+| [prism-theme-vars](https://github.com/antfu/prism-theme-vars)                        |     🟡     |     🟡    |      Soon     |
+| [FontAwesome Free](https://fontawesome.com/)                                         |     🟡     |     🟡    |      Soon     |
+| [FontAwesome Pro](https://fontawesome.com/)                                          |     🟠     |     🟠    |      Soon     |
+| [GSAP](https://greensock.com/gsap/)                                                  |     🟡     |     🟡    |      Soon     |
 
 
+🔵 = Installed via Nuxt 3 or a Nuxt 3 Module
 🟢 = Installed by default  
 🟡 = Optional (opt-out) dependency  
 🟠 = License number required on install  
@@ -470,6 +479,63 @@ npm run coverage
 
 
 
+## Nuxt 3 Stack: Installed File Structure
+
+{{ stack3 }} Stack:
+
+```
+.
+├─ .nuxt (generated after running npm run dev or npm run build)
+│  └─ ... nuxt stuff
+├─ .vscode
+│  └─ settings.json
+├─ components
+│  └─ Vv
+│     ├─ Anchor.vue
+│     ├─ Button.vue
+│     ├─ Checkbox.vue
+│     ├─ ColorModeButton.vue
+│     ├─ El.vue
+│     ├─ FormGroup.vue
+│     ├─ Input.vue
+│     ├─ Listbox.vue
+│     ├─ ListItem.vue
+│     ├─ QuadFormGroup.vue
+│     ├─ Radio.vue
+│     ├─ Select.vue
+│     └─ Textarea.vue
+├─ pages
+│  └─ index.vue
+├─ public
+│  ├─ js
+│  │  └─ on-page-load-color-modes.js
+│  └─ favicon.ico
+├─ .gitignore
+├─ .npmrc
+├─ app.colors.json
+├─ app.vue
+├─ app.vv.ts
+├─ nuxt.config.ts
+├─ package-lock.json
+├─ package.json
+├─ README-NUXT.md
+├─ tailwind.config.ts
+└─ tsconfig.json
+```
+
+🟡 = Optional (opt-out) dependency  
+🟠 = License number required on install  
+
+
+
+
+
+
+
+
+
+
+
 ## Moving Forward
 
 Moving forward, the addition of the other stacks is dependent upon figuring out the best way to manage all the little specifics and especially snippets for optional dependencies in the files that exist in all of the stacks.
@@ -478,8 +544,8 @@ The goal is to have the CLI eventually help Vue devs to install the following st
 
 1. The SPA Stack (implemented)
 1. The SSG Stack (implemented)
+1. The Nuxt 3 Stack (WIP)
 1. The Firebase Stack
-1. The Nuxt 3 Stack
 1. The VILT Stack
 
 
