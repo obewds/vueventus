@@ -1,22 +1,26 @@
 // ./cli/generators/vvTextareaVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
-const output = `<!-- ./src/components/vv/textareas/VvTextarea.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/Textarea.vue' : './src/components/vv/anchors/VvTextarea.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 
 <script lang="ts">
 
-    import { defineComponent } from 'vue'
-    import { VvTextarea } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
-
     import type { PropType } from 'vue'
     import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesTextareas, SizesTextareasRows } from '@obewds/vueventus'
 
+    import { defineComponent } from 'vue'
+    import { VvTextarea as LibVvTextarea } from '@obewds/vueventus'
+    import appVv from '${appVvPath}'
+
     export default defineComponent({
 
-        components: { VvTextarea },
+        components: { LibVvTextarea },
 
         props: {
             color: {
@@ -48,7 +52,7 @@ const output = `<!-- ./src/components/vv/textareas/VvTextarea.vue -->
 
 <template>
 
-    <VvTextarea
+    <LibVvTextarea
         :color="color"
         :debug="debug"
         :palette="palette"

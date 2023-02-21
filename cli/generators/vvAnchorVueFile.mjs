@@ -11,12 +11,12 @@ const output = `<!-- ${commentPath} -->
 
 <script lang="ts">
 
+    import type { PropType } from 'vue'
+    import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, SizesText } from '@obewds/vueventus'
+
     import { defineComponent } from 'vue'
     import { VvAnchor as LibVvAnchor } from '@obewds/vueventus'
     import appVv from '${appVvPath}'
-
-    import type { PropType } from 'vue'
-    import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, SizesText } from '@obewds/vueventus'
 
     export default defineComponent({
 

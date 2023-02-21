@@ -1,21 +1,25 @@
 // ./cli/generators/VvQuadFormGroupVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
-const output = `<!-- ./src/components/vv/forms/VvQuadFormGroup.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/QuadFormGroup.vue' : './src/components/vv/anchors/VvQuadFormGroup.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 <script lang="ts">
-
-    import { defineComponent } from 'vue'
-    import { VvQuadFormGroup } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
     import type { DefaultPaletteColors, DefaultPalettes, SizesText } from '@obewds/vueventus'
 
+    import { defineComponent } from 'vue'
+    import { VvQuadFormGroup as LibVvQuadFormGroup } from '@obewds/vueventus'
+    import appVv from '${appVvPath}'
+
     export default defineComponent({
 
-        components: { VvQuadFormGroup },
+        components: { LibVvQuadFormGroup },
 
         props: {
             bottomSlotClasses: {
@@ -155,7 +159,7 @@ const output = `<!-- ./src/components/vv/forms/VvQuadFormGroup.vue -->
 
 <template>
 
-    <VvQuadFormGroup
+    <LibVvQuadFormGroup
         :bottom-slot-classes="bottomSlotClasses"
         :bottom-wrapper-classes="bottomWrapperClasses"
         :debug="debug"
@@ -223,7 +227,7 @@ const output = `<!-- ./src/components/vv/forms/VvQuadFormGroup.vue -->
         <template v-for="(_, name) in $slots" v-slot:[name]="slotData">
             <slot :name="name" v-bind="slotData"/>
         </template>
-    </VvQuadFormGroup>
+    </LibVvQuadFormGroup>
 
 </template>
 

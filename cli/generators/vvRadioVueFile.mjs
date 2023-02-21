@@ -1,21 +1,25 @@
 // ./cli/generators/vvRadioVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
-    const output = `<!-- ./src/components/vv/inputs/VvRadio.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/Radio.vue' : './src/components/vv/anchors/VvRadio.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 <script lang="ts">
-
-    import { computed, defineComponent } from 'vue'
-    import { VvRadio } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
     import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesInputs } from '@obewds/vueventus'
 
+    import { computed, defineComponent } from 'vue'
+    import { VvRadio as LibVvRadio } from '@obewds/vueventus'
+    import appVv from '${appVvPath}'
+
     export default defineComponent({
 
-        components: { VvRadio },
+        components: { LibVvRadio },
 
         props: {
             checked: {
@@ -88,7 +92,7 @@ export default function () {
 
 
 <template>
-    <VvRadio
+    <LibVvRadio
         :checked="checked"
         :color="color"
         :dark-radio-hex="darkRadioHex"

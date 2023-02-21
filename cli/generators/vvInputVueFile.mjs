@@ -1,22 +1,26 @@
 // ./cli/generators/vvInputVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
-const output = `<!-- ./src/components/vv/inputs/VvInput.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/Input.vue' : './src/components/vv/anchors/VvInput.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 
 <script lang="ts">
 
-    import { defineComponent } from 'vue'
-    import { ValidInputTypes, VvInput } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
-
     import type { PropType } from 'vue'
     import type { DefaultValidationPalettes, DefaultValidationPaletteColors, SizesInputs } from '@obewds/vueventus'
 
+    import { defineComponent } from 'vue'
+    import { ValidInputTypes, VvInput as LibVvInput } from '@obewds/vueventus'
+    import appVv from '${appVvPath}'
+
     export default defineComponent({
 
-        components: { VvInput },
+        components: { LibVvInput },
 
         props: {
             color: {
@@ -48,7 +52,7 @@ const output = `<!-- ./src/components/vv/inputs/VvInput.vue -->
 
 
 <template>
-    <VvInput
+    <LibVvInput
         :color="color"
         :debug="debug"
         :palette="palette"

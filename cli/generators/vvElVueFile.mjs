@@ -1,22 +1,26 @@
 // ./cli/generators/vvElVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
-const output = `<!-- ./src/components/vv/elements/VvEl.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/El.vue' : './src/components/vv/anchors/VvEl.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 
 <script lang="ts">
 
-    import { defineComponent } from 'vue'
-    import { ValidElementTags, VvEl } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
-
     import type { PropType } from 'vue'
     import type { DefaultPaletteColors, DefaultPalettes, SizesText } from '@obewds/vueventus'
 
+    import { defineComponent } from 'vue'
+    import { ValidElementTags, VvEl as LibVvEl } from '@obewds/vueventus'
+    import appVv from '${appVvPath}'
+
     export default defineComponent({
 
-        components: { VvEl },
+        components: { LibVvEl },
 
         props: {
             borderPalette: {
@@ -65,7 +69,7 @@ const output = `<!-- ./src/components/vv/elements/VvEl.vue -->
 
 <template>
 
-    <VvEl
+    <LibVvEl
         :border-palette="borderPalette"
         :border-color="borderColor"
         :debug="debug"
@@ -85,7 +89,7 @@ const output = `<!-- ./src/components/vv/elements/VvEl.vue -->
         :data-vv-el-prop-text-color="debug ? textColor : null"
     >
         <slot/>
-    </VvEl>
+    </LibVvEl>
 
 </template>
 

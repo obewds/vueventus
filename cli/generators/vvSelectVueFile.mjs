@@ -1,22 +1,26 @@
 // ./cli/generators/vvSelectVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
-const output = `<!-- ./src/components/vv/selects/VvSelect.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/Select.vue' : './src/components/vv/anchors/VvSelect.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 
 <script lang="ts">
 
-    import { defineComponent } from 'vue'
-    import { VvSelect } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
-
     import type { PropType } from 'vue'
     import type { DefaultValidationPaletteColors, DefaultValidationPalettes, SizesSelects } from '@obewds/vueventus'
 
+    import { defineComponent } from 'vue'
+    import { VvSelect as LibVvSelect } from '@obewds/vueventus'
+    import appVv from '${appVvPath}'
+
     export default defineComponent({
 
-        components: { VvSelect },
+        components: { LibVvSelect },
 
         props: {
             color: {
@@ -44,7 +48,7 @@ const output = `<!-- ./src/components/vv/selects/VvSelect.vue -->
 
 <template>
 
-    <VvSelect
+    <LibVvSelect
         :color="color"
         :debug="debug"
         :palette="palette"
@@ -54,7 +58,7 @@ const output = `<!-- ./src/components/vv/selects/VvSelect.vue -->
         :data-vv-select-prop-size="debug ? size : null"
     >
         <slot/>
-    </VvSelect>
+    </LibVvSelect>
 
 </template>
 
