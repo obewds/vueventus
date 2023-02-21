@@ -2,20 +2,24 @@
 
 export default function () {
 
-const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/FormGroup.vue' : './src/components/vv/anchors/VvFormGroup.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 <script lang="ts">
-
-    import { defineComponent } from 'vue'
-    import { VvFormGroup } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
 
     import type { PropType } from 'vue'
     import type { DefaultPaletteColors, DefaultPalettes, SizesText } from '@obewds/vueventus'
 
+    import { defineComponent } from 'vue'
+    import { VvFormGroup as LibVvFormGroup } from '@obewds/vueventus'
+    import appVv from '${appVvPath}'
+
     export default defineComponent({
 
-        components: { VvFormGroup },
+        components: { LibVvFormGroup },
 
         props: {
             debug: {
@@ -135,7 +139,7 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
 
 <template>
 
-    <VvFormGroup
+    <LibVvFormGroup
         :debug="debug"
         :display-error="displayError"
         :display-help="displayHelp"
@@ -191,7 +195,7 @@ const output = `<!-- ./src/components/vv/forms/VvFormGroup.vue -->
         :data-vv-form-group-prop-wrapper-classes="debug ? wrapperClasses : null"
     >
         <slot/>
-    </VvFormGroup>
+    </LibVvFormGroup>
 
 </template>
 
