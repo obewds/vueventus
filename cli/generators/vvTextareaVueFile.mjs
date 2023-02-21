@@ -1,6 +1,6 @@
 // ./cli/generators/vvTextareaVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
 let commentPath = useNuxtPaths ? './components/Vv/Textarea.vue' : './src/components/vv/anchors/VvTextarea.vue'
 

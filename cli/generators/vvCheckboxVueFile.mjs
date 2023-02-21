@@ -1,6 +1,6 @@
 // ./cli/generators/vvCheckboxVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
 let commentPath = useNuxtPaths ? './components/Vv/Checkbox.vue' : './src/components/vv/anchors/VvCheckbox.vue'
 

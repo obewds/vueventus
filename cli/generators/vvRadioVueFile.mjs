@@ -1,6 +1,6 @@
 // ./cli/generators/vvRadioVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
 let commentPath = useNuxtPaths ? './components/Vv/Radio.vue' : './src/components/vv/anchors/VvRadio.vue'
 

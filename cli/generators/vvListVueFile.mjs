@@ -1,6 +1,6 @@
 // ./cli/generators/vvListVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
 let commentPath = useNuxtPaths ? './components/Vv/List.vue' : './src/components/vv/anchors/VvList.vue'
 

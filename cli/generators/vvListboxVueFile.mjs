@@ -1,6 +1,6 @@
 // ./cli/generators/vvListboxVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
 let commentPath = useNuxtPaths ? './components/Vv/Listbox.vue' : './src/components/vv/anchors/VvListbox.vue'
 

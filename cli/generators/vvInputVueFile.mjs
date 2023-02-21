@@ -1,6 +1,6 @@
 // ./cli/generators/vvInputVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
 let commentPath = useNuxtPaths ? './components/Vv/Input.vue' : './src/components/vv/anchors/VvInput.vue'
 

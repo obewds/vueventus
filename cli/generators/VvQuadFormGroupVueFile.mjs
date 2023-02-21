@@ -1,6 +1,6 @@
 // ./cli/generators/VvQuadFormGroupVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
 let commentPath = useNuxtPaths ? './components/Vv/QuadFormGroup.vue' : './src/components/vv/anchors/VvQuadFormGroup.vue'
 

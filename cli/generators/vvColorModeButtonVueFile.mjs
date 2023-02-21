@@ -1,6 +1,6 @@
 // ./cli/generators/vvColorModeButtonVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
 let commentPath = useNuxtPaths ? './components/Vv/ColorModeButton.vue' : './src/components/vv/anchors/VvColorModeButton.vue'
 
