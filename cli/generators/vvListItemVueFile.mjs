@@ -2,21 +2,25 @@
 
 export default function () {
 
-const output = `<!-- ./src/components/vv/lists/VvListItem.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/ListItem.vue' : './src/components/vv/anchors/VvListItem.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 
 <script lang="ts">
 
-    import { defineComponent } from 'vue'
-    import { VvListItem } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
-
     import type { PropType } from 'vue'
     import type { DefaultPaletteColors, DefaultPalettes } from '@obewds/vueventus'
 
+    import { defineComponent } from 'vue'
+    import { VvListItem as LibVvListItem } from '@obewds/vueventus'
+    import appVv from '${appVvPath}'
+
     export default defineComponent({
 
-        components: { VvListItem },
+        components: { LibVvListItem },
 
         props: {
             color: {
@@ -51,7 +55,7 @@ const output = `<!-- ./src/components/vv/lists/VvListItem.vue -->
 
 
 <template>
-    <VvListItem
+    <LibVvListItem
         :color="color"
         :debug="debug"
         :enable-colored-symbols="enableColoredSymbols"
@@ -65,7 +69,7 @@ const output = `<!-- ./src/components/vv/lists/VvListItem.vue -->
         :data-vv-list-item-prop-symbol-palette="debug ? symbolPalette : null"
     >
         <slot/>
-    </VvListItem>
+    </LibVvListItem>
 </template>
 
 `
