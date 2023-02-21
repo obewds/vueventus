@@ -2,7 +2,7 @@
 
 export default function ( useNuxtPaths = false ) {
 
-let commentPath = useNuxtPaths ? './components/Vv/Select.vue' : './src/components/vv/anchors/VvSelect.vue'
+let commentPath = useNuxtPaths ? './components/Vv/Select.vue' : './src/components/vv/selects/VvSelect.vue'
 
 let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
 

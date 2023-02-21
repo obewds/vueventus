@@ -2,7 +2,7 @@
 
 export default function ( useNuxtPaths = false ) {
 
-let commentPath = useNuxtPaths ? './components/Vv/Textarea.vue' : './src/components/vv/anchors/VvTextarea.vue'
+let commentPath = useNuxtPaths ? './components/Vv/Textarea.vue' : './src/components/vv/textareas/VvTextarea.vue'
 
 let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
 
