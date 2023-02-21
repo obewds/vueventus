@@ -53,6 +53,13 @@ export default function (userOpts, stackObj, installPkgsArr) {
 
 
 
+    // install typescript
+    run(`npm install typescript --save-dev`)
+
+    installPkgsArr.push('typescript')
+
+
+
     // install tailwind css
     run(`npm install @nuxtjs/tailwindcss --save-dev`)
 
