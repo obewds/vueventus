@@ -2,21 +2,25 @@
 
 export default function () {
 
-const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/ColorModeButton.vue' : './src/components/vv/anchors/VvColorModeButton.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 
 <script lang="ts">
 
-    import { defineComponent } from 'vue'
-    import { ValidButtonTypes, ValidColorModes, VvColorModeButton } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
-
     import type { PropType } from 'vue'
     import type { DefaultButtonPalettes, DefaultPaletteColors, SizesButtons } from '@obewds/vueventus'
 
+    import { defineComponent } from 'vue'
+    import { ValidButtonTypes, ValidColorModes, VvColorModeButton as LibVvColorModeButton } from '@obewds/vueventus'
+    import appVv from '${appVvPath}'
+
     export default defineComponent({
 
-        components: { VvColorModeButton },
+        components: { LibVvColorModeButton },
 
         props: {
             color: {
@@ -93,7 +97,7 @@ const output = `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
 
 
 <template>
-    <VvColorModeButton
+    <LibVvColorModeButton
         :mode="(colorMode as ValidColorModes)"
         :color="color"
         :debug="debug"
