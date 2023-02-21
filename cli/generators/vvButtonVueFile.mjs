@@ -1,22 +1,26 @@
 // ./cli/generators/vvButtonVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
-const output = `<!-- ./src/components/vv/buttons/VvButton.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/Button.vue' : './src/components/vv/anchors/VvButton.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 
 <script lang="ts">
 
-    import { defineComponent } from 'vue'
-    import { ValidButtonTypes, VvButton } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
-
     import type { PropType } from 'vue'
     import type { DefaultButtonPalettes, DefaultPaletteColors, SizesButtons } from '@obewds/vueventus'
 
+    import { defineComponent } from 'vue'
+    import { ValidButtonTypes, VvButton as LibVvButton } from '@obewds/vueventus'
+    import appVv from '${appVvPath}'
+
     export default defineComponent({
 
-        components: { VvButton },
+        components: { LibVvButton },
 
         props: {
             block: {
@@ -56,7 +60,7 @@ const output = `<!-- ./src/components/vv/buttons/VvButton.vue -->
 
 
 <template>
-    <VvButton
+    <LibVvButton
         :block="block"
         :color="color"
         :debug="debug"
@@ -72,7 +76,7 @@ const output = `<!-- ./src/components/vv/buttons/VvButton.vue -->
         :data-vv-button-prop-type="debug ? type : null"
     >
         <slot/>
-    </VvButton>
+    </LibVvButton>
 </template>
 
 `
