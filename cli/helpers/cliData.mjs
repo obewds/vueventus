@@ -33,6 +33,7 @@ import postcssConfigCjsFile from '../generators/postcssConfigCjsFile.mjs'
 import prismThemeVarsCssFile from '../generators/prismThemeVarsCssFile.mjs'
 import routesTsFile from '../generators/routesTsFile.mjs'
 import tailwindConfigCjsFile from '../generators/tailwindConfigCjsFile.mjs'
+import tailwindConfigTsNuxtFile from '../generators/tailwindConfigTsNuxtFile.mjs'
 import tailwindCssFile from '../generators/tailwindCssFile.mjs'
 import tsconfigJsonFile from '../generators/tsconfigJsonFile.mjs'
 import tsconfigJsonSsgFile from '../generators/tsconfigJsonSsgFile.mjs'
@@ -262,7 +263,13 @@ let baseNuxtFiles = {
         checked: true,
         path: '/pages/',
         src: pagesIndexNuxtFile(),
-    }
+    },
+    tailwindConfigTs: {
+        name: 'tailwind.config.ts',
+        checked: true,
+        path: '/',
+        src: tailwindConfigTsNuxtFile(),
+    },
 }
 
 
