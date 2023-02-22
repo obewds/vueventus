@@ -9,13 +9,10 @@ return `<!-- ./components/Vv/Fa.vue -->
     import type { PropType } from 'vue'
 
     import { defineComponent } from 'vue'
-    import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
     import { ValidFontAwesomeFamilies, ValidFontAwesomeSizes } from '@obewds/vueventus'
     import appVv from '../../app.vv'
 
     export default defineComponent({
-
-        components: { FontAwesomeIcon },
 
         props: {
             debug: {
@@ -44,15 +41,15 @@ return `<!-- ./components/Vv/Fa.vue -->
 
 
 <template>
-
-    <FontAwesomeIcon
-        :icon="[family, icon]"
-        :size="size"
-        :data-vv-fa-prop-family="debug ? family : null"
-        :data-vv-fa-prop-icon="debug ? icon : null"
-        :data-vv-fa-prop-size="debug ? size : null"
-    />
-
+    <ClientOnly>
+        <font-awesome-icon
+            :icon="[family, icon]"
+            :size="size"
+            :data-vv-fa-prop-family="debug ? family : null"
+            :data-vv-fa-prop-icon="debug ? icon : null"
+            :data-vv-fa-prop-size="debug ? size : null"
+        />
+    </ClientOnly>
 </template>
 
 `
