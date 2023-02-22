@@ -9,6 +9,10 @@ const output = `<!-- ./pages/index.vue -->
     <div class="grid grid-cols-1 gap-6 max-w-3xl mx-auto text-center p-10">
 
         <p>This is the <samp class="bg-gray-800 text-lime-300">./pages/index.vue</samp> page component!</p>
+        
+        <div>
+            <VvFa family="fas" icon="house" size="3x"/>
+        </div>
 
         <div>
             <VvAnchor color="primary">

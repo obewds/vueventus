@@ -556,7 +556,7 @@ let faFreeNuxtDep = {
         fontAwesomeTs: {
             name: 'fontAwesome.ts',
             checked: true,
-            path: '/',
+            path: '/plugins/',
             src: fontAwesomeTsNuxtFile(), // different generator for the nuxt stack
         },
         vvFa: {
@@ -625,7 +625,7 @@ faProDepSsg.files.vvFa = {
 
 
 let faProNuxtDep = {
-    checked: true,
+    checked: false,
     name: faProName,
     install: faProInstall,
     packages: faProPackages,
@@ -633,7 +633,7 @@ let faProNuxtDep = {
         fontAwesomeTs: {
             name: 'fontAwesomePro.ts',
             checked: true,
-            path: '/',
+            path: '/plugins/',
             src: fontAwesomeProTsNuxtFile(), // different generator for the nuxt stack
         },
         vvFa: {
