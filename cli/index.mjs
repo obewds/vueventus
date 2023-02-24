@@ -26,7 +26,6 @@ import gsapTsNuxtFile from './generators/gsapTsNuxtFile.mjs'
 import indexMdFile from './generators/indexMdFile.mjs'
 import mousePosVueFile from './generators/mousePosVueFile.mjs'
 import piniaRootTsFile from './generators/piniaRootTsFile.mjs'
-import piniaRootTsFile from './generators/piniaRootTsFile.mjs'
 import vvFaVueNuxtFile from './generators/vvFaVueNuxtFile.mjs'
 import vvScrollUpVueFile from './generators/vvScrollUpVueFile.mjs'
 
