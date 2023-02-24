@@ -17,6 +17,7 @@ import fontAwesomeProTsFile from '../generators/fontAwesomeProTsFile.mjs'
 import fontAwesomeTsFile from '../generators/fontAwesomeTsFile.mjs'
 import fontAwesomeTsNuxtFile from '../generators/fontAwesomeTsNuxtFile.mjs'
 import gsapTsFile from '../generators/gsapTsFile.mjs'
+import gsapTsNuxtFile from '../generators/gsapTsNuxtFile.mjs'
 import helloVueVentusTestJsFile from '../generators/helloVueVentusTestJsFile.mjs'
 import helloVueVentusVueFile from '../generators/helloVueVentusVueFile.mjs'
 import helloWorldVueSsgFile from '../generators/helloWorldVueSsgFile.mjs'
@@ -885,6 +886,26 @@ let ssgDeps = baseViteTypescriptDeps
 let baseNuxtDeps = {
     fontawesome: {},
     faPro: {},
+    gsap: {
+        checked: true,
+        name: 'GSAP',
+        install: 'npm install gsap --save-dev',
+        packages: ['gsap'],
+        files: {
+            gsapTs: {
+                name: 'gsap.ts',
+                checked: true,
+                path: '/plugins/',
+                src: gsapTsNuxtFile(),
+            },
+            vvScrollUp: {
+                name: 'ScrollUp.vue',
+                checked: true,
+                path: '/components/Vv/',
+                src: vvScrollUpVueFile(true),
+            },
+        },
+    },
     headless: {
         checked: true,
         name: 'Headless UI',
