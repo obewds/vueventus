@@ -50,7 +50,7 @@ The SSG stack additionally incorporates Markdown, auto-routing Pages, and auto-l
 
 ### The Nuxt 3 Stack
 
-The {{ stack3 }} is a powerful combo with Nuxt 3, Vue 3, Tailwind CSS, and VueVentus all acting together for a really fast and flexible way to develop a web app or even an interaction-heavy website. Nuxt 3 is Typescript based by default.
+The {{ stack3 }} stack is a powerful combo with Nuxt 3, Vue 3, Tailwind CSS, and VueVentus all acting together for a really fast and flexible way to develop a web app or even an interaction-heavy website. Nuxt 3 is Typescript based by default.
 
 
 
