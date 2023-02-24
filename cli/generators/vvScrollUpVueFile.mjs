@@ -1,26 +1,30 @@
 // ./cli/generators/vvScrollUpVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
-const output = `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/ScrollUp.vue' : './src/components/vv/lists/VvList.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+
+const output = `<!-- ${commentPath} -->
 
 <script lang="ts">
 
-    import { defineComponent, onMounted, ref } from 'vue'
-    import { TransitionChild, TransitionRoot } from '@headlessui/vue'
-    import { VvButton } from '@obewds/vueventus'
-    import appVv from '../../../app.vv'
-    import gsap from 'gsap'
-
     import type { PropType } from 'vue'
     import type { DefaultButtonPalettes, DefaultPaletteColors, SizesButtons } from '@obewds/vueventus'
+
+    import { defineComponent, onMounted, ref } from 'vue'
+    import { TransitionChild, TransitionRoot } from '@headlessui/vue'
+    import appVv from '${appVvPath}'
+    import gsap from 'gsap'
+    import { VvButton as LibVvButton } from '@obewds/vueventus'
 
     export default defineComponent({
 
         components: {
             TransitionChild,
             TransitionRoot,
-            VvButton,
+            LibVvButton,
         },
 
         props: {
@@ -113,7 +117,7 @@ const output = `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
 
                 <div>
 
-                    <VvButton
+                    <LibVvButton
                         :debug="debug"
                         :title="title"
                         :palette="palette"
@@ -147,7 +151,7 @@ const output = `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
                                 />
                             </svg>
                         </slot>
-                    </VvButton>
+                    </LibVvButton>
 
                 </div>
 
