@@ -335,6 +335,8 @@ async function installDepsAndFiles () {
 
             run(stack.deps.gsap.install)
 
+            installedPkgs = [...installedPkgs, ...stack.deps.gsap.packages]
+
             // add  GSAP base file if the user selected it
             if ( userOptions.files.includes( stack.deps.gsap.files.gsapTs.name ) ) {
 
