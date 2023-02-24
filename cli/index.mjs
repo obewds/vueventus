@@ -26,7 +26,6 @@ import gsapTsNuxtFile from './generators/gsapTsNuxtFile.mjs'
 import indexMdFile from './generators/indexMdFile.mjs'
 import mousePosVueFile from './generators/mousePosVueFile.mjs'
 import piniaRootTsFile from './generators/piniaRootTsFile.mjs'
-import piniaRootTsFile from './generators/piniaRootTsFile.mjs'
 import vvFaVueNuxtFile from './generators/vvFaVueNuxtFile.mjs'
 import vvScrollUpVueFile from './generators/vvScrollUpVueFile.mjs'
 
@@ -335,6 +334,8 @@ async function installDepsAndFiles () {
         if ( userOptions.deps.includes( stack.deps.gsap.name ) ) {
 
             run(stack.deps.gsap.install)
+
+            installedPkgs = [...installedPkgs, ...stack.deps.gsap.packages]
 
             // add  GSAP base file if the user selected it
             if ( userOptions.files.includes( stack.deps.gsap.files.gsapTs.name ) ) {
