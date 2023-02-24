@@ -22,6 +22,7 @@ import bVueFile from './generators/bVueFile.mjs'
 import counterVueFile from './generators/counterVueFile.mjs'
 import fontAwesomeProTsNuxtFile from './generators/fontAwesomeProTsNuxtFile.mjs'
 import fontAwesomeTsNuxtFile from './generators/fontAwesomeTsNuxtFile.mjs'
+import gsapTsNuxtFile from './generators/gsapTsNuxtFile.mjs'
 import indexMdFile from './generators/indexMdFile.mjs'
 import mousePosVueFile from './generators/mousePosVueFile.mjs'
 import piniaRootTsFile from './generators/piniaRootTsFile.mjs'
@@ -298,7 +299,8 @@ async function installDepsAndFiles () {
                     }
 
                 }
-
+    
+                console.log(`\nThe ${vvBrand} CLI installed/added the ${stack.deps.faPro.name} dep/files successfully!\n`)
 
             } else {
 
@@ -320,11 +322,34 @@ async function installDepsAndFiles () {
                     fs.outputFileSync(cwd + stack.deps.fontawesome.files.vvFa.path + stack.deps.fontawesome.files.vvFa.name, vvFaVueNuxtFile(), { flag: 'w+' })
 
                 }
+    
+                console.log(`\nThe ${vvBrand} CLI installed/added the ${stack.deps.fontawesome.name} dep/files successfully!\n`)
 
             }
-    
-            console.log(`\nThe ${vvBrand} CLI installed/added the ${stack.deps.faPro.name} dep/files successfully!\n`)
 
+        }
+
+        // if the user chose the optional gsap dep
+        if ( userOptions.deps.includes( stack.deps.gsap.name ) ) {
+
+            run(stack.deps.gsap.install)
+
+            // add  GSAP base file if the user selected it
+            if ( userOptions.files.includes( stack.deps.gsap.files.gsapTs.name ) ) {
+
+                fs.outputFileSync(cwd + stack.deps.gsap.files.gsapTs.path + stack.deps.gsap.files.gsapTs.name, gsapTsNuxtFile(), { flag: 'w+' })
+                
+            }
+
+            // add optional GSAP files if the user also selected them
+            if ( userOptions.files.includes( stack.deps.gsap.files.vvScrollUp.name ) ) {
+
+                fs.outputFileSync(cwd + stack.deps.gsap.files.vvScrollUp.path + stack.deps.gsap.files.vvScrollUp.name, vvScrollUpVueFile(true), { flag: 'w+' })
+                
+            }
+
+            console.log(`\nThe ${vvBrand} CLI installed/added the ${stack.deps.gsap.name} dep/files successfully!\n`)
+        
         }
 
     }
