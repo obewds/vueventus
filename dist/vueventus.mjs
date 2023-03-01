@@ -3654,7 +3654,7 @@ function ro(e, t) {
     r.value = bt(e.value.type, e.value.as);
   }), Ye(() => {
     var a;
-    r.value || !L(t) || L(t) instanceof HTMLButtonElement && !((a = L(t)) != null && a.hasAttribute("type")) && (r.value = "button");
+    r.value || L(t) && L(t) instanceof HTMLButtonElement && !((a = L(t)) != null && a.hasAttribute("type")) && (r.value = "button");
   }), r;
 }
 class ao {
@@ -3747,7 +3747,7 @@ function uo(e, t, r = m(() => !0)) {
     var n, u;
     r.value && (s.value = ((u = (n = o.composedPath) == null ? void 0 : n.call(o)) == null ? void 0 : u[0]) || o.target);
   }, !0), Qe("click", (o) => {
-    !s.value || (a(o, () => s.value), s.value = null);
+    s.value && (a(o, () => s.value), s.value = null);
   }, !0), Qe("blur", (o) => a(o, () => window.document.activeElement instanceof HTMLIFrameElement ? window.document.activeElement : null), !0);
 }
 var Nt = ((e) => (e[e.None = 1] = "None", e[e.Focusable = 2] = "Focusable", e[e.Hidden = 4] = "Hidden", e))(Nt || {});
@@ -3990,17 +3990,17 @@ let yo = $({ name: "Listbox", emits: { "update:modelValue": (e) => !0 }, props: 
     h !== void 0 && (i.value.textValue = h);
   }), ce(() => s.registerOption(e.id, i)), Yt(() => s.unregisterOption(e.id)), ce(() => {
     xt([s.listboxState, u], () => {
-      s.listboxState.value === 0 && (!u.value || W(s.mode.value, { [1]: () => {
+      s.listboxState.value === 0 && u.value && W(s.mode.value, { [1]: () => {
         c.value && s.goToOption(R.Specific, e.id);
       }, [0]: () => {
         s.goToOption(R.Specific, e.id);
-      } }));
+      } });
     }, { immediate: !0 });
   }), Ye(() => {
-    s.listboxState.value === 0 && (!n.value || s.activationTrigger.value !== 0 && ie(() => {
+    s.listboxState.value === 0 && n.value && s.activationTrigger.value !== 0 && ie(() => {
       var v, O;
       return (O = (v = L(o)) == null ? void 0 : v.scrollIntoView) == null ? void 0 : O.call(v, { block: "nearest" });
-    }));
+    });
   });
   function d(v) {
     if (e.disabled)
@@ -4020,10 +4020,10 @@ let yo = $({ name: "Listbox", emits: { "update:modelValue": (e) => !0 }, props: 
     g.update(v);
   }
   function S(v) {
-    !g.wasMoved(v) || e.disabled || n.value || s.goToOption(R.Specific, e.id, 0);
+    g.wasMoved(v) && (e.disabled || n.value || s.goToOption(R.Specific, e.id, 0));
   }
   function z(v) {
-    !g.wasMoved(v) || e.disabled || !n.value || s.goToOption(R.Nothing);
+    g.wasMoved(v) && (e.disabled || n.value && s.goToOption(R.Nothing));
   }
   return () => {
     let { disabled: v } = e, O = { active: n.value, selected: u.value, disabled: v }, { id: h, value: k, disabled: w, ...V } = e, E = { id: h, ref: o, role: "option", tabIndex: v === !0 ? void 0 : -1, "aria-disabled": v === !0 ? !0 : void 0, "aria-selected": u.value, disabled: void 0, onClick: d, onFocus: p, onPointerenter: x, onMouseenter: x, onPointermove: S, onMousemove: S, onPointerleave: z, onMouseleave: z };
