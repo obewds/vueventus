@@ -34,7 +34,7 @@
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.9",
     "@thebespokepixel/es-tinycolor": "^3.1.0",
-    "deepmerge": "^4.3.0",
+    "deepmerge": "^4.3.1",
     "fs-extra": "^11.1.0",
     "gradient-string": "^2.0.2",
     "inquirer": "^9.1.4",
