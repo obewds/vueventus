@@ -51,10 +51,10 @@ export default function (userOpts, stackObj, installPkgsArr) {
     // TODO: Keep an eye on vite-plugin-vue-markdown
     // https://github.com/mdit-vue/vite-plugin-vue-markdown
     // as currently Vite v4 conflicts with a peer dep for Vite v3 in vite-plugin-vue-markdown
-    run(`npm create vite@3.2.1 ${userOpts.name} -- --template vue-ts`)
+    run(`npm create vite@latest ${userOpts.name} -- --template vue-ts`)
     
     // TODO: Same as to do above! ^^^
-    installPkgsArr.push('vite@3.2.1')
+    installPkgsArr.push('vite@latest')
 
     
     // copy each vite generated folder and file from the vite generated directory back up into the root directory
