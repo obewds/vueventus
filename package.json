@@ -47,7 +47,7 @@
     "@types/fs-extra": "^11.0.1",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vitest/coverage-c8": "^0.29.7",
-    "@vue/test-utils": "^2.3.1",
+    "@vue/test-utils": "^2.3.2",
     "auto-changelog": "^2.4.0",
     "autoprefixer": "^10.4.14",
     "chalk": "^5.2.0",
