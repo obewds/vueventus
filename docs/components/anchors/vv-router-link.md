@@ -533,8 +533,8 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 
 
 ## Prop: textSize
-<!-- TODO: change this type to new PropType keyof syntax -->
-Type: **`String`**  
+
+Type: **`String`** as PropType<keyof **[SizesText](/typescript/interfaces#sizestext)**>  
 Default: **`"{{ VvConfig.defaults.VvRouterLink.textSize }}"`**
 
 The {{ $frontmatter.title }} `textSize` prop sets the component instance size-based classes which in the context of anchor elements typically involves font size atomic classes.
@@ -640,8 +640,48 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 :::
 
 ### Typing for Downstream Component Instances:
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+```html
+<!-- ./src/components/MyComponent.vue -->
+
+<script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { SizesText } from '@obewds/vueventus'
+
+    import { defineComponent } from 'vue'
+    import VvRouterLink from './vv/anchors/VvRouterLink.vue'
+
+    export default defineComponent({
+
+        components: { VvRouterLink },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            textSize: {
+                type: String as PropType<keyof SizesText>,
+                default: '2xl',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvRouterLink
+        :href="href"
+        :text-size="textSize"
+    >
+        text-size/textSize example
+    </VvRouterLink>
+</template>
+```
 
 
 
