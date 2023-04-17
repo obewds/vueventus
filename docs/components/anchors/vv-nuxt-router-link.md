@@ -1,5 +1,5 @@
 ---
-title: VvNuxtLink Component
+title: VvNuxtRouterLink Component
 ---
 
 <script setup>
@@ -26,7 +26,7 @@ The {{ $frontmatter.title }} is modeled after the [VvAnchor](/components/anchors
 The {{ $frontmatter.title }} provides variety of props and config module based settings to make a variety of anchor styled elements for applications with an extremely DRY implementation of atomic classes.
 
 
-Complete VvNuxtLink documentation coming soon!
+Complete VvNuxtRouterLink documentation coming soon!
 
-<!-- TODO: create VvNuxtLink component CLI scripts -->
-<!-- TODO: create VvNuxtLink documentation (based on VvRouterLink) -->
+<!-- TODO: create VvNuxtRouterLink component CLI scripts -->
+<!-- TODO: create VvNuxtRouterLink documentation (based on VvRouterLink) -->

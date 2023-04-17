@@ -34,7 +34,7 @@ The VueVentus component system comes with a variety of {{ $frontmatter.title }} 
 HTML `<a>` element based {{ $frontmatter.title }}.
 
 * [VvAnchor](/components/anchors/vv-anchor)
-* [VvNuxtLink](/components/anchors/vv-nuxt-link)
+* [VvNuxtRouterLink](/components/anchors/vv-nuxt-router-link)
 * [VvRouterLink](/components/anchors/vv-router-link)
 
 
