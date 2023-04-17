@@ -335,7 +335,7 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 <script lang="ts">
 
     import type { PropType } from 'vue'
-    import type { SizesButtons } from '@obewds/vueventus'
+    import type { DefaultPaletteColors } from '@obewds/vueventus'
 
     import { defineComponent } from 'vue'
     import VvAnchor from './vv/anchors/VvAnchor.vue'
