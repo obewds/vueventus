@@ -768,7 +768,7 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
         :href="href"
         :text-size="textSize"
     >
-        "2xl" VvAnchor text
+        text-size/textSize example
     </VvAnchor>
 </template>
 ```
