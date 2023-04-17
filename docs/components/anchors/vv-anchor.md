@@ -4,6 +4,8 @@ title: VvAnchor Component
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+    import DocsTypingDownstreamText from '../../../src/views/compos/DocsTypingDownstreamText.vue'
+    
     import { VvAnchor, VvConfig } from '../../../src/index'
     import appColors from '../../../src/data/app.color.data.json'
 
@@ -218,16 +220,18 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 
 ### Typing for Downstream Component Instances
 
-If you are building a component that uses a nested {{ $frontmatter.title }} and want to pass through strict typing into your code base when using your built component, you can add typing for Vue props like this:
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
 
 ```html
 <!-- ./src/components/MyComponent.vue -->
+
 <script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { SizesButtons } from '@obewds/vueventus'
 
     import { defineComponent } from 'vue'
     import VvAnchor from './vv/anchors/VvAnchor.vue'
-    import type { PropType } from 'vue'
-    import type { SizesButtons } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -267,8 +271,8 @@ If you are building a component that uses a nested {{ $frontmatter.title }} and 
 
 
 ## Prop: color
-<!-- TODO: change this type to new PropType keyof syntax -->
-Type: **`String`**  
+
+Type: **`String`** as PropType<keyof **[DefaultPaletteColors](/typescript/interfaces#defaultpalettecolors)**>  
 Default: **`"{{ VvConfig.defaults.VvAnchor.color }}"`**
 
 The {{ $frontmatter.title }} `color` prop sets the component instance color based both on the `color` prop and the `palette` prop values together with the `button` prop value.
@@ -322,8 +326,48 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
 ### Typing for Downstream Component Instances
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+```html
+<!-- ./src/components/MyComponent.vue -->
+
+<script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { SizesButtons } from '@obewds/vueventus'
+
+    import { defineComponent } from 'vue'
+    import VvAnchor from './vv/anchors/VvAnchor.vue'
+
+    export default defineComponent({
+
+        components: { VvAnchor },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            color: {
+                type: String as PropType<keyof DefaultPaletteColors>,
+                default: 'primary',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvAnchor
+        :href="href"
+        :color="buttonSize"
+    >
+        buttonSize prop example
+    </VvAnchor>
+</template>
+```
 
 
 
@@ -528,7 +572,7 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 
 ### Typing for Downstream Component Instances
 
-If you are building a component that uses a nested {{ $frontmatter.title }} and want to pass through strict typing into your code base when using your built component, you can add typing for Vue props like this:
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
 
 ```html
 <!-- ./src/components/MyComponent.vue -->
@@ -577,8 +621,8 @@ If you are building a component that uses a nested {{ $frontmatter.title }} and 
 
 
 ## Prop: textSize
-<!-- TODO: change this type to new PropType keyof syntax -->
-Type: **`String`**  
+
+Type: **`String`** as PropType<keyof **[SizesText](/typescript/interfaces#sizestext)**>  
 Default: **`"{{ VvConfig.defaults.VvAnchor.textSize }}"`**
 
 The {{ $frontmatter.title }} `textSize` prop sets the component instance size-based classes which in the context of anchor elements typically involves font size atomic classes.
@@ -685,8 +729,48 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 
 
 ### Typing for Downstream Component Instances
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+```html
+<!-- ./src/components/MyComponent.vue -->
+
+<script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { SizesText } from '@obewds/vueventus'
+
+    import { defineComponent } from 'vue'
+    import VvAnchor from './vv/anchors/VvAnchor.vue'
+
+    export default defineComponent({
+
+        components: { VvAnchor },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            textSize: {
+                type: String as PropType<keyof SizesText>,
+                default: '2xl',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvAnchor
+        :href="href"
+        :text-size="textSize"
+    >
+        "2xl" VvAnchor text
+    </VvAnchor>
+</template>
+```
 
 
 
