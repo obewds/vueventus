@@ -1,11 +1,19 @@
 // ./cli/generators/VvQuadFormGroupVueFile.mjs
 
+// TODO: Clean up this file if switching to use the more manual/nuxt3 approach works better for all stacks
+
 export default function ( useNuxtPaths = false ) {
 
 let commentPath = useNuxtPaths ? './components/Vv/QuadFormGroup.vue' : './src/components/vv/forms/VvQuadFormGroup.vue'
 
 let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
 
+// this is likely depreciated, as this component should just work as it does for nuxt 3 since the:
+//   <template v-for="(_, name) in $slots" v-slot:[name]="slotData">
+//       <slot :name="name" v-bind="slotData"/>
+//   </template>
+// approach keeps causing issues downstream in app dev/build modes 
+/*
 let templateMarkup = `<template>
 
     <LibVvQuadFormGroup
@@ -80,13 +88,17 @@ let templateMarkup = `<template>
 
 </template>
 `
+*/
 
 // Nuxt 3 isn't handling the scopedSlots approach to pass through slot content
 // down to the origin vueventus component through the locally installed quad from group component
 // so instead if nuxt 3 is relevant, the code below is simply copied from the template code for
 // the lib/core version of VvQuadFormGroup component
-if (useNuxtPaths) {
-templateMarkup = `<template>
+
+// removing this conditional sloppily to quickly use this template for nuxt, vite-ts, and vite-ssg stacks
+// if (useNuxtPaths) {
+// changing this to a variable since above declaration is now commented out
+let templateMarkup = `<template>
 
     <div
         :class="wrapperClasses"
@@ -211,7 +223,7 @@ templateMarkup = `<template>
 
 </template>
 `
-}
+// }
 
 const output = `<!-- ${commentPath} -->
 
