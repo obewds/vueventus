@@ -66,7 +66,7 @@ Default: **`{{ VvConfig.defaults.VvAnchor.button }}`**
 
 When the {{ $frontmatter.title }} `button` prop value is `true`, the output element changes from normal anchor element styling set in the [Anchor Config Module](/modules/configs/anchors) to button styling that is driven by the Tailwind CSS classes in the [Button Config Module](/modules/configs/buttons).
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor
@@ -79,7 +79,7 @@ When the {{ $frontmatter.title }} `button` prop value is `true`, the output elem
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor
@@ -106,7 +106,7 @@ Default: **`{{ VvConfig.defaults.VvAnchor.buttonBlock }}`**
 
 The {{ $frontmatter.title }} `buttonBlock` prop sets the component instance to use block-level base classes making the returned `<a>` element a full width and block-level button styled element.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor
@@ -120,7 +120,7 @@ The {{ $frontmatter.title }} `buttonBlock` prop sets the component instance to u
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor :button="true" :button-block="true" palette="solid" color="primary" href="#" :style="whiteColorStyles">
@@ -142,7 +142,7 @@ Default: **`{{ VvConfig.defaults.VvAnchor.buttonFab }}`**
 
 The {{ $frontmatter.title }} `buttonFab` prop sets the component instance to use base classes with equal width and height classes making the returned `<anchor>` element a square element that can also be styled as a circle using a Tailwind CSS `.rounded-full` class.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor
@@ -163,7 +163,7 @@ The {{ $frontmatter.title }} `buttonFab` prop sets the component instance to use
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor :button="true" :button-fab="true" palette="solid" :style="grayColorStyles">
@@ -190,7 +190,7 @@ Default: **`"{{ VvConfig.defaults.VvAnchor.buttonSize }}"`**
 
 The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classes applied to the output element. By default, these classes match the size classes (and examples) over in the [VvButton Prop: Size](/components/buttons/vv-button#prop-size) docs section.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor
@@ -203,7 +203,7 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor
@@ -218,7 +218,7 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 </div>
 
 
-### Typing for Downstream Component Instances
+### Typing for Downstream Component Instances:
 
 <DocsTypingDownstreamText :name="$frontmatter.title"/>
 
@@ -283,7 +283,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 !!!include(snippets/vvAnchorCompoPaletteButtonTip.md)!!!
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor color="default">
@@ -303,7 +303,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor color="default">
@@ -325,7 +325,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
-### Typing for Downstream Component Instances
+### Typing for Downstream Component Instances:
 
 <DocsTypingDownstreamText :name="$frontmatter.title"/>
 
@@ -382,7 +382,7 @@ Default: **`{{ VvConfig.defaults.VvAnchor.debug }}`**
 
 The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-anchor-` prefixed HTML attributes.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor :debug="true">
@@ -390,7 +390,7 @@ The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a compo
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor :debug="true">
@@ -414,7 +414,7 @@ Default: **`{{ VvConfig.defaults.VvAnchor.external }}`**
 
 When the {{ $frontmatter.title }} `external` prop value is `true`, the output `<anchor>` element will have a `target="_blank"` and `rel="noopener noreferrer"` attributes/values so links that leave the application space open in a new tab for users.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor
@@ -425,7 +425,7 @@ When the {{ $frontmatter.title }} `external` prop value is `true`, the output `<
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor :external="true" href="https://obewds.github.io/vueventus/components/anchors/vv-anchor.html">
@@ -447,7 +447,7 @@ Default: **`"{{ VvConfig.defaults.VvAnchor.href }}"`**
 
 The {{ $frontmatter.title }} `href` prop value sets the href value for the output `<a>` element.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor href="#">
@@ -455,7 +455,7 @@ The {{ $frontmatter.title }} `href` prop value sets the href value for the outpu
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor href="#">
@@ -483,7 +483,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 !!!include(snippets/vvAnchorCompoPaletteButtonTip.md)!!!
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor palette="default" color="default">
@@ -525,7 +525,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor palette="default" color="default">
@@ -570,7 +570,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
 
-### Typing for Downstream Component Instances
+### Typing for Downstream Component Instances:
 
 <DocsTypingDownstreamText :name="$frontmatter.title"/>
 
@@ -627,7 +627,7 @@ Default: **`"{{ VvConfig.defaults.VvAnchor.textSize }}"`**
 
 The {{ $frontmatter.title }} `textSize` prop sets the component instance size-based classes which in the context of anchor elements typically involves font size atomic classes.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor href="/" text-size="lg">
@@ -635,7 +635,7 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor href="/" text-size="lg">
@@ -728,7 +728,7 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 :::
 
 
-### Typing for Downstream Component Instances
+### Typing for Downstream Component Instances:
 
 <DocsTypingDownstreamText :name="$frontmatter.title"/>
 
@@ -783,7 +783,7 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 
 The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child elements/nodes into the component.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor href="#">
@@ -791,7 +791,7 @@ The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child 
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor href="#">
