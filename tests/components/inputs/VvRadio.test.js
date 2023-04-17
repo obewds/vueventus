@@ -8,7 +8,7 @@ import TestRadiosPair from '../../../src/views/compos/TestRadiosPair.vue'
 
 
 
-test('VvRadio.vue component mounts successfully', async () => {
+test('VvRadio.vue component imports successfully', async () => {
 
     expect(VvRadio).toBeTruthy()
 

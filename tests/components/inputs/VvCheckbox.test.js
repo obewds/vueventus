@@ -7,7 +7,7 @@ import { VvConfig } from '../../../src/index'
 
 
 
-test('VvCheckbox.vue component mounts successfully', async () => {
+test('VvCheckbox.vue component imports successfully', async () => {
 
     expect(VvCheckbox).toBeTruthy()
 

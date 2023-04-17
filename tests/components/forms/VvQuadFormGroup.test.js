@@ -7,7 +7,7 @@ import { VvConfig } from '../../../src/index'
 
 
 
-test('VvQuadFormGroup.vue component mounts successfully', async () => {
+test('VvQuadFormGroup.vue component imports successfully', async () => {
 
     expect(VvQuadFormGroup).toBeTruthy()
 

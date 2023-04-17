@@ -7,7 +7,7 @@ import { ObeKnockoutMark } from '../../../src/index'
 
 
 
-test('ObeKnockoutMark.vue component mounts successfully', async () => {
+test('ObeKnockoutMark.vue component imports successfully', async () => {
 
     expect(ObeKnockoutMark).toBeTruthy()
 

@@ -7,7 +7,7 @@ import { VvConfig } from '../../../src/index'
 
 
 
-test('VvTextarea.vue component mounts successfully', async () => {
+test('VvTextarea.vue component imports successfully', async () => {
 
     expect(VvTextarea).toBeTruthy()
 

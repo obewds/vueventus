@@ -7,7 +7,7 @@ import { VvConfig } from '../../../src/index'
 
 
 
-test('VvListbox.vue component mounts successfully', async () => {
+test('VvListbox.vue component imports successfully', async () => {
 
     expect(VvListbox).toBeTruthy()
 

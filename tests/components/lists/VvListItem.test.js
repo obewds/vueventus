@@ -8,7 +8,7 @@ import { VvConfig } from '../../../src/index'
 
 
 
-test('VvListItem.vue component mounts successfully', async () => {
+test('VvListItem.vue component imports successfully', async () => {
 
     expect(VvListItem).toBeTruthy()
 
