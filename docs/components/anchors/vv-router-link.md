@@ -389,8 +389,8 @@ The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a compo
 
 
 ## Prop: palette
-<!-- TODO: change this type to new PropType keyof syntax -->
-Type: **`String`**  
+
+Type: **`String`** as PropType<keyof **[DefaultValidationPalettes](/typescript/interfaces#defaultvalidationpalettes)** | keyof **[DefaultButtonPalettes](/typescript/interfaces#Defaultbuttonpalettes)**>  
 Default: **`"{{ VvConfig.defaults.VvRouterLink.palette }}"`**
 
 The {{ $frontmatter.title }} `palette` prop sets the component instance color based both on the `palette` prop and the `color` prop values together with the `button` prop value.
@@ -486,8 +486,47 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
 ### Typing for Downstream Component Instances
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+```html
+<!-- ./src/components/MyComponent.vue -->
+
+<script lang="ts">
+
+    import { defineComponent } from 'vue'
+    import VvAnchor from './vv/anchors/VvAnchor.vue'
+    import type { PropType } from 'vue'
+    import type { DefaultButtonPalettes, DefaultPalettes } from '@obewds/vueventus'
+
+    export default defineComponent({
+
+        components: { VvAnchor },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            palette: {
+                type: String as PropType<keyof DefaultPalettes | keyof DefaultButtonPalettes>,
+                default: 'default', // 'default' is an anchor palette, could use 'solid' or 'outline' button palettes, too!
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvAnchor
+        :href="href"
+        :palette="palette"
+    >
+        palette prop example
+    </VvAnchor>
+</template>
+```
 
 
 
