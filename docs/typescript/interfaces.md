@@ -23,13 +23,13 @@ These are the VueVentus {{ $frontmatter.title }} Modules are used throughout Vue
 
 ## AppColorPairs
 
-### Import
+### Import:
 
 ```javascript
 import type { AppColorPairs } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/AppColorPairs.ts
 
@@ -43,13 +43,13 @@ import type { AppColorPairs } from '@obewds/vueventus'
 
 ## AppColors
 
-### Import
+### Import:
 
 ```javascript
 import type { AppColors } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/AppColors.ts
 
@@ -63,13 +63,13 @@ import type { AppColors } from '@obewds/vueventus'
 
 ## AppTintShadePairs
 
-### Import
+### Import:
 
 ```javascript
 import type { AppTintShadePairs } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/AppTintShadePairs.ts
 
@@ -83,13 +83,13 @@ import type { AppTintShadePairs } from '@obewds/vueventus'
 
 ## AppTintsShades
 
-### Import
+### Import:
 
 ```javascript
 import type { AppTintsShades } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/AppTintsShades.ts
 
@@ -104,13 +104,13 @@ import type { AppTintsShades } from '@obewds/vueventus'
 
 ## ColorMode
 
-### Import
+### Import:
 
 ```javascript
 import type { ColorMode } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ColorMode.ts
 
@@ -125,13 +125,13 @@ import type { ColorMode } from '@obewds/vueventus'
 
 ## ConfigAnchors
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigAnchors } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigAnchors.ts
 
@@ -146,13 +146,13 @@ import type { ConfigAnchors } from '@obewds/vueventus'
 
 ## ConfigBorders
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigBorders } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigBorders.ts
 
@@ -167,13 +167,13 @@ import type { ConfigBorders } from '@obewds/vueventus'
 
 ## ConfigButtons
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigButtons } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigButtons.ts
 
@@ -188,13 +188,13 @@ import type { ConfigButtons } from '@obewds/vueventus'
 
 ## ConfigCheckboxes
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigCheckboxes } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigCheckboxes.ts
 
@@ -210,13 +210,13 @@ import type { ConfigCheckboxes } from '@obewds/vueventus'
 
 ## ConfigColorMode
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigColorMode } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigColorMode.ts
 
@@ -231,13 +231,13 @@ import type { ConfigColorMode } from '@obewds/vueventus'
 
 ## ConfigDefaults
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigDefaults } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigDefaults.ts
 
@@ -252,13 +252,13 @@ import type { ConfigDefaults } from '@obewds/vueventus'
 
 ## ConfigGrounds
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigGrounds } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigGrounds.ts
 
@@ -273,13 +273,13 @@ import type { ConfigGrounds } from '@obewds/vueventus'
 
 ## ConfigInputs
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigInputs } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigInputs.ts
 
@@ -294,13 +294,13 @@ import type { ConfigInputs } from '@obewds/vueventus'
 
 ## ConfigListboxes
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigListboxes } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigListboxes.ts
 
@@ -315,13 +315,13 @@ import type { ConfigListboxes } from '@obewds/vueventus'
 
 ## ConfigLists
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigLists } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigLists.ts
 
@@ -336,13 +336,13 @@ import type { ConfigLists } from '@obewds/vueventus'
 
 ## ConfigRadios
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigRadios } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigRadios.ts
 
@@ -357,13 +357,13 @@ import type { ConfigRadios } from '@obewds/vueventus'
 
 ## ConfigScrollbars
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigScrollbars } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigScrollbars.ts
 
@@ -378,13 +378,13 @@ import type { ConfigScrollbars } from '@obewds/vueventus'
 
 ## ConfigSelects
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigSelects } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigSelects.ts
 
@@ -400,13 +400,13 @@ import type { ConfigSelects } from '@obewds/vueventus'
 
 ## ConfigText
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigText } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigText.ts
 
@@ -420,13 +420,13 @@ import type { ConfigText } from '@obewds/vueventus'
 
 ## ConfigTextareas
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigTextareas } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigTextareas.ts
 
@@ -441,13 +441,13 @@ import type { ConfigTextareas } from '@obewds/vueventus'
 
 ## ConfigTransitions
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigTransitions } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigTransitions.ts
 
@@ -462,13 +462,13 @@ import type { ConfigTransitions } from '@obewds/vueventus'
 
 ## ConfigVv
 
-### Import
+### Import:
 
 ```javascript
 import type { ConfigVv } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/ConfigVv.ts
 
@@ -481,36 +481,15 @@ import type { ConfigVv } from '@obewds/vueventus'
 
 
 
-## DefaultColors
-
-### Import
-
-```javascript
-import type { DefaultColors } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/DefaultColors.ts
-
-
-
-
-
-
-
-
-
-
 ## DefaultButtonPalettes
 
-### Import
+### Import:
 
 ```javascript
 import type { DefaultButtonPalettes } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/DefaultButtonPalettes.ts
 
@@ -523,15 +502,36 @@ import type { DefaultButtonPalettes } from '@obewds/vueventus'
 
 
 
+## DefaultColors
+
+### Import:
+
+```javascript
+import type { DefaultColors } from '@obewds/vueventus'
+```
+
+### Module Code (for reference):
+
+<<< @/../src/types/DefaultColors.ts
+
+
+
+
+
+
+
+
+
+
 ## DefaultPaletteColors
 
-### Import
+### Import:
 
 ```javascript
 import type { DefaultPaletteColors } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/DefaultPaletteColors.ts
 
@@ -545,37 +545,15 @@ import type { DefaultPaletteColors } from '@obewds/vueventus'
 
 ## DefaultPalettes
 
-### Import
+### Import:
 
 ```javascript
 import type { DefaultPalettes } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/DefaultPalettes.ts
-
-
-
-
-
-
-
-
-
-
-
-## DefaultValidationPalettes
-
-### Import
-
-```javascript
-import type { DefaultValidationPalettes } from '@obewds/vueventus'
-```
-
-### Module Code
-
-<<< @/../src/types/DefaultValidationPalettes.ts
 
 
 
@@ -590,13 +568,13 @@ import type { DefaultValidationPalettes } from '@obewds/vueventus'
 
 ## DefaultValidationPaletteColors
 
-### Import
+### Import:
 
 ```javascript
 import type { DefaultValidationPaletteColors } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/DefaultValidationPaletteColors.ts
 
@@ -610,15 +588,37 @@ import type { DefaultValidationPaletteColors } from '@obewds/vueventus'
 
 
 
+## DefaultValidationPalettes
+
+### Import:
+
+```javascript
+import type { DefaultValidationPalettes } from '@obewds/vueventus'
+```
+
+### Module Code (for reference):
+
+<<< @/../src/types/DefaultValidationPalettes.ts
+
+
+
+
+
+
+
+
+
+
+
 ## GroundTextColors
 
-### Import
+### Import:
 
 ```javascript
 import type { GroundTextColors } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/GroundTextColors.ts
 
@@ -633,13 +633,13 @@ import type { GroundTextColors } from '@obewds/vueventus'
 
 ## MonthNames
 
-### Import
+### Import:
 
 ```javascript
 import type { MonthNames } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/MonthNames.ts
 
@@ -654,13 +654,13 @@ import type { MonthNames } from '@obewds/vueventus'
 
 ## MonthNamesTypes
 
-### Import
+### Import:
 
 ```javascript
 import type { MonthNamesTypes } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/MonthNamesTypes.ts
 
@@ -675,13 +675,13 @@ import type { MonthNamesTypes } from '@obewds/vueventus'
 
 ## SizesButtons
 
-### Import
+### Import:
 
 ```javascript
 import type { SizesButtons } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/SizesButtons.ts
 
@@ -696,13 +696,13 @@ import type { SizesButtons } from '@obewds/vueventus'
 
 ## SizesInputs
 
-### Import
+### Import:
 
 ```javascript
 import type { SizesInputs } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/SizesInputs.ts
 
@@ -717,13 +717,13 @@ import type { SizesInputs } from '@obewds/vueventus'
 
 ## SizesSelects
 
-### Import
+### Import:
 
 ```javascript
 import type { SizesSelects } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/SizesSelects.ts
 
@@ -738,13 +738,13 @@ import type { SizesSelects } from '@obewds/vueventus'
 
 ## SizesText
 
-### Import
+### Import:
 
 ```javascript
 import type { SizesText } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/SizesText.ts
 
@@ -759,13 +759,13 @@ import type { SizesText } from '@obewds/vueventus'
 
 ## SizesTextareas
 
-### Import
+### Import:
 
 ```javascript
 import type { SizesTextareas } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/SizesTextareas.ts
 
@@ -780,13 +780,13 @@ import type { SizesTextareas } from '@obewds/vueventus'
 
 ## SizesTextareasRows
 
-### Import
+### Import:
 
 ```javascript
 import type { SizesTextareasRows } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/SizesTextareasRows.ts
 
@@ -800,13 +800,13 @@ import type { SizesTextareasRows } from '@obewds/vueventus'
 
 ## TransitionsCustomOptions
 
-### Import
+### Import:
 
 ```javascript
 import type { TransitionsCustomOptions } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/TransitionsCustomOptions.ts
 
@@ -821,13 +821,13 @@ import type { TransitionsCustomOptions } from '@obewds/vueventus'
 
 ## TransitionsDurations
 
-### Import
+### Import:
 
 ```javascript
 import type { TransitionsDurations } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/TransitionsDurations.ts
 
@@ -842,13 +842,13 @@ import type { TransitionsDurations } from '@obewds/vueventus'
 
 ## TransitionsEasings
 
-### Import
+### Import:
 
 ```javascript
 import type { TransitionsEasings } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/TransitionsEasings.ts
 
@@ -863,13 +863,13 @@ import type { TransitionsEasings } from '@obewds/vueventus'
 
 ## TransitionsTransitions
 
-### Import
+### Import:
 
 ```javascript
 import type { TransitionsTransitions } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/TransitionsTransitions.ts
 
@@ -884,13 +884,13 @@ import type { TransitionsTransitions } from '@obewds/vueventus'
 
 ## VvAnchorProps
 
-### Import
+### Import:
 
 ```javascript
 import type { VvAnchorProps } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvAnchorProps.ts
 
@@ -905,13 +905,13 @@ import type { VvAnchorProps } from '@obewds/vueventus'
 
 ## VvButtonProps
 
-### Import
+### Import:
 
 ```javascript
 import type { VvButtonProps } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvButtonProps.ts
 
@@ -926,13 +926,13 @@ import type { VvButtonProps } from '@obewds/vueventus'
 
 ## VvCheckboxProps
 
-### Import
+### Import:
 
 ```javascript
 import type { VvCheckboxProps } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvCheckboxProps.ts
 
@@ -948,13 +948,13 @@ import type { VvCheckboxProps } from '@obewds/vueventus'
 
 ## VvColorModeButtonProps
 
-### Import
+### Import:
 
 ```javascript
 import type { VvColorModeButtonProps } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvColorModeButtonProps.ts
 
@@ -969,13 +969,13 @@ import type { VvColorModeButtonProps } from '@obewds/vueventus'
 
 ## VvElProps
 
-### Import
+### Import:
 
 ```javascript
 import type { VvElProps } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvElProps.ts
 
@@ -990,13 +990,13 @@ import type { VvElProps } from '@obewds/vueventus'
 
 ## VvInputProps
 
-### Import
+### Import:
 
 ```javascript
 import type { VvInputProps } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvInputProps.ts
 
@@ -1011,13 +1011,13 @@ import type { VvInputProps } from '@obewds/vueventus'
 
 ## VvListboxData
 
-### Import
+### Import:
 
 ```javascript
 import type { VvListboxData } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvListboxData.ts
 
@@ -1032,13 +1032,13 @@ import type { VvListboxData } from '@obewds/vueventus'
 
 ## VvListboxProps
 
-### Import
+### Import:
 
 ```javascript
 import type { VvListboxProps } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvListboxProps.ts
 
@@ -1055,13 +1055,13 @@ import type { VvListboxProps } from '@obewds/vueventus'
 
 ## VvListItemProps
 
-### Import
+### Import:
 
 ```javascript
 import type { VvListItemProps } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvListItemProps.ts
 
@@ -1078,13 +1078,13 @@ import type { VvListItemProps } from '@obewds/vueventus'
 
 ## VvListProps
 
-### Import
+### Import:
 
 ```javascript
 import type { VvListProps } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvListProps.ts
 
@@ -1101,13 +1101,13 @@ import type { VvListProps } from '@obewds/vueventus'
 
 ## VvRadioProps
 
-### Import
+### Import:
 
 ```javascript
 import type { VvRadioProps } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvRadioProps.ts
 
@@ -1122,13 +1122,13 @@ import type { VvRadioProps } from '@obewds/vueventus'
 
 ## VvRouterLinkProps
 
-### Import
+### Import:
 
 ```javascript
 import type { VvRouterLinkProps } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvRouterLinkProps.ts
 
@@ -1143,13 +1143,13 @@ import type { VvRouterLinkProps } from '@obewds/vueventus'
 
 ## VvSelectProps
 
-### Import
+### Import:
 
 ```javascript
 import type { VvSelectProps } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvSelectProps.ts
 
@@ -1167,13 +1167,13 @@ import type { VvSelectProps } from '@obewds/vueventus'
 
 ## VvTextareaProps
 
-### Import
+### Import:
 
 ```javascript
 import type { VvTextareaProps } from '@obewds/vueventus'
 ```
 
-### Module Code
+### Module Code (for reference):
 
 <<< @/../src/types/VvTextareaProps.ts
 
