@@ -28,7 +28,7 @@ import HelloVueVentus from '../src/components/HelloVueVentus.vue'
 // for Nuxt projects use:
 import HelloVueVentus from '../components/HelloVueVentus.vue'
 
-test('HelloVueVentus.vue component mounts successfully', async () => {
+test('HelloVueVentus.vue component imports successfully', async () => {
     expect(HelloVueVentus).toBeTruthy()
 })
 
