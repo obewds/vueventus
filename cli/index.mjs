@@ -372,6 +372,11 @@ async function installDepsAndFiles () {
             mergeJson(cwd + '/' + userOptions.name + '/package.json', cwd + '/package.json')
         )
 
+        // set up any dependency overrides (generally needed due to depreciated dep dep's or security issues in deps that aren't patched yet)
+        // TODO: figure out if this pattern is needed anywhere dynamically in the different stack installs
+        // run(`npm pkg set overrides["sourcemap-codec@1.4.8"]["@jridgewell/sourcemap-codec"]="1.4.15"`)
+
+
         // get the current tsconfig.json data
         const currentTsConfig = require(cwd + '/tsconfig.json')
 
