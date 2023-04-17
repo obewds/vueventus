@@ -257,6 +257,7 @@ function sidebarComponents() {
             collapsible: true,
             items: [
                 { text: 'VvAnchor', link: '/components/anchors/vv-anchor' },
+                { text: 'VvNuxtLink', link: '/components/anchors/vv-nuxt-link' },
                 { text: 'VvRouterLink', link: '/components/anchors/vv-router-link' },
             ]
         },{
