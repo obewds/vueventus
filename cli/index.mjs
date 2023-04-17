@@ -401,7 +401,9 @@ async function installDepsAndFiles () {
             run(`npm install vite-ssg vue-router @vueuse/head unplugin-vue-components vite-plugin-pages vite-plugin-prismjs vite-plugin-vue-markdown --save-dev`)
 
             run(`npm pkg set scripts.dev="vite --open"`)
-            run(`npm pkg set scripts.build="vite-ssg build"`)
+            // forcing NODE_ENV value to production to stop @fortawesome/vue-fontawesome dep
+            // from throwing warnings for icons that aren't found... but are in fact present in dev and builds
+            run(`npm pkg set scripts.build="NODE_ENV=production vite-ssg build"`)
             run(`npm pkg set scripts.preview="vite preview --open"`)
 
             installedPkgs = [...installedPkgs, ...['vite-ssg', 'vue-router', '@vueuse/head', 'unplugin-vue-components', 'vite-plugin-pages', 'vite-plugin-prismjs', 'vite-plugin-vue-markdown']]
