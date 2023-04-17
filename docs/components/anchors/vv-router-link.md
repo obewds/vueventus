@@ -19,9 +19,9 @@ title: VvRouterLink Component
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} is modeled on the [VvAnchor](/components/anchors/vv-anchor) component, but instead uses a Vue Router `router-link` tag/props instead of a `a` tag/props like the VvAnchor component uses.
+The {{ $frontmatter.title }} is modeled on the [VvAnchor](/components/anchors/vv-anchor) component, but instead uses a Vue Router `router-link` tag/props instead of an `a` tag/props like the VvAnchor component uses.
 
-The {{ $frontmatter.title }} provides variety of props and config module based settings to make a variety of anchor elements for applications with an extremely DRY implementation of atomic classes.
+The {{ $frontmatter.title }} provides variety of props and config module based settings to make a variety of anchor styled elements for applications with an extremely DRY implementation of atomic classes.
 
 
 
