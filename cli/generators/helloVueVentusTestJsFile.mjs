@@ -8,7 +8,7 @@ import { mount } from '@vue/test-utils'
 import HelloVueVentus from '../../src/components/HelloVueVentus.vue'
 
 
-test('HelloVueVentus.vue component mounts successfully', async () => {
+test('HelloVueVentus.vue component imports successfully', async () => {
     
     expect(HelloVueVentus).toBeTruthy()
 

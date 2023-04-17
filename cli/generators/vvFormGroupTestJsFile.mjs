@@ -8,7 +8,7 @@ import { mount } from '@vue/test-utils'
 import VvFormGroup from '../../../../src/components/vv/forms/VvFormGroup.vue'
 
 
-test('VvFormGroup.test.vue component mounts successfully', async () => {
+test('VvFormGroup.test.vue component imports successfully', async () => {
     
     expect(VvFormGroup).toBeTruthy()
 

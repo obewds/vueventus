@@ -9,7 +9,7 @@ import { VvConfig } from '@obewds/vueventus'
 import VvRouterLink from '../../../../src/components/vv/anchors/VvRouterLink.vue'
 
 
-test('VvRouterLink.vue component mounts successfully', async () => {
+test('VvRouterLink.vue component imports successfully', async () => {
     
     expect(VvRouterLink).toBeTruthy()
 

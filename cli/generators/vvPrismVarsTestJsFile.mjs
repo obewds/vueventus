@@ -8,7 +8,7 @@ import { mount } from '@vue/test-utils'
 import VvPrismVars from '../../../../src/components/vv/elements/VvPrismVars.vue'
 
 
-test('VvPrismVars.test.vue component mounts successfully', async () => {
+test('VvPrismVars.test.vue component imports successfully', async () => {
     
     expect(VvPrismVars).toBeTruthy()
 

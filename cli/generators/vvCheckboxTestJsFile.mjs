@@ -9,7 +9,7 @@ import { VvConfig } from '@obewds/vueventus'
 import VvCheckbox from '../../../../src/components/vv/inputs/VvCheckbox.vue'
 
 
-test('VvCheckbox.test.vue component mounts successfully', async () => {
+test('VvCheckbox.test.vue component imports successfully', async () => {
     
     expect(VvCheckbox).toBeTruthy()
 

@@ -9,7 +9,7 @@ import VvButton from '../../../../src/components/vv/buttons/VvButton.vue'
 import appVv from '../../../../src/app.vv'
 
 
-test('VvButton.vue component mounts successfully', async () => {
+test('VvButton.vue component imports successfully', async () => {
     
     expect(VvButton).toBeTruthy()
 

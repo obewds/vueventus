@@ -8,7 +8,7 @@ import { mount } from '@vue/test-utils'
 import VvScrollUp from '../../../../src/components/vv/buttons/VvScrollUp.vue'
 
 
-test('VvScrollUp.test.vue component mounts successfully', async () => {
+test('VvScrollUp.test.vue component imports successfully', async () => {
     
     expect(VvScrollUp).toBeTruthy()
 

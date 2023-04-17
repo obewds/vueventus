@@ -8,7 +8,7 @@ import { mount } from '@vue/test-utils'
 import VvEl from '../../../../src/components/vv/elements/VvEl.vue'
 
 
-test('VvEl.test.vue component mounts successfully', async () => {
+test('VvEl.test.vue component imports successfully', async () => {
     
     expect(VvEl).toBeTruthy()
 
