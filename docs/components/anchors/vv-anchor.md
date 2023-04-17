@@ -576,6 +576,7 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 
 ```html
 <!-- ./src/components/MyComponent.vue -->
+
 <script lang="ts">
 
     import { defineComponent } from 'vue'
