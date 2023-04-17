@@ -54,7 +54,7 @@ module.exports = {
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
         require('@tailwindcss/aspect-ratio'),
-        require('@tailwindcss/line-clamp'),
+        // require('@tailwindcss/line-clamp'), // line-clamp plugin added to twcss core in v3.3
         require('tailwind-scrollbar'),
         require('@headlessui/tailwindcss'),
     ],
