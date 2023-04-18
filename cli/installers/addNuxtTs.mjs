@@ -20,6 +20,7 @@ import vvInputVueFile from '../generators/vvInputVueFile.mjs'
 import vvListVueFile from '../generators/vvListVueFile.mjs'
 import vvListboxVueFile from '../generators/vvListboxVueFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
+import vvNuxtRouterLinkVueFile from '../generators/vvNuxtRouterLinkVueFile.mjs'
 import vvQuadFormGroupVueFile from '../generators/vvQuadFormGroupVueFile.mjs'
 import vvRadioVueFile from '../generators/vvRadioVueFile.mjs'
 import vvSelectVueFile from '../generators/vvSelectVueFile.mjs'
@@ -110,6 +111,7 @@ export default function (userOpts, stackObj, installPkgsArr) {
     fs.outputFileSync(composVv + 'List.vue', vvListVueFile(true), { flag: 'w+' })
     fs.outputFileSync(composVv + 'Listbox.vue', vvListboxVueFile(true), { flag: 'w+' })
     fs.outputFileSync(composVv + 'ListItem.vue', vvListItemVueFile(true), { flag: 'w+' })
+    fs.outputFileSync(composVv + 'NuxtRouterLink.vue', vvNuxtRouterLinkVueFile(true), { flag: 'w+' })
     fs.outputFileSync(composVv + 'QuadFormGroup.vue', vvQuadFormGroupVueFile(true), { flag: 'w+' })
     fs.outputFileSync(composVv + 'Radio.vue', vvRadioVueFile(true), { flag: 'w+' })
     fs.outputFileSync(composVv + 'Select.vue', vvSelectVueFile(true), { flag: 'w+' })
