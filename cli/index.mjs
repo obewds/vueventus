@@ -5,7 +5,7 @@ import fs from 'fs-extra'
 import gradient from 'gradient-string'
 import inquirer from 'inquirer'
 import merge from 'deepmerge'
-import rimraf from 'rimraf'
+import { rimraf } from 'rimraf'
 
 import addDep from './installers/addDep.mjs'
 import addNuxtTs from './installers/addNuxtTs.mjs'
@@ -374,7 +374,7 @@ async function installDepsAndFiles () {
 
         // set up any dependency overrides (generally needed due to depreciated dep dep's or security issues in deps that aren't patched yet)
         // TODO: figure out if this pattern is needed anywhere dynamically in the different stack installs
-        // run(`npm pkg set overrides["sourcemap-codec@1.4.8"]["@jridgewell/sourcemap-codec"]="1.4.15"`)
+        run(`npm pkg set overrides["sourcemap-codec"]["@jridgewell/sourcemap-codec"]="1.4.15"`)
 
 
         // get the current tsconfig.json data
