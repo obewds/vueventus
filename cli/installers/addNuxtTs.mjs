@@ -9,6 +9,7 @@ import onPageLoadColorModesNuxtJsFile from '../generators/onPageLoadColorModesNu
 import pagesIndexNuxtFile from '../generators/pagesIndexNuxtFile.mjs'
 import nuxtConfigTsFile from '../generators/nuxtConfigTsFile.mjs'
 import tailwindConfigTsNuxtFile from '../generators/tailwindConfigTsNuxtFile.mjs'
+import tailwindCssFile from '../generators/tailwindCssFile.mjs'
 
 import vvAnchorVueFile from '../generators/vvAnchorVueFile.mjs'
 import vvButtonVueFile from '../generators/vvButtonVueFile.mjs'
@@ -62,9 +63,17 @@ export default function (userOpts, stackObj, installPkgsArr) {
 
 
     // install tailwind css
-    run(`npm install @nuxtjs/tailwindcss --save-dev`)
 
-    installPkgsArr.push('@nuxtjs/tailwindcss')
+    // run(`npm install @nuxtjs/tailwindcss --save-dev`) // not working as of mid april 2023
+    run(`npm install tailwindcss postcss autoprefixer --save-dev`)
+
+    // install tailwind.css directives file
+    fs.outputFileSync(cwd + stackObj.files.tailwindCss.path + stackObj.files.tailwindCss.name, tailwindCssFile(true), { flag: 'w+' })
+
+    // installPkgsArr.push('@nuxtjs/tailwindcss') // not working as of mid april 2023
+    installPkgsArr.push('tailwindcss')
+    installPkgsArr.push('postcss')
+    installPkgsArr.push('autoprefixer')
 
     // install tailwind.config.ts file
     if ( userOpts.files.includes( stackObj.files.tailwindConfigTs.name ) ) {
