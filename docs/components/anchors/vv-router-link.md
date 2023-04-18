@@ -4,6 +4,8 @@ title: VvRouterLink Component
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+    import DocsTypingDownstreamText from '../../../src/views/compos/DocsTypingDownstreamText.vue'
+
     import { VvAnchor, VvConfig } from '../../../src/index'
     import appColors from '../../../src/data/app.color.data.json'
 
@@ -19,9 +21,9 @@ title: VvRouterLink Component
 
 # {{ $frontmatter.title }}
 
-The {{ $frontmatter.title }} is modeled on the [VvAnchor](/components/anchors/vv-anchor) component, but instead uses a Vue Router `router-link` tag/props instead of a `a` tag/props like the VvAnchor component uses.
+The {{ $frontmatter.title }} is modeled after the [VvAnchor](/components/anchors/vv-anchor) component, but instead uses a Vue Router `router-link` tag/props instead of an `a` tag/props like the VvAnchor component uses.
 
-The {{ $frontmatter.title }} provides variety of props and config module based settings to make a variety of anchor elements for applications with an extremely DRY implementation of atomic classes.
+The {{ $frontmatter.title }} provides variety of props and config module based settings to make a variety of anchor styled elements for applications with an extremely DRY implementation of atomic classes.
 
 
 
@@ -56,7 +58,7 @@ Default: **`{{ VvConfig.defaults.VvRouterLink.button }}`**
 
 When the {{ $frontmatter.title }} `button` prop value is `true`, the output element changes from normal anchor element styling set in the [Anchor Config Module](/modules/configs/anchors) to button styling that is driven by the Tailwind CSS classes in the [Button Config Module](/modules/configs/buttons).
 
-### Syntax
+### Syntax:
 
 ```html
 <VvRouterLink
@@ -69,7 +71,7 @@ When the {{ $frontmatter.title }} `button` prop value is `true`, the output elem
 </VvRouterLink>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor
@@ -96,7 +98,7 @@ Default: **`{{ VvConfig.defaults.VvRouterLink.buttonBlock }}`**
 
 The {{ $frontmatter.title }} `buttonBlock` prop sets the component instance to use block-level base classes making the returned `<a>` element a full width and block-level button styled element.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvRouterLink
@@ -110,7 +112,7 @@ The {{ $frontmatter.title }} `buttonBlock` prop sets the component instance to u
 </VvRouterLink>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor :button="true" :button-block="true" palette="solid" color="primary" href="#" :style="whiteColorStyles">
@@ -132,7 +134,7 @@ Default: **`{{ VvConfig.defaults.VvRouterLink.buttonFab }}`**
 
 The {{ $frontmatter.title }} `buttonFab` prop sets the component instance to use base classes with equal width and height classes making the returned `<anchor>` element a square element that can also be styled as a circle using a Tailwind CSS `.rounded-full` class.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvRouterLink
@@ -153,7 +155,7 @@ The {{ $frontmatter.title }} `buttonFab` prop sets the component instance to use
 </VvRouterLink>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor :button="true" :button-fab="true" palette="solid" :style="grayColorStyles">
@@ -174,13 +176,13 @@ The {{ $frontmatter.title }} `buttonFab` prop sets the component instance to use
 
 
 ## Prop: buttonSize
-<!-- TODO: change this type to new PropType keyof syntax -->
-Type: **`String`**  
+
+Type: **`String`** as PropType<keyof **[SizesButtons](/typescript/interfaces#sizesbuttons)**>  
 Default: **`"{{ VvConfig.defaults.VvRouterLink.buttonSize }}"`**
 
 The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classes applied to the output element. By default, these classes match the size classes (and examples) over in the [VvButton Prop: Size](/components/buttons/vv-button#prop-size) docs section.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvRouterLink
@@ -193,7 +195,7 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 </VvRouterLink>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor
@@ -207,9 +209,50 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
     </VvAnchor>
 </div>
 
-### Typing for Downstream Component Instances
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+### Typing for Downstream Component Instances:
+
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+```html
+<!-- ./src/components/MyComponent.vue -->
+
+<script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { SizesButtons } from '@obewds/vueventus'
+
+    import { defineComponent } from 'vue'
+    import VvRouterLink from './vv/anchors/VvRouterLink.vue'
+
+    export default defineComponent({
+
+        components: { VvRouterLink },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            buttonSize: {
+                type: String as PropType<keyof SizesButtons>,
+                default: 'md',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvRouterLink
+        :href="href"
+        :button="true"
+        :button-size="buttonSize"
+    >
+        buttonSize prop example
+    </VvRouterLink>
+</template>
+```
 
 
 
@@ -219,8 +262,8 @@ Coming Soon!
 
 
 ## Prop: color
-<!-- TODO: change this type to new PropType keyof syntax -->
-Type: **`String`**  
+
+Type: **`String`** as PropType<keyof **[DefaultPaletteColors](/typescript/interfaces#defaultpalettecolors)**>  
 Default: **`"{{ VvConfig.defaults.VvRouterLink.color }}"`**
 
 The {{ $frontmatter.title }} `color` prop sets the component instance color based both on the `color` prop and the `palette` prop values together with the `button` prop value.
@@ -229,7 +272,7 @@ If the `button` prop value is `false` and the component is being used to output 
 
 Conversely, if the `button` prop value is `true` and button mode is enabled to output a visually button styled `<router-link>` element, then the `color` prop value pulls classes from a button palette.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvRouterLink color="default">
@@ -249,7 +292,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 </VvRouterLink>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor color="default">
@@ -271,9 +314,49 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
-### Typing for Downstream Component Instances
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+### Typing for Downstream Component Instances:
+
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+```html
+<!-- ./src/components/MyComponent.vue -->
+
+<script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { DefaultPaletteColors } from '@obewds/vueventus'
+
+    import { defineComponent } from 'vue'
+    import VvRouterLink from './vv/anchors/VvRouterLink.vue'
+
+    export default defineComponent({
+
+        components: { VvRouterLink },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            color: {
+                type: String as PropType<keyof DefaultPaletteColors>,
+                default: 'primary',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvRouterLink
+        :href="href"
+        :color="color"
+    >
+        color prop example
+    </VvRouterLink>
+</template>
+```
 
 
 
@@ -288,7 +371,7 @@ Default: **`{{ VvConfig.defaults.VvRouterLink.debug }}`**
 
 The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-router-link-` prefixed HTML attributes.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvRouterLink :debug="true">
@@ -302,8 +385,8 @@ The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a compo
 
 
 ## Prop: palette
-<!-- TODO: change this type to new PropType keyof syntax -->
-Type: **`String`**  
+
+Type: **`String`** as PropType<keyof **[DefaultValidationPalettes](/typescript/interfaces#defaultvalidationpalettes)** | keyof **[DefaultButtonPalettes](/typescript/interfaces#Defaultbuttonpalettes)**>  
 Default: **`"{{ VvConfig.defaults.VvRouterLink.palette }}"`**
 
 The {{ $frontmatter.title }} `palette` prop sets the component instance color based both on the `palette` prop and the `color` prop values together with the `button` prop value.
@@ -312,7 +395,7 @@ If the `button` prop value is `false` and the component is being used to output 
 
 Conversely, if the `button` prop value is `true` and button mode is enabled to output a visually button styled `<router-link>` element, then the `color` prop value pulls classes from a button palette.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvRouterLink palette="default" color="default">
@@ -354,7 +437,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 </VvRouterLink>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor palette="default" color="default">
@@ -398,9 +481,48 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
-### Typing for Downstream Component Instances
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+### Typing for Downstream Component Instances:
+
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+```html
+<!-- ./src/components/MyComponent.vue -->
+
+<script lang="ts">
+
+    import { defineComponent } from 'vue'
+    import VvAnchor from './vv/anchors/VvAnchor.vue'
+    import type { PropType } from 'vue'
+    import type { DefaultButtonPalettes, DefaultPalettes } from '@obewds/vueventus'
+
+    export default defineComponent({
+
+        components: { VvAnchor },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            palette: {
+                type: String as PropType<keyof DefaultPalettes | keyof DefaultButtonPalettes>,
+                default: 'default', // 'default' is an anchor palette, could use 'solid' or 'outline' button palettes, too!
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvAnchor
+        :href="href"
+        :palette="palette"
+    >
+        palette prop example
+    </VvAnchor>
+</template>
+```
 
 
 
@@ -409,13 +531,13 @@ Coming Soon!
 
 
 ## Prop: textSize
-<!-- TODO: change this type to new PropType keyof syntax -->
-Type: **`String`**  
+
+Type: **`String`** as PropType<keyof **[SizesText](/typescript/interfaces#sizestext)**>  
 Default: **`"{{ VvConfig.defaults.VvRouterLink.textSize }}"`**
 
 The {{ $frontmatter.title }} `textSize` prop sets the component instance size-based classes which in the context of anchor elements typically involves font size atomic classes.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvRouterLink to="/" text-size="lg">
@@ -423,7 +545,7 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 </VvRouterLink>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor href="/" text-size="lg">
@@ -515,9 +637,49 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 </div>
 :::
 
-### Typing for Downstream Component Instances
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+### Typing for Downstream Component Instances:
+
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+```html
+<!-- ./src/components/MyComponent.vue -->
+
+<script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { SizesText } from '@obewds/vueventus'
+
+    import { defineComponent } from 'vue'
+    import VvRouterLink from './vv/anchors/VvRouterLink.vue'
+
+    export default defineComponent({
+
+        components: { VvRouterLink },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            textSize: {
+                type: String as PropType<keyof SizesText>,
+                default: '2xl',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvRouterLink
+        :href="href"
+        :text-size="textSize"
+    >
+        text-size/textSize example
+    </VvRouterLink>
+</template>
+```
 
 
 
@@ -530,7 +692,7 @@ Default: **`"{{ VvConfig.defaults.VvRouterLink.to }}"`**
 
 The {{ $frontmatter.title }} `to` prop value sets the to -> href value for the output `<router-link>` component.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvRouterLink to="/">
@@ -538,7 +700,7 @@ The {{ $frontmatter.title }} `to` prop value sets the to -> href value for the o
 </VvRouterLink>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor href="/">
@@ -557,7 +719,7 @@ The {{ $frontmatter.title }} `to` prop value sets the to -> href value for the o
 
 The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child elements/nodes into the component.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvRouterLink to="#">
@@ -565,7 +727,7 @@ The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child 
 </VvRouterLink>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor href="/">

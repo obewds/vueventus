@@ -500,6 +500,7 @@ npm run coverage
 │     ├─ Input.vue
 │     ├─ Listbox.vue
 │     ├─ ListItem.vue
+│     ├─ NuxtRouterLink.vue
 │     ├─ QuadFormGroup.vue
 │     ├─ Radio.vue
 │     ├─ Select.vue

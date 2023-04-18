@@ -9,7 +9,7 @@ import { VvConfig } from '@obewds/vueventus'
 import VvInput from '../../../../src/components/vv/inputs/VvInput.vue'
 
 
-test('VvInput.test.vue component mounts successfully', async () => {
+test('VvInput.test.vue component imports successfully', async () => {
     
     expect(VvInput).toBeTruthy()
 

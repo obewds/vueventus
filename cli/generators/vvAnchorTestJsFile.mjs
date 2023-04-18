@@ -11,7 +11,7 @@ import VvAnchor from '${importsPath}components/vv/anchors/VvAnchor.vue'
 import appVv from '${importsPath}app.vv'
 
 
-test('VvAnchor.vue component mounts successfully', async () => {
+test('VvAnchor.vue component imports successfully', async () => {
     
     expect(VvAnchor).toBeTruthy()
 

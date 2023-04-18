@@ -4,6 +4,8 @@ title: VvAnchor Component
 
 <script setup>
     import DocsPackageVersion from '../../../src/views/compos/DocsPackageVersion.vue'
+    import DocsTypingDownstreamText from '../../../src/views/compos/DocsTypingDownstreamText.vue'
+    
     import { VvAnchor, VvConfig } from '../../../src/index'
     import appColors from '../../../src/data/app.color.data.json'
 
@@ -64,7 +66,7 @@ Default: **`{{ VvConfig.defaults.VvAnchor.button }}`**
 
 When the {{ $frontmatter.title }} `button` prop value is `true`, the output element changes from normal anchor element styling set in the [Anchor Config Module](/modules/configs/anchors) to button styling that is driven by the Tailwind CSS classes in the [Button Config Module](/modules/configs/buttons).
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor
@@ -77,7 +79,7 @@ When the {{ $frontmatter.title }} `button` prop value is `true`, the output elem
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor
@@ -104,7 +106,7 @@ Default: **`{{ VvConfig.defaults.VvAnchor.buttonBlock }}`**
 
 The {{ $frontmatter.title }} `buttonBlock` prop sets the component instance to use block-level base classes making the returned `<a>` element a full width and block-level button styled element.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor
@@ -118,7 +120,7 @@ The {{ $frontmatter.title }} `buttonBlock` prop sets the component instance to u
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor :button="true" :button-block="true" palette="solid" color="primary" href="#" :style="whiteColorStyles">
@@ -140,7 +142,7 @@ Default: **`{{ VvConfig.defaults.VvAnchor.buttonFab }}`**
 
 The {{ $frontmatter.title }} `buttonFab` prop sets the component instance to use base classes with equal width and height classes making the returned `<anchor>` element a square element that can also be styled as a circle using a Tailwind CSS `.rounded-full` class.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor
@@ -161,7 +163,7 @@ The {{ $frontmatter.title }} `buttonFab` prop sets the component instance to use
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor :button="true" :button-fab="true" palette="solid" :style="grayColorStyles">
@@ -188,7 +190,7 @@ Default: **`"{{ VvConfig.defaults.VvAnchor.buttonSize }}"`**
 
 The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classes applied to the output element. By default, these classes match the size classes (and examples) over in the [VvButton Prop: Size](/components/buttons/vv-button#prop-size) docs section.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor
@@ -201,7 +203,7 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor
@@ -216,18 +218,20 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 </div>
 
 
-### Typing for Downstream Component Instances
+### Typing for Downstream Component Instances:
 
-If you are building a component that uses a nested {{ $frontmatter.title }} and want to pass through strict typing into your code base when using your built component, you can add typing for Vue props like this:
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
 
 ```html
 <!-- ./src/components/MyComponent.vue -->
+
 <script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { SizesButtons } from '@obewds/vueventus'
 
     import { defineComponent } from 'vue'
     import VvAnchor from './vv/anchors/VvAnchor.vue'
-    import type { PropType } from 'vue'
-    import type { SizesButtons } from '@obewds/vueventus'
 
     export default defineComponent({
 
@@ -267,8 +271,8 @@ If you are building a component that uses a nested {{ $frontmatter.title }} and 
 
 
 ## Prop: color
-<!-- TODO: change this type to new PropType keyof syntax -->
-Type: **`String`**  
+
+Type: **`String`** as PropType<keyof **[DefaultPaletteColors](/typescript/interfaces#defaultpalettecolors)**>  
 Default: **`"{{ VvConfig.defaults.VvAnchor.color }}"`**
 
 The {{ $frontmatter.title }} `color` prop sets the component instance color based both on the `color` prop and the `palette` prop values together with the `button` prop value.
@@ -279,7 +283,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 !!!include(snippets/vvAnchorCompoPaletteButtonTip.md)!!!
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor color="default">
@@ -299,7 +303,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor color="default">
@@ -321,9 +325,49 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
-### Typing for Downstream Component Instances
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+### Typing for Downstream Component Instances:
+
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+```html
+<!-- ./src/components/MyComponent.vue -->
+
+<script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { DefaultPaletteColors } from '@obewds/vueventus'
+
+    import { defineComponent } from 'vue'
+    import VvAnchor from './vv/anchors/VvAnchor.vue'
+
+    export default defineComponent({
+
+        components: { VvAnchor },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            color: {
+                type: String as PropType<keyof DefaultPaletteColors>,
+                default: 'primary',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvAnchor
+        :href="href"
+        :color="buttonSize"
+    >
+        buttonSize prop example
+    </VvAnchor>
+</template>
+```
 
 
 
@@ -338,7 +382,7 @@ Default: **`{{ VvConfig.defaults.VvAnchor.debug }}`**
 
 The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a component instance. When in debugging mode, each component instance prop value can be viewed through `data-vv-anchor-` prefixed HTML attributes.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor :debug="true">
@@ -346,7 +390,7 @@ The {{ $frontmatter.title }} `debug` prop toggles the debugging state of a compo
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor :debug="true">
@@ -370,7 +414,7 @@ Default: **`{{ VvConfig.defaults.VvAnchor.external }}`**
 
 When the {{ $frontmatter.title }} `external` prop value is `true`, the output `<anchor>` element will have a `target="_blank"` and `rel="noopener noreferrer"` attributes/values so links that leave the application space open in a new tab for users.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor
@@ -381,7 +425,7 @@ When the {{ $frontmatter.title }} `external` prop value is `true`, the output `<
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor :external="true" href="https://obewds.github.io/vueventus/components/anchors/vv-anchor.html">
@@ -403,7 +447,7 @@ Default: **`"{{ VvConfig.defaults.VvAnchor.href }}"`**
 
 The {{ $frontmatter.title }} `href` prop value sets the href value for the output `<a>` element.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor href="#">
@@ -411,7 +455,7 @@ The {{ $frontmatter.title }} `href` prop value sets the href value for the outpu
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div data-css-override class="w-full pt-4">
     <VvAnchor href="#">
@@ -439,7 +483,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 !!!include(snippets/vvAnchorCompoPaletteButtonTip.md)!!!
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor palette="default" color="default">
@@ -481,7 +525,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor palette="default" color="default">
@@ -526,12 +570,13 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
 
-### Typing for Downstream Component Instances
+### Typing for Downstream Component Instances:
 
-If you are building a component that uses a nested {{ $frontmatter.title }} and want to pass through strict typing into your code base when using your built component, you can add typing for Vue props like this:
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
 
 ```html
 <!-- ./src/components/MyComponent.vue -->
+
 <script lang="ts">
 
     import { defineComponent } from 'vue'
@@ -577,13 +622,13 @@ If you are building a component that uses a nested {{ $frontmatter.title }} and 
 
 
 ## Prop: textSize
-<!-- TODO: change this type to new PropType keyof syntax -->
-Type: **`String`**  
+
+Type: **`String`** as PropType<keyof **[SizesText](/typescript/interfaces#sizestext)**>  
 Default: **`"{{ VvConfig.defaults.VvAnchor.textSize }}"`**
 
 The {{ $frontmatter.title }} `textSize` prop sets the component instance size-based classes which in the context of anchor elements typically involves font size atomic classes.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor href="/" text-size="lg">
@@ -591,7 +636,7 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor href="/" text-size="lg">
@@ -684,9 +729,49 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 :::
 
 
-### Typing for Downstream Component Instances
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+### Typing for Downstream Component Instances:
+
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+```html
+<!-- ./src/components/MyComponent.vue -->
+
+<script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { SizesText } from '@obewds/vueventus'
+
+    import { defineComponent } from 'vue'
+    import VvAnchor from './vv/anchors/VvAnchor.vue'
+
+    export default defineComponent({
+
+        components: { VvAnchor },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            textSize: {
+                type: String as PropType<keyof SizesText>,
+                default: '2xl',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvAnchor
+        :href="href"
+        :text-size="textSize"
+    >
+        text-size/textSize example
+    </VvAnchor>
+</template>
+```
 
 
 
@@ -699,7 +784,7 @@ Coming Soon!
 
 The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child elements/nodes into the component.
 
-### Syntax
+### Syntax:
 
 ```html
 <VvAnchor href="#">
@@ -707,7 +792,7 @@ The {{ $frontmatter.title }} has a standard `#default` Vue slot to insert child 
 </VvAnchor>
 ```
 
-### Result
+### Result:
 
 <div class="w-full pt-4">
     <VvAnchor href="#">

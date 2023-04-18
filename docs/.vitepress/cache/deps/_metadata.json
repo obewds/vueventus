@@ -1,13 +1,38 @@
 {
-  "hash": "1a9f7727",
-  "browserHash": "8018e858",
+  "hash": "45d3769f",
+  "browserHash": "ebcdbe1c",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "1b47a96d",
+      "fileHash": "62c0f712",
+      "needsInterop": false
+    },
+    "@thebespokepixel/es-tinycolor": {
+      "src": "../../../../node_modules/@thebespokepixel/es-tinycolor/esm/index.js",
+      "file": "@thebespokepixel_es-tinycolor.js",
+      "fileHash": "e6550827",
+      "needsInterop": false
+    },
+    "deepmerge": {
+      "src": "../../../../node_modules/deepmerge/dist/cjs.js",
+      "file": "deepmerge.js",
+      "fileHash": "db4f1930",
+      "needsInterop": true
+    },
+    "@headlessui/vue": {
+      "src": "../../../../node_modules/@headlessui/vue/dist/headlessui.esm.js",
+      "file": "@headlessui_vue.js",
+      "fileHash": "aaedf726",
       "needsInterop": false
     }
   },
-  "chunks": {}
+  "chunks": {
+    "chunk-R647EDCJ": {
+      "file": "chunk-R647EDCJ.js"
+    },
+    "chunk-RSJERJUL": {
+      "file": "chunk-RSJERJUL.js"
+    }
+  }
 }

@@ -8,7 +8,7 @@ import { mount } from '@vue/test-utils'
 import VvPrism from '../../../../src/components/vv/elements/VvPrism.vue'
 
 
-test('VvPrism.test.vue component mounts successfully', async () => {
+test('VvPrism.test.vue component imports successfully', async () => {
     
     expect(VvPrism).toBeTruthy()
 

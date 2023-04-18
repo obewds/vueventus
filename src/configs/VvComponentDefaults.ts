@@ -139,6 +139,18 @@ export default <ConfigDefaults>{
         symbolColor: 'primary',
         symbolPalette: 'default',
     },
+    "VvNuxtRouterLink": {
+        button: false,
+        buttonBlock: false,
+        buttonFab: false,
+        buttonSize: 'md',
+        color: 'default',
+        debug: false,
+        external: false,
+        to: '/',
+        palette: 'default',
+        textSize: 'md',
+    },
     "VvPrism": {
         debug: false,
         prismVars: true,

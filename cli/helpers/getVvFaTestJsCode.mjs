@@ -15,7 +15,7 @@ import VvFa from '../../../../src/components/vv/elements/VvFa.vue'
 ${fsSrcImport}
 
 
-test('VvFa.test.vue component mounts successfully', async () => {
+test('VvFa.test.vue component imports successfully', async () => {
     
     expect(VvFa).toBeTruthy()
 

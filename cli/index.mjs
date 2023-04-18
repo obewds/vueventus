@@ -372,6 +372,11 @@ async function installDepsAndFiles () {
             mergeJson(cwd + '/' + userOptions.name + '/package.json', cwd + '/package.json')
         )
 
+        // set up any dependency overrides (generally needed due to depreciated dep dep's or security issues in deps that aren't patched yet)
+        // TODO: figure out if this pattern is needed anywhere dynamically in the different stack installs
+        // run(`npm pkg set overrides["sourcemap-codec@1.4.8"]["@jridgewell/sourcemap-codec"]="1.4.15"`)
+
+
         // get the current tsconfig.json data
         const currentTsConfig = require(cwd + '/tsconfig.json')
 
@@ -401,7 +406,9 @@ async function installDepsAndFiles () {
             run(`npm install vite-ssg vue-router @vueuse/head unplugin-vue-components vite-plugin-pages vite-plugin-prismjs vite-plugin-vue-markdown --save-dev`)
 
             run(`npm pkg set scripts.dev="vite --open"`)
-            run(`npm pkg set scripts.build="vite-ssg build"`)
+            // forcing NODE_ENV value to production to stop @fortawesome/vue-fontawesome dep
+            // from throwing warnings for icons that aren't found... but are in fact present in dev and builds
+            run(`npm pkg set scripts.build="NODE_ENV=production vite-ssg build"`)
             run(`npm pkg set scripts.preview="vite preview --open"`)
 
             installedPkgs = [...installedPkgs, ...['vite-ssg', 'vue-router', '@vueuse/head', 'unplugin-vue-components', 'vite-plugin-pages', 'vite-plugin-prismjs', 'vite-plugin-vue-markdown']]

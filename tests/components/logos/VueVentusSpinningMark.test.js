@@ -7,7 +7,7 @@ import { VueVentusSpinningMark } from '../../../src/index'
 
 
 
-test('VueVentusSpinningMark.vue component mounts successfully', async () => {
+test('VueVentusSpinningMark.vue component imports successfully', async () => {
 
     expect(VueVentusSpinningMark).toBeTruthy()
 

@@ -7,7 +7,7 @@ import { VvColorModeButton } from '../../../src/index'
 
 
 
-test('VvColorModeButton.vue component mounts successfully', async () => {
+test('VvColorModeButton.vue component imports successfully', async () => {
 
     expect(VvColorModeButton).toBeTruthy()
 

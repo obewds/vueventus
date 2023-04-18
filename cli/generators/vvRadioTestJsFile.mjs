@@ -8,7 +8,7 @@ import { mount } from '@vue/test-utils'
 import VvRadio from '../../../../src/components/vv/inputs/VvRadio.vue'
 
 
-test('VvRadio.test.vue component mounts successfully', async () => {
+test('VvRadio.test.vue component imports successfully', async () => {
     
     expect(VvRadio).toBeTruthy()
 

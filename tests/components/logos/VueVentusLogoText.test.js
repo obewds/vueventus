@@ -7,7 +7,7 @@ import { VueVentusLogoText } from '../../../src/index'
 
 
 
-test('VueVentusLogoText.vue component mounts successfully', async () => {
+test('VueVentusLogoText.vue component imports successfully', async () => {
 
     expect(VueVentusLogoText).toBeTruthy()
 
