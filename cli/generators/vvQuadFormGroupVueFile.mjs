@@ -233,14 +233,13 @@ const output = `<!-- ${commentPath} -->
     import type { DefaultPaletteColors, DefaultPalettes, SizesText } from '@obewds/vueventus'
 
     import { defineComponent } from 'vue'
-    import { VvEl as LibVvEl, VvQuadFormGroup as LibVvQuadFormGroup } from '@obewds/vueventus'
+    import { VvEl as LibVvEl } from '@obewds/vueventus'
     import appVv from '${appVvPath}'
 
     export default defineComponent({
 
         components: {
             LibVvEl,
-            LibVvQuadFormGroup,
         },
 
         props: {
