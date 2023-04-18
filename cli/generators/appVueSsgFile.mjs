@@ -59,7 +59,6 @@ const output = `<!-- ./src/App.vue -->
         <aside class="fixed bottom-0 right-0 text-right z-40">
             <nav class="relative bottom-0 pb-3 pr-4">
                 <div class="flex flex-col justify-end space-y-3">
-                    <VvFa family="fas" icon="house" size="2x"/>
                     <VvScrollUp/>
                     <VvColorModeButton palette="solid" color="primary" :mode="(colorMode)"/>
                 </div>
