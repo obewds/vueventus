@@ -14,10 +14,10 @@ export default function (optsObj) {
 
     if (opts.faPro === true || opts.faFree === true) {
         if (opts.faFree === true) {
-            fontAwesomeLine = "import './fontawesome'"
+            fontAwesomeLine = "import './fontAwesome'"
         }
         if (opts.faPro === true) {
-            fontAwesomeLine = "import './fontawesomePro'"
+            fontAwesomeLine = "import './fontAwesomePro'"
         }
     }
 
