@@ -86,7 +86,7 @@ title: Typescript Modules
 * [VvListItemProps](/typescript/interfaces#vvlistitemprops)
 * [VvListProps](/typescript/interfaces#vvlistprops)
 * [VvRadioProps](/typescript/interfaces#vvradioprops)
-* [VvRouterLinkProps](/typescript/interfaces#routerlinkprops)
+* [VvRouterLinkProps](/typescript/interfaces#vvrouterlinkprops)
 * [VvSelectProps](/typescript/interfaces#vvselectprops)
 * [VvTextareaProps](/typescript/interfaces#vvtextareaprops)
 
