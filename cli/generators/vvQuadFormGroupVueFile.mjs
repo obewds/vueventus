@@ -110,7 +110,7 @@ let templateMarkup = `<template>
             :data-vv-quad-form-group-prop-top-wrapper-classes="debug ? topWrapperClasses : null"
         >
 
-            <VvEl
+            <LibVvEl
                 tag="label"
                 :for="labelFor"
                 :class="labelClasses"
@@ -123,7 +123,7 @@ let templateMarkup = `<template>
                 :data-vv-quad-form-group-prop-label-text-size="debug ? labelTextSize : null"
             >
                 {{ label }}
-            </VvEl>
+            </LibVvEl>
 
             <div
                 :class="topSlotClasses"
@@ -151,7 +151,7 @@ let templateMarkup = `<template>
                 :data-vv-quad-form-group-prop-text-parent-classes="debug ? textParentClasses : null"
             >
 
-                <VvEl
+                <LibVvEl
                     v-if="!displayError && !displayHelp && !displaySuccess"
                     tag="div"
                     :class="helpClasses"
@@ -161,9 +161,9 @@ let templateMarkup = `<template>
                 >
                     <!-- placeholder to toggle opposite of messages & prevent layout shift -->
                     <span class="invisible">&nbsp;{{ helpText }}</span>
-                </VvEl>
+                </LibVvEl>
 
-                <VvEl
+                <LibVvEl
                     v-if="displayHelp"
                     tag="div"
                     :class="helpClasses"
@@ -176,9 +176,9 @@ let templateMarkup = `<template>
                     :data-vv-quad-form-group-prop-help-text-size="debug ? helpTextSize : null"
                 >
                     {{ helpText }}
-                </VvEl>
+                </LibVvEl>
 
-                <VvEl
+                <LibVvEl
                     v-if="displaySuccess"
                     tag="div"
                     :class="successClasses"
@@ -191,9 +191,9 @@ let templateMarkup = `<template>
                     :data-vv-quad-form-group-prop-success-text-size="debug ? successTextSize : null"
                 >
                     {{ successText }}
-                </VvEl>
+                </LibVvEl>
 
-                <VvEl
+                <LibVvEl
                     v-if="displayError === true"
                     tag="div"
                     :class="errorClasses"
@@ -206,7 +206,7 @@ let templateMarkup = `<template>
                     :data-vv-quad-form-group-prop-error-text-size="debug ? errorTextSize : null"
                 >
                     {{ errorText }}
-                </VvEl>
+                </LibVvEl>
 
             </div>
 
@@ -233,12 +233,15 @@ const output = `<!-- ${commentPath} -->
     import type { DefaultPaletteColors, DefaultPalettes, SizesText } from '@obewds/vueventus'
 
     import { defineComponent } from 'vue'
-    import { VvQuadFormGroup as LibVvQuadFormGroup } from '@obewds/vueventus'
+    import { VvEl as LibVvEl, VvQuadFormGroup as LibVvQuadFormGroup } from '@obewds/vueventus'
     import appVv from '${appVvPath}'
 
     export default defineComponent({
 
-        components: { LibVvQuadFormGroup },
+        components: {
+            LibVvEl,
+            LibVvQuadFormGroup,
+        },
 
         props: {
             bottomSlotClasses: {
@@ -383,4 +386,3 @@ ${templateMarkup}
 return output
 
 }
-        
