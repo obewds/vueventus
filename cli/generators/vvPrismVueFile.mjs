@@ -6,7 +6,7 @@ let commentPath = useNuxtPaths ? './components/Vv/Prism.vue' : './src/components
 
 let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
 let appColorsPath = useNuxtPaths ? '../../app.colors.json' : '../../../app.colors.json'
-let vvPrismVarsPath = useNuxtPaths ? './VvPrismVars.vue' : './PrismVars.vue'
+let vvPrismVarsPath = useNuxtPaths ? './PrismVars.vue' : './VvPrismVars.vue'
 
 const output = `<!-- ${commentPath} -->
 
