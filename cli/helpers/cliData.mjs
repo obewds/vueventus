@@ -927,6 +927,44 @@ let baseNuxtDeps = {
         packages: ['@heroicons/vue'],
         files: {},
     },
+    prism: {
+        checked: true,
+        name: 'Prism.js',
+        install: 'npm install prismjs vite-plugin-prismjs @types/prismjs prism-theme-vars --save-dev',
+        packages: ['prismjs', 'vite-plugin-prismjs', '@types/prismjs', 'prism-theme-vars'],
+        files: {
+            vvPrism: {
+                name: 'Prism.vue',
+                checked: true,
+                path: '/components/Vv/',
+                src: vvPrismVueFile(true),
+            },
+            prismThemeVarsCss: {
+                name: 'prism-theme-vars.css',
+                checked: true,
+                path: '/public/css/',
+                src: prismThemeVarsCssFile(),
+            },
+            vvPrismVars: {
+                name: 'PrismVars.vue',
+                checked: true,
+                path: '/components/Vv/',
+                src: vvPrismVarsVueFile(true),
+            },
+            // vvPrismTestJs: {
+            //     name: 'Prism.test.js',
+            //     checked: true,
+            //     path: '/tests/components/Vv/',
+            //     src: vvPrismTestJsFile(true),
+            // },
+            // vvPrismVarsTestJs: {
+            //     name: 'PrismVars.test.js',
+            //     checked: true,
+            //     path: '/tests/components/Vv/',
+            //     src: vvPrismVarsTestJsFile(true),
+            // },
+        },
+    },
 }
 baseNuxtDeps.fontawesome = faFreeNuxtDep
 baseNuxtDeps.faPro = faProNuxtDep
