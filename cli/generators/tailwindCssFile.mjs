@@ -1,8 +1,10 @@
 // ./cli/generators/tailwindCssFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
-const output = `/* ./src/css/tailwind.css */
+let commentPath = useNuxtPaths ? './src/css/tailwind.css' : './assets/css/tailwind.css'
+
+const output = `/* ${commentPath} */
 
 @tailwind base;
 @tailwind components;
