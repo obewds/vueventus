@@ -11,6 +11,7 @@ import type { VvInputProps } from '../types/VvInputProps'
 import type { VvListProps } from '../types/VvListProps'
 import type { VvListboxProps } from '../types/VvListboxProps'
 import type { VvListItemProps } from '../types/VvListItemProps'
+import type { VvNuxtRouterLinkProps } from '../types/VvNuxtRouterLinkProps'
 import type { VvPrismProps } from '../types/VvPrismProps'
 import type { VvPrismVarsProps } from '../types/VvPrismVarsProps'
 import type { VvQuadFormGroupProps } from '../types/VvQuadFormGroupProps'
@@ -33,6 +34,7 @@ export interface ConfigDefaults {
     "VvList": VvListProps
     "VvListbox": VvListboxProps
     "VvListItem": VvListItemProps
+    "VvNuxtRouterLink": VvNuxtRouterLinkProps
     "VvPrism": VvPrismProps
     "VvPrismVars": VvPrismVarsProps
     "VvQuadFormGroup": VvQuadFormGroupProps
