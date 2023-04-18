@@ -62,7 +62,7 @@
     "vue-tsc": "^1.2.0"
   },
   "overrides": {
-    "sourcemap-codec": {
+    "sourcemap-codec@1.4.8": {
       "@jridgewell/sourcemap-codec": "1.4.15"
     }
   },
