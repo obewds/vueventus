@@ -841,6 +841,18 @@ const Ze = {
     symbolColor: "primary",
     symbolPalette: "default"
   },
+  VvNuxtRouterLink: {
+    button: !1,
+    buttonBlock: !1,
+    buttonFab: !1,
+    buttonSize: "md",
+    color: "default",
+    debug: !1,
+    external: !1,
+    to: "/",
+    palette: "default",
+    textSize: "md"
+  },
   VvPrism: {
     debug: !1,
     prismVars: !0
