@@ -60,6 +60,7 @@ import vvInputVueFile from '../generators/vvInputVueFile.mjs'
 import vvListVueFile from '../generators/vvListVueFile.mjs'
 import vvListboxVueFile from '../generators/vvListboxVueFile.mjs'
 import vvListItemVueFile from '../generators/vvListItemVueFile.mjs'
+import vvNuxtRouterLinkVueFile from '../generators/vvNuxtRouterLinkVueFile.mjs'
 import vvPrismVarsVueFile from '../generators/vvPrismVarsVueFile.mjs'
 import vvPrismVueFile from '../generators/vvPrismVueFile.mjs'
 import vvQuadFormGroupVueFile from '../generators/vvQuadFormGroupVueFile.mjs'
@@ -454,6 +455,12 @@ let baseVvTsNuxtCompos = {
         checked: true,
         path: '/components/Vv/',
         src: vvListItemVueFile(true),
+    },
+    vvNuxtRouterLinkVue: {
+        name: 'NuxtRouterLink.vue',
+        checked: true,
+        path: '/src/components/vv/anchors/',
+        src: vvNuxtRouterLinkVueFile(true),
     },
     vvQuadFormGroupVue: {
         name: 'QuadFormGroup.vue',
