@@ -7,9 +7,15 @@ const output = `// ./nuxt.config.ts
 
 export default defineNuxtConfig({
     modules: [
-        '@nuxtjs/tailwindcss',
+        // '@nuxtjs/tailwindcss',
         'nuxt-headlessui',
     ],
+    postcss: {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
+        },
+    },
     app: {
         head: {
             htmlAttrs: {
@@ -24,7 +30,8 @@ export default defineNuxtConfig({
         },
     },
     css: [
-        '@fortawesome/fontawesome-svg-core/styles.css'
+        '~/assets/css/main.css',
+        '@fortawesome/fontawesome-svg-core/styles.css',
     ],
 })
 
