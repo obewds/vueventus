@@ -289,6 +289,12 @@ let baseNuxtFiles = {
         path: '/',
         src: tailwindConfigTsNuxtFile(),
     },
+    tailwindCss: {
+        name: 'tailwind.css',
+        checked: true,
+        path: '/assets/css/',
+        src: tailwindCssFile(true),
+    },
     onPageLoadColorModesNuxtJs: {
         name: 'on-page-load-color-modes.js',
         checked: true,
