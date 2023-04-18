@@ -1,17 +1,23 @@
 // ./cli/generators/vvPrismVueFile.mjs
 
-export default function () {
+export default function ( useNuxtPaths = false ) {
 
-const output = `<!-- ./src/components/vv/elements/VvPrism.vue -->
+let commentPath = useNuxtPaths ? './components/Vv/Prism.vue' : './src/components/vv/elements/VvPrism.vue'
+
+let appVvPath = useNuxtPaths ? '../../app.vv' : '../../../app.vv'
+let appColorsPath = useNuxtPaths ? '../../app.colors.json' : '../../../app.colors.json'
+let vvPrismVarsPath = useNuxtPaths ? './VvPrismVars.vue' : './PrismVars.vue'
+
+const output = `<!-- ${commentPath} -->
 
 
 <script lang="ts">
 
     import { defineComponent, onMounted, onUpdated } from 'vue'
     import Prism from 'prismjs'
-    import VvPrismVars from './VvPrismVars.vue'
-    import appColors from '../../../app.colors.json'
-    import appVv from '../../../app.vv'
+    import VvPrismVars from '${vvPrismVarsPath}'
+    import appColors from '${appColorsPath}'
+    import appVv from '${appVvPath}'
 
     export default defineComponent({
         
