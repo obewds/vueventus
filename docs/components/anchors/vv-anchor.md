@@ -268,7 +268,7 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 ```
 
 ```html [Nuxt 3 Stack]
-<!-- ./src/components/AppVvAnchor.vue -->
+<!-- ./components/AppVvAnchor.vue -->
 
 <script lang="ts">
 
@@ -415,7 +415,7 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 ```
 
 ```html [Nuxt 3 Stack]
-<!-- ./src/components/AppVvAnchor.vue -->
+<!-- ./components/AppVvAnchor.vue -->
 
 <script lang="ts">
 
@@ -701,7 +701,7 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 ```
 
 ```html [Nuxt 3 Stack]
-<!-- ./src/components/AppVvAnchor.vue -->
+<!-- ./components/AppVvAnchor.vue -->
 
 <script lang="ts">
 
@@ -900,7 +900,7 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 ```
 
 ```html [Nuxt 3 Stack]
-<!-- ./src/components/AppVvAnchor.vue -->
+<!-- ./components/AppVvAnchor.vue -->
 
 <script lang="ts">
 
