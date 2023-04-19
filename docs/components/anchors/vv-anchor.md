@@ -218,7 +218,7 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 </div>
 
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 
 <DocsTypingDownstreamText :name="$frontmatter.title"/>
 
@@ -258,6 +258,8 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
     <VvAnchor
         :href="href"
         :button="true"
+        palette="solid"
+        color="primary"
         :button-size="buttonSize"
     >
         AppVvAnchor.vue
@@ -293,6 +295,8 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
     <VvAnchor
         :href="href"
         :button="true"
+        palette="solid"
+        color="primary"
         :button-size="buttonSize"
     >
         AppVvAnchor.vue
@@ -364,7 +368,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 
 <DocsTypingDownstreamText :name="$frontmatter.title"/>
 
@@ -649,7 +653,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 
 <DocsTypingDownstreamText :name="$frontmatter.title"/>
 
@@ -688,6 +692,7 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 <template>
     <VvAnchor
         :href="href"
+        color="primary"
         :palette="palette"
     >
         AppVvAnchor.vue
@@ -722,6 +727,7 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 <template>
     <VvAnchor
         :href="href"
+        color="primary"
         :palette="palette"
     >
         AppVvAnchor.vue
@@ -847,7 +853,7 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 :::
 
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 
 <DocsTypingDownstreamText :name="$frontmatter.title"/>
 
