@@ -209,10 +209,93 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
     </VvAnchor>
 </div>
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+::: code-group
+
+```html [SPA/SSG Stacks]
+<!-- ./src/components/AppVvRouterLink.vue -->
+
+<script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { SizesButtons } from '@obewds/vueventus'
+
+    import { defineComponent } from 'vue'
+    import VvRouterLink from './vv/anchors/VvRouterLink.vue'
+
+    export default defineComponent({
+
+        components: { VvRouterLink },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            buttonSize: {
+                type: String as PropType<keyof SizesButtons>,
+                default: 'md',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvRouterLink
+        :href="href"
+        :button="true"
+        palette="solid"
+        color="primary"
+        :button-size="buttonSize"
+    >
+        AppVvRouterLink.vue
+    </VvRouterLink>
+</template>
+```
+
+```html [Nuxt 3 Stack]
+<!-- ./components/AppVvRouterLink.vue -->
+
+<script lang="ts">
+
+    import type { SizesButtons } from '@obewds/vueventus'
+
+    export default defineComponent({
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            buttonSize: {
+                type: String as PropType<keyof SizesButtons>,
+                default: 'md',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvRouterLink
+        :href="href"
+        :button="true"
+        palette="solid"
+        color="primary"
+        :button-size="buttonSize"
+    >
+        AppVvRouterLink.vue
+    </VvRouterLink>
+</template>
+```
+
+:::
 
 
 
@@ -275,10 +358,87 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+::: code-group
+
+```html [SPA/SSG Stacks]
+<!-- ./src/components/AppVvRouterLink.vue -->
+
+<script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { DefaultPaletteColors } from '@obewds/vueventus'
+
+    import { defineComponent } from 'vue'
+    import VvRouterLink from './vv/anchors/VvRouterLink.vue'
+
+    export default defineComponent({
+
+        components: { VvRouterLink },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            color: {
+                type: String as PropType<keyof DefaultPaletteColors>,
+                default: 'primary',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvRouterLink
+        :href="href"
+        :color="color"
+    >
+        AppVvRouterLink.vue
+    </VvRouterLink>
+</template>
+```
+
+```html [Nuxt 3 Stack]
+<!-- ./components/AppVvRouterLink.vue -->
+
+<script lang="ts">
+
+    import type { DefaultPaletteColors } from '@obewds/vueventus'
+
+    export default defineComponent({
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            color: {
+                type: String as PropType<keyof DefaultPaletteColors>,
+                default: 'primary',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvRouterLink
+        :href="href"
+        :color="color"
+    >
+        AppVvRouterLink.vue
+    </VvRouterLink>
+</template>
+```
+
+:::
 
 
 
@@ -404,10 +564,89 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+::: code-group
+
+```html [SPA/SSG Stacks]
+<!-- ./src/components/AppVvRouterLink.vue -->
+
+<script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { DefaultButtonPalettes, DefaultPalettes } from '@obewds/vueventus'
+
+    import { defineComponent } from 'vue'
+    import VvRouterLink from './vv/anchors/VvRouterLink.vue'
+
+    export default defineComponent({
+
+        components: { VvRouterLink },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            palette: {
+                type: String as PropType<keyof DefaultButtonPalettes | keyof DefaultPalettes>,
+                default: 'default',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvRouterLink
+        :href="href"
+        color="primary"
+        :palette="palette"
+    >
+        AppVvRouterLink.vue
+    </VvRouterLink>
+</template>
+```
+
+```html [Nuxt 3 Stack]
+<!-- ./components/AppVvRouterLink.vue -->
+
+<script lang="ts">
+
+    import type { DefaultButtonPalettes, DefaultPalettes } from '@obewds/vueventus'
+
+    export default defineComponent({
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            palette: {
+                type: String as PropType<keyof DefaultButtonPalettes | keyof DefaultPalettes>,
+                default: 'default',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvRouterLink
+        :href="href"
+        color="primary"
+        :palette="palette"
+    >
+        AppVvRouterLink.vue
+    </VvRouterLink>
+</template>
+```
+
+:::
 
 
 
@@ -523,10 +762,87 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 </div>
 :::
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 
-<!-- TODO: add typing use example code block for PropType keyof syntax -->
-Coming Soon!
+<DocsTypingDownstreamText :name="$frontmatter.title"/>
+
+::: code-group
+
+```html [SPA/SSG Stacks]
+<!-- ./src/components/AppVvRouterLink.vue -->
+
+<script lang="ts">
+
+    import type { PropType } from 'vue'
+    import type { SizesText } from '@obewds/vueventus'
+
+    import { defineComponent } from 'vue'
+    import VvRouterLink from './vv/anchors/VvRouterLink.vue'
+
+    export default defineComponent({
+
+        components: { VvRouterLink },
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            textSize: {
+                type: String as PropType<keyof SizesText>,
+                default: 'md',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvRouterLink
+        :href="href"
+        :text-size="textSize"
+    >
+        AppVvRouterLink.vue
+    </VvRouterLink>
+</template>
+```
+
+```html [Nuxt 3 Stack]
+<!-- ./components/AppVvRouterLink.vue -->
+
+<script lang="ts">
+
+    import type { SizesText } from '@obewds/vueventus'
+
+    export default defineComponent({
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            textSize: {
+                type: String as PropType<keyof SizesText>,
+                default: 'md',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvRouterLink
+        :href="href"
+        :text-size="textSize"
+    >
+        AppVvRouterLink.vue
+    </VvRouterLink>
+</template>
+```
+
+:::
 
 
 
