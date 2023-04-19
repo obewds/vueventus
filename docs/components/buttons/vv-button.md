@@ -125,7 +125,7 @@ The {{ $frontmatter.title }} `color` prop sets the component instance color base
 </div>
 :::
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 <!-- TODO: add typing use example code block for PropType keyof syntax -->
 Coming Soon!
 
@@ -267,7 +267,7 @@ The {{ $frontmatter.title }} `palette` prop sets the component instance color ba
 </div>
 :::
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 <!-- TODO: add typing use example code block for PropType keyof syntax -->
 Coming Soon!
 
@@ -379,7 +379,7 @@ The {{ $frontmatter.title }} `size` prop sets the component instance size-based 
 </div>
 :::
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 <!-- TODO: add typing use example code block for PropType keyof syntax -->
 Coming Soon!
 
@@ -413,7 +413,7 @@ The {{ $frontmatter.title }} `type` prop sets the button HTML `type` attribute t
     </VvButton>
 </div>
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 <!-- TODO: add typing use example code block for PropType keyof syntax -->
 Coming Soon!
 
