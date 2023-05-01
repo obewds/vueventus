@@ -51,7 +51,7 @@
     "auto-changelog": "^2.4.0",
     "autoprefixer": "^10.4.14",
     "chalk": "^5.2.0",
-    "happy-dom": "^9.8.1",
+    "happy-dom": "^9.10.1",
     "markdown-it-include": "^2.0.0",
     "postcss": "^8.4.22",
     "typescript": "^5.0.4",
