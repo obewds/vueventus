@@ -372,22 +372,58 @@ async function installDepsAndFiles () {
             mergeJson(cwd + '/' + userOptions.name + '/package.json', cwd + '/package.json')
         )
 
+        // change default vite build command of "vue-tsc && vite build" to:
+        run(`npm pkg set scripts.build="vite build"`)
+
         // set up any dependency overrides (generally needed due to depreciated dep dep's or security issues in deps that aren't patched yet)
         // TODO: figure out if this pattern is needed anywhere dynamically in the different stack installs
         run(`npm pkg set overrides["sourcemap-codec"]["@jridgewell/sourcemap-codec"]="1.4.15"`)
 
 
         // get the current tsconfig.json data
-        const currentTsConfig = require(cwd + '/tsconfig.json')
+        // const currentTsConfig = require(cwd + '/tsconfig.json')
+        
+        // ^^^ Above code is breaking cli installations
+        // vite is using new default tsconfig settings
+        // also the comments in the file to help devs with the change are breaking json merges below
+
+        // this is manually grabbed from a vite install
+        // the comments below break the require() above
+        // so for now this fixes that blocker
+        const viteDefault_tsconfigJson = {
+            "compilerOptions": {
+                "target": "ESNext", // use ESNext - default vite installs value as "ES2020"
+                "useDefineForClassFields": true,
+                "module": "ESNext",
+                "lib": ["ESNext", "DOM", "DOM.Iterable"], // use ESNext - default vite installs [0] value as "ES2020"
+                "skipLibCheck": true,
+
+                /* Bundler mode */
+                "moduleResolution": "Node", // use Node - default vite installs value as "bundler"
+                "allowImportingTsExtensions": true,
+                "resolveJsonModule": true,
+                "isolatedModules": true,
+                "noEmit": true,
+                "jsx": "preserve",
+
+                /* Linting */
+                "strict": true,
+                "noUnusedLocals": true,
+                "noUnusedParameters": true,
+                "noFallthroughCasesInSwitch": true
+            },
+            "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+            "references": [{ "path": "./tsconfig.node.json" }]
+        }
 
         // handle the vue-ts tsconfig.json file
         if ( userOptions.stack === cli.stacks.vueTwViteTs.name ) {
-            fs.outputFileSync(cwd + '/tsconfig.json', JSON.stringify(merge(currentTsConfig, getTsconfigJsonObj()), null, 2), { flag: 'w+' })
+            fs.outputFileSync(cwd + '/tsconfig.json', JSON.stringify(merge(viteDefault_tsconfigJson, getTsconfigJsonObj()), null, 2), { flag: 'w+' })
         }
         
         // handle the vite-ssg tsconfig.json file
         if ( userOptions.stack === cli.stacks.vueTwViteSsgMdTs.name ) {
-            fs.outputFileSync(cwd + '/tsconfig.json', JSON.stringify(merge(currentTsConfig, getTsconfigJsonSsgObj()), null, 2), { flag: 'w+' })
+            fs.outputFileSync(cwd + '/tsconfig.json', JSON.stringify(merge(viteDefault_tsconfigJson, getTsconfigJsonSsgObj()), null, 2), { flag: 'w+' })
         }
 
         // 
