@@ -227,6 +227,7 @@ function sidebarModules() {
                 { text: 'randomHex()', link: '/modules/helpers/random-hex' },
                 { text: 'randomHexShort()', link: '/modules/helpers/random-hex-short' },
                 { text: 'randomString()', link: '/modules/helpers/random-string' },
+                { text: 'shuffleArray()', link: '/modules/helpers/shuffle-array' },
                 { text: 'slugifyString()', link: '/modules/helpers/slugify-string' },
                 { text: 'stringToCamelCase()', link: '/modules/helpers/string-to-camel-case' },
                 { text: 'stringToFilename()', link: '/modules/helpers/string-to-filename' },

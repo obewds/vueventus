@@ -218,12 +218,14 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
 </div>
 
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 
 <DocsTypingDownstreamText :name="$frontmatter.title"/>
 
-```html
-<!-- ./src/components/MyComponent.vue -->
+::: code-group
+
+```html [SPA/SSG Stacks]
+<!-- ./src/components/AppVvAnchor.vue -->
 
 <script lang="ts">
 
@@ -256,12 +258,53 @@ The {{ $frontmatter.title }} `buttonSize` prop sets the Tailwind CSS size classe
     <VvAnchor
         :href="href"
         :button="true"
+        palette="solid"
+        color="primary"
         :button-size="buttonSize"
     >
-        buttonSize prop example
+        AppVvAnchor.vue
     </VvAnchor>
 </template>
 ```
+
+```html [Nuxt 3 Stack]
+<!-- ./components/AppVvAnchor.vue -->
+
+<script lang="ts">
+
+    import type { SizesButtons } from '@obewds/vueventus'
+
+    export default defineComponent({
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            buttonSize: {
+                type: String as PropType<keyof SizesButtons>,
+                default: 'md',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvAnchor
+        :href="href"
+        :button="true"
+        palette="solid"
+        color="primary"
+        :button-size="buttonSize"
+    >
+        AppVvAnchor.vue
+    </VvAnchor>
+</template>
+```
+
+:::
 
 
 
@@ -325,12 +368,14 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 
 <DocsTypingDownstreamText :name="$frontmatter.title"/>
 
-```html
-<!-- ./src/components/MyComponent.vue -->
+::: code-group
+
+```html [SPA/SSG Stacks]
+<!-- ./src/components/AppVvAnchor.vue -->
 
 <script lang="ts">
 
@@ -362,12 +407,50 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 <template>
     <VvAnchor
         :href="href"
-        :color="buttonSize"
+        :color="color"
     >
-        buttonSize prop example
+        AppVvAnchor.vue
     </VvAnchor>
 </template>
 ```
+
+```html [Nuxt 3 Stack]
+<!-- ./components/AppVvAnchor.vue -->
+
+<script lang="ts">
+
+    import type { DefaultPaletteColors } from '@obewds/vueventus'
+
+    export default defineComponent({
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            color: {
+                type: String as PropType<keyof DefaultPaletteColors>,
+                default: 'primary',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvAnchor
+        :href="href"
+        :color="color"
+    >
+        AppVvAnchor.vue
+    </VvAnchor>
+</template>
+```
+
+:::
+
+
 
 
 
@@ -472,7 +555,7 @@ The {{ $frontmatter.title }} `href` prop value sets the href value for the outpu
 
 ## Prop: palette
 
-Type: **`String`** as PropType<keyof **[DefaultValidationPalettes](/typescript/interfaces#defaultvalidationpalettes)** | keyof **[DefaultButtonPalettes](/typescript/interfaces#Defaultbuttonpalettes)**>  
+Type: **`String`** as PropType<keyof **[DefaultButtonPalettes](/typescript/interfaces#Defaultbuttonpalettes)** | keyof **[DefaultPalettes](/typescript/interfaces#defaultpalettes)**>  
 Default: **`"{{ VvConfig.defaults.VvAnchor.palette }}"`**
 
 The {{ $frontmatter.title }} `palette` prop sets the component instance color based both on the `palette` prop and the `color` prop values together with the `button` prop value.
@@ -504,7 +587,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 ```
 
 ```html
-<VvAnchor :button="true" palette="outline" color="default" class="mb-2">
+<VvAnchor :button="true" palette="solid" color="default" class="mb-2">
     VvAnchor
 </VvAnchor>
 <br>
@@ -545,7 +628,7 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
     </VvAnchor>
 </div>
 
-<div class="w-full pt-4">
+<div class="w-full pt-4 no-underline">
     <VvAnchor :button="true" palette="outline" color="default" class="mb-2">
         VvAnchor
     </VvAnchor>
@@ -570,19 +653,22 @@ Conversely, if the `button` prop value is `true` and button mode is enabled to o
 To view the color examples of the {{ $frontmatter.title }} with button mode enabled, check out the docs for the [VvButton Prop: color](/components/buttons/vv-button#prop-color) and [VvButton Prop: palette](/components/buttons/vv-button#prop-palette).
 
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 
 <DocsTypingDownstreamText :name="$frontmatter.title"/>
 
-```html
-<!-- ./src/components/MyComponent.vue -->
+::: code-group
+
+```html [SPA/SSG Stacks]
+<!-- ./src/components/AppVvAnchor.vue -->
 
 <script lang="ts">
 
-    import { defineComponent } from 'vue'
-    import VvAnchor from './vv/anchors/VvAnchor.vue'
     import type { PropType } from 'vue'
     import type { DefaultButtonPalettes, DefaultPalettes } from '@obewds/vueventus'
+
+    import { defineComponent } from 'vue'
+    import VvAnchor from './vv/anchors/VvAnchor.vue'
 
     export default defineComponent({
 
@@ -594,8 +680,8 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
                 default: '/',
             },
             palette: {
-                type: String as PropType<keyof DefaultPalettes | keyof DefaultButtonPalettes>,
-                default: 'default', // 'default' is an anchor palette, could use 'solid' or 'outline' button palettes, too!
+                type: String as PropType<keyof DefaultButtonPalettes | keyof DefaultPalettes>,
+                default: 'default',
             },
         },
 
@@ -606,12 +692,50 @@ To view the color examples of the {{ $frontmatter.title }} with button mode enab
 <template>
     <VvAnchor
         :href="href"
+        color="primary"
         :palette="palette"
     >
-        palette prop example
+        AppVvAnchor.vue
     </VvAnchor>
 </template>
 ```
+
+```html [Nuxt 3 Stack]
+<!-- ./components/AppVvAnchor.vue -->
+
+<script lang="ts">
+
+    import type { DefaultButtonPalettes, DefaultPalettes } from '@obewds/vueventus'
+
+    export default defineComponent({
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            palette: {
+                type: String as PropType<keyof DefaultButtonPalettes | keyof DefaultPalettes>,
+                default: 'default',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvAnchor
+        :href="href"
+        color="primary"
+        :palette="palette"
+    >
+        AppVvAnchor.vue
+    </VvAnchor>
+</template>
+```
+
+:::
 
 
 
@@ -729,12 +853,14 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
 :::
 
 
-### Typing for Downstream Component Instances:
+### Downstream Typescript Prop Typing:
 
 <DocsTypingDownstreamText :name="$frontmatter.title"/>
 
-```html
-<!-- ./src/components/MyComponent.vue -->
+::: code-group
+
+```html [SPA/SSG Stacks]
+<!-- ./src/components/AppVvAnchor.vue -->
 
 <script lang="ts">
 
@@ -755,7 +881,7 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
             },
             textSize: {
                 type: String as PropType<keyof SizesText>,
-                default: '2xl',
+                default: 'md',
             },
         },
 
@@ -768,10 +894,46 @@ The {{ $frontmatter.title }} `textSize` prop sets the component instance size-ba
         :href="href"
         :text-size="textSize"
     >
-        text-size/textSize example
+        AppVvAnchor.vue
     </VvAnchor>
 </template>
 ```
+
+```html [Nuxt 3 Stack]
+<!-- ./components/AppVvAnchor.vue -->
+
+<script lang="ts">
+
+    import type { SizesText } from '@obewds/vueventus'
+
+    export default defineComponent({
+
+        props: {
+            href: {
+                type: String,
+                default: '/',
+            },
+            textSize: {
+                type: String as PropType<keyof SizesText>,
+                default: 'md',
+            },
+        },
+
+    })
+
+</script>
+
+<template>
+    <VvAnchor
+        :href="href"
+        :text-size="textSize"
+    >
+        AppVvAnchor.vue
+    </VvAnchor>
+</template>
+```
+
+:::
 
 
 

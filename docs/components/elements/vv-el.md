@@ -10,7 +10,7 @@ title: VvEl Component
 
 <!-- TODO: Add semicolons to all sub-sub heads to > ### Syntax: -->
 <!-- TODO: Add semicolons to all sub-sub heads to > ### Result: -->
-<!-- TODO: Add semicolons to all sub-sub heads to > ### ### Typing for Downstream Component Instances: -->
+<!-- TODO: Add semicolons to all sub-sub heads to > ### Downstream Typescript Prop Typing: -->
 
 
 

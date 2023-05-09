@@ -35,6 +35,7 @@ title: Helper Method Modules
 * [randomHex()](/modules/helpers/random-hex)
 * [randomHexShort()](/modules/helpers/random-hex-short)
 * [randomString()](/modules/helpers/random-string)
+* [shuffleArray()](/modules/helpers/shuffle-array)
 * [slugifyString()](/modules/helpers/slugify-string)
 * [stringToCamelCase()](/modules/helpers/string-to-camel-case)
 * [stringToFilename()](/modules/helpers/string-to-filename)

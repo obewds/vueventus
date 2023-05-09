@@ -55,6 +55,7 @@ export { default as randomGroundAndTextColors } from './helpers/randomGroundAndT
 export { default as randomHex } from './helpers/randomHex'
 export { default as randomHexShort } from './helpers/randomHexShort'
 export { default as randomString } from './helpers/randomString'
+export { default as shuffleArray } from './helpers/shuffleArray'
 export { default as slugifyString } from './helpers/slugifyString'
 export { default as stringToCamelCase } from './helpers/stringToCamelCase'
 export { default as stringToFilename } from './helpers/stringToFilename'
