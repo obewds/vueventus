@@ -662,8 +662,8 @@ let faProNuxtDep = {
 let vitestBase = {
     checked: true,
     name: 'Vitest',
-    install: 'npm install vitest @vue/test-utils happy-dom @vitest/coverage-c8 --save-dev',
-    packages: ['vitest', '@vue/test-utils', 'happy-dom', '@vitest/coverage-c8'],
+    install: 'npm install vitest @vue/test-utils happy-dom @vitest/coverage-v8 --save-dev',
+    packages: ['vitest', '@vue/test-utils', 'happy-dom', '@vitest/coverage-v8'],
     files: {
         vitestConfigTs: {
             name: 'vitest.config.ts',
