@@ -66,5 +66,5 @@ declare const _default: import("vue").DefineComponent<{
     fillOneClasses: string;
     fillTwo: string;
     fillTwoClasses: string;
-}>;
+}, {}>;
 export default _default;

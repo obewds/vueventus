@@ -61,5 +61,5 @@ declare const _default: import("vue").DefineComponent<{
     enableColoredSymbols: boolean;
     symbolColor: keyof DefaultPaletteColors;
     symbolPalette: keyof DefaultPalettes;
-}>;
+}, {}>;
 export default _default;

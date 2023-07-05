@@ -224,5 +224,5 @@ declare const _default: import("vue").DefineComponent<{
     optionIconParentClasses: string;
     selectedDisplayClasses: string;
     selectedIndex: number;
-}>;
+}, {}>;
 export default _default;

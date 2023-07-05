@@ -47,7 +47,7 @@ Now you can run Vitest and see the fruits of your labor with:
 npm run test
 ```
 
-And assuming `@vitest/coverage-c8` was installed, you can run your testing coverage, too:
+And assuming `@vitest/coverage-v8` was installed, you can run your testing coverage, too:
 
 ```bash
 npm run coverage

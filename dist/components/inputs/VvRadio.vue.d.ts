@@ -83,5 +83,5 @@ declare const _default: import("vue").DefineComponent<{
     checked: boolean;
     darkRadioHex: string;
     lightRadioHex: string;
-}>;
+}, {}>;
 export default _default;

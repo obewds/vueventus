@@ -75,5 +75,5 @@ declare const _default: import("vue").DefineComponent<{
     checked: boolean;
     darkCheckHex: string;
     lightCheckHex: string;
-}>;
+}, {}>;
 export default _default;

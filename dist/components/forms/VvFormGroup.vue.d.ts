@@ -246,5 +246,5 @@ declare const _default: import("vue").DefineComponent<{
     successTextPalette: keyof DefaultPalettes;
     successTextSize: keyof SizesText;
     wrapperClasses: string;
-}>;
+}, {}>;
 export default _default;

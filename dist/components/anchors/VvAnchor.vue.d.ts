@@ -98,5 +98,5 @@ declare const _default: import("vue").DefineComponent<{
     href: string;
     palette: string | number;
     textSize: keyof SizesText;
-}>;
+}, {}>;
 export default _default;

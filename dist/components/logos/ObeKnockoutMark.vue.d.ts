@@ -46,5 +46,5 @@ declare const _default: import("vue").DefineComponent<{
     orangeFill: string;
     redFill: string;
     yellowFill: string;
-}>;
+}, {}>;
 export default _default;

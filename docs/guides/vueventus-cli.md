@@ -81,7 +81,7 @@ The core deps for each stack are generally pretty similar, but here's a table of
 | [Vitest](https://vitest.dev/)                                                        |     🟢     |     🟢    |       🔵      |
 | [nuxt-vitest](https://vitest.dev/)                                                   |     🔴     |     🔴    |      Soon     |
 | [Vue Test Utils](https://test-utils.vuejs.org/guide/)                                |     🟢     |     🟢    |      ???      |
-| [@vitest/coverage-c8](https://www.npmjs.com/package/@vitest/coverage-c8)             |     🟢     |     🟢    |      ???      |
+| [@vitest/coverage-v8](https://www.npmjs.com/package/@vitest/coverage-v8)             |     🟢     |     🟢    |      ???      |
 | [happy-dom](https://github.com/capricorn86/happy-dom)                                |     🟢     |     🟢    |       🔵      |
 | [@vitejs/plugin-vue](https://www.npmjs.com/package/@vitejs/plugin-vue)               |     🟢     |     🟢    |       🔴      |
 | [Vite-SSG](https://github.com/antfu/vite-ssg)                                        |     🔴     |     🟢    |       🔴      |

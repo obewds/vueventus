@@ -55,5 +55,5 @@ declare const _default: import("vue").DefineComponent<{
     palette: keyof DefaultValidationPalettes;
     size: keyof SizesSelects;
     modelValue: string;
-}>;
+}, {}>;
 export default _default;

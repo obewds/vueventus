@@ -59,6 +59,7 @@ const output = `<!-- ${commentPath} -->
 
     <LibVvList
         :debug="debug"
+        :list-style-type-class="listStyleTypeClass"
         :marker-color="markerColor"
         :marker-palette="markerPalette"
         :size="size"

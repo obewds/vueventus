@@ -48,17 +48,17 @@ module.exports = {
         ['meta', {name: 'msapplication-TileColor', content: '#ffffff'}],
         ['meta', {name: 'msapplication-TileImage', content: '/vueventus/images/favicons/ms-icon-144x144.png'}],
         ['meta', {name: 'theme-color', content: '#ffffff'}],
-        ['script', {
-            async: true,
-            src: 'https://www.googletagmanager.com/gtag/js?id=G-JBBLBN5V62'
-        }],
-        ['script', {}, `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-        
-            gtag('config', 'G-JBBLBN5V62');
-        `],
+        // ['script', {
+        //     async: true,
+        //     src: 'https://www.googletagmanager.com/gtag/js?id=G-JBBLBN5V62'
+        // }],
+        // ['script', {}, `
+        //     window.dataLayer = window.dataLayer || [];
+        //     function gtag(){dataLayer.push(arguments);}
+        //     gtag('js', new Date());
+        // 
+        //     gtag('config', 'G-JBBLBN5V62');
+        // `],
     ],
 
     themeConfig: {
