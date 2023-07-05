@@ -36,6 +36,27 @@ test('VvFormGroup.test.vue component handles a debug prop value of true successf
 
 })
 
+
+test('VvFormGroup.test.vue component handles a default debug prop value of false successfully', async () => {
+
+    const testLabel = 'Test Label'
+    const testId = 'test-id'
+    
+    const wrapper = mount(VvFormGroup, {
+        props: {
+            label: testLabel,
+            labelFor: testId,
+        },
+    })
+
+    expect(wrapper.html()).toContain('<div ')
+    expect(wrapper.html()).toContain('>')
+    expect(wrapper.html()).toContain('</div>')
+    expect(wrapper.html()).toContain(testLabel)
+    expect(wrapper.html()).toContain(testId)
+
+})
+
 `
 
 return output
