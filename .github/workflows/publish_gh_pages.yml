@@ -1,3 +1,5 @@
+# ./.github/workflows/publish_gh_pages.yml
+
 name: Publish GitHub Pages
 on:
   push:
@@ -16,5 +18,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.OBEWDS_ORG_PAT }}
           publish_dir: ./docs/.vitepress/dist
