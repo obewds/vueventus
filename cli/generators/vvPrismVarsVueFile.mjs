@@ -271,6 +271,10 @@ const output = `<!-- ${commentPath} -->
         opacity: 1;
     }
 
+    html.dark div.code-toolbar > .toolbar > .toolbar-item > button.copy-to-clipboard-button {
+        color: black;
+    }
+
 </style>
 
 `
