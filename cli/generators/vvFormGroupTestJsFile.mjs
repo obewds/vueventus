@@ -14,6 +14,28 @@ test('VvFormGroup.test.vue component imports successfully', async () => {
 
 })
 
+
+test('VvFormGroup.test.vue component handles a debug prop value of true successfully', async () => {
+
+    const testLabel = 'Test Label'
+    const testId = 'test-id'
+    
+    const wrapper = mount(VvFormGroup, {
+        props: {
+            debug: true,
+            label: testLabel,
+            labelFor: testId,
+        },
+    })
+
+    expect(wrapper.html()).toContain('<div ')
+    expect(wrapper.html()).toContain('>')
+    expect(wrapper.html()).toContain('</div>')
+    expect(wrapper.html()).toContain(testLabel)
+    expect(wrapper.html()).toContain(testId)
+
+})
+
 `
 
 return output
