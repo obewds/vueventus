@@ -128,7 +128,7 @@ This means when using the {{ $frontmatter.title }} downstream in an end applicat
 
 ## Prop: data
 
-Type: **`String`**  
+Type: **`Array`** as PropType<Array<**[VvListboxData](/typescript/interfaces#vvlistboxdata)**>>  
 Default: **`"{{ VvConfig.defaults.VvListbox.data }}"`**
 
 The {{ $frontmatter.title }} `data` prop sets the component instance data that ultimately is displayed to the user for selection from a list of objects with a specific syntax and typing minimum requirements.
