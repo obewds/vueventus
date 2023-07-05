@@ -10,5 +10,5 @@ declare const _default: import("vue").DefineComponent<{
     };
 }>>, {
     colorClasses: string;
-}>;
+}, {}>;
 export default _default;

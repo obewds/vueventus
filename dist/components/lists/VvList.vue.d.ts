@@ -64,5 +64,5 @@ declare const _default: import("vue").DefineComponent<{
     listStyleTypeClass: string;
     markerColor: keyof DefaultPaletteColors;
     markerPalette: keyof DefaultPalettes;
-}>;
+}, {}>;
 export default _default;

@@ -291,5 +291,5 @@ declare const _default: import("vue").DefineComponent<{
     textParentClasses: string;
     topSlotClasses: string;
     topWrapperClasses: string;
-}>;
+}, {}>;
 export default _default;

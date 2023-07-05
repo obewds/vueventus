@@ -73,5 +73,5 @@ declare const _default: import("vue").DefineComponent<{
     type: "button" | "submit" | "reset";
     block: boolean;
     size: keyof SizesButtons;
-}>;
+}, {}>;
 export default _default;

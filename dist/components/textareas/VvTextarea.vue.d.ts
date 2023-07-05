@@ -66,5 +66,5 @@ declare const _default: import("vue").DefineComponent<{
     size: keyof SizesTextareas;
     modelValue: string;
     rowSize: keyof SizesTextareasRows;
-}>;
+}, {}>;
 export default _default;

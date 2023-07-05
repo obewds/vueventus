@@ -134,14 +134,14 @@ declare const _default: import("vue").DefineComponent<{
     palette: keyof DefaultButtonPalettes;
     type: "button" | "submit" | "reset";
     size: keyof SizesButtons;
-    mode: "dark" | "light";
     groundDark: string;
     groundDarkHex: string;
     groundLight: string;
     groundLightHex: string;
+    mode: "dark" | "light";
     textDark: string;
     textLight: string;
     titleDark: string;
     titleLight: string;
-}>;
+}, {}>;
 export default _default;

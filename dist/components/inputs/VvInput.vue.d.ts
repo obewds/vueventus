@@ -67,5 +67,5 @@ declare const _default: import("vue").DefineComponent<{
     type: "number" | "text" | "time" | "color" | "date" | "datetime-local" | "email" | "month" | "password" | "search" | "tel" | "url";
     size: keyof SizesInputs;
     modelValue: string;
-}>;
+}, {}>;
 export default _default;
