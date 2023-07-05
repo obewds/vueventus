@@ -13,7 +13,7 @@ title: Install with Nuxt.js 3
 
 # {{ $frontmatter.title }}
 
-This guide will walk through installing and setting up VueVentus along with [Nuxt v3](https://v3.nuxtjs.org/), [Vite.js](https://vitejs.dev/guide/#scaffolding-your-first-vite-project), [Vue.js](https://vuejs.org/), [Tailwind CSS](https://tailwindcss.com/), [Vitest](https://vitest.dev/), Nuxt Test Utils (Edge version), [@vitejs/plugin-vue](https://www.npmjs.com/package/@vitejs/plugin-vue), [@vue/test-utils](https://test-utils.vuejs.org/guide/), [@vitest/coverage-c8](https://www.npmjs.com/package/@vitest/coverage-c8) and [happy-dom](https://github.com/capricorn86/happy-dom).
+This guide will walk through installing and setting up VueVentus along with [Nuxt v3](https://v3.nuxtjs.org/), [Vite.js](https://vitejs.dev/guide/#scaffolding-your-first-vite-project), [Vue.js](https://vuejs.org/), [Tailwind CSS](https://tailwindcss.com/), [Vitest](https://vitest.dev/), Nuxt Test Utils (Edge version), [@vitejs/plugin-vue](https://www.npmjs.com/package/@vitejs/plugin-vue), [@vue/test-utils](https://test-utils.vuejs.org/guide/), [@vitest/coverage-v8](https://www.npmjs.com/package/@vitest/coverage-v8) and [happy-dom](https://github.com/capricorn86/happy-dom).
 
 
 
@@ -148,7 +148,7 @@ Here's the [Nuxt v3 testing documentation](https://v3.nuxtjs.org/guide/going-fur
 Install all of the testing dependencies with:
 
 ```bash
-npm install vitest @nuxt/test-utils-edge @vitejs/plugin-vue @vue/test-utils happy-dom @vitest/coverage-c8 --save-dev
+npm install vitest @nuxt/test-utils-edge @vitejs/plugin-vue @vue/test-utils happy-dom @vitest/coverage-v8 --save-dev
 ```
 
 With your testing deps installed, you can now add the following commands to your project `./package.json` file:
