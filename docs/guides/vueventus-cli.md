@@ -74,7 +74,6 @@ The core deps for each stack are generally pretty similar, but here's a table of
 | [Heroicons](https://heroicons.com/)                                                  |     🟡     |     🟡    |       🔴      |
 | [@tailwindcss/aspect-ratio](https://www.npmjs.com/package/@tailwindcss/aspect-ratio) |     🟢     |     🟢    |       🟢      |
 | [@tailwindcss/forms](https://www.npmjs.com/package/@tailwindcss/forms)               |     🟢     |     🟢    |       🟢      |
-| [@tailwindcss/line-clamp](https://www.npmjs.com/package/@tailwindcss/line-clamp)     |     🟢     |     🟢    |       🟢      |
 | [@tailwindcss/typography](https://www.npmjs.com/package/@tailwindcss/typography)     |     🟢     |     🟢    |       🟢      |
 | [vue-router](https://router.vuejs.org/)                                              |     🟢     |     🟢    |       🔵      |
 | [Typescript](https://www.typescriptlang.org/)                                        |     🟢     |     🟢    |       🟢      |
