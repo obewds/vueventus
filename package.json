@@ -54,7 +54,7 @@
     "markdown-it-include": "^2.0.0",
     "postcss": "^8.4.24",
     "typescript": "^5.1.6",
-    "vite": "^4.3.9",
+    "vite": "^4.4.7",
     "vitepress": "^1.0.0-beta.5",
     "vitest": "^0.32.4",
     "vue-router": "^4.2.3",
