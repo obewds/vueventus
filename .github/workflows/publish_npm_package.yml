@@ -13,21 +13,39 @@ jobs:
   publish:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          node-version: "18"
       - id: publish
-        uses: JS-DevTools/npm-publish@v1
+        uses: JS-DevTools/npm-publish@v2
         with:
-          access: "public"
-          tag: ${{ steps.publish.outputs.version }}
-          token: ${{ secrets.NPM_GITHUB_OBEWDS_AUTOMATION_AUTH_TOKEN }}
+            access: "public"
+            tag: ${{ steps.publish.outputs.version }}
+            token: ${{ secrets.NPM_GITHUB_OBEWDS_AUTOMATION_AUTH_TOKEN }}
       - if: steps.publish.outputs.old-version != steps.publish.outputs.version
         run: npm install && npm run pkg:org && npm run tag
+
+### jobs:
+###   publish:
+###     if: github.event.pull_request.merged == true
+###     runs-on: ubuntu-latest
+###     strategy:
+###       matrix:
+###         node-version: [16.x]
+###         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+###     steps:
+###       - uses: actions/checkout@v3
+###       - uses: actions/setup-node@v3
+###         with:
+###           node-version: ${{ matrix.node-version }}
+###           cache: 'npm'
+###       - id: publish
+###         uses: JS-DevTools/npm-publish@v1
+###         with:
+###           access: "public"
+###           tag: ${{ steps.publish.outputs.version }}
+###           token: ${{ secrets.NPM_GITHUB_OBEWDS_AUTOMATION_AUTH_TOKEN }}
+###       - if: steps.publish.outputs.old-version != steps.publish.outputs.version
+###         run: npm install && npm run pkg:org && npm run tag
