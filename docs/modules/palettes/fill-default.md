@@ -38,18 +38,18 @@ let appVv: ConfigVv = VvConfig
 // ...
 
 // Override the default VvConfig fill palette colors individually
-appVv.fill.palettes.default.default = '...'
-appVv.fill.palettes.default.error = '...'
-appVv.fill.palettes.default.primary = '...'
-appVv.fill.palettes.default.secondary = '...'
-appVv.fill.palettes.default.success = '...'
+appVv.fills.palettes.default.default = '...'
+appVv.fills.palettes.default.error = '...'
+appVv.fills.palettes.default.primary = '...'
+appVv.fills.palettes.default.secondary = '...'
+appVv.fills.palettes.default.success = '...'
 
 // Add a new custom app anchor color name & value
 // to the default VvConfig fill palette
-appVv.fill.palettes.default.newAppColor = '...'
+appVv.fills.palettes.default.newAppColor = '...'
 
 // Add a new custom app anchor palette
-appVv.fill.palettes.myCustomAppPalette = {
+appVv.fills.palettes.myCustomAppPalette = {
     default: '...',
     error: '...',
     primary: '...',
