@@ -92,7 +92,26 @@ const output = `<!-- ${commentPath} -->
 
             const colorMode = typeof window !== 'undefined' && localStorage && localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') : 'light'
 
-            return { colorMode }
+            const dispatchColorModeChangedEvent = function () {
+
+                if (typeof window !== 'undefined' && document && localStorage && localStorage.getItem('colorMode')) {
+
+                    let changedColorMode = localStorage.getItem('colorMode') as ValidColorModes
+
+                    window.dispatchEvent(new CustomEvent('color-mode-changed', {
+                        detail: {
+                            mode: changedColorMode
+                        }
+                    }))
+
+                }
+
+            }
+
+            return {
+                colorMode,
+                dispatchColorModeChangedEvent,
+            }
 
         },
 
@@ -131,6 +150,7 @@ ${nuxtIndent}        :data-vv-color-mode-button-prop-text-dark="debug ? textDark
 ${nuxtIndent}        :data-vv-color-mode-button-prop-text-light="debug ? textLight : null"
 ${nuxtIndent}        :data-vv-color-mode-button-prop-title-dark="debug ? titleDark : null"
 ${nuxtIndent}        :data-vv-color-mode-button-prop-title-light="debug ? titleLight : null"
+${nuxtIndent}        @click="dispatchColorModeChangedEvent()"
 ${nuxtIndent}    />
     ${clientOnlyCloseTag}
 </template>
