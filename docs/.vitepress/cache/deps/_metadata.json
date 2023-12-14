@@ -1,38 +1,19 @@
 {
-  "hash": "2e2c6c58",
-  "browserHash": "014a5b74",
+  "hash": "c9116a0c",
+  "browserHash": "90db3cfe",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "11daee62",
+      "fileHash": "1d382420",
       "needsInterop": false
     },
-    "@thebespokepixel/es-tinycolor": {
-      "src": "../../../../node_modules/@thebespokepixel/es-tinycolor/esm/index.js",
-      "file": "@thebespokepixel_es-tinycolor.js",
-      "fileHash": "3173fdbe",
-      "needsInterop": false
-    },
-    "deepmerge": {
-      "src": "../../../../node_modules/deepmerge/dist/cjs.js",
-      "file": "deepmerge.js",
-      "fileHash": "ff5ca789",
-      "needsInterop": true
-    },
-    "@headlessui/vue": {
-      "src": "../../../../node_modules/@headlessui/vue/dist/headlessui.esm.js",
-      "file": "@headlessui_vue.js",
-      "fileHash": "7f025966",
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "2723058f",
       "needsInterop": false
     }
   },
-  "chunks": {
-    "chunk-R647EDCJ": {
-      "file": "chunk-R647EDCJ.js"
-    },
-    "chunk-RSJERJUL": {
-      "file": "chunk-RSJERJUL.js"
-    }
-  }
+  "chunks": {}
 }
