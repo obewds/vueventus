@@ -2,7 +2,7 @@
 const ValidFontAwesomeSizes = [
     'xs',
     'sm',
-    '1x',
+    '1x', // '1x' is effectively size 'md' & icon size inherits font size
     'lg',
     '2x',
     '3x',
